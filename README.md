@@ -20,7 +20,7 @@
 
 ORVIA stands for **Onchain Research through Verified Inference and Analysis**. We are building toward molecular calculations whose inputs, intermediate state and analysis can be inspected on-chain. The proposed first experiment compares compound 17 with aficamten in a declared cardiac-myosin state.
 
-> **Active release: GPU hybrid, 256 contracts.** One coordinator plus 255 report shards passed local lifecycle/security checks across every lane. The strict endpoint GPU accuracy repair passed on H200 with unchanged tolerances. A read-only mainnet quote covers all 33 infrastructure transactions. Full-size ADP/phosphate preparation and scientific validation remain in progress; no public contract was deployed by this work. [Current hybrid evidence →](evidence/hybrid256/README.md)
+> **Active release: GPU hybrid, 256 contracts.** Mainnet deployment is in progress: three confirmed transactions created the coordinator and 16 report shards; the remaining deployment is being recovered from a saved transaction. The full 132,935-atom complex and 151,505-atom solvent models passed strict GPU/reference accuracy checks on H200, including after relaxation and short dynamics, with unchanged tolerances. These are numerical diagnostics; parameter, alchemical-endpoint and sampling acceptance remain open. [Current status →](STATUS.md)
 
 ## Find your starting point
 
