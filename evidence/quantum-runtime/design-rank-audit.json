@@ -1,0 +1,23 @@
+{
+  "schema": "orvia.quantum-design-count-audit.v1",
+  "policy_sha256": "dbea002e2ae847b10d7b65db37f1e877039b99b2c10a6443cc7046cc54121668",
+  "source_analyzer_sha256": "719ae9c8d8a83349da9ca5ce0cfa014a48ebdcc6b51c3dfd3cfa3139c6391f36",
+  "training_rows": {
+    "aryl": 6,
+    "ring": 3
+  },
+  "total_training_rows": 9,
+  "structurally_zero_baseline_rows": [
+    "aryl",
+    "ring"
+  ],
+  "maximum_possible_design_rank": 7,
+  "independently_claimed_columns": 8,
+  "full_column_rank_possible_under_current_design": false,
+  "basis_normalization": "Within each aryl/ring scan, the +000 feature vector is subtracted from every row; each training baseline is identically zero.",
+  "consequence": "The original design cannot identify all eight independent Fourier coefficients, regardless of improved numerical runtime. The original held-out split and limits must be retained; no missing or failed observation may be removed.",
+  "scope": "This is an energy-independent counting argument about individual coefficient identification, not rejection of a native force-field energy solely due to this count. Original native profile and method-sensitivity gates remain separate.",
+  "possible_followup": "Any new identifiable coefficient study requires a separately frozen design with additional independent, chemically meaningful geometries selected without using held-out energies; current aggregate fit cannot be promoted to independent family parameters.",
+  "scientific_acceptance": false,
+  "production_ready": false
+}

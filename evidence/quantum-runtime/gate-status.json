@@ -1,0 +1,38 @@
+{
+  "fixed_geometry_runtime_gate": {
+    "hardware": "NVIDIA H200",
+    "report": "gpu-gate.json",
+    "runtime_seconds": 399.105662,
+    "scientific_parameter_acceptance": false,
+    "sha256": "b6cbfdf318268549a83a7692e837b52853d03fd9678acfb1333bab769e613b2b",
+    "status": "passed"
+  },
+  "fresh_corrected_cpu_campaign": {
+    "old_observations_reused": false,
+    "original_policy_sha256": "dbea002e2ae847b10d7b65db37f1e877039b99b2c10a6443cc7046cc54121668",
+    "quality_pass_claimed": false,
+    "source_campaign": "workspace:output/quantum-corrected/v0.2-cpu-reproduction",
+    "status": "in_progress"
+  },
+  "full_simulation_cost": null,
+  "geometry_changing_gpu_scanner": {
+    "acceptance_claimed": false,
+    "results_available": false,
+    "status": "pilot_in_progress_at_last_observation"
+  },
+  "individual_parameter_identifiability": {
+    "audit": "design-rank-audit.json",
+    "identically_zero_baseline_rows": 2,
+    "independent_columns": 8,
+    "maximum_possible_rank": 7,
+    "original_design_full_rank_possible": false,
+    "proposal_archive": "training-design-proposal.tar.gz",
+    "proposal_archive_sha256": "ffbbff63394b44dd820ef01757eade9a6937f1869d09a082d637f2ed5d403fe6",
+    "proposal_status": "frozen_not_executed",
+    "training_rows": 9
+  },
+  "production_ready": false,
+  "schema": "orvia.quantum-gate-status.v1",
+  "scientific_acceptance": false,
+  "updated_utc": "2026-11-02T16:45:00Z"
+}
