@@ -6,9 +6,14 @@
   "publicTransactionsSent": 0,
   "files": [
     {
+      "path": "FULL_PASS_ESTIMATE.md",
+      "bytes": 5500,
+      "sha256": "7452199c2965d37d9869b0a90c6a61dcfa12ce3df481534deba7ee15829a5b9f"
+    },
+    {
       "path": "README.md",
-      "bytes": 6779,
-      "sha256": "890bacfc2593325eadcdfc79fa54035229abbecfe2e09b5c1c8500c1190c3051"
+      "bytes": 7088,
+      "sha256": "2a2f4878409c2f256bad75ab656ff5106be37d166d212303fbd10ffe1c281523"
     },
     {
       "path": "comparison.json",
@@ -34,6 +39,16 @@
       "path": "evm-review.json",
       "bytes": 2988,
       "sha256": "dc2b1e96e842accbdde44bf1a58700189926c7ecb2ac0d4cab1a801cd53148f6"
+    },
+    {
+      "path": "full-pass-estimate-sources.zip",
+      "bytes": 19612,
+      "sha256": "024e49822aaaedf85504248b38af8f459a2ba4dcd4be0c3318861c5dd2834c38"
+    },
+    {
+      "path": "full-pass-estimate.json",
+      "bytes": 18466,
+      "sha256": "b09bb147833d2cd91a3aa588c91a30d34b6a49ed9faea63de39aa19c6bb3505c"
     },
     {
       "path": "gpu-output-review.json",

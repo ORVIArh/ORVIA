@@ -1,0 +1,516 @@
+{
+  "status": "full_packed_input_one_pass_rate_projection_not_campaign_quote",
+  "sourceManifestSha256": "0c65ff98fd8d6e5a918d258057d466e452c49e47ef98b427be0df0266026cd0b",
+  "measuredComparisonSha256": "03c90adc5d12713c90bddc46f4894f0a2a6b4b1152b5a521ba537033f9d221c5",
+  "infrastructureSummarySha256": "922dcf1b3b723432f3d50f78cf8c144ae7fb29fac73ae7d908253c9fa7fdf5db",
+  "calculatorSha256": "9b17f3c996aa17013ea6a7d8170b6e62c4441d29b3762621100d9c3392e29e27",
+  "inputPayloadBytes": 44065024,
+  "baseStreams": 14,
+  "patchStreams": 10,
+  "pureFloatBasePayloadBytes": 22755392,
+  "mixedAndPatchPayloadBytes": 21309632,
+  "pricing": {
+    "checkedAtUtc": "2026-11-02T14:21:43.136Z",
+    "chainId": 4663,
+    "providerHostname": "robinhood-mainnet.g.alchemy.com",
+    "blockNumber": "0x63737c2",
+    "blockHash": "0xe128e441a8115cc64c443947254dd4e342332908483f588f1d835c35897992de",
+    "gasPriceWei": "20144000",
+    "ethUsd": "2287.575",
+    "ethUsdSource": "https://api.coinbase.com/v2/prices/ETH-USD/spot",
+    "coinbaseResponseSha256": "389b57fda210896832b34eeeb7a62c1df1b9e726b409c86a95236a836c54f909",
+    "rpcCalls": [
+      {
+        "id": 1,
+        "method": "eth_chainId",
+        "requestSha256": "09fabe0af56b7726f1666ddd147482df4d951f86f66124b936716c53ab0e8471",
+        "responseSha256": "1fb0f19b45a4203bd13cb5be1e8ad3aa569f42905377cd4643fc8bc07ecd3aa3"
+      },
+      {
+        "id": 2,
+        "method": "eth_getBlockByNumber",
+        "requestSha256": "ea099c30d3683d74a056405807b4ab857a06189f3e4702981d75935407ac986e",
+        "responseSha256": "a64b8ec2c4400ed0b98460eaae639597f2bc51c70323f8d9c9483e7570726380"
+      },
+      {
+        "id": 3,
+        "method": "eth_gasPrice",
+        "requestSha256": "ab41cc9c1bab88ee00ba9e0b999a4df904f5192fe5742910e4398c79452b8b66",
+        "responseSha256": "bd43a9fca3186ead8afce879f67586f3f9e61f0b93932d3adf5d3bfe835cb2a3"
+      }
+    ],
+    "transactionsSent": 0
+  },
+  "setup": {
+    "infrastructureTransactions": 91,
+    "infrastructure": {
+      "gas": "186177439",
+      "eth": "0.003750358331216",
+      "usd": "8.579225959531441200"
+    },
+    "assumedRootRegistrations": 24,
+    "referenceGasPerRoot": 94588,
+    "rootRegistrationAllowance": {
+      "gas": "2270112",
+      "eth": "0.000045729136128",
+      "usd": "0.104608828578009600"
+    },
+    "total": {
+      "gas": "188447551",
+      "eth": "0.003796087467344",
+      "usd": "8.683834788109450800"
+    }
+  },
+  "scenarios": [
+    {
+      "payloadBytesPerBatch": 1024,
+      "batchImplementation": "One 1 KiB leaf",
+      "measuredReferenceGasPerFullBatch": 195136,
+      "passTransactions": 43042,
+      "passCost": {
+        "gas": "8399043712",
+        "eth": "0.169190336534528",
+        "usd": "387.035584097972889600"
+      },
+      "setupAndPassTransactions": 43157,
+      "setupAndPassCost": {
+        "gas": "8587491263",
+        "eth": "0.172986424001872",
+        "usd": "395.719418886082340400"
+      },
+      "chargedPayloadCapacityBytes": 44075008,
+      "aggregateCeilIgnoringStreamBoundaries": 43033,
+      "perStream": [
+        {
+          "key": "complex33/A.angles",
+          "kind": "base",
+          "bytes": 621248,
+          "sourceSha256": "92cfaa1a45e11b14fd5df99cac357201ea00dcfdce66087762f03f2793cd242b",
+          "calls": 607,
+          "partialLastBatchBytes": 704
+        },
+        {
+          "key": "complex33/A.bonds",
+          "kind": "base",
+          "bytes": 3186912,
+          "sourceSha256": "a9bdeb47283967c82f494f5777f0d922400bcb56490512512bae30f643da2269",
+          "calls": 3113,
+          "partialLastBatchBytes": 224
+        },
+        {
+          "key": "complex33/A.exceptions",
+          "kind": "base",
+          "bytes": 6728768,
+          "sourceSha256": "5d1973bce68b48ab588ef03feaf5b340e938f72f1a5f0eaa773252d40bc1e9a1",
+          "calls": 6572,
+          "partialLastBatchBytes": 64
+        },
+        {
+          "key": "complex33/A.nonbonded",
+          "kind": "base",
+          "bytes": 3190464,
+          "sourceSha256": "82aeb454cad5a9f3425009db83791330e1b4edd513d89fece54ebcb279813a2d",
+          "calls": 3116,
+          "partialLastBatchBytes": 704
+        },
+        {
+          "key": "complex33/A.particles",
+          "kind": "base",
+          "bytes": 4253952,
+          "sourceSha256": "6f2d0deaf661ab7a339d47c7298e9f5fd3262f8a4b58ae646655ba1bc2d04865",
+          "calls": 4155,
+          "partialLastBatchBytes": 256
+        },
+        {
+          "key": "complex33/A.torsions",
+          "kind": "base",
+          "bytes": 1668864,
+          "sourceSha256": "89acd98be63fc52f79ad46c98838e924b5194be5c22917601797e777f1162371",
+          "calls": 1630,
+          "partialLastBatchBytes": 768
+        },
+        {
+          "key": "complex33/positions",
+          "kind": "base",
+          "bytes": 3190464,
+          "sourceSha256": "c710dadeda33c9e06c6573d7892a027c6a18bbd910d1b536cf5347a0560ced4c",
+          "calls": 3116,
+          "partialLastBatchBytes": 704
+        },
+        {
+          "key": "solvent33/A.angles",
+          "kind": "base",
+          "bytes": 2560,
+          "sourceSha256": "5c4e87b78e96b5a3292b58d62a6a9967379405a53f59b614dedee82110cc1488",
+          "calls": 3,
+          "partialLastBatchBytes": 512
+        },
+        {
+          "key": "solvent33/A.bonds",
+          "kind": "base",
+          "bytes": 3629536,
+          "sourceSha256": "d30d666d7406c5ed999e965563f714aa3e429038862694bd73bf7dce368195b4",
+          "calls": 3545,
+          "partialLastBatchBytes": 480
+        },
+        {
+          "key": "solvent33/A.exceptions",
+          "kind": "base",
+          "bytes": 5451072,
+          "sourceSha256": "cb10a043eeaa62322814ac3bd399f56cbc49ed200b5bbd70c0314821f9dfb351",
+          "calls": 5324,
+          "partialLastBatchBytes": 320
+        },
+        {
+          "key": "solvent33/A.nonbonded",
+          "kind": "base",
+          "bytes": 3636160,
+          "sourceSha256": "369fc0faac84cf99574226606e302a01024d6a98d63f5ac51110eb7baeda4a74",
+          "calls": 3551,
+          "partialLastBatchBytes": 960
+        },
+        {
+          "key": "solvent33/A.particles",
+          "kind": "base",
+          "bytes": 4848192,
+          "sourceSha256": "6ecf68a4ab72cb2dc5963fe82237f0cb79b2a0cd55d655da83a8a0c7854ea629",
+          "calls": 4735,
+          "partialLastBatchBytes": 576
+        },
+        {
+          "key": "solvent33/A.torsions",
+          "kind": "base",
+          "bytes": 5760,
+          "sourceSha256": "4d04000e1c36ed302b092be01d6b6bb66a6b56321d9fb6bc2b5582b559b7a8e8",
+          "calls": 6,
+          "partialLastBatchBytes": 640
+        },
+        {
+          "key": "solvent33/positions",
+          "kind": "base",
+          "bytes": 3636160,
+          "sourceSha256": "09759d47b4eae93a3cf77339e019743d90b5e33c548937be643927dbb8cad10a",
+          "calls": 3551,
+          "partialLastBatchBytes": 960
+        },
+        {
+          "key": "complex33/angles.patches",
+          "kind": "patch",
+          "bytes": 768,
+          "sourceSha256": "85be878941f169fa9d8f2453b0f3ef80c8c59a5e54e796ae509a8051d622c7f1",
+          "calls": 1,
+          "partialLastBatchBytes": 768
+        },
+        {
+          "key": "complex33/bonds.patches",
+          "kind": "patch",
+          "bytes": 192,
+          "sourceSha256": "0c0684bf9cfb393b47d6ac5edac29e7f6ab58e1e60b2f534c6195d87bd1d8eca",
+          "calls": 1,
+          "partialLastBatchBytes": 192
+        },
+        {
+          "key": "complex33/exceptions.patches",
+          "kind": "patch",
+          "bytes": 3904,
+          "sourceSha256": "d53bb40bded8b2069bb5a8a4c9096c8b8a6ae88d412cec79ce65d47a6a0cd2ef",
+          "calls": 4,
+          "partialLastBatchBytes": 832
+        },
+        {
+          "key": "complex33/nonbonded.patches",
+          "kind": "patch",
+          "bytes": 1600,
+          "sourceSha256": "e11cdd89e23d249a9a9fc0108cad5a5ae730ab573f7251cde7c848caf1db946f",
+          "calls": 2,
+          "partialLastBatchBytes": 576
+        },
+        {
+          "key": "complex33/torsions.patches",
+          "kind": "patch",
+          "bytes": 992,
+          "sourceSha256": "8ecc8ffad20eb8dc6bde635fc03ead6fcb7e6cebbf8dddc22577364a237aaf8b",
+          "calls": 1,
+          "partialLastBatchBytes": 992
+        },
+        {
+          "key": "solvent33/angles.patches",
+          "kind": "patch",
+          "bytes": 768,
+          "sourceSha256": "17c8f47fda8138f8dd2647f8543f17cc5f816166409470a2b8ff73d3130c3996",
+          "calls": 1,
+          "partialLastBatchBytes": 768
+        },
+        {
+          "key": "solvent33/bonds.patches",
+          "kind": "patch",
+          "bytes": 192,
+          "sourceSha256": "6cce3930e81abadd376392b73d5fc69e0571daa787dd6a1340bcb54db52b9ae2",
+          "calls": 1,
+          "partialLastBatchBytes": 192
+        },
+        {
+          "key": "solvent33/exceptions.patches",
+          "kind": "patch",
+          "bytes": 3904,
+          "sourceSha256": "6f2b09d383c92278808851a8992635ee957a2c3f24f1fb7de1e6ec6d66b9834d",
+          "calls": 4,
+          "partialLastBatchBytes": 832
+        },
+        {
+          "key": "solvent33/nonbonded.patches",
+          "kind": "patch",
+          "bytes": 1600,
+          "sourceSha256": "56c281251087e300dd26c38cfa12d4d1613bec6253ca62b58bacf4126e7a109a",
+          "calls": 2,
+          "partialLastBatchBytes": 576
+        },
+        {
+          "key": "solvent33/torsions.patches",
+          "kind": "patch",
+          "bytes": 992,
+          "sourceSha256": "815436c70ee195298e63f754fa1b4d1c52bd943e56ab3d9f5607f65682f222f4",
+          "calls": 1,
+          "partialLastBatchBytes": 992
+        }
+      ]
+    },
+    {
+      "payloadBytesPerBatch": 16384,
+      "batchImplementation": "Sixteen 1 KiB leaves, individual proofs, one transaction",
+      "measuredReferenceGasPerFullBatch": 2774398,
+      "passTransactions": 2703,
+      "passCost": {
+        "gas": "7499197794",
+        "eth": "0.151063840362336",
+        "usd": "345.569864616870775200"
+      },
+      "setupAndPassTransactions": 2818,
+      "setupAndPassCost": {
+        "gas": "7687645345",
+        "eth": "0.154859927829680",
+        "usd": "354.253699404980226000"
+      },
+      "chargedPayloadCapacityBytes": 44285952,
+      "aggregateCeilIgnoringStreamBoundaries": 2690,
+      "perStream": [
+        {
+          "key": "complex33/A.angles",
+          "kind": "base",
+          "bytes": 621248,
+          "sourceSha256": "92cfaa1a45e11b14fd5df99cac357201ea00dcfdce66087762f03f2793cd242b",
+          "calls": 38,
+          "partialLastBatchBytes": 15040
+        },
+        {
+          "key": "complex33/A.bonds",
+          "kind": "base",
+          "bytes": 3186912,
+          "sourceSha256": "a9bdeb47283967c82f494f5777f0d922400bcb56490512512bae30f643da2269",
+          "calls": 195,
+          "partialLastBatchBytes": 8416
+        },
+        {
+          "key": "complex33/A.exceptions",
+          "kind": "base",
+          "bytes": 6728768,
+          "sourceSha256": "5d1973bce68b48ab588ef03feaf5b340e938f72f1a5f0eaa773252d40bc1e9a1",
+          "calls": 411,
+          "partialLastBatchBytes": 11328
+        },
+        {
+          "key": "complex33/A.nonbonded",
+          "kind": "base",
+          "bytes": 3190464,
+          "sourceSha256": "82aeb454cad5a9f3425009db83791330e1b4edd513d89fece54ebcb279813a2d",
+          "calls": 195,
+          "partialLastBatchBytes": 11968
+        },
+        {
+          "key": "complex33/A.particles",
+          "kind": "base",
+          "bytes": 4253952,
+          "sourceSha256": "6f2d0deaf661ab7a339d47c7298e9f5fd3262f8a4b58ae646655ba1bc2d04865",
+          "calls": 260,
+          "partialLastBatchBytes": 10496
+        },
+        {
+          "key": "complex33/A.torsions",
+          "kind": "base",
+          "bytes": 1668864,
+          "sourceSha256": "89acd98be63fc52f79ad46c98838e924b5194be5c22917601797e777f1162371",
+          "calls": 102,
+          "partialLastBatchBytes": 14080
+        },
+        {
+          "key": "complex33/positions",
+          "kind": "base",
+          "bytes": 3190464,
+          "sourceSha256": "c710dadeda33c9e06c6573d7892a027c6a18bbd910d1b536cf5347a0560ced4c",
+          "calls": 195,
+          "partialLastBatchBytes": 11968
+        },
+        {
+          "key": "solvent33/A.angles",
+          "kind": "base",
+          "bytes": 2560,
+          "sourceSha256": "5c4e87b78e96b5a3292b58d62a6a9967379405a53f59b614dedee82110cc1488",
+          "calls": 1,
+          "partialLastBatchBytes": 2560
+        },
+        {
+          "key": "solvent33/A.bonds",
+          "kind": "base",
+          "bytes": 3629536,
+          "sourceSha256": "d30d666d7406c5ed999e965563f714aa3e429038862694bd73bf7dce368195b4",
+          "calls": 222,
+          "partialLastBatchBytes": 8672
+        },
+        {
+          "key": "solvent33/A.exceptions",
+          "kind": "base",
+          "bytes": 5451072,
+          "sourceSha256": "cb10a043eeaa62322814ac3bd399f56cbc49ed200b5bbd70c0314821f9dfb351",
+          "calls": 333,
+          "partialLastBatchBytes": 11584
+        },
+        {
+          "key": "solvent33/A.nonbonded",
+          "kind": "base",
+          "bytes": 3636160,
+          "sourceSha256": "369fc0faac84cf99574226606e302a01024d6a98d63f5ac51110eb7baeda4a74",
+          "calls": 222,
+          "partialLastBatchBytes": 15296
+        },
+        {
+          "key": "solvent33/A.particles",
+          "kind": "base",
+          "bytes": 4848192,
+          "sourceSha256": "6ecf68a4ab72cb2dc5963fe82237f0cb79b2a0cd55d655da83a8a0c7854ea629",
+          "calls": 296,
+          "partialLastBatchBytes": 14912
+        },
+        {
+          "key": "solvent33/A.torsions",
+          "kind": "base",
+          "bytes": 5760,
+          "sourceSha256": "4d04000e1c36ed302b092be01d6b6bb66a6b56321d9fb6bc2b5582b559b7a8e8",
+          "calls": 1,
+          "partialLastBatchBytes": 5760
+        },
+        {
+          "key": "solvent33/positions",
+          "kind": "base",
+          "bytes": 3636160,
+          "sourceSha256": "09759d47b4eae93a3cf77339e019743d90b5e33c548937be643927dbb8cad10a",
+          "calls": 222,
+          "partialLastBatchBytes": 15296
+        },
+        {
+          "key": "complex33/angles.patches",
+          "kind": "patch",
+          "bytes": 768,
+          "sourceSha256": "85be878941f169fa9d8f2453b0f3ef80c8c59a5e54e796ae509a8051d622c7f1",
+          "calls": 1,
+          "partialLastBatchBytes": 768
+        },
+        {
+          "key": "complex33/bonds.patches",
+          "kind": "patch",
+          "bytes": 192,
+          "sourceSha256": "0c0684bf9cfb393b47d6ac5edac29e7f6ab58e1e60b2f534c6195d87bd1d8eca",
+          "calls": 1,
+          "partialLastBatchBytes": 192
+        },
+        {
+          "key": "complex33/exceptions.patches",
+          "kind": "patch",
+          "bytes": 3904,
+          "sourceSha256": "d53bb40bded8b2069bb5a8a4c9096c8b8a6ae88d412cec79ce65d47a6a0cd2ef",
+          "calls": 1,
+          "partialLastBatchBytes": 3904
+        },
+        {
+          "key": "complex33/nonbonded.patches",
+          "kind": "patch",
+          "bytes": 1600,
+          "sourceSha256": "e11cdd89e23d249a9a9fc0108cad5a5ae730ab573f7251cde7c848caf1db946f",
+          "calls": 1,
+          "partialLastBatchBytes": 1600
+        },
+        {
+          "key": "complex33/torsions.patches",
+          "kind": "patch",
+          "bytes": 992,
+          "sourceSha256": "8ecc8ffad20eb8dc6bde635fc03ead6fcb7e6cebbf8dddc22577364a237aaf8b",
+          "calls": 1,
+          "partialLastBatchBytes": 992
+        },
+        {
+          "key": "solvent33/angles.patches",
+          "kind": "patch",
+          "bytes": 768,
+          "sourceSha256": "17c8f47fda8138f8dd2647f8543f17cc5f816166409470a2b8ff73d3130c3996",
+          "calls": 1,
+          "partialLastBatchBytes": 768
+        },
+        {
+          "key": "solvent33/bonds.patches",
+          "kind": "patch",
+          "bytes": 192,
+          "sourceSha256": "6cce3930e81abadd376392b73d5fc69e0571daa787dd6a1340bcb54db52b9ae2",
+          "calls": 1,
+          "partialLastBatchBytes": 192
+        },
+        {
+          "key": "solvent33/exceptions.patches",
+          "kind": "patch",
+          "bytes": 3904,
+          "sourceSha256": "6f2b09d383c92278808851a8992635ee957a2c3f24f1fb7de1e6ec6d66b9834d",
+          "calls": 1,
+          "partialLastBatchBytes": 3904
+        },
+        {
+          "key": "solvent33/nonbonded.patches",
+          "kind": "patch",
+          "bytes": 1600,
+          "sourceSha256": "56c281251087e300dd26c38cfa12d4d1613bec6253ca62b58bacf4126e7a109a",
+          "calls": 1,
+          "partialLastBatchBytes": 1600
+        },
+        {
+          "key": "solvent33/torsions.patches",
+          "kind": "patch",
+          "bytes": 992,
+          "sourceSha256": "815436c70ee195298e63f754fa1b4d1c52bd943e56ab3d9f5607f65682f222f4",
+          "calls": 1,
+          "partialLastBatchBytes": 992
+        }
+      ]
+    }
+  ],
+  "transactionReductionPercent": "93.7200873565354769759769527438316063379954463",
+  "passGasReductionPercent": "10.7136710898927632584274851312977664855377288",
+  "assumptions": [
+    "One complete sequential pass over current packed bases and endpoint patches; no cross-stream batching.",
+    "Every batch, including a short last batch, is charged at the measured full reference-batch rate.",
+    "Reference gas uses actual first complex33 nonbonded chunks and 12-level proofs. Other bytes, proof depths and codecs are not individually quoted.",
+    "The 16 KiB scenario bundles sixteen 1 KiB leaves with independent proofs, not one new 16 KiB leaf.",
+    "24 separate root registrations are an illustrative allowance, not an implemented production API.",
+    "The existing 256-address deployment quote is reused as a baseline; a new integrated reader changes bytecode and must be requoted.",
+    "No extra L1-data fee is added to the existing target-provider gas estimates."
+  ],
+  "excluded": [
+    "Production bank routing, code-hash checks and mixed/patch decoder integration",
+    "Separate prior data publication and the off-chain data supplier",
+    "Unresolved C4, constraints, activity and other future inputs",
+    "Model initialization, evolving positions/forces/progress, molecular forces, dynamics and analysis",
+    "Repeated data access needed by a real scientific campaign"
+  ],
+  "fullCampaignQuoted": false,
+  "productionReaderImplemented": false,
+  "hardUpperBound": false,
+  "scientificAcceptance": false,
+  "mainnetReady": false,
+  "publicTransactionsSent": 0
+}

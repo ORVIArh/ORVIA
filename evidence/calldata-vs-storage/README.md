@@ -2,6 +2,8 @@
 
 **Measured result:** authenticated calldata costs less for whole-chunk reads; permanent packed storage costs less for small fields reused across many transactions. A hybrid input reader is the next candidate to implement and measure. This evidence does not select or deploy a production architecture.
 
+The [full packed-input pass projection](FULL_PASS_ESTIMATE.md) now extends these measured rates to all 44.1 MB with 1 KiB or 16 KiB batches. It includes a deployment baseline, exact stream-aware transaction counts and refreshed prices; it remains a rough data-access projection, not a full simulation quote.
+
 ## Measured gas
 
 Both paths use the same actual model bytes and produce the same result after exact binary64-to-binary128 expansion and an ordered digest. These are data-access microbenchmarks, not molecular force calculations. The calldata path includes its indexed Merkle proof; stored reads fetch only the slots needed by the selected fields.
