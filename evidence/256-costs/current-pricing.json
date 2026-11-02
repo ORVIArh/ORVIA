@@ -1,0 +1,11 @@
+{
+  "checkedAtUtc": "2026-11-02T13:21:33.425Z",
+  "chainId": 4663,
+  "providerHostname": "robinhood-mainnet.g.alchemy.com",
+  "blockNumber": "0x636ace9",
+  "blockHash": "0x6e0dafdb74225943bd2fcafbcddc099520f87bc02bb531251a660e55a604da1e",
+  "gasPriceWei": "20056000",
+  "ethUsd": "2276.575",
+  "ethUsdSource": "https://api.coinbase.com/v2/prices/ETH-USD/spot",
+  "transactionsSent": 0
+}

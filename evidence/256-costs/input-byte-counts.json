@@ -1,0 +1,406 @@
+{
+  "schemaVersion": 1,
+  "status": "source_bytes_verified_counts_only",
+  "scope": "24 distinct already assembled candidate input streams only. Excludes unresolved C4/activity/phase/constraint additions, topology/campaign registration and simulation.",
+  "scriptSha256": "449cb0f7f8be602254257fabd1d088d3ba642efab55b4825fb685041ac3a2e6b",
+  "streams": [
+    {
+      "id": "0xaddc248065f7b6fcbe6fc2a841c533e84cb94ebec722e57bab7ed21961f95b2d",
+      "aliases": [
+        "complex33:A.angles"
+      ],
+      "sourceGzip": "legs/complex33/streams/A.angles.words.bin.gz",
+      "rawSha256": "800e10c2bac3ee3ccb34cff3715aa53057ced2ded7f048114c120a92ec86e656",
+      "words": 110935,
+      "nonzeroWords": 110911,
+      "zeroWords": 24,
+      "nonzeroBytes": 523086,
+      "zeroBytes": 3026834,
+      "appendTransactions": 867,
+      "finalBatchWords": 87,
+      "sampleFile": "sample-0.bin"
+    },
+    {
+      "id": "0xbe9933185b990b3b400b92c5f5e4c874ac73ef7f7f1365939a1768c5fc08bf53",
+      "aliases": [
+        "complex33:A.bonds"
+      ],
+      "sourceGzip": "legs/complex33/streams/A.bonds.words.bin.gz",
+      "rawSha256": "f04c35cfdd4232d5c3996abc6c47167f457ae50a9278db860e5b870a5cfcdab2",
+      "words": 531148,
+      "nonzeroWords": 531141,
+      "zeroWords": 7,
+      "nonzeroBytes": 3016360,
+      "zeroBytes": 13980376,
+      "appendTransactions": 4150,
+      "finalBatchWords": 76,
+      "sampleFile": "sample-1.bin"
+    },
+    {
+      "id": "0x242e9f075de33539cbbdb11ecf24fd43719a3271503de372a5e81e3b6d34856a",
+      "aliases": [
+        "complex33:A.exceptions"
+      ],
+      "sourceGzip": "legs/complex33/streams/A.exceptions.words.bin.gz",
+      "rawSha256": "f092a2aa6b3f2d9ce07024602ae28912073396473ed660afd18a4863dffd019a",
+      "words": 1121460,
+      "nonzeroWords": 656233,
+      "zeroWords": 465227,
+      "nonzeroBytes": 1914920,
+      "zeroBytes": 33971800,
+      "appendTransactions": 8762,
+      "finalBatchWords": 52,
+      "sampleFile": "sample-2.bin"
+    },
+    {
+      "id": "0x0b8854eae4327bbf66d2c320ca677ab83879962d9d5169e3004284d09bcf90a0",
+      "aliases": [
+        "complex33:A.nonbonded"
+      ],
+      "sourceGzip": "legs/complex33/streams/A.nonbonded.words.bin.gz",
+      "rawSha256": "da0a4b56fe00ca4e6ca011fffbdbf695f283288eae9a9bcff957118467a9c8fe",
+      "words": 398808,
+      "nonzeroWords": 318349,
+      "zeroWords": 80459,
+      "nonzeroBytes": 2858344,
+      "zeroBytes": 9903512,
+      "appendTransactions": 3116,
+      "finalBatchWords": 88,
+      "sampleFile": "sample-3.bin"
+    },
+    {
+      "id": "0xbcb12b1f757ad8e90e574ba29d0351935010342bb2edd232503bdf85f9da5202",
+      "aliases": [
+        "complex33:A.particles",
+        "complex33:B.particles"
+      ],
+      "sourceGzip": "legs/complex33/streams/A.particles.words.bin.gz",
+      "rawSha256": "8d45312b3317f5a52cd13caaeccdf6d3e23abd8814e9548a72255b894ccfc5f3",
+      "words": 531744,
+      "nonzeroWords": 132936,
+      "zeroWords": 398808,
+      "nonzeroBytes": 907224,
+      "zeroBytes": 16108584,
+      "appendTransactions": 4155,
+      "finalBatchWords": 32,
+      "sampleFile": "sample-4.bin"
+    },
+    {
+      "id": "0x3a48be32f7deece2121e1d84839fb47e3a1d72dc8651a17ca44d35d834dddfc4",
+      "aliases": [
+        "complex33:A.torsions"
+      ],
+      "sourceGzip": "legs/complex33/streams/A.torsions.words.bin.gz",
+      "rawSha256": "2d067053f3b3f8d8a759cf0b0e86a690cd1cbb71af28dcfec30ba66cf4b104b5",
+      "words": 324499,
+      "nonzeroWords": 285771,
+      "zeroWords": 38728,
+      "nonzeroBytes": 877403,
+      "zeroBytes": 9506565,
+      "appendTransactions": 2536,
+      "finalBatchWords": 19,
+      "sampleFile": "sample-5.bin"
+    },
+    {
+      "id": "0x27578ba62ce00f27a975f846e806cca0e1fa4320b01e40d96e77b97ede878974",
+      "aliases": [
+        "complex33:B.angles"
+      ],
+      "sourceGzip": "legs/complex33/streams/B.angles.words.bin.gz",
+      "rawSha256": "ba52a68d500f64d9e5e723267d731b3377d104a06f4472d2cde6264ffce06e55",
+      "words": 110935,
+      "nonzeroWords": 110917,
+      "zeroWords": 18,
+      "nonzeroBytes": 523140,
+      "zeroBytes": 3026780,
+      "appendTransactions": 867,
+      "finalBatchWords": 87,
+      "sampleFile": "sample-6.bin"
+    },
+    {
+      "id": "0x80afc05c1ff69a044a21bc4436271d5a89b243d0e0716404b6046fb9df3b7db1",
+      "aliases": [
+        "complex33:B.bonds"
+      ],
+      "sourceGzip": "legs/complex33/streams/B.bonds.words.bin.gz",
+      "rawSha256": "fddcea19b78d66667c57a1c8ab175b5e320ae9bfa13800e130dab431fa2ea3a5",
+      "words": 531148,
+      "nonzeroWords": 531141,
+      "zeroWords": 7,
+      "nonzeroBytes": 3016360,
+      "zeroBytes": 13980376,
+      "appendTransactions": 4150,
+      "finalBatchWords": 76,
+      "sampleFile": "sample-7.bin"
+    },
+    {
+      "id": "0xef430050fcb8420aeb27d4e25940fb138b21eb7542f2078f955073271393f20c",
+      "aliases": [
+        "complex33:B.exceptions"
+      ],
+      "sourceGzip": "legs/complex33/streams/B.exceptions.words.bin.gz",
+      "rawSha256": "2fbe5f5abd08fa8528e64140de3d9670ddb4ca7c0bf00f9675476ab0dd7ad2c1",
+      "words": 1121460,
+      "nonzeroWords": 656251,
+      "zeroWords": 465209,
+      "nonzeroBytes": 1915079,
+      "zeroBytes": 33971641,
+      "appendTransactions": 8762,
+      "finalBatchWords": 52,
+      "sampleFile": "sample-8.bin"
+    },
+    {
+      "id": "0x912dae152cb8046dfebd32f314f74546c2bc0839c8c6ed6c5e73bed7b7a13d33",
+      "aliases": [
+        "complex33:B.nonbonded"
+      ],
+      "sourceGzip": "legs/complex33/streams/B.nonbonded.words.bin.gz",
+      "rawSha256": "5760bef3bed0a2761080376f732271c1ae702a47cbd1ea965f76e533a23ad94b",
+      "words": 398808,
+      "nonzeroWords": 318355,
+      "zeroWords": 80453,
+      "nonzeroBytes": 2858397,
+      "zeroBytes": 9903459,
+      "appendTransactions": 3116,
+      "finalBatchWords": 88,
+      "sampleFile": "sample-9.bin"
+    },
+    {
+      "id": "0x9ef327b1c889b7148d270bf40f700ee6631388dafe562ce544516ab9c8db7926",
+      "aliases": [
+        "complex33:B.torsions"
+      ],
+      "sourceGzip": "legs/complex33/streams/B.torsions.words.bin.gz",
+      "rawSha256": "de57bdb4e0f28787509cfae04147c2b06b15023690f5b28aad607d6ab16d83c5",
+      "words": 324499,
+      "nonzeroWords": 285780,
+      "zeroWords": 38719,
+      "nonzeroBytes": 877484,
+      "zeroBytes": 9506484,
+      "appendTransactions": 2536,
+      "finalBatchWords": 19,
+      "sampleFile": "sample-10.bin"
+    },
+    {
+      "id": "0x96ae8ab1488f386219f052ec365cf2e25d577bbeacf478fe6a96bfec25ab8cbe",
+      "aliases": [
+        "complex33:positions"
+      ],
+      "sourceGzip": "legs/complex33/streams/positions.words.bin.gz",
+      "rawSha256": "7557cdda674db8a3c95be338674defc2730d195c28b1edd8af2cf789533eae57",
+      "words": 398808,
+      "nonzeroWords": 398808,
+      "zeroWords": 0,
+      "nonzeroBytes": 3474830,
+      "zeroBytes": 9287026,
+      "appendTransactions": 3116,
+      "finalBatchWords": 88,
+      "sampleFile": "sample-11.bin"
+    },
+    {
+      "id": "0x1a41bc8606c971f2abc4e0aed26451757e7e549b50580a538b70a6ab09b2365a",
+      "aliases": [
+        "solvent33:A.angles"
+      ],
+      "sourceGzip": "legs/solvent33/streams/A.angles.words.bin.gz",
+      "rawSha256": "bdf39e8ec1d6d24b4017511f4a02ccd298dd4bf4e4e1d730e47b2fa3605bdf7e",
+      "words": 455,
+      "nonzeroWords": 431,
+      "zeroWords": 24,
+      "nonzeroBytes": 1714,
+      "zeroBytes": 12846,
+      "appendTransactions": 4,
+      "finalBatchWords": 71,
+      "sampleFile": "sample-12.bin"
+    },
+    {
+      "id": "0xebfa1b69f8eadc6150c09ed2ed5eb2c3530ff8330589d19ecd92a7b57f35dec8",
+      "aliases": [
+        "solvent33:A.bonds"
+      ],
+      "sourceGzip": "legs/solvent33/streams/A.bonds.words.bin.gz",
+      "rawSha256": "c339729c380beb489423036ab3b455dbc9dae451d2a8dad0d8af1c687f9a5fda",
+      "words": 604920,
+      "nonzeroWords": 604913,
+      "zeroWords": 7,
+      "nonzeroBytes": 3495665,
+      "zeroBytes": 15861775,
+      "appendTransactions": 4726,
+      "finalBatchWords": 120,
+      "sampleFile": "sample-13.bin"
+    },
+    {
+      "id": "0xb6536482c2b7de8fbfb9742d9856d6d846fdbaacdbe437bd310537d5487b5da8",
+      "aliases": [
+        "solvent33:A.exceptions"
+      ],
+      "sourceGzip": "legs/solvent33/streams/A.exceptions.words.bin.gz",
+      "rawSha256": "08d6fb22a6509e2777d30b5b4cde93ff6e9cf3f05d4d2a755a31b8fc34259ffc",
+      "words": 908508,
+      "nonzeroWords": 454528,
+      "zeroWords": 453980,
+      "nonzeroBytes": 927870,
+      "zeroBytes": 28144386,
+      "appendTransactions": 7098,
+      "finalBatchWords": 92,
+      "sampleFile": "sample-14.bin"
+    },
+    {
+      "id": "0xcce59631c5008230d7aa5788309f6f2bcf1ca122aa52c7990e1c240d17ad44cf",
+      "aliases": [
+        "solvent33:A.nonbonded"
+      ],
+      "sourceGzip": "legs/solvent33/streams/A.nonbonded.words.bin.gz",
+      "rawSha256": "61f7a881bbfcf057d895607a21e5eef0c348e05ba30871d8dc64f50930242fdb",
+      "words": 454518,
+      "nonzeroWords": 353724,
+      "zeroWords": 100794,
+      "nonzeroBytes": 3181540,
+      "zeroBytes": 11363036,
+      "appendTransactions": 3551,
+      "finalBatchWords": 118,
+      "sampleFile": "sample-15.bin"
+    },
+    {
+      "id": "0xaec897872f00bbd3389d5d4b7025b3a2ded231a7ee72bafe2ea9894d8ec8a411",
+      "aliases": [
+        "solvent33:A.particles",
+        "solvent33:B.particles"
+      ],
+      "sourceGzip": "legs/solvent33/streams/A.particles.words.bin.gz",
+      "rawSha256": "6b9778c41e1328b2c49887b08d4ec4e4693dcee04c8fc9204a06a1704588d095",
+      "words": 606024,
+      "nonzeroWords": 151506,
+      "zeroWords": 454518,
+      "nonzeroBytes": 1010789,
+      "zeroBytes": 18381979,
+      "appendTransactions": 4735,
+      "finalBatchWords": 72,
+      "sampleFile": "sample-16.bin"
+    },
+    {
+      "id": "0x67324abfca950d6d6af6b43532e73069ed7c68418559cd669ed22d6bb22139e2",
+      "aliases": [
+        "solvent33:A.torsions"
+      ],
+      "sourceGzip": "legs/solvent33/streams/A.torsions.words.bin.gz",
+      "rawSha256": "ae81245dbad5bcc6ff40eb41cfc32f1cebc3dc05570cfa36fc98f0c396d7e16c",
+      "words": 1120,
+      "nonzeroWords": 996,
+      "zeroWords": 124,
+      "nonzeroBytes": 2542,
+      "zeroBytes": 33298,
+      "appendTransactions": 9,
+      "finalBatchWords": 96,
+      "sampleFile": "sample-17.bin"
+    },
+    {
+      "id": "0x87b79f3223743a8231078c21d30881988c48bd9f1c88b8da1423b043141c1b47",
+      "aliases": [
+        "solvent33:B.angles"
+      ],
+      "sourceGzip": "legs/solvent33/streams/B.angles.words.bin.gz",
+      "rawSha256": "a56ec830743158c47c619e8278b62741779f742fc3152c036fd734a34279aea9",
+      "words": 455,
+      "nonzeroWords": 437,
+      "zeroWords": 18,
+      "nonzeroBytes": 1768,
+      "zeroBytes": 12792,
+      "appendTransactions": 4,
+      "finalBatchWords": 71,
+      "sampleFile": "sample-18.bin"
+    },
+    {
+      "id": "0x5c0cc2bef9d9da191756cb6d8adf37c8b831d2947026e65086231625072cb58a",
+      "aliases": [
+        "solvent33:B.bonds"
+      ],
+      "sourceGzip": "legs/solvent33/streams/B.bonds.words.bin.gz",
+      "rawSha256": "c6f42a15f83fbfb148d5cd33ec6bdb05732e9df1b8e3fda43cec6a19e5ed9183",
+      "words": 604920,
+      "nonzeroWords": 604913,
+      "zeroWords": 7,
+      "nonzeroBytes": 3495665,
+      "zeroBytes": 15861775,
+      "appendTransactions": 4726,
+      "finalBatchWords": 120,
+      "sampleFile": "sample-19.bin"
+    },
+    {
+      "id": "0x2e54d1a975f332637fd2cd2b5d85384a9eeef995885aa52edc9d782e40910a7a",
+      "aliases": [
+        "solvent33:B.exceptions"
+      ],
+      "sourceGzip": "legs/solvent33/streams/B.exceptions.words.bin.gz",
+      "rawSha256": "1737b8d4ac01c76d3d8ccb122a50f060324870bd93833fd6672d036d2581a137",
+      "words": 908508,
+      "nonzeroWords": 454546,
+      "zeroWords": 453962,
+      "nonzeroBytes": 928029,
+      "zeroBytes": 28144227,
+      "appendTransactions": 7098,
+      "finalBatchWords": 92,
+      "sampleFile": "sample-20.bin"
+    },
+    {
+      "id": "0xebb876ae507c0b55f3464b3f41c2bebeb0aa4cd2367561e606a3852c1cf6dda4",
+      "aliases": [
+        "solvent33:B.nonbonded"
+      ],
+      "sourceGzip": "legs/solvent33/streams/B.nonbonded.words.bin.gz",
+      "rawSha256": "1890341e46f734e3cc43f8767fd8ea5d531d097f1670548fe56d95ded3f30ed7",
+      "words": 454518,
+      "nonzeroWords": 353730,
+      "zeroWords": 100788,
+      "nonzeroBytes": 3181593,
+      "zeroBytes": 11362983,
+      "appendTransactions": 3551,
+      "finalBatchWords": 118,
+      "sampleFile": "sample-21.bin"
+    },
+    {
+      "id": "0x163e802ed613d39106289fbdaeb6391d3cd0cad349e0429ade737a15c515a2af",
+      "aliases": [
+        "solvent33:B.torsions"
+      ],
+      "sourceGzip": "legs/solvent33/streams/B.torsions.words.bin.gz",
+      "rawSha256": "7544d19f1218e933a0d286f90b64057351bd47ff26224fbd5395ae255b7efe7a",
+      "words": 1120,
+      "nonzeroWords": 1005,
+      "zeroWords": 115,
+      "nonzeroBytes": 2623,
+      "zeroBytes": 33217,
+      "appendTransactions": 9,
+      "finalBatchWords": 96,
+      "sampleFile": "sample-22.bin"
+    },
+    {
+      "id": "0xbdc0b4e2d62d5377e03a26893482ea4be987dbbdb614a8ee201c1f40e233d7ea",
+      "aliases": [
+        "solvent33:positions"
+      ],
+      "sourceGzip": "legs/solvent33/streams/positions.words.bin.gz",
+      "rawSha256": "b8fdb313cc8ce62c536f165cf1cb19c9685c2f1f0de920121fbea2148766d9b8",
+      "words": 454518,
+      "nonzeroWords": 454518,
+      "zeroWords": 0,
+      "nonzeroBytes": 3963782,
+      "zeroBytes": 10580794,
+      "appendTransactions": 3551,
+      "finalBatchWords": 118,
+      "sampleFile": "sample-23.bin"
+    }
+  ],
+  "streamCount": 24,
+  "totals": {
+    "words": 10903836,
+    "nonzeroWords": 7771840,
+    "zeroWords": 3131996,
+    "nonzeroBytes": 42956207,
+    "zeroBytes": 305966545,
+    "appendTransactions": 85195
+  },
+  "beginAndSealTransactions": 48,
+  "scientificAcceptance": false,
+  "publicTransactionsSent": 0
+}

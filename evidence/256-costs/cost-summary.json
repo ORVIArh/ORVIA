@@ -1,0 +1,57 @@
+{
+  "status": "current_infrastructure_quote_and_calibrated_existing_upload_projection",
+  "pricing": {
+    "checkedAtUtc": "2026-11-02T13:21:33.425Z",
+    "chainId": 4663,
+    "providerHostname": "robinhood-mainnet.g.alchemy.com",
+    "blockNumber": "0x636ace9",
+    "blockHash": "0x6e0dafdb74225943bd2fcafbcddc099520f87bc02bb531251a660e55a604da1e",
+    "gasPriceWei": "20056000",
+    "ethUsd": "2276.575",
+    "ethUsdSource": "https://api.coinbase.com/v2/prices/ETH-USD/spot",
+    "transactionsSent": 0
+  },
+  "costs": {
+    "infrastructure": {
+      "gasLow": "186177439",
+      "gasHigh": "186177439",
+      "ethLow": "0.003733974716584",
+      "ethHigh": "0.003733974716584",
+      "usdLow": "8.5006734904072198",
+      "usdHigh": "8.5006734904072198",
+      "usdHighWith20PercentGasAllowance": "10.20080818848866376"
+    },
+    "existing_model_upload": {
+      "gasLow": "195551588254",
+      "gasHigh": "196159036309",
+      "ethLow": "3.921982654022224",
+      "ethHigh": "3.934165632213304",
+      "usdLow": "8928.6876605806446028",
+      "usdHigh": "8956.4231241560025538",
+      "usdHighWith20PercentGasAllowance": "10747.70774898720306456"
+    },
+    "infrastructure_plus_existing_model_upload": {
+      "gasLow": "195737765693",
+      "gasHigh": "196345213748",
+      "ethLow": "3.925716628738808",
+      "ethHigh": "3.937899606929888",
+      "usdLow": "8937.1883340710518226",
+      "usdHigh": "8964.9237976464097736",
+      "usdHighWith20PercentGasAllowance": "10757.90855717569172832"
+    }
+  },
+  "scope": "32 core +224 banks +3 bindings, and optional24alreadyassembled inputstreams. Upload range is an empirical sampled target scenario, not a hard bound or85,243individual quotes.",
+  "excluded": [
+    "Protocol registration",
+    "Unresolved C4/activity/phase/constraint stream additions",
+    "Topology validation and model initialization",
+    "All simulation and analysis campaign execution"
+  ],
+  "sources": {
+    "deploymentGasReportSha256": "73488fe5a8bea908cd72b3a544c8ca2f1489cad3f5445d52ed34c3d257c8f77e",
+    "uploadModelReportSha256": "c40e73d1b86d5141722e91c9facddef5143af918f931e23e7b47f2c0bd42ff9d"
+  },
+  "scientificAcceptance": false,
+  "mainnetReady": false,
+  "transactionsSent": 0
+}

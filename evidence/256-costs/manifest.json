@@ -1,0 +1,55 @@
+{
+  "schema": "orvia.256-cost-publication.v1",
+  "scientificAcceptance": false,
+  "mainnetReady": false,
+  "publicTransactionsSent": 0,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 4235,
+      "sha256": "f4dc9c9ae94dfae415059f591c359caaa2174051c0adb8f963946a58edb7814c"
+    },
+    {
+      "path": "cost-summary.json",
+      "bytes": 2222,
+      "sha256": "922dcf1b3b723432f3d50f78cf8c144ae7fb29fac73ae7d908253c9fa7fdf5db"
+    },
+    {
+      "path": "count-inputs.py",
+      "bytes": 2663,
+      "sha256": "449cb0f7f8be602254257fabd1d088d3ba642efab55b4825fb685041ac3a2e6b"
+    },
+    {
+      "path": "current-pricing.json",
+      "bytes": 387,
+      "sha256": "20b6926d4cd2653e213661009e6d5704ccbdf49a127abb391cc634bbf96af57c"
+    },
+    {
+      "path": "infrastructure-evidence.zip",
+      "bytes": 1213327,
+      "sha256": "3754190c747583ba7100e04843a13964a4e6baa6f233ad34eec0c9c73f46bc9c"
+    },
+    {
+      "path": "input-byte-counts.json",
+      "bytes": 13784,
+      "sha256": "8c3a94ac31a9a964d4e1771540451391b27f69105d01488512bdb3dae6c0ca11"
+    },
+    {
+      "path": "upload-evidence.zip",
+      "bytes": 5179158,
+      "sha256": "05ca7df39ec2c358ce89e828f066feb05eb77b16db13d95bd231f3537a0c8e41"
+    }
+  ],
+  "archives": {
+    "infrastructure-evidence.zip": {
+      "payloadFiles": 18,
+      "sourceManifestSha256": "fa71e27d0a13b0515e74fedeaa08dcce32d4e910a02ec04ec83f04c58c4b7579",
+      "everyPayloadHashVerified": true
+    },
+    "upload-evidence.zip": {
+      "payloadFiles": 45,
+      "sourceManifestSha256": "055d6c67ee3a3ca46cb6411e13070f3e059a73a6d751db43874da451f5655c46",
+      "everyPayloadHashVerified": true
+    }
+  }
+}
