@@ -1,0 +1,17 @@
+Info: acdoctor mode is on: check and diagnose problems in the input file.
+Info: The atom type is set to gaff2; the options available to the -at flag are
+      gaff, gaff2, amber, bcc, abcg2, and sybyl.
+
+-- Check Format for sdf File --
+   Status: pass
+Info: Determining atomic numbers from atomic symbols which are case sensitive.
+Running: /Users/abhijith/Documents/ChatGPT/AURA/tools/envs/preparation/bin/bondtype -j full -i ANTECHAMBER_BOND_TYPE.AC0 -o ANTECHAMBER_BOND_TYPE.AC -f ac -an no
+
+Running: /Users/abhijith/Documents/ChatGPT/AURA/tools/envs/preparation/bin/atomtype -i ANTECHAMBER_AC.AC0 -o ANTECHAMBER_AC.AC -p gaff2 -an no
+
+Running: /Users/abhijith/Documents/ChatGPT/AURA/tools/envs/preparation/bin/sqm -O -i sqm.in -o sqm.out
+
+Running: /Users/abhijith/Documents/ChatGPT/AURA/tools/envs/preparation/bin/am1bcc -i ANTECHAMBER_AM1BCC_PRE.AC -o ANTECHAMBER_AM1BCC.AC -f ac -t bcc -p /Users/abhijith/Documents/ChatGPT/AURA/tools/envs/preparation/dat/antechamber/BCCPARM.DAT -s 2 -j 1
+
+Running: /Users/abhijith/Documents/ChatGPT/AURA/tools/envs/preparation/bin/atomtype -f ac -p bcc -o ANTECHAMBER_AM1BCC.AC -i ANTECHAMBER_AM1BCC_PRE.AC
+
