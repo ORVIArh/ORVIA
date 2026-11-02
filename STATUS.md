@@ -4,10 +4,11 @@
 
 - One coordinator plus 255 report shards: local tests pass across all lanes.
 - Strict small-endpoint CUDA-double accuracy repair: H200 pass, unchanged tolerances.
-- Deployment tooling: 10 planner and 9 operator tests pass; exact constructors, runtime identities, 32 predecessor states, safe journals and recovery are checked.
+- Full hybrid suite: **30/30 tests pass**, including the complete 256-contract rehearsal, planner/operator adversarial checks, artifact-bound report admission, and registration/signing/submission/recovery on a local EVM. [Test log](evidence/hybrid256/hybrid-suite-20261102.txt).
 - Read-only mainnet quote: all 256 infrastructure contracts in 33 transactions, 0.00470417364414 ETH at the recorded price. This is not a full scientific campaign quote.
-- Full periodic-model preparation and scientific validation: in progress. GPU diagnostic success is not production scientific acceptance.
-- Public transactions: none sent by this work. Mainnet only; no public testnet.
+- Phosphate v0.3 coordinate repair passes independent stereochemistry, bond/angle and hard-clash checks. Native force-field parameters and observed protein coordinates remain unchanged. Full energy, integration and sampling acceptance remain open.
+- The H200 quantum runtime passes both fixed-geometry CPU/GPU energy/gradient cases using matching CPU-generated quadrature. This is runtime validation, not parameter acceptance.
+- Mainnet deployment is in progress: **3 successful transactions created the coordinator and 16 shards (17/256 contracts)**. The first runner stopped during confirmation; an independent read-only recovery check passed. The remaining 30 transactions await the local wallet unlock. [Partial deployment evidence](evidence/hybrid256/partial-mainnet-recovery.json). No accepted scientific result has been published; no public testnet is used.
 
 [Source-bound evidence and limits](evidence/hybrid256/README.md) · [Contract architecture and immutable-key limits](contracts/hybrid/README.md)
 
