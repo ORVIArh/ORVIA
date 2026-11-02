@@ -23,6 +23,13 @@ if (process.argv.length !== 3 || !['--local-rehearsal', '--readiness', '--verifi
         read('reports/mainnet_preflight.json'), read('data/production_slot_evidence.json') || [], read('data/scientific_readiness.json'), read('data/operator_deployment.json'),
         acceptance, { sourceBundleSha256, evidenceRecords: loadProductionAcceptanceEvidence(process.cwd(), acceptance) });
       report.validationIntegrity = validationIntegrity;
+      const activeArchitecture = read('data/architecture_256.json');
+      if (activeArchitecture) {
+        report.activeArchitecture = activeArchitecture.architecture;
+        report.targetActualContractCount = activeArchitecture.targetActualContractCount;
+        report.readyForMainnet = false;
+        report.blockers.push('The active ORVIA-256 deployment and acceptance plan is still being integrated. The legacy 64-slot gate cannot authorize it.');
+      }
       if (!validationIntegrity.passed) {
         report.readyForMainnet = false;
         report.blockers.push(...validationIntegrity.errors.map(x => 'Validation integrity: ' + x));
