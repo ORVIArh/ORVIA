@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "chainId": 31337,
+  "scope": "Local sharded storage and real bond consumer fixtures; not full-model or target-chain feasibility.",
+  "gas": [
+    {
+      "scenario": "create900001-word namespace without all-page allocation",
+      "localGas": "72858"
+    },
+    {
+      "scenario": "cold9-word write crossing4096 boundary",
+      "localGas": "1579246"
+    },
+    {
+      "scenario": "cold write above old65536 capacity",
+      "localGas": "569597"
+    },
+    {
+      "scenario": "snapshot epoch checkpoint",
+      "localGas": "126992"
+    },
+    {
+      "scenario": "first postcheckpoint9-word write crossing shards",
+      "localGas": "540478"
+    },
+    {
+      "scenario": "repeated same-epoch9-word write crossing shards",
+      "localGas": "161014"
+    },
+    {
+      "scenario": "second snapshot checkpoint",
+      "localGas": "126992"
+    },
+    {
+      "scenario": "maximum128-word batch crossing two cold shards",
+      "localGas": "9678140"
+    },
+    {
+      "scenario": "retained epoch1 read after20 snapshots",
+      "localGas": "58082"
+    },
+    {
+      "scenario": "retained epoch1 read after20 snapshots",
+      "localGas": "58082"
+    },
+    {
+      "scenario": "real harmonic force across distant100000-atom shards",
+      "localGas": "603029"
+    },
+    {
+      "scenario": "existing coordinator final cross-shard accumulation",
+      "localGas": "2134647",
+      "batch": 16
+    },
+    {
+      "scenario": "existing coordinator final cross-shard accumulation",
+      "localGas": "1841683",
+      "batch": 7
+    }
+  ]
+}

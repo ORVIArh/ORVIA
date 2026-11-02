@@ -1,0 +1,166 @@
+{
+  "schema": "orvia.six-gpu-heldout-independent-review.v1",
+  "computations_verified": true,
+  "scientific_acceptance": false,
+  "production_ready": false,
+  "raw_archive_sha256": "46e8a5a550eac2693a1060925a07000539944bc5d3fe0a6f143718d681102f48",
+  "status_sha256": "9ec3ac965f9e61edaec352888a225bcea73a9e11fc96a3de3fa231b308e9f7b6",
+  "original_policy_sha256": "dbea002e2ae847b10d7b65db37f1e877039b99b2c10a6443cc7046cc54121668",
+  "jobs": [
+    {
+      "job": "heldout_A_+030",
+      "result_sha256": "81206ecd975025c5dfc3f5f25e10abaa79eee0194eceb6f9f681f122dd5986d8",
+      "elapsed_seconds": 569.2608579879161,
+      "geometry_converged": true,
+      "scf_evaluations": 54,
+      "initial_energy_error_hartree": 6.098161975387484e-10,
+      "final_energy_error_hartree": 2.4010660126805305e-10,
+      "initial_gradient_error_hartree_per_bohr": 4.458897338466272e-06,
+      "final_gradient_error_hartree_per_bohr": 2.964114472980839e-06,
+      "native_stereochemistry_preserved": true,
+      "stereochemistry": {
+        "9": "R"
+      },
+      "constraint_deviation_degrees": 2.4611123819795466e-05,
+      "qm_energy_kJ_per_mol": -2839336.5131763173,
+      "native_mm_energy_kJ_per_mol": -154.14021168066742
+    },
+    {
+      "job": "heldout_A_+090",
+      "result_sha256": "d936731eebbbd979370545e2e311ad54041a0a891047dba52bef595946f21e99",
+      "elapsed_seconds": 539.3636512090452,
+      "geometry_converged": true,
+      "scf_evaluations": 42,
+      "initial_energy_error_hartree": 1.4597389963455498e-10,
+      "final_energy_error_hartree": 5.275069270282984e-11,
+      "initial_gradient_error_hartree_per_bohr": 2.2427317398765467e-06,
+      "final_gradient_error_hartree_per_bohr": 3.1037490300089843e-07,
+      "native_stereochemistry_preserved": true,
+      "stereochemistry": {
+        "9": "R"
+      },
+      "constraint_deviation_degrees": 0.00013232204190671837,
+      "qm_energy_kJ_per_mol": -2839313.962033576,
+      "native_mm_energy_kJ_per_mol": -128.4176846376098
+    },
+    {
+      "job": "heldout_A_+150",
+      "result_sha256": "10285312b92c32f417f3565bb5beccae57e93d584968bdd1dbf46b5b0c440475",
+      "elapsed_seconds": 233.75346136791632,
+      "geometry_converged": true,
+      "scf_evaluations": 40,
+      "initial_energy_error_hartree": 5.165929906070232e-10,
+      "final_energy_error_hartree": 1.9463186617940664e-10,
+      "initial_gradient_error_hartree_per_bohr": 4.6531913373559775e-06,
+      "final_gradient_error_hartree_per_bohr": 5.988782058596875e-07,
+      "native_stereochemistry_preserved": true,
+      "stereochemistry": {
+        "9": "R"
+      },
+      "constraint_deviation_degrees": 6.74033515224437e-07,
+      "qm_energy_kJ_per_mol": -2839336.2365438216,
+      "native_mm_energy_kJ_per_mol": -153.80477567893277
+    },
+    {
+      "job": "heldout_B_+030",
+      "result_sha256": "05540f6969d473dc1576d51138265e34bab59727d414717031fce87e651bb1d4",
+      "elapsed_seconds": 417.12070151790977,
+      "geometry_converged": true,
+      "scf_evaluations": 43,
+      "initial_energy_error_hartree": 4.779394657816738e-10,
+      "final_energy_error_hartree": 3.774403012357652e-10,
+      "initial_gradient_error_hartree_per_bohr": 4.300552208957864e-06,
+      "final_gradient_error_hartree_per_bohr": 4.5586642030137625e-06,
+      "native_stereochemistry_preserved": true,
+      "stereochemistry": {
+        "13": "R"
+      },
+      "constraint_deviation_degrees": 5.672690363667243e-05,
+      "qm_energy_kJ_per_mol": -2942480.6158175995,
+      "native_mm_energy_kJ_per_mol": -108.63374358960041
+    },
+    {
+      "job": "heldout_B_+090",
+      "result_sha256": "a500640495e23e9e023e4f0891f74c4c57b8e04802d051c62a970c9b79eb1133",
+      "elapsed_seconds": 401.11245582904667,
+      "geometry_converged": true,
+      "scf_evaluations": 46,
+      "initial_energy_error_hartree": 2.8694557840935886e-10,
+      "final_energy_error_hartree": 2.3919710656628013e-10,
+      "initial_gradient_error_hartree_per_bohr": 2.582411132934226e-06,
+      "final_gradient_error_hartree_per_bohr": 4.517941738724218e-06,
+      "native_stereochemistry_preserved": true,
+      "stereochemistry": {
+        "13": "R"
+      },
+      "constraint_deviation_degrees": 0.00014164482340106588,
+      "qm_energy_kJ_per_mol": -2942458.0206652544,
+      "native_mm_energy_kJ_per_mol": -82.21959598594066
+    },
+    {
+      "job": "heldout_B_+150",
+      "result_sha256": "8aa315c6c52b4d3e0e7be2dc81eb51493eac5222bb1b3d15b8e9b7ccef6ab7e6",
+      "elapsed_seconds": 276.55095322802663,
+      "geometry_converged": true,
+      "scf_evaluations": 42,
+      "initial_energy_error_hartree": 6.539266905747354e-10,
+      "final_energy_error_hartree": 8.321876521222293e-11,
+      "initial_gradient_error_hartree_per_bohr": 4.024027477379788e-06,
+      "final_gradient_error_hartree_per_bohr": 1.6432157412538118e-07,
+      "native_stereochemistry_preserved": true,
+      "stereochemistry": {
+        "13": "R"
+      },
+      "constraint_deviation_degrees": 1.2170420973234286e-05,
+      "qm_energy_kJ_per_mol": -2942480.5337377237,
+      "native_mm_energy_kJ_per_mol": -108.26372232181629
+    }
+  ],
+  "native_heldout_energy_quality": {
+    "A": {
+      "angles_degrees": [
+        30,
+        90,
+        150
+      ],
+      "qm_relative_kJ_per_mol": [
+        0.0,
+        22.551142741460353,
+        0.27663249569013715
+      ],
+      "native_relative_kJ_per_mol": [
+        0.0,
+        25.722527043057624,
+        0.3354360017346494
+      ],
+      "mean_absolute_error_kJ_per_mol": 1.0767292692139279,
+      "unchanged_limit_kJ_per_mol": 4.184,
+      "passed": true
+    },
+    "B": {
+      "angles_degrees": [
+        30,
+        90,
+        150
+      ],
+      "qm_relative_kJ_per_mol": [
+        0.0,
+        22.595152345020324,
+        0.08207987574860454
+      ],
+      "native_relative_kJ_per_mol": [
+        0.0,
+        26.414147603659757,
+        0.37002126778412503
+      ],
+      "mean_absolute_error_kJ_per_mol": 1.3689788835583176,
+      "unchanged_limit_kJ_per_mol": 4.184,
+      "passed": true
+    }
+  },
+  "scope": "Verifies six completed GPU optimizations and native held-out errors. This does not replace the separate CPU campaign or clear fragment fit, second-method, metal, alchemical or sampling gates.",
+  "all_native_full_molecule_heldout_energy_gates_passed": true,
+  "reviewer_source_sha256": "346ffafa883f8e2053834ad97bcd6b32d4c04859ec921861ee3433a067ea2cd1",
+  "wall_runtime_seconds": 1266.4891445350368,
+  "workers": 2
+}

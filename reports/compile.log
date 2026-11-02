@@ -542,6 +542,15 @@
       "creationCodeWithinDocumentedInitLimit": true
     },
     {
+      "name": "PartitionedInputCatalog",
+      "file": "contracts/core/PartitionedInputCatalog.sol",
+      "testOnly": false,
+      "creationBytes": 8649,
+      "runtimeBytes": 8450,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
       "name": "PeriodicDataset",
       "file": "contracts/core/PeriodicDataset.sol",
       "testOnly": false,
@@ -767,6 +776,24 @@
       "creationCodeWithinDocumentedInitLimit": true
     },
     {
+      "name": "ShardedWorkingState",
+      "file": "contracts/core/ShardedWorkingState.sol",
+      "testOnly": false,
+      "creationBytes": 8357,
+      "runtimeBytes": 8031,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "VersionedStateShard",
+      "file": "contracts/core/ShardedWorkingState.sol",
+      "testOnly": false,
+      "creationBytes": 2041,
+      "runtimeBytes": 1909,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
       "name": "WorkingStatePage",
       "file": "contracts/core/WorkingStatePage.sol",
       "testOnly": false,
@@ -844,6 +871,51 @@
       "testOnly": false,
       "creationBytes": 11339,
       "runtimeBytes": 10653,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "Fixed96EwaldRealSpaceKernel",
+      "file": "contracts/kernels/Fixed96EwaldRealSpaceKernel.sol",
+      "testOnly": false,
+      "creationBytes": 3721,
+      "runtimeBytes": 3693,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "Fixed96EwaldReciprocalKernel",
+      "file": "contracts/kernels/Fixed96EwaldReciprocalKernel.sol",
+      "testOnly": false,
+      "creationBytes": 4923,
+      "runtimeBytes": 4895,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "Fixed96LennardJonesKernel",
+      "file": "contracts/kernels/Fixed96LennardJonesKernel.sol",
+      "testOnly": false,
+      "creationBytes": 2521,
+      "runtimeBytes": 2493,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "Fixed96SoftcoreLennardJonesKernel",
+      "file": "contracts/kernels/Fixed96SoftcoreLennardJonesKernel.sol",
+      "testOnly": false,
+      "creationBytes": 3155,
+      "runtimeBytes": 3127,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "FixedPointNonbondedKernel",
+      "file": "contracts/kernels/FixedPointNonbondedKernel.sol",
+      "testOnly": false,
+      "creationBytes": 3955,
+      "runtimeBytes": 3927,
       "fitsDocumentedRobinhoodCodeLimit": true,
       "creationCodeWithinDocumentedInitLimit": true
     },
@@ -965,6 +1037,24 @@
       "creationCodeWithinDocumentedInitLimit": true
     },
     {
+      "name": "Fixed96EwaldMath",
+      "file": "contracts/math/Fixed96EwaldMath.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "Fixed96Math",
+      "file": "contracts/math/Fixed96Math.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
       "name": "FloatMath",
       "file": "contracts/math/FloatMath.sol",
       "testOnly": false,
@@ -1042,6 +1132,24 @@
       "testOnly": true,
       "creationBytes": 1562,
       "runtimeBytes": 1346,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "ShardedStateForceHarness",
+      "file": "test/contracts/ShardedStateForceHarness.sol",
+      "testOnly": true,
+      "creationBytes": 4252,
+      "runtimeBytes": 4224,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "StaticCallWorkMeter",
+      "file": "test/contracts/StaticCallWorkMeter.sol",
+      "testOnly": true,
+      "creationBytes": 923,
+      "runtimeBytes": 895,
       "fitsDocumentedRobinhoodCodeLimit": true,
       "creationCodeWithinDocumentedInitLimit": true
     },

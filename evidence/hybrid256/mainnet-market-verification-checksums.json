@@ -1,0 +1,34 @@
+{
+  "schema": "orvia.hybrid256.public-verification-checksums.v1",
+  "files": {
+    "mainnet-market-verification.json": {
+      "bytes": 62972,
+      "sha256": "5d13b49e65c5482fb53768d9114088c0f284f895778db494a66818ec59730cde"
+    },
+    "verify-mainnet-market-v2.mjs": {
+      "bytes": 7927,
+      "sha256": "7fdcbe1210fdc417b0f50f01f6d5b0e1e74b1e0936a98527b5094464793a8ad0"
+    }
+  },
+  "verifierSourceScope": "Exact documentary snapshot of executed v2 verifier. Relative imports and private operator configuration refer to its original output/hybrid256-review location; this publication is not a standalone public replay command.",
+  "originalVerifierPreserved": {
+    "originalPath": "output/hybrid256-review/verify-mainnet-market.mjs",
+    "sha256": "82c489cf2c0826a775d060ba25c7d06aad031dab015db29e34e0c0f2c99688ab",
+    "historicalFailure": "Rejected charged effectiveGasPrice below signed legacy cap; v2 checks 0<charged<=cap and exact mined transaction identity."
+  },
+  "independentConsistencyReview": {
+    "publicFieldsOnly": true,
+    "privateJournalsRead": false,
+    "rpcRequestsMade": 0,
+    "successfulUniqueReceipts": 33,
+    "contiguousNonces": "0..32",
+    "uniqueContracts": 256,
+    "allAddressesAndExpectedRuntimeHashesMatchFrozenPlan": true,
+    "totalGasUsed": "229756618",
+    "totalFeeWei": "4612876889674000",
+    "totalFeeEth": "0.004612876889674",
+    "selectedNonce3Hash": "0x1d5c7a461cc7fbedfb3ea14c5e6436bffcd91dbcc294f1dcf5031ea85d451098",
+    "chargedBelowSignedCapReceipts": 33
+  },
+  "scope": "Reporting infrastructure deployment only; scientific campaign acceptance remains false."
+}

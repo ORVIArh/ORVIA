@@ -1,0 +1,812 @@
+{
+  "schemaVersion": 1,
+  "status": "passed_local_fixture",
+  "passed": true,
+  "mainnetTransactionsSent": 0,
+  "scope": "32 actual local core contracts plus224 fixed banks; constrained on-chain step/sample and separate two-state selected analysis; raw C4 remains standalone, no full-model/ensemble acceptance.",
+  "sourceSha256": {
+    "test": "39edb841a68d5d1aa4dd03b873fc084ad47bdfd70642df398220995c8a0114fe",
+    "fixture": "367f9103d4a203350a87168249c0289643ca9badf4070b06c81803150c538251",
+    "pipeline": "0a0e37a8c2731babfaeede753a5e12bb513bde6c3d821f72283538f05da93139",
+    "hamiltonian": "0bc4672ea4f92688e0707a5bbed36aed594eef02f013f35e68bfbd4d33e56806"
+  },
+  "checks": [
+    "Owner-only, wrong modules, direct EOA H binding, rebinding, and binding after a campaign but before a run rejected",
+    "All six repeat campaigns preregistered before windows or selected sample series exist"
+  ],
+  "compilation": {
+    "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+    "settings": {
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "evmVersion": "shanghai",
+      "outputSelection": {
+        "*": {
+          "*": [
+            "abi",
+            "evm.bytecode.object",
+            "evm.deployedBytecode.object"
+          ]
+        }
+      }
+    },
+    "standardInputSha256": "3a2cd66663b71666c7b2120fac51f00cfd336650579e2ace5badd5f8ac35250c",
+    "sourceSha256": {
+      "contracts/core/AlchemicalTopologyCatalog.sol": "f92337cf81ad28b0cf9842d3a34a8a119836aa5ed30698c681d621ff69ae362c",
+      "contracts/math/FloatMath.sol": "a474f7656f9ffc3d3149e6a0e08f2fcf6838483ae689d1e6a7cf7400f8bad74b",
+      "contracts/math/vendor/ABDKMathQuad.sol": "dd13f72bf828a699c94e96d1377daabce3dcc1d4b29af7215501a611d3cb7c9e",
+      "contracts/kernels/OrthorhombicGeometry.sol": "9521042dab915a3fc6cfe2bb1395c1aba0c6a2fad58d7623cd4a10435de3808b",
+      "contracts/core/AlchemicalHamiltonianEvaluator.sol": "0bc4672ea4f92688e0707a5bbed36aed594eef02f013f35e68bfbd4d33e56806",
+      "contracts/core/ExperimentRegistry.sol": "39c3e8382b3fae049c16da81b1ea586e36deaa5ecbbda466b8377e240f78f047",
+      "contracts/kernels/HarmonicBondKernel.sol": "cbb2b99181ab7eec4a07dca99734e9ab2a3fa6ae4bd61b39d3a7bc6ef0f63108",
+      "contracts/kernels/HarmonicAngleKernel.sol": "d525eeecc8625d1e05112dc2977a91fe1d688d7585f99d08151cdc73fa2cbe09",
+      "contracts/math/ElementaryMath.sol": "9965604b32c46748605948c58f092ead3911e231baf39e7d4bea02beb3200062",
+      "contracts/kernels/PeriodicTorsionKernel.sol": "67e457741c247eb2af7248cd897a68b997caeb0db84c073c74e477570788765f",
+      "contracts/kernels/LennardJonesKernel.sol": "a02748bef456a33b15f0cfa7a1b5a20f23d6021f4e741b0cf0a9b61af457dca2",
+      "contracts/kernels/SoftcoreLennardJonesKernel.sol": "fb6b215e82aff471a1f615f6809c45e1b3aeae6df804ed29673ae0e63207e2b4",
+      "contracts/kernels/EwaldRealSpaceKernel.sol": "f4ceec084d7131de3141ad0f8be06dd1ff6dfa722d6499740af9de7cd431ebf1",
+      "contracts/kernels/EwaldKernelBase.sol": "c9f44e1dbf573ad9505e886e0f3854c2ffda850e3a0fd0b08c22563f23031a17",
+      "contracts/kernels/EwaldReciprocalKernel.sol": "7225171a789fdf4ced5256b293a428138e27c4c2dbe73eea5f22a52af94ec1bf",
+      "contracts/kernels/EwaldCorrections.sol": "0b8210b673f03606d1beb1d8a1663f2bc4bf371a884e5443733fa70ecc6d78e8",
+      "contracts/core/PeriodicCellIndex.sol": "0c3b70b0a9f277be4087556b5ac200cb602e2f18fb90d16a272d30de9d234027",
+      "contracts/core/OrderedNeighborPairs.sol": "1133a7b059696623cc466f173ac1d6559dcc5afb80088ce7028c792af728c383",
+      "contracts/core/MolecularSimulationPipeline.sol": "0a0e37a8c2731babfaeede753a5e12bb513bde6c3d821f72283538f05da93139",
+      "contracts/kernels/LangevinBAOABKernel.sol": "a469bddd9acd9cf0551293f9f9112a8fba07a7f0caa5e3b6f0747982411541c9",
+      "contracts/math/ScalarMath.sol": "fd95d9e52db57f772946d1eff8d3c9b0e2518fdbdadb033160f4b5678df13f58",
+      "contracts/kernels/CounterRandom.sol": "98f38ee2e2962858ac681565b369a2a983f8aecd7b8188a9b191a4a4c5954190",
+      "contracts/analysis/ReducedPotentialCollector.sol": "87b5e30940220d30733252d51e64c37d222e0b52a5178c91f1df424f647a1fad",
+      "contracts/analysis/TimeSeriesDiagnostics.sol": "b0a6ec90fc2a645a59a73f71c3885234f38eaec0b812552a7b1ff16efd101794",
+      "contracts/analysis/MBARFreeEnergyEstimator.sol": "6026c479247a5ff326fa2feadb1e4659ef585512fb180460bebd0ab2407ce223",
+      "contracts/interfaces/IMolecularCampaignSource.sol": "845ec6a325995a24583570d1448826293c05b6aa06b5050d1eff8a1c96293168",
+      "contracts/core/FullModelConstraintCatalog.sol": "8ef6428c5f2783fbfdee8d752d2f2406d8cac06207f490f73cba2bc8203e3c6d",
+      "contracts/core/FullModelConstraintSolver.sol": "178329c41e7b113f7fc387497be6db2e22564c694151889cfc5cc568a56b6167",
+      "contracts/kernels/DistanceConstraintKernel.sol": "c5d05a76366559595f7c81617c6c65d72938a64eb12ba43708961c8f65756e37",
+      "contracts/core/BankedWorkingState.sol": "ed9fcee0659e2ed7dd9d90682e77bfd3aacc9056d17a0b62041cbc1947f99fe0",
+      "contracts/core/BankedInputCatalog.sol": "d956dd672852dc76fdc064bb6fecca55cc584ba7125df4b566b31bef9440c16b",
+      "contracts/analysis/UncertaintyAndResults.sol": "5c405ec23b23d916de5bdf7feae8b4f975cc4432323be47fdb4e9a3f605cf66b",
+      "contracts/analysis/SamplingDiagnostics.sol": "2ae107854eddc1bbb1659bace5abe0bf0e4010645fe219a0a5bac67073c5efb3",
+      "contracts/kernels/C4PairKernel.sol": "5b6f440d06375640229e7eecb453059b01fba8ca3f7aefcff76b58adb327214b"
+    }
+  },
+  "actualLocalAddresses": 256,
+  "deploymentInventorySha256": "7e51355017a8380124455fff846d95599ed85030473b444df66ee1c18b3e9905",
+  "coreDeploymentGas": "73300040",
+  "bankCreationGas": "110698124",
+  "rawC4": {
+    "energy": "0xbffe0000000000000000000000000000",
+    "forceOnA": [
+      "0x3fff0000000000000000000000000000",
+      "0x00000000000000000000000000000000",
+      "0x00000000000000000000000000000000"
+    ],
+    "standaloneOnly": true,
+    "integratedAlchemicalC4": false
+  },
+  "preregisteredPairedRepeats": 3,
+  "campaignCommitmentBindsExactSpatialIdentity": true,
+  "constrained": {
+    "run": "1",
+    "sampleStep": "1",
+    "spatialEvaluations": 3,
+    "immutableInitialCheckpointRetained": true,
+    "snapshot": "0x0616d8773606d07a2404d3ab85a42cc129596ad01a5cb8d690ac13a2cad96d6b",
+    "transcript": "0x47ff84179a473797362f12303c0072002b26a97234c59752eb006228952969f0"
+  },
+  "analysis": {
+    "campaign": "0x1c4ad2bb911a506e06831236feaafdc948010c65b88c9866c013b0ec3240bc85",
+    "runs": [
+      "2",
+      "3"
+    ],
+    "completedWindows": 2,
+    "rawSamples": 8,
+    "chronology": [
+      {
+        "state": 0,
+        "valid": true,
+        "g": 1.5038379212185342
+      },
+      {
+        "state": 1,
+        "valid": true,
+        "g": 1.5008126798926524
+      }
+    ],
+    "analysisId": "1",
+    "diagnosticId": "1",
+    "identicalEndpointsDeltaF": 0,
+    "completeThreeRepeatAggregation": false
+  },
+  "noChildContractsCreatedDuringRuns": true,
+  "pipelineAdvanceGas": "289874647",
+  "advancements": [
+    {
+      "run": "1",
+      "stage": 1,
+      "step": "0",
+      "work": 1,
+      "gas": "1171548"
+    },
+    {
+      "run": "1",
+      "stage": 1,
+      "step": "0",
+      "work": 1,
+      "gas": "1837617"
+    },
+    {
+      "run": "1",
+      "stage": 15,
+      "step": "0",
+      "work": 1,
+      "gas": "1171707"
+    },
+    {
+      "run": "1",
+      "stage": 15,
+      "step": "0",
+      "work": 1,
+      "gas": "1090198"
+    },
+    {
+      "run": "1",
+      "stage": 16,
+      "step": "0",
+      "work": 1,
+      "gas": "860567"
+    },
+    {
+      "run": "1",
+      "stage": 16,
+      "step": "0",
+      "work": 1,
+      "gas": "1725694"
+    },
+    {
+      "run": "1",
+      "stage": 2,
+      "step": "0",
+      "work": 1,
+      "gas": "1079050"
+    },
+    {
+      "run": "1",
+      "stage": 2,
+      "step": "0",
+      "work": 1,
+      "gas": "1631063"
+    },
+    {
+      "run": "1",
+      "stage": 2,
+      "step": "0",
+      "work": 1,
+      "gas": "1296894"
+    },
+    {
+      "run": "1",
+      "stage": 2,
+      "step": "0",
+      "work": 1,
+      "gas": "1544774"
+    },
+    {
+      "run": "1",
+      "stage": 2,
+      "step": "0",
+      "work": 1,
+      "gas": "1237483"
+    },
+    {
+      "run": "1",
+      "stage": 2,
+      "step": "0",
+      "work": 1,
+      "gas": "922589"
+    },
+    {
+      "run": "1",
+      "stage": 2,
+      "step": "0",
+      "work": 1,
+      "gas": "922737"
+    },
+    {
+      "run": "1",
+      "stage": 2,
+      "step": "0",
+      "work": 1,
+      "gas": "922287"
+    },
+    {
+      "run": "1",
+      "stage": 2,
+      "step": "0",
+      "work": 1,
+      "gas": "1306639"
+    },
+    {
+      "run": "1",
+      "stage": 2,
+      "step": "0",
+      "work": 1,
+      "gas": "1163114"
+    },
+    {
+      "run": "1",
+      "stage": 2,
+      "step": "0",
+      "work": 1,
+      "gas": "1522921"
+    },
+    {
+      "run": "1",
+      "stage": 2,
+      "step": "0",
+      "work": 1,
+      "gas": "1061755"
+    },
+    {
+      "run": "1",
+      "stage": 2,
+      "step": "0",
+      "work": 1,
+      "gas": "1308639"
+    },
+    {
+      "run": "1",
+      "stage": 2,
+      "step": "0",
+      "work": 1,
+      "gas": "1163114"
+    },
+    {
+      "run": "1",
+      "stage": 2,
+      "step": "0",
+      "work": 1,
+      "gas": "1158314"
+    },
+    {
+      "run": "1",
+      "stage": 2,
+      "step": "0",
+      "work": 1,
+      "gas": "1065430"
+    },
+    {
+      "run": "1",
+      "stage": 2,
+      "step": "0",
+      "work": 1,
+      "gas": "1243956"
+    },
+    {
+      "run": "1",
+      "stage": 3,
+      "step": "0",
+      "work": 1,
+      "gas": "1244257"
+    },
+    {
+      "run": "1",
+      "stage": 3,
+      "step": "0",
+      "work": 1,
+      "gas": "1435451"
+    },
+    {
+      "run": "1",
+      "stage": 4,
+      "step": "0",
+      "work": 8,
+      "gas": "3006535"
+    },
+    {
+      "run": "1",
+      "stage": 14,
+      "step": "0",
+      "work": 3,
+      "gas": "2407567"
+    },
+    {
+      "run": "1",
+      "stage": 16,
+      "step": "0",
+      "work": 1,
+      "gas": "1123861"
+    },
+    {
+      "run": "1",
+      "stage": 16,
+      "step": "0",
+      "work": 8,
+      "gas": "4619862"
+    },
+    {
+      "run": "1",
+      "stage": 15,
+      "step": "0",
+      "work": 3,
+      "gas": "1579739"
+    },
+    {
+      "run": "1",
+      "stage": 14,
+      "step": "0",
+      "work": 1,
+      "gas": "905365"
+    },
+    {
+      "run": "1",
+      "stage": 14,
+      "step": "0",
+      "work": 8,
+      "gas": "4702531"
+    },
+    {
+      "run": "1",
+      "stage": 16,
+      "step": "0",
+      "work": 3,
+      "gas": "2725255"
+    },
+    {
+      "run": "1",
+      "stage": 6,
+      "step": "0",
+      "work": 1,
+      "gas": "1299546"
+    },
+    {
+      "run": "1",
+      "stage": 6,
+      "step": "0",
+      "work": 8,
+      "gas": "2691101"
+    },
+    {
+      "run": "1",
+      "stage": 6,
+      "step": "0",
+      "work": 3,
+      "gas": "1419620"
+    },
+    {
+      "run": "1",
+      "stage": 6,
+      "step": "0",
+      "work": 1,
+      "gas": "1158474"
+    },
+    {
+      "run": "1",
+      "stage": 6,
+      "step": "0",
+      "work": 8,
+      "gas": "4382643"
+    },
+    {
+      "run": "1",
+      "stage": 8,
+      "step": "1",
+      "work": 3,
+      "gas": "1778488"
+    },
+    {
+      "run": "1",
+      "stage": 9,
+      "step": "1",
+      "work": 1,
+      "gas": "1631406"
+    },
+    {
+      "run": "1",
+      "stage": 9,
+      "step": "1",
+      "work": 8,
+      "gas": "2521709"
+    },
+    {
+      "run": "1",
+      "stage": 9,
+      "step": "1",
+      "work": 3,
+      "gas": "1870853"
+    },
+    {
+      "run": "1",
+      "stage": 9,
+      "step": "1",
+      "work": 1,
+      "gas": "1163487"
+    },
+    {
+      "run": "1",
+      "stage": 9,
+      "step": "1",
+      "work": 8,
+      "gas": "2876095"
+    },
+    {
+      "run": "2",
+      "stage": 1,
+      "step": "0",
+      "work": 8,
+      "gas": "5168191"
+    },
+    {
+      "run": "2",
+      "stage": 2,
+      "step": "0",
+      "work": 8,
+      "gas": "2172793"
+    },
+    {
+      "run": "2",
+      "stage": 2,
+      "step": "0",
+      "work": 8,
+      "gas": "7907825"
+    },
+    {
+      "run": "2",
+      "stage": 6,
+      "step": "0",
+      "work": 8,
+      "gas": "3361849"
+    },
+    {
+      "run": "2",
+      "stage": 6,
+      "step": "0",
+      "work": 8,
+      "gas": "2259174"
+    },
+    {
+      "run": "2",
+      "stage": 6,
+      "step": "0",
+      "work": 8,
+      "gas": "8547981"
+    },
+    {
+      "run": "2",
+      "stage": 6,
+      "step": "1",
+      "work": 8,
+      "gas": "3063876"
+    },
+    {
+      "run": "2",
+      "stage": 6,
+      "step": "1",
+      "work": 8,
+      "gas": "2908374"
+    },
+    {
+      "run": "2",
+      "stage": 7,
+      "step": "1",
+      "work": 8,
+      "gas": "4912761"
+    },
+    {
+      "run": "2",
+      "stage": 9,
+      "step": "2",
+      "work": 8,
+      "gas": "2074095"
+    },
+    {
+      "run": "2",
+      "stage": 9,
+      "step": "2",
+      "work": 8,
+      "gas": "4184730"
+    },
+    {
+      "run": "2",
+      "stage": 5,
+      "step": "2",
+      "work": 8,
+      "gas": "6155938"
+    },
+    {
+      "run": "2",
+      "stage": 6,
+      "step": "2",
+      "work": 8,
+      "gas": "2254343"
+    },
+    {
+      "run": "2",
+      "stage": 6,
+      "step": "2",
+      "work": 8,
+      "gas": "4447406"
+    },
+    {
+      "run": "2",
+      "stage": 9,
+      "step": "3",
+      "work": 8,
+      "gas": "3065914"
+    },
+    {
+      "run": "2",
+      "stage": 9,
+      "step": "3",
+      "work": 8,
+      "gas": "2248774"
+    },
+    {
+      "run": "2",
+      "stage": 10,
+      "step": "3",
+      "work": 8,
+      "gas": "8056909"
+    },
+    {
+      "run": "2",
+      "stage": 6,
+      "step": "3",
+      "work": 8,
+      "gas": "2785304"
+    },
+    {
+      "run": "2",
+      "stage": 6,
+      "step": "3",
+      "work": 8,
+      "gas": "3199079"
+    },
+    {
+      "run": "2",
+      "stage": 8,
+      "step": "4",
+      "work": 8,
+      "gas": "3996574"
+    },
+    {
+      "run": "2",
+      "stage": 9,
+      "step": "4",
+      "work": 8,
+      "gas": "2254515"
+    },
+    {
+      "run": "2",
+      "stage": 9,
+      "step": "4",
+      "work": 8,
+      "gas": "7261956"
+    },
+    {
+      "run": "2",
+      "stage": 6,
+      "step": "4",
+      "work": 8,
+      "gas": "3595107"
+    },
+    {
+      "run": "2",
+      "stage": 6,
+      "step": "4",
+      "work": 8,
+      "gas": "2346342"
+    },
+    {
+      "run": "2",
+      "stage": 7,
+      "step": "4",
+      "work": 8,
+      "gas": "4605937"
+    },
+    {
+      "run": "2",
+      "stage": 9,
+      "step": "5",
+      "work": 8,
+      "gas": "2788336"
+    },
+    {
+      "run": "2",
+      "stage": 9,
+      "step": "5",
+      "work": 8,
+      "gas": "1931316"
+    },
+    {
+      "run": "3",
+      "stage": 1,
+      "step": "0",
+      "work": 8,
+      "gas": "5189977"
+    },
+    {
+      "run": "3",
+      "stage": 2,
+      "step": "0",
+      "work": 8,
+      "gas": "2172793"
+    },
+    {
+      "run": "3",
+      "stage": 2,
+      "step": "0",
+      "work": 8,
+      "gas": "8066222"
+    },
+    {
+      "run": "3",
+      "stage": 6,
+      "step": "0",
+      "work": 8,
+      "gas": "3363913"
+    },
+    {
+      "run": "3",
+      "stage": 6,
+      "step": "0",
+      "work": 8,
+      "gas": "2259671"
+    },
+    {
+      "run": "3",
+      "stage": 6,
+      "step": "0",
+      "work": 8,
+      "gas": "8414649"
+    },
+    {
+      "run": "3",
+      "stage": 6,
+      "step": "1",
+      "work": 8,
+      "gas": "3065880"
+    },
+    {
+      "run": "3",
+      "stage": 6,
+      "step": "1",
+      "work": 8,
+      "gas": "2908500"
+    },
+    {
+      "run": "3",
+      "stage": 7,
+      "step": "1",
+      "work": 8,
+      "gas": "4840846"
+    },
+    {
+      "run": "3",
+      "stage": 9,
+      "step": "2",
+      "work": 8,
+      "gas": "2174476"
+    },
+    {
+      "run": "3",
+      "stage": 9,
+      "step": "2",
+      "work": 8,
+      "gas": "4096499"
+    },
+    {
+      "run": "3",
+      "stage": 5,
+      "step": "2",
+      "work": 8,
+      "gas": "6337398"
+    },
+    {
+      "run": "3",
+      "stage": 6,
+      "step": "2",
+      "work": 8,
+      "gas": "2254469"
+    },
+    {
+      "run": "3",
+      "stage": 6,
+      "step": "2",
+      "work": 8,
+      "gas": "4740786"
+    },
+    {
+      "run": "3",
+      "stage": 9,
+      "step": "3",
+      "work": 8,
+      "gas": "3235117"
+    },
+    {
+      "run": "3",
+      "stage": 9,
+      "step": "3",
+      "work": 8,
+      "gas": "1709193"
+    },
+    {
+      "run": "3",
+      "stage": 10,
+      "step": "3",
+      "work": 8,
+      "gas": "7909042"
+    },
+    {
+      "run": "3",
+      "stage": 6,
+      "step": "3",
+      "work": 8,
+      "gas": "2787381"
+    },
+    {
+      "run": "3",
+      "stage": 6,
+      "step": "3",
+      "work": 8,
+      "gas": "3832755"
+    },
+    {
+      "run": "3",
+      "stage": 9,
+      "step": "4",
+      "work": 8,
+      "gas": "3362123"
+    },
+    {
+      "run": "3",
+      "stage": 9,
+      "step": "4",
+      "work": 8,
+      "gas": "2259406"
+    },
+    {
+      "run": "3",
+      "stage": 9,
+      "step": "4",
+      "work": 8,
+      "gas": "7156114"
+    },
+    {
+      "run": "3",
+      "stage": 6,
+      "step": "4",
+      "work": 8,
+      "gas": "3596241"
+    },
+    {
+      "run": "3",
+      "stage": 6,
+      "step": "4",
+      "work": 8,
+      "gas": "2345896"
+    },
+    {
+      "run": "3",
+      "stage": 7,
+      "step": "4",
+      "work": 8,
+      "gas": "5491414"
+    },
+    {
+      "run": "3",
+      "stage": 9,
+      "step": "5",
+      "work": 8,
+      "gas": "2074179"
+    },
+    {
+      "run": "3",
+      "stage": 9,
+      "step": "5",
+      "work": 8,
+      "gas": "1722373"
+    }
+  ]
+}

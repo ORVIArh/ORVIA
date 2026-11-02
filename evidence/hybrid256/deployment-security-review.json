@@ -1,0 +1,43 @@
+{
+  "schema": "orvia.hybrid256.security-review.v1",
+  "passed": true,
+  "planner_tests": 10,
+  "operator_tests": 9,
+  "local_deployment_rehearsals": 2,
+  "actual_contracts": 256,
+  "infrastructure_transactions": 33,
+  "conditional_predecessor_states": 32,
+  "public_transactions_sent": 0,
+  "live_rpc_used": false,
+  "real_wallet_read": false,
+  "ephemeral_test_wallet_only": true,
+  "local_deployment_gas": "229756618",
+  "plan_sha256": "814e9c0aced4f8c6ef24bf4ca7fe5d423ef8bb4e4d54216a3dea02484958b50c",
+  "coordinator": "0x3B188B4c5B76b009d80455D3bbB7597983E390f0",
+  "source_sha256": {
+    "scripts/deployment/hybrid256.mjs": "acb8bf771ee67c1408bd9817cfb5c15d42e46127f5ab810c1b484ccb9759e242",
+    "scripts/deployment/hybrid_operator.mjs": "2a1fd6b91779b86479607430ba7089b4ef64498fec497545ee53e22573d8cded",
+    "scripts/deployment/test_hybrid256.mjs": "8af164167b7d29a4b7d02db83a72b9903971d36d970c557adea2ba7c98823ef4",
+    "scripts/deployment/test_hybrid_operator.mjs": "0171550bd5bd3bb8480eca5c3180d31b956de9a4be99167b634e4cc14c800c19"
+  },
+  "fixed": [
+    "Exact constructor immutable values checked",
+    "All conditional predecessor storage, code and nonce overrides independently derived",
+    "Safe nonce range enforced",
+    "Strict RPC quantities, block gas limit, collision and reorg checks",
+    "Separate intended specification required by quote CLI",
+    "Journal quote identity, totals, entry ordering and fee guards checked",
+    "Unknown signed transaction recovery only retransmits identical bytes after chain, nonce, prefix, balance and gas checks",
+    "Sender+chain lock prevents two plan hashes racing",
+    "Completed restart persists completed journal",
+    "Journal bounded no-follow reads reject symlinks and hardlinks",
+    "Prefix inspection uses one block and verifies its hash",
+    "Final prefix block hash checked after all getters; mid-getter reorg regression passed"
+  ],
+  "limitations": [
+    "No live broadcast or actual wallet password tested",
+    "Local simulations and mocked RPC are not mainnet finality evidence",
+    "Initial quote is conditional; every transaction is re-estimated before signing",
+    "Scientific campaign readiness remains false"
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "chainId": 31337,
+  "scope": "Real65541-word17-page synthetic input stream, not prepared molecular model or target-chain throughput.",
+  "gas": [
+    {
+      "scenario": "begin65541-word stream",
+      "localGas": "91454"
+    },
+    {
+      "scenario": "input page append128-or-finalwords",
+      "localGas": "2980209",
+      "globalOffset": 0,
+      "words": 128
+    },
+    {
+      "scenario": "append sealed page descriptor",
+      "localGas": "165196",
+      "pageIndex": 0
+    },
+    {
+      "scenario": "append sealed page descriptor",
+      "localGas": "165196",
+      "pageIndex": 1
+    },
+    {
+      "scenario": "append sealed page descriptor",
+      "localGas": "165184",
+      "pageIndex": 2
+    },
+    {
+      "scenario": "append sealed page descriptor",
+      "localGas": "165196",
+      "pageIndex": 3
+    },
+    {
+      "scenario": "append sealed page descriptor",
+      "localGas": "165196",
+      "pageIndex": 4
+    },
+    {
+      "scenario": "append sealed page descriptor",
+      "localGas": "165196",
+      "pageIndex": 5
+    },
+    {
+      "scenario": "append sealed page descriptor",
+      "localGas": "165196",
+      "pageIndex": 6
+    },
+    {
+      "scenario": "append sealed page descriptor",
+      "localGas": "165196",
+      "pageIndex": 7
+    },
+    {
+      "scenario": "append sealed page descriptor",
+      "localGas": "165196",
+      "pageIndex": 8
+    },
+    {
+      "scenario": "append sealed page descriptor",
+      "localGas": "165196",
+      "pageIndex": 9
+    },
+    {
+      "scenario": "append sealed page descriptor",
+      "localGas": "165196",
+      "pageIndex": 10
+    },
+    {
+      "scenario": "append sealed page descriptor",
+      "localGas": "165196",
+      "pageIndex": 11
+    },
+    {
+      "scenario": "append sealed page descriptor",
+      "localGas": "165184",
+      "pageIndex": 12
+    },
+    {
+      "scenario": "append sealed page descriptor",
+      "localGas": "165196",
+      "pageIndex": 13
+    },
+    {
+      "scenario": "append sealed page descriptor",
+      "localGas": "165196",
+      "pageIndex": 14
+    },
+    {
+      "scenario": "append sealed page descriptor",
+      "localGas": "165196",
+      "pageIndex": 15
+    },
+    {
+      "scenario": "input page append128-or-finalwords",
+      "localGas": "167207",
+      "globalOffset": 65536,
+      "words": 5
+    },
+    {
+      "scenario": "append sealed page descriptor",
+      "localGas": "165206",
+      "pageIndex": 16
+    },
+    {
+      "scenario": "seal17-page stream descriptor",
+      "localGas": "56086"
+    },
+    {
+      "scenario": "constantlookup firstpage read",
+      "localGas": "48022"
+    },
+    {
+      "scenario": "constantlookup seventeenthpage read",
+      "localGas": "48046"
+    }
+  ]
+}

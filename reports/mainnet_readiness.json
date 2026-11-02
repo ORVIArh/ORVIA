@@ -729,6 +729,7 @@
     "Scientific input/method validation is incomplete.",
     "Scientific blockers remain recorded.",
     "The prepared ORVIA-001 model is not accepted by the scientific-readiness audit.",
+    "A passing current-version full validation run is missing.",
     "A public operator, nonce-pinned production plan and verified live fee quotes are missing.",
     "Production acceptance: complete end-to-end pipeline and measured full-system workload evidence is missing.",
     "C01: complete measured production implementation is not validated.",
@@ -874,7 +875,15 @@
     "A03: complete measured production implementation is not validated.",
     "A03: target-fork, source-verification or maximum-work gas evidence is missing.",
     "A04: complete measured production implementation is not validated.",
-    "A04: target-fork, source-verification or maximum-work gas evidence is missing."
+    "A04: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "The active ORVIA-256 deployment and acceptance plan is still being integrated. The legacy 64-slot gate cannot authorize it.",
+    "Validation integrity: A completed version-2 full validation run is required; interrupted or legacy success is not accepted.",
+    "Validation integrity: Validation does not contain exactly the nine required checks in order.",
+    "Validation integrity: Validation input files were added, removed or changed after this run.",
+    "Validation integrity: Validation input inventory digest differs.",
+    "Validation integrity: Compiler report or artifacts changed after this run.",
+    "Validation integrity: Generated numerical or deployment evidence changed after validation.",
+    "Validation integrity: Compiled Solidity source set or hashes differ from validated inputs."
   ],
   "blockerGroups": {
     "externalEvidence": [],
@@ -888,6 +897,7 @@
       "The complete production system is not compiled.",
       "Scientific input/method validation is incomplete.",
       "Scientific blockers remain recorded.",
+      "A passing current-version full validation run is missing.",
       "Production acceptance: complete end-to-end pipeline and measured full-system workload evidence is missing.",
       "C01: complete measured production implementation is not validated.",
       "C01: target-fork, source-verification or maximum-work gas evidence is missing.",
@@ -1040,8 +1050,18 @@
   },
   "notice": "A structural gate cannot certify scientific correctness or independent security review. No signer or broadcaster is provided by this tool.",
   "validationIntegrity": {
-    "passed": true,
-    "errors": [],
+    "passed": false,
+    "errors": [
+      "A completed version-2 full validation run is required; interrupted or legacy success is not accepted.",
+      "Validation does not contain exactly the nine required checks in order.",
+      "Validation input files were added, removed or changed after this run.",
+      "Validation input inventory digest differs.",
+      "Compiler report or artifacts changed after this run.",
+      "Generated numerical or deployment evidence changed after validation.",
+      "Compiled Solidity source set or hashes differ from validated inputs."
+    ],
     "scope": "Exact contracts/test/reference/scripts/data file sets and package/dependency pins; excludes Python caches, docs/release notes and operational data/production_acceptance.json, data/operator_deployment.json, data/production_slot_evidence.json and data/production/ evidence (separately bound by readiness). Compiler artifacts, generated numerical/deployment evidence and all nine check logs are separately hash-bound; readiness/preflight/review/package metadata are excluded."
-  }
+  },
+  "activeArchitecture": "ORVIA-256",
+  "targetActualContractCount": 256
 }

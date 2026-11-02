@@ -1,0 +1,270 @@
+{
+  "status": "quoted",
+  "methods": {
+    "eth_chainId": 1,
+    "eth_getBlockByNumber": 2,
+    "eth_getTransactionCount": 258,
+    "eth_getBalance": 1,
+    "eth_gasPrice": 1,
+    "eth_getCode": 258,
+    "eth_estimateGas": 33
+  },
+  "publicTransactionsSent": 0,
+  "quote": {
+    "schema": "orvia.hybrid256.quote.v1",
+    "planSha256": "814e9c0aced4f8c6ef24bf4ca7fe5d423ef8bb4e4d54216a3dea02484958b50c",
+    "observedAtUtc": "2026-11-02T16:22:48.904Z",
+    "referenceBlock": {
+      "number": "0x6384f30",
+      "hash": "0xc911d4aa3f06064c700d0d46d3978d6e9040a70f0376393dd5fe97282f7981f8"
+    },
+    "chainId": 4663,
+    "sender": "0x2541a9e93B5C853E9208b0C5C7386dD458424c77",
+    "nonce": "0x0",
+    "balanceWei": "38676614738669727",
+    "gasPriceWei": "20310000",
+    "actualContracts": 256,
+    "infrastructureTransactions": 33,
+    "totalInfrastructureGasIncludingL1Data": "231618594",
+    "totalInfrastructureFeeWei": "4704173644140000",
+    "totalInfrastructureFeeEth": "0.00470417364414",
+    "balanceCoversEstimate": true,
+    "estimates": [
+      {
+        "index": 0,
+        "kind": "create_coordinator",
+        "gasIncludingL1Data": "2920661",
+        "feeWeiAtObservedPrice": "59318624910000",
+        "usesLocalPredecessorStateOverrides": false
+      },
+      {
+        "index": 1,
+        "kind": "create_shards",
+        "gasIncludingL1Data": "7191364",
+        "feeWeiAtObservedPrice": "146056602840000",
+        "usesLocalPredecessorStateOverrides": true
+      },
+      {
+        "index": 2,
+        "kind": "create_shards",
+        "gasIncludingL1Data": "7174128",
+        "feeWeiAtObservedPrice": "145706539680000",
+        "usesLocalPredecessorStateOverrides": true
+      },
+      {
+        "index": 3,
+        "kind": "create_shards",
+        "gasIncludingL1Data": "7174128",
+        "feeWeiAtObservedPrice": "145706539680000",
+        "usesLocalPredecessorStateOverrides": true
+      },
+      {
+        "index": 4,
+        "kind": "create_shards",
+        "gasIncludingL1Data": "7174128",
+        "feeWeiAtObservedPrice": "145706539680000",
+        "usesLocalPredecessorStateOverrides": true
+      },
+      {
+        "index": 5,
+        "kind": "create_shards",
+        "gasIncludingL1Data": "7174128",
+        "feeWeiAtObservedPrice": "145706539680000",
+        "usesLocalPredecessorStateOverrides": true
+      },
+      {
+        "index": 6,
+        "kind": "create_shards",
+        "gasIncludingL1Data": "7174128",
+        "feeWeiAtObservedPrice": "145706539680000",
+        "usesLocalPredecessorStateOverrides": true
+      },
+      {
+        "index": 7,
+        "kind": "create_shards",
+        "gasIncludingL1Data": "7174128",
+        "feeWeiAtObservedPrice": "145706539680000",
+        "usesLocalPredecessorStateOverrides": true
+      },
+      {
+        "index": 8,
+        "kind": "create_shards",
+        "gasIncludingL1Data": "7174128",
+        "feeWeiAtObservedPrice": "145706539680000",
+        "usesLocalPredecessorStateOverrides": true
+      },
+      {
+        "index": 9,
+        "kind": "create_shards",
+        "gasIncludingL1Data": "7174128",
+        "feeWeiAtObservedPrice": "145706539680000",
+        "usesLocalPredecessorStateOverrides": true
+      },
+      {
+        "index": 10,
+        "kind": "create_shards",
+        "gasIncludingL1Data": "7174128",
+        "feeWeiAtObservedPrice": "145706539680000",
+        "usesLocalPredecessorStateOverrides": true
+      },
+      {
+        "index": 11,
+        "kind": "create_shards",
+        "gasIncludingL1Data": "7174128",
+        "feeWeiAtObservedPrice": "145706539680000",
+        "usesLocalPredecessorStateOverrides": true
+      },
+      {
+        "index": 12,
+        "kind": "create_shards",
+        "gasIncludingL1Data": "7174128",
+        "feeWeiAtObservedPrice": "145706539680000",
+        "usesLocalPredecessorStateOverrides": true
+      },
+      {
+        "index": 13,
+        "kind": "create_shards",
+        "gasIncludingL1Data": "7174128",
+        "feeWeiAtObservedPrice": "145706539680000",
+        "usesLocalPredecessorStateOverrides": true
+      },
+      {
+        "index": 14,
+        "kind": "create_shards",
+        "gasIncludingL1Data": "7174128",
+        "feeWeiAtObservedPrice": "145706539680000",
+        "usesLocalPredecessorStateOverrides": true
+      },
+      {
+        "index": 15,
+        "kind": "create_shards",
+        "gasIncludingL1Data": "7174128",
+        "feeWeiAtObservedPrice": "145706539680000",
+        "usesLocalPredecessorStateOverrides": true
+      },
+      {
+        "index": 16,
+        "kind": "create_shards",
+        "gasIncludingL1Data": "7174128",
+        "feeWeiAtObservedPrice": "145706539680000",
+        "usesLocalPredecessorStateOverrides": true
+      },
+      {
+        "index": 17,
+        "kind": "create_shards",
+        "gasIncludingL1Data": "7174128",
+        "feeWeiAtObservedPrice": "145706539680000",
+        "usesLocalPredecessorStateOverrides": true
+      },
+      {
+        "index": 18,
+        "kind": "create_shards",
+        "gasIncludingL1Data": "7174128",
+        "feeWeiAtObservedPrice": "145706539680000",
+        "usesLocalPredecessorStateOverrides": true
+      },
+      {
+        "index": 19,
+        "kind": "create_shards",
+        "gasIncludingL1Data": "7174128",
+        "feeWeiAtObservedPrice": "145706539680000",
+        "usesLocalPredecessorStateOverrides": true
+      },
+      {
+        "index": 20,
+        "kind": "create_shards",
+        "gasIncludingL1Data": "7174128",
+        "feeWeiAtObservedPrice": "145706539680000",
+        "usesLocalPredecessorStateOverrides": true
+      },
+      {
+        "index": 21,
+        "kind": "create_shards",
+        "gasIncludingL1Data": "7174128",
+        "feeWeiAtObservedPrice": "145706539680000",
+        "usesLocalPredecessorStateOverrides": true
+      },
+      {
+        "index": 22,
+        "kind": "create_shards",
+        "gasIncludingL1Data": "7174128",
+        "feeWeiAtObservedPrice": "145706539680000",
+        "usesLocalPredecessorStateOverrides": true
+      },
+      {
+        "index": 23,
+        "kind": "create_shards",
+        "gasIncludingL1Data": "7174128",
+        "feeWeiAtObservedPrice": "145706539680000",
+        "usesLocalPredecessorStateOverrides": true
+      },
+      {
+        "index": 24,
+        "kind": "create_shards",
+        "gasIncludingL1Data": "7174128",
+        "feeWeiAtObservedPrice": "145706539680000",
+        "usesLocalPredecessorStateOverrides": true
+      },
+      {
+        "index": 25,
+        "kind": "create_shards",
+        "gasIncludingL1Data": "7174128",
+        "feeWeiAtObservedPrice": "145706539680000",
+        "usesLocalPredecessorStateOverrides": true
+      },
+      {
+        "index": 26,
+        "kind": "create_shards",
+        "gasIncludingL1Data": "7174128",
+        "feeWeiAtObservedPrice": "145706539680000",
+        "usesLocalPredecessorStateOverrides": true
+      },
+      {
+        "index": 27,
+        "kind": "create_shards",
+        "gasIncludingL1Data": "7174128",
+        "feeWeiAtObservedPrice": "145706539680000",
+        "usesLocalPredecessorStateOverrides": true
+      },
+      {
+        "index": 28,
+        "kind": "create_shards",
+        "gasIncludingL1Data": "7174128",
+        "feeWeiAtObservedPrice": "145706539680000",
+        "usesLocalPredecessorStateOverrides": true
+      },
+      {
+        "index": 29,
+        "kind": "create_shards",
+        "gasIncludingL1Data": "7174128",
+        "feeWeiAtObservedPrice": "145706539680000",
+        "usesLocalPredecessorStateOverrides": true
+      },
+      {
+        "index": 30,
+        "kind": "create_shards",
+        "gasIncludingL1Data": "7174128",
+        "feeWeiAtObservedPrice": "145706539680000",
+        "usesLocalPredecessorStateOverrides": true
+      },
+      {
+        "index": 31,
+        "kind": "create_shards",
+        "gasIncludingL1Data": "7174128",
+        "feeWeiAtObservedPrice": "145706539680000",
+        "usesLocalPredecessorStateOverrides": true
+      },
+      {
+        "index": 32,
+        "kind": "create_shards",
+        "gasIncludingL1Data": "6282729",
+        "feeWeiAtObservedPrice": "127602225990000",
+        "usesLocalPredecessorStateOverrides": true
+      }
+    ],
+    "conditional": true,
+    "publicTransactionsSent": 0,
+    "fullCampaignTotalWei": null,
+    "scope": "All 256 contracts and deployment provisioning. Dependent calls use exact local predecessor state overrides; re-estimate against real pending state before each signature. Experiment registration, reports and GPU campaign are excluded, not priced as zero."
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "schema": "orvia.public-market-source-snapshot.v1",
+  "planSha256": "814e9c0aced4f8c6ef24bf4ca7fe5d423ef8bb4e4d54216a3dea02484958b50c",
+  "frozenReleaseManifestSha256": "0eb0fdd68ab31597f613319474d67c16bb2a4b8e65b391553be50c13ab1e8aa3",
+  "launcherSha256": "93dd1b963879136d2690d901a081727072878e2e53c449582a78d77738e0d7d6",
+  "files": {
+    ".github/workflows/hybrid-tests.yml": {
+      "sha256": "8e533aeac259eeae417101553df8aebefac744cac6437c90aa2b32065aeb2cf5",
+      "bytes": 883,
+      "frozenReleaseInput": false
+    },
+    "contracts/hybrid/ORVIAHybridCoordinator.sol": {
+      "sha256": "cd633a152cb9d0737962874b30bf36aed7a195eaea375c9984c9c823db8563db",
+      "bytes": 10847,
+      "frozenReleaseInput": true
+    },
+    "contracts/hybrid/ORVIAReportShard.sol": {
+      "sha256": "ad027573551f677b32dd5b0e02bb751f45dc836f879ab8206ec8054d053ff4a2",
+      "bytes": 5375,
+      "frozenReleaseInput": true
+    },
+    "experimental/mainnet-lite/local_wallet.mjs": {
+      "sha256": "d57fd0ec0e1f65b257199a598a4f4a24112ccf9e3700cb09bb15a48cac3b884b",
+      "bytes": 14303,
+      "frozenReleaseInput": true
+    },
+    "package-lock.json": {
+      "sha256": "a6f990a92b0a6e52106bd67598e5cf33d867ddb22e3b0df8369e6437ec45ed24",
+      "bytes": 164538,
+      "frozenReleaseInput": true
+    },
+    "package.json": {
+      "sha256": "30d8652114be8f7b98a6431fce9300db6d0317009653a7496362863e19d12506",
+      "bytes": 578,
+      "frozenReleaseInput": true
+    },
+    "scripts/deployment/hybrid256.mjs": {
+      "sha256": "acb8bf771ee67c1408bd9817cfb5c15d42e46127f5ab810c1b484ccb9759e242",
+      "bytes": 27747,
+      "frozenReleaseInput": true
+    },
+    "scripts/deployment/hybrid_operator.mjs": {
+      "sha256": "2a1fd6b91779b86479607430ba7089b4ef64498fec497545ee53e22573d8cded",
+      "bytes": 19253,
+      "frozenReleaseInput": true
+    },
+    "scripts/deployment/hybrid_operator_market.mjs": {
+      "sha256": "2074d602c493f6c4c685c727902cde1eb986165069bfa1a50a9aea3a7c8ac6b1",
+      "bytes": 20855,
+      "frozenReleaseInput": true
+    },
+    "scripts/deployment/hybrid_operator_reliable.mjs": {
+      "sha256": "832145392df8af767dd45e4223678fe189e2df81f55833f27076735a5037c61b",
+      "bytes": 20779,
+      "frozenReleaseInput": true
+    },
+    "scripts/deployment/local_unlock_market.py": {
+      "sha256": "ec1c3e04a2132c9c864be613272f544c6b0a5396b9132e75be8dd0decf8f4956",
+      "bytes": 18655,
+      "frozenReleaseInput": false
+    },
+    "scripts/deployment/market_recovery.mjs": {
+      "sha256": "dd87d01f86a01944424b861fcd89b3e369afddaa0fda416a95e479475b12a193",
+      "bytes": 13352,
+      "frozenReleaseInput": true
+    },
+    "scripts/deployment/test_hybrid256.mjs": {
+      "sha256": "8af164167b7d29a4b7d02db83a72b9903971d36d970c557adea2ba7c98823ef4",
+      "bytes": 11013,
+      "frozenReleaseInput": true
+    },
+    "scripts/deployment/test_hybrid_market_policy.mjs": {
+      "sha256": "af3e749ec37335d47efb0a50c48345a8e4ae33971f066939483020fc3c3a496e",
+      "bytes": 4141,
+      "frozenReleaseInput": false
+    },
+    "scripts/deployment/test_hybrid_operator.mjs": {
+      "sha256": "0171550bd5bd3bb8480eca5c3180d31b956de9a4be99167b634e4cc14c800c19",
+      "bytes": 9797,
+      "frozenReleaseInput": true
+    },
+    "scripts/deployment/test_market_recovery_review.mjs": {
+      "sha256": "4252e83a15ae949c7079978871e2ed1b653b3ae0431e8e51d39064c944b1d3c3",
+      "bytes": 6991,
+      "frozenReleaseInput": false
+    },
+    "scripts/deployment/verify_market_recovery.mjs": {
+      "sha256": "5169b939ff323645b9396ae98823012be55116f1c945af042e961c3f735a178e",
+      "bytes": 5183,
+      "frozenReleaseInput": true
+    }
+  }
+}

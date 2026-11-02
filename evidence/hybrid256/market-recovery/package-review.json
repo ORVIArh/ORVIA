@@ -1,0 +1,17 @@
+{
+  "schema": "orvia.public-market-evidence-review.v1",
+  "passed": true,
+  "sourceArchiveMembersVerified": 17,
+  "marketTestsPassed": 18,
+  "testScope": "Public synthetic keys and mocked RPC only",
+  "runtimeOperatorSha256": "2074d602c493f6c4c685c727902cde1eb986165069bfa1a50a9aea3a7c8ac6b1",
+  "runtimeHelperSha256": "dd87d01f86a01944424b861fcd89b3e369afddaa0fda416a95e479475b12a193",
+  "frozenManifestSha256": "0eb0fdd68ab31597f613319474d67c16bb2a4b8e65b391553be50c13ab1e8aa3",
+  "existingPlanArchive": "../deployment-release.tar.gz",
+  "existingPlanArchiveSha256": "2e940e52a15cd79dc010658b36b85468f9730c7fd27075d68ba322e4b1cc16f1",
+  "privateJournalIncluded": false,
+  "privateReplacementHistoryIncluded": false,
+  "rawTransactionSignaturesIncluded": false,
+  "walletOrRpcCredentialsIncluded": false,
+  "molecularScientificAcceptanceClaimed": false
+}

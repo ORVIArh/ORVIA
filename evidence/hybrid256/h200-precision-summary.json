@@ -1,0 +1,464 @@
+{
+  "schema": "orvia.endpoint-precision-repair.v1",
+  "status": "passed_cuda_endpoint_repair",
+  "passed": true,
+  "hardware_execution_verified": true,
+  "strict_cuda_acceptance": true,
+  "tolerances_predeclared": {
+    "energy_absolute_kJ_mol": 0.01,
+    "force_max_absolute_kJ_mol_nm": 0.05,
+    "force_relative_L2": 5e-05,
+    "trajectory_position_RMS_nm": 1e-05
+  },
+  "repaired_hamiltonian_parameter_change": false,
+  "tolerance_change": false,
+  "scope": "41/44-atom endpoint diagnostic; native immutable Reference oracle. Not a full-model/PME implementation.",
+  "production_ready": false,
+  "scientific_acceptance": false,
+  "source_sha256": {
+    "precision_diagnostics.py": "ccf69af6a5aa874a79f6401406d8681fb213dbe2e1b7f25af466fe3d05547544",
+    "precision_system.py": "b68364cdf758bba0af27c6eda460592acee1445851efb403d0a7915e9dac0fba",
+    "validate_endpoints.py": "676fb66566620c1ac6fb1819526cb4454fd98174978e3a60a8b44029b02b004c"
+  },
+  "gpu_inventory": {
+    "available": true,
+    "returncode": 0,
+    "columns": [
+      "index",
+      "name",
+      "uuid",
+      "driver_version",
+      "memory_total_MiB"
+    ],
+    "csv_rows": [
+      "0, NVIDIA H200, GPU-641dd822-58c4-8dfc-fd9f-6554794282d5, 595.91.07, 143771"
+    ],
+    "note": "Inventory only; indices may be remapped by CUDA visibility settings."
+  },
+  "runStatus": {
+    "schema": "orvia.endpoint-precision-remote-run.v1",
+    "started_at_utc": "2026-11-02T16:20:38.760694+00:00",
+    "work_deadline_seconds": 540,
+    "wall_budget_seconds": 600,
+    "expected_archive_sha256": "bf8240d2f00009184c107299e08eddfa5530ba4369320a48d6f48681d3a0e69f",
+    "expected_manifest_sha256": "aabee10fdfe23a58b4b7795a27cda4607537c7dcc179e8f189f4869dbbd0d443",
+    "steps": [
+      {
+        "name": "nvidia-smi",
+        "exitcode": 0,
+        "timed_out": false,
+        "elapsed_seconds": 0.03217942616902292
+      },
+      {
+        "name": "venv",
+        "exitcode": 0,
+        "timed_out": false,
+        "elapsed_seconds": 2.4667056330945343
+      },
+      {
+        "name": "install",
+        "exitcode": 0,
+        "timed_out": false,
+        "elapsed_seconds": 10.476475049043074
+      },
+      {
+        "name": "pip-freeze",
+        "exitcode": 0,
+        "timed_out": false,
+        "elapsed_seconds": 0.31450997409410775
+      },
+      {
+        "name": "cuda-preflight",
+        "exitcode": 0,
+        "timed_out": false,
+        "elapsed_seconds": 0.6149077520240098
+      },
+      {
+        "name": "precision-diagnostics",
+        "exitcode": 0,
+        "timed_out": false,
+        "elapsed_seconds": 5.871032624039799
+      }
+    ],
+    "exitcode": 0,
+    "automatic_pod_shutdown": false,
+    "scientific_acceptance": false,
+    "production_ready": false,
+    "full_simulation_cost": null,
+    "billing_cost": null,
+    "bundle_verified": true,
+    "elapsed_seconds_before_packaging": 19.782268897863105,
+    "completed_at_utc": "2026-11-02T16:20:58.542606+00:00"
+  },
+  "archiveSha256": "030dea7f6c6e3e97d57a04e73acd09ab9c88937ba35072935e794834dad9134a",
+  "endpoints": [
+    {
+      "endpoint": "A",
+      "atoms": 41,
+      "passed": true,
+      "platforms": {
+        "reference": {
+          "name": "Reference",
+          "properties": {}
+        },
+        "native": {
+          "name": "CUDA",
+          "properties": {
+            "DeviceIndex": "0",
+            "DeviceName": "NVIDIA H200",
+            "UseBlockingSync": "false",
+            "Precision": "double",
+            "UseCpuPme": "false",
+            "CudaCompiler": "",
+            "TempDirectory": "/tmp",
+            "CudaHostCompiler": "",
+            "DisablePmeStream": "false",
+            "DeterministicForces": "false"
+          }
+        },
+        "repaired": {
+          "name": "CUDA",
+          "properties": {
+            "DeviceIndex": "0",
+            "DeviceName": "NVIDIA H200",
+            "UseBlockingSync": "false",
+            "Precision": "double",
+            "UseCpuPme": "false",
+            "CudaCompiler": "",
+            "TempDirectory": "/tmp",
+            "CudaHostCompiler": "",
+            "DisablePmeStream": "false",
+            "DeterministicForces": "false"
+          }
+        },
+        "rounding_surrogate": {
+          "name": "Reference",
+          "properties": {}
+        }
+      },
+      "staticComparisons": [
+        {
+          "energy_absolute_kJ_mol": 2.842170943040401e-14,
+          "force_max_absolute_kJ_mol_nm": 2.794706688291626e-09,
+          "force_relative_L2": 1.4245489089560878e-12,
+          "reference_energy_kJ_mol": -119.96674249259925,
+          "target_energy_kJ_mol": -119.96674249259922,
+          "reference_force_L2": 8203.471797569064,
+          "force_difference_L2": 1.1686246798879047e-08,
+          "passed": true
+        },
+        {
+          "energy_absolute_kJ_mol": 2.2737367544323206e-13,
+          "force_max_absolute_kJ_mol_nm": 2.6338966563344e-09,
+          "force_relative_L2": 8.113606181982859e-13,
+          "reference_energy_kJ_mol": -43.523278986036416,
+          "target_energy_kJ_mol": -43.52327898603619,
+          "reference_force_L2": 13219.304182484944,
+          "force_difference_L2": 1.0725622813652171e-08,
+          "passed": true
+        },
+        {
+          "energy_absolute_kJ_mol": 1.4210854715202004e-13,
+          "force_max_absolute_kJ_mol_nm": 2.8567228582687676e-09,
+          "force_relative_L2": 1.0321287165874866e-12,
+          "reference_energy_kJ_mol": -67.42510002709383,
+          "target_energy_kJ_mol": -67.42510002709369,
+          "reference_force_L2": 11745.135147933779,
+          "force_difference_L2": 1.212249126638347e-08,
+          "passed": true
+        },
+        {
+          "energy_absolute_kJ_mol": 1.7053025658242404e-13,
+          "force_max_absolute_kJ_mol_nm": 2.8897773063363275e-09,
+          "force_relative_L2": 9.366556124114243e-13,
+          "reference_energy_kJ_mol": -50.53332439481926,
+          "target_energy_kJ_mol": -50.53332439481943,
+          "reference_force_L2": 13067.595436398928,
+          "force_difference_L2": 1.223983660622497e-08,
+          "passed": true
+        },
+        {
+          "energy_absolute_kJ_mol": 5.115907697472721e-13,
+          "force_max_absolute_kJ_mol_nm": 3.0895535019226372e-09,
+          "force_relative_L2": 7.65279780701204e-13,
+          "reference_energy_kJ_mol": -12.998234095115208,
+          "target_energy_kJ_mol": -12.998234095114697,
+          "reference_force_L2": 15763.224695859139,
+          "force_difference_L2": 1.2063277138390884e-08,
+          "passed": true
+        },
+        {
+          "energy_absolute_kJ_mol": 0.0,
+          "force_max_absolute_kJ_mol_nm": 2.6193731628154637e-09,
+          "force_relative_L2": 8.296567721814758e-13,
+          "reference_energy_kJ_mol": -35.136690036341406,
+          "target_energy_kJ_mol": -35.136690036341406,
+          "reference_force_L2": 13288.578066425154,
+          "force_difference_L2": 1.1024958785471851e-08,
+          "passed": true
+        },
+        {
+          "energy_absolute_kJ_mol": 8.526512829121202e-14,
+          "force_max_absolute_kJ_mol_nm": 2.7675923774950206e-09,
+          "force_relative_L2": 9.757970659040444e-13,
+          "reference_energy_kJ_mol": -51.504988627419834,
+          "target_energy_kJ_mol": -51.50498862741992,
+          "reference_force_L2": 12428.058616973733,
+          "force_difference_L2": 1.2127263133326443e-08,
+          "passed": true
+        },
+        {
+          "energy_absolute_kJ_mol": 4.547473508864641e-13,
+          "force_max_absolute_kJ_mol_nm": 2.9053808248136193e-09,
+          "force_relative_L2": 9.535818364460234e-13,
+          "reference_energy_kJ_mol": -39.17882661505422,
+          "target_energy_kJ_mol": -39.178826615053765,
+          "reference_force_L2": 13818.465853741074,
+          "force_difference_L2": 1.317703804567708e-08,
+          "passed": true
+        },
+        {
+          "energy_absolute_kJ_mol": 1.9895196601282805e-13,
+          "force_max_absolute_kJ_mol_nm": 3.5092853067908436e-09,
+          "force_relative_L2": 9.630925137166903e-13,
+          "reference_energy_kJ_mol": -53.52350042324764,
+          "target_energy_kJ_mol": -53.52350042324744,
+          "reference_force_L2": 12867.91855608318,
+          "force_difference_L2": 1.2392996028479793e-08,
+          "passed": true
+        }
+      ],
+      "trajectory": {
+        "energy_absolute_kJ_mol": 1.3557155398302712e-11,
+        "force_max_absolute_kJ_mol_nm": 4.902886985291843e-08,
+        "force_relative_L2": 2.6209652679921346e-11,
+        "reference_energy_kJ_mol": -163.1913722776058,
+        "target_energy_kJ_mol": -163.19137227759225,
+        "reference_force_L2": 3616.627909144948,
+        "force_difference_L2": 9.479056137119922e-08,
+        "passed": true,
+        "position_RMS_difference_nm": 1.8579594145455e-14
+      },
+      "minimizedComparisons": {
+        "native": {
+          "energy_absolute_kJ_mol": 8.526512829121202e-14,
+          "force_max_absolute_kJ_mol_nm": 2.2010766542734927e-09,
+          "force_relative_L2": 1.6295376029253836e-09,
+          "reference_energy_kJ_mol": -214.98967065285217,
+          "target_energy_kJ_mol": -214.98967065285225,
+          "reference_force_L2": 6.206569566308279,
+          "force_difference_L2": 1.0113838493471631e-08,
+          "passed": true
+        },
+        "repaired": {
+          "energy_absolute_kJ_mol": 3.410605131648481e-13,
+          "force_max_absolute_kJ_mol_nm": 2.4670967491147167e-09,
+          "force_relative_L2": 1.4963908932003511e-09,
+          "reference_energy_kJ_mol": -214.98804599004342,
+          "target_energy_kJ_mol": -214.98804599004376,
+          "reference_force_L2": 6.3362772441974915,
+          "force_difference_L2": 9.481547565009744e-09,
+          "passed": true
+        },
+        "rounding_surrogate": {
+          "energy_absolute_kJ_mol": 2.842170943040401e-14,
+          "force_max_absolute_kJ_mol_nm": 2.7943585223511036e-09,
+          "force_relative_L2": 1.8273042625114955e-09,
+          "reference_energy_kJ_mol": -214.9799156508014,
+          "target_energy_kJ_mol": -214.97991565080142,
+          "reference_force_L2": 5.760206763910598,
+          "force_difference_L2": 1.0525650372641384e-08,
+          "passed": true
+        }
+      },
+      "input_sha256": {
+        "system.xml": "c36171b19a956c67770f62f9904039a6eed7e24a33c0369b42927a221862682c",
+        "parameters.json": "3b895fe11c6192144e89a89488e91c8939d7b140308756f9371e6913f36208c7"
+      }
+    },
+    {
+      "endpoint": "B",
+      "atoms": 44,
+      "passed": true,
+      "platforms": {
+        "reference": {
+          "name": "Reference",
+          "properties": {}
+        },
+        "native": {
+          "name": "CUDA",
+          "properties": {
+            "DeviceIndex": "0",
+            "DeviceName": "NVIDIA H200",
+            "UseBlockingSync": "false",
+            "Precision": "double",
+            "UseCpuPme": "false",
+            "CudaCompiler": "",
+            "TempDirectory": "/tmp",
+            "CudaHostCompiler": "",
+            "DisablePmeStream": "false",
+            "DeterministicForces": "false"
+          }
+        },
+        "repaired": {
+          "name": "CUDA",
+          "properties": {
+            "DeviceIndex": "0",
+            "DeviceName": "NVIDIA H200",
+            "UseBlockingSync": "false",
+            "Precision": "double",
+            "UseCpuPme": "false",
+            "CudaCompiler": "",
+            "TempDirectory": "/tmp",
+            "CudaHostCompiler": "",
+            "DisablePmeStream": "false",
+            "DeterministicForces": "false"
+          }
+        },
+        "rounding_surrogate": {
+          "name": "Reference",
+          "properties": {}
+        }
+      },
+      "staticComparisons": [
+        {
+          "energy_absolute_kJ_mol": 2.8421709430404007e-13,
+          "force_max_absolute_kJ_mol_nm": 3.0195224098861217e-09,
+          "force_relative_L2": 1.3705260178986657e-12,
+          "reference_energy_kJ_mol": -68.91148739985016,
+          "target_energy_kJ_mol": -68.91148739984988,
+          "reference_force_L2": 8225.834400380301,
+          "force_difference_L2": 1.1273720064647072e-08,
+          "passed": true
+        },
+        {
+          "energy_absolute_kJ_mol": 1.7053025658242404e-13,
+          "force_max_absolute_kJ_mol_nm": 3.3562628232175484e-09,
+          "force_relative_L2": 1.0457700618129665e-12,
+          "reference_energy_kJ_mol": -3.5211276862651175,
+          "target_energy_kJ_mol": -3.521127686264947,
+          "reference_force_L2": 12064.108580379469,
+          "force_difference_L2": 1.2616283575821775e-08,
+          "passed": true
+        },
+        {
+          "energy_absolute_kJ_mol": 2.842170943040401e-14,
+          "force_max_absolute_kJ_mol_nm": 3.3280684874625877e-09,
+          "force_relative_L2": 1.071395725480138e-12,
+          "reference_energy_kJ_mol": -8.97516774976856,
+          "target_energy_kJ_mol": -8.97516774976853,
+          "reference_force_L2": 12266.074648313619,
+          "force_difference_L2": 1.3141819946623498e-08,
+          "passed": true
+        },
+        {
+          "energy_absolute_kJ_mol": 5.684341886080802e-14,
+          "force_max_absolute_kJ_mol_nm": 2.4584778657299466e-09,
+          "force_relative_L2": 8.57653593169506e-13,
+          "reference_energy_kJ_mol": 10.52436137463053,
+          "target_energy_kJ_mol": 10.524361374630473,
+          "reference_force_L2": 13222.604995687916,
+          "force_difference_L2": 1.13404146856128e-08,
+          "passed": true
+        },
+        {
+          "energy_absolute_kJ_mol": 1.4210854715202004e-13,
+          "force_max_absolute_kJ_mol_nm": 2.980414137709886e-09,
+          "force_relative_L2": 9.99456873437911e-13,
+          "reference_energy_kJ_mol": 5.692111548577486,
+          "target_energy_kJ_mol": 5.692111548577628,
+          "reference_force_L2": 12610.739875095922,
+          "force_difference_L2": 1.2603890647302164e-08,
+          "passed": true
+        },
+        {
+          "energy_absolute_kJ_mol": 3.979039320256561e-13,
+          "force_max_absolute_kJ_mol_nm": 2.8812792152166367e-09,
+          "force_relative_L2": 9.45195379298623e-13,
+          "reference_energy_kJ_mol": 17.009786170126745,
+          "target_energy_kJ_mol": 17.009786170127143,
+          "reference_force_L2": 13035.436030823994,
+          "force_difference_L2": 1.232103390347762e-08,
+          "passed": true
+        },
+        {
+          "energy_absolute_kJ_mol": 1.1368683772161603e-13,
+          "force_max_absolute_kJ_mol_nm": 2.87025159195764e-09,
+          "force_relative_L2": 8.238044913646991e-13,
+          "reference_energy_kJ_mol": 28.47951560234509,
+          "target_energy_kJ_mol": 28.479515602345202,
+          "reference_force_L2": 14697.592180775073,
+          "force_difference_L2": 1.2107942450769188e-08,
+          "passed": true
+        },
+        {
+          "energy_absolute_kJ_mol": 2.2737367544323206e-13,
+          "force_max_absolute_kJ_mol_nm": 3.3428477763663977e-09,
+          "force_relative_L2": 9.705268370006365e-13,
+          "reference_energy_kJ_mol": -3.446824810867099,
+          "target_energy_kJ_mol": -3.4468248108673265,
+          "reference_force_L2": 13494.551526160434,
+          "force_difference_L2": 1.3096824409426597e-08,
+          "passed": true
+        },
+        {
+          "energy_absolute_kJ_mol": 8.526512829121202e-14,
+          "force_max_absolute_kJ_mol_nm": 2.833530743373558e-09,
+          "force_relative_L2": 8.811390102652977e-13,
+          "reference_energy_kJ_mol": 5.824426909001659,
+          "target_energy_kJ_mol": 5.824426909001744,
+          "reference_force_L2": 12930.239939696063,
+          "force_difference_L2": 1.1393338822956612e-08,
+          "passed": true
+        }
+      ],
+      "trajectory": {
+        "energy_absolute_kJ_mol": 3.717559593496844e-11,
+        "force_max_absolute_kJ_mol_nm": 2.2074004846217576e-08,
+        "force_relative_L2": 2.030097395865397e-11,
+        "reference_energy_kJ_mol": -110.45481302240063,
+        "target_energy_kJ_mol": -110.45481302236345,
+        "reference_force_L2": 3662.7325032442373,
+        "force_difference_L2": 7.435703716587672e-08,
+        "passed": true,
+        "position_RMS_difference_nm": 1.708112435831419e-14
+      },
+      "minimizedComparisons": {
+        "native": {
+          "energy_absolute_kJ_mol": 1.1368683772161603e-13,
+          "force_max_absolute_kJ_mol_nm": 2.605332838356844e-09,
+          "force_relative_L2": 1.6461157754208027e-09,
+          "reference_energy_kJ_mol": -172.58137984386448,
+          "target_energy_kJ_mol": -172.5813798438646,
+          "reference_force_L2": 6.199888773812526,
+          "force_difference_L2": 1.0205734716427136e-08,
+          "passed": true
+        },
+        "repaired": {
+          "energy_absolute_kJ_mol": 2.842170943040401e-14,
+          "force_max_absolute_kJ_mol_nm": 2.22673435246179e-09,
+          "force_relative_L2": 1.6667723020721872e-09,
+          "reference_energy_kJ_mol": -172.5827378453861,
+          "target_energy_kJ_mol": -172.58273784538608,
+          "reference_force_L2": 6.49624715288477,
+          "force_difference_L2": 1.082776482184364e-08,
+          "passed": true
+        },
+        "rounding_surrogate": {
+          "energy_absolute_kJ_mol": 2.8421709430404007e-13,
+          "force_max_absolute_kJ_mol_nm": 2.8114968131376372e-09,
+          "force_relative_L2": 2.340170040143926e-09,
+          "reference_energy_kJ_mol": -172.57693229801103,
+          "target_energy_kJ_mol": -172.57693229801075,
+          "reference_force_L2": 4.796323415684883,
+          "force_difference_L2": 1.1224212360226546e-08,
+          "passed": true
+        }
+      },
+      "input_sha256": {
+        "system.xml": "abf9a367fa606f16b7301b572bac0fb0d5582cb6e2742c4000e78b32c4908a97",
+        "parameters.json": "5e97e15c92dcfa844e517766a6857a89256ce46db98dc1ba847b5d243b345c1a"
+      }
+    }
+  ]
+}

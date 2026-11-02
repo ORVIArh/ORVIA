@@ -1,0 +1,202 @@
+{
+  "schema": "orvia.hybrid-research-protocol.v1",
+  "protocol_id": "ORVIA-ADP-PHOSPHATE-AMBER-GPU-HYBRID-v0.2",
+  "declared_utc_date": "2026-11-02",
+  "status": "FROZEN_RESEARCH_DESIGN_EXECUTION_GATES_OPEN",
+  "scientific_acceptance": false,
+  "production_ready": false,
+  "ready_for_sampling": false,
+  "selection": {
+    "record": "data/experiments/adp-phosphate-v0.2/experiment.json",
+    "user_selected_separate_phosphate_experiment": true,
+    "original_vanadate_experiment_replaced": false,
+    "scope": "State-specific compound17 to aficamten relative binding free-energy research with the existing ADP and inorganic phosphate chemical model. This protocol does not inherit the older CHARMM investigation or fully on-chain execution draft."
+  },
+  "observable": {
+    "transformation": "A compound17 -> B aficamten",
+    "definition": "DeltaDeltaG_bind = DeltaG_complex(A->B) - DeltaG_solvent(A->B)",
+    "unit": "kJ/mol",
+    "negative_sign_means": "B is predicted to bind more favorably within this declared chemical-state model",
+    "experimental_affinity_validation_claimed": false,
+    "limitations": [
+      "No matched experimental Kd pair is available as validation of this observable; ATPase functional IC50 is not substituted for Kd.",
+      "The result is conditional on the selected chemical state, truncated construct, microstates, force field, restraints, and finite sampling.",
+      "An on-chain signature authenticates an operator report and its artifact hashes; it does not prove the molecular calculation is physically correct."
+    ]
+  },
+  "chemical_model": {
+    "protein_source": "9F6C assembly1 chainA, Bos taurus cardiac myosin, residues33-782",
+    "protein_force_field": "AMBER ff03.r1 with the prepared M3L terms",
+    "ligands": "Unmodified prepared GAFF2/AM1-BCC A and B endpoints",
+    "cofactors": {"ADP_charge": -3, "phosphate_state": "H2PO4-", "phosphate_charge": -1, "magnesium_charge": 2},
+    "water": "TIP3P",
+    "added_salt": "141 KCl pairs in each matched periodic box; complex additionally has one neutralizing K+",
+    "box_vectors_nm": [[11.306514700000001, 0, 0], [0, 11.1129538, 0], [0, 0, 12.4094174]],
+    "native_B_atoms": {"complex": 132935, "solvent": 151505},
+    "native_B_rigid_water_distance_constraints": {"complex": 120519, "solvent": 151179},
+    "microstate_assumptions": [
+      "Prepared standard charged N/C termini at construct33-782 are retained.",
+      "Prepared ff03.r1 histidine assignments, ADP3-/H2PO4-/Mg2+, and M3L states are retained as candidate microstates; no predicted pH population is claimed.",
+      "The absent N-terminal1-32 segment and modeled internal loops remain explicit structural uncertainty."
+    ],
+    "coordinate_candidate": {
+      "description": "Declared loop366-374 repair followed by whole-water/K+/Cl- minimum-image clash relief; not yet an equilibrated structure",
+      "complex_positions_sha256": "e9b425314e09bc22591c378304a201746d5830fd78364717018501b5f15ae71e",
+      "solvent_positions_sha256": "00bbf79c9370f2c98211f80448122ac86bb1d44de744239dcdce4852505f11fe",
+      "complex_system_xml_sha256": "13939620df9a6c18ae249afa4add4e442b6004eadfc641d9078bcd45a798cc93",
+      "solvent_system_xml_sha256": "e7927eda87abc0a7380cd6969b54f9e0c2c6f3a6ee5f85b5f61ccab4266af2c3",
+      "source_artifact": "workspace:output/full-model-repair/adppi-v0.2-clash-relief/repair-summary.json"
+    }
+  },
+  "execution": {
+    "molecular_calculation": "GPU OpenMM, after independent original-Hamiltonian Reference comparisons pass",
+    "reporting": "256-contract infrastructure: one coordinator and255 shards, with signed operator reports and content hashes",
+    "full_molecular_calculation_onchain": false,
+    "onchain_infrastructure_deployment_implies_scientific_acceptance": false,
+    "secrets_in_artifacts": false
+  },
+  "stages": [
+    {
+      "id": "G1_identity_and_structure",
+      "status": "open",
+      "requirements": [
+        "Validate exact particle ordering, graph, parameters, exclusions, declared coordinate changes and box against frozen native sources.",
+        "No newly inverted or degenerate native tetrahedral stereocenters; independently inspect repaired loop peptide geometry, Ramachandran/rotamers and introduced clashes.",
+        "No unexcluded positive-LJ pair below0.60 times its native LJ minimum after the declared clash relief. Metal coordination must also be evaluated using total Coulomb/LJ/C4 terms, not rejected from LJ repulsion alone.",
+        "Report Mg first-shell identities/distances and the ADP/phosphate/ligand coordination geometry before and after every preparation stage. A distance-only shell count is diagnostic, not a chemical approval.",
+        "Keep all loop/terminus/microstate choices and C4 alias transfers visible in the report."
+      ]
+    },
+    {
+      "id": "G2_numerical_hamiltonian",
+      "status": "failed_full_model_comparison_under_investigation",
+      "existing_strict_limits": {"energy_absolute_error_kJ_mol": 0.01, "force_max_absolute_error_kJ_mol_nm": 0.05, "force_relative_L2_error": 0.00005},
+      "requirements": [
+        "All three limits must pass at identical positions, box, constraints, cutoff, PME alpha/grid and parameter bytes; finiteness is required for every value.",
+        "Compare each force group and the total original Hamiltonian, including C4, exceptions, reciprocal/direct electrostatics and dispersion correction.",
+        "Use native Reference as oracle; endpoint41/44-atom precision passes do not establish periodic full-model correctness.",
+        "Repeat comparisons before/after minimization and after a trajectory segment. Record actual CUDA device, precision, driver, runtime, source/input hashes.",
+        "Do not change the physical Hamiltonian or relax limits to repair numerical implementation errors. Any physical model change requires a new version."
+      ]
+    },
+    {
+      "id": "G3_parameter_quality",
+      "status": "failed_or_incomplete",
+      "requirements": [
+        "Retain the original quantum campaign and failed rank/method-sensitivity/runtime checks. Reproduce all27 calculations, including the baseline, in the separately pinned corrected campaign; no suspect original energy is reused as new evidence.",
+        "Retain original 4.184kJ/mol profile RMSE, method sensitivity and full-molecule held-out MAE limits;8.368kJ/mol worst/barrier error;15degree minimum-location error; full rank and condition<=1e6 for any independently transferred Fourier coefficients.",
+        "A rank-deficient aggregate fit cannot validate or transfer individual torsion coefficients. No automatic endpoint parameter edits are permitted.",
+        "Validate cofactor charge/torsion choices and explicit c5->c3, ns->n, nv->n C4 polarizability transfers against compatible references or separately declared QM/coordination benchmarks.",
+        "A GPU QM runtime pass establishes numerical agreement only; it does not clear any force-field quality gate."
+      ]
+    },
+    {
+      "id": "G4_alchemical_definition",
+      "status": "implementation_and_validation_missing",
+      "requirements": [
+        "Freeze an exact common-core atom map and lambda-dependent Hamiltonian for both solvated legs, including softcore functional form/parameters, electrostatics, exceptions, torsions, C4 terms and dummy restraints.",
+        "Prove lambda0 and lambda1 physical energies/forces match their corresponding nativeA/B endpoints under G2 limits after explicitly accounting for dummy terms.",
+        "Derive and test any dummy restraint/partition-function corrections and demonstrate cancellation between the matched-box legs; equal box dimensions alone are insufficient proof.",
+        "Check identical total charge throughout the transformation, mass and constraint rules, periodic treatment and compatible endpoint microstates.",
+        "Test intermediate lambdas for finite energies/forces and analytic-versus-finite-difference derivatives; store cross-evaluated reduced potentials for the estimator."
+      ],
+      "lambda_scalar_grid": [0, 0.06666666666666667, 0.13333333333333333, 0.2, 0.26666666666666666, 0.3333333333333333, 0.4, 0.4666666666666667, 0.5333333333333333, 0.6, 0.6666666666666666, 0.7333333333333333, 0.8, 0.8666666666666667, 0.9333333333333333, 1],
+      "grid_note": "Declared initial sampling grid only. It does not substitute for the missing exact lambda-Hamiltonian. Additional windows require a recorded versioned amendment, not silently deleted poor-overlap states."
+    },
+    {
+      "id": "G5_integrator_and_ensemble",
+      "status": "implementation_and_validation_missing",
+      "settings": {"ensemble": "NVT at the fixed matched box", "temperature_K": 300, "integrator": "LangevinMiddle", "friction_per_ps": 1, "time_step_fs": 1, "constraint_relative_tolerance": 0.00000001, "initial_velocities": "Maxwell300K with recorded deterministic seeds, then velocity-constraint projection", "center_of_mass_motion": "Match the frozen native System CMMotionRemover configuration; record it explicitly"},
+      "project_specific_validation_criteria_declared_before_pilot": {
+        "position_constraint_max_absolute_residual_nm": 0.000001,
+        "velocity_constraint_max_absolute_dot_residual_nm2_per_ps": 0.000001,
+        "NVE_duration_ps_per_step_size": 10,
+        "NVE_step_sizes_fs": [1, 0.5],
+        "NVE_max_energy_deviation_per_atom_kJ_mol": 0.001,
+        "NVE_absolute_fitted_energy_drift_per_atom_kJ_mol_ps": 0.00001,
+        "NVE_note": "Both step sizes must pass; report all per-component and total drift. These are declared project diagnostics, not a universal accuracy standard. Constraint projection and removal of center-of-mass momentum must be recorded.",
+        "equilibrated_temperature_mean_allowed_K": [295, 305],
+        "temperature_interval": "Last100ps of each200ps equilibration, after accounting for actual constrained degrees of freedom"
+      },
+      "requirements": [
+        "Evaluate constrained NVE on all four nativeA/B complex/solvent endpoints before stochastic sampling. The existing ten steps at0.1fs are only a smoke test.",
+        "Record constraint residuals, energy drift and physical stability across loop, ligand and cofactor coordinates, not just global finiteness.",
+        "Check NVT temperature distribution against the actual constrained degrees of freedom and expected fluctuations. Fixed volume does not establish a correct solution density; report virial pressure/density and investigate sustained pathological pressure before sampling.",
+        "Any need to change box/density requires rebuilding both matched legs and revalidating dummy corrections under a versioned amendment."
+      ]
+    },
+    {
+      "id": "G6_bounded_sampling_and_analysis",
+      "status": "not_started_missing_validated_sampler",
+      "initial_schedule": {
+        "legs": 2,
+        "lambda_windows_per_leg": 16,
+        "independent_repeat_pairs": 3,
+        "window_trajectories": 96,
+        "equilibration_ps_per_window": 200,
+        "initial_production_ps_per_window": 1000,
+        "initial_equilibration_total_ns": 19.2,
+        "initial_production_total_ns": 96,
+        "initial_total_ns_excluding_preparation_pilots": 115.2,
+        "initial_integration_steps_at_1fs": 115200000,
+        "reduced_potential_sample_interval_ps": 1,
+        "trajectory_coordinate_interval_ps": 10,
+        "checkpoint_interval_ps": 10,
+        "sample_all_lambda_potentials": true,
+        "equilibration_discarded_from_estimator": true,
+        "seed_formula": "20261102 +100000*repeat_index +1000*leg_index +10*window_index +purpose_index; repeat=0..2,leg=0..1,window=0..15,purpose0=velocities,purpose1=integrator",
+        "total_cost_scope": "Always quote both legs, all16windows and all3repeatpairs, plus preparation/pilots, reporting transactions and infrastructure when applicable. Missing priced terms are unknown, never zero."
+      },
+      "bounded_extensions": {
+        "increment_ps_per_existing_window": 1000,
+        "maximum_production_ps_per_window_in_this_version": 5000,
+        "maximum_total_ns_excluding_preparation_pilots": 499.2,
+        "maximum_integration_steps_at_1fs": 499200000,
+        "no_unbounded_automatic_retry": true,
+        "stop_rule": "Stop this version when limits pass or the cap is reached. Retain unconverged output; do not publish it as accepted. New windows or altered physical settings require a versioned amendment."
+      },
+      "estimator": "MBAR from cross-evaluated reduced potentials, independently cross-checked with adjacent-window BAR; retain all repeated simulations and discarded-equilibration decisions",
+      "project_specific_acceptance": {
+        "minimum_decorrelated_samples_per_window": 100,
+        "minimum_adjacent_both_direction_overlap": 0.03,
+        "minimum_effective_samples_per_MBAR_state": 50,
+        "maximum_combined_DeltaDeltaG_standard_error_kJ_mol": 1,
+        "maximum_repeat_pair_DeltaDeltaG_spread_kJ_mol": 2.5,
+        "maximum_first_half_vs_second_half_DeltaDeltaG_difference_kJ_mol": 2,
+        "maximum_MBAR_vs_BAR_difference_kJ_mol": 1,
+        "note": "Report time-correlation/overlap and repeat heterogeneity with uncertainty; error bars alone are not evidence of convergence. Thresholds are declared project decisions rather than guarantees of chemical truth."
+      },
+      "structural_controls": [
+        "Track ligand pose, protein loop stability, Mg coordination and cofactor geometry by repeat and lambda.",
+        "A stable but unintended pose/coordination state is not automatically accepted. Inspect alternate-state and microstate sensitivity before interpreting affinity.",
+        "Parameter/model uncertainty remains separate from finite-sampling statistical error."
+      ]
+    }
+  ],
+  "implementation_inventory": {
+    "present": [
+      {"path": "scripts/cloud_gpu/model_repair_audit.py", "scope": "Native export coordinate/box identity audit"},
+      {"path": "scripts/cloud_gpu/model_repair_loop370.py", "scope": "Explicit local loop repair candidate"},
+      {"path": "scripts/cloud_gpu/model_repair_periodic.py", "scope": "Same-composition rigid-solvent geometric clash relief"},
+      {"path": "scripts/cloud_gpu/model_repair_gpu.py", "scope": "Strict periodic force comparison, conditional minimization, ten-step diagnostic; not a production sampler"},
+      {"path": "scripts/quantum_corrected/reproduce.py", "scope": "Separate bounded same-policy CPU quantum reproduction"},
+      {"path": "scripts/quantum_corrected/gpu_gate.py", "scope": "CPU/CUDA QM runtime comparison; not parameter approval"},
+      {"path": "scripts/hybrid/precision_admission.mjs", "scope": "Strict small-endpoint diagnostic artifact admission"},
+      {"path": "scripts/hybrid/report_operator.mjs", "scope": "Operator report preparation/signing guards; not simulation verification"}
+    ],
+    "missing_or_not_validated_for_this_protocol": [
+      "Full periodic Reference/CUDA agreement under all fixed limits",
+      "Complete nativeA full-solvated endpoints and four-endpoint integration validation",
+      "Scientific acceptance of loop/microstate/GAFF2/cofactor/C4 transfers",
+      "Exact validated periodic alchemical GPU Hamiltonian and dummy corrections",
+      "Bounded checkpointed96-trajectory sampler implementing this schedule",
+      "Cross-evaluated reduced-potential collection, correlation analysis, MBAR/BAR and declared convergence gates",
+      "Automated linkage of accepted protocol/physical inputs, actual integrated throughput and complete cost reporting"
+    ]
+  },
+  "versioning": {
+    "policy": "Freeze this artifact hash before the described pilots. Append evidence without changing its declarations; any change to physical model, estimator, schedule grid or thresholds requires a new named version and retained rationale.",
+    "outcomes_may_fail": true,
+    "failed_results_must_be_retained": true
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "passed": true,
+  "reportSha256": "a0ef09b1749e9529be077ee52a1dd5689c15cc28c690e881718494f25877b024",
+  "scriptSha256": "ae463f90437ff916f67e82889d88411d81462daa4841afa65df2f648ef5ecc04",
+  "compilerReproduced": true,
+  "targetQuotesVerified": 12,
+  "prestateValuesVerified": 1540,
+  "records": [
+    {
+      "label": "complex33/A.nonbonded.chunk1024:register",
+      "targetGas": "94588",
+      "requestHashVerified": true,
+      "responseHashVerified": true,
+      "prestateVerified": true
+    },
+    {
+      "label": "complex33/A.nonbonded.chunk1024:store1:0",
+      "targetGas": "796240",
+      "requestHashVerified": true,
+      "responseHashVerified": true,
+      "prestateVerified": true
+    },
+    {
+      "label": "complex33/A.nonbonded.chunk1024:bulk1:stored",
+      "targetGas": "281956",
+      "requestHashVerified": true,
+      "responseHashVerified": true,
+      "prestateVerified": true
+    },
+    {
+      "label": "complex33/A.nonbonded.chunk1024:bulk1:calldata",
+      "targetGas": "195136",
+      "requestHashVerified": true,
+      "responseHashVerified": true,
+      "prestateVerified": true
+    },
+    {
+      "label": "complex33/A.nonbonded.chunk1024:sparse8:stored",
+      "targetGas": "33657",
+      "requestHashVerified": true,
+      "responseHashVerified": true,
+      "prestateVerified": true
+    },
+    {
+      "label": "complex33/A.nonbonded.chunk1024:sparse8:calldata",
+      "targetGas": "65970",
+      "requestHashVerified": true,
+      "responseHashVerified": true,
+      "prestateVerified": true
+    },
+    {
+      "label": "complex33/A.nonbonded.chunk1024:cross24:stored",
+      "targetGas": "38698",
+      "requestHashVerified": true,
+      "responseHashVerified": true,
+      "prestateVerified": true
+    },
+    {
+      "label": "complex33/A.nonbonded.chunk1024:cross24:calldata",
+      "targetGas": "67987",
+      "requestHashVerified": true,
+      "responseHashVerified": true,
+      "prestateVerified": true
+    },
+    {
+      "label": "complex33/A.nonbonded.chunk1024:bulk4:stored",
+      "targetGas": "1047524",
+      "requestHashVerified": true,
+      "responseHashVerified": true,
+      "prestateVerified": true
+    },
+    {
+      "label": "complex33/A.nonbonded.chunk1024:bulk4:calldata",
+      "targetGas": "686544",
+      "requestHashVerified": true,
+      "responseHashVerified": true,
+      "prestateVerified": true
+    },
+    {
+      "label": "complex33/A.nonbonded.chunk1024:bulk16:stored",
+      "targetGas": "4202582",
+      "requestHashVerified": true,
+      "responseHashVerified": true,
+      "prestateVerified": true
+    },
+    {
+      "label": "complex33/A.nonbonded.chunk1024:bulk16:calldata",
+      "targetGas": "2774398",
+      "requestHashVerified": true,
+      "responseHashVerified": true,
+      "prestateVerified": true
+    }
+  ],
+  "publicTransactionsSent": 0,
+  "scope": "Offline reconstruction of exact target requests, responses and relevant prior storage. No additional RPC requests; no full molecular campaign."
+}

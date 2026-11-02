@@ -1,12 +1,13 @@
 {
   "name": "orvia",
-  "version": "0.5.1",
+  "version": "0.6.0-dev",
   "private": true,
   "description": "ORVIA: Robinhood Chain molecular research engine development checkpoint",
   "type": "module",
   "scripts": {
     "compile": "node scripts/compile.mjs",
     "test": "node --test test/*.test.mjs",
+    "test:hybrid": "node --test scripts/hybrid/*.test.mjs scripts/deployment/test_hybrid*.mjs",
     "check:manifest": "python3 scripts/validate_manifest.py",
     "check": "node scripts/check.mjs"
   },

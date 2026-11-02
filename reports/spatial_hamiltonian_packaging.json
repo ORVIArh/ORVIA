@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "passed": true,
+  "scope": "Portable path-only packaging and source-bound compile smoke; original complete EVM parity run preserved unchanged. No portable full rerun.",
+  "sourceSha256": "0bc4672ea4f92688e0707a5bbed36aed594eef02f013f35e68bfbd4d33e56806",
+  "baselineSha256": "a90eb8f88c0d2fdd7a6478a74510e88589099a5c79d3cd359443d363b847596b",
+  "historicalReportSha256": "c4a299bd74010a7294c8c9247a78c54a6be38638a258f12555614b050c5e1d84",
+  "historicalRunnerSha256": "312dd076a665322f4efe3c6eb7739a933d2cd98cb6a6ef4eedf1ccb187090168",
+  "portableRunnerSha256": "dc45f41a02b6e0e3ddf43641d1f34bf5c39f4dc11bac4f24f6fd85705b12a0a5",
+  "pathOnlyReplacements": 4,
+  "allCompiledSourcesUnchanged": true,
+  "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+  "standardInputSha256": "928745e7857bd65296bf1d16ad86a205b5b914d7ff67af9c6227dd967aca4225",
+  "artifacts": {
+    "contracts/core/AlchemicalHamiltonianEvaluator.sol": {
+      "creationBytecodeBytes": 37038,
+      "creationBytecodeKeccak256": "0xd7ac5e2a03a881f2b3d2c594cbf7d2bb5f1c8b9b8ddd90b14e462e5ecbd57ad7",
+      "runtimeTemplateBytes": 34449,
+      "runtimeTemplateKeccak256": "0x66a2e1f6157135860126677adc2ff0183a0b2efc76ce089f033227e6c2148550"
+    },
+    "contracts/core/AlchemicalHamiltonianEvaluatorLegacy.sol": {
+      "creationBytecodeBytes": 31725,
+      "creationBytecodeKeccak256": "0xa0562a6ac87fc68003d65f5c245fe6be0d9072fcec63b44d8fc5bb6f9382225a",
+      "runtimeTemplateBytes": 29143,
+      "runtimeTemplateKeccak256": "0x633a70662933bb306db0cfd575d173787da66c906524386d2677b0bf3f3ab36b"
+    }
+  },
+  "mainnetTransactionsSent": 0
+}

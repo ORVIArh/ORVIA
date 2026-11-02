@@ -1,6 +1,6 @@
 # v0.5.1 development checkpoint
 
-This page preserves the detailed technical overview from the published v0.5.1 checkpoint. The recorded results apply to that checkpoint; active development is tracked separately.
+This page preserves the detailed technical overview from the published v0.5.1 checkpoint, including its earlier 64-slot design. The recorded results and implementation boundaries below apply to that historical source. Current v0.6.0-dev work has a [local 256-contract prototype](COMPLETE_256_PROTOTYPE.md) and [active architecture](ARCHITECTURE_256.md), while its complete-source suite remains incomplete and mainnet/scientific readiness remain false. No ORVIA production contract has been deployed to Robinhood.
 
 [Project home](../README.md) · [Documentation index](README.md) · [Evidence guide](../reports/README.md)
 
@@ -10,7 +10,7 @@ Open molecular research on Robinhood Chain. Our goal is to make scientific calcu
 
 [Progress](../STATUS.md) · [Roadmap](../ROADMAP.md) · [Research log](../RESEARCH_LOG.md) · [Architecture](ARCHITECTURE.md) · [Release requirements](PRODUCTION_GAPS.md)
 
-**v0.5.1 development checkpoint: 212 Node/EVM tests and 63 Python references passed.** All nine check groups and source/evidence integrity verification passed. [Validation evidence](../reports/validation_summary.json). Mainnet readiness remains false.
+**v0.5.1 development checkpoint: 212 Node/EVM tests and 63 Python references passed.** All nine check groups and source/evidence integrity verification passed. [Historical release record](RELEASE_v0_5_1.md). The current `validation_summary.json` has since been marked incomplete for changed source; it is not the historical pass cited here. Mainnet readiness remains false.
 
 ORVIA targets fully on-chain molecular calculations on Robinhood Chain. The proposed first experiment compares compound 17 with aficamten in a declared cardiac-myosin state. Registered molecular inputs, numerical work, simulation state and analysis are intended to remain in contracts. Permissionless bounded transactions advance work; swap/pool triggers are deferred.
 
@@ -48,7 +48,7 @@ ORVIA_RESEARCH_PYTHON=.venv-research/bin/python npm run check
 
 Compilation uses Solidity 0.8.26, optimizer 200, Shanghai EVM and no viaIR. EVM tests use in-process Ganache chain 31337. They require no mainnet account or RPC. Four experimental coordinators/minimizers exceed Ethereum's 24 KiB runtime ceiling; their dedicated tests explicitly relax local size enforcement and assert the documented Robinhood planning ceiling. This is not a Robinhood fork test. Compiler warnings are retained in the size report.
 
-The runner discovers all EVM and Python tests and performs nine groups: compilation, EVM components/integrations/deployment rehearsal, independent references, architecture, structure, ligand identity, receptor preparation, scientific readiness and packaged alternative-model provenance. The actual completed results are in [validation_summary.json](../reports/validation_summary.json) and its logs. Tests cover high-precision scalar-energy differentiation, independent constraint/MBAR/correlation solvers, deterministic transaction partitioning, frozen identities, intermediate-state barriers, failure/restart behavior and cross-contract rollback. Small fixtures do not validate a full protein calculation.
+The runner discovers all EVM and Python tests and performs nine groups: compilation, EVM components/integrations/deployment rehearsal, independent references, architecture, structure, ligand identity, receptor preparation, scientific readiness and packaged alternative-model provenance. The current [validation summary](../reports/validation_summary.json) is a mutable development report and no longer represents this historical run; consult the [release record](RELEASE_v0_5_1.md) and research log for the dated checkpoint. Tests cover high-precision scalar-energy differentiation, independent constraint/MBAR/correlation solvers, deterministic transaction partitioning, frozen identities, intermediate-state barriers, failure/restart behavior and cross-contract rollback. Small fixtures do not validate a full protein calculation.
 
 ```bash
 node scripts/deploy.mjs --readiness
@@ -63,7 +63,7 @@ The reproducible original receptor mask contains 6,032 observed heavy-atom rows,
 
 Most dynamics paths are capped at 1,024 atoms and 4,096 steps. Full solvated myosin exceeds this development scope. Scaling requires bounded distributed data/state access and measured scientific workload, not just larger constants or more contract addresses. [The workload report](WORKLOAD_FEASIBILITY.md) shows very large illustrative pair-only costs; it is not a measured myosin estimate or Robinhood throughput forecast. [Inline pair arithmetic](COMPUTE_COST.md) now has an explicit integration path in the neighbor NVE coordinator. Its trajectory and gas tests remain small-fixture evidence, and other coordinators retain their original external pair path.
 
-The targeted neighbor suite passed **11 tests**. Its identical four-atom, three-step trajectory used **1.92% less advancement gas** with inline pair arithmetic (65,446,162 versus 66,727,850 gas). That complete-fixture result is distinct from the standalone pair microbenchmark's 51–53% saving. Neither is a measured full-myosin workload or mainnet fee estimate; the current complete source-bound suite is recorded separately in the validation summary.
+The targeted neighbor suite passed **11 tests**. Its identical four-atom, three-step trajectory used **1.92% less advancement gas** with inline pair arithmetic (65,446,162 versus 66,727,850 gas). That complete-fixture result is distinct from the standalone pair microbenchmark's 51–53% saving. Neither is a measured full-myosin workload or mainnet fee estimate; the current complete source-bound suite requires a new completed validation summary.
 
 The target is Robinhood mainnet chain 4663. A provider listed in Robinhood's documentation now passes the [read-only network preflight](../reports/mainnet_preflight.json). A [block-pinned local state-fork smoke check](FORK_SMOKE.md) exercises two numerical kernels. It uses Ganache's Ethereum Shanghai rules and does not validate Robinhood Nitro execution rules, full molecular production, network throughput or mainnet fees. A separate [target-node read-only probe](TARGET_NODE_EXECUTION.md) also returned the exact runtimes and numerical bytes for two kernels through the Robinhood provider. This is supplementary kernel evidence, outside the offline suite, and does not validate the full molecular pipeline or transaction fees. No signing key is included or requested.
 

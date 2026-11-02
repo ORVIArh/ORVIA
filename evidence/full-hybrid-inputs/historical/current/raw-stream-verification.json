@@ -1,0 +1,225 @@
+{
+  "schema": "orvia.full-hybrid-raw-word-verification.v1",
+  "status": "passed_raw_file_and_catalog_shape_checks",
+  "passed": true,
+  "legs": {
+    "complex33": {
+      "passed": true,
+      "manifestSha256": "bdbd360cede4953cf9afe6530c2cd23f9304ea845d23b8f0b834ffb94e94f093",
+      "uniqueWordCount": 5904252,
+      "sourceFilesVerified": 12,
+      "streams": [
+        {
+          "role": "A.angles",
+          "records": 22187,
+          "words": 110935,
+          "rawSha256": "800e10c2bac3ee3ccb34cff3715aa53057ced2ded7f048114c120a92ec86e656",
+          "passed": true
+        },
+        {
+          "role": "A.bonds",
+          "records": 132787,
+          "words": 531148,
+          "rawSha256": "f04c35cfdd4232d5c3996abc6c47167f457ae50a9278db860e5b870a5cfcdab2",
+          "passed": true
+        },
+        {
+          "role": "A.exceptions",
+          "records": 186910,
+          "words": 1121460,
+          "rawSha256": "f092a2aa6b3f2d9ce07024602ae28912073396473ed660afd18a4863dffd019a",
+          "passed": true
+        },
+        {
+          "role": "A.nonbonded",
+          "records": 132936,
+          "words": 398808,
+          "rawSha256": "da0a4b56fe00ca4e6ca011fffbdbf695f283288eae9a9bcff957118467a9c8fe",
+          "passed": true
+        },
+        {
+          "role": "A.particles",
+          "records": 132936,
+          "words": 531744,
+          "rawSha256": "8d45312b3317f5a52cd13caaeccdf6d3e23abd8814e9548a72255b894ccfc5f3",
+          "passed": true
+        },
+        {
+          "role": "A.torsions",
+          "records": 46357,
+          "words": 324499,
+          "rawSha256": "2d067053f3b3f8d8a759cf0b0e86a690cd1cbb71af28dcfec30ba66cf4b104b5",
+          "passed": true
+        },
+        {
+          "role": "B.angles",
+          "records": 22187,
+          "words": 110935,
+          "rawSha256": "ba52a68d500f64d9e5e723267d731b3377d104a06f4472d2cde6264ffce06e55",
+          "passed": true
+        },
+        {
+          "role": "B.bonds",
+          "records": 132787,
+          "words": 531148,
+          "rawSha256": "fddcea19b78d66667c57a1c8ab175b5e320ae9bfa13800e130dab431fa2ea3a5",
+          "passed": true
+        },
+        {
+          "role": "B.exceptions",
+          "records": 186910,
+          "words": 1121460,
+          "rawSha256": "2fbe5f5abd08fa8528e64140de3d9670ddb4ca7c0bf00f9675476ab0dd7ad2c1",
+          "passed": true
+        },
+        {
+          "role": "B.nonbonded",
+          "records": 132936,
+          "words": 398808,
+          "rawSha256": "5760bef3bed0a2761080376f732271c1ae702a47cbd1ea965f76e533a23ad94b",
+          "passed": true
+        },
+        {
+          "role": "B.particles",
+          "records": 132936,
+          "words": 531744,
+          "rawSha256": "8d45312b3317f5a52cd13caaeccdf6d3e23abd8814e9548a72255b894ccfc5f3",
+          "passed": true
+        },
+        {
+          "role": "B.torsions",
+          "records": 46357,
+          "words": 324499,
+          "rawSha256": "de57bdb4e0f28787509cfae04147c2b06b15023690f5b28aad607d6ab16d83c5",
+          "passed": true
+        },
+        {
+          "role": "positions",
+          "records": 132936,
+          "words": 398808,
+          "rawSha256": "7557cdda674db8a3c95be338674defc2730d195c28b1edd8af2cf789533eae57",
+          "passed": true
+        }
+      ],
+      "proposedProtocolFieldsUnselected": [
+        "cutoff",
+        "ewaldAlpha",
+        "ewaldExtent",
+        "prefactor",
+        "softcoreAlpha",
+        "switchDistance"
+      ]
+    },
+    "solvent33": {
+      "passed": true,
+      "manifestSha256": "40c9eae3da4f327f8d5a9dde91eac5bf4ac923dc7ebce30c0c58a26570856e2d",
+      "uniqueWordCount": 4999584,
+      "sourceFilesVerified": 10,
+      "streams": [
+        {
+          "role": "A.angles",
+          "records": 91,
+          "words": 455,
+          "rawSha256": "bdf39e8ec1d6d24b4017511f4a02ccd298dd4bf4e4e1d730e47b2fa3605bdf7e",
+          "passed": true
+        },
+        {
+          "role": "A.bonds",
+          "records": 151230,
+          "words": 604920,
+          "rawSha256": "c339729c380beb489423036ab3b455dbc9dae451d2a8dad0d8af1c687f9a5fda",
+          "passed": true
+        },
+        {
+          "role": "A.exceptions",
+          "records": 151418,
+          "words": 908508,
+          "rawSha256": "08d6fb22a6509e2777d30b5b4cde93ff6e9cf3f05d4d2a755a31b8fc34259ffc",
+          "passed": true
+        },
+        {
+          "role": "A.nonbonded",
+          "records": 151506,
+          "words": 454518,
+          "rawSha256": "61f7a881bbfcf057d895607a21e5eef0c348e05ba30871d8dc64f50930242fdb",
+          "passed": true
+        },
+        {
+          "role": "A.particles",
+          "records": 151506,
+          "words": 606024,
+          "rawSha256": "6b9778c41e1328b2c49887b08d4ec4e4693dcee04c8fc9204a06a1704588d095",
+          "passed": true
+        },
+        {
+          "role": "A.torsions",
+          "records": 160,
+          "words": 1120,
+          "rawSha256": "ae81245dbad5bcc6ff40eb41cfc32f1cebc3dc05570cfa36fc98f0c396d7e16c",
+          "passed": true
+        },
+        {
+          "role": "B.angles",
+          "records": 91,
+          "words": 455,
+          "rawSha256": "a56ec830743158c47c619e8278b62741779f742fc3152c036fd734a34279aea9",
+          "passed": true
+        },
+        {
+          "role": "B.bonds",
+          "records": 151230,
+          "words": 604920,
+          "rawSha256": "c6f42a15f83fbfb148d5cd33ec6bdb05732e9df1b8e3fda43cec6a19e5ed9183",
+          "passed": true
+        },
+        {
+          "role": "B.exceptions",
+          "records": 151418,
+          "words": 908508,
+          "rawSha256": "1737b8d4ac01c76d3d8ccb122a50f060324870bd93833fd6672d036d2581a137",
+          "passed": true
+        },
+        {
+          "role": "B.nonbonded",
+          "records": 151506,
+          "words": 454518,
+          "rawSha256": "1890341e46f734e3cc43f8767fd8ea5d531d097f1670548fe56d95ded3f30ed7",
+          "passed": true
+        },
+        {
+          "role": "B.particles",
+          "records": 151506,
+          "words": 606024,
+          "rawSha256": "6b9778c41e1328b2c49887b08d4ec4e4693dcee04c8fc9204a06a1704588d095",
+          "passed": true
+        },
+        {
+          "role": "B.torsions",
+          "records": 160,
+          "words": 1120,
+          "rawSha256": "7544d19f1218e933a0d286f90b64057351bd47ff26224fbd5395ae255b7efe7a",
+          "passed": true
+        },
+        {
+          "role": "positions",
+          "records": 151506,
+          "words": 454518,
+          "rawSha256": "b8fdb313cc8ce62c536f165cf1cb19c9685c2f1f0de920121fbea2148766d9b8",
+          "passed": true
+        }
+      ],
+      "proposedProtocolFieldsUnselected": [
+        "cutoff",
+        "ewaldAlpha",
+        "ewaldExtent",
+        "prefactor",
+        "softcoreAlpha",
+        "switchDistance"
+      ]
+    }
+  },
+  "failures": [],
+  "scientificAcceptance": false,
+  "onChainRegistrationVerified": false,
+  "scriptSha256": "9ef5383021acf44e49ec91da6f6781ee24457ca6a1de95725e9b5284a0250e52"
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "orvia.root-native-metric-review.v1",
+  "diagnosticOnly": true,
+  "scientificAcceptance": false,
+  "comparisonCount": 6,
+  "checks": [
+    {
+      "leg": "complex33",
+      "phase": "initial_comparison",
+      "passed": true
+    },
+    {
+      "leg": "complex33",
+      "phase": "final_comparison",
+      "passed": true
+    },
+    {
+      "leg": "complex33",
+      "phase": "post_nve_comparison",
+      "passed": true
+    },
+    {
+      "leg": "solvent33",
+      "phase": "initial_comparison",
+      "passed": true
+    },
+    {
+      "leg": "solvent33",
+      "phase": "final_comparison",
+      "passed": true
+    },
+    {
+      "leg": "solvent33",
+      "phase": "post_nve_comparison",
+      "passed": true
+    }
+  ],
+  "review": "Recomputed reported energy differences, force norm ratios, norm bounds and unchanged tolerances; does not independently rerun GPU physics."
+}

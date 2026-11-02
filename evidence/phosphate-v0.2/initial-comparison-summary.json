@@ -1,0 +1,45 @@
+{
+  "schema": "orvia.phosphate-v0.2-evidence.v1",
+  "experiment": "ORVIA-ADP-PHOSPHATE-v0.2",
+  "coordinate_repair_passed": true,
+  "full_model_numerical_acceptance": false,
+  "scientific_acceptance": false,
+  "production_ready": false,
+  "raw_archive_sha256": "6fce335791741f6222531f925aa267ddc92fae09dc2efcfa5f4a39d37be8cd74",
+  "models": {
+    "complex33": {
+      "status": "failed",
+      "initial_comparison": {
+        "energy_absolute_kJ_mol": 0.8514374615624547,
+        "force_max_absolute_kJ_mol_nm": 0.5558317885424913,
+        "force_relative_L2": 3.0312361236484824e-05,
+        "passed": false,
+        "reference_energy_kJ_mol": -1529678.2785872342,
+        "target_energy_kJ_mol": -1529679.1300246958,
+        "reference_force_L2": 350092.52536787826,
+        "force_difference_L2": 10.612131095144353
+      },
+      "error": {
+        "type": "ValueError",
+        "message": "Initial independent/target strict force comparison failed; no minimization"
+      }
+    },
+    "solvent33": {
+      "status": "failed",
+      "initial_comparison": {
+        "energy_absolute_kJ_mol": 0.4641443642321974,
+        "force_max_absolute_kJ_mol_nm": 0.3014516460378047,
+        "force_relative_L2": 2.1891527948687203e-05,
+        "passed": false,
+        "reference_energy_kJ_mol": -1797074.4531240833,
+        "target_energy_kJ_mol": -1797074.9172684476,
+        "reference_force_L2": 524134.79669401183,
+        "force_difference_L2": 11.474111550706445
+      },
+      "error": {
+        "type": "ValueError",
+        "message": "Initial independent/target strict force comparison failed; no minimization"
+      }
+    }
+  }
+}

@@ -6,13 +6,30 @@ import path from 'node:path';
 import {spawnSync} from 'node:child_process';
 import {pathToFileURL} from 'node:url';
 import {CHECK_NAMES, GENERATED_EVIDENCE, inputInventory, buildInventory, evidenceInventory, canonical, sha256, digestFile, verifyValidation} from '../scripts/validation_inventory.mjs';
+import {defaultChecks} from '../scripts/check.mjs';
 const project=process.cwd(),python=process.env.CODEX_PRIMARY_RUNTIME_PYTHON||'python3';
+test('Parallel scheduling preserves every fixed check and rejects invalid worker counts',()=>{
+ const original=process.env.ORVIA_TEST_CONCURRENCY;
+ try{
+  delete process.env.ORVIA_TEST_CONCURRENCY;
+  const baseline=defaultChecks();assert(baseline[1][2].includes('--test-concurrency=3'));
+  for(const value of ['1','8','32']){
+   process.env.ORVIA_TEST_CONCURRENCY=value;const checks=defaultChecks();
+   assert(checks[1][2].includes(`--test-concurrency=${value}`));
+   const withoutScheduling=rows=>rows.map(([name,command,args])=>[name,command,args.filter(x=>!x.startsWith('--test-concurrency='))]);
+   assert.deepEqual(withoutScheduling(checks),withoutScheduling(baseline));
+  }
+  for(const value of ['0','33','-1','1.5','08','8 --test-name-pattern=x']){
+   process.env.ORVIA_TEST_CONCURRENCY=value;assert.throws(()=>defaultChecks(),/integer from 1 to 32/);
+  }
+ }finally{if(original===undefined)delete process.env.ORVIA_TEST_CONCURRENCY;else process.env.ORVIA_TEST_CONCURRENCY=original;}
+});
 function fixture(t){
  const parent=fs.mkdtempSync(path.join(os.tmpdir(),'orvia-packaging-')),root=path.join(parent,'orvia');
  t.after(()=>fs.rmSync(parent,{recursive:true,force:true}));
  for(const name of ['contracts','test/contracts','reference','scripts','data','reports','build','docs'])fs.mkdirSync(path.join(root,name),{recursive:true});
  for(const [name,text]of Object.entries({'package.json':'{"name":"synthetic-packaging-fixture","version":"0.5.0","type":"module"}','package-lock.json':'{}','requirements-research.txt':'# fixture','contracts/A.sol':'pragma solidity ^0.8.26; contract A {}','test/probe.test.mjs':'// synthetic fixture','reference/vector.json':'[1]','data/input.json':'{"frozen":true}','docs/release.md':'Release note'}))fs.writeFileSync(path.join(root,name),text);
- for(const name of ['check.mjs','validation_inventory.mjs','package.py'])fs.copyFileSync(path.join(project,'scripts',name),path.join(root,'scripts',name));
+ for(const name of ['check.mjs','check_preparation.mjs','validation_inventory.mjs','package.py'])fs.copyFileSync(path.join(project,'scripts',name),path.join(root,'scripts',name));
  return root;
 }
 // Deliberately constructed metadata in an isolated temporary directory exercises
@@ -85,6 +102,8 @@ test('Changes during a fixed-command run cannot yield accepted validation',async
  }
  fs.writeFileSync(path.join(root,'test/probe.test.mjs'),`import fs from 'node:fs';for(const name of ${JSON.stringify(GENERATED_EVIDENCE)})fs.writeFileSync(name,'{}');`);
  fs.writeFileSync(path.join(root,'reference/test_fixture.py'),'import unittest\nclass Check(unittest.TestCase):\n def test_fixture(self):self.assertTrue(True)\n');
+ fs.mkdirSync(path.join(root,'test/preparation'),{recursive:true});
+ fs.writeFileSync(path.join(root,'test/preparation/test_fixture.py'),'import unittest\nclass Check(unittest.TestCase):\n def test_fixture(self):self.assertTrue(True)\n');
  const result=runFixed(root);assert.equal(result.checks.length,9);assert.equal(result.passed,false);
  assert.ok(result.integrityErrors?.some(x=>x.includes('input')),JSON.stringify({status:result.status,error:result.error,checks:result.checks}));assert.notEqual(packageResult(root).status,0);
 });

@@ -1,0 +1,79 @@
+{
+  "status": "stylus_parameters_observed",
+  "mainnetTransactionsSent": 0,
+  "checks": [
+    {
+      "function": "stylusVersion",
+      "status": "returned",
+      "value": "3"
+    },
+    {
+      "function": "inkPrice",
+      "status": "returned",
+      "value": "10000"
+    },
+    {
+      "function": "maxStackDepth",
+      "status": "returned",
+      "value": "22000"
+    },
+    {
+      "function": "expiryDays",
+      "status": "returned",
+      "value": "365"
+    },
+    {
+      "function": "keepaliveDays",
+      "status": "returned",
+      "value": "31"
+    }
+  ],
+  "requests": [
+    {
+      "method": "eth_chainId",
+      "id": 1,
+      "error": null
+    },
+    {
+      "method": "eth_getBlockByNumber",
+      "id": 2,
+      "error": null
+    },
+    {
+      "method": "eth_call",
+      "id": 3,
+      "error": null
+    },
+    {
+      "method": "eth_call",
+      "id": 4,
+      "error": null
+    },
+    {
+      "method": "eth_call",
+      "id": 5,
+      "error": null
+    },
+    {
+      "method": "eth_call",
+      "id": 6,
+      "error": null
+    },
+    {
+      "method": "eth_call",
+      "id": 7,
+      "error": null
+    },
+    {
+      "method": "eth_getBlockByNumber",
+      "id": 8,
+      "error": null
+    }
+  ],
+  "referenceBlock": {
+    "number": "0x632952a",
+    "hash": "0x19062b6ec2640f4d3692da774fe0bdc3cc9c0760e997256c95f4247bb48f9b4c",
+    "stateRoot": "0x6497a8864dda499703d0b1fe824db2f7e401c05c77f8a011f41228c1f5e88435"
+  },
+  "checkedAtUtc": "2026-11-02T05:36:11.828Z"
+}

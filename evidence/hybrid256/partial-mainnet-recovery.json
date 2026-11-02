@@ -1,0 +1,49 @@
+{
+  "schema": "orvia.hybrid256.partial-mainnet.v1",
+  "observedAtUtc": "2026-11-02T16:51:59.890353+00:00",
+  "chainId": 4663,
+  "planSha256": "814e9c0aced4f8c6ef24bf4ca7fe5d423ef8bb4e4d54216a3dea02484958b50c",
+  "coordinator": "0x3B188B4c5B76b009d80455D3bbB7597983E390f0",
+  "successfulTransactions": 3,
+  "deployedContracts": 17,
+  "remainingTransactions": 30,
+  "complete": false,
+  "scientificAcceptance": false,
+  "receipts": [
+    {
+      "index": 0,
+      "transactionHash": "0xc864a8e30e5145f209bccf69d60e9c44186f8cc277632f3eae7ce759b0047865",
+      "blockNumber": "0x6388428",
+      "blockHash": "0x1a734b36fa547515f687bd345677bdd26a7df202bc6882149b61f5da4ed967aa",
+      "status": "0x1",
+      "gasUsed": "0x2c327a",
+      "effectiveGasPrice": "0x1317350"
+    },
+    {
+      "index": 1,
+      "transactionHash": "0xeeee31224911f954fdd1b9b24961fc9c7f5e96013ee4928c85de9dcea5bc9c2c",
+      "blockNumber": "0x6388454",
+      "blockHash": "0x8da0784b6124aa97f18bb6845ec2877cdbbfd87902a11936dfb191761761bfe3",
+      "status": "0x1",
+      "gasUsed": "0x6cd98d",
+      "effectiveGasPrice": "0x131e880"
+    },
+    {
+      "index": 2,
+      "transactionHash": "0xd7121dd1d3e5a462e2f685d737df0853aaee67c4472642e98185dfe619a66b7a",
+      "blockNumber": "0x6388480",
+      "blockHash": "0xc0af85a2e840968e0b0a50aad97f0f7b0e570bcd79e2b065beb17f8f13526725",
+      "status": "0x1",
+      "gasUsed": "0x6c96c1",
+      "effectiveGasPrice": "0x13163b0"
+    }
+  ],
+  "readOnlyRecoveryVerification": {
+    "recoveryVerified": true,
+    "confirmedEntries": 3,
+    "pendingNonce": "3",
+    "journalSha256": "6950d18caf0b4ce522c94d63abfd1c0698c3fad73ffae12de75762e5f8a073cb",
+    "planSha256": "814e9c0aced4f8c6ef24bf4ca7fe5d423ef8bb4e4d54216a3dea02484958b50c",
+    "publicTransactionsSent": 0
+  }
+}

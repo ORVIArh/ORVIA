@@ -1,0 +1,36 @@
+{
+  "scope": "Actual source-registered small molecular snapshots and NVT writer; not prepared myosin, physical sampling acceptance or mainnet workload.",
+  "passed": true,
+  "fullHamiltonian": [
+    {
+      "state": 0,
+      "lambda": "0x00000000000000000000000000000000",
+      "compared": 22,
+      "maximumAbsoluteError": "2.08716025867796925757432055080506570629863465400935501502499071499156794439079044531442628e-33"
+    },
+    {
+      "state": 1,
+      "lambda": "0x3ffe0000000000000000000000000000",
+      "compared": 22,
+      "maximumAbsoluteError": "2.23322698257583539631031472519408695858883768415900413164461390398661284168923964556608709e-33"
+    },
+    {
+      "state": 2,
+      "lambda": "0x3fff0000000000000000000000000000",
+      "compared": 22,
+      "maximumAbsoluteError": "2.22007125069043936044635226297519012291193833136407921499666081362026516421136414053267197e-33"
+    }
+  ],
+  "noExternalResultInput": true,
+  "continuation": {
+    "atoms": 2,
+    "states": 2,
+    "globalSteps": 5,
+    "samples": 8,
+    "partitionInvariant": true,
+    "interleavingInvariant": true,
+    "preservedParent": true
+  },
+  "inadequateChronologyCannotBecomeAcceptedMBAR": true,
+  "status": "passed"
+}

@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "passed": true,
+  "mainnetTransactionsSent": 0,
+  "scope": "Local fixed-bank storage and selected real harmonic forces; no full prepared molecular force pass, production ensemble or target-chain fee claim.",
+  "testSourceSha256": "0ddf42946ace7ef5706408453fb3cff152f017917183e912b48f326ace016882",
+  "gas": [
+    {
+      "scenario": "router deployment without storage-bank creation",
+      "localReceiptGas": "2096546"
+    },
+    {
+      "scenario": "first bank deployed permissionlessly",
+      "localReceiptGas": "609142"
+    },
+    {
+      "scenario": "bounded remaining bank provisioning",
+      "localReceiptGas": "2200753"
+    },
+    {
+      "scenario": "bounded remaining bank provisioning",
+      "localReceiptGas": "2200753"
+    },
+    {
+      "scenario": "bounded remaining bank provisioning",
+      "localReceiptGas": "2200753"
+    },
+    {
+      "scenario": "bounded remaining bank provisioning",
+      "localReceiptGas": "2200753"
+    },
+    {
+      "scenario": "bounded remaining bank provisioning",
+      "localReceiptGas": "2200753"
+    },
+    {
+      "scenario": "bounded remaining bank provisioning",
+      "localReceiptGas": "2200753"
+    },
+    {
+      "scenario": "bounded remaining bank provisioning",
+      "localReceiptGas": "2200753"
+    },
+    {
+      "scenario": "bounded remaining bank provisioning",
+      "localReceiptGas": "2200753"
+    },
+    {
+      "scenario": "bounded remaining bank provisioning",
+      "localReceiptGas": "2200753"
+    },
+    {
+      "scenario": "bounded remaining bank provisioning",
+      "localReceiptGas": "2200753"
+    },
+    {
+      "scenario": "bounded remaining bank provisioning",
+      "localReceiptGas": "2200753"
+    },
+    {
+      "scenario": "bounded remaining bank provisioning",
+      "localReceiptGas": "2200753"
+    },
+    {
+      "scenario": "bounded remaining bank provisioning",
+      "localReceiptGas": "2200753"
+    },
+    {
+      "scenario": "bounded remaining bank provisioning",
+      "localReceiptGas": "2200753"
+    },
+    {
+      "scenario": "bounded remaining bank provisioning",
+      "localReceiptGas": "2200753"
+    },
+    {
+      "scenario": "bounded remaining bank provisioning",
+      "localReceiptGas": "2200753"
+    },
+    {
+      "scenario": "bounded remaining bank provisioning",
+      "localReceiptGas": "2200753"
+    },
+    {
+      "scenario": "bounded remaining bank provisioning",
+      "localReceiptGas": "2200753"
+    },
+    {
+      "scenario": "bounded remaining bank provisioning",
+      "localReceiptGas": "2200753"
+    },
+    {
+      "scenario": "bounded remaining bank provisioning",
+      "localReceiptGas": "2200753"
+    },
+    {
+      "scenario": "bounded remaining bank provisioning",
+      "localReceiptGas": "2200753"
+    },
+    {
+      "scenario": "bounded remaining bank provisioning",
+      "localReceiptGas": "2200753"
+    },
+    {
+      "scenario": "bounded remaining bank provisioning",
+      "localReceiptGas": "2200753"
+    },
+    {
+      "scenario": "bounded remaining bank provisioning",
+      "localReceiptGas": "2200753"
+    },
+    {
+      "scenario": "bounded remaining bank provisioning",
+      "localReceiptGas": "2200753"
+    },
+    {
+      "scenario": "bounded remaining bank provisioning",
+      "localReceiptGas": "2200753"
+    },
+    {
+      "scenario": "bounded remaining bank provisioning",
+      "localReceiptGas": "2200753"
+    },
+    {
+      "scenario": "bounded remaining bank provisioning",
+      "localReceiptGas": "2200753"
+    },
+    {
+      "scenario": "bounded remaining bank provisioning",
+      "localReceiptGas": "2200753"
+    },
+    {
+      "scenario": "bounded remaining bank provisioning",
+      "localReceiptGas": "2200753"
+    },
+    {
+      "scenario": "bounded remaining bank provisioning",
+      "localReceiptGas": "2200753"
+    },
+    {
+      "scenario": "bounded remaining bank provisioning",
+      "localReceiptGas": "1657867"
+    },
+    {
+      "scenario": "128-word cold batch across two logical pages",
+      "localReceiptGas": "8779683"
+    },
+    {
+      "scenario": "immutable checkpoint creation",
+      "localReceiptGas": "127009"
+    },
+    {
+      "scenario": "epoch1 historical read after20 epochs",
+      "localReceiptGas": "60863"
+    },
+    {
+      "scenario": "real harmonic force at132936-atom global indices",
+      "localReceiptGas": "603773"
+    }
+  ],
+  "compilation": {
+    "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+    "settings": {
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "evmVersion": "shanghai",
+      "outputSelection": {
+        "*": {
+          "*": [
+            "abi",
+            "evm.bytecode.object",
+            "evm.deployedBytecode.object"
+          ]
+        }
+      }
+    },
+    "sourceSha256": {
+      "contracts/core/BankedWorkingState.sol": "ed9fcee0659e2ed7dd9d90682e77bfd3aacc9056d17a0b62041cbc1947f99fe0",
+      "test/contracts/WorkingStateWriterHarness.sol": "f478b004274aaa2b515f2a6b30344d904e0c837a698d7b188cd66f47517d460f",
+      "test/contracts/ShardedStateForceHarness.sol": "cdf84a93be5e3ca80271bb0dee7fd756f18cb481079713d82775ac3aa5fcce06",
+      "contracts/core/ShardedWorkingState.sol": "10063a76f18f3e52a107adba5855da044a33914d8423a2ce4f1c1db870e2adb9",
+      "contracts/kernels/HarmonicBondKernel.sol": "cbb2b99181ab7eec4a07dca99734e9ab2a3fa6ae4bd61b39d3a7bc6ef0f63108",
+      "contracts/math/FloatMath.sol": "a474f7656f9ffc3d3149e6a0e08f2fcf6838483ae689d1e6a7cf7400f8bad74b",
+      "contracts/math/vendor/ABDKMathQuad.sol": "dd13f72bf828a699c94e96d1377daabce3dcc1d4b29af7215501a611d3cb7c9e"
+    }
+  },
+  "fixedPool": {
+    "configuredBanks": 128,
+    "deployedBanks": 128,
+    "routerContracts": 1,
+    "totalProductionAddressesForThisStorageModule": 129,
+    "constructorCreatesBanks": false,
+    "perNamespaceCreatesBanks": false,
+    "maximumBanksPerProvisionCall": 4
+  },
+  "isolation": {
+    "distinctNamespaces": true,
+    "logicalPageWrapDoesNotAlias": true,
+    "historicalUnwrittenWordIsZero": true,
+    "maximumCapacityWords": "4294967295",
+    "largestWrittenWordIndex": "4294967294",
+    "additionalRunContractsCreated": 0
+  },
+  "integrity": {
+    "batchPartitionDigestAndSnapshotExact": true,
+    "retainedEpochs": 20,
+    "directBankAccessRejected": true,
+    "changedBankRejected": true,
+    "changedWriterRejected": true,
+    "changedRouterRejectedByBank": true,
+    "crossBankWriteRollback": true
+  },
+  "consumer": {
+    "legacyTypedABICompatible": true,
+    "namespaceCapacityWords": 1196425,
+    "globalAtoms": 132936,
+    "particlesActuallyEvaluated": 2,
+    "completeLargeForcePass": false,
+    "checkpointBeyondUint32": true,
+    "bankCount": 2
+  }
+}

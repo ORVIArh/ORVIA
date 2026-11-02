@@ -6,3 +6,16 @@
   "molecular_dynamics_ready": false,
   "self_test": "PASS"
 }
+test_aligned_hybrid_endpoint_energy_and_force_equal_native_plus_ghost_tree (test_preparation_inputs.PreparedInputs.test_aligned_hybrid_endpoint_energy_and_force_equal_native_plus_ghost_tree) ... ok
+test_binary64_to_binary128_embedding (test_preparation_inputs.PreparedInputs.test_binary64_to_binary128_embedding) ... ok
+test_dummy_tree_rejects_multiple_anchors_or_unconfined_atoms (test_preparation_inputs.PreparedInputs.test_dummy_tree_rejects_multiple_anchors_or_unconfined_atoms) ... ok
+test_explicit_hydrogen_identity_and_reproduction (test_preparation_inputs.PreparedInputs.test_explicit_hydrogen_identity_and_reproduction) ... ok
+test_importer_rejects_unsupported_forms_constraints_and_virtual_sites (test_preparation_inputs.PreparedInputs.test_importer_rejects_unsupported_forms_constraints_and_virtual_sites) ... ok
+test_native_parameter_files_and_reference_snapshots_are_bound (test_preparation_inputs.PreparedInputs.test_native_parameter_files_and_reference_snapshots_are_bound) ... ok
+test_nonzero_torsion_phase_order_matches_reference (test_preparation_inputs.PreparedInputs.test_nonzero_torsion_phase_order_matches_reference) ... ok
+test_raw_charge_correction_is_explicit_bounded_and_exact_in_text (test_preparation_inputs.PreparedInputs.test_raw_charge_correction_is_explicit_bounded_and_exact_in_text) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.074s
+
+OK

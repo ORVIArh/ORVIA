@@ -1,0 +1,501 @@
+{
+  "schema": "orvia.fixed-frame-pme-component-probe.v1",
+  "status": "completed_diagnostic_not_physical_acceptance",
+  "completed": true,
+  "scientificAcceptance": false,
+  "openmmVersion": "8.6.1.dev-b399af4",
+  "inputs": {
+    "systemSha256": "e7927eda87abc0a7380cd6969b54f9e0c2c6f3a6ee5f85b5f61ccab4266af2c3",
+    "positionsSha256": "00bbf79c9370f2c98211f80448122ac86bb1d44de744239dcdce4852505f11fe",
+    "scriptSha256": "c8c69ed2b1efb9c72b91f29f2f74ce76f2c11741b6238e61476c3165c293e51d"
+  },
+  "contexts": [
+    {
+      "platform": "Reference",
+      "properties": {},
+      "requestedExplicitPME": null,
+      "actualPMEAlphaInvNmAndGrid": [
+        2.628260884878466,
+        91,
+        90,
+        100
+      ],
+      "components": [
+        {
+          "name": "total",
+          "energyKjMol": -1796462.4394421445,
+          "forceL2": 524100.7639613243,
+          "maximumAbsForce": 15405.673112669909,
+          "elapsedSeconds": 7.36140216095373
+        },
+        {
+          "name": "0:HarmonicBondForce",
+          "energyKjMol": 14.936639054186026,
+          "forceL2": 4441.922234086002,
+          "maximumAbsForce": 1533.7274167242515,
+          "elapsedSeconds": 3.8312954460270703
+        },
+        {
+          "name": "1:HarmonicAngleForce",
+          "energyKjMol": 122.95764161606965,
+          "forceL2": 5963.049559974913,
+          "maximumAbsForce": 2247.666714762863,
+          "elapsedSeconds": 3.859890775056556
+        },
+        {
+          "name": "2:PeriodicTorsionForce",
+          "energyKjMol": 69.30590893119194,
+          "forceL2": 1092.8491193285952,
+          "maximumAbsForce": 611.5112266552723,
+          "elapsedSeconds": 3.8553415059577674
+        },
+        {
+          "name": "3:NonbondedForce.direct",
+          "energyKjMol": 9030056.212400991,
+          "forceL2": 516076.1782870806,
+          "maximumAbsForce": 15149.990737557884,
+          "elapsedSeconds": 7.088978077983484
+        },
+        {
+          "name": "4:NonbondedForce.reciprocal",
+          "energyKjMol": -10826725.852032742,
+          "forceL2": 68637.46598489092,
+          "maximumAbsForce": 876.3679347657717,
+          "elapsedSeconds": 3.9660340410191566
+        }
+      ]
+    },
+    {
+      "platform": "CUDA",
+      "properties": {
+        "DeviceIndex": "0",
+        "DeviceName": "NVIDIA H200",
+        "UseBlockingSync": "false",
+        "Precision": "double",
+        "UseCpuPme": "false",
+        "CudaCompiler": "",
+        "TempDirectory": "/tmp",
+        "CudaHostCompiler": "",
+        "DisablePmeStream": "false",
+        "DeterministicForces": "false"
+      },
+      "requestedExplicitPME": null,
+      "actualPMEAlphaInvNmAndGrid": [
+        2.628260884878466,
+        96,
+        90,
+        100
+      ],
+      "components": [
+        {
+          "name": "total",
+          "energyKjMol": -1796462.9035102613,
+          "forceL2": 524100.9451938294,
+          "maximumAbsForce": 15405.658119015628,
+          "elapsedSeconds": 0.11373091000132263
+        },
+        {
+          "name": "0:HarmonicBondForce",
+          "energyKjMol": 14.936631978911734,
+          "forceL2": 4441.9208541688895,
+          "maximumAbsForce": 1533.7274485277012,
+          "elapsedSeconds": 0.00408414495177567
+        },
+        {
+          "name": "1:HarmonicAngleForce",
+          "energyKjMol": 122.95765159496247,
+          "forceL2": 5963.050013158402,
+          "maximumAbsForce": 2247.6666087568738,
+          "elapsedSeconds": 0.004164151148870587
+        },
+        {
+          "name": "2:PeriodicTorsionForce",
+          "energyKjMol": 69.30591284576889,
+          "forceL2": 1092.8492184495958,
+          "maximumAbsForce": 611.5113574799616,
+          "elapsedSeconds": 0.0040668940637260675
+        },
+        {
+          "name": "3:NonbondedForce.direct",
+          "energyKjMol": 9030056.35193865,
+          "forceL2": 516076.2425171678,
+          "maximumAbsForce": 15149.994244776899,
+          "elapsedSeconds": 0.10851881001144648
+        },
+        {
+          "name": "4:NonbondedForce.reciprocal",
+          "energyKjMol": -10826726.455645325,
+          "forceL2": 68637.41634646844,
+          "maximumAbsForce": 876.3709267652594,
+          "elapsedSeconds": 0.004464486846700311
+        }
+      ]
+    },
+    {
+      "platform": "CUDA",
+      "properties": {
+        "DeviceIndex": "0",
+        "DeviceName": "NVIDIA H200",
+        "UseBlockingSync": "false",
+        "Precision": "double",
+        "UseCpuPme": "false",
+        "CudaCompiler": "",
+        "TempDirectory": "/tmp",
+        "CudaHostCompiler": "",
+        "DisablePmeStream": "false",
+        "DeterministicForces": "false"
+      },
+      "requestedExplicitPME": [
+        2.628260884878466,
+        91,
+        90,
+        100
+      ],
+      "actualPMEAlphaInvNmAndGrid": [
+        2.628260884878466,
+        96,
+        90,
+        100
+      ],
+      "components": [
+        {
+          "name": "total",
+          "energyKjMol": -1796462.903510265,
+          "forceL2": 524100.9451938294,
+          "maximumAbsForce": 15405.658119015628,
+          "elapsedSeconds": 0.009264057036489248
+        },
+        {
+          "name": "0:HarmonicBondForce",
+          "energyKjMol": 14.936631978911734,
+          "forceL2": 4441.9208541688895,
+          "maximumAbsForce": 1533.7274485277012,
+          "elapsedSeconds": 0.004145273007452488
+        },
+        {
+          "name": "1:HarmonicAngleForce",
+          "energyKjMol": 122.95765159496247,
+          "forceL2": 5963.050013158402,
+          "maximumAbsForce": 2247.6666087568738,
+          "elapsedSeconds": 0.0041398711036890745
+        },
+        {
+          "name": "2:PeriodicTorsionForce",
+          "energyKjMol": 69.30591284576889,
+          "forceL2": 1092.8492184495958,
+          "maximumAbsForce": 611.5113574799616,
+          "elapsedSeconds": 0.004068099893629551
+        },
+        {
+          "name": "3:NonbondedForce.direct",
+          "energyKjMol": 9030056.35193865,
+          "forceL2": 516076.2425171678,
+          "maximumAbsForce": 15149.994244776899,
+          "elapsedSeconds": 0.006441319128498435
+        },
+        {
+          "name": "4:NonbondedForce.reciprocal",
+          "energyKjMol": -10826726.455645325,
+          "forceL2": 68637.41634646844,
+          "maximumAbsForce": 876.3709267652594,
+          "elapsedSeconds": 0.004555504070594907
+        }
+      ]
+    },
+    {
+      "platform": "Reference",
+      "properties": {},
+      "requestedExplicitPME": [
+        2.628260884878466,
+        96,
+        90,
+        100
+      ],
+      "actualPMEAlphaInvNmAndGrid": [
+        2.628260884878466,
+        96,
+        90,
+        100
+      ],
+      "components": [
+        {
+          "name": "total",
+          "energyKjMol": -1796463.2767794745,
+          "forceL2": 524100.8815803424,
+          "maximumAbsForce": 15405.6546147113,
+          "elapsedSeconds": 7.057411669055
+        },
+        {
+          "name": "0:HarmonicBondForce",
+          "energyKjMol": 14.936639054186026,
+          "forceL2": 4441.922234086002,
+          "maximumAbsForce": 1533.7274167242515,
+          "elapsedSeconds": 3.677981251850724
+        },
+        {
+          "name": "1:HarmonicAngleForce",
+          "energyKjMol": 122.95764161606965,
+          "forceL2": 5963.049559974913,
+          "maximumAbsForce": 2247.666714762863,
+          "elapsedSeconds": 3.6876294140238315
+        },
+        {
+          "name": "2:PeriodicTorsionForce",
+          "energyKjMol": 69.30590893119194,
+          "forceL2": 1092.8491193285952,
+          "maximumAbsForce": 611.5112266552723,
+          "elapsedSeconds": 3.753045578021556
+        },
+        {
+          "name": "3:NonbondedForce.direct",
+          "energyKjMol": 9030056.212400991,
+          "forceL2": 516076.1782870806,
+          "maximumAbsForce": 15149.990737557884,
+          "elapsedSeconds": 6.679589602164924
+        },
+        {
+          "name": "4:NonbondedForce.reciprocal",
+          "energyKjMol": -10826726.68937007,
+          "forceL2": 68637.41717433145,
+          "maximumAbsForce": 876.3709366480871,
+          "elapsedSeconds": 3.808272917056456
+        }
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "name": "CUDA_auto",
+      "referencePME": [
+        2.628260884878466,
+        91,
+        90,
+        100
+      ],
+      "targetPME": [
+        2.628260884878466,
+        96,
+        90,
+        100
+      ],
+      "gridAndAlphaEqual": false,
+      "components": [
+        {
+          "component": "total",
+          "referenceEnergy": -1796462.4394421445,
+          "targetEnergy": -1796462.9035102613,
+          "energyAbsoluteDifference": 0.46406811685301363,
+          "maximumForceDifference": 0.3014338234985843,
+          "relativeForceL2": 2.1891195239838007e-05,
+          "strictDiagnosticPassed": false
+        },
+        {
+          "component": "0:HarmonicBondForce",
+          "referenceEnergy": 14.936639054186026,
+          "targetEnergy": 14.936631978911734,
+          "energyAbsoluteDifference": 7.07527429177901e-06,
+          "maximumForceDifference": 0.0034716119802169487,
+          "relativeForceL2": 1.998907959001874e-06,
+          "strictDiagnosticPassed": true
+        },
+        {
+          "component": "1:HarmonicAngleForce",
+          "referenceEnergy": 122.95764161606965,
+          "targetEnergy": 122.95765159496247,
+          "energyAbsoluteDifference": 9.978892819617613e-06,
+          "maximumForceDifference": 0.0012610572518951813,
+          "relativeForceL2": 5.159732909168542e-07,
+          "strictDiagnosticPassed": true
+        },
+        {
+          "component": "2:PeriodicTorsionForce",
+          "referenceEnergy": 69.30590893119194,
+          "targetEnergy": 69.30591284576889,
+          "energyAbsoluteDifference": 3.9145769505921635e-06,
+          "maximumForceDifference": 0.00021406178640859252,
+          "relativeForceL2": 4.7336837809795036e-07,
+          "strictDiagnosticPassed": true
+        },
+        {
+          "component": "3:NonbondedForce.direct",
+          "referenceEnergy": 9030056.212400991,
+          "targetEnergy": 9030056.35193865,
+          "energyAbsoluteDifference": 0.13953765854239464,
+          "maximumForceDifference": 0.004256758465089661,
+          "relativeForceL2": 1.9876211313261445e-07,
+          "strictDiagnosticPassed": false
+        },
+        {
+          "component": "4:NonbondedForce.reciprocal",
+          "referenceEnergy": -10826725.852032742,
+          "targetEnergy": -10826726.455645325,
+          "energyAbsoluteDifference": 0.6036125831305981,
+          "maximumForceDifference": 0.30209516612620746,
+          "relativeForceL2": 0.00016714811024008238,
+          "strictDiagnosticPassed": false
+        }
+      ]
+    },
+    {
+      "name": "CUDA_reference_grid",
+      "referencePME": [
+        2.628260884878466,
+        91,
+        90,
+        100
+      ],
+      "targetPME": [
+        2.628260884878466,
+        96,
+        90,
+        100
+      ],
+      "gridAndAlphaEqual": false,
+      "components": [
+        {
+          "component": "total",
+          "referenceEnergy": -1796462.4394421445,
+          "targetEnergy": -1796462.903510265,
+          "energyAbsoluteDifference": 0.46406812057830393,
+          "maximumForceDifference": 0.3014338234985843,
+          "relativeForceL2": 2.1891195239838007e-05,
+          "strictDiagnosticPassed": false
+        },
+        {
+          "component": "0:HarmonicBondForce",
+          "referenceEnergy": 14.936639054186026,
+          "targetEnergy": 14.936631978911734,
+          "energyAbsoluteDifference": 7.07527429177901e-06,
+          "maximumForceDifference": 0.0034716119802169487,
+          "relativeForceL2": 1.998907959001874e-06,
+          "strictDiagnosticPassed": true
+        },
+        {
+          "component": "1:HarmonicAngleForce",
+          "referenceEnergy": 122.95764161606965,
+          "targetEnergy": 122.95765159496247,
+          "energyAbsoluteDifference": 9.978892819617613e-06,
+          "maximumForceDifference": 0.0012610572518951813,
+          "relativeForceL2": 5.159732909168542e-07,
+          "strictDiagnosticPassed": true
+        },
+        {
+          "component": "2:PeriodicTorsionForce",
+          "referenceEnergy": 69.30590893119194,
+          "targetEnergy": 69.30591284576889,
+          "energyAbsoluteDifference": 3.9145769505921635e-06,
+          "maximumForceDifference": 0.00021406178640859252,
+          "relativeForceL2": 4.7336837809795036e-07,
+          "strictDiagnosticPassed": true
+        },
+        {
+          "component": "3:NonbondedForce.direct",
+          "referenceEnergy": 9030056.212400991,
+          "targetEnergy": 9030056.35193865,
+          "energyAbsoluteDifference": 0.13953765854239464,
+          "maximumForceDifference": 0.004256758465089661,
+          "relativeForceL2": 1.9876211313261445e-07,
+          "strictDiagnosticPassed": false
+        },
+        {
+          "component": "4:NonbondedForce.reciprocal",
+          "referenceEnergy": -10826725.852032742,
+          "targetEnergy": -10826726.455645325,
+          "energyAbsoluteDifference": 0.6036125831305981,
+          "maximumForceDifference": 0.30209516612620746,
+          "relativeForceL2": 0.00016714811024008238,
+          "strictDiagnosticPassed": false
+        }
+      ]
+    },
+    {
+      "name": "CUDA_auto_vs_Reference_CUDA_grid",
+      "referencePME": [
+        2.628260884878466,
+        96,
+        90,
+        100
+      ],
+      "targetPME": [
+        2.628260884878466,
+        96,
+        90,
+        100
+      ],
+      "gridAndAlphaEqual": true,
+      "components": [
+        {
+          "component": "total",
+          "referenceEnergy": -1796463.2767794745,
+          "targetEnergy": -1796462.9035102613,
+          "energyAbsoluteDifference": 0.3732692131306976,
+          "maximumForceDifference": 0.004257440912624588,
+          "relativeForceL2": 1.9650817945173492e-07,
+          "strictDiagnosticPassed": false
+        },
+        {
+          "component": "0:HarmonicBondForce",
+          "referenceEnergy": 14.936639054186026,
+          "targetEnergy": 14.936631978911734,
+          "energyAbsoluteDifference": 7.07527429177901e-06,
+          "maximumForceDifference": 0.0034716119802169487,
+          "relativeForceL2": 1.998907959001874e-06,
+          "strictDiagnosticPassed": true
+        },
+        {
+          "component": "1:HarmonicAngleForce",
+          "referenceEnergy": 122.95764161606965,
+          "targetEnergy": 122.95765159496247,
+          "energyAbsoluteDifference": 9.978892819617613e-06,
+          "maximumForceDifference": 0.0012610572518951813,
+          "relativeForceL2": 5.159732909168542e-07,
+          "strictDiagnosticPassed": true
+        },
+        {
+          "component": "2:PeriodicTorsionForce",
+          "referenceEnergy": 69.30590893119194,
+          "targetEnergy": 69.30591284576889,
+          "energyAbsoluteDifference": 3.9145769505921635e-06,
+          "maximumForceDifference": 0.00021406178640859252,
+          "relativeForceL2": 4.7336837809795036e-07,
+          "strictDiagnosticPassed": true
+        },
+        {
+          "component": "3:NonbondedForce.direct",
+          "referenceEnergy": 9030056.212400991,
+          "targetEnergy": 9030056.35193865,
+          "energyAbsoluteDifference": 0.13953765854239464,
+          "maximumForceDifference": 0.004256758465089661,
+          "relativeForceL2": 1.9876211313261445e-07,
+          "strictDiagnosticPassed": false
+        },
+        {
+          "component": "4:NonbondedForce.reciprocal",
+          "referenceEnergy": -10826726.68937007,
+          "targetEnergy": -10826726.455645325,
+          "energyAbsoluteDifference": 0.23372474499046803,
+          "maximumForceDifference": 1.6293786330834337e-05,
+          "relativeForceL2": 1.3828913449528476e-08,
+          "strictDiagnosticPassed": false
+        }
+      ]
+    }
+  ],
+  "warning": "Internal deadline checks cannot interrupt native calls; mandatory external process-group watchdog.",
+  "forceGroups": {
+    "0": "0:HarmonicBondForce",
+    "1": "1:HarmonicAngleForce",
+    "2": "2:PeriodicTorsionForce",
+    "3": "3:NonbondedForce.direct",
+    "4": "4:NonbondedForce.reciprocal"
+  },
+  "atoms": 151505,
+  "constraints": 151179,
+  "nativeEwaldErrorTolerance": 0.0005,
+  "diagnosticStrictThresholds": {
+    "energyAbsoluteKjMol": 0.01,
+    "maxForceAbsoluteKjMolNm": 0.05,
+    "relativeForceL2": 5e-05
+  },
+  "elapsedSeconds": 66.64988204906695
+}

@@ -1,0 +1,5 @@
+import fs from 'node:fs';import crypto from 'node:crypto';
+const endpoint='https://rpc.mainnet.chain.robinhood.com',source='https://docs.robinhood.com/chain/connecting/';
+const report={schemaVersion:1,checkedAt:new Date().toISOString(),source,endpoint,method:'eth_chainId',expectedChainId:4663,passed:false,publicTransactionsSent:0,scriptSha256:crypto.createHash('sha256').update(fs.readFileSync(import.meta.filename)).digest('hex')};
+try{const response=await fetch(endpoint,{method:'POST',redirect:'error',headers:{'content-type':'application/json'},body:JSON.stringify({jsonrpc:'2.0',id:1,method:'eth_chainId',params:[]}),signal:AbortSignal.timeout(15000)});report.httpStatus=response.status;report.retryAfter=response.headers.get('retry-after');if(!response.ok)throw Error('HTTP'+response.status);report.response=await response.json();if(report.response.id!==1||report.response.error||BigInt(report.response.result)!==4663n)throw Error('Wrong or invalid chain');report.passed=true;}catch(e){report.error=e.message;}finally{fs.writeFileSync(new URL('official-rpc-check.json',import.meta.url),JSON.stringify(report,null,2)+'\n');}
+console.log(JSON.stringify(report));

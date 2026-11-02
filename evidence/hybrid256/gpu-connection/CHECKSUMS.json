@@ -1,0 +1,34 @@
+{
+  "README.md": {
+    "bytes": 3689,
+    "sha256": "5016fbcdcb413f2ff3c9b7594e516c499baca08d05de08fe9145b712c4a92693"
+  },
+  "bridge-review.json": {
+    "bytes": 1327,
+    "sha256": "6faab7408dd47432395c2adaca16b1f78a6da1982b6173334625edd3417b2d8e"
+  },
+  "conditional-local-gas.json": {
+    "bytes": 3375,
+    "sha256": "15bbfe1ea9a0db3082aaba946f1274ab0b9c94a0a4e3aaaf228ad39eadf83ee2"
+  },
+  "mainnet-verification.json": {
+    "bytes": 3556,
+    "sha256": "89168e2f08298ebae2f348d1bfb342c170ddde36ab79d7602a6a9c5c6807a66d"
+  },
+  "manifest-review.json": {
+    "bytes": 1901,
+    "sha256": "e6ddcdb3a7e5ce59cb7b6b184cccb2ec2a9053eb3473b790cc48aa61cad404ee"
+  },
+  "native-metric-review.json": {
+    "bytes": 888,
+    "sha256": "8155ffd19fcc3da5d4856ddc3f212f7dbe468a0511079f94ae2bd20237ff124b"
+  },
+  "prepared-plan-review.json": {
+    "bytes": 3209,
+    "sha256": "6c084ad36cd530a264c12faf7567d376c2a43ded3bc3177191eb0a579e0aaf21"
+  },
+  "verify-connection.mjs": {
+    "bytes": 7126,
+    "sha256": "ed3c626f91a65dec4df17d763880b0b4abdef7bdd79131b5578a050c36718db7"
+  }
+}

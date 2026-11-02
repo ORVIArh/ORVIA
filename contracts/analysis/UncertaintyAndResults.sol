@@ -4,6 +4,7 @@ import {FloatMath} from "../math/FloatMath.sol";
 import {ReducedPotentialCollector} from "./ReducedPotentialCollector.sol";
 import {MBARFreeEnergyEstimator} from "./MBARFreeEnergyEstimator.sol";
 import {SamplingDiagnostics} from "./SamplingDiagnostics.sol";
+import {IMolecularCampaignSource} from "../interfaces/IMolecularCampaignSource.sol";
 
 /// @notice Mean and SEM of a complete preregistered set of paired leg estimates.
 /// @dev Repeat-level SEM is not MBAR covariance, a confidence interval, proof of
@@ -20,12 +21,16 @@ contract UncertaintyAndResults {
     struct Plan {
         bytes32 campaignHash;bytes32 protocolHash;bytes32 policyHash;bytes32 commitment;bytes16 kT;uint8 states;
         bytes32[] complexSeries;bytes32[] solventSeries;mapping(bytes32=>bool) seeds;
+        address molecularSource;bytes32 molecularSourceHash;bytes32 samplingPolicyHash;
+        bytes32 complexModel;bytes32 solventModel;
+        bytes32[] complexCampaigns;bytes32[] solventCampaigns;
+        bytes32[] complexCommitments;bytes32[] solventCommitments;
     }
     struct Result {
         bytes32 planId;bytes32 commitment;uint8 cursor;bool completed;bytes16 mean;bytes16 m2;bytes16 sem;
         uint256[] complexDiagnostics;uint256[] solventDiagnostics;
     }
-    struct LegResult {ReducedPotentialCollector.Configuration config;bytes32 seriesId;bytes32 commitment;bytes16 g;}
+    struct LegResult {ReducedPotentialCollector.Configuration config;bytes32 seriesId;bytes32 commitment;bytes16 g;uint256 analysisId;}
     mapping(bytes32=>bytes32)public campaignPlan;
     mapping(bytes32=>Plan)private _plans;mapping(uint256=>Result)private _results;uint256 public nextResultId=1;
     event PlanRegistered(bytes32 indexed planId,bytes32 indexed campaignHash,bytes32 commitment);
@@ -58,6 +63,42 @@ contract UncertaintyAndResults {
         else if(p.protocolHash!=c.protocolHash||p.policyHash!=policy||p.kT!=c.kT||p.states!=c.stateCount)revert InvalidInput();
         p.seeds[c.repeatSeed]=true;p.commitment=keccak256(abi.encode(p.commitment,index,cd,sd,c.repeatSeed));
     }
+    /// @notice Preregister molecular repeats before any window starts. Selected
+    ///         series are resolved later using the frozen on-chain thinning rule.
+    function registerMolecularPlan(bytes32 planId,bytes32 campaignHash,address source,
+        bytes32[] calldata complexCampaigns,bytes32[] calldata solventCampaigns)external{
+        if(msg.sender!=owner)revert Unauthorized();_dependencies();
+        if(planId==bytes32(0)||campaignHash==bytes32(0)||campaignPlan[campaignHash]!=bytes32(0)||_plans[planId].campaignHash!=bytes32(0)
+            ||complexCampaigns.length<3||complexCampaigns.length>MAX_REPEATS||complexCampaigns.length!=solventCampaigns.length
+            ||source.code.length==0||collector.writer()!=source||collector.writerCodeHash()!=source.codehash)revert InvalidInput();
+        IMolecularCampaignSource pipeline=IMolecularCampaignSource(source);
+        if(pipeline.owner()!=owner||pipeline.collector()!=address(collector)||pipeline.estimator()!=address(estimator))revert InvalidInput();
+        campaignPlan[campaignHash]=planId;Plan storage p=_plans[planId];p.campaignHash=campaignHash;
+        p.molecularSource=source;p.molecularSourceHash=source.codehash;
+        p.complexCampaigns=complexCampaigns;p.solventCampaigns=solventCampaigns;
+        p.commitment=keccak256(abi.encode(bytes32("ORVIA-MOLECULAR-REPEATS-v1"),block.chainid,address(this),planId,
+            configurationHash,campaignHash,source,p.molecularSourceHash,complexCampaigns,solventCampaigns));
+        for(uint256 i;i<complexCampaigns.length;++i)_registerMolecularPair(p,i);
+        emit PlanRegistered(planId,campaignHash,p.commitment);
+    }
+    function _registerMolecularPair(Plan storage p,uint256 index)private{
+        IMolecularCampaignSource pipeline=IMolecularCampaignSource(p.molecularSource);
+        IMolecularCampaignSource.Registration memory c=pipeline.campaignRegistration(p.complexCampaigns[index]);
+        IMolecularCampaignSource.Registration memory s=pipeline.campaignRegistration(p.solventCampaigns[index]);
+        if(c.commitment==bytes32(0)||s.commitment==bytes32(0)||c.selectedSeries==s.selectedSeries
+            ||c.config.leg!=COMPLEX_LEG||s.config.leg!=SOLVENT_LEG||c.config.protocolHash!=s.config.protocolHash
+            ||c.config.repeatSeed!=s.config.repeatSeed||c.config.kT!=s.config.kT||c.config.stateCount!=s.config.stateCount
+            ||p.seeds[c.config.repeatSeed]||c.samplingPolicyHash!=s.samplingPolicyHash)revert InvalidInput();
+        bytes32 policy=_policy(c.config);if(policy!=_policy(s.config))revert InvalidInput();
+        if(index==0){
+            p.protocolHash=c.config.protocolHash;p.policyHash=policy;p.kT=c.config.kT;p.states=c.config.stateCount;
+            p.samplingPolicyHash=c.samplingPolicyHash;p.complexModel=c.modelHash;p.solventModel=s.modelHash;
+        }else if(p.protocolHash!=c.config.protocolHash||p.policyHash!=policy||p.kT!=c.config.kT||p.states!=c.config.stateCount
+            ||p.samplingPolicyHash!=c.samplingPolicyHash||p.complexModel!=c.modelHash||p.solventModel!=s.modelHash)revert InvalidInput();
+        p.seeds[c.config.repeatSeed]=true;p.complexSeries.push(c.selectedSeries);p.solventSeries.push(s.selectedSeries);
+        p.complexCommitments.push(c.commitment);p.solventCommitments.push(s.commitment);
+        p.commitment=keccak256(abi.encode(p.commitment,index,c,s));
+    }
     function createResult(bytes32 planId,uint256[] calldata complexDiagnostics,uint256[] calldata solventDiagnostics)external returns(uint256 id){
         _dependencies();Plan storage p=_plan(planId);
         if(complexDiagnostics.length!=p.complexSeries.length||solventDiagnostics.length!=p.solventSeries.length)revert InvalidInput();
@@ -77,8 +118,17 @@ contract UncertaintyAndResults {
         LegResult memory c=_leg(r.complexDiagnostics[r.cursor],COMPLEX_LEG);
         LegResult memory s=_leg(r.solventDiagnostics[r.cursor],SOLVENT_LEG);
         if(c.seriesId!=p.complexSeries[r.cursor]||s.seriesId!=p.solventSeries[r.cursor])revert InvalidInput();
+        if(p.molecularSource!=address(0)){
+            if(p.molecularSource.codehash!=p.molecularSourceHash)revert DependencyChanged();
+            _assertMolecularLeg(p,p.complexCampaigns[r.cursor],p.complexCommitments[r.cursor],c);
+            _assertMolecularLeg(p,p.solventCampaigns[r.cursor],p.solventCommitments[r.cursor],s);
+        }
         r.commitment=keccak256(abi.encode(r.commitment,r.cursor,c.commitment,s.commitment));
         _accumulate(r,numericalMath.sub(c.g,s.g));
+    }
+    function _assertMolecularLeg(Plan storage p,bytes32 campaign,bytes32 expected,LegResult memory leg)private view{
+        (bytes32 commitment,bytes32 series,uint256 analysis)=IMolecularCampaignSource(p.molecularSource).campaignAnalysis(campaign);
+        if(commitment!=expected||series!=leg.seriesId||analysis!=leg.analysisId||leg.config.runHash!=expected)revert DependencyChanged();
     }
     function _policy(ReducedPotentialCollector.Configuration memory c)private pure returns(bytes32){
         return keccak256(abi.encode(c.mbarTolerance,c.overlapThreshold,c.minimumESS,c.normalizationTolerance));
@@ -95,6 +145,7 @@ contract UncertaintyAndResults {
     }
     function _leg(uint256 diagnosticId,bytes32 expectedLeg)private view returns(LegResult memory out){
         (uint256 analysisId,bytes32 diagnosticCommitment)=diagnostics.assertAccepted(diagnosticId);
+        out.analysisId=analysisId;
         (bytes32 seriesId,bytes32 analysisCommitment,,uint8 states)=estimator.assertConverged(analysisId);
         (out.config,,,)=collector.seriesInfo(seriesId);if(out.config.leg!=expectedLeg)revert InvalidInput();out.seriesId=seriesId;
         bytes16 difference=numericalMath.sub(estimator.fAt(analysisId,states-1),estimator.fAt(analysisId,0));
@@ -103,6 +154,9 @@ contract UncertaintyAndResults {
     }
     function planInfo(bytes32 planId)external view returns(bytes32 campaignHash,bytes32 protocolHash,bytes32 commitment,bytes32[] memory complexSeries,bytes32[] memory solventSeries){
         Plan storage p=_plan(planId);return(p.campaignHash,p.protocolHash,p.commitment,p.complexSeries,p.solventSeries);
+    }
+    function molecularPlanInfo(bytes32 planId)external view returns(address source,bytes32 sourceHash,bytes32[] memory complexCampaigns,bytes32[] memory solventCampaigns){
+        Plan storage p=_plan(planId);return(p.molecularSource,p.molecularSourceHash,p.complexCampaigns,p.solventCampaigns);
     }
     function resultInfo(uint256 id)external view returns(bytes32 planId,bytes32 protocolHash,bytes32 commitment,uint8 repeatsCompleted,uint256 repeatsExpected,bool completed,bytes16 deltaDeltaG,bytes16 repeatSEM){
         Result storage r=_get(id);return(r.planId,_plans[r.planId].protocolHash,r.commitment,r.cursor,r.complexDiagnostics.length,r.completed,r.mean,r.sem);

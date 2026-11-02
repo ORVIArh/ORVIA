@@ -1,0 +1,177 @@
+{
+  "schema": "orvia.hybrid256.frozen-release.v1",
+  "planSha256": "814e9c0aced4f8c6ef24bf4ca7fe5d423ef8bb4e4d54216a3dea02484958b50c",
+  "sourceFiles": {
+    "scripts/deployment/hybrid256.mjs": {
+      "sha256": "acb8bf771ee67c1408bd9817cfb5c15d42e46127f5ab810c1b484ccb9759e242",
+      "bytes": 27747
+    },
+    "scripts/deployment/hybrid_operator.mjs": {
+      "sha256": "2a1fd6b91779b86479607430ba7089b4ef64498fec497545ee53e22573d8cded",
+      "bytes": 19253
+    },
+    "scripts/deployment/test_hybrid256.mjs": {
+      "sha256": "8af164167b7d29a4b7d02db83a72b9903971d36d970c557adea2ba7c98823ef4",
+      "bytes": 11013
+    },
+    "scripts/deployment/test_hybrid_operator.mjs": {
+      "sha256": "0171550bd5bd3bb8480eca5c3180d31b956de9a4be99167b634e4cc14c800c19",
+      "bytes": 9797
+    },
+    "contracts/hybrid/ORVIAHybridCoordinator.sol": {
+      "sha256": "cd633a152cb9d0737962874b30bf36aed7a195eaea375c9984c9c823db8563db",
+      "bytes": 10847
+    },
+    "contracts/hybrid/ORVIAReportShard.sol": {
+      "sha256": "ad027573551f677b32dd5b0e02bb751f45dc836f879ab8206ec8054d053ff4a2",
+      "bytes": 5375
+    },
+    "experimental/mainnet-lite/local_wallet.mjs": {
+      "sha256": "d57fd0ec0e1f65b257199a598a4f4a24112ccf9e3700cb09bb15a48cac3b884b",
+      "bytes": 14303
+    },
+    "package.json": {
+      "sha256": "30d8652114be8f7b98a6431fce9300db6d0317009653a7496362863e19d12506",
+      "bytes": 578
+    },
+    "package-lock.json": {
+      "sha256": "a6f990a92b0a6e52106bd67598e5cf33d867ddb22e3b0df8369e6437ec45ed24",
+      "bytes": 164538
+    },
+    "scripts/deployment/hybrid_operator_market.mjs": {
+      "bytes": 20855,
+      "sha256": "2074d602c493f6c4c685c727902cde1eb986165069bfa1a50a9aea3a7c8ac6b1"
+    },
+    "scripts/deployment/market_recovery.mjs": {
+      "bytes": 13352,
+      "sha256": "dd87d01f86a01944424b861fcd89b3e369afddaa0fda416a95e479475b12a193"
+    },
+    "scripts/deployment/hybrid_operator_reliable.mjs": {
+      "bytes": 20779,
+      "sha256": "832145392df8af767dd45e4223678fe189e2df81f55833f27076735a5037c61b"
+    },
+    "scripts/deployment/verify_market_recovery.mjs": {
+      "bytes": 5183,
+      "sha256": "5169b939ff323645b9396ae98823012be55116f1c945af042e961c3f735a178e"
+    }
+  },
+  "node": {
+    "path": "/Users/abhijith/.local/share/gh0st-tools/node-v24.22.1-darwin-arm64/bin/node",
+    "version": "v24.22.1",
+    "sha256": "6f32069480ec14d52b6d7b1f3c7124cfbbc46203abf5ddf5c65b127435f3f329"
+  },
+  "files": {
+    "README.md": {
+      "bytes": 5057,
+      "sha256": "868b4150a0c0bcee3bff0aa1eee5323e211066c1f77636d3147ff285eda4c153"
+    },
+    "independent-rehearsal.json": {
+      "bytes": 212,
+      "sha256": "4b467bb71ae7232db564f36a6b733095bafaae66e4808141b2e598c782f4c41f"
+    },
+    "operator-tests.log": {
+      "bytes": 1417,
+      "sha256": "1873e90136843b659b0d4324f1ebd4687894bd7a038ed73385966300490b0909"
+    },
+    "plan.json": {
+      "bytes": 4264626,
+      "sha256": "8bb11bc8724d604ae71132f3628820d7327540ba95cac7a50f911245b06f4341"
+    },
+    "planner-tests.log": {
+      "bytes": 1524,
+      "sha256": "f7af4c147d920799f6ab631d93a3174946248fa8daac2dbf390fdffd00abf593"
+    },
+    "quote.json": {
+      "bytes": 7726,
+      "sha256": "93c56f8ca8c6db610d55a768b0e3acd3c8f23a7ffe1f78761e354de8029dbf42"
+    },
+    "read-only-quote-evidence.json": {
+      "bytes": 8513,
+      "sha256": "f35349c7f461fdcc8279385b6217eeb3c406790211c3ee2c181d6e2ef4d8f656"
+    },
+    "security-review.json": {
+      "bytes": 2204,
+      "sha256": "5b95b1a53f26112bde6ee84161a967d9d47de0b4ff21e7fa62ed8a878e7349fa"
+    },
+    "source/contracts/hybrid/ORVIAHybridCoordinator.sol": {
+      "bytes": 10847,
+      "sha256": "cd633a152cb9d0737962874b30bf36aed7a195eaea375c9984c9c823db8563db"
+    },
+    "source/contracts/hybrid/ORVIAReportShard.sol": {
+      "bytes": 5375,
+      "sha256": "ad027573551f677b32dd5b0e02bb751f45dc836f879ab8206ec8054d053ff4a2"
+    },
+    "source/experimental/mainnet-lite/local_wallet.mjs": {
+      "bytes": 14303,
+      "sha256": "d57fd0ec0e1f65b257199a598a4f4a24112ccf9e3700cb09bb15a48cac3b884b"
+    },
+    "source/package-lock.json": {
+      "bytes": 164538,
+      "sha256": "a6f990a92b0a6e52106bd67598e5cf33d867ddb22e3b0df8369e6437ec45ed24"
+    },
+    "source/package.json": {
+      "bytes": 578,
+      "sha256": "30d8652114be8f7b98a6431fce9300db6d0317009653a7496362863e19d12506"
+    },
+    "source/scripts/deployment/hybrid256.mjs": {
+      "bytes": 27747,
+      "sha256": "acb8bf771ee67c1408bd9817cfb5c15d42e46127f5ab810c1b484ccb9759e242"
+    },
+    "source/scripts/deployment/hybrid_operator.mjs": {
+      "bytes": 19253,
+      "sha256": "2a1fd6b91779b86479607430ba7089b4ef64498fec497545ee53e22573d8cded"
+    },
+    "source/scripts/deployment/test_hybrid256.mjs": {
+      "bytes": 11013,
+      "sha256": "8af164167b7d29a4b7d02db83a72b9903971d36d970c557adea2ba7c98823ef4"
+    },
+    "source/scripts/deployment/test_hybrid_operator.mjs": {
+      "bytes": 9797,
+      "sha256": "0171550bd5bd3bb8480eca5c3180d31b956de9a4be99167b634e4cc14c800c19"
+    },
+    "source-hashes.json": {
+      "bytes": 1747,
+      "sha256": "f1bcf00f36d1a31b1814c94a093af1610fa01c516aca61ade2c5da6830186cbe"
+    },
+    "spec.json": {
+      "bytes": 218,
+      "sha256": "bd8c5836be229f05eede885e648e571a02aaf39c9be4a504196ab0933ff81a0a"
+    },
+    "source/scripts/deployment/hybrid_operator_market.mjs": {
+      "bytes": 20855,
+      "sha256": "2074d602c493f6c4c685c727902cde1eb986165069bfa1a50a9aea3a7c8ac6b1"
+    },
+    "source/scripts/deployment/market_recovery.mjs": {
+      "bytes": 13352,
+      "sha256": "dd87d01f86a01944424b861fcd89b3e369afddaa0fda416a95e479475b12a193"
+    },
+    "source/scripts/deployment/hybrid_operator_reliable.mjs": {
+      "bytes": 20779,
+      "sha256": "832145392df8af767dd45e4223678fe189e2df81f55833f27076735a5037c61b"
+    },
+    "source/scripts/deployment/verify_market_recovery.mjs": {
+      "bytes": 5183,
+      "sha256": "5169b939ff323645b9396ae98823012be55116f1c945af042e961c3f735a178e"
+    },
+    "MARKET-RECOVERY.md": {
+      "bytes": 1080,
+      "sha256": "f937e0d1e779b68ee5cd5361567d5e91795fbda6b38d0695b7279adcb904e206"
+    },
+    "market-helper-tests.log": {
+      "bytes": 1614,
+      "sha256": "371734631bac75494924133e3cdbd936d104617ab6ca774d28b881c9028b8a2d"
+    },
+    "market-operator-tests.log": {
+      "bytes": 2265,
+      "sha256": "5aeb24b55149c769a37c43724386c3f31a785d9f08aa665d1936a0ccb189691f"
+    },
+    "market-bridge-tests.log": {
+      "bytes": 1014,
+      "sha256": "b903ce7e7f256bd5f163d698efb6e9df39b453b3b4506c46e43f7e6411e8de52"
+    },
+    "market-readonly-gate.json": {
+      "bytes": 767,
+      "sha256": "3fc76ee8c46b4b280b1b1a9ca1fcb27d197d7a9ab279cf66576b70f66415d2cb"
+    }
+  }
+}

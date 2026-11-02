@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { environment, deploy, qvec, quadFromNumber as q, quadToNumber } from './helpers.mjs';
 
-const python = process.env.CODEX_PRIMARY_RUNTIME_PYTHON || 'python3';
+const python = process.env.ORVIA_RESEARCH_PYTHON || process.env.CODEX_PRIMARY_RUNTIME_PYTHON || 'python3';
 const references = JSON.parse(fs.readFileSync('reference/angular_vectors.json','utf8'));
 function compareReference(rows) {
   for (const row of rows) assert.equal(row.actual.length,row.expected.length,row.name);

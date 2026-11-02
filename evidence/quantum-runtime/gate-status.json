@@ -1,0 +1,58 @@
+{
+  "fixed_geometry_runtime_gate": {
+    "hardware": "NVIDIA H200",
+    "report": "gpu-gate.json",
+    "runtime_seconds": 399.105662,
+    "scientific_parameter_acceptance": false,
+    "sha256": "b6cbfdf318268549a83a7692e837b52853d03fd9678acfb1333bab769e613b2b",
+    "status": "passed"
+  },
+  "fresh_corrected_cpu_campaign": {
+    "old_observations_reused": false,
+    "original_policy_sha256": "dbea002e2ae847b10d7b65db37f1e877039b99b2c10a6443cc7046cc54121668",
+    "quality_pass_claimed": false,
+    "source_campaign": "workspace:output/quantum-corrected/v0.2-cpu-reproduction",
+    "status": "in_progress"
+  },
+  "full_molecule_gpu_heldouts": {
+    "completed_results": 6,
+    "evidence": "../quantum-heldouts/",
+    "geometry_convergence_preserved": true,
+    "maximum_optimization_steps": 60,
+    "native_A_MAE_kJ_per_mol": 1.0767292692139279,
+    "native_B_MAE_kJ_per_mol": 1.3689788835583176,
+    "native_heldout_energy_gates_passed": true,
+    "original_native_energy_gate_limit_kJ_per_mol": 4.184,
+    "scientific_acceptance": false,
+    "status": "all_six_computations_verified"
+  },
+  "full_simulation_cost": null,
+  "geometry_changing_gpu_scanner": {
+    "final_gradient_max_error_hartree_per_bohr": 3.5286070776407996e-07,
+    "finite_difference_max_error_hartree_per_bohr": 9.107992516632635e-06,
+    "geometry_converged": false,
+    "hardware_execution_verified": true,
+    "maximum_geometry_steps": 3,
+    "report": "gpu-scanner-pilot.json",
+    "report_sha256": "3401df6a6666a42661f71ec3663010f65897724486939dda33eec25d69b70027",
+    "runtime_seconds": 430.186467085965,
+    "scientific_acceptance": false,
+    "source_archive_sha256": "88f4d81b7a142a540f3c32e46c7c0b0c4111893042f282f5f786de52079d009b",
+    "status": "passed_numerical_pilot_only"
+  },
+  "individual_parameter_identifiability": {
+    "audit": "design-rank-audit.json",
+    "identically_zero_baseline_rows": 2,
+    "independent_columns": 8,
+    "maximum_possible_rank": 7,
+    "original_design_full_rank_possible": false,
+    "proposal_archive": "training-design-proposal.tar.gz",
+    "proposal_archive_sha256": "ffbbff63394b44dd820ef01757eade9a6937f1869d09a082d637f2ed5d403fe6",
+    "proposal_status": "frozen_not_executed",
+    "training_rows": 9
+  },
+  "production_ready": false,
+  "schema": "orvia.quantum-gate-status.v1",
+  "scientific_acceptance": false,
+  "updated_utc": "2026-11-02T17:23:05.956616+00:00"
+}

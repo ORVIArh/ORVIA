@@ -1,0 +1,29 @@
+{
+  "status": "verified_lossless_offline_audit_not_implemented",
+  "sourceArchiveSha256": "a6255a201fe15c0bf8e986a95817cbcf1bbab9255da0b324408af9ee464a9020",
+  "sourceManifestSha256": "44ca1f5a682f981096132da18d856132a031c3b277514e0e80a4ca02bfb789ce",
+  "archivePayloadsVerified": 24,
+  "publicTransactionsSent": 0,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 6908,
+      "sha256": "fdd35934fe393ffbf0a2520430a7496a5cd59a0e80b794b67f4205d462826481"
+    },
+    {
+      "path": "review-manifest.json",
+      "bytes": 4103,
+      "sha256": "44ca1f5a682f981096132da18d856132a031c3b277514e0e80a4ca02bfb789ce"
+    },
+    {
+      "path": "review-packet.zip",
+      "bytes": 56180,
+      "sha256": "a6255a201fe15c0bf8e986a95817cbcf1bbab9255da0b324408af9ee464a9020"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 2961,
+      "sha256": "6155b5b7497c524c658c817f5ac36803d66b7b2d626f8c93df3fa39dd94d6655"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-02T12:24:26.793Z",
+  "source": "https://docs.robinhood.com/chain/connecting/",
+  "endpoint": "https://rpc.mainnet.chain.robinhood.com",
+  "method": "eth_chainId",
+  "expectedChainId": 4663,
+  "passed": true,
+  "publicTransactionsSent": 0,
+  "scriptSha256": "5ee5e2c03b1d0061c07dcb51a0149fdb9fd04bea1060b2db689026e23467562f",
+  "httpStatus": 200,
+  "retryAfter": null,
+  "response": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": "0x1237"
+  }
+}

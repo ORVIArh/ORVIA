@@ -1,0 +1,36 @@
+{
+  "attempt_directory": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/independent-validation/attempts/20261102T103250.885428Z-73733",
+  "integrator_steps": 0,
+  "legs": [
+    {
+      "leg": "complex33",
+      "passed": true,
+      "report": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/independent-validation/attempts/20261102T103250.885428Z-73733/complex33/report.json",
+      "status": "passed_bonded_only"
+    },
+    {
+      "leg": "solvent33",
+      "passed": true,
+      "report": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/independent-validation/attempts/20261102T103250.885428Z-73733/solvent33/report.json",
+      "status": "passed_bonded_only"
+    }
+  ],
+  "missing_assembled_inputs": [],
+  "nonbonded_evaluated": false,
+  "optimizer_run": false,
+  "passed": true,
+  "policy": {
+    "bytes": 2621,
+    "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/independent-validation/bonded-validation-policy.json",
+    "sha256": "74c369b0df45a331d158f9437bdbaa96efbbd05732856362ac1a5fd365727ec1"
+  },
+  "production_ready": false,
+  "schema": "orvia.full-hybrid.native-B-bonded-validation.v1",
+  "scope": "Static three-group bonded-only comparison: assembledB versus unchanged nativeB plus independently sourced positive A-only-H harmonic confinement. Every force component is checked. This is not nonbonded/C4/constraint/integrator/scientific acceptance.",
+  "script": {
+    "bytes": 17636,
+    "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/independent-validation/validate_native_b_bonded.py",
+    "sha256": "5ce48a00c19fc0e1977c3e61411deab91a9721dc9496b0204812164aec369c28"
+  },
+  "status": "passed_bonded_only"
+}

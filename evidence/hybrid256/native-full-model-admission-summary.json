@@ -1,0 +1,115 @@
+{
+  "schema": "orvia.native-full-model-retrospective-admission-summary.v1",
+  "diagnosticOnly": true,
+  "scientificAcceptance": false,
+  "productionReady": false,
+  "retrospective": true,
+  "experimentId": "0x4eeb96854ce18822ef54fe421ac1f7f8ee1f7a6b2aeace1abd857c66cfcfec61",
+  "configuration": {
+    "protocolHash": "0x1bbdb10481886087ce451a510a39a1d6f91045b1c2c2cfdc9c13b8532b19bbb5",
+    "modelHash": "0x1dc442c8bc786876c97102c0e9bdd767075f1544045a22a9f3fb47c0c1a509db",
+    "inputHash": "0x210d4192a840fb3fe8662dcff2474751af6d2dab1a754293e980a2799c52a24f",
+    "softwareHash": "0xd825ad4aff22d98c94bdbbf0f3ae7c0537cdcc38c04a40b81513e6d423f20244",
+    "environmentHash": "0x0ef6346a2c4e14120203195a615dc9b82ef670d14c1b0a3f3a7770128eb5b650",
+    "requiredChecks": 7,
+    "allowedChecks": 7,
+    "diagnosticOnly": true
+  },
+  "runConfigHash": "0x1bbdb10481886087ce451a510a39a1d6f91045b1c2c2cfdc9c13b8532b19bbb5",
+  "checkpointHash": "0x5c12df660b0649fd1a50e421f4e8e06ac6902fee635d174551bff1c9ae3438cc",
+  "resultHash": "0xef01459ab92929285cdeb2284df6fcad5d73927fde23e3cd9c0e7c84c8dcf2b5",
+  "completedComparisons": "6",
+  "counterUnit": "completed native full-model comparison cases",
+  "outcome": 1,
+  "checks": 7,
+  "metrics": [
+    {
+      "leg": "complex33",
+      "phase": "initial",
+      "energy_absolute_kJ_mol": 0.005276940995827317,
+      "force_max_absolute_kJ_mol_nm": 0.004227899153988801,
+      "force_relative_L2": 5.06561710162801e-7,
+      "passed": true,
+      "reference_energy_kJ_mol": -1529385.840695455,
+      "target_energy_kJ_mol": -1529385.835418514,
+      "reference_force_L2": 350098.7430829364,
+      "force_difference_L2": 0.17734661802193935
+    },
+    {
+      "leg": "complex33",
+      "phase": "final",
+      "energy_absolute_kJ_mol": 0.0026040012016892433,
+      "force_max_absolute_kJ_mol_nm": 0.0041785201219326495,
+      "force_relative_L2": 4.5434366140241384e-7,
+      "passed": true,
+      "reference_energy_kJ_mol": -2101725.9558911454,
+      "target_energy_kJ_mol": -2101725.953287144,
+      "reference_force_L2": 389519.2208955727,
+      "force_difference_L2": 0.17697558900831012
+    },
+    {
+      "leg": "complex33",
+      "phase": "post_nve",
+      "energy_absolute_kJ_mol": 0.0026073846966028214,
+      "force_max_absolute_kJ_mol_nm": 0.004178294597060983,
+      "force_relative_L2": 4.5434953757711076e-7,
+      "passed": true,
+      "reference_energy_kJ_mol": -2101733.5500703957,
+      "target_energy_kJ_mol": -2101733.547463011,
+      "reference_force_L2": 389513.44913174154,
+      "force_difference_L2": 0.17697525549307222
+    },
+    {
+      "leg": "solvent33",
+      "phase": "initial",
+      "energy_absolute_kJ_mol": 0.0001289381179958582,
+      "force_max_absolute_kJ_mol_nm": 0.004229224779805918,
+      "force_relative_L2": 1.790299985368512e-8,
+      "passed": true,
+      "reference_energy_kJ_mol": -1797075.2905442321,
+      "target_energy_kJ_mol": -1797075.2906731702,
+      "reference_force_L2": 524134.9143613743,
+      "force_difference_L2": 0.009383587295122946
+    },
+    {
+      "leg": "solvent33",
+      "phase": "final",
+      "energy_absolute_kJ_mol": 0.00002077268436551094,
+      "force_max_absolute_kJ_mol_nm": 0.003743742059782562,
+      "force_relative_L2": 2.1335104099053514e-8,
+      "passed": true,
+      "reference_energy_kJ_mol": -2569090.7936565694,
+      "target_energy_kJ_mol": -2569090.7936357968,
+      "reference_force_L2": 441582.92719910137,
+      "force_difference_L2": 0.009421217720157598
+    },
+    {
+      "leg": "solvent33",
+      "phase": "post_nve",
+      "energy_absolute_kJ_mol": 0.000020009931176900864,
+      "force_max_absolute_kJ_mol_nm": 0.0037435037601767363,
+      "force_relative_L2": 2.13297542376684e-8,
+      "passed": true,
+      "reference_energy_kJ_mol": -2569099.6616130895,
+      "target_energy_kJ_mol": -2569099.6615930796,
+      "reference_force_L2": 441582.2146702353,
+      "force_difference_L2": 0.009418840114641449
+    }
+  ],
+  "sourceSha256": {
+    "native_full_model_admission.mjs": "5cc5299dc6aea878fdbf60c2135edd2b09fc5c287eba2145231163b54118c03b",
+    "protocol_registry.mjs": "13ab0e74c9c7a57d09b05459bab464364ecbe207741786d39b630fae1da96c6d",
+    "report_operator.mjs": "ea938f657c21b56e4b98a4abe82f6e1287aeb7c7be705671e75ddf9d450ffa5e",
+    "native_full_model_admission.test.mjs": "2afbc86d1442402eed939b67a299a42d26c5dae2d84505ac973badc4dea89bd8"
+  },
+  "tests": {
+    "passed": 7,
+    "failed": 0
+  },
+  "payloadArchive": {
+    "url": "https://raw.githubusercontent.com/ORVIArh/ORVIA/research/mainnet-readiness/evidence/hybrid256/native-full-model-admission.tar.gz",
+    "bytes": 21785524,
+    "sha256": "f6e061a592756afd6c7cf20868efd80d636615edf7cf87b961ff1057c71dd440"
+  },
+  "trust": "Retrospective operator attestation of diagnostic artifacts; hashes, signatures and consistency checks do not prove GPU computation or scientific validity"
+}

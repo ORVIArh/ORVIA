@@ -1,0 +1,949 @@
+{
+  "schema": "orvia.guarded-cutoff-independent-review.v1",
+  "status": "passed_component_comparison",
+  "passed": true,
+  "createdAtUtc": "2026-11-02T10:16:15.952376+00:00",
+  "baselineHamiltonianSha256": "e9b600dbb007e1d6f479db23eea48316eadc21b4333ca9f0a37c5712a92a30ee",
+  "candidateHamiltonianSha256": "a90eb8f88c0d2fdd7a6478a74510e88589099a5c79d3cd359443d363b847596b",
+  "compilation": {
+    "passed": true,
+    "baselineInputSha256": "364b4d0a82d7511c3fe4816bb6c11cb1060256bee529cf97367d3c4bfcc0486d",
+    "candidateInputSha256": "1dc08e329232d7538ea83c48b8c35ff26db47ad9dc1cb7e197439afa049547a3",
+    "baselineRuntimeBytes": 28153,
+    "candidateRuntimeBytes": 29143,
+    "warnings": [
+      "Warning: Contract code size is 28153 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries.\n  --> contracts/core/AlchemicalHamiltonianEvaluator.sol:35:1:\n   |\n35 | contract AlchemicalHamiltonianEvaluator {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n",
+      "Warning: Contract code size is 35808 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries.\n  --> contracts/core/ConstrainedDynamicsCoordinator.sol:65:1:\n   |\n65 | contract ConstrainedDynamicsCoordinator {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n",
+      "Warning: Contract code size is 30938 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries.\n  --> contracts/core/EwaldDynamicsCoordinator.sol:28:1:\n   |\n28 | contract EwaldDynamicsCoordinator {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n",
+      "Warning: Contract code size is 26358 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries.\n  --> contracts/core/LangevinDynamicsCoordinator.sol:73:1:\n   |\n73 | contract LangevinDynamicsCoordinator {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n",
+      "Warning: Contract code size is 28005 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries.\n  --> contracts/core/MolecularSimulationPipeline.sol:20:1:\n   |\n20 | contract MolecularSimulationPipeline {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n",
+      "Warning: Contract code size is 27792 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries.\n  --> contracts/core/PeriodicMinimizer.sol:56:1:\n   |\n56 | contract PeriodicMinimizer {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n",
+      "Warning: Contract code size is 29143 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries.\n  --> contracts/core/AlchemicalHamiltonianEvaluator.sol:35:1:\n   |\n35 | contract AlchemicalHamiltonianEvaluator {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n",
+      "Warning: Contract code size is 35808 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries.\n  --> contracts/core/ConstrainedDynamicsCoordinator.sol:65:1:\n   |\n65 | contract ConstrainedDynamicsCoordinator {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n",
+      "Warning: Contract code size is 30938 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries.\n  --> contracts/core/EwaldDynamicsCoordinator.sol:28:1:\n   |\n28 | contract EwaldDynamicsCoordinator {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n",
+      "Warning: Contract code size is 26358 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries.\n  --> contracts/core/LangevinDynamicsCoordinator.sol:73:1:\n   |\n73 | contract LangevinDynamicsCoordinator {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n",
+      "Warning: Contract code size is 28005 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries.\n  --> contracts/core/MolecularSimulationPipeline.sol:20:1:\n   |\n20 | contract MolecularSimulationPipeline {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n",
+      "Warning: Contract code size is 27792 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries.\n  --> contracts/core/PeriodicMinimizer.sol:56:1:\n   |\n56 | contract PeriodicMinimizer {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n"
+    ]
+  },
+  "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+  "canonicalCurrentHamiltonianSha256": "e9b600dbb007e1d6f479db23eea48316eadc21b4333ca9f0a37c5712a92a30ee",
+  "profiles": 34,
+  "evaluationsPerImplementation": 54,
+  "completeEvaluationsPerImplementation": 40,
+  "matchingRejectedEvaluationsPerImplementation": 14,
+  "rawOutputWordsCompared": 1020,
+  "nativeWork1Work8AllNumericalOutputsIdentical": true,
+  "nativeGasMeasurements": [
+    {
+      "work": 1,
+      "unorderedPairs": 120,
+      "exactCompleteOutputsIdentical": true,
+      "advanceReceiptsOnly": true,
+      "registrationSetupDeploymentExcluded": true,
+      "baseline": {
+        "pairStageGas": 102941528,
+        "allAdvanceGas": 672532830,
+        "prePairGas": 12759964,
+        "outsideReceiptClassFit": {
+          "rows": 120,
+          "columns": [
+            "zeroLJCount",
+            "nonzeroLJCount"
+          ],
+          "intercept": false,
+          "rank": 2,
+          "effectiveZeroLJGasPerPair": {
+            "numerator": "29942844",
+            "denominator": "35",
+            "decimal": "855509.82857142854"
+          },
+          "effectiveNonzeroLJGasPerPair": {
+            "numerator": "13112996",
+            "denominator": "15",
+            "decimal": "874199.73333333328"
+          },
+          "maxAbsoluteReceiptResidualGas": {
+            "numerator": "166781",
+            "denominator": "35",
+            "decimal": "4765.1714285714288"
+          },
+          "rootMeanSquaredReceiptResidualGas": 1671.0937881310429,
+          "residualIsNotFullModelUncertainty": true,
+          "interpretation": "Small native16 fixture effective receipt fit with fixed work, including advance/dependency checks, pair indexing and local snapshot/catalog access. It is not a universal marginal pair cost."
+        }
+      },
+      "candidate": {
+        "pairStageGas": 78460949,
+        "allAdvanceGas": 649158236,
+        "prePairGas": 13436809,
+        "outsideReceiptClassFit": {
+          "rows": 120,
+          "columns": [
+            "zeroLJCount",
+            "nonzeroLJCount"
+          ],
+          "intercept": false,
+          "rank": 2,
+          "effectiveZeroLJGasPerPair": {
+            "numerator": "68649248",
+            "denominator": "105",
+            "decimal": "653802.36190476187"
+          },
+          "effectiveNonzeroLJGasPerPair": {
+            "numerator": "3270567",
+            "denominator": "5",
+            "decimal": "654113.40000000002"
+          },
+          "maxAbsoluteReceiptResidualGas": {
+            "numerator": "499972",
+            "denominator": "105",
+            "decimal": "4761.638095238095"
+          },
+          "rootMeanSquaredReceiptResidualGas": 1638.0976055769158,
+          "residualIsNotFullModelUncertainty": true,
+          "interpretation": "Small native16 fixture effective receipt fit with fixed work, including advance/dependency checks, pair indexing and local snapshot/catalog access. It is not a universal marginal pair cost."
+        }
+      },
+      "pairStageReductionPercent": 23.78105267681668,
+      "allAdvanceReductionPercent": 3.4756063878695675,
+      "atomPrepassExtraGas": 676845
+    },
+    {
+      "work": 8,
+      "unorderedPairs": 120,
+      "exactCompleteOutputsIdentical": true,
+      "advanceReceiptsOnly": true,
+      "registrationSetupDeploymentExcluded": true,
+      "baseline": {
+        "pairStageGas": 48751689,
+        "allAdvanceGas": 429283576,
+        "prePairGas": 12759964,
+        "outsideReceiptClassFit": {
+          "rows": 15,
+          "columns": [
+            "zeroLJCount",
+            "nonzeroLJCount"
+          ],
+          "intercept": false,
+          "rank": 2,
+          "effectiveZeroLJGasPerPair": {
+            "numerator": "452107909",
+            "denominator": "1120",
+            "decimal": "403667.77589285717"
+          },
+          "effectiveNonzeroLJGasPerPair": {
+            "numerator": "67910107",
+            "denominator": "160",
+            "decimal": "424438.16875000001"
+          },
+          "maxAbsoluteReceiptResidualGas": {
+            "numerator": "15967589",
+            "denominator": "140",
+            "decimal": "114054.20714285714"
+          },
+          "rootMeanSquaredReceiptResidualGas": 40658.51437790824,
+          "residualIsNotFullModelUncertainty": true,
+          "interpretation": "Small native16 fixture effective receipt fit with fixed work, including advance/dependency checks, pair indexing and local snapshot/catalog access. It is not a universal marginal pair cost."
+        }
+      },
+      "candidate": {
+        "pairStageGas": 29306414,
+        "allAdvanceGas": 410569038,
+        "prePairGas": 13436809,
+        "outsideReceiptClassFit": {
+          "rows": 15,
+          "columns": [
+            "zeroLJCount",
+            "nonzeroLJCount"
+          ],
+          "intercept": false,
+          "rank": 2,
+          "effectiveZeroLJGasPerPair": {
+            "numerator": "102515179",
+            "denominator": "420",
+            "decimal": "244083.75952380954"
+          },
+          "effectiveNonzeroLJGasPerPair": {
+            "numerator": "14710477",
+            "denominator": "60",
+            "decimal": "245174.61666666667"
+          },
+          "maxAbsoluteReceiptResidualGas": {
+            "numerator": "7289213",
+            "denominator": "105",
+            "decimal": "69421.076190476189"
+          },
+          "rootMeanSquaredReceiptResidualGas": 25059.049982473935,
+          "residualIsNotFullModelUncertainty": true,
+          "interpretation": "Small native16 fixture effective receipt fit with fixed work, including advance/dependency checks, pair indexing and local snapshot/catalog access. It is not a universal marginal pair cost."
+        }
+      },
+      "pairStageReductionPercent": 39.88636168072044,
+      "allAdvanceReductionPercent": 4.359481481769989,
+      "atomPrepassExtraGas": 676845
+    }
+  ],
+  "nativeOutsidePartialSensitivity": {
+    "complex33": {
+      "nativeAtoms": 132935,
+      "unacceptedHybridCandidateAtoms": 132936,
+      "outsideZeroLJPairs": 7438651883,
+      "outsideNonzeroLJPairs": 1372752251,
+      "cutoffNm": 1.0,
+      "baseline": {
+        "nativeOutsideOnlyProjectedGas": {
+          "numerator": "2007819807175674323",
+          "denominator": "560",
+          "decimal": "3585392512813704"
+        },
+        "roundedUp": "3585392512813705"
+      },
+      "candidate": {
+        "nativeOutsideOnlyProjectedGas": {
+          "numerator": "451965806104834073",
+          "denominator": "210",
+          "decimal": "2152218124308733.8"
+        },
+        "roundedUp": "2152218124308734"
+      }
+    },
+    "complex782": {
+      "nativeAtoms": 322361,
+      "unacceptedHybridCandidateAtoms": 322362,
+      "outsideZeroLJPairs": 45153756627,
+      "outsideNonzeroLJPairs": 6743070752,
+      "cutoffNm": 1.0,
+      "baseline": {
+        "nativeOutsideOnlyProjectedGas": {
+          "numerator": "3374261298009442313",
+          "denominator": "160",
+          "decimal": "21089133112559016"
+        },
+        "roundedUp": "21089133112559015"
+      },
+      "candidate": {
+        "nativeOutsideOnlyProjectedGas": {
+          "numerator": "760471707655146023",
+          "denominator": "60",
+          "decimal": "12674528460919100"
+        },
+        "roundedUp": "12674528460919101"
+      }
+    },
+    "solvent33": {
+      "nativeAtoms": 151505,
+      "unacceptedHybridCandidateAtoms": 151506,
+      "outsideZeroLJPairs": 10163275464,
+      "outsideNonzeroLJPairs": 1282745198,
+      "cutoffNm": 1.0,
+      "baseline": {
+        "nativeOutsideOnlyProjectedGas": {
+          "numerator": "2602338382084729039",
+          "denominator": "560",
+          "decimal": "4647032825151302"
+        },
+        "roundedUp": "4647032825151302"
+      },
+      "candidate": {
+        "nativeOutsideOnlyProjectedGas": {
+          "numerator": "586989279771272089",
+          "denominator": "210",
+          "decimal": "2795187046529867"
+        },
+        "roundedUp": "2795187046529868"
+      }
+    }
+  },
+  "profileAdvanceGas": [
+    {
+      "name": "native16-outside-work1",
+      "work": 1,
+      "states": [
+        {
+          "state": 0,
+          "complete": true,
+          "baselineAdvanceGas": 672532830,
+          "candidateAdvanceGas": 649158236,
+          "candidateExtraAdvanceGas": -23374594
+        }
+      ]
+    },
+    {
+      "name": "native16-outside-work8",
+      "work": 8,
+      "states": [
+        {
+          "state": 0,
+          "complete": true,
+          "baselineAdvanceGas": 429283576,
+          "candidateAdvanceGas": 410569038,
+          "candidateExtraAdvanceGas": -18714538
+        }
+      ]
+    },
+    {
+      "name": "below_switch",
+      "work": 8,
+      "states": [
+        {
+          "state": 0,
+          "complete": true,
+          "baselineAdvanceGas": 2121027,
+          "candidateAdvanceGas": 2205937,
+          "candidateExtraAdvanceGas": 84910
+        }
+      ]
+    },
+    {
+      "name": "switch_prev_binary128",
+      "work": 8,
+      "states": [
+        {
+          "state": 0,
+          "complete": true,
+          "baselineAdvanceGas": 2121095,
+          "candidateAdvanceGas": 2206013,
+          "candidateExtraAdvanceGas": 84918
+        }
+      ]
+    },
+    {
+      "name": "switch_next_binary128",
+      "work": 8,
+      "states": [
+        {
+          "state": 0,
+          "complete": true,
+          "baselineAdvanceGas": 2120935,
+          "candidateAdvanceGas": 2205896,
+          "candidateExtraAdvanceGas": 84961
+        }
+      ]
+    },
+    {
+      "name": "cutoff_prev_binary128",
+      "work": 8,
+      "states": [
+        {
+          "state": 0,
+          "complete": true,
+          "baselineAdvanceGas": 2189530,
+          "candidateAdvanceGas": 2274442,
+          "candidateExtraAdvanceGas": 84912
+        }
+      ]
+    },
+    {
+      "name": "cutoff_exact",
+      "work": 8,
+      "states": [
+        {
+          "state": 0,
+          "complete": true,
+          "baselineAdvanceGas": 1019463,
+          "candidateAdvanceGas": 967734,
+          "candidateExtraAdvanceGas": -51729
+        }
+      ]
+    },
+    {
+      "name": "cutoff_next_binary128",
+      "work": 8,
+      "states": [
+        {
+          "state": 0,
+          "complete": true,
+          "baselineAdvanceGas": 1019463,
+          "candidateAdvanceGas": 967734,
+          "candidateExtraAdvanceGas": -51729
+        }
+      ]
+    },
+    {
+      "name": "charged_only_inside",
+      "work": 8,
+      "states": [
+        {
+          "state": 0,
+          "complete": true,
+          "baselineAdvanceGas": 47024838,
+          "candidateAdvanceGas": 47101630,
+          "candidateExtraAdvanceGas": 76792
+        }
+      ]
+    },
+    {
+      "name": "charged_only_outside",
+      "work": 8,
+      "states": [
+        {
+          "state": 0,
+          "complete": true,
+          "baselineAdvanceGas": 46562004,
+          "candidateAdvanceGas": 46481417,
+          "candidateExtraAdvanceGas": -80587
+        }
+      ]
+    },
+    {
+      "name": "inactive_overlap",
+      "work": 8,
+      "states": [
+        {
+          "state": 0,
+          "complete": true,
+          "baselineAdvanceGas": 1001919,
+          "candidateAdvanceGas": 1085916,
+          "candidateExtraAdvanceGas": 83997
+        }
+      ]
+    },
+    {
+      "name": "active_LJ_overlap",
+      "work": 8,
+      "states": [
+        {
+          "state": 0,
+          "complete": false,
+          "baselineAdvanceGas": 0,
+          "candidateAdvanceGas": 0,
+          "candidateExtraAdvanceGas": 0
+        }
+      ]
+    },
+    {
+      "name": "active_charge_overlap",
+      "work": 8,
+      "states": [
+        {
+          "state": 0,
+          "complete": false,
+          "baselineAdvanceGas": 0,
+          "candidateAdvanceGas": 0,
+          "candidateExtraAdvanceGas": 0
+        }
+      ]
+    },
+    {
+      "name": "softcore_overlap_endpoint_and_interior",
+      "work": 8,
+      "states": [
+        {
+          "state": 0,
+          "complete": false,
+          "baselineAdvanceGas": 0,
+          "candidateAdvanceGas": 0,
+          "candidateExtraAdvanceGas": 0
+        },
+        {
+          "state": 1,
+          "complete": true,
+          "baselineAdvanceGas": 1834573,
+          "candidateAdvanceGas": 1918571,
+          "candidateExtraAdvanceGas": 83998
+        },
+        {
+          "state": 2,
+          "complete": false,
+          "baselineAdvanceGas": 0,
+          "candidateAdvanceGas": 0,
+          "candidateExtraAdvanceGas": 0
+        }
+      ]
+    },
+    {
+      "name": "underflow_norm_active_LJ",
+      "work": 8,
+      "states": [
+        {
+          "state": 0,
+          "complete": false,
+          "baselineAdvanceGas": 0,
+          "candidateAdvanceGas": 0,
+          "candidateExtraAdvanceGas": 0
+        }
+      ]
+    },
+    {
+      "name": "underflow_norm_inactive",
+      "work": 8,
+      "states": [
+        {
+          "state": 0,
+          "complete": true,
+          "baselineAdvanceGas": 1002438,
+          "candidateAdvanceGas": 1086610,
+          "candidateExtraAdvanceGas": 84172
+        }
+      ]
+    },
+    {
+      "name": "native_B_parameter_projection",
+      "work": 8,
+      "states": [
+        {
+          "state": 0,
+          "complete": true,
+          "baselineAdvanceGas": 46957319,
+          "candidateAdvanceGas": 46859704,
+          "candidateExtraAdvanceGas": -97615
+        }
+      ]
+    },
+    {
+      "name": "hybrid_charges_inside",
+      "work": 8,
+      "states": [
+        {
+          "state": 0,
+          "complete": true,
+          "baselineAdvanceGas": 47691547,
+          "candidateAdvanceGas": 47768341,
+          "candidateExtraAdvanceGas": 76794
+        },
+        {
+          "state": 1,
+          "complete": true,
+          "baselineAdvanceGas": 48185915,
+          "candidateAdvanceGas": 48262710,
+          "candidateExtraAdvanceGas": 76795
+        },
+        {
+          "state": 2,
+          "complete": true,
+          "baselineAdvanceGas": 47670452,
+          "candidateAdvanceGas": 47747246,
+          "candidateExtraAdvanceGas": 76794
+        }
+      ]
+    },
+    {
+      "name": "hybrid_charges_outside",
+      "work": 8,
+      "states": [
+        {
+          "state": 0,
+          "complete": true,
+          "baselineAdvanceGas": 46956083,
+          "candidateAdvanceGas": 46858368,
+          "candidateExtraAdvanceGas": -97715
+        },
+        {
+          "state": 1,
+          "complete": true,
+          "baselineAdvanceGas": 47440165,
+          "candidateAdvanceGas": 47324172,
+          "candidateExtraAdvanceGas": -115993
+        },
+        {
+          "state": 2,
+          "complete": true,
+          "baselineAdvanceGas": 46935797,
+          "candidateAdvanceGas": 46838024,
+          "candidateExtraAdvanceGas": -97773
+        }
+      ]
+    },
+    {
+      "name": "hybrid_ghost_overlap",
+      "work": 8,
+      "states": [
+        {
+          "state": 0,
+          "complete": true,
+          "baselineAdvanceGas": 44051847,
+          "candidateAdvanceGas": 44127728,
+          "candidateExtraAdvanceGas": 75881
+        },
+        {
+          "state": 1,
+          "complete": false,
+          "baselineAdvanceGas": 0,
+          "candidateAdvanceGas": 0,
+          "candidateExtraAdvanceGas": 0
+        },
+        {
+          "state": 2,
+          "complete": false,
+          "baselineAdvanceGas": 0,
+          "candidateAdvanceGas": 0,
+          "candidateExtraAdvanceGas": 0
+        }
+      ]
+    },
+    {
+      "name": "direct_exception_beyond_cutoff",
+      "work": 8,
+      "states": [
+        {
+          "state": 0,
+          "complete": true,
+          "baselineAdvanceGas": 48250910,
+          "candidateAdvanceGas": 48328047,
+          "candidateExtraAdvanceGas": 77137
+        },
+        {
+          "state": 1,
+          "complete": true,
+          "baselineAdvanceGas": 48744187,
+          "candidateAdvanceGas": 48821324,
+          "candidateExtraAdvanceGas": 77137
+        },
+        {
+          "state": 2,
+          "complete": true,
+          "baselineAdvanceGas": 48230928,
+          "candidateAdvanceGas": 48308065,
+          "candidateExtraAdvanceGas": 77137
+        }
+      ]
+    },
+    {
+      "name": "excluded_exception_beyond_cutoff",
+      "work": 8,
+      "states": [
+        {
+          "state": 0,
+          "complete": true,
+          "baselineAdvanceGas": 47973453,
+          "candidateAdvanceGas": 48050589,
+          "candidateExtraAdvanceGas": 77136
+        },
+        {
+          "state": 1,
+          "complete": true,
+          "baselineAdvanceGas": 48465178,
+          "candidateAdvanceGas": 48542314,
+          "candidateExtraAdvanceGas": 77136
+        },
+        {
+          "state": 2,
+          "complete": true,
+          "baselineAdvanceGas": 47960290,
+          "candidateAdvanceGas": 48037426,
+          "candidateExtraAdvanceGas": 77136
+        }
+      ]
+    },
+    {
+      "name": "direct_exception_overlap",
+      "work": 8,
+      "states": [
+        {
+          "state": 0,
+          "complete": false,
+          "baselineAdvanceGas": 0,
+          "candidateAdvanceGas": 0,
+          "candidateExtraAdvanceGas": 0
+        },
+        {
+          "state": 1,
+          "complete": false,
+          "baselineAdvanceGas": 0,
+          "candidateAdvanceGas": 0,
+          "candidateExtraAdvanceGas": 0
+        },
+        {
+          "state": 2,
+          "complete": false,
+          "baselineAdvanceGas": 0,
+          "candidateAdvanceGas": 0,
+          "candidateExtraAdvanceGas": 0
+        }
+      ]
+    },
+    {
+      "name": "excluded_exception_overlap",
+      "work": 8,
+      "states": [
+        {
+          "state": 0,
+          "complete": true,
+          "baselineAdvanceGas": 44187024,
+          "candidateAdvanceGas": 44264159,
+          "candidateExtraAdvanceGas": 77135
+        },
+        {
+          "state": 1,
+          "complete": true,
+          "baselineAdvanceGas": 44682752,
+          "candidateAdvanceGas": 44759888,
+          "candidateExtraAdvanceGas": 77136
+        },
+        {
+          "state": 2,
+          "complete": true,
+          "baselineAdvanceGas": 44172183,
+          "candidateAdvanceGas": 44249318,
+          "candidateExtraAdvanceGas": 77135
+        }
+      ]
+    },
+    {
+      "name": "epsilon_product_overflow_fallback",
+      "work": 8,
+      "states": [
+        {
+          "state": 0,
+          "complete": false,
+          "baselineAdvanceGas": 0,
+          "candidateAdvanceGas": 0,
+          "candidateExtraAdvanceGas": 0
+        }
+      ]
+    },
+    {
+      "name": "sigma_sum_overflow_fallback",
+      "work": 8,
+      "states": [
+        {
+          "state": 0,
+          "complete": false,
+          "baselineAdvanceGas": 0,
+          "candidateAdvanceGas": 0,
+          "candidateExtraAdvanceGas": 0
+        }
+      ]
+    },
+    {
+      "name": "huge_sigma_zero_strength_fallback",
+      "work": 8,
+      "states": [
+        {
+          "state": 0,
+          "complete": true,
+          "baselineAdvanceGas": 1002438,
+          "candidateAdvanceGas": 1011292,
+          "candidateExtraAdvanceGas": 8854
+        }
+      ]
+    },
+    {
+      "name": "huge_single_epsilon_zero_partner_fallback",
+      "work": 8,
+      "states": [
+        {
+          "state": 0,
+          "complete": true,
+          "baselineAdvanceGas": 1002426,
+          "candidateAdvanceGas": 1019606,
+          "candidateExtraAdvanceGas": 17180
+        }
+      ]
+    },
+    {
+      "name": "huge_common_translation_inactive_fallback",
+      "work": 8,
+      "states": [
+        {
+          "state": 0,
+          "complete": true,
+          "baselineAdvanceGas": 1002156,
+          "candidateAdvanceGas": 1002365,
+          "candidateExtraAdvanceGas": 209
+        }
+      ]
+    },
+    {
+      "name": "huge_coordinate_image_range_fallback",
+      "work": 8,
+      "states": [
+        {
+          "state": 0,
+          "complete": false,
+          "baselineAdvanceGas": 0,
+          "candidateAdvanceGas": 0,
+          "candidateExtraAdvanceGas": 0
+        }
+      ]
+    },
+    {
+      "name": "anisotropic_huge_box_inactive_legacy_success",
+      "work": 8,
+      "states": [
+        {
+          "state": 0,
+          "complete": true,
+          "baselineAdvanceGas": 1002480,
+          "candidateAdvanceGas": 1004086,
+          "candidateExtraAdvanceGas": 1606
+        }
+      ]
+    },
+    {
+      "name": "huge_charge_self_overflow_fallback",
+      "work": 8,
+      "states": [
+        {
+          "state": 0,
+          "complete": false,
+          "baselineAdvanceGas": 0,
+          "candidateAdvanceGas": 0,
+          "candidateExtraAdvanceGas": 0
+        }
+      ]
+    },
+    {
+      "name": "rich_reference_4atom_mixed",
+      "work": 8,
+      "states": [
+        {
+          "state": 0,
+          "complete": true,
+          "baselineAdvanceGas": 106242382,
+          "candidateAdvanceGas": 106289052,
+          "candidateExtraAdvanceGas": 46670
+        },
+        {
+          "state": 1,
+          "complete": true,
+          "baselineAdvanceGas": 111828097,
+          "candidateAdvanceGas": 111856452,
+          "candidateExtraAdvanceGas": 28355
+        },
+        {
+          "state": 2,
+          "complete": true,
+          "baselineAdvanceGas": 106443857,
+          "candidateAdvanceGas": 106490427,
+          "candidateExtraAdvanceGas": 46570
+        }
+      ]
+    },
+    {
+      "name": "duplicated_reference_8atom_mixed",
+      "work": 8,
+      "states": [
+        {
+          "state": 0,
+          "complete": true,
+          "baselineAdvanceGas": 218980191,
+          "candidateAdvanceGas": 216586531,
+          "candidateExtraAdvanceGas": -2393660
+        },
+        {
+          "state": 1,
+          "complete": true,
+          "baselineAdvanceGas": 230141260,
+          "candidateAdvanceGas": 227574164,
+          "candidateExtraAdvanceGas": -2567096
+        },
+        {
+          "state": 2,
+          "complete": true,
+          "baselineAdvanceGas": 219213476,
+          "candidateAdvanceGas": 216818866,
+          "candidateExtraAdvanceGas": -2394610
+        }
+      ]
+    }
+  ],
+  "scientificAcceptance": false,
+  "mainnetTransactionsSent": 0,
+  "fullProteinForcePassMeasured": false,
+  "fullCampaignQuoted": false,
+  "targetFeeQuoted": false,
+  "candidateAdmission": "Component comparison passed; parent owns integration and final whole-engine verification. No scientific acceptance or full-model claim.",
+  "guard": {
+    "bound": "Finite consumed positions, box lengths, interpolated q, both endpoint sigma and epsilon: abs<=2^256. Any unsafe disables shortcut for entire evaluation.",
+    "rationale": [
+      "Same geometry call precedes shortcut as baseline. With finite bounded displacement, ordered norm and sqrt cannot newly overflow. Underflow norm zero stays below positive cutoff and falls through original path.",
+      "With sigma/epsilon/q bounds, skipped sigma sums, epsilon products and charge products are finite. Topology already validates positive cutoff/alpha and alpha*cutoff<=16. Only legacy zero-return outside branches are omitted.",
+      "Inside-cutoff path, complete pair order, direct/excluded exceptions and all Ewald reciprocal/self/background stages remain unchanged. No Fixed96 substitution.",
+      "Atom prepass adds four nonbonded reads per eligible atom, using positions/q already read; no extra per-pair storage. Run ABI adds packed eligibility bool; consumers need recompilation."
+    ]
+  },
+  "limitations": [
+    "Finite-case exact regression comparisons support the guarded equivalence argument; they are not a machine-checked universal theorem.",
+    "Gas is actual local Shanghai EVM receipt gas, unlimited contract-size mode, baseline/candidate identical transaction boundaries and shared modules. Target-client tariffs/throughput/fee allocation not measured.",
+    "All-advance totals exclude registerEvaluation, topology/input/state setup and deployment. They include complete finite-mode Ewald evaluation for completed small fixtures. Failed-case totals exclude the reverted receipt and are not a full cost of rejection.",
+    "Eligible inside pairs duplicate the norm and incur overhead; the atom prepass also costs gas. Candidate is not a universal speedup. Per-profile deltas are retained.",
+    "Native outside-only sensitivity reuses source-hashed GPU/exclusion census. It excludes inside pairs, all exceptions, reciprocal, bonded/improper, C4, constraints, initial eligibility prepass, snapshots/state/upload and L1 allocation. It is not whole-force/step/campaign gas or a lower-bound theorem.",
+    "Small16atom fit cannot bound full-index arithmetic, bank/shard access/locality, parameter distributions or interleaving. Fit residual is only fixture fit error.",
+    "Equivalence assumes authenticated sealed immutable input pages. Hypothetical evm_setAccountCode replacement after the eligibility prepass may be detected at a different point or skipped for outside pairs; this suite does not assert equivalence under arbitrary mid-run page replacement. Catalog assertTopology does not globally rescan all page code hashes.",
+    "Full-model inputs/quantum/model/physical gates remain unaccepted; no optimizer was restarted. Different bigcomplex box has no matched solvent candidate."
+  ],
+  "sourceFiles": [
+    {
+      "path": "output/256-pair-optimization/candidate-preparation.json",
+      "sha256": "043e78f8334474542634deea08ee14449e6bf83ac3f357923a4b49594c09b4ce",
+      "bytes": 7848
+    },
+    {
+      "path": "output/256-pair-optimization/baseline-sources.json",
+      "sha256": "66654bd309d057eaf59819f88bfc02cc942061885482c36d6395e1db6bb9d5d6",
+      "bytes": 731551
+    },
+    {
+      "path": "output/256-pair-optimization/AlchemicalHamiltonianEvaluator.baseline.sol",
+      "sha256": "e9b600dbb007e1d6f479db23eea48316eadc21b4333ca9f0a37c5712a92a30ee",
+      "bytes": 30108
+    },
+    {
+      "path": "output/256-pair-optimization/AlchemicalHamiltonianEvaluator.candidate.sol",
+      "sha256": "a90eb8f88c0d2fdd7a6478a74510e88589099a5c79d3cd359443d363b847596b",
+      "bytes": 31787
+    },
+    {
+      "path": "output/256-pair-optimization/CutoffSnapshotWriter.sol",
+      "sha256": "54484e47e4cc033329db74e7815c7312d85a6b85a0f3a68fda0ca94fc21f14df",
+      "bytes": 863
+    },
+    {
+      "path": "output/256-pair-optimization/benchmark.mjs",
+      "sha256": "6ac7e0a0183b4e53005ded73643085d927ec99be4fa14480e5ff7b89dc95c9b7",
+      "bytes": 15938
+    },
+    {
+      "path": "output/256-pair-optimization/benchmark-primary-run.mjs",
+      "sha256": "6ac7e0a0183b4e53005ded73643085d927ec99be4fa14480e5ff7b89dc95c9b7",
+      "bytes": 15938
+    },
+    {
+      "path": "output/256-pair-optimization/mixed-benchmark.mjs",
+      "sha256": "50f948d3e1aa6e25c0887d2cdb16991d38f20d181dbde194987242e3ee8f462e",
+      "bytes": 16130
+    },
+    {
+      "path": "output/256-pair-optimization/benchmark-report.json",
+      "sha256": "a795232c4494a80fdacaecc4587e8944bb704244df61129ebb766af5c4915887",
+      "bytes": 622486
+    },
+    {
+      "path": "output/256-pair-optimization/mixed-benchmark-report.json",
+      "sha256": "23c71a48addf35cb375d7c2658ba403b6ac1fb56e6dcf7de22c0feeb76be1373",
+      "bytes": 124550
+    },
+    {
+      "path": "output/256-pair-optimization/cases/cases.json",
+      "sha256": "3f367cd1d62c41454d29b289d576d7df9158d2fe83b791e8143d5343b496455d",
+      "bytes": 119351
+    },
+    {
+      "path": "output/256-pair-optimization/cases/mixed-cases.json",
+      "sha256": "0ae064dd81ea90d4088fbdf0910218b0566e481e2fa4c35d6bbb2a723cf758d2",
+      "bytes": 29497
+    },
+    {
+      "path": "output/256-pair-optimization/cases/mixed-classification.json",
+      "sha256": "a05ecf956b9557069ecef5cd11768622aa2c622f4f4fc6f942613b6ce63922c0",
+      "bytes": 17737
+    },
+    {
+      "path": "output/256-pair-optimization/analyze_results.py",
+      "sha256": "f0f163034ec8ea85f7c73bc308af2ff193a17d5f664e20913eaaade794e3fe9f",
+      "bytes": 10596
+    },
+    {
+      "path": "output/gas-estimate/gas-report.json",
+      "sha256": "af3c055a668f0f48a9414519ed269f2a7ae0ec95076329747cc8ac36c1859d15",
+      "bytes": 41434
+    },
+    {
+      "path": "output/gas-estimate/outside-pair-input.json",
+      "sha256": "e30b265546a49993f457eced1c5208aaddc8672a1662f15f21b8293610d0a01f",
+      "bytes": 3291
+    }
+  ]
+}

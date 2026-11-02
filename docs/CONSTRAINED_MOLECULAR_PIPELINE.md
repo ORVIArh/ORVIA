@@ -1,0 +1,13 @@
+# Constrained molecular pipeline prototype
+
+`createConstrainedCampaign` binds a validated constraint set, position/velocity tolerances and a maximum sweep count into the campaign commitment. The owner binds the solver once; solver, catalog, kernel and protocol identities are authenticated during progress. Legacy unconstrained campaigns remain supported.
+
+The implemented method identifier is `ORVIA.gBAOAB.OneRattlePerHalfDrift.v1`. Each step applies a projected half kick, a position-and-velocity-constrained half drift, projected Ornstein–Uhlenbeck thermostat, another constrained half drift, new forces and a projected final half kick. Each half drift uses one converged SHAKE/RATTLE solve. This is seven projections per step plus an initial velocity projection. Initial coordinates must already satisfy the registered constraints; the pipeline does not silently repair the starting model.
+
+All solver inputs are frozen snapshots. Corrected positions and velocities enter mutable working storage only after authenticated convergence. Public state remains the last committed checkpoint until the entire step succeeds. Projection failure records a terminal failed stage without advancing the step or adding a sample. A permissionless contributor may finish a solver job before pipeline progress resumes. The ordered solution transcript is carried across continuations and committed into constrained sample evaluation digests.
+
+The method follows the constrained splitting and RATTLE approximation described by Leimkuhler and Matthews, [Proc. R. Soc. A 472, 20160138](https://doi.org/10.1098/rspa.2016.0138). That reference does not establish a suitable timestep, convergence tolerance or scientific accuracy for ORVIA's prepared models.
+
+`test/constrained-molecular-pipeline.test.mjs` tests a two-atom free rotating dimer against an independently derived 110-digit circle solution, compares work partitions bitwise, checks outsider completion, authenticates sample transcripts and rejects impossible steps and off-manifold initialization without exposing partial state. The fixture has 27 core contracts and 224 storage banks (251 actual addresses); the full target is 256. The free-dimer oracle has zero friction and effectively zero force and therefore does not validate nontrivial thermostat or force-kick behavior by itself.
+
+Run from the repository with `ORVIA_REFERENCE_PYTHON` pointing to a Python interpreter containing `mpmath`, or install `mpmath` in the default `python3`. Reports capture compiled source hashes. Local fixtures allow large contract bytecode; passing them is not target-chain deployment evidence. This prototype has not run the full prepared models, passed production scientific acceptance, or sent a mainnet transaction.

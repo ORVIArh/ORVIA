@@ -1,0 +1,230 @@
+{
+  "schema": "orvia.runpod-a100-execution.v1",
+  "status": "completed_force_benchmarks_with_endpoint_numerical_failure",
+  "source_commit": "dd01848fd9d6b83ec8471b2453f6eabf2d61236e",
+  "input_bundle_sha256": "71a7559f4fe841882104923d9c953d2031a2e9d4f4268a811a9d4dc0b48954e9",
+  "raw_results": {
+    "file": "runpod-a100-20261102-results.tar.gz",
+    "sha256": "d3dd37d6bb800aa6b751a254c199b59954f565392b5dd57f4141fa4c37383de7",
+    "bytes": 12873
+  },
+  "launcher_sha256": "a685a182c2321f9e16d3ac2e58cb9e54b2e7ef5b9de0eef61216535f65ba96ae",
+  "hardware": {
+    "actual_gpu": "NVIDIA A100-SXM4-80GB",
+    "actual_vram_mib": 81920,
+    "nvidia_driver": "595.91.07",
+    "python": "3.12.3",
+    "installed_openmm": "8.6.1",
+    "installed_numpy": "2.5.4",
+    "image": "runpod/pytorch:1.5.0-cu1281-torch280-ubuntu2404",
+    "cloud": "Secure cloud",
+    "location": "US-MD-1"
+  },
+  "benchmark_started_at_utc": "2026-11-02T16:09:35.340256+00:00",
+  "benchmark_completed_at_utc": "2026-11-02T16:10:13.098466+00:00",
+  "benchmark_seconds": 37.758233454078436,
+  "wrapper_seconds": 60,
+  "manifest_verified_files": 17,
+  "hardware_execution_verified": true,
+  "full_force_benchmarks_passed": true,
+  "endpoint_strict_numerical_acceptance": false,
+  "scientific_acceptance": false,
+  "production_ready": false,
+  "onchain_contract_target": 256,
+  "public_transactions_sent": 0,
+  "force_results": [
+    {
+      "file_in_archive": "results/forces-complex33-double.json",
+      "sha256": "98c8abd63ddc94f2006ab2e99bbbc83c6de56a3fb8ddc6a368cbdfe2164671ec",
+      "precision": "double",
+      "particles": 132935,
+      "constraints": 120519,
+      "force_evaluations_per_second": 132.29115333060298,
+      "repeat_rates": [
+        124.11603772146003,
+        135.29461095221774,
+        138.33173007945598
+      ],
+      "measured_operations": 60,
+      "measured_elapsed_seconds": 0.4535450669936836,
+      "hardware_execution_verified": true,
+      "maximum_abs_force": 2147483647.2602587,
+      "potential_kj_per_mol": 9317900000.446342,
+      "ns_per_day": null,
+      "simulated_ns": 0
+    },
+    {
+      "file_in_archive": "results/forces-complex33-mixed.json",
+      "sha256": "055b812e0ff2b00d4e3fcad78ea2e8a159be21e194c58262d81c8da5a76490b3",
+      "precision": "mixed",
+      "particles": 132935,
+      "constraints": 120519,
+      "force_evaluations_per_second": 206.38605917146987,
+      "repeat_rates": [
+        208.08153288568235,
+        204.8671411448044,
+        206.23469101209145
+      ],
+      "measured_operations": 60,
+      "measured_elapsed_seconds": 0.2907173102721572,
+      "hardware_execution_verified": true,
+      "maximum_abs_force": 2147483647.2615578,
+      "potential_kj_per_mol": 9318191939.21579,
+      "ns_per_day": null,
+      "simulated_ns": 0
+    },
+    {
+      "file_in_archive": "results/forces-solvent33-double.json",
+      "sha256": "44a383e51adc49460c47ecdbfe80b477c9de71d530e14a3d1459b5e8d0b2ab90",
+      "precision": "double",
+      "particles": 151505,
+      "constraints": 151179,
+      "force_evaluations_per_second": 131.5080425909752,
+      "repeat_rates": [
+        118.94375144965532,
+        138.09088740072684,
+        139.5994842099438
+      ],
+      "measured_operations": 60,
+      "measured_elapsed_seconds": 0.4562458600848913,
+      "hardware_execution_verified": true,
+      "maximum_abs_force": 2147483644.745041,
+      "potential_kj_per_mol": 12945179297199.53,
+      "ns_per_day": null,
+      "simulated_ns": 0
+    },
+    {
+      "file_in_archive": "results/forces-solvent33-mixed.json",
+      "sha256": "2e9fb6446e71f733b1f5ca30797bb0ed96ddd8e9824be9cd89f6db19ca2cea07",
+      "precision": "mixed",
+      "particles": 151505,
+      "constraints": 151179,
+      "force_evaluations_per_second": 161.77224563347332,
+      "repeat_rates": [
+        164.34656167605414,
+        160.0070530304871,
+        161.02637455512564
+      ],
+      "measured_operations": 60,
+      "measured_elapsed_seconds": 0.37089180387556553,
+      "hardware_execution_verified": true,
+      "maximum_abs_force": 2147483644.7497146,
+      "potential_kj_per_mol": 12945137024930.521,
+      "ns_per_day": null,
+      "simulated_ns": 0
+    }
+  ],
+  "endpoint_results": [
+    {
+      "endpoint": "A",
+      "precision": "mixed",
+      "strict_passed": false,
+      "static_cases_passed": 0,
+      "static_cases_total": 9,
+      "trajectory_passed": false,
+      "minimized_comparison": {
+        "energy_absolute_kJ_mol": 2.778587827378942e-05,
+        "force_max_absolute_kJ_mol_nm": 0.6115369099963459,
+        "force_relative_L2": 0.20931274686773355,
+        "reference_energy_kJ_mol": -214.99579832879783,
+        "target_energy_kJ_mol": -214.9958261146761,
+        "reference_force_L2": 5.7889354662878425,
+        "finite": true,
+        "passed": false,
+        "maximum_iterations": 1000,
+        "force_tolerance_kJ_mol_nm": 1.0,
+        "scope": "Compare both engines at target-minimized coordinates; no convergence claim."
+      }
+    },
+    {
+      "endpoint": "A",
+      "precision": "double",
+      "strict_passed": false,
+      "static_cases_passed": 9,
+      "static_cases_total": 9,
+      "trajectory_passed": true,
+      "minimized_comparison": {
+        "energy_absolute_kJ_mol": 1.344006781778262e-05,
+        "force_max_absolute_kJ_mol_nm": 0.004197843337131246,
+        "force_relative_L2": 0.0014842833363781277,
+        "reference_energy_kJ_mol": -214.9915634849573,
+        "target_energy_kJ_mol": -214.9915500448895,
+        "reference_force_L2": 6.336084469072331,
+        "finite": true,
+        "passed": false,
+        "maximum_iterations": 1000,
+        "force_tolerance_kJ_mol_nm": 1.0,
+        "scope": "Compare both engines at target-minimized coordinates; no convergence claim."
+      }
+    },
+    {
+      "endpoint": "B",
+      "precision": "mixed",
+      "strict_passed": false,
+      "static_cases_passed": 0,
+      "static_cases_total": 9,
+      "trajectory_passed": false,
+      "minimized_comparison": {
+        "energy_absolute_kJ_mol": 5.34396333478071e-05,
+        "force_max_absolute_kJ_mol_nm": 0.359618467581015,
+        "force_relative_L2": 0.1608241250366202,
+        "reference_energy_kJ_mol": -172.5823616208122,
+        "target_energy_kJ_mol": -172.58241506044556,
+        "reference_force_L2": 6.115232591378677,
+        "finite": true,
+        "passed": false,
+        "maximum_iterations": 1000,
+        "force_tolerance_kJ_mol_nm": 1.0,
+        "scope": "Compare both engines at target-minimized coordinates; no convergence claim."
+      }
+    },
+    {
+      "endpoint": "B",
+      "precision": "double",
+      "strict_passed": false,
+      "static_cases_passed": 9,
+      "static_cases_total": 9,
+      "trajectory_passed": true,
+      "minimized_comparison": {
+        "energy_absolute_kJ_mol": 2.4900985437170675e-05,
+        "force_max_absolute_kJ_mol_nm": 0.004270530262080463,
+        "force_relative_L2": 0.001511914302489188,
+        "reference_energy_kJ_mol": -172.57706869114048,
+        "target_energy_kJ_mol": -172.57704379015505,
+        "reference_force_L2": 6.2814651362616685,
+        "finite": true,
+        "passed": false,
+        "maximum_iterations": 1000,
+        "force_tolerance_kJ_mol_nm": 1.0,
+        "scope": "Compare both engines at target-minimized coordinates; no convergence claim."
+      }
+    }
+  ],
+  "cleanup": {
+    "status": "stopped_verified",
+    "observed_at_utc": "2026-11-02T16:10:54.883252+00:00",
+    "compute": "Not running",
+    "container_storage": "Not running",
+    "ongoing_usd_per_hour": 0,
+    "account_spend_rate_after_refresh_usd_hour": 0,
+    "persistent_volume_created": false
+  },
+  "cost": {
+    "quoted_gpu_usd_hour": 1.79,
+    "quoted_container_usd_hour": 0.007,
+    "approximate_session_start_utc": "2026-11-02T16:08:06+00:00",
+    "observation_interval_seconds": 168.883252,
+    "whole_session_estimate_usd": 0.08430088995666667,
+    "estimate_scope": "GPU plus container disk from observed container start to shutdown verification, including setup, execution and retrieval; approximate, not provider settled charge or a hard bound.",
+    "provider_settled_session_total_usd": null,
+    "provider_note": "Billing explorer states data is 1 hour behind. No usage charge posted at verification.",
+    "full_campaign_total_usd": null,
+    "full_campaign_total_eth": null
+  },
+  "limitations": [
+    "Fixed-coordinate force timing only; no full-system integration or alchemical simulation measured.",
+    "Very large candidate energies and forces near 2^31 demand range/overflow and structure checks; finiteness is not physical validity.",
+    "ADP/phosphate native candidates are not approved replacements for the original vanadate experiment.",
+    "No hybrid reporting contract deployment or proof of correct GPU computation."
+  ]
+}

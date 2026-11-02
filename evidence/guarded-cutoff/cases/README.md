@@ -1,0 +1,9 @@
+# Guarded outside-cutoff equivalence inputs
+
+`cases.json` contains the primary 30 two-atom profiles. Each case has `name`, `source`, `lambdas`, `states`, and `expectedOutcome` (an object keyed by state index). Pass `source` directly to `makeTopology(source,lambdas)`. `source` uses the existing molecular-pipeline fixture schema: scalar values are bytes16 hex; atom indices and integer kinds/periodicities are numbers. `extended-cases.json` contains 17 optional profiles covering exact guard thresholds, additional periodic geometry, and underflow. The generator writes only this directory.
+
+The primary suite covers switch/cutoff adjacent binary128 words; zero-strength and active overlap; charged-only zero-epsilon pairs; actual native B parameters; actual frozen hybrid endpoint/interior charges and B-only ghost parameters; uncut direct and excluded exceptions beyond cutoff; and extreme parameter/coordinate/box fallback success and failure. Native and hybrid parameter file bytes are SHA-256-bound in each document. These are declared two-atom parameter projections with synthetic coordinates and empty bonded graphs, not complete molecular models or scientific acceptance evidence.
+
+`expectedOutcome` entries are reviewed predictions, not execution results. The parent harness must compare every full output word, advancement stage/cursor/mode, and failure selector. In particular, keep progress partitions that isolate failures rather than treating any revert at any stage as equivalent. The anisotropic-box trap is expected to complete successfully; the active underflow-norm trap must retain its original ZeroSeparation failure.
+
+The primary suite uses 46 full evaluator runs per implementation. The optional suite uses 19. No scientific optimizer or evaluator was run while generating these inputs.

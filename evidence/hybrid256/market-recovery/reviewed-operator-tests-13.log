@@ -1,0 +1,41 @@
+bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+This version of µWS is not compatible with your Node.js build:
+
+Error: Cannot find module '../binaries/uws_darwin_arm64_137.node'
+Require stack:
+- /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/node_modules/ganache/node_modules/@trufflesuite/uws-js-unofficial/src/uws.js
+- /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/node_modules/ganache/dist/node/core.js
+Falling back to a NodeJS implementation; performance may be degraded.
+
+
+✔ validates signed intent and rejects substitutions without displaying raw data (26.452625ms)
+✔ validates journal binding, totals, entry ordering, completion and fee guards (11.300917ms)
+✔ recovers a crash before send using only identical signed bytes after fresh checks (2.827208ms)
+✔ does not retransmit an already confirmed journal transaction (2.414583ms)
+✔ waits for a known pending transaction without rebroadcasting (2.693417ms)
+✔ refuses retransmission for changed chain, consumed nonce, low balance, or insufficient gas (16.3975ms)
+✔ rejects reverted, reorged, and timed-out receipts (0.30725ms)
+✔ journal reader rejects unsafe permissions, hardlinks, and symlinks (2.467583ms)
+✔ prefix verification pins one block and rejects code, nonce, and reorg changes (11.879417ms)
+bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+This version of µWS is not compatible with your Node.js build:
+
+Error: Cannot find module '../binaries/uws_darwin_arm64_137.node'
+Require stack:
+- /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/node_modules/ganache/node_modules/@trufflesuite/uws-js-unofficial/src/uws.js
+- /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/node_modules/ganache/dist/node/core.js
+Falling back to a NodeJS implementation; performance may be degraded.
+
+
+✔ integrated read retry preserves exact request and is bounded at3 (25.793834ms)
+✔ integrated send failure never retries and semantic read errors never retry (1.035792ms)
+✔ integrated temporary missing block andlatest wait without writes (2.737583ms)
+✔ integrated canonical conflict andfailedreceipt remain hard stops (0.289541ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 813.210875

@@ -28,6 +28,28 @@ A separately packaged read-only probe source-compiled two kernels and executed c
 
 The complete v0.5.1 run finished at `2026-11-02T04:59:25.175Z`: **212 Node/EVM tests and 63 Python reference tests passed**, with zero failed, cancelled or skipped Node tests. All nine check groups and the final integrity verifier passed. The summary binds 159 input files, two compiler outputs, 36 regenerated reports and nine logs. Mainnet readiness remains false.
 
+## 2 November 2026 — current v0.6.0-dev integration
+
+The current development snapshot adds authenticated sharded state/input, immutable snapshots, absolute-counter continuation, a finite endpoint-mixed Hamiltonian and a connected unconstrained BAOAB/cross-state-energy/sample-selection/MBAR pipeline. Independent small fixtures exercise those paths. Fixed-Q96 arithmetic candidates use an explicitly different numerical policy and have separate component evidence; they are not automatically admitted into a scientific campaign.
+
+The source changed after the earlier source-bound component checkpoint, including new engine inputs and softcore-v2 operation ordering. The current `reports/validation_summary.json` is therefore deliberately incomplete with `passed: false`. The historical v0.5.1 212+63 result above remains a historical result, not acceptance of this snapshot. A new complete current-source run is required before publishing a fresh validation claim.
+
+The separate mainnet-lite candidate records operator-signed artifact hashes. It verifies an attestation, not molecular computation, and no accepted complete GPU molecular result has been produced for it. Its mixed target-creation/local-anchor gas illustration does not guarantee a $200 all-in budget. No mainnet transaction was sent.
+
+## 2 November 2026 — lightweight anchor controls and target fee rehearsal
+
+The separate result anchor now rejects malleable high-s signatures and documents its immutable EOA publisher and repeatable-event semantics. Its focused local validator passed 38 checks across authorization, all signed fields, domain separation, malformed signatures and exact events. This is component evidence, not scientific or whole-project acceptance.
+
+The updated read-only fee rehearsal checks exact constructor runtime plus valid and deliberately altered report calls on Robinhood Chain, and obtains both creation and report estimates from the target provider. The report call uses an ephemeral code override. Source/script/dependency/block bindings and fail-closed evidence replace the earlier mixed local/target illustration. The $200 network budget is conditional on an explicit $10,000/ETH ceiling and covers only deployment and one report, with refreshed real-wallet estimates required. No target transaction was sent.
+
+A local unsigned-package tool binds a supplied public operator/sender, nonce, predicted address, runtime and short-lived fee envelope. It requires matching focused validation and has no broadcast method. Full scientific acceptance and the complete engine validation remain pending.
+
 ## Open questions
 
-The original experiment lacks complete reviewed molecular systems and a single full-system sampling pipeline. No drug-binding free-energy result has been produced. Actual full-run cost and duration remain unmeasured. All 64 production instances remain planned; mainnet readiness is false.
+The experiment lacks complete reviewed molecular systems and full-system acceptance of the connected development pipeline. No drug-binding free-energy result has been produced. Actual complete-campaign cost and duration remain unmeasured. The active target is 256 actual contracts; none has been deployed to mainnet and readiness remains false.
+
+## 2 November 2026 — 256-address constrained and spatial prototype
+
+A local fixture deployed 32 core contracts plus 224 fixed banks and verified all 256 distinct runtime identities, owner/configuration controls and absence of additional child creation. A constrained step and authenticated sample ran through spatial force evaluation. A separate preregistered two-state campaign completed chronology, sample selection, MBAR and accepted overlap/ESS diagnostics. Three repeat pairs were registered, but the full three-pair aggregation was not rerun in this fixture. Raw C4 remains standalone pending alchemical activity/coupling and long-range-energy validation. [Exact scope](docs/COMPLETE_256_PROTOTYPE.md).
+
+The local core/bank creation receipts total 183,998,164 gas. A 38-request read-only Robinhood probe returned exact runtime bytes for the 40,945-byte pipeline and 34,449-byte Hamiltonian at block `0x635744a`; no funds were spent or contracts persistently deployed. [Probe evidence](docs/TARGET_256_CREATION_PROBE.md). These focused passes do not replace the incomplete complete-suite summary or scientific readiness gate.

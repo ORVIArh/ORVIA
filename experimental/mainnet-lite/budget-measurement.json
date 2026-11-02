@@ -1,0 +1,200 @@
+{
+  "schemaVersion": 2,
+  "status": "passed_readonly_fixture",
+  "passed": true,
+  "startedAtUtc": "2026-11-02T08:07:11.082Z",
+  "mainnetTransactionsSent": 0,
+  "productionReady": false,
+  "targetChainId": 4663,
+  "endpoint": "https://robinhood.rpc.pinax.network",
+  "sourceSha256": "85c5296d4238f1a6907986f7e0eb4a1a457197f75ef8e77e140ae9982429b849",
+  "scriptSha256": "27e091aaa6dac9ae39ac2bbc6120f2058c232139f863b665194ca95db3872fca",
+  "dependencyLockSha256": "a6f990a92b0a6e52106bd67598e5cf33d867ddb22e3b0df8369e6437ec45ed24",
+  "networkReadAllowlist": [
+    "eth_chainId",
+    "eth_getBlockByNumber",
+    "eth_getCode",
+    "eth_getTransactionCount",
+    "eth_gasPrice",
+    "eth_call",
+    "eth_estimateGas"
+  ],
+  "requests": [
+    {
+      "id": 1,
+      "method": "eth_chainId",
+      "requestSha256": "09fabe0af56b7726f1666ddd147482df4d951f86f66124b936716c53ab0e8471",
+      "responseSha256": "1fb0f19b45a4203bd13cb5be1e8ad3aa569f42905377cd4643fc8bc07ecd3aa3"
+    },
+    {
+      "id": 2,
+      "method": "eth_getBlockByNumber",
+      "requestSha256": "ea099c30d3683d74a056405807b4ab857a06189f3e4702981d75935407ac986e",
+      "responseSha256": "c13f9c2039ca0f3ab273ed9cf273c0b0672a8b0390dfaef209252da952388b9c"
+    },
+    {
+      "id": 3,
+      "method": "eth_getCode",
+      "requestSha256": "7bbdd410320c334dd52ed04d828d7f502c3b04414c334b362b9eeb6b282fbd7e",
+      "responseSha256": "94bda524de213b755d37bce44a822fcba0ed1c58f4b99945b2cf101ee31cccd2"
+    },
+    {
+      "id": 4,
+      "method": "eth_getTransactionCount",
+      "requestSha256": "21ff7aeb61e44b31ee2ebac6083ddd82e3cfbfef3f7e62a63b1daee98555ebbe",
+      "responseSha256": "e2c4b10f1e146bbc8da6398a19c28ab108d3bdfb0c4f387ff1c0fe40fa7dd3fe"
+    },
+    {
+      "id": 5,
+      "method": "eth_gasPrice",
+      "requestSha256": "956ffcacd7904c1888b33a72220564ac231ec5c743335572f5c7b5efdb37ca03",
+      "responseSha256": "6d1d40fafb1fba5885f45deb96a69c9d5da0642871ee4036dff4d945af0e881e"
+    },
+    {
+      "id": 6,
+      "method": "eth_call",
+      "requestSha256": "a202dc5ee55ee456f9d382da7672389c2ea79ecc35dd92501ce00e05df0d99db",
+      "responseSha256": "d362f881e87679e4e31a525b3fa4ad7310f35f29e012ccfd8575f0c8a2d27e0e"
+    },
+    {
+      "id": 7,
+      "method": "eth_call",
+      "requestSha256": "89b1b75a584baa95abd52c3e459dae0b96968c7265589d742a0f16b2a1a97036",
+      "responseSha256": "972e17d3d25574ce965e12dbfc8bfcf0c655679cbfb39b5376666a81f2b80dc4"
+    },
+    {
+      "id": 8,
+      "method": "eth_call",
+      "requestSha256": "f99f535b8fb17822da02f795574c8f9dc72fd5243a545916eec5ea225535fd6c",
+      "responseSha256": "d6c1f0449be2e59354edc71b366970957c4483a9a0c7c3b44486a52731d18f21",
+      "error": {
+        "code": 3,
+        "message": "execution reverted",
+        "data": "0x8baa579f"
+      }
+    },
+    {
+      "id": 9,
+      "method": "eth_estimateGas",
+      "requestSha256": "3d15e3bb9e5545c96024a34df4607084aa116dd6a4feef48d9c2813382777a5c",
+      "responseSha256": "699ac3ccb52b1686fb6777844517b1f4d91b0953ddc88f00fe460ee5731ff949"
+    },
+    {
+      "id": 10,
+      "method": "eth_estimateGas",
+      "requestSha256": "5beb78fbf48d86e6afa4f3a0f04e012330da48f3f16e57e490a8ae6a5f62cd36",
+      "responseSha256": "380707cbb0ce3d3cbad873da6db78c783eb811106bb9c891a3d356f61118b443"
+    },
+    {
+      "id": 11,
+      "method": "eth_getCode",
+      "requestSha256": "cf52f015ccb8641103f5404910b632f718a579b7b6dd17be76c44d5015d8ea8e",
+      "responseSha256": "e44b77072fb20f80e30229ae8f640c2b39147084aa5154c47bfc2e00c64ceb7e"
+    },
+    {
+      "id": 12,
+      "method": "eth_getTransactionCount",
+      "requestSha256": "fd704b29499115eac4ab524bdd68db2d4f89b73f1467ea2e45957a0635a5d9a1",
+      "responseSha256": "6554f569c7aafb306f514fc167d0726ca721541a3a49e63b0f01d1198b879db8"
+    },
+    {
+      "id": 13,
+      "method": "eth_getBlockByNumber",
+      "requestSha256": "66f08ac862d5b3ccde19a8d5551a0ec72e2c10a93108c842188b69ce3181402c",
+      "responseSha256": "63804b12f270b1a528225dff8ca846fca09f0fb5e284cd4df43dc946bb257094"
+    }
+  ],
+  "scope": "Synthetic operator/report rehearsal, not a deployed contract, accepted scientific report or final wallet quote.",
+  "limitations": [
+    "Target provider responses are trusted; state overrides are ephemeral simulations.",
+    "Both target estimates include the provider's current execution and data-posting allocation under the Nitro fee model; estimates can change.",
+    "Actual operator, wallet nonce, report hashes/signature and deployment address must be bound and re-estimated before signing.",
+    "An operator signature authenticates a claim; it does not prove scientific computation or correctness."
+  ],
+  "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+  "compilerSettings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "evmVersion": "shanghai",
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode.object",
+          "evm.deployedBytecode.object"
+        ]
+      }
+    }
+  },
+  "standardInputSha256": "956a65887b3a35b23356b04b9a08316854fc16c04bdcef6171d90a36701d73e8",
+  "fixture": {
+    "synthetic": true,
+    "operator": "0x8CF3e1f13CDcCAf4B00C139486d69a6aabf4828a",
+    "relayer": "0x3fB5A61048bfec52Bf05313bE12247fe64da3815",
+    "domain": {
+      "name": "ORVIAResultAnchor",
+      "version": "1",
+      "chainId": 4663,
+      "verifyingContract": "0xEA8A14e9eb638B9e138a33061cA559037d028b8B"
+    },
+    "report": {
+      "inputHash": "0x24d8c909f222014b8f8caf09db1c6d49d84b631edd0142ac799627f8ada38b24",
+      "methodHash": "0x79f4bef201b6d2d31c6ebc4b8fd53886180b4bebbee5441709b5aaa6353149d2",
+      "settingsHash": "0x9c20cae7c01e3e20eadf4031dcbe1b5a89543ef89785ccad6b49ce8c7139951d",
+      "outputHash": "0xa9367ba3c4bcf9bb73f048980dafd6320038dec7aab85beb611ab3eaeb352c1b",
+      "atomCount": 132935,
+      "sampleCount": 1000
+    },
+    "signature": "0xa31afad5334667b4951cecc8059c0031b60c7a8ec8dec1f93f124ed6c5d59c963cc698c6b2ce65e3eec0ba688bd1509b0afe47e9302b28e75c5862906b9ecef71c",
+    "calldata": "0x3eb8715624d8c909f222014b8f8caf09db1c6d49d84b631edd0142ac799627f8ada38b2479f4bef201b6d2d31c6ebc4b8fd53886180b4bebbee5441709b5aaa6353149d29c20cae7c01e3e20eadf4031dcbe1b5a89543ef89785ccad6b49ce8c7139951da9367ba3c4bcf9bb73f048980dafd6320038dec7aab85beb611ab3eaeb352c1b000000000000000000000000000000000000000000000000000000000002074700000000000000000000000000000000000000000000000000000000000003e800000000000000000000000000000000000000000000000000000000000000e00000000000000000000000000000000000000000000000000000000000000041a31afad5334667b4951cecc8059c0031b60c7a8ec8dec1f93f124ed6c5d59c963cc698c6b2ce65e3eec0ba688bd1509b0afe47e9302b28e75c5862906b9ecef71c00000000000000000000000000000000000000000000000000000000000000",
+    "runtimeKeccak256": "0x3d9ddcf734ba99d27d3c6e5b1ba2dc8c1f72f50f9ff7e4f24909c2c7d4ce19fa",
+    "creationKeccak256": "0x1f3a4b74cc02b4a080f013074077ef79712657d7dd9e1933898d48fde73588c4"
+  },
+  "local": {
+    "deploymentGas": "360089",
+    "reportGas": "33056",
+    "runtimeBytes": 1410,
+    "initcodeWithArgumentsBytes": 1619,
+    "emittedExpectedEvent": true
+  },
+  "referenceBlock": {
+    "number": "0x633e755",
+    "hash": "0xf3560bc73f06798fd00ef38b90791a27e7a5047e237a522a69d36f0d92934c9c",
+    "stateRoot": "0xa9f48490cbcb6313ad787c20e9801adab584e93fb0e7add7fdac928c0b8c6b5d",
+    "baseFeePerGas": "0x131aa00"
+  },
+  "target": {
+    "creationRuntimeMatches": true,
+    "validReportAccepted": true,
+    "alteredReportRejected": true,
+    "deploymentEstimateGas": "365133",
+    "anchorEstimateGas": "33779",
+    "combinedEstimateGas": "398912",
+    "observedGasPriceWei": "20012000",
+    "estimatedNetworkFeeWei": "7983026944000",
+    "feeScope": "Both are target eth_estimateGas, including current provider execution/data allocation. The report uses a temporary exact-runtime override; no deployed instance exists.",
+    "feeDocumentation": "https://docs.robinhood.com/chain/gas-and-fees/"
+  },
+  "budgetPolicy": {
+    "capUsd": 200,
+    "assumedEthUsdCeiling": 10000,
+    "marketPriceClaim": false,
+    "maximumTotalNetworkFeeWei": "20000000000000000",
+    "proposedDeploymentGasLimit": "456417",
+    "proposedAnchorGasLimit": "42224",
+    "proposedMaxFeePerGasWei": "40024000",
+    "maximumNetworkSpendForTheseTwoTransactionsWei": "19957607384000",
+    "fitsConditionalBudget": true,
+    "readyToSign": false,
+    "prerequisites": [
+      "Bind real operator and sender addresses/nonces",
+      "Bind actual available report artifacts and signature",
+      "Refresh both exact transaction estimates",
+      "Confirm ETH/USD remains at or below the stated ceiling before approving the two transactions"
+    ],
+    "scope": "Only these two zero-value EOA transactions. Retries and separately charged wallet/relayer services need a new aggregate budget. These synthetic envelopes must not be sent."
+  },
+  "completedAtUtc": "2026-11-02T08:07:17.106Z"
+}

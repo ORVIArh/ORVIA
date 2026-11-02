@@ -1,0 +1,32 @@
+{
+  "schema": "orvia.guarded-cutoff-packaging-smoke.v1",
+  "status": "passed_portable_compile_only",
+  "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+  "historicalCompilerInputsMatch": true,
+  "freshNumericalOrGasRun": false,
+  "originalPayloadChecks": 28,
+  "adaptedRunnerSha256": "318270a7ee78624c2c3814e1fb027fc1b2522792ab05ded2747bd139d0e522b7",
+  "adapterSha256": "ad7ef54cda23b41e84171e9d2ce60a5cc2b4dd1d77fea532d371fc3987ebee25",
+  "compilation": {
+    "passed": true,
+    "baselineInputSha256": "364b4d0a82d7511c3fe4816bb6c11cb1060256bee529cf97367d3c4bfcc0486d",
+    "candidateInputSha256": "1dc08e329232d7538ea83c48b8c35ff26db47ad9dc1cb7e197439afa049547a3",
+    "baselineRuntimeBytes": 28153,
+    "candidateRuntimeBytes": 29143,
+    "warnings": [
+      "Warning: Contract code size is 28153 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries.\n  --> contracts/core/AlchemicalHamiltonianEvaluator.sol:35:1:\n   |\n35 | contract AlchemicalHamiltonianEvaluator {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n",
+      "Warning: Contract code size is 35808 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries.\n  --> contracts/core/ConstrainedDynamicsCoordinator.sol:65:1:\n   |\n65 | contract ConstrainedDynamicsCoordinator {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n",
+      "Warning: Contract code size is 30938 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries.\n  --> contracts/core/EwaldDynamicsCoordinator.sol:28:1:\n   |\n28 | contract EwaldDynamicsCoordinator {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n",
+      "Warning: Contract code size is 26358 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries.\n  --> contracts/core/LangevinDynamicsCoordinator.sol:73:1:\n   |\n73 | contract LangevinDynamicsCoordinator {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n",
+      "Warning: Contract code size is 28005 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries.\n  --> contracts/core/MolecularSimulationPipeline.sol:20:1:\n   |\n20 | contract MolecularSimulationPipeline {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n",
+      "Warning: Contract code size is 27792 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries.\n  --> contracts/core/PeriodicMinimizer.sol:56:1:\n   |\n56 | contract PeriodicMinimizer {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n",
+      "Warning: Contract code size is 29143 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries.\n  --> contracts/core/AlchemicalHamiltonianEvaluator.sol:35:1:\n   |\n35 | contract AlchemicalHamiltonianEvaluator {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n",
+      "Warning: Contract code size is 35808 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries.\n  --> contracts/core/ConstrainedDynamicsCoordinator.sol:65:1:\n   |\n65 | contract ConstrainedDynamicsCoordinator {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n",
+      "Warning: Contract code size is 30938 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries.\n  --> contracts/core/EwaldDynamicsCoordinator.sol:28:1:\n   |\n28 | contract EwaldDynamicsCoordinator {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n",
+      "Warning: Contract code size is 26358 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries.\n  --> contracts/core/LangevinDynamicsCoordinator.sol:73:1:\n   |\n73 | contract LangevinDynamicsCoordinator {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n",
+      "Warning: Contract code size is 28005 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries.\n  --> contracts/core/MolecularSimulationPipeline.sol:20:1:\n   |\n20 | contract MolecularSimulationPipeline {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n",
+      "Warning: Contract code size is 27792 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries.\n  --> contracts/core/PeriodicMinimizer.sol:56:1:\n   |\n56 | contract PeriodicMinimizer {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n"
+    ]
+  },
+  "sourceReportSha256": "988a6a0d2d7b09f95e3ca1d7d0576b2c002c97d014909b23e10970832eeec5bc"
+}

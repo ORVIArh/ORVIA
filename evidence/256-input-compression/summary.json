@@ -1,0 +1,68 @@
+{
+  "schema": "orvia.lossless-256-input-compression-summary.v1",
+  "status": "passed_lossless_offline_audits_not_implemented",
+  "losslessByteRoundtripPassed": true,
+  "sourceLogicalBytes": 348922752,
+  "uniqueStreams": 24,
+  "alreadyAliasedBParticleDescriptors": 2,
+  "overlayChangedWords": 466,
+  "overlayChangedToZeroWords": 58,
+  "sourceLogicalWordsVerifiedPerTypedLayout": 10903836,
+  "typedLayoutWordComparisons": 43615344,
+  "allFloatWordsExactBinary64Embeddings": 7138962,
+  "integerWordsFitUint32": 3764874,
+  "independentOverlayReviewChecks": 1590,
+  "scenarios": {
+    "current_raw": {
+      "physicalPayloadSlots": 10903836,
+      "nonzeroDataSlots": 7771840,
+      "totalUploadTransactions": 85243,
+      "sourceLogicalWordsPreserved": 10903836,
+      "payloadReductionPercent": 0.0,
+      "uploadTransactionReductionPercent": 0.0
+    },
+    "safe_overlay_raw": {
+      "physicalPayloadSlots": 6447931,
+      "nonzeroDataSlots": 4455231,
+      "totalUploadTransactions": 50434,
+      "sourceLogicalWordsPreserved": 10903836,
+      "payloadReductionPercent": 40.86548073540358,
+      "uploadTransactionReductionPercent": 40.8350245767981
+    },
+    "safe_overlay_packed128": {
+      "physicalPayloadSlots": 3224200,
+      "nonzeroDataSlots": 2628702,
+      "totalUploadTransactions": 25249,
+      "sourceLogicalWordsPreserved": 10903836,
+      "payloadReductionPercent": 70.43058974841514,
+      "uploadTransactionReductionPercent": 70.3799725490656
+    },
+    "safe_overlay_dense_f64_u32": {
+      "physicalPayloadSlots": 1377032,
+      "nonzeroDataSlots": 1377030,
+      "totalUploadTransactions": 10818,
+      "sourceLogicalWordsPreserved": 10903836,
+      "payloadReductionPercent": 87.37112333677798,
+      "uploadTransactionReductionPercent": 87.30922187159062
+    }
+  },
+  "countsExcludeStreamHeaderAndRoutingMetadata": true,
+  "transactionAssumption": "128physicalpayloadrecords perappend;48begin/sealcalls includingencodingandbasemetadata; noadditionalconfigurationcalls",
+  "onChainImplemented": false,
+  "measuredGasSavings": false,
+  "scientificAcceptance": false,
+  "productionReady": false,
+  "productionCoreAddressesRequired": 32,
+  "productionInputBanksRequired": 96,
+  "productionWorkingStateBanksRequired": 128,
+  "publicTransactionsSent": 0,
+  "sourceInputsModified": false,
+  "canonicalContractsModified": false,
+  "evidence": {
+    "overlay-audit.json": "c041c46ec6c444c409145158ef7836832c9e09a453bce11bfc3e49cec7579c4b",
+    "typed-packing/typed-packing-audit.json": "2f0cf14898ff327ad725158b398ef14ba4fb98eda4e94ced3c4a13a4271f2196",
+    "independent-review/review.json": "a689bcbb4aa9e1e7102704ec206635471ac9e2cb2edefef3580372ad60fa09e9",
+    "independent-review/typed-review.json": "984c883e414c777f369143c9c4dbefddc0a572c8aa0b6d1c00654a558585679c"
+  },
+  "independentTypedReviewScope": "29sourcehashes,4countrecomputations,1792record/8192fieldboundarychecks,and12IEEEedgecases;doesnotrepeat43,615,344fullwordcomparisons"
+}

@@ -10,37 +10,37 @@ TAP version 13
     # Subtest: softcore energies, forces and lambda derivatives match differentiated scalar energies
     ok 1 - softcore energies, forces and lambda derivatives match differentiated scalar energies
       ---
-      duration_ms: 3452.657833
+      duration_ms: 2592.383625
       type: 'test'
       ...
     # Subtest: endpoints recover ordinary LJ and exchanging endpoints reverses lambda derivative
     ok 2 - endpoints recover ordinary LJ and exchanging endpoints reverses lambda derivative
       ---
-      duration_ms: 3044.0655
+      duration_ms: 2541.458625
       type: 'test'
       ...
     # Subtest: ghost zero strength stays finite while active singular endpoints and bad domains fail
     ok 3 - ghost zero strength stays finite while active singular endpoints and bad domains fail
       ---
-      duration_ms: 1086.067042
+      duration_ms: 797.01225
       type: 'test'
       ...
     # Subtest: replica decisions use four cross-state energies and stable log probabilities
     ok 4 - replica decisions use four cross-state energies and stable log probabilities
       ---
-      duration_ms: 2491.36875
+      duration_ms: 2000.821042
       type: 'test'
       ...
     # Subtest: volume decisions include pressure work and the declared symmetric-volume Jacobian
     ok 5 - volume decisions include pressure work and the declared symmetric-volume Jacobian
       ---
-      duration_ms: 4237.348875
+      duration_ms: 3110.031709
       type: 'test'
       ...
     1..5
 ok 1 - Softcore endpoints and Monte Carlo decisions have independent numerical references
   ---
-  duration_ms: 14857.697791
+  duration_ms: 11307.063458
   type: 'test'
   ...
 # bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
@@ -54,49 +54,49 @@ ok 1 - Softcore endpoints and Monte Carlo decisions have independent numerical r
     # Subtest: writer-only complete samples convert energy units and reject incomplete, duplicate or malformed records atomically
     ok 1 - writer-only complete samples convert energy units and reject incomplete, duplicate or malformed records atomically
       ---
-      duration_ms: 1315.570333
+      duration_ms: 735.81075
       type: 'test'
       ...
     # Subtest: three-state MBAR and diagnostic weights match independent 90-digit Newton roots
     ok 2 - three-state MBAR and diagnostic weights match independent 90-digit Newton roots
       ---
-      duration_ms: 120015.617292
+      duration_ms: 70656.577667
       type: 'test'
       ...
     # Subtest: work partition and per-configuration energy offsets preserve final MBAR bytes
     ok 3 - work partition and per-configuration energy offsets preserve final MBAR bytes
       ---
-      duration_ms: 310036.034667
+      duration_ms: 137428.520875
       type: 'test'
       ...
     # Subtest: convergence is separate from poor overlap and exhausted iterations
     ok 4 - convergence is separate from poor overlap and exhausted iterations
       ---
-      duration_ms: 29330.108875
+      duration_ms: 14827.884875
       type: 'test'
       ...
     # Subtest: commitments bind the sealed samples, numerical configuration and solver settings
     ok 5 - commitments bind the sealed samples, numerical configuration and solver settings
       ---
-      duration_ms: 335.858833
+      duration_ms: 179.705584
       type: 'test'
       ...
     # Subtest: paired independent-repeat differences produce mean and SEM without accepting submitted free energies
     ok 6 - paired independent-repeat differences produce mean and SEM without accepting submitted free energies
       ---
-      duration_ms: 53272.919583
+      duration_ms: 26071.010292
       type: 'test'
       ...
     # Subtest: modified executable dependencies invalidate existing analysis rather than changing results
     ok 7 - modified executable dependencies invalidate existing analysis rather than changing results
       ---
-      duration_ms: 18.365042
+      duration_ms: 10.798417
       type: 'test'
       ...
     1..7
 ok 2 - On-chain reduced-potential collection, general MBAR, diagnostics and paired-repeat uncertainty
   ---
-  duration_ms: 515066.226084
+  duration_ms: 250313.318209
   type: 'test'
   ...
 # bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
@@ -110,37 +110,37 @@ ok 2 - On-chain reduced-potential collection, general MBAR, diagnostics and pair
     # Subtest: atan2 and sine/cosine match independent 100-digit references
     ok 1 - atan2 and sine/cosine match independent 100-digit references
       ---
-      duration_ms: 34328.236792
+      duration_ms: 25299.930625
       type: 'test'
       ...
     # Subtest: all angle and torsion force components match independently differentiated scalar energies
     ok 2 - all angle and torsion force components match independently differentiated scalar energies
       ---
-      duration_ms: 35632.814
+      duration_ms: 20954.356292
       type: 'test'
       ...
     # Subtest: energy gradients agree with forces evaluated by the contracts
     ok 3 - energy gradients agree with forces evaluated by the contracts
       ---
-      duration_ms: 28581.319958
+      duration_ms: 14470.820667
       type: 'test'
       ...
     # Subtest: translation, reversal, total force and total torque preserve mechanical invariants
     ok 4 - translation, reversal, total force and total torque preserve mechanical invariants
       ---
-      duration_ms: 32554.147375
+      duration_ms: 14636.364125
       type: 'test'
       ...
     # Subtest: invalid numerical domains and degenerate geometry reject explicitly
     ok 5 - invalid numerical domains and degenerate geometry reject explicitly
       ---
-      duration_ms: 1427.65425
+      duration_ms: 678.979917
       type: 'test'
       ...
     1..5
 ok 3 - Bounded angular functions and angle/torsion energy-force components
   ---
-  duration_ms: 132948.462292
+  duration_ms: 76279.116459
   type: 'test'
   ...
 # bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
@@ -154,49 +154,49 @@ ok 3 - Bounded angular functions and angle/torsion energy-force components
     # Subtest: committed current state is protected throughout SHAKE and external solver advancement
     ok 1 - committed current state is protected throughout SHAKE and external solver advancement
       ---
-      duration_ms: 77439.784542
+      duration_ms: 38276.955375
       type: 'test'
       ...
     # Subtest: two constrained timesteps match an independent simultaneous multiplier and dense velocity oracle
     ok 2 - two constrained timesteps match an independent simultaneous multiplier and dense velocity oracle
       ---
-      duration_ms: 48359.621333
+      duration_ms: 20091.451167
       type: 'test'
       ...
     # Subtest: transaction partitioning preserves every final position velocity force and energy byte
     ok 3 - transaction partitioning preserves every final position velocity force and energy byte
       ---
-      duration_ms: 155504.409
+      duration_ms: 52731.732791
       type: 'test'
       ...
     # Subtest: maximum-iteration failure and reverted transactions preserve the committed checkpoint
     ok 4 - maximum-iteration failure and reverted transactions preserve the committed checkpoint
       ---
-      duration_ms: 59729.823584
+      duration_ms: 22157.683208
       type: 'test'
       ...
     # Subtest: wrapped input images and a trial constraint crossing the half-box boundary fail closed
     ok 5 - wrapped input images and a trial constraint crossing the half-box boundary fail closed
       ---
-      duration_ms: 130169.60825
+      duration_ms: 52435.861834
       type: 'test'
       ...
     # Subtest: catalog commitments and solver source identities bind exact immutable inputs
     ok 6 - catalog commitments and solver source identities bind exact immutable inputs
       ---
-      duration_ms: 962.447209
+      duration_ms: 402.796416
       type: 'test'
       ...
     # Subtest: catalog authoring, registration and solver writer permissions reject invalid requests
     ok 7 - catalog authoring, registration and solver writer permissions reject invalid requests
       ---
-      duration_ms: 1947.549416
+      duration_ms: 815.147542
       type: 'test'
       ...
     1..7
 ok 4 - Constrained NVE integrates onchain SHAKE and RATTLE before atomic timestep commit
   ---
-  duration_ms: 492814.37375
+  duration_ms: 197111.460791
   type: 'test'
   ...
 # bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
@@ -210,49 +210,49 @@ ok 4 - Constrained NVE integrates onchain SHAKE and RATTLE before atomic timeste
     # Subtest: kernel mass-weighted projections match independent scalar roots and tangent projection
     ok 1 - kernel mass-weighted projections match independent scalar roots and tangent projection
       ---
-      duration_ms: 1324.944708
+      duration_ms: 747.349
       type: 'test'
       ...
     # Subtest: coupled three-atom water-mass position constraints require complete checking passes
     ok 2 - coupled three-atom water-mass position constraints require complete checking passes
       ---
-      duration_ms: 131703.05675
+      duration_ms: 70981.093167
       type: 'test'
       ...
     # Subtest: RATTLE velocity constraints preserve mass-weighted momentum and converge independently
     ok 3 - RATTLE velocity constraints preserve mass-weighted momentum and converge independently
       ---
-      duration_ms: 157471.807167
+      duration_ms: 70335.003875
       type: 'test'
       ...
     # Subtest: different transaction partitions and problem IDs give bitwise identical projected values
     ok 4 - different transaction partitions and problem IDs give bitwise identical projected values
       ---
-      duration_ms: 161468.083291
+      duration_ms: 82044.108167
       type: 'test'
       ...
     # Subtest: maximum iterations produces immutable failure and never exposes a solution
     ok 5 - maximum iterations produces immutable failure and never exposes a solution
       ---
-      duration_ms: 5365.081834
+      duration_ms: 2273.090458
       type: 'test'
       ...
     # Subtest: invalid later constraint reverts earlier same-transaction corrections without cross-problem writes
     ok 6 - invalid later constraint reverts earlier same-transaction corrections without cross-problem writes
       ---
-      duration_ms: 4934.328334
+      duration_ms: 2177.565416
       type: 'test'
       ...
     # Subtest: input commitment is independently reconstructed and uploads reject malformed values atomically
     ok 7 - input commitment is independently reconstructed and uploads reject malformed values atomically
       ---
-      duration_ms: 7839.213167
+      duration_ms: 2865.959167
       type: 'test'
       ...
     1..7
 ok 5 - Bounded coupled SHAKE and RATTLE solver
   ---
-  duration_ms: 470589.078
+  duration_ms: 231672.272167
   type: 'test'
   ...
 # bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
@@ -266,74 +266,74 @@ ok 5 - Bounded coupled SHAKE and RATTLE solver
     # Subtest: reconstructs a reproducible plan with real dependencies and refuses remote rehearsal chains
     ok 1 - reconstructs a reproducible plan with real dependencies and refuses remote rehearsal chains
       ---
-      duration_ms: 9.386834
+      duration_ms: 6.333458
       type: 'test'
       ...
     # Subtest: current experimental inputs cannot pass production readiness even with connected RPC
     ok 2 - current experimental inputs cannot pass production readiness even with connected RPC
       ---
-      duration_ms: 0.770916
+      duration_ms: 1.287458
       type: 'test'
       ...
     # Subtest: broadcast flags are rejected without loading a signer or contacting a network
     ok 3 - broadcast flags are rejected without loading a signer or contacting a network
       ---
-      duration_ms: 354.152041
+      duration_ms: 323.224083
       type: 'test'
       ...
     # Subtest: fee quotes are read-only, chain-bound and include the exact transaction and gas margin
     ok 4 - fee quotes are read-only, chain-bound and include the exact transaction and gas margin
       ---
-      duration_ms: 2.116208
+      duration_ms: 4.001375
       type: 'test'
       ...
     # Subtest: runtime checks distinguish compiler code from immutable constructor slots
     ok 5 - runtime checks distinguish compiler code from immutable constructor slots
       ---
-      duration_ms: 2.171583
+      duration_ms: 3.372417
       type: 'test'
       ...
     # Subtest: deploys, binds, uploads and verifies the complete periodic fixture locally
     ok 6 - deploys, binds, uploads and verifies the complete periodic fixture locally
       ---
-      duration_ms: 9239.995208
+      duration_ms: 4984.774667
       type: 'test'
       ...
     1..6
 ok 6 - Deployment rehearsal and production readiness boundaries
   ---
-  duration_ms: 39512.32625
+  duration_ms: 31050.7305
   type: 'test'
   ...
 # Subtest: Production acceptance gate requires bound end-to-end and full-system workload evidence
     # Subtest: all component/science/RPC/operator booleans cannot substitute for missing production acceptance
     ok 1 - all component/science/RPC/operator booleans cannot substitute for missing production acceptance
       ---
-      duration_ms: 2.833667
+      duration_ms: 2.454292
       type: 'test'
       ...
     # Subtest: complete synthetic evidence passes structure only, while every capability is mandatory
     ok 2 - complete synthetic evidence passes structure only, while every capability is mandatory
       ---
-      duration_ms: 12.917958
+      duration_ms: 12.586167
       type: 'test'
       ...
     # Subtest: rejects stale bindings, missing files, small fixtures, omitted phases and hypothetical throughput
     ok 3 - rejects stale bindings, missing files, small fixtures, omitted phases and hypothetical throughput
       ---
-      duration_ms: 37.581916
+      duration_ms: 25.089333
       type: 'test'
       ...
     # Subtest: evidence loader verifies actual bytes and refuses changed files or path escape
     ok 4 - evidence loader verifies actual bytes and refuses changed files or path escape
       ---
-      duration_ms: 6.201791
+      duration_ms: 4.017958
       type: 'test'
       ...
     1..4
 ok 7 - Production acceptance gate requires bound end-to-end and full-system workload evidence
   ---
-  duration_ms: 60.270708
+  duration_ms: 44.6895
   type: 'test'
   ...
 # bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
@@ -347,37 +347,37 @@ ok 7 - Production acceptance gate requires bound end-to-end and full-system work
     # Subtest: reads all streams across record-splitting boundaries and delegates the frozen base
     ok 1 - reads all streams across record-splitting boundaries and delegates the frozen base
       ---
-      duration_ms: 1843.1195
+      duration_ms: 1139.674708
       type: 'test'
       ...
     # Subtest: independently reconstructs page digests and the complete dynamics commitment
     ok 2 - independently reconstructs page digests and the complete dynamics commitment
       ---
-      duration_ms: 282.613416
+      duration_ms: 179.785416
       type: 'test'
       ...
     # Subtest: optional zero-count streams are genuinely empty and dataset IDs remain immutable
     ok 3 - optional zero-count streams are genuinely empty and dataset IDs remain immutable
       ---
-      duration_ms: 982.614917
+      duration_ms: 633.384334
       type: 'test'
       ...
     # Subtest: enforces ownership, factory provenance, sealing, roles, limits and atomic registration
     ok 4 - enforces ownership, factory provenance, sealing, roles, limits and atomic registration
       ---
-      duration_ms: 2410.377334
+      duration_ms: 1350.373084
       type: 'test'
       ...
     # Subtest: canonical widths use global field indices even when records cross pages
     ok 5 - canonical widths use global field indices even when records cross pages
       ---
-      duration_ms: 6032.340708
+      duration_ms: 3313.825875
       type: 'test'
       ...
     1..5
 ok 8 - Dynamics datasets preserve trusted paged schemas and immutable base identity
   ---
-  duration_ms: 15071.188667
+  duration_ms: 8633.382625
   type: 'test'
   ...
 # bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
@@ -390,56 +390,56 @@ ok 8 - Dynamics datasets preserve trusted paged schemas and immutable base ident
 # Subtest: Velocity Verlet has exact closed-form drift/kick and rejects invalid domains
 ok 9 - Velocity Verlet has exact closed-form drift/kick and rejects invalid domains
   ---
-  duration_ms: 907.37025
+  duration_ms: 523.58825
   type: 'test'
   ...
 # Subtest: Resumable dynamics computes a complete finite-system trajectory in contracts
     # Subtest: all five force terms initialize before integration; staged writes do not change committed state
     ok 1 - all five force terms initialize before integration; staged writes do not change committed state
       ---
-      duration_ms: 25637.568458
+      duration_ms: 15249.581375
       type: 'test'
       ...
     # Subtest: eight complete steps match an independent high-precision trajectory
     ok 2 - eight complete steps match an independent high-precision trajectory
       ---
-      duration_ms: 174905.18675
+      duration_ms: 81475.872542
       type: 'test'
       ...
     # Subtest: different transaction partitions reproduce final positions, velocities, forces and energy exactly
     ok 3 - different transaction partitions reproduce final positions, velocities, forces and energy exactly
       ---
-      duration_ms: 225778.392916
+      duration_ms: 93871.097958
       type: 'test'
       ...
     # Subtest: run commitment independently binds the timestep, step count, modules and dataset
     ok 4 - run commitment independently binds the timestep, step count, modules and dataset
       ---
-      duration_ms: 96.777875
+      duration_ms: 35.449375
       type: 'test'
       ...
     # Subtest: a singular trial step cannot change committed coordinates and rolls back same-transaction writes
     ok 5 - a singular trial step cannot change committed coordinates and rolls back same-transaction writes
       ---
-      duration_ms: 11459.904958
+      duration_ms: 4973.6445
       type: 'test'
       ...
     # Subtest: authority, invalid integration parameters and bad masses are rejected
     ok 6 - authority, invalid integration parameters and bad masses are rejected
       ---
-      duration_ms: 7976.845667
+      duration_ms: 2967.618292
       type: 'test'
       ...
     # Subtest: empty optional streams and a batch crossing the last kick preserve the commit barrier
     ok 7 - empty optional streams and a batch crossing the last kick preserve the commit barrier
       ---
-      duration_ms: 14000.494041
+      duration_ms: 5380.001792
       type: 'test'
       ...
     1..7
 ok 10 - Resumable dynamics computes a complete finite-system trajectory in contracts
   ---
-  duration_ms: 466456.694
+  duration_ms: 207677.697084
   type: 'test'
   ...
 # bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
@@ -453,55 +453,55 @@ ok 10 - Resumable dynamics computes a complete finite-system trajectory in contr
     # Subtest: registered protocol is immutable and rejects duplicate/no-code modules
     ok 1 - registered protocol is immutable and rejects duplicate/no-code modules
       ---
-      duration_ms: 75.482333
+      duration_ms: 31.010625
       type: 'test'
       ...
     # Subtest: one batch equals three committed batches bit-for-bit
     ok 2 - one batch equals three committed batches bit-for-bit
       ---
-      duration_ms: 5733.447042
+      duration_ms: 3805.34225
       type: 'test'
       ...
     # Subtest: permissions, bounds, missing run and completed run reject without state changes
     ok 3 - permissions, bounds, missing run and completed run reject without state changes
       ---
-      duration_ms: 202.830625
+      duration_ms: 151.226292
       type: 'test'
       ...
     # Subtest: independently reconstructs input, protocol and complete run commitments
     ok 4 - independently reconstructs input, protocol and complete run commitments
       ---
-      duration_ms: 50.541084
+      duration_ms: 35.888333
       type: 'test'
       ...
     # Subtest: failure in a later bond rolls back ALL earlier work in the same transaction
     ok 5 - failure in a later bond rolls back ALL earlier work in the same transaction
       ---
-      duration_ms: 1851.922083
+      duration_ms: 1289.630959
       type: 'test'
       ...
     # Subtest: input pages hash independently of upload batch boundaries and seal irreversibly
     ok 6 - input pages hash independently of upload batch boundaries and seal irreversibly
       ---
-      duration_ms: 320.168666
+      duration_ms: 220.421459
       type: 'test'
       ...
     # Subtest: engine rejects omitted protocol dependencies
     ok 7 - engine rejects omitted protocol dependencies
       ---
-      duration_ms: 97.536917
+      duration_ms: 72.869
       type: 'test'
       ...
     # Subtest: 21 shared-atom interactions agree across three different batch partitions
     ok 8 - 21 shared-atom interactions agree across three different batch partitions
       ---
-      duration_ms: 58827.247208
+      duration_ms: 34958.590875
       type: 'test'
       ...
     1..8
 ok 11 - Resumable component execution and input integrity
   ---
-  duration_ms: 67769.081125
+  duration_ms: 40877.285875
   type: 'test'
   ...
 # bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
@@ -515,43 +515,43 @@ ok 11 - Resumable component execution and input integrity
     # Subtest: uninitialized and partially merged forces are never presented as committed state
     ok 1 - uninitialized and partially merged forces are never presented as committed state
       ---
-      duration_ms: 575886.5265
+      duration_ms: 242979.581083
       type: 'test'
       ...
     # Subtest: two NVE steps match independently differentiated Ewald plus LJ and bond energies
     ok 2 - two NVE steps match independently differentiated Ewald plus LJ and bond energies
       ---
-      duration_ms: 118464.808417
+      duration_ms: 102601.863541
       type: 'test'
       ...
     # Subtest: alternate transaction partitions reproduce a completed first step bit for bit
     ok 3 - alternate transaction partitions reproduce a completed first step bit for bit
       ---
-      duration_ms: 217777.410333
+      duration_ms: 197243.757792
       type: 'test'
       ...
     # Subtest: direct exceptions include LJ and the Ewald correction exactly once
     ok 4 - direct exceptions include LJ and the Ewald correction exactly once
       ---
-      duration_ms: 167903.596959
+      duration_ms: 249949.365834
       type: 'test'
       ...
     # Subtest: identities and alpha/mode extent are independently bound in run commitments
     ok 5 - identities and alpha/mode extent are independently bound in run commitments
       ---
-      duration_ms: 117.015166
+      duration_ms: 239.56675
       type: 'test'
       ...
     # Subtest: authority, unsupported damping and invalid work cannot alter an experiment
     ok 6 - authority, unsupported damping and invalid work cannot alter an experiment
       ---
-      duration_ms: 4996.268333
+      duration_ms: 8161.314167
       type: 'test'
       ...
     1..6
 ok 12 - Ewald NVE integrates complete on-chain electrostatic forces with bonded and LJ terms
   ---
-  duration_ms: 1093869.932958
+  duration_ms: 805781.861625
   type: 'test'
   ...
 # bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
@@ -565,61 +565,163 @@ ok 12 - Ewald NVE integrates complete on-chain electrostatic forces with bonded 
     # Subtest: real and exception energies and forces match independently differentiated scalar references
     ok 1 - real and exception energies and forces match independently differentiated scalar references
       ---
-      duration_ms: 17069.026583
+      duration_ms: 9839.07725
       type: 'test'
       ...
     # Subtest: mode enumeration and bounded phase reduction preserve lattice periodicity
     ok 2 - mode enumeration and bounded phase reduction preserve lattice periodicity
       ---
-      duration_ms: 6050.281708
+      duration_ms: 3362.501666
       type: 'test'
       ...
     # Subtest: invalid numerical domains and mismatched dependencies fail explicitly
     ok 3 - invalid numerical domains and mismatched dependencies fail explicitly
       ---
-      duration_ms: 1056.434334
+      duration_ms: 622.859583
       type: 'test'
       ...
     # Subtest: unsealed, foreign and out-of-range source snapshots cannot be registered
     ok 4 - unsealed, foreign and out-of-range source snapshots cannot be registered
       ---
-      duration_ms: 3093.876
+      duration_ms: 1456.567167
       type: 'test'
       ...
     # Subtest: full Ewald sums and all particle forces execute across bounded transactions on-chain
     ok 5 - full Ewald sums and all particle forces execute across bounded transactions on-chain
       ---
-      duration_ms: 197741.60475
+      duration_ms: 89709.90725
       type: 'test'
       ...
     # Subtest: different transaction partitions give identical completed Ewald bytes
     ok 6 - different transaction partitions give identical completed Ewald bytes
       ---
-      duration_ms: 194721.8915
+      duration_ms: 98971.695167
       type: 'test'
       ...
     # Subtest: explicit exception cancels reciprocal intracell interaction and inserts direct parameters
     ok 7 - explicit exception cancels reciprocal intracell interaction and inserts direct parameters
       ---
-      duration_ms: 163199.137625
+      duration_ms: 95694.940209
       type: 'test'
       ...
     # Subtest: invalid work and input failure roll back all writes within their transaction
     ok 8 - invalid work and input failure roll back all writes within their transaction
       ---
-      duration_ms: 3202.304208
+      duration_ms: 1963.42625
       type: 'test'
       ...
     # Subtest: independent commitment construction binds source range, dataset and all executable identities
     ok 9 - independent commitment construction binds source range, dataset and all executable identities
       ---
-      duration_ms: 149.449917
+      duration_ms: 85.066833
       type: 'test'
       ...
     1..9
 ok 13 - Ewald real, reciprocal and correction components and bounded on-chain force evaluation
   ---
-  duration_ms: 589526.667916
+  duration_ms: 303392.377458
+  type: 'test'
+  ...
+# bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+# This version of µWS is not compatible with your Node.js build:
+# Error: Cannot find module '../binaries/uws_darwin_arm64_137.node'
+# Require stack:
+# - /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/node_modules/ganache/node_modules/@trufflesuite/uws-js-unofficial/src/uws.js
+# - /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/node_modules/ganache/dist/node/core.js
+# Falling back to a NodeJS implementation; performance may be degraded.
+# Subtest: Candidate Q96 finite Ewald components: independent oracle, domains and consumed local gas
+    # Subtest: 110-digit screened pair and reciprocal operations across declared domains
+    ok 1 - 110-digit screened pair and reciprocal operations across declared domains
+      ---
+      duration_ms: 14082.14225
+      type: 'test'
+      ...
+    # Subtest: periodic translations, excluded modes and unsupported arithmetic fail closed
+    ok 2 - periodic translations, excluded modes and unsupported arithmetic fail closed
+      ---
+      duration_ms: 400.392959
+      type: 'test'
+      ...
+    # Subtest: same-input repeated output-consumed gas versus binary128 references
+    ok 3 - same-input repeated output-consumed gas versus binary128 references
+      ---
+      duration_ms: 18932.203
+      type: 'test'
+      ...
+    1..3
+ok 14 - Candidate Q96 finite Ewald components: independent oracle, domains and consumed local gas
+  ---
+  duration_ms: 33582.318708
+  type: 'test'
+  ...
+# bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+# This version of µWS is not compatible with your Node.js build:
+# Error: Cannot find module '../binaries/uws_darwin_arm64_137.node'
+# Require stack:
+# - /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/node_modules/ganache/node_modules/@trufflesuite/uws-js-unofficial/src/uws.js
+# - /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/node_modules/ganache/dist/node/core.js
+# Falling back to a NodeJS implementation; performance may be degraded.
+# Subtest: Fixed96 softcore: independent110-digit gradients, actual hybrid pairs, failure domains and measured binary128 comparison
+    # Subtest: all accepted energy,force and lambda derivatives match an independent physical scalar-energy oracle
+    ok 1 - all accepted energy,force and lambda derivatives match an independent physical scalar-energy oracle
+      ---
+      duration_ms: 37527.316334
+      type: 'test'
+      ...
+    # Subtest: endpoint symmetry and ghost sigma normalization preserve the exact declared zero-strength term
+    ok 2 - endpoint symmetry and ghost sigma normalization preserve the exact declared zero-strength term
+      ---
+      duration_ms: 1273.873708
+      type: 'test'
+      ...
+    # Subtest: nonfinite, close-contact and lower/upper intermediate domains fail closed without clipping
+    ok 3 - nonfinite, close-contact and lower/upper intermediate domains fail closed without clipping
+      ---
+      duration_ms: 779.200292
+      type: 'test'
+      ...
+    # Subtest: actual receipt gas and independently reconstructed output digests quantify the new-policy speed change
+    ok 4 - actual receipt gas and independently reconstructed output digests quantify the new-policy speed change
+      ---
+      duration_ms: 17482.568958
+      type: 'test'
+      ...
+    1..4
+ok 15 - Fixed96 softcore: independent110-digit gradients, actual hybrid pairs, failure domains and measured binary128 comparison
+  ---
+  duration_ms: 58073.732083
+  type: 'test'
+  ...
+# bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+# This version of µWS is not compatible with your Node.js build:
+# Error: Cannot find module '../binaries/uws_darwin_arm64_137.node'
+# Require stack:
+# - /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/node_modules/ganache/node_modules/@trufflesuite/uws-js-unofficial/src/uws.js
+# - /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/node_modules/ganache/dist/node/core.js
+# Falling back to a NodeJS implementation; performance may be degraded.
+# Subtest: Declared Q96.96 pair policy: independent physical gradient, domains and measured local gas
+    # Subtest: complete energy and all force components match a 110-digit independently differentiated potential
+    ok 1 - complete energy and all force components match a 110-digit independently differentiated potential
+      ---
+      duration_ms: 23742.385667
+      type: 'test'
+      ...
+    # Subtest: rejects unsupported numerical domains without clipping or softening
+    ok 2 - rejects unsupported numerical domains without clipping or softening
+      ---
+      duration_ms: 325.948709
+      type: 'test'
+      ...
+    # Subtest: actual same-input warm pair gas improves versus inlined binary128 with independently consumed digests
+    ok 3 - actual same-input warm pair gas improves versus inlined binary128 with independently consumed digests
+      ---
+      duration_ms: 13141.382417
+      type: 'test'
+      ...
+    1..3
+ok 16 - Declared Q96.96 pair policy: independent physical gradient, domains and measured local gas
+  ---
+  duration_ms: 37390.136625
   type: 'test'
   ...
 # bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
@@ -630,27 +732,27 @@ ok 13 - Ewald real, reciprocal and correction components and bounded on-chain fo
 # - /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/node_modules/ganache/dist/node/core.js
 # Falling back to a NodeJS implementation; performance may be degraded.
 # Subtest: fork transport refuses every mutation before contacting the upstream
-ok 14 - fork transport refuses every mutation before contacting the upstream
+ok 17 - fork transport refuses every mutation before contacting the upstream
   ---
-  duration_ms: 1.125917
+  duration_ms: 0.990208
   type: 'test'
   ...
 # Subtest: fork pin rejects a wrong chain, missing identity, wrong height and unsafe block number
-ok 15 - fork pin rejects a wrong chain, missing identity, wrong height and unsafe block number
+ok 18 - fork pin rejects a wrong chain, missing identity, wrong height and unsafe block number
   ---
-  duration_ms: 0.309416
+  duration_ms: 0.271875
   type: 'test'
   ...
 # Subtest: fork completion rejects a reorg or changed state root at the pinned height
-ok 16 - fork completion rejects a reorg or changed state root at the pinned height
+ok 19 - fork completion rejects a reorg or changed state root at the pinned height
   ---
-  duration_ms: 0.113083
+  duration_ms: 0.095125
   type: 'test'
   ...
 # Subtest: HTTPS fork reader rejects redirects and malformed replies without exposing provider paths
-ok 17 - HTTPS fork reader rejects redirects and malformed replies without exposing provider paths
+ok 20 - HTTPS fork reader rejects redirects and malformed replies without exposing provider paths
   ---
-  duration_ms: 0.430792
+  duration_ms: 0.376542
   type: 'test'
   ...
 # bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
@@ -664,43 +766,43 @@ ok 17 - HTTPS fork reader rejects redirects and malformed replies without exposi
     # Subtest: identifies self-contained pinned arithmetic and fits the ordinary 24 KiB limit
     ok 1 - identifies self-contained pinned arithmetic and fits the ordinary 24 KiB limit
       ---
-      duration_ms: 22.07875
+      duration_ms: 14.293166
       type: 'test'
       ...
     # Subtest: matches all v0.4 branch, boundary, exchange, zero and direct-reference sample bytes
     ok 2 - matches all v0.4 branch, boundary, exchange, zero and direct-reference sample bytes
       ---
-      duration_ms: 52860.057375
+      duration_ms: 31304.024416
       type: 'test'
       ...
     # Subtest: matches prepared v0.4 fixture normal/exception pairs and low binary128 mantissa perturbations
     ok 3 - matches prepared v0.4 fixture normal/exception pairs and low binary128 mantissa perturbations
       ---
-      duration_ms: 60470.748833
+      duration_ms: 29421.947541
       type: 'test'
       ...
     # Subtest: matches finite-domain, overflow and zero-distance revert bytes
     ok 4 - matches finite-domain, overflow and zero-distance revert bytes
       ---
-      duration_ms: 8547.207625
+      duration_ms: 3838.236833
       type: 'test'
       ...
     # Subtest: passes the current independent 90-digit scalar-potential differentiation oracle
     ok 5 - passes the current independent 90-digit scalar-potential differentiation oracle
       ---
-      duration_ms: 145.98225
+      duration_ms: 61.284208
       type: 'test'
       ...
     # Subtest: benchmarks both kernels through the same 0/1/2/4/8 pair transaction meter
     ok 6 - benchmarks both kernels through the same 0/1/2/4/8 pair transaction meter
       ---
-      duration_ms: 53975.832333
+      duration_ms: 27872.59375
       type: 'test'
       ...
     1..6
-ok 18 - Optional inlined pair kernel preserves v0.4 bytes and measures real local gas savings
+ok 21 - Optional inlined pair kernel preserves v0.4 bytes and measures real local gas savings
   ---
-  duration_ms: 178615.377458
+  duration_ms: 94133.799209
   type: 'test'
   ...
 # bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
@@ -714,43 +816,43 @@ ok 18 - Optional inlined pair kernel preserves v0.4 bytes and measures real loca
     # Subtest: initial force completion and stochastic drift leave committed current coordinates unchanged
     ok 1 - initial force completion and stochastic drift leave committed current coordinates unchanged
       ---
-      duration_ms: 21382.773
+      duration_ms: 8175.377333
       type: 'test'
       ...
     # Subtest: three full stochastic timesteps match differentiated-energy and independent hash-normal oracle
     ok 2 - three full stochastic timesteps match differentiated-energy and independent hash-normal oracle
       ---
-      duration_ms: 55288.553917
+      duration_ms: 24783.828875
       type: 'test'
       ...
     # Subtest: registered stream identity preserves exact final bytes across run IDs and transaction partitions
     ok 3 - registered stream identity preserves exact final bytes across run IDs and transaction partitions
       ---
-      duration_ms: 106435.936166
+      duration_ms: 41450.952
       type: 'test'
       ...
     # Subtest: zero friction reproduces the existing neighbor velocity-Verlet trajectory exactly
     ok 4 - zero friction reproduces the existing neighbor velocity-Verlet trajectory exactly
       ---
-      duration_ms: 81136.486875
+      duration_ms: 29825.264459
       type: 'test'
       ...
     # Subtest: seed, stream, replica and thermostat parameters enter immutable independently reconstructed commitments
     ok 5 - seed, stream, replica and thermostat parameters enter immutable independently reconstructed commitments
       ---
-      duration_ms: 17691.553833
+      duration_ms: 6958.05
       type: 'test'
       ...
     # Subtest: invalid thermostat or stream domains and unauthorized registration fail before execution
     ok 6 - invalid thermostat or stream domains and unauthorized registration fail before execution
       ---
-      duration_ms: 182.403458
+      duration_ms: 113.841792
       type: 'test'
       ...
     1..6
-ok 19 - Contract BAOAB trajectories retain deterministic streams, neighbor stages and atomic checkpoints
+ok 22 - Contract BAOAB trajectories retain deterministic streams, neighbor stages and atomic checkpoints
   ---
-  duration_ms: 301569.392958
+  duration_ms: 120933.066875
   type: 'test'
   ...
 # bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
@@ -764,61 +866,61 @@ ok 19 - Contract BAOAB trajectories retain deterministic streams, neighbor stage
     # Subtest: complete initial gradient agrees with the independent harmonic-chain equations
     ok 1 - complete initial gradient agrees with the independent harmonic-chain equations
       ---
-      duration_ms: 16976.33675
+      duration_ms: 5891.258958
       type: 'test'
       ...
     # Subtest: energy and singular trial rejections preserve current state, then converge at the exact minimum
     ok 2 - energy and singular trial rejections preserve current state, then converge at the exact minimum
       ---
-      duration_ms: 36222.431041
+      duration_ms: 11411.922209
       type: 'test'
       ...
     # Subtest: different transaction partitions produce the same accepted state and rejection count
     ok 3 - different transaction partitions produce the same accepted state and rejection count
       ---
-      duration_ms: 34344.419958
+      duration_ms: 9612.142875
       type: 'test'
       ...
     # Subtest: iteration and line-search limits report failure rather than convergence
     ok 4 - iteration and line-search limits report failure rather than convergence
       ---
-      duration_ms: 51344.821333
+      duration_ms: 17222.3705
       type: 'test'
       ...
     # Subtest: an already stationary complete gradient converges without a trial
     ok 5 - an already stationary complete gradient converges without a trial
       ---
-      duration_ms: 13593.965708
+      duration_ms: 4966.773125
       type: 'test'
       ...
     # Subtest: insufficient gas reverts instead of changing the line-search decision
     ok 6 - insufficient gas reverts instead of changing the line-search decision
       ---
-      duration_ms: 26605.112375
+      duration_ms: 10006.344084
       type: 'test'
       ...
     # Subtest: immutable settings and module/page identity are independently committed
     ok 7 - immutable settings and module/page identity are independently committed
       ---
-      duration_ms: 225.106917
+      duration_ms: 49.67175
       type: 'test'
       ...
     # Subtest: all bonded, periodic pair and exception forces agree with independent energy differentiation before and after an accepted trial
     ok 8 - all bonded, periodic pair and exception forces agree with independent energy differentiation before and after an accepted trial
       ---
-      duration_ms: 102386.245042
+      duration_ms: 41032.226917
       type: 'test'
       ...
     # Subtest: authority and numerical controls reject invalid registrations and work
     ok 9 - authority and numerical controls reject invalid registrations and work
       ---
-      duration_ms: 215.5115
+      duration_ms: 118.711709
       type: 'test'
       ...
     1..9
-ok 20 - Periodic minimization uses complete forces, Armijo backtracking and explicit convergence
+ok 23 - Periodic minimization uses complete forces, Armijo backtracking and explicit convergence
   ---
-  duration_ms: 292923.969709
+  duration_ms: 104126.18625
   type: 'test'
   ...
 # bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
@@ -832,67 +934,67 @@ ok 20 - Periodic minimization uses complete forces, Armijo backtracking and expl
     # Subtest: initial neighbor forces exactly match exhaustive forces including periodic bonded images
     ok 1 - initial neighbor forces exactly match exhaustive forces including periodic bonded images
       ---
-      duration_ms: 123739.519542
+      duration_ms: 48441.515583
       type: 'test'
       ...
     # Subtest: all three timesteps and face crossing remain bitwise equal while list rebuilds and reuses
     ok 2 - all three timesteps and face crossing remain bitwise equal while list rebuilds and reuses
       ---
-      duration_ms: 202146.846958
+      duration_ms: 98984.63975
       type: 'test'
       ...
     # Subtest: pinned inline policy preserves every complete trajectory checkpoint and reduces actual advancement gas
     ok 3 - pinned inline policy preserves every complete trajectory checkpoint and reduces actual advancement gas
       ---
-      duration_ms: 96777.532042
+      duration_ms: 92286.213833
       type: 'test'
       ...
     # Subtest: inline trajectory remains exact across interruption, arbitrary batching and isolated namespaces
     ok 4 - inline trajectory remains exact across interruption, arbitrary batching and isolated namespaces
       ---
-      duration_ms: 90967.053334
+      duration_ms: 99398.177667
       type: 'test'
       ...
     # Subtest: arbitrary transaction partition preserves final state and namespace isolation
     ok 5 - arbitrary transaction partition preserves final state and namespace isolation
       ---
-      duration_ms: 77244.765875
+      duration_ms: 93210.95225
       type: 'test'
       ...
     # Subtest: skin and neighbor module identity are bound to the independently reconstructed run commitment
     ok 6 - skin and neighbor module identity are bound to the independently reconstructed run commitment
       ---
-      duration_ms: 543.438292
+      duration_ms: 885.697125
       type: 'test'
       ...
     # Subtest: failed next force evaluation rolls back both external and inline preparation and staged state
     ok 7 - failed next force evaluation rolls back both external and inline preparation and staged state
       ---
-      duration_ms: 20626.323958
+      duration_ms: 31238.941166
       type: 'test'
       ...
     # Subtest: inline admission rejects copied identifiers, incompatible math runtime and mismatched external dependencies
     ok 8 - inline admission rejects copied identifiers, incompatible math runtime and mismatched external dependencies
       ---
-      duration_ms: 4588.980125
+      duration_ms: 7469.625375
       type: 'test'
       ...
     # Subtest: sparse-system cutoff pairs and distant direct exceptions match while neighbor reuse reduces work
     ok 9 - sparse-system cutoff pairs and distant direct exceptions match while neighbor reuse reduces work
       ---
-      duration_ms: 75735.126292
+      duration_ms: 89088.550416
       type: 'test'
       ...
     # Subtest: an empty candidate list skips pair stages without skipping timestep commits
     ok 10 - an empty candidate list skips pair stages without skipping timestep commits
       ---
-      duration_ms: 9071.221375
+      duration_ms: 10117.240958
       type: 'test'
       ...
     1..10
-ok 21 - Neighbor dynamics preserves the exhaustive Hamiltonian, ordering and commit barriers
+ok 24 - Neighbor dynamics preserves the exhaustive Hamiltonian, ordering and commit barriers
   ---
-  duration_ms: 744316.807917
+  duration_ms: 584368.244708
   type: 'test'
   ...
 # bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
@@ -906,49 +1008,49 @@ ok 21 - Neighbor dynamics preserves the exhaustive Hamiltonian, ordering and com
     # Subtest: registration binds writer and rejects invalid skin, box or exception configuration
     ok 1 - registration binds writer and rejects invalid skin, box or exception configuration
       ---
-      duration_ms: 3122.09625
+      duration_ms: 1199.309666
       type: 'test'
       ...
     # Subtest: incomplete lists cannot be read; complete candidates are ordered and include distant exceptions
     ok 2 - incomplete lists cannot be read; complete candidates are ordered and include distant exceptions
       ---
-      duration_ms: 3269.015333
+      duration_ms: 1177.184125
       type: 'test'
       ...
     # Subtest: small unwrapped face crossing reuses; half-skin movement rebuilds
     ok 3 - small unwrapped face crossing reuses; half-skin movement rebuilds
       ---
-      duration_ms: 5465.280208
+      duration_ms: 1904.706541
       type: 'test'
       ...
     # Subtest: a pair entering cutoff triggers rebuild and remains in candidate coverage
     ok 4 - a pair entering cutoff triggers rebuild and remains in candidate coverage
       ---
-      duration_ms: 7283.435666
+      duration_ms: 2786.718042
       type: 'test'
       ...
     # Subtest: namespaces and transaction partitions preserve candidate ordering including radius equality
     ok 5 - namespaces and transaction partitions preserve candidate ordering including radius equality
       ---
-      duration_ms: 9389.062666
+      duration_ms: 3532.963208
       type: 'test'
       ...
     # Subtest: invalid coordinates roll back same-transaction page writes and preparation cursor
     ok 6 - invalid coordinates roll back same-transaction page writes and preparation cursor
       ---
-      duration_ms: 356.079333
+      duration_ms: 150.875584
       type: 'test'
       ...
     # Subtest: changed geometry code is rejected before advancing
     ok 7 - changed geometry code is rejected before advancing
       ---
-      duration_ms: 12.13775
+      duration_ms: 5.699583
       type: 'test'
       ...
     1..7
-ok 22 - Neighbor lists are resumable, snapshot-based and conservative under motion
+ok 25 - Neighbor lists are resumable, snapshot-based and conservative under motion
   ---
-  duration_ms: 32001.399708
+  duration_ms: 11984.138583
   type: 'test'
   ...
 # bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
@@ -962,43 +1064,43 @@ ok 22 - Neighbor lists are resumable, snapshot-based and conservative under moti
     # Subtest: matches independent 100-digit Decimal pair reference vectors
     ok 1 - matches independent 100-digit Decimal pair reference vectors
       ---
-      duration_ms: 3652.198292
+      duration_ms: 2103.242584
       type: 'test'
       ...
     # Subtest: force equals the negative coordinate gradient for both pair potentials
     ok 2 - force equals the negative coordinate gradient for both pair potentials
       ---
-      duration_ms: 4623.158
+      duration_ms: 2427.014208
       type: 'test'
       ...
     # Subtest: translation and particle exchange preserve pair symmetries bit-for-bit
     ok 3 - translation and particle exchange preserve pair symmetries bit-for-bit
       ---
-      duration_ms: 1844.432417
+      duration_ms: 1127.129333
       type: 'test'
       ...
     # Subtest: analytical force signs and exact simple values distinguish attraction from repulsion
     ok 4 - analytical force signs and exact simple values distinguish attraction from repulsion
       ---
-      duration_ms: 1070.749125
+      duration_ms: 612.0405
       type: 'test'
       ...
     # Subtest: finite zero strengths return canonical zero and singular geometry still rejects
     ok 5 - finite zero strengths return canonical zero and singular geometry still rejects
       ---
-      duration_ms: 1809.887083
+      duration_ms: 1060.662333
       type: 'test'
       ...
     # Subtest: rejects nonfinite operands, invalid parameter domains and missing math code
     ok 6 - rejects nonfinite operands, invalid parameter domains and missing math code
       ---
-      duration_ms: 1331.240916
+      duration_ms: 765.546709
       type: 'test'
       ...
     1..6
-ok 23 - Direct-pair Lennard-Jones and Coulomb numerical components
+ok 26 - Direct-pair Lennard-Jones and Coulomb numerical components
   ---
-  duration_ms: 14701.192167
+  duration_ms: 8282.919333
   type: 'test'
   ...
 # bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
@@ -1012,37 +1114,37 @@ ok 23 - Direct-pair Lennard-Jones and Coulomb numerical components
     # Subtest: matches seven independently generated 100-digit Decimal reference vectors
     ok 1 - matches seven independently generated 100-digit Decimal reference vectors
       ---
-      duration_ms: 1719.516125
+      duration_ms: 789.369167
       type: 'test'
       ...
     # Subtest: force is negative energy gradient and transforms under translation
     ok 2 - force is negative energy gradient and transforms under translation
       ---
-      duration_ms: 1848.69775
+      duration_ms: 821.749333
       type: 'test'
       ...
     # Subtest: rejects nonfinite input, invalid domains and zero separation
     ok 3 - rejects nonfinite input, invalid domains and zero separation
       ---
-      duration_ms: 191.161458
+      duration_ms: 118.687917
       type: 'test'
       ...
     # Subtest: binary64 inspection round-trip and exact elementary identities
     ok 4 - binary64 inspection round-trip and exact elementary identities
       ---
-      duration_ms: 145.758208
+      duration_ms: 75.393583
       type: 'test'
       ...
     # Subtest: signed zeros compare equally and arithmetic canonicalizes them
     ok 5 - signed zeros compare equally and arithmetic canonicalizes them
       ---
-      duration_ms: 151.742625
+      duration_ms: 76.995
       type: 'test'
       ...
     1..5
-ok 24 - Binary128-format arithmetic and harmonic force component
+ok 27 - Binary128-format arithmetic and harmonic force component
   ---
-  duration_ms: 4403.978834
+  duration_ms: 2051.394292
   type: 'test'
   ...
 # bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
@@ -1053,76 +1155,89 @@ ok 24 - Binary128-format arithmetic and harmonic force component
 # - /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/node_modules/ganache/dist/node/core.js
 # Falling back to a NodeJS implementation; performance may be degraded.
 # Subtest: Working pages enforce writer authority, namespace isolation, bounds and irreversible seals
-ok 25 - Working pages enforce writer authority, namespace isolation, bounds and irreversible seals
+ok 28 - Working pages enforce writer authority, namespace isolation, bounds and irreversible seals
   ---
-  duration_ms: 2199.241584
+  duration_ms: 947.955
   type: 'test'
   ...
 # Subtest: Paged bond execution consumes sealed input pages and commits resumable output pages
     # Subtest: catalog reads coordinates and bond records across page boundaries
     ok 1 - catalog reads coordinates and bond records across page boundaries
       ---
-      duration_ms: 1042.391167
+      duration_ms: 324.830416
       type: 'test'
       ...
     # Subtest: validation is resumable and every input is validated before force evaluation
     ok 2 - validation is resumable and every input is validated before force evaluation
       ---
-      duration_ms: 10798.453042
+      duration_ms: 3940.020625
       type: 'test'
       ...
     # Subtest: paged results agree bit-for-bit across transaction partitions and with the original engine
     ok 3 - paged results agree bit-for-bit across transaction partitions and with the original engine
       ---
-      duration_ms: 18415.840916
+      duration_ms: 6913.25275
       type: 'test'
       ...
     # Subtest: separate runs isolate checkpoints and completed outputs
     ok 4 - separate runs isolate checkpoints and completed outputs
       ---
-      duration_ms: 5657.564375
+      duration_ms: 2218.51575
       type: 'test'
       ...
     # Subtest: independently reconstructs page, dataset, configuration and run commitments
     ok 5 - independently reconstructs page, dataset, configuration and run commitments
       ---
-      duration_ms: 133.492292
+      duration_ms: 94.726042
       type: 'test'
       ...
     # Subtest: one bounded transaction can cross validation barriers and finish without skipping records
     ok 6 - one bounded transaction can cross validation barriers and finish without skipping records
       ---
-      duration_ms: 9284.566792
+      duration_ms: 3499.211792
       type: 'test'
       ...
     # Subtest: binding, caller permissions, run bounds and declared dependencies are enforced
     ok 7 - binding, caller permissions, run bounds and declared dependencies are enforced
       ---
-      duration_ms: 1144.663709
+      duration_ms: 500.446875
       type: 'test'
       ...
     # Subtest: catalog rejects unsealed, untrusted, wrong-role, duplicate and incorrectly covered page sets
     ok 8 - catalog rejects unsealed, untrusted, wrong-role, duplicate and incorrectly covered page sets
       ---
-      duration_ms: 761.001458
+      duration_ms: 332.6455
       type: 'test'
       ...
     # Subtest: noncanonical schemas and invalid numerical inputs cannot pass staged validation
     ok 9 - noncanonical schemas and invalid numerical inputs cannot pass staged validation
       ---
-      duration_ms: 17936.585208
+      duration_ms: 5979.371667
       type: 'test'
       ...
     # Subtest: later arithmetic failure reverts earlier cross-contract output writes in the same transaction
     ok 10 - later arithmetic failure reverts earlier cross-contract output writes in the same transaction
       ---
-      duration_ms: 9555.304458
+      duration_ms: 3311.10425
       type: 'test'
       ...
     1..10
-ok 26 - Paged bond execution consumes sealed input pages and commits resumable output pages
+ok 29 - Paged bond execution consumes sealed input pages and commits resumable output pages
   ---
-  duration_ms: 76743.08675
+  duration_ms: 27920.552083
+  type: 'test'
+  ...
+# bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+# This version of µWS is not compatible with your Node.js build:
+# Error: Cannot find module '../binaries/uws_darwin_arm64_137.node'
+# Require stack:
+# - /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/node_modules/ganache/node_modules/@trufflesuite/uws-js-unofficial/src/uws.js
+# - /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/node_modules/ganache/dist/node/core.js
+# Falling back to a NodeJS implementation; performance may be degraded.
+# Subtest: incremental stream authenticates17 real pages beyond65536 words with constant lookup and bounded crossing reads
+ok 30 - incremental stream authenticates17 real pages beyond65536 words with constant lookup and bounded crossing reads
+  ---
+  duration_ms: 128792.416709
   type: 'test'
   ...
 # bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
@@ -1136,55 +1251,55 @@ ok 26 - Paged bond execution consumes sealed input pages and commits resumable o
     # Subtest: reads record-splitting streams, all delegated dynamics data, and complete pair cardinality
     ok 1 - reads record-splitting streams, all delegated dynamics data, and complete pair cardinality
       ---
-      duration_ms: 2839.135084
+      duration_ms: 1330.308084
       type: 'test'
       ...
     # Subtest: independently reconstructs page, stream, configuration and transitive dataset commitments
     ok 2 - independently reconstructs page, stream, configuration and transitive dataset commitments
       ---
-      duration_ms: 173.766042
+      duration_ms: 103.76725
       type: 'test'
       ...
     # Subtest: explicit source pairs cannot be silently combined with exhaustive periodic enumeration
     ok 3 - explicit source pairs cannot be silently combined with exhaustive periodic enumeration
       ---
-      duration_ms: 908.656625
+      duration_ms: 468.247584
       type: 'test'
       ...
     # Subtest: accepts absent exceptions and keeps dataset identities and configuration immutable
     ok 4 - accepts absent exceptions and keeps dataset identities and configuration immutable
       ---
-      duration_ms: 2006.84975
+      duration_ms: 968.709625
       type: 'test'
       ...
     # Subtest: rejects invalid periodic domains and handles binary128 doubling exactly at subnormal boundaries
     ok 5 - rejects invalid periodic domains and handles binary128 doubling exactly at subnormal boundaries
       ---
-      duration_ms: 2052.249875
+      duration_ms: 1150.189584
       type: 'test'
       ...
     # Subtest: enforces owner, factory, role, sealing, coverage and page bounds with atomic failure/retry
     ok 6 - enforces owner, factory, role, sealing, coverage and page bounds with atomic failure/retry
       ---
-      duration_ms: 3934.091708
+      duration_ms: 1624.801292
       type: 'test'
       ...
     # Subtest: schema width follows each global field across pages; numeric validity remains staged
     ok 7 - schema width follows each global field across pages; numeric validity remains staged
       ---
-      duration_ms: 6142.836958
+      duration_ms: 2881.61225
       type: 'test'
       ...
     # Subtest: detects altered transitive code and parameter-page code before asserting dataset integrity
     ok 8 - detects altered transitive code and parameter-page code before asserting dataset integrity
       ---
-      duration_ms: 1241.235458
+      duration_ms: 442.330917
       type: 'test'
       ...
     1..8
-ok 27 - Periodic datasets bind exhaustive pairs, trusted parameter pages and immutable periodic configuration
+ok 31 - Periodic datasets bind exhaustive pairs, trusted parameter pages and immutable periodic configuration
   ---
-  duration_ms: 23353.815917
+  duration_ms: 10911.118416
   type: 'test'
   ...
 # bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
@@ -1198,61 +1313,61 @@ ok 27 - Periodic datasets bind exhaustive pairs, trusted parameter pages and imm
     # Subtest: all bonded and periodic pair forces initialize; staged writes preserve committed state
     ok 1 - all bonded and periodic pair forces initialize; staged writes preserve committed state
       ---
-      duration_ms: 53495.361416
+      duration_ms: 26637.221084
       type: 'test'
       ...
     # Subtest: three steps across a periodic face match independent differentiated-energy trajectory
     ok 2 - three steps across a periodic face match independent differentiated-energy trajectory
       ---
-      duration_ms: 78541.219333
+      duration_ms: 57018.236959
       type: 'test'
       ...
     # Subtest: different transaction partitions reproduce final positions, velocities, forces and energy exactly
     ok 3 - different transaction partitions reproduce final positions, velocities, forces and energy exactly
       ---
-      duration_ms: 78524.307042
+      duration_ms: 83863.911709
       type: 'test'
       ...
     # Subtest: run commitment independently binds the timestep, step count, modules and dataset
     ok 4 - run commitment independently binds the timestep, step count, modules and dataset
       ---
-      duration_ms: 61.924083
+      duration_ms: 43.951209
       type: 'test'
       ...
     # Subtest: a singular trial step cannot change committed coordinates and rolls back same-transaction writes
     ok 5 - a singular trial step cannot change committed coordinates and rolls back same-transaction writes
       ---
-      duration_ms: 7696.989541
+      duration_ms: 8451.191
       type: 'test'
       ...
     # Subtest: authority, invalid integration parameters and bad masses are rejected
     ok 6 - authority, invalid integration parameters and bad masses are rejected
       ---
-      duration_ms: 4460.589916
+      duration_ms: 5044.585375
       type: 'test'
       ...
     # Subtest: empty optional streams and a batch crossing the last kick preserve the commit barrier
     ok 7 - empty optional streams and a batch crossing the last kick preserve the commit barrier
       ---
-      duration_ms: 9767.180708
+      duration_ms: 12573.328667
       type: 'test'
       ...
     # Subtest: invalid per-atom parameters and unordered, duplicate or malformed exceptions fail before forces
     ok 8 - invalid per-atom parameters and unordered, duplicate or malformed exceptions fail before forces
       ---
-      duration_ms: 37909.381042
+      duration_ms: 50998.213417
       type: 'test'
       ...
     # Subtest: half-box bonded or direct-exception ties cannot commit an ambiguous force
     ok 9 - half-box bonded or direct-exception ties cannot commit an ambiguous force
       ---
-      duration_ms: 9122.011042
+      duration_ms: 9456.674083
       type: 'test'
       ...
     1..9
-ok 28 - Periodic dynamics computes all unordered nonbonded pairs and an independent periodic trajectory
+ok 32 - Periodic dynamics computes all unordered nonbonded pairs and an independent periodic trajectory
   ---
-  duration_ms: 290939.058167
+  duration_ms: 259698.848833
   type: 'test'
   ...
 # bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
@@ -1266,67 +1381,67 @@ ok 28 - Periodic dynamics computes all unordered nonbonded pairs and an independ
     # Subtest: matches exact integer-grid references over positive and negative multiple images
     ok 1 - matches exact integer-grid references over positive and negative multiple images
       ---
-      duration_ms: 14499.485708
+      duration_ms: 10136.018625
       type: 'test'
       ...
     # Subtest: half-box ties preserve sign and swapping endpoints negates every component
     ok 2 - half-box ties preserve sign and swapping endpoints negates every component
       ---
-      duration_ms: 4587.903708
+      duration_ms: 2618.873166
       type: 'test'
       ...
     # Subtest: resolves adjacent binary128 half-box values without binary64 conversion
     ok 3 - resolves adjacent binary128 half-box values without binary64 conversion
       ---
-      duration_ms: 1533.921583
+      duration_ms: 766.74275
       type: 'test'
       ...
     # Subtest: common translation and independent integer image shifts preserve non-tie displacements
     ok 4 - common translation and independent integer image shifts preserve non-tie displacements
       ---
-      duration_ms: 1356.529458
+      duration_ms: 945.911833
       type: 'test'
       ...
     # Subtest: accepts the exact image-count bound, rejects beyond it, and canonicalizes zero
     ok 5 - accepts the exact image-count bound, rejects beyond it, and canonicalizes zero
       ---
-      duration_ms: 2304.828292
+      duration_ms: 1759.514916
       type: 'test'
       ...
     # Subtest: validates a positive cutoff strictly below every half-box length
     ok 6 - validates a positive cutoff strictly below every half-box length
       ---
-      duration_ms: 1020.803542
+      duration_ms: 697.748958
       type: 'test'
       ...
     # Subtest: rejects nonfinite, nonpositive, overflowing and missing-dependency inputs
     ok 7 - rejects nonfinite, nonpositive, overflowing and missing-dependency inputs
       ---
-      duration_ms: 1756.72575
+      duration_ms: 1286.831584
       type: 'test'
       ...
     1..7
-ok 29 - Orthorhombic minimum-image geometry
+ok 33 - Orthorhombic minimum-image geometry
   ---
-  duration_ms: 27415.341333
+  duration_ms: 18459.392542
   type: 'test'
   ...
 # Subtest: Release integrity binds exact inputs, compiler artifacts, numerical evidence and nine logs
-ok 30 - Release integrity binds exact inputs, compiler artifacts, numerical evidence and nine logs
+ok 34 - Release integrity binds exact inputs, compiler artifacts, numerical evidence and nine logs
   ---
-  duration_ms: 2741.599958
+  duration_ms: 1971.28225
   type: 'test'
   ...
 # Subtest: An interrupted rerun invalidates prior success and injected commands cannot certify a run
-ok 31 - An interrupted rerun invalidates prior success and injected commands cannot certify a run
+ok 35 - An interrupted rerun invalidates prior success and injected commands cannot certify a run
   ---
-  duration_ms: 448.63925
+  duration_ms: 305.055625
   type: 'test'
   ...
 # Subtest: Changes during a fixed-command run cannot yield accepted validation
-ok 32 - Changes during a fixed-command run cannot yield accepted validation
+ok 36 - Changes during a fixed-command run cannot yield accepted validation
   ---
-  duration_ms: 661.424917
+  duration_ms: 502.92375
   type: 'test'
   ...
 # bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
@@ -1340,43 +1455,74 @@ ok 32 - Changes during a fixed-command run cannot yield accepted validation
     # Subtest: scalar values span small increments, branch boundaries, normal logarithms and nonzero erfc tails
     ok 1 - scalar values span small increments, branch boundaries, normal logarithms and nonzero erfc tails
       ---
-      duration_ms: 84531.765292
+      duration_ms: 51732.868583
       type: 'test'
       ...
     # Subtest: counter words and strict-open uniforms equal independent domain encoding in arbitrary request order
     ok 2 - counter words and strict-open uniforms equal independent domain encoding in arbitrary request order
       ---
-      duration_ms: 1290.61075
+      duration_ms: 864.035417
       type: 'test'
       ...
     # Subtest: Box-Muller normals match independent transcendental references and elementary distribution checks
     ok 3 - Box-Muller normals match independent transcendental references and elementary distribution checks
       ---
-      duration_ms: 80143.538375
+      duration_ms: 70862.751875
       type: 'test'
       ...
     # Subtest: BAOAB one-atom updates match independent splitting equations and retain tiny-friction noise
     ok 4 - BAOAB one-atom updates match independent splitting equations and retain tiny-friction noise
       ---
-      duration_ms: 5420.945041
+      duration_ms: 5527.593959
       type: 'test'
       ...
     # Subtest: independent 110-digit oracle accepts all scalar, normal and thermostat observations
     ok 5 - independent 110-digit oracle accepts all scalar, normal and thermostat observations
       ---
-      duration_ms: 76.235333
+      duration_ms: 71.198792
       type: 'test'
       ...
     # Subtest: unsupported domains and mismatched dependencies revert without clipping
     ok 6 - unsupported domains and mismatched dependencies revert without clipping
       ---
-      duration_ms: 863.278875
+      duration_ms: 938.527
       type: 'test'
       ...
     1..6
-ok 33 - Bounded scalar functions, deterministic counter streams and BAOAB primitives
+ok 37 - Bounded scalar functions, deterministic counter streams and BAOAB primitives
   ---
-  duration_ms: 172810.498292
+  duration_ms: 130272.64825
+  type: 'test'
+  ...
+# bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+# This version of µWS is not compatible with your Node.js build:
+# Error: Cannot find module '../binaries/uws_darwin_arm64_137.node'
+# Require stack:
+# - /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/node_modules/ganache/node_modules/@trufflesuite/uws-js-unofficial/src/uws.js
+# - /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/node_modules/ganache/dist/node/core.js
+# Falling back to a NodeJS implementation; performance may be degraded.
+# Subtest: sharded state retains authenticated immutable views beyond one-page and old65536-word capacity
+ok 38 - sharded state retains authenticated immutable views beyond one-page and old65536-word capacity
+  ---
+  duration_ms: 2236.083416
+  type: 'test'
+  ...
+# Subtest: snapshot byte retention and write commitments are independent of batch partition
+ok 39 - snapshot byte retention and write commitments are independent of batch partition
+  ---
+  duration_ms: 18292.159833
+  type: 'test'
+  ...
+# Subtest: real bond forces cross shards at100000-atom global indices and checkpoints resume beyonduint32 steps
+ok 40 - real bond forces cross shards at100000-atom global indices and checkpoints resume beyonduint32 steps
+  ---
+  duration_ms: 3203.181292
+  type: 'test'
+  ...
+# Subtest: existing paged force coordinator consumes sharded state with cross-page1500-atom inputs and partition-equivalent forces
+ok 41 - existing paged force coordinator consumes sharded state with cross-page1500-atom inputs and partition-equivalent forces
+  ---
+  duration_ms: 157271.556833
   type: 'test'
   ...
 # bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
@@ -1390,43 +1536,43 @@ ok 33 - Bounded scalar functions, deterministic counter streams and BAOAB primit
     # Subtest: matches independent 90-digit scalar-energy differentiation in all branches
     ok 1 - matches independent 90-digit scalar-energy differentiation in all branches
       ---
-      duration_ms: 11794.422791
+      duration_ms: 6671.604167
       type: 'test'
       ...
     # Subtest: applies the switch derivative and approaches zero energy and force at cutoff
     ok 2 - applies the switch derivative and approaches zero energy and force at cutoff
       ---
-      duration_ms: 10054.225583
+      duration_ms: 5806.4915
       type: 'test'
       ...
     # Subtest: exceptions match the direct kernels even beyond the normal cutoff
     ok 3 - exceptions match the direct kernels even beyond the normal cutoff
       ---
-      duration_ms: 4358.04825
+      duration_ms: 2641.117917
       type: 'test'
       ...
     # Subtest: particle exchange reverses force and signed zero stays canonical
     ok 4 - particle exchange reverses force and signed zero stays canonical
       ---
-      duration_ms: 5672.126334
+      duration_ms: 3078.78825
       type: 'test'
       ...
     # Subtest: rejects invalid and nonfinite inputs before cutoff and exception shortcuts
     ok 5 - rejects invalid and nonfinite inputs before cutoff and exception shortcuts
       ---
-      duration_ms: 1820.089083
+      duration_ms: 1061.199334
       type: 'test'
       ...
     # Subtest: constructor binds the same deployed arithmetic dependency for both primitives
     ok 6 - constructor binds the same deployed arithmetic dependency for both primitives
       ---
-      duration_ms: 110.669084
+      duration_ms: 80.696708
       type: 'test'
       ...
     1..6
-ok 34 - Switched LJ and conducting reaction-field numerical component
+ok 42 - Switched LJ and conducting reaction-field numerical component
   ---
-  duration_ms: 34275.364625
+  duration_ms: 19585.294292
   type: 'test'
   ...
 # bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
@@ -1440,51 +1586,51 @@ ok 34 - Switched LJ and conducting reaction-field numerical component
     # Subtest: frozen chronology and writer provenance reject malformed or partial appends atomically
     ok 1 - frozen chronology and writer provenance reject malformed or partial appends atomically
       ---
-      duration_ms: 2326.186666
+      duration_ms: 952.225333
       type: 'test'
       ...
     # Subtest: on-chain moments and autocovariances match independent 80-digit centered sums
     ok 2 - on-chain moments and autocovariances match independent 80-digit centered sums
       ---
-      duration_ms: 8375.626208
+      duration_ms: 3359.40725
       type: 'test'
       ...
     # Subtest: append and calculation partitions preserve exact results and immutable commitments
     ok 3 - append and calculation partitions preserve exact results and immutable commitments
       ---
-      duration_ms: 7714.659042
+      duration_ms: 3371.810541
       type: 'test'
       ...
     # Subtest: constant, short and unresolved lag windows remain explicitly invalid
     ok 4 - constant, short and unresolved lag windows remain explicitly invalid
       ---
-      duration_ms: 11890.543875
+      duration_ms: 6678.679208
       type: 'test'
       ...
     # Subtest: nonconstant numerical underflow cannot masquerade as a constant series
     ok 5 - nonconstant numerical underflow cannot masquerade as a constant series
       ---
-      duration_ms: 1077.778584
+      duration_ms: 549.473
       type: 'test'
       ...
     # Subtest: changed dependencies invalidate acceptance and resumed calculation
     ok 6 - changed dependencies invalidate acceptance and resumed calculation
       ---
-      duration_ms: 264.7355
+      duration_ms: 159.430459
       type: 'test'
       ...
     1..6
-ok 35 - Bounded chronological observable autocorrelation diagnostics
+ok 43 - Bounded chronological observable autocorrelation diagnostics
   ---
-  duration_ms: 32033.817333
+  duration_ms: 15279.519125
   type: 'test'
   ...
-1..35
-# tests 212
+1..43
+# tests 230
 # suites 0
-# pass 212
+# pass 230
 # fail 0
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 1109496.801833
+# duration_ms 1422642.528042

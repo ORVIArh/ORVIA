@@ -383,7 +383,7 @@
   "experimental_build": {
     "status": "experimental_component_sources_present",
     "report": "reports/compiled_sizes.json",
-    "deployable_component_count": 44,
+    "deployable_component_count": 52,
     "components": [
       "ConstrainedDynamicsCoordinator",
       "ConstraintCatalog",
@@ -402,6 +402,11 @@
       "EwaldRealSpaceKernel",
       "EwaldReciprocalKernel",
       "ExperimentRegistry",
+      "Fixed96EwaldRealSpaceKernel",
+      "Fixed96EwaldReciprocalKernel",
+      "Fixed96LennardJonesKernel",
+      "Fixed96SoftcoreLennardJonesKernel",
+      "FixedPointNonbondedKernel",
       "FloatMath",
       "HarmonicAngleKernel",
       "HarmonicBondKernel",
@@ -415,6 +420,7 @@
       "NeighborList",
       "OrthorhombicGeometry",
       "PagedBondCoordinator",
+      "PartitionedInputCatalog",
       "PeriodicDataset",
       "PeriodicDynamicsCoordinator",
       "PeriodicMinimizer",
@@ -423,11 +429,13 @@
       "ResumableBondEngine",
       "SamplingDiagnostics",
       "ScalarMath",
+      "ShardedWorkingState",
       "SoftcoreLennardJonesKernel",
       "SwitchedNonbondedKernel",
       "TimeSeriesDiagnostics",
       "UncertaintyAndResults",
       "VelocityVerletKernel",
+      "VersionedStateShard",
       "WorkingStatePage"
     ],
     "excluded_artifact_types": [

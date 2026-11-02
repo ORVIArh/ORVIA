@@ -1,0 +1,17 @@
+test_after_unlock_cancel_does_not_interrupt (__main__.BridgeTests) ... ok
+test_echo_and_canonical_modes_are_never_ready (__main__.BridgeTests) ... ok
+test_exact_raw_prompt_one_shot_and_no_output_leak (__main__.BridgeTests) ... ok
+test_expiration_and_preunlock_cancel_kill_child (__main__.BridgeTests) ... ok
+test_fixed_error_code_without_raw_output (__main__.BridgeTests) ... ok
+test_http_host_origin_csrf_and_type_guards (__main__.BridgeTests) ... ok
+test_inherited_code_injection_environment_is_removed (__main__.BridgeTests) ... ok
+test_late_prompt_cannot_resurrect_cancel_or_expiry (__main__.BridgeTests) ... ok
+test_page_is_capability_protected_and_csp_bound (__main__.BridgeTests) ... ok
+test_partial_password_write_stops_child (__main__.BridgeTests) ... ok
+test_password_controls_rejected_before_use (__main__.BridgeTests) ... ok
+test_wrong_prompt_and_quote_missing_fail_closed (__main__.BridgeTests) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 3.840s
+
+OK

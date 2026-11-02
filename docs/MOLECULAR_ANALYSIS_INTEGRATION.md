@@ -1,0 +1,9 @@
+# Preregistered molecular repeat analysis
+
+`UncertaintyAndResults.registerMolecularPlan` registers paired molecular campaigns before any window starts. It authenticates the pipeline, collector, estimator, owners, code identities, campaign commitments, ordered repeat seeds, sampling policy and each leg's model identity. Selected-series identifiers are deterministic, so preregistration does not require those series to exist yet.
+
+The pipeline exposes authenticated registration and completed-analysis views through `IMolecularCampaignSource`. Starting a window is owner-only to prevent an outsider from closing the preregistration window. Numerical progress remains permissionless. Results require the exact registered campaigns, converged MBAR analyses, accepted diagnostics and expected selected series; legacy series-based registration remains available.
+
+`test/molecular-analysis.test.mjs` completed three paired repeats, twelve windows and 48 raw samples through dynamics, chronology, sample selection, MBAR, overlap diagnostics and final uncertainty. Its local fixture deployed 26 core contracts and 224 storage banks (250 actual addresses), with no additional child contracts during execution. It checked unauthorized starts, late registration, wrong repeat ordering and changed pipeline code. Identical endpoint Hamiltonians yielded zero free-energy difference and zero repeat SEM as expected.
+
+This is an integration test with two atoms, not evidence of production molecular accuracy, equilibration or independent sampling. `reports/molecular_analysis_validation.json` records the exact compilation source hashes. In particular, its successful run used Hamiltonian source `e9b600dbb007e1d6f479db23eea48316eadc21b4333ca9f0a37c5712a92a30ee`; later cutoff and constraint changes require their own combined verification. No mainnet transaction was sent and scientific acceptance remains false.

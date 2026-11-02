@@ -1,0 +1,12 @@
+Replay output: evidence/guarded-cutoff/replays/2026-11-02T10-22-12-425Z-primary
+bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+This version of µWS is not compatible with your Node.js build:
+
+Error: Cannot find module '../binaries/uws_darwin_arm64_137.node'
+Require stack:
+- /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/node_modules/ganache/node_modules/@trufflesuite/uws-js-unofficial/src/uws.js
+- /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/node_modules/ganache/dist/node/core.js
+- /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/package.json
+Falling back to a NodeJS implementation; performance may be degraded.
+
+

@@ -1,0 +1,90 @@
+{
+  "schema": "orvia.gpu-connection.conditional-local-gas.v1",
+  "conditionalLocal": true,
+  "localFixtureReadinessInjected": true,
+  "unusedShardsOmitted": 254,
+  "publicTransactionsSent": 0,
+  "usedProductionWallet": false,
+  "gas": {
+    "registerExperiment": "186479",
+    "startRun": "175354",
+    "submitReport": "207104"
+  },
+  "totalGas": "568937",
+  "receipts": [
+    {
+      "name": "registerExperiment",
+      "gasUsed": "186479",
+      "transactionHash": "0x2cbef92c2165358f1cd946453cf77b11e7ecaf6ab89e303d1a03da3172a78846",
+      "status": 1
+    },
+    {
+      "name": "startRun",
+      "gasUsed": "175354",
+      "transactionHash": "0xffeadd91b59cab7d0f6cde369553f92c754485c8a0162fe9298ded2b4cc67f26",
+      "status": 1
+    },
+    {
+      "name": "submitReport",
+      "gasUsed": "207104",
+      "transactionHash": "0xbf6c33fdd817a74d4bab090321264089717eb086d1d01975a6b18ad2e39634d7",
+      "status": 1
+    }
+  ],
+  "fixture": {
+    "chainId": 4663,
+    "hardfork": "shanghai",
+    "actualContracts": 2,
+    "coordinator": "0x76B6FCBa1b130b154c0eecd00f82E8eF0a8B5421",
+    "shard": "0xdADa30fAA138b4D741D46f1A9eA80E9DE95A8357",
+    "runLane": 142,
+    "syntheticSigner": "0xd615Dd2391e9aD7aBD2124C64E509fc841844FCD",
+    "syntheticSignature": true,
+    "shardCountSlot": "0",
+    "storageInjection": "Set shardCount to run lane, genuinely create that one shard, then set readiness count255; other254shards absent."
+  },
+  "assessment": {
+    "runId": "0x3b60f0204b50f6099581f18463a5796efab01e23e36744b9dffc76d08ca29c69",
+    "diagnosticOnly": true,
+    "completedSteps": "6",
+    "checks": 7,
+    "outcome": 1,
+    "counterUnit": "completed native full-model comparison cases"
+  },
+  "sources": {
+    "helperSha256": "6cfb491d9825f946091d31a0ec41a7d43c796df3cb7abda18a0422e0c9450d97",
+    "coordinatorCreationKeccak256": "0xdf4bad5aee815acc8e30ded3ca765072f6e9774ebcd37e1a20e2cbe1a00745f1",
+    "shardCreationKeccak256": "0x5263856388bbd386ad12ee863ee1a536caaf8421bffbd23e8bb9ae817c17337d",
+    "compilerBinding": {
+      "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+      "settings": {
+        "optimizer": {
+          "enabled": true,
+          "runs": 200
+        },
+        "evmVersion": "shanghai",
+        "outputSelection": {
+          "*": {
+            "": [
+              "ast"
+            ],
+            "*": [
+              "abi",
+              "evm.bytecode.object",
+              "evm.deployedBytecode.object",
+              "evm.deployedBytecode.immutableReferences",
+              "storageLayout"
+            ]
+          }
+        }
+      },
+      "sources": {
+        "contracts/hybrid/ORVIAHybridCoordinator.sol": "cd633a152cb9d0737962874b30bf36aed7a195eaea375c9984c9c823db8563db",
+        "contracts/hybrid/ORVIAReportShard.sol": "ad027573551f677b32dd5b0e02bb751f45dc836f879ab8206ec8054d053ff4a2"
+      },
+      "packageLockSha256": "a6f990a92b0a6e52106bd67598e5cf33d867ddb22e3b0df8369e6437ec45ed24",
+      "standardInputSha256": "b7d9b913e98941ec63fe1818d7b91ebca0f6c063efed9bddc770801e22d76dea"
+    }
+  },
+  "scope": "Three actual local lifecycle receipt gas measurements only, with synthetic identities and readiness-injected partial deployment. Includes local intrinsic calldata/execution gas; excludes target L1 allocation, deployment, GPU work, and future lifecycle calls. Not a target fee quote or full-network rehearsal."
+}

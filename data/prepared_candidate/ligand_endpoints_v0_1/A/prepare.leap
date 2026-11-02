@@ -1,0 +1,7 @@
+source leaprc.gaff2
+loadamberparams ligand.frcmod
+lig = loadmol2 ligand.mol2
+check lig
+saveamberparm lig ligand.prmtop ligand.inpcrd
+savepdb lig ligand.pdb
+quit

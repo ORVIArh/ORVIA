@@ -33,39 +33,49 @@
 
 ORVIA stands for **Onchain Research through Verified Inference and Analysis**. We are building toward molecular calculations whose inputs, intermediate state and analysis can be inspected on-chain. The proposed first experiment compares compound 17 with aficamten in a declared cardiac-myosin state.
 
-> **Research in development.** The published **v0.5.1** checkpoint passed **212 Node/EVM tests**, **63 Python references** and **all nine check groups**. These are local component and integration results. A complete prepared-myosin experiment, validated binding-free-energy result and mainnet-ready system remain unfinished. [Read the evidence →](reports/README.md)
+> **Deployed: GPU hybrid, 256 contracts on Robinhood mainnet.** All 33 transactions confirmed and all 256 runtime identities and registrations passed verification. The complete infrastructure deployment cost **0.004612876889674 ETH**. [Deployment evidence →](evidence/hybrid256/MAINNET_DEPLOYMENT.md) The full 132,935-atom complex and 151,505-atom solvent models also passed strict GPU/reference numerical checks with unchanged tolerances. Parameter, alchemical-endpoint and sampling acceptance remain open. [Current status →](STATUS.md)
 
 ## Find your starting point
 
 | You want to… | Start here |
 | :--- | :--- |
 | Understand the research question | [Experiment protocol](docs/PROTOCOL_ORVIA_001.md) · [Scientific readiness](docs/SCIENTIFIC_READINESS.md) |
-| Understand how the system works | [Architecture](docs/ARCHITECTURE.md) · [Engine reference](docs/README.md#engine-reference) |
-| Inspect what has been demonstrated | [Checkpoint overview](docs/DEVELOPMENT_CHECKPOINT.md) · [Validation evidence](reports/README.md) |
+| Understand how the system works | [256-contract architecture](docs/ARCHITECTURE_256.md) · [Engine reference](docs/README.md#engine-reference) |
+| Inspect what has been demonstrated | [Current prototype](docs/COMPLETE_256_PROTOTYPE.md) · [Validation evidence](reports/README.md) |
 | See what remains | [Current status](STATUS.md) · [Production gaps](docs/PRODUCTION_GAPS.md) |
 | Follow ongoing work | [Research log](RESEARCH_LOG.md) · [Development proposal](https://github.com/ORVIArh/ORVIA/pull/1) |
 
-## From molecular inputs to inspectable evidence
+## Active GPU hybrid workflow
+
+The user-selected hybrid computes molecular work on external GPUs and commits signed experiment, checkpoint and result hashes on chain. The 256 addresses are one coordinator/factory and 255 report shards. These are operator attestations, not proofs of correct computation. The separately named ADP/phosphate experiment preserves its chemical identity and does not replace the original vanadate protocol.
+
+[Hybrid contracts and trust model](contracts/hybrid/README.md) · [GPU accuracy evidence](evidence/hybrid256/README.md) · [Current status](STATUS.md)
+
+Run `npm run test:hybrid` for the dedicated local checks. No wallet or public-chain transaction is needed.
+
+## Earlier fully on-chain prototype
 
 <p align="center">
   <img src="assets/brand/research-flow.svg" alt="Intended workflow: register molecular inputs, compute bounded steps, and inspect state and analysis. The complete production path remains in development." width="100%">
 </p>
 
-The intended design uses permissionless, bounded transactions to advance scientific work. Current components cover numerical kernels, molecular forces, alternative dynamics paths and analysis. They do not yet form one validated production experiment; swap and pool triggers are deferred.
+The design uses permissionless, bounded transactions to advance scientific work. The current prototype connects authenticated molecular inputs, retained simulation state, constrained or unconstrained sampling, spatial force evaluation, computed cross-state energies and analysis. Full prepared-model and physical sampling acceptance remain open; swap and pool triggers are deferred.
 
 | Foundation | What is in this checkpoint |
 | :--- | :--- |
 | **Numerics** | Binary128-format arithmetic, bounded scalar functions and counter-addressed random streams |
-| **Molecular mechanics** | Bond, angle, torsion and nonbonded forces; paged inputs; periodic geometry |
-| **Dynamics** | Neighbor-list NVE, Langevin, constrained and Ewald paths; minimization |
-| **Analysis** | Alchemical/MC primitives, reduced potentials, MBAR, overlap and time-series diagnostics |
-| **Evidence** | Independent references, local deployment rehearsal, gas measurements and limited read-only target-node probes |
+| **Molecular mechanics** | Bond, angle, torsion and nonbonded forces; authenticated inputs; periodic geometry and finite Ewald |
+| **Dynamics** | Connected BAOAB sampling with bounded SHAKE/RATTLE and ordered spatial pairs; alternative NVE and minimization paths |
+| **Analysis** | On-chain cross-state samples, chronological selection, MBAR, overlap/ESS diagnostics and preregistered repeats |
+| **Evidence** | Independent references, an actual local 256-address fixture, measured gas and read-only target-provider creation checks |
 
-[Browse the full component inventory and its limits →](docs/DEVELOPMENT_CHECKPOINT.md#implemented-and-exercised)
+[Browse the current prototype and its limits →](docs/COMPLETE_256_PROTOTYPE.md)
+
+The earlier fully on-chain build has no imposed dollar cap; its complete workload costs remain unmeasured. Its inventory contains **32 core contracts and 224 fixed storage banks**. Thirty-one core components participate in the connected architecture; the raw C4 pair kernel is exercised separately and is not integrated into the alchemical Hamiltonian. The fixture preregisters three repeat pairs but completes one campaign’s two-state analysis, not all repeats or a full prepared-myosin run.
 
 ## Reproduce the checkpoint
 
-The recorded run used **Node.js 24.22.1** and **Python 3.12.14**. Run from the repository root:
+The recorded research environment uses **Node.js 24.22.1** and **Python 3.12.14**. Run from the repository root:
 
 ```bash
 npm ci
@@ -74,7 +84,7 @@ python3.12 -m venv .venv-research
 ORVIA_RESEARCH_PYTHON=.venv-research/bin/python npm run check
 ```
 
-The checks use an in-process local EVM and require no wallet or mainnet RPC. The runner regenerates reports for the checked source. See [Contributing](CONTRIBUTING.md) for individual commands and [the evidence guide](reports/README.md) for how to read results.
+The checks use an in-process local EVM and require no wallet or mainnet RPC. The runner regenerates reports for the checked source. Native molecular-preparation checks additionally require the separate declared AmberTools/OpenMM environment; see [ligand preparation](docs/LIGAND_PREPARATION_v0_1.md) before running the complete development suite. See [Contributing](CONTRIBUTING.md) for individual commands and [the evidence guide](reports/README.md) for how to read results.
 
 ## Repository map
 
@@ -92,9 +102,11 @@ ORVIA/
 
 ## Read the results in context
 
-The architecture describes **64 planned production instances**; none is claimed complete or deployed to Robinhood in this checkpoint. Small fixtures do not establish full-system accuracy, physical sampling or computational feasibility. Local gas measurements and read-only numerical probes do not establish production fees or throughput.
+The earlier fully on-chain [ORVIA-256 architecture](docs/ARCHITECTURE_256.md) counts every router and storage bank. Its 256 addresses were deployed locally; the [target-provider probe](docs/TARGET_256_CREATION_PROBE.md) separately returned exact runtime bytes for the two large coordinators through read-only calls. No persistent target-chain deployment followed. Small fixtures do not establish full-system accuracy, sufficient sampling, complete campaign costs or production throughput.
 
-[Scientific limits](docs/DEVELOPMENT_CHECKPOINT.md#scientific-and-computational-limits) · [Workload feasibility](docs/WORKLOAD_FEASIBILITY.md) · [Mainnet readiness](docs/MAINNET_READINESS.md)
+The [v0.5.1 checkpoint](docs/DEVELOPMENT_CHECKPOINT.md) passed 212 Node/EVM tests, 63 Python references and nine check groups. Those results and its earlier 64-slot plan are historical; they do not validate the changed v0.6.0-dev source. The [current validation summary](reports/validation_summary.json) is explicitly incomplete.
+
+[Scientific readiness](docs/SCIENTIFIC_READINESS.md) · [Workload feasibility](docs/WORKLOAD_FEASIBILITY.md) · [Mainnet readiness](docs/MAINNET_READINESS.md)
 
 ---
 

@@ -1,0 +1,288 @@
+{
+  "status": "FULL_CAMPAIGN_UNQUOTED_CONSTRAINT_COST_SENSITIVITY_ONLY",
+  "scope": "Three full-schedule scenarios; only the constraint solver has a monetary extrapolation here.",
+  "pricing": {
+    "checkedAt": "2026-11-02T15:45:19.579Z",
+    "chainId": 4663,
+    "gasPriceWei": "20258000",
+    "blockNumber": "0x637f97c",
+    "blockHash": "0x225f86606dd8d66504d7aed08255ac4ed97da451eb870fb639e220da6719b8cd",
+    "providerHostname": "robinhood-mainnet.g.alchemy.com",
+    "rpcCalls": [
+      {
+        "id": 1,
+        "method": "eth_chainId",
+        "requestSha256": "09fabe0af56b7726f1666ddd147482df4d951f86f66124b936716c53ab0e8471",
+        "responseSha256": "1fb0f19b45a4203bd13cb5be1e8ad3aa569f42905377cd4643fc8bc07ecd3aa3"
+      },
+      {
+        "id": 3,
+        "method": "eth_getBlockByNumber",
+        "requestSha256": "de972079fed63d1771f2169583fad812447e784f734c33b864fbee53f19906c9",
+        "responseSha256": "ee5e9b4d552ced76c680e3e303b6da0951fe7096e2a7fc9cd0c862f4c8731a3d"
+      },
+      {
+        "id": 2,
+        "method": "eth_gasPrice",
+        "requestSha256": "14e830c14a58dfe809565cda4b011727b47097293caed7cdb8260c0c95f01b3d",
+        "responseSha256": "b6c1bbd522d45d3382be3cf7d1bf8416679c967dc1ce7b2483655a4736ecdfc6"
+      }
+    ],
+    "publicTransactionsSent": 0
+  },
+  "models": {
+    "complex33": {
+      "angles": 22187,
+      "bonds": 132787,
+      "constraints": 120519,
+      "exceptions": 186910,
+      "hybrid": 132936,
+      "native": 132935,
+      "torsions": 46357
+    },
+    "solvent33": {
+      "angles": 91,
+      "bonds": 151230,
+      "constraints": 151179,
+      "exceptions": 151418,
+      "hybrid": 151506,
+      "native": 151505,
+      "torsions": 160
+    }
+  },
+  "modelAcceptance": "Available ADP/phosphate candidate, not accepted original vanadate protocol; no model substitution approved.",
+  "measuredCalibration": {
+    "position": {
+      "constraints": 3,
+      "sweeps": 26,
+      "records": 156,
+      "transactions": 156,
+      "workLimit": 1,
+      "receiptGas": "90444524",
+      "gasPerRecordFraction": "22611131/39",
+      "gasPerRecordApprox": 579772.5897435897
+    },
+    "velocity": {
+      "constraints": 3,
+      "sweeps": 29,
+      "records": 174,
+      "transactions": 22,
+      "workLimit": 8,
+      "receiptGas": "51270178",
+      "gasPerRecordFraction": "25635089/87",
+      "gasPerRecordApprox": 294656.1954022989
+    },
+    "limits": [
+      "These are entire local transaction receipt totals divided by processed records, not pure kernel instruction costs.",
+      "Position uses work=1; velocity uses work=8. They are not a matched mode-price comparison.",
+      "Three-atom fixture with first-touch and repeated-slot locality; arbitrary actual model records, sweep count and target posting fees are not measured.",
+      "Observed 26/29 sweeps exceed suggested 1/4/16 sweep sensitivities; those assumptions are not convergence guarantees.",
+      "FullModelConstraintSolver source hash matches current source."
+    ]
+  },
+  "formula": "K*R*2*(Q_complex+Q_solvent)*(2*T*Ipos*Gp+(1+5*T)*Ivel*Gv)",
+  "scenarios": [
+    {
+      "name": "short",
+      "stepsPerWindowIncludingEquilibration": 1000,
+      "equilibrationStepsPerWindow": 500,
+      "productionSampleStride": 5,
+      "statesPerLeg": 16,
+      "repeatPairs": 3,
+      "legs": 2,
+      "windows": 96,
+      "rawSamplesPerWindow": 100,
+      "rawSamplesPerCampaign": 1600,
+      "campaigns": 6,
+      "illustrativeTimestepFs": 2,
+      "timePerWindowNs": "0.002",
+      "aggregateWindowTimeNs": "0.192",
+      "hamiltonianEvaluations": 240096,
+      "integrationStepsAcrossAllWindows": 96000,
+      "constraintProjectionCalls": 672096,
+      "nonHamiltonianPipelineWorkExcludingSolver": 163879820448,
+      "constraintCostSensitivity": [
+        {
+          "label": "one_sweep_assumption",
+          "positionSweepsPerProjection": 1,
+          "velocitySweepsPerProjection": 1,
+          "positionRecords": 52166016000,
+          "velocityRecords": 130441123008,
+          "constraintOnlyGasFraction": "25892251130869714752/377",
+          "constraintOnlyGas": "68679711222466086.87533156498673740053050",
+          "constraintOnlyEth": "1391313.589944717987920466843501326259947",
+          "isLowerOrUpperBound": false
+        },
+        {
+          "label": "repeat_observed_small_fixture_sweep_counts",
+          "positionSweepsPerProjection": 26,
+          "velocitySweepsPerProjection": 29,
+          "positionRecords": 1356316416000,
+          "velocityRecords": 3782792567232,
+          "constraintOnlyGasFraction": "1900978346872739904",
+          "constraintOnlyGas": "1900978346872739904",
+          "constraintOnlyEth": "38510019.350947964975232",
+          "isLowerOrUpperBound": false
+        },
+        {
+          "label": "thirty_two_sweep_assumption",
+          "positionSweepsPerProjection": 32,
+          "velocitySweepsPerProjection": 32,
+          "positionRecords": 1669312512000,
+          "velocityRecords": 4174115936256,
+          "constraintOnlyGasFraction": "828552036187830872064/377",
+          "constraintOnlyGas": "2197750759118914780.010610079575596816976",
+          "constraintOnlyEth": "44522034.87823097561345493899204244031830",
+          "isLowerOrUpperBound": false
+        }
+      ],
+      "completeSimulationGas": null,
+      "completeSimulationEth": null
+    },
+    {
+      "name": "medium",
+      "stepsPerWindowIncludingEquilibration": 100000,
+      "equilibrationStepsPerWindow": 50000,
+      "productionSampleStride": 500,
+      "statesPerLeg": 16,
+      "repeatPairs": 3,
+      "legs": 2,
+      "windows": 96,
+      "rawSamplesPerWindow": 100,
+      "rawSamplesPerCampaign": 1600,
+      "campaigns": 6,
+      "illustrativeTimestepFs": 2,
+      "timePerWindowNs": "0.2",
+      "aggregateWindowTimeNs": "19.2",
+      "hamiltonianEvaluations": 9744096,
+      "integrationStepsAcrossAllWindows": 9600000,
+      "constraintProjectionCalls": 67200096,
+      "nonHamiltonianPipelineWorkExcludingSolver": 16383909932448,
+      "constraintCostSensitivity": [
+        {
+          "label": "one_sweep_assumption",
+          "positionSweepsPerProjection": 1,
+          "velocitySweepsPerProjection": 1,
+          "positionRecords": 5216601600000,
+          "velocityRecords": 13041530083008,
+          "constraintOnlyGasFraction": "2588938266427671826752/377",
+          "constraintOnlyGas": "6867210255776317842.843501326259946949602",
+          "constraintOnlyEth": "139115945.3615166468603236498673740053050",
+          "isLowerOrUpperBound": false
+        },
+        {
+          "label": "repeat_observed_small_fixture_sweep_counts",
+          "positionSweepsPerProjection": 26,
+          "velocitySweepsPerProjection": 29,
+          "positionRecords": 135631641600000,
+          "velocityRecords": 378204372407232,
+          "constraintOnlyGasFraction": "190075769559635555904",
+          "constraintOnlyGas": "190075769559635555904",
+          "constraintOnlyEth": "3850554939.739097091503232",
+          "isLowerOrUpperBound": false
+        },
+        {
+          "label": "thirty_two_sweep_assumption",
+          "positionSweepsPerProjection": 32,
+          "velocitySweepsPerProjection": 32,
+          "positionRecords": 166931251200000,
+          "velocityRecords": 417328962656256,
+          "constraintOnlyGasFraction": "82846024525685498456064/377",
+          "constraintOnlyGas": "219750728184842170970.9920424403183023873",
+          "constraintOnlyEth": "4451710251.568532699530356795755968169761",
+          "isLowerOrUpperBound": false
+        }
+      ],
+      "completeSimulationGas": null,
+      "completeSimulationEth": null
+    },
+    {
+      "name": "long",
+      "stepsPerWindowIncludingEquilibration": 1000000,
+      "equilibrationStepsPerWindow": 500000,
+      "productionSampleStride": 5000,
+      "statesPerLeg": 16,
+      "repeatPairs": 3,
+      "legs": 2,
+      "windows": 96,
+      "rawSamplesPerWindow": 100,
+      "rawSamplesPerCampaign": 1600,
+      "campaigns": 6,
+      "illustrativeTimestepFs": 2,
+      "timePerWindowNs": "2",
+      "aggregateWindowTimeNs": "192",
+      "hamiltonianEvaluations": 96144096,
+      "integrationStepsAcrossAllWindows": 96000000,
+      "constraintProjectionCalls": 672000096,
+      "nonHamiltonianPipelineWorkExcludingSolver": 163838729132448,
+      "constraintCostSensitivity": [
+        {
+          "label": "one_sweep_assumption",
+          "positionSweepsPerProjection": 1,
+          "velocitySweepsPerProjection": 1,
+          "positionRecords": 52166016000000,
+          "velocityRecords": 130415066083008,
+          "constraintOnlyGasFraction": "25889356587307691026752/377",
+          "constraintOnlyGas": "68672033388084061078.91777188328912466844",
+          "constraintOnlyEth": "1391158052.375806909336716222811671087533",
+          "isLowerOrUpperBound": false
+        },
+        {
+          "label": "repeat_observed_small_fixture_sweep_counts",
+          "positionSweepsPerProjection": 26,
+          "velocitySweepsPerProjection": 29,
+          "positionRecords": 1356316416000000,
+          "velocityRecords": 3782036916407232,
+          "constraintOnlyGasFraction": "1900755689675661155904",
+          "constraintOnlyGas": "1900755689675661155904",
+          "constraintOnlyEth": "38505508761.449543696303232",
+          "isLowerOrUpperBound": false
+        },
+        {
+          "label": "thirty_two_sweep_assumption",
+          "positionSweepsPerProjection": 32,
+          "velocitySweepsPerProjection": 32,
+          "positionRecords": 1669312512000000,
+          "velocityRecords": 4173282114656256,
+          "constraintOnlyGasFraction": "828459410793846112856064/377",
+          "constraintOnlyGas": "2197505068418689954525.368700265251989390",
+          "constraintOnlyEth": "44517057676.02582109877491912997347480106",
+          "isLowerOrUpperBound": false
+        }
+      ],
+      "completeSimulationGas": null,
+      "completeSimulationEth": null
+    }
+  ],
+  "unpriced": [
+    "Complete full-scale force and energy evaluations, including reciprocal electrostatics and C4",
+    "Pipeline initialization, atom updates, state imports, snapshots and continuation",
+    "Full model/topology/constraint registration and validation",
+    "Chronology, sample collection/selection, MBAR iterations, diagnostics and repeat uncertainty",
+    "Production decoder integration, repeated input delivery, and target L1 data-posting fees",
+    "Any additional minimization, equilibration, repeats or extensions required for scientific acceptance"
+  ],
+  "limitations": [
+    "These are scaling sensitivities, not live target-chain estimates, funding requirements, confidence intervals, or bounds.",
+    "Constraint gas uses current-source three-atom local fixtures; gas per record and sweeps can differ greatly at full scale.",
+    "Position fixture used work=1, velocity used work=8; no unmeasured batching or calldata savings are applied.",
+    "One sweep is an optimistic scenario, not evidence of convergence. Repeating 26/29 fixture sweeps does not validate large-model convergence.",
+    "The 2fs timestep, 16 states, lengths and 100 samples are engineering illustrations, not an approved or sufficient scientific schedule.",
+    "One constant current gas price is applied across the entire hypothetical campaign; no duration or future fee forecast is implied.",
+    "The earlier approximately 0.15ETH infrastructure plus input-pass subtotal is not a simulation price and is not relabelled as one."
+  ],
+  "sourceHashes": {
+    "output/simulation-cost-scenarios/calculate.py": "e692ddb453ce1478fa2d3dd5ebd10ce64b940dafe07b4f36a909044ee4685929",
+    "output/simulation-cost-scenarios/work-count-review.json": "4348d40f30eca5f5e1d8f62b1689df4e7ebe577d0cb937876cfbbbec149c031a",
+    "output/simulation-cost-scenarios/pricing.json": "2d85d2591b54efd7c9c0f3d1502d2404f0dab6df5af6266fcded04c072e367f6",
+    "ORVIA/reports/full_model_constraints_validation.json": "44665918e5d8052be7f975f1f24420b1f264e585c5cd6983510c41f08442242d",
+    "ORVIA/contracts/core/FullModelConstraintSolver.sol": "178329c41e7b113f7fc387497be6db2e22564c694151889cfc5cc568a56b6167",
+    "ORVIA/contracts/core/MolecularSimulationPipeline.sol": "0a0e37a8c2731babfaeede753a5e12bb513bde6c3d821f72283538f05da93139",
+    "output/full-hybrid-inputs/legs/complex33/catalog-candidate.json": "bdbd360cede4953cf9afe6530c2cd23f9304ea845d23b8f0b834ffb94e94f093",
+    "output/full-hybrid-inputs/legs/solvent33/catalog-candidate.json": "40c9eae3da4f327f8d5a9dde91eac5bf4ac923dc7ebce30c0c58a26570856e2d"
+  },
+  "completeCampaignPriceKnown": false,
+  "scientificAcceptance": false,
+  "mainnetReady": false,
+  "publicTransactionsSent": 0
+}

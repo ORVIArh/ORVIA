@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "publicTransactionsSent": 0,
+  "providerSelectionSource": "https://docs.robinhood.com/chain/connecting/",
+  "attempts": [
+    {
+      "id": "pinax-sequential",
+      "outcome": "intentionally_stopped_incomplete",
+      "successfulRecordedRequests": 128,
+      "completeCollisionCheck": false,
+      "report": "attempts/pinax-sequential.json",
+      "executedSource": "sources/check-pinax-sequential.mjs",
+      "originalPublicPlanFileSha256": "623f21e88ffbce606d5901b30b44487a32257ed28b8cd9a9978a5c7c4c41939f",
+      "note": "Stopped to try bounded prefetch; no pass was recorded."
+    },
+    {
+      "id": "pinax-prefetch",
+      "outcome": "provider_rate_limited",
+      "successfulRecordedRequests": 43,
+      "error": "RPC HTTP429",
+      "prefetch": {
+        "mode": "exact_method_params_cache",
+        "concurrency": 4,
+        "blockNumber": "0x6362087",
+        "blockHash": "0xf97f1b0b10fe605c31d92c83111faa73e2ee6a68e94b9cee5237beeb7925e1bc",
+        "expectedQueries": 512,
+        "fetchedQueries": 39,
+        "consumedQueries": 0,
+        "senderPendingAndFinalBlockNeverCached": true
+      },
+      "retryAfterRecorded": false,
+      "completeCollisionCheck": false,
+      "report": "attempts/pinax-prefetch429.json",
+      "executedSource": "sources/check-pinax-prefetch.mjs",
+      "originalPublicPlanFileSha256": "623f21e88ffbce606d5901b30b44487a32257ed28b8cd9a9978a5c7c4c41939f"
+    },
+    {
+      "id": "official-sequential",
+      "outcome": "intentionally_stopped_incomplete",
+      "successfulRecordedRequests": 288,
+      "completeCollisionCheck": false,
+      "report": "attempts/official-partial.json",
+      "executedSource": "sources/check-official-mainnet.mjs",
+      "note": "Stopped after user authorized a private mainnet provider."
+    },
+    {
+      "id": "alchemy-mainnet",
+      "outcome": "passed_readonly_mainnet_state",
+      "completeCollisionCheck": true,
+      "recordedRequests": 526,
+      "error": null,
+      "report": "mainnet-state-check.json",
+      "executedSource": "sources/check-alchemy-mainnet.mjs",
+      "prefetch": {
+        "mode": "exact_method_params_cache",
+        "concurrency": 4,
+        "blockNumber": "0x6363e99",
+        "blockHash": "0xc88129085fe3320ba3d3bd501dbff2c54925643707ed6a063dccb8ad60d1a0e2",
+        "expectedQueries": 512,
+        "fetchedQueries": 512,
+        "consumedQueries": 512,
+        "senderPendingAndFinalBlockNeverCached": true
+      },
+      "providerHostname": "robinhood-mainnet.g.alchemy.com",
+      "credentialRecorded": false
+    }
+  ]
+}

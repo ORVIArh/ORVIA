@@ -1,0 +1,30 @@
+{
+  "design-rank-audit.json": {
+    "bytes": 1514,
+    "sha256": "c205be153469c5b4f511cdbe8bc38a2fa1aca852d28dc1f885bbafffbab0dfa7"
+  },
+  "gate-status.json": {
+    "bytes": 2397,
+    "sha256": "061156386c8672426f4bb71761110dfb82d5c5dfa1cf42649d31f1df08113bec"
+  },
+  "gpu-gate.json": {
+    "bytes": 25275,
+    "sha256": "b6cbfdf318268549a83a7692e837b52853d03fd9678acfb1333bab769e613b2b"
+  },
+  "gpu-runtime-gate-input.tar.gz": {
+    "bytes": 412990,
+    "sha256": "0e62c5ee2e8077c69e2576714289b940a16cbcd6dd7ea2547b4efdc74881f9a3"
+  },
+  "gpu-scanner-pilot.json": {
+    "bytes": 79396,
+    "sha256": "3401df6a6666a42661f71ec3663010f65897724486939dda33eec25d69b70027"
+  },
+  "h200-runtime-gate-results.tar.gz": {
+    "bytes": 32081,
+    "sha256": "26b747f77532fc01c337f72045173ad69c7d002f2a50463f21c54262873b54ba"
+  },
+  "training-design-proposal.tar.gz": {
+    "bytes": 6173,
+    "sha256": "ffbbff63394b44dd820ef01757eade9a6937f1869d09a082d637f2ed5d403fe6"
+  }
+}

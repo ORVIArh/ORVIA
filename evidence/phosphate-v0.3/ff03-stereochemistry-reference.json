@@ -1,0 +1,43 @@
+{
+  "library": "workspace:tools/envs/preparation/dat/leap/lib/all_amino03.lib",
+  "library_sha256": "322920b36d3fb65e86493fc6346ba61369bbbb011ffdcb988aacc03a38325465",
+  "passed": true,
+  "public_export": {
+    "local_path_prefix_replaced_with": "workspace:",
+    "numerical_fields_unchanged": true,
+    "source_sha256": "52d7e695b9b8766f10aff0d306ecfd6519431fe2714ee31eb1b417e0f8aec3b6"
+  },
+  "rows": [
+    {
+      "ff03_alpha_signed_volume": 0.7537896071468788,
+      "independent_RDKit_alpha_sign": 1,
+      "residue": "ALA"
+    },
+    {
+      "ff03_alpha_signed_volume": 0.7537896071468788,
+      "ff03_beta_signed_volume": 0.7698119526878259,
+      "independent_RDKit_alpha_sign": 1,
+      "independent_RDKit_beta_sign": 1,
+      "residue": "THR"
+    },
+    {
+      "ff03_alpha_signed_volume": 0.7617581864570068,
+      "ff03_beta_signed_volume": 0.7698108985571284,
+      "independent_RDKit_alpha_sign": 1,
+      "independent_RDKit_beta_sign": 1,
+      "residue": "ILE"
+    },
+    {
+      "ff03_alpha_signed_volume": 0.7537896071468788,
+      "independent_RDKit_alpha_sign": 1,
+      "residue": "LYS"
+    },
+    {
+      "ff03_alpha_signed_volume": 0.7537896071468788,
+      "independent_RDKit_alpha_sign": 1,
+      "residue": "PHE"
+    }
+  ],
+  "schema": "orvia.stereochemistry-reference-check.v1",
+  "scientific_acceptance": false
+}

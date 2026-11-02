@@ -1,0 +1,32 @@
+{
+  "checkedAtUtc": "2026-11-02T13:59:13.007Z",
+  "chainId": 4663,
+  "providerHostname": "robinhood-mainnet.g.alchemy.com",
+  "blockNumber": "0x63703d7",
+  "blockHash": "0x1d9ddba3dcdf5aadafcccf62c3bdeabe4c5c61c8ce6d2e075ef2f3a733eb0303",
+  "gasPriceWei": "20148000",
+  "ethUsd": "2286.015",
+  "ethUsdSource": "https://api.coinbase.com/v2/prices/ETH-USD/spot",
+  "coinbaseResponseSha256": "a0e3ea76c0297f8fdbf86b361ccdb0ce16851ab0e5a2f38378e97c0292fb9908",
+  "rpcCalls": [
+    {
+      "id": 1,
+      "method": "eth_chainId",
+      "requestSha256": "09fabe0af56b7726f1666ddd147482df4d951f86f66124b936716c53ab0e8471",
+      "responseSha256": "1fb0f19b45a4203bd13cb5be1e8ad3aa569f42905377cd4643fc8bc07ecd3aa3"
+    },
+    {
+      "id": 3,
+      "method": "eth_gasPrice",
+      "requestSha256": "ab41cc9c1bab88ee00ba9e0b999a4df904f5192fe5742910e4398c79452b8b66",
+      "responseSha256": "bc33d11dec3c88ab972495ec336e3404555542b94739505996f9431a45aee095"
+    },
+    {
+      "id": 2,
+      "method": "eth_getBlockByNumber",
+      "requestSha256": "ea099c30d3683d74a056405807b4ab857a06189f3e4702981d75935407ac986e",
+      "responseSha256": "ec0c7bca7e3d7491096e29255a36c239d1ffb68957fa22bc457ca098293186e3"
+    }
+  ],
+  "transactionsSent": 0
+}

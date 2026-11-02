@@ -1,0 +1,54 @@
+{
+  "baseline_source_sha256": "e9b600dbb007e1d6f479db23eea48316eadc21b4333ca9f0a37c5712a92a30ee",
+  "candidate_source_sha256": "a90eb8f88c0d2fdd7a6478a74510e88589099a5c79d3cd359443d363b847596b",
+  "canonical_source_changed": false,
+  "conditions": [
+    "Use finite registered topology values: positive sigma, nonnegative epsilon/prefactor, positive alpha/cutoff and alpha*cutoff<=16.",
+    "All box lengths, already-consumed position component magnitudes, interpolated charge magnitudes and both endpoint sigma/epsilon magnitudes<=2^256 for every atom before enabling shortcut.",
+    "Execute identical periodic displacement and identical ordered x/y/z FloatMath squared norm, sqrt and distance>=cutoff comparison.",
+    "Do not change exceptions, pair order, inside-cutoff behavior or ineligible legacy fallback."
+  ],
+  "critical_traps": [
+    {
+      "case": "underflow_norm_active_LJ",
+      "reason": "r=2^-9000 and cutoff=2^-8999 both square to zero. Squared-cutoff comparison could skip legacy ZeroSeparation; retained sqrt comparison falls through."
+    },
+    {
+      "case": "anisotropic_huge_box_inactive_legacy_success",
+      "reason": "Box[2^9000,2^-9000,1] has ordered volume1. Inactive ordinary pair with dx=2^8500 skips overflowing norm in legacy and full evaluation succeeds. Guard must disable eager norm."
+    },
+    {
+      "case": "epsilon_product_overflow_fallback",
+      "reason": "epsilon2^8192 product overflows during legacy particle mixing before cutoff; unsafe fallback preserves failure."
+    },
+    {
+      "case": "sigma_sum_overflow_fallback",
+      "reason": "Two sigma2^16383 values overflow their sum before division; unsafe fallback preserves failure."
+    }
+  ],
+  "evaluator_executed": false,
+  "finite_bounds": {
+    "charge_product": "<=2^512",
+    "epsilon_product": "<=2^512",
+    "minimum_image_component": "<=2^255",
+    "ordered_squared_norm": "<2^512",
+    "sigma_sum": "<=2^257"
+  },
+  "fixture_hashes": {
+    "cases.json": "3f367cd1d62c41454d29b289d576d7df9158d2fe83b791e8143d5343b496455d",
+    "extended-cases.json": "fbbe6569d202d4a8bfaa4f349de44e99b55e27ab8c0a2dc9390116b7c1b81692",
+    "generate_cases.py": "712f6d615b083856588d741644fe438a00657c3da5ffb41c824404bce7d3d5d8"
+  },
+  "material_counterexample_found": false,
+  "performance_limitations": [
+    "While eligible, up to4additional nonbonded scalar reads per atom. No new atom position reads.",
+    "Eligible ordinary pairs inside cutoff duplicate norm/sqrt before the unchanged legacy path.",
+    "Any unsafe atom disables the optimization for the entire evaluation.",
+    "No full-model gas, target-chain fee, scientific-quality or production-approval claim follows from source review."
+  ],
+  "review_kind": "Independent read-only source/mathematical review; generated fixtures were structurally checked but not executed.",
+  "schema": "orvia.outside-cutoff-guard-review.v1",
+  "scientific_optimizer_run": false,
+  "source_observation": "Candidate reuses position/q read in existingAtoms stage; additional endpoint sigma/epsilon checks short-circuit when eligibility becomes false. Candidate bounds are bitwise magnitude comparisons to exact0x40ff0000000000000000000000000000. Exceptions remain unchanged.",
+  "writes_limited_to": "/Users/abhijith/Documents/ChatGPT/AURA/output/256-pair-optimization/cases"
+}

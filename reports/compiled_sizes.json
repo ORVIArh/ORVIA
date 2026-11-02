@@ -17,7 +17,7 @@
       }
     }
   },
-  "scope": "Experimental molecular numerics, alternative resumable dynamics and analysis components; no integrated production RBFE system, mainnet deployment or complete 64-slot implementation.",
+  "scope": "Experimental molecular numerics and the 256-address development prototype; no scientifically accepted production RBFE system or mainnet deployment.",
   "targetChainId": 4663,
   "documentedLimitsSource": "https://docs.robinhood.com/chain/differences-from-ethereum/",
   "constructorArgumentsIncludedInSizes": false,
@@ -26,7 +26,11 @@
     "contracts/analysis/ReducedPotentialCollector.sol": "87b5e30940220d30733252d51e64c37d222e0b52a5178c91f1df424f647a1fad",
     "contracts/analysis/SamplingDiagnostics.sol": "2ae107854eddc1bbb1659bace5abe0bf0e4010645fe219a0a5bac67073c5efb3",
     "contracts/analysis/TimeSeriesDiagnostics.sol": "b0a6ec90fc2a645a59a73f71c3885234f38eaec0b812552a7b1ff16efd101794",
-    "contracts/analysis/UncertaintyAndResults.sol": "91e5c891c836c662e6e3815f4d6e273b07d957cb00a5b5996bb8be407187c80e",
+    "contracts/analysis/UncertaintyAndResults.sol": "5c405ec23b23d916de5bdf7feae8b4f975cc4432323be47fdb4e9a3f605cf66b",
+    "contracts/core/AlchemicalHamiltonianEvaluator.sol": "0bc4672ea4f92688e0707a5bbed36aed594eef02f013f35e68bfbd4d33e56806",
+    "contracts/core/AlchemicalTopologyCatalog.sol": "f92337cf81ad28b0cf9842d3a34a8a119836aa5ed30698c681d621ff69ae362c",
+    "contracts/core/BankedInputCatalog.sol": "d956dd672852dc76fdc064bb6fecca55cc584ba7125df4b566b31bef9440c16b",
+    "contracts/core/BankedWorkingState.sol": "ed9fcee0659e2ed7dd9d90682e77bfd3aacc9056d17a0b62041cbc1947f99fe0",
     "contracts/core/ConstrainedDynamicsCoordinator.sol": "b4b257bc6f75b7c3650a678f4949a1a824e59f228ca0de4f35ba1d391c1100cb",
     "contracts/core/ConstraintCatalog.sol": "5556f2331b6f6c933b04689df091ae3f481713c1b3b4c8676c1d4ce99cf5d295",
     "contracts/core/ConstraintSolver.sol": "fb07f0e9048a57a5d75e7e4684d3a04ead9f465916a614245ca3c4d477696d01",
@@ -37,15 +41,24 @@
     "contracts/core/EwaldDynamicsCoordinator.sol": "48f9b079bffc46ab69245f858022ea4b7f7b0f9f507478e57b8b2a1d61dab1d4",
     "contracts/core/EwaldForceEvaluator.sol": "f2b8a2a42820cb1915cf484ef4d39bc60f4194a1e562cc2f1d99e61c92e3c025",
     "contracts/core/ExperimentRegistry.sol": "39c3e8382b3fae049c16da81b1ea586e36deaa5ecbbda466b8377e240f78f047",
+    "contracts/core/FullModelConstraintCatalog.sol": "8ef6428c5f2783fbfdee8d752d2f2406d8cac06207f490f73cba2bc8203e3c6d",
+    "contracts/core/FullModelConstraintSolver.sol": "178329c41e7b113f7fc387497be6db2e22564c694151889cfc5cc568a56b6167",
     "contracts/core/LangevinDynamicsCoordinator.sol": "280b9baf7db089a91d5fb9c47d951140a176bfe7f00599ce8aea787363f5eb3f",
+    "contracts/core/MolecularSimulationPipeline.sol": "0a0e37a8c2731babfaeede753a5e12bb513bde6c3d821f72283538f05da93139",
     "contracts/core/NeighborDynamicsCoordinator.sol": "28c24ac832cf8a419519c45824ae2ebbcd3b2b490f3d6fa26017e088766559c4",
     "contracts/core/NeighborList.sol": "ba4a3bb8b34b03fb94e541eb0ea0634dc9c00c4fa146314e6cb787d919de35d4",
+    "contracts/core/OrderedNeighborPairs.sol": "1133a7b059696623cc466f173ac1d6559dcc5afb80088ce7028c792af728c383",
     "contracts/core/PagedBondCoordinator.sol": "b3cf7b4f8e118caf12be9564b92df9ec8756e3c8d9da8b320e9b4873192a6164",
+    "contracts/core/PartitionedInputCatalog.sol": "e46ed09f4547af8f9247b17917286f6d0cdf7af39ecad899e526146c3e6a1ee5",
+    "contracts/core/PeriodicCellIndex.sol": "0c3b70b0a9f277be4087556b5ac200cb602e2f18fb90d16a272d30de9d234027",
     "contracts/core/PeriodicDataset.sol": "1d01a1a4525f637b70781a8264f80e83e8c6686f0d33068b25446ff208fddb6e",
     "contracts/core/PeriodicDynamicsCoordinator.sol": "e5a2da4daa285563e4ecfdc3dc4d0ead3bdbaf35dd6fc4ccb9212173e6276c3f",
     "contracts/core/PeriodicMinimizer.sol": "48771b706224c06bfd6e9c7c7f82a6ec518f348ab007bed1f4701bcaa1cd69b9",
     "contracts/core/ResumableBondEngine.sol": "02d2098c3250c27c4c7fcc26dc1e7afa5151d83220662fc7864dec2dabe61984",
+    "contracts/core/ShardedWorkingState.sol": "10063a76f18f3e52a107adba5855da044a33914d8423a2ce4f1c1db870e2adb9",
     "contracts/core/WorkingStatePage.sol": "47441435615ea985ab4b4db97d10efc39da8c945823d38e651c7f454e3c2137a",
+    "contracts/interfaces/IMolecularCampaignSource.sol": "845ec6a325995a24583570d1448826293c05b6aa06b5050d1eff8a1c96293168",
+    "contracts/kernels/C4PairKernel.sol": "5b6f440d06375640229e7eecb453059b01fba8ca3f7aefcff76b58adb327214b",
     "contracts/kernels/CoulombPairKernel.sol": "4640f583410bbf6e24d10f6df5b5bb8cae1a4a98aace7f979144375596bbdc93",
     "contracts/kernels/CounterRandom.sol": "98f38ee2e2962858ac681565b369a2a983f8aecd7b8188a9b191a4a4c5954190",
     "contracts/kernels/DistanceConstraintKernel.sol": "c5d05a76366559595f7c81617c6c65d72938a64eb12ba43708961c8f65756e37",
@@ -53,6 +66,11 @@
     "contracts/kernels/EwaldKernelBase.sol": "c9f44e1dbf573ad9505e886e0f3854c2ffda850e3a0fd0b08c22563f23031a17",
     "contracts/kernels/EwaldRealSpaceKernel.sol": "f4ceec084d7131de3141ad0f8be06dd1ff6dfa722d6499740af9de7cd431ebf1",
     "contracts/kernels/EwaldReciprocalKernel.sol": "7225171a789fdf4ced5256b293a428138e27c4c2dbe73eea5f22a52af94ec1bf",
+    "contracts/kernels/Fixed96EwaldRealSpaceKernel.sol": "d2a4c9287b5799275f1a792a39fa900810acf267164582f17be0c19a7375872c",
+    "contracts/kernels/Fixed96EwaldReciprocalKernel.sol": "91736ca32c7a2b08daf978aa7c39cb428324925f414ec0bb10484be6443a1467",
+    "contracts/kernels/Fixed96LennardJonesKernel.sol": "cc01b77c4ebe261be6c86eb7c3e58c6495ff6b5fc977878c2fd1daf910f070e9",
+    "contracts/kernels/Fixed96SoftcoreLennardJonesKernel.sol": "2672972f4ba8c666a965459fcbf23e9350a39e009cba17fd5927ff0e8e30d250",
+    "contracts/kernels/FixedPointNonbondedKernel.sol": "20da03e08acfde6726a33cc6138dd345881289b2f4dafc52222e5b0c0ebfd466",
     "contracts/kernels/HarmonicAngleKernel.sol": "d525eeecc8625d1e05112dc2977a91fe1d688d7585f99d08151cdc73fa2cbe09",
     "contracts/kernels/HarmonicBondKernel.sol": "cbb2b99181ab7eec4a07dca99734e9ab2a3fa6ae4bd61b39d3a7bc6ef0f63108",
     "contracts/kernels/InlineNonbondedKernel.sol": "b72e7aebb809f72f8053bcecc4871c4cf06f4f4bf85fea43c76312226bde0451",
@@ -65,14 +83,21 @@
     "contracts/kernels/SwitchedNonbondedKernel.sol": "4755fd13b34f2d60b1ea545b79f9a74403e3cd424d6392d357d0a8e2b8d48ac3",
     "contracts/kernels/VelocityVerletKernel.sol": "0a1d7735e81e7c11c88f296cadc4044d4f07223fa22d45cfecaf37ed41da4d73",
     "contracts/math/ElementaryMath.sol": "9965604b32c46748605948c58f092ead3911e231baf39e7d4bea02beb3200062",
+    "contracts/math/Fixed96EwaldMath.sol": "f2a415768478fdf951d83d6f880ba98af50b9fa25382c6bb072b1189cff4775f",
+    "contracts/math/Fixed96Math.sol": "10ef8e2d4db52cd9e317e3aba08db3cc4f21e8cc5ea6e03622619c9010582830",
     "contracts/math/FloatMath.sol": "a474f7656f9ffc3d3149e6a0e08f2fcf6838483ae689d1e6a7cf7400f8bad74b",
     "contracts/math/ScalarMath.sol": "fd95d9e52db57f772946d1eff8d3c9b0e2518fdbdadb033160f4b5678df13f58",
     "contracts/math/vendor/ABDKMathQuad.sol": "dd13f72bf828a699c94e96d1377daabce3dcc1d4b29af7215501a611d3cb7c9e",
     "test/contracts/AnalysisWriterHarness.sol": "7b85cfb2cae4e780b714e8ab8fe0cefb8b3587c36aa1b20ee6a9ed8bed3a4fcd",
     "test/contracts/ConstraintHarness.sol": "cc92af67b0bea92d3f5d6cf834f2142c74122b88b345afec47bdcba4cd43655a",
+    "test/contracts/FullModelConstraintHarness.sol": "b9ff7a2f4a07dc04a29a4fc61303ccedbad96f53b1c0d925b7043591060cabba",
     "test/contracts/InlineKernelIdentityHarness.sol": "ed1a6e505c8bc07fb74309818ddbd547382bb45c4f4606498b86eb22fbc2304e",
     "test/contracts/NeighborListHarness.sol": "c61ac09e0152f7c10331ce3f63040f97037ebb92c80c0f8300544a1bf5d63ff1",
+    "test/contracts/OrderedPairOwnerHarness.sol": "d9e5186a33d5fbbe2fc49862a3e673b68e8b51d542f7c0ff0c30334156e7f385",
     "test/contracts/PairWorkMeter.sol": "13fb7d20185c41c8cd58db81f6efd33db8908b673d9e6814128d2c2b207fed8e",
+    "test/contracts/PeriodicCellOracleHarness.sol": "414a709f151505232bcf46bef5474349279548c39f5114a1bc4210511fcfd8e7",
+    "test/contracts/ShardedStateForceHarness.sol": "cdf84a93be5e3ca80271bb0dee7fd756f18cb481079713d82775ac3aa5fcce06",
+    "test/contracts/StaticCallWorkMeter.sol": "229429863c293b031767731ec1e5f19f2a993e524adc0516e100bcec956953ce",
     "test/contracts/TimeSeriesWriterHarness.sol": "49eb284d631f0c3e7520ca869d832d46a1be38d5019b45c83fd5a66509e20383",
     "test/contracts/WorkingStateWriterHarness.sol": "f478b004274aaa2b515f2a6b30344d904e0c837a698d7b188cd66f47517d460f"
   },
@@ -126,8 +151,89 @@
       "name": "UncertaintyAndResults",
       "file": "contracts/analysis/UncertaintyAndResults.sol",
       "testOnly": false,
-      "creationBytes": 10157,
-      "runtimeBytes": 9040,
+      "creationBytes": 14388,
+      "runtimeBytes": 13222,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "AlchemicalHamiltonianEvaluator",
+      "file": "contracts/core/AlchemicalHamiltonianEvaluator.sol",
+      "testOnly": false,
+      "creationBytes": 37038,
+      "runtimeBytes": 34449,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IProductionMathIdentity",
+      "file": "contracts/core/AlchemicalHamiltonianEvaluator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IProductionWordState",
+      "file": "contracts/core/AlchemicalHamiltonianEvaluator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "AlchemicalTopologyCatalog",
+      "file": "contracts/core/AlchemicalTopologyCatalog.sol",
+      "testOnly": false,
+      "creationBytes": 16167,
+      "runtimeBytes": 15261,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IAlchemicalInputStreams",
+      "file": "contracts/core/AlchemicalTopologyCatalog.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "BankedInputCatalog",
+      "file": "contracts/core/BankedInputCatalog.sol",
+      "testOnly": false,
+      "creationBytes": 7694,
+      "runtimeBytes": 7386,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "InputWordBank",
+      "file": "contracts/core/BankedInputCatalog.sol",
+      "testOnly": false,
+      "creationBytes": 1933,
+      "runtimeBytes": 1646,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "BankedStateStorageBank",
+      "file": "contracts/core/BankedWorkingState.sol",
+      "testOnly": false,
+      "creationBytes": 2558,
+      "runtimeBytes": 2310,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "BankedWorkingState",
+      "file": "contracts/core/BankedWorkingState.sol",
+      "testOnly": false,
+      "creationBytes": 9960,
+      "runtimeBytes": 9467,
       "fitsDocumentedRobinhoodCodeLimit": true,
       "creationCodeWithinDocumentedInitLimit": true
     },
@@ -393,6 +499,51 @@
       "creationCodeWithinDocumentedInitLimit": true
     },
     {
+      "name": "FullModelConstraintCatalog",
+      "file": "contracts/core/FullModelConstraintCatalog.sol",
+      "testOnly": false,
+      "creationBytes": 8338,
+      "runtimeBytes": 7514,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IConstraintInputStreams",
+      "file": "contracts/core/FullModelConstraintCatalog.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "FullModelConstraintSolver",
+      "file": "contracts/core/FullModelConstraintSolver.sol",
+      "testOnly": false,
+      "creationBytes": 19049,
+      "runtimeBytes": 17792,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IConstraintPipeline",
+      "file": "contracts/core/FullModelConstraintSolver.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IConstraintState",
+      "file": "contracts/core/FullModelConstraintSolver.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
       "name": "ILangevinDynamicsAngleKernel",
       "file": "contracts/core/LangevinDynamicsCoordinator.sol",
       "testOnly": false,
@@ -497,6 +648,15 @@
       "testOnly": false,
       "creationBytes": 29383,
       "runtimeBytes": 26358,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "MolecularSimulationPipeline",
+      "file": "contracts/core/MolecularSimulationPipeline.sol",
+      "testOnly": false,
+      "creationBytes": 42616,
+      "runtimeBytes": 40945,
       "fitsDocumentedRobinhoodCodeLimit": true,
       "creationCodeWithinDocumentedInitLimit": true
     },
@@ -609,11 +769,47 @@
       "creationCodeWithinDocumentedInitLimit": true
     },
     {
+      "name": "OrderedNeighborPairs",
+      "file": "contracts/core/OrderedNeighborPairs.sol",
+      "testOnly": false,
+      "creationBytes": 5611,
+      "runtimeBytes": 5037,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
       "name": "PagedBondCoordinator",
       "file": "contracts/core/PagedBondCoordinator.sol",
       "testOnly": false,
       "creationBytes": 9610,
       "runtimeBytes": 8624,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "PartitionedInputCatalog",
+      "file": "contracts/core/PartitionedInputCatalog.sol",
+      "testOnly": false,
+      "creationBytes": 8649,
+      "runtimeBytes": 8450,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "ICellSnapshotWords",
+      "file": "contracts/core/PeriodicCellIndex.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "PeriodicCellIndex",
+      "file": "contracts/core/PeriodicCellIndex.sol",
+      "testOnly": false,
+      "creationBytes": 20111,
+      "runtimeBytes": 13564,
       "fitsDocumentedRobinhoodCodeLimit": true,
       "creationCodeWithinDocumentedInitLimit": true
     },
@@ -843,11 +1039,47 @@
       "creationCodeWithinDocumentedInitLimit": true
     },
     {
+      "name": "ShardedWorkingState",
+      "file": "contracts/core/ShardedWorkingState.sol",
+      "testOnly": false,
+      "creationBytes": 8357,
+      "runtimeBytes": 8031,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "VersionedStateShard",
+      "file": "contracts/core/ShardedWorkingState.sol",
+      "testOnly": false,
+      "creationBytes": 2041,
+      "runtimeBytes": 1909,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
       "name": "WorkingStatePage",
       "file": "contracts/core/WorkingStatePage.sol",
       "testOnly": false,
       "creationBytes": 2689,
       "runtimeBytes": 2478,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IMolecularCampaignSource",
+      "file": "contracts/interfaces/IMolecularCampaignSource.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "C4PairKernel",
+      "file": "contracts/kernels/C4PairKernel.sol",
+      "testOnly": false,
+      "creationBytes": 3845,
+      "runtimeBytes": 3644,
       "fitsDocumentedRobinhoodCodeLimit": true,
       "creationCodeWithinDocumentedInitLimit": true
     },
@@ -920,6 +1152,51 @@
       "testOnly": false,
       "creationBytes": 11339,
       "runtimeBytes": 10653,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "Fixed96EwaldRealSpaceKernel",
+      "file": "contracts/kernels/Fixed96EwaldRealSpaceKernel.sol",
+      "testOnly": false,
+      "creationBytes": 3721,
+      "runtimeBytes": 3693,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "Fixed96EwaldReciprocalKernel",
+      "file": "contracts/kernels/Fixed96EwaldReciprocalKernel.sol",
+      "testOnly": false,
+      "creationBytes": 4923,
+      "runtimeBytes": 4895,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "Fixed96LennardJonesKernel",
+      "file": "contracts/kernels/Fixed96LennardJonesKernel.sol",
+      "testOnly": false,
+      "creationBytes": 2521,
+      "runtimeBytes": 2493,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "Fixed96SoftcoreLennardJonesKernel",
+      "file": "contracts/kernels/Fixed96SoftcoreLennardJonesKernel.sol",
+      "testOnly": false,
+      "creationBytes": 3282,
+      "runtimeBytes": 3254,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "FixedPointNonbondedKernel",
+      "file": "contracts/kernels/FixedPointNonbondedKernel.sol",
+      "testOnly": false,
+      "creationBytes": 3955,
+      "runtimeBytes": 3927,
       "fitsDocumentedRobinhoodCodeLimit": true,
       "creationCodeWithinDocumentedInitLimit": true
     },
@@ -1041,6 +1318,24 @@
       "creationCodeWithinDocumentedInitLimit": true
     },
     {
+      "name": "Fixed96EwaldMath",
+      "file": "contracts/math/Fixed96EwaldMath.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "Fixed96Math",
+      "file": "contracts/math/Fixed96Math.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
       "name": "FloatMath",
       "file": "contracts/math/FloatMath.sol",
       "testOnly": false,
@@ -1086,6 +1381,24 @@
       "creationCodeWithinDocumentedInitLimit": true
     },
     {
+      "name": "FullModelConstraintHarness",
+      "file": "test/contracts/FullModelConstraintHarness.sol",
+      "testOnly": true,
+      "creationBytes": 2507,
+      "runtimeBytes": 2430,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "FullModelConstraintMetadataHarness",
+      "file": "test/contracts/FullModelConstraintHarness.sol",
+      "testOnly": true,
+      "creationBytes": 1640,
+      "runtimeBytes": 1474,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
       "name": "ForgedFloatMathIdentity",
       "file": "test/contracts/InlineKernelIdentityHarness.sol",
       "testOnly": true,
@@ -1113,11 +1426,47 @@
       "creationCodeWithinDocumentedInitLimit": true
     },
     {
+      "name": "OrderedPairOwnerHarness",
+      "file": "test/contracts/OrderedPairOwnerHarness.sol",
+      "testOnly": true,
+      "creationBytes": 1044,
+      "runtimeBytes": 1016,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
       "name": "PairWorkMeter",
       "file": "test/contracts/PairWorkMeter.sol",
       "testOnly": true,
       "creationBytes": 1562,
       "runtimeBytes": 1346,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "PeriodicCellOracleHarness",
+      "file": "test/contracts/PeriodicCellOracleHarness.sol",
+      "testOnly": true,
+      "creationBytes": 1815,
+      "runtimeBytes": 1787,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "ShardedStateForceHarness",
+      "file": "test/contracts/ShardedStateForceHarness.sol",
+      "testOnly": true,
+      "creationBytes": 4252,
+      "runtimeBytes": 4224,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "StaticCallWorkMeter",
+      "file": "test/contracts/StaticCallWorkMeter.sol",
+      "testOnly": true,
+      "creationBytes": 923,
+      "runtimeBytes": 895,
       "fitsDocumentedRobinhoodCodeLimit": true,
       "creationCodeWithinDocumentedInitLimit": true
     },
@@ -1141,9 +1490,11 @@
     }
   ],
   "warnings": [
+    "Warning: Contract code size is 34449 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries.\n  --> contracts/core/AlchemicalHamiltonianEvaluator.sol:37:1:\n   |\n37 | contract AlchemicalHamiltonianEvaluator {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n",
     "Warning: Contract code size is 35808 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries.\n  --> contracts/core/ConstrainedDynamicsCoordinator.sol:65:1:\n   |\n65 | contract ConstrainedDynamicsCoordinator {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n",
     "Warning: Contract code size is 30938 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries.\n  --> contracts/core/EwaldDynamicsCoordinator.sol:28:1:\n   |\n28 | contract EwaldDynamicsCoordinator {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n",
     "Warning: Contract code size is 26358 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries.\n  --> contracts/core/LangevinDynamicsCoordinator.sol:73:1:\n   |\n73 | contract LangevinDynamicsCoordinator {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n",
+    "Warning: Contract code size is 40945 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries.\n  --> contracts/core/MolecularSimulationPipeline.sol:23:1:\n   |\n23 | contract MolecularSimulationPipeline {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n",
     "Warning: Contract code size is 27792 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries.\n  --> contracts/core/PeriodicMinimizer.sol:56:1:\n   |\n56 | contract PeriodicMinimizer {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n"
   ]
 }

@@ -1,0 +1,14 @@
+{
+  "allPayloadHashesIndependentlyVerifiedFromZip": true,
+  "archiveFileName": "full-hybrid-inputs-static-20261102T110015Z.zip",
+  "bytes": 153788213,
+  "includedInGit": false,
+  "manifestSha256": "01c2289a998b6bdbdc64c81872610e6faecb9d81d16a40af33e93792c6662e9c",
+  "payloadFiles": 214,
+  "productionReady": false,
+  "rawAssetsIncludedInGit": false,
+  "requiredNativeInputFiles": 18,
+  "schema": "orvia.full-hybrid-local-archive-location.v1",
+  "scientificAcceptance": false,
+  "sha256": "77eb30f09c5397fb0a58ea176bd7048173ba77fc432c3a6a9a3a3256eaec78af"
+}

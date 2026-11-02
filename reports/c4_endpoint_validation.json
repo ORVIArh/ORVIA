@@ -1,0 +1,462 @@
+{
+  "compactC4Export": {
+    "bytes": 20348,
+    "path": "evidence/full-hybrid-inputs/historical/current/c4-export-compact.json",
+    "sha256": "2eda4d6ffb3b70223e3acd8d43229e18e9e439bdd09c8e606a2d858c6bdeaaa8"
+  },
+  "coverage": {
+    "integratorSteps": 0,
+    "nativeGpuForceComponentsChecked": 2392803,
+    "nativeGpuStaticQueries": 6,
+    "referenceForceComponentsChecked": 180,
+    "referenceSmallFixtures": 8,
+    "referenceStaticQueries": 16
+  },
+  "gates": {
+    "alchemicalC4PolicyAccepted": false,
+    "constraintDynamicsAccepted": false,
+    "dynamicsPerformed": false,
+    "fullCompositionExecutable": false,
+    "lambdaScheduleSelected": false,
+    "mainnetTransactionsSent": 0,
+    "optimizerRestarted": false,
+    "productionReady": false,
+    "scientificAcceptance": false
+  },
+  "hybridInactiveC4Activity": null,
+  "lambdaC4Policy": null,
+  "lrcFormula": "-4*pi*N/(N+1) * [sum_i Ni(Ni+1)/2*Cii + sum_i<j NiNj*Cij] / (V*rc); no switching or interaction groups; exclusions not removed",
+  "maximumNativeEnergyAbsoluteErrorKjMol": 0.0001279657228110409,
+  "maximumNativeForceAbsoluteErrorKjMolNm": 0.002275326199459471,
+  "nativeCases": [
+    {
+      "LRC": false,
+      "actualGpuEnergyKjMol": -211.06695264577866,
+      "allExceptionExclusions": 186900,
+      "atoms": 132935,
+      "cutoffNm": null,
+      "device": {
+        "platform": "OpenCL",
+        "properties": {
+          "DeviceIndex": "0",
+          "DeviceName": "Apple M5",
+          "DisablePmeStream": "false",
+          "OpenCLPlatformIndex": "0",
+          "OpenCLPlatformName": "Apple",
+          "Precision": "single",
+          "UseCpuPme": "false"
+        },
+        "secondsIncludingContext": 1.2300943750306033,
+        "stepsIntegrated": 0
+      },
+      "endpoint": "B",
+      "energyError": 0.00012311850088053689,
+      "energyTolerance": 0.005222341515285591,
+      "failedForceComponents": 0,
+      "forceComponentsChecked": 398805,
+      "fullForceArtifact": {
+        "includedInGit": false,
+        "path": "attempts/20261102T110015.135942Z/B-NoCutoff.npz",
+        "sha256": "2a2204db653ebb057a54257ba91dd86966ed93301a58c23fd322f9b84385de5e"
+      },
+      "maxForceError": 0.0022149998083236255,
+      "method": "NoCutoff",
+      "oracleDirectEnergyKjMol": "-211.0670757642795370076741425441033112286696265429986824079769238095016776554700565200360247222149947",
+      "oracleLrcEnergyKjMol": "0.0",
+      "oracleTotalEnergyKjMol": "-211.0670757642795370076741425441033112286696265429986824079769238095016776554700565200360247222149947",
+      "pairDomain": {
+        "MgPhysicalIndex": 12132,
+        "includedPairs": 52479,
+        "minimumSquaredCutoffMarginNm2": null,
+        "nativeMgMgCoefficientKjNm4": 0.0018483776169520003,
+        "nonzeroMgPairsBeforeCutoff": 52479,
+        "physicalSelfPairAbsentButNativeLrcClassSelfTermRetained": true
+      },
+      "passed": true,
+      "periodic": false,
+      "source": "Exact native B importer frame",
+      "switching": false
+    },
+    {
+      "LRC": true,
+      "actualGpuEnergyKjMol": -206.81893106613717,
+      "allExceptionExclusions": 186900,
+      "atoms": 132935,
+      "cutoffNm": 1.0,
+      "device": {
+        "platform": "OpenCL",
+        "properties": {
+          "DeviceIndex": "0",
+          "DeviceName": "Apple M5",
+          "DisablePmeStream": "false",
+          "OpenCLPlatformIndex": "0",
+          "OpenCLPlatformName": "Apple",
+          "Precision": "single",
+          "UseCpuPme": "false"
+        },
+        "secondsIncludingContext": 0.6108527909964323,
+        "stepsIntegrated": 0
+      },
+      "endpoint": "B",
+      "energyError": 0.00011642282237289692,
+      "energyTolerance": 0.005555384604083886,
+      "failedForceComponents": 0,
+      "forceComponentsChecked": 398805,
+      "fullForceArtifact": {
+        "includedInGit": false,
+        "path": "attempts/20261102T110015.135942Z/B-CutoffPeriodic1nm_LRC.npz",
+        "sha256": "dddd480daa09c364eda811662118ec2523f1f2b2e405f3eb67672aff095fe435"
+      },
+      "maxForceError": 0.002186724832370146,
+      "method": "CutoffPeriodic1nm_LRC",
+      "oracleDirectEnergyKjMol": "-185.9188647737248162736226146660971354071644825580819525908423155652679272501434650494974995292454568",
+      "oracleLrcEnergyKjMol": "-20.9001827152347359702729484444583003460101373213316042884617205622351751887915086849773346310860982",
+      "oracleTotalEnergyKjMol": "-206.8190474889595522438955631105554357531746198794135568793040361275031024389349737344748341528625857",
+      "pairDomain": {
+        "MgPhysicalIndex": 12132,
+        "includedPairs": 430,
+        "minimumSquaredCutoffMarginNm2": "0.000163549999999991020160905463401",
+        "nativeMgMgCoefficientKjNm4": 0.0018483776169520003,
+        "nonzeroMgPairsBeforeCutoff": 52479,
+        "physicalSelfPairAbsentButNativeLrcClassSelfTermRetained": true
+      },
+      "passed": true,
+      "periodic": true,
+      "source": "Exact native B importer frame",
+      "switching": false
+    },
+    {
+      "LRC": false,
+      "actualGpuEnergyKjMol": -185.918736808002,
+      "allExceptionExclusions": 186900,
+      "atoms": 132935,
+      "cutoffNm": 1.0,
+      "device": {
+        "platform": "OpenCL",
+        "properties": {
+          "DeviceIndex": "0",
+          "DeviceName": "Apple M5",
+          "DisablePmeStream": "false",
+          "OpenCLPlatformIndex": "0",
+          "OpenCLPlatformName": "Apple",
+          "Precision": "single",
+          "UseCpuPme": "false"
+        },
+        "secondsIncludingContext": 0.1377926249988377,
+        "stepsIntegrated": 0
+      },
+      "endpoint": "B",
+      "energyError": 0.0001279657228110409,
+      "energyTolerance": 0.004719377295474497,
+      "failedForceComponents": 0,
+      "forceComponentsChecked": 398805,
+      "fullForceArtifact": {
+        "includedInGit": false,
+        "path": "attempts/20261102T110015.135942Z/B-CutoffPeriodic1nm_noLRC.npz",
+        "sha256": "dddd480daa09c364eda811662118ec2523f1f2b2e405f3eb67672aff095fe435"
+      },
+      "maxForceError": 0.002186724832370146,
+      "method": "CutoffPeriodic1nm_noLRC",
+      "oracleDirectEnergyKjMol": "-185.9188647737248162736226146660971354071644825580819525908423155652679272501434650494974995292454568",
+      "oracleLrcEnergyKjMol": "0.0",
+      "oracleTotalEnergyKjMol": "-185.9188647737248162736226146660971354071644825580819525908423155652679272501434650494974995292454568",
+      "pairDomain": {
+        "MgPhysicalIndex": 12132,
+        "includedPairs": 430,
+        "minimumSquaredCutoffMarginNm2": "0.000163549999999991020160905463401",
+        "nativeMgMgCoefficientKjNm4": 0.0018483776169520003,
+        "nonzeroMgPairsBeforeCutoff": 52479,
+        "physicalSelfPairAbsentButNativeLrcClassSelfTermRetained": true
+      },
+      "passed": true,
+      "periodic": true,
+      "source": "Exact native B importer frame",
+      "switching": false
+    },
+    {
+      "LRC": false,
+      "actualGpuEnergyKjMol": -211.04988825321198,
+      "allExceptionExclusions": 186882,
+      "atoms": 132932,
+      "cutoffNm": null,
+      "device": {
+        "platform": "OpenCL",
+        "properties": {
+          "DeviceIndex": "0",
+          "DeviceName": "Apple M5",
+          "DisablePmeStream": "false",
+          "OpenCLPlatformIndex": "0",
+          "OpenCLPlatformName": "Apple",
+          "Precision": "single",
+          "UseCpuPme": "false"
+        },
+        "secondsIncludingContext": 0.9227813340257853,
+        "stepsIntegrated": 0
+      },
+      "endpoint": "A",
+      "energyError": 0.0001264260313291743,
+      "energyTolerance": 0.0052220002935848666,
+      "failedForceComponents": 0,
+      "forceComponentsChecked": 398796,
+      "fullForceArtifact": {
+        "includedInGit": false,
+        "path": "attempts/20261102T110015.135942Z/A-NoCutoff.npz",
+        "sha256": "d942b7bdb843a9019bc81de4c9e9c4d0254b9e34f0ad407a8bc664e222d32ead"
+      },
+      "maxForceError": 0.002275326199459471,
+      "method": "NoCutoff",
+      "oracleDirectEnergyKjMol": "-211.0500146792433139733416295917566572454767935098273076543074881698891391353893168619676515794088085",
+      "oracleLrcEnergyKjMol": "0.0",
+      "oracleTotalEnergyKjMol": "-211.0500146792433139733416295917566572454767935098273076543074881698891391353893168619676515794088085",
+      "pairDomain": {
+        "MgPhysicalIndex": 12129,
+        "includedPairs": 52476,
+        "minimumSquaredCutoffMarginNm2": null,
+        "nativeMgMgCoefficientKjNm4": 0.0018483776169520003,
+        "nonzeroMgPairsBeforeCutoff": 52476,
+        "physicalSelfPairAbsentButNativeLrcClassSelfTermRetained": true
+      },
+      "passed": true,
+      "periodic": false,
+      "source": "Derived physical A C4 component only; no full A prmtop or hybrid activity policy",
+      "switching": false
+    },
+    {
+      "LRC": true,
+      "actualGpuEnergyKjMol": -206.81836614456637,
+      "allExceptionExclusions": 186882,
+      "atoms": 132932,
+      "cutoffNm": 1.0,
+      "device": {
+        "platform": "OpenCL",
+        "properties": {
+          "DeviceIndex": "0",
+          "DeviceName": "Apple M5",
+          "DisablePmeStream": "false",
+          "OpenCLPlatformIndex": "0",
+          "OpenCLPlatformName": "Apple",
+          "Precision": "single",
+          "UseCpuPme": "false"
+        },
+        "secondsIncludingContext": 0.3876554589951411,
+        "stepsIntegrated": 0
+      },
+      "endpoint": "A",
+      "energyError": 0.00011185560023818653,
+      "energyTolerance": 0.005555361824532169,
+      "failedForceComponents": 0,
+      "forceComponentsChecked": 398796,
+      "fullForceArtifact": {
+        "includedInGit": false,
+        "path": "attempts/20261102T110015.135942Z/A-CutoffPeriodic1nm_LRC.npz",
+        "sha256": "d59b113d609df6d09dd6b188a362557d371497a86fb40c822e53de4570c2ff16"
+      },
+      "maxForceError": 0.002240130594088896,
+      "method": "CutoffPeriodic1nm_LRC",
+      "oracleDirectEnergyKjMol": "-185.9188647737248162736226146660971354071644825580819525908423155652679272501434650494974995292454568",
+      "oracleLrcEnergyKjMol": "-20.89961322644179166425696119896460198232683481074123437632898956980419327826453556114919332728661107",
+      "oracleTotalEnergyKjMol": "-206.818478000166607937879575865061737389491317368823186967171305135072120528408000610646692847997989",
+      "pairDomain": {
+        "MgPhysicalIndex": 12129,
+        "includedPairs": 430,
+        "minimumSquaredCutoffMarginNm2": "0.000163549999999991020160905463401",
+        "nativeMgMgCoefficientKjNm4": 0.0018483776169520003,
+        "nonzeroMgPairsBeforeCutoff": 52476,
+        "physicalSelfPairAbsentButNativeLrcClassSelfTermRetained": true
+      },
+      "passed": true,
+      "periodic": true,
+      "source": "Derived physical A C4 component only; no full A prmtop or hybrid activity policy",
+      "switching": false
+    },
+    {
+      "LRC": false,
+      "actualGpuEnergyKjMol": -185.91875169426203,
+      "allExceptionExclusions": 186882,
+      "atoms": 132932,
+      "cutoffNm": 1.0,
+      "device": {
+        "platform": "OpenCL",
+        "properties": {
+          "DeviceIndex": "0",
+          "DeviceName": "Apple M5",
+          "DisablePmeStream": "false",
+          "OpenCLPlatformIndex": "0",
+          "OpenCLPlatformName": "Apple",
+          "Precision": "single",
+          "UseCpuPme": "false"
+        },
+        "secondsIncludingContext": 0.13175758300349116,
+        "stepsIntegrated": 0
+      },
+      "endpoint": "A",
+      "energyError": 0.0001130794627783871,
+      "energyTolerance": 0.004719377295474497,
+      "failedForceComponents": 0,
+      "forceComponentsChecked": 398796,
+      "fullForceArtifact": {
+        "includedInGit": false,
+        "path": "attempts/20261102T110015.135942Z/A-CutoffPeriodic1nm_noLRC.npz",
+        "sha256": "d59b113d609df6d09dd6b188a362557d371497a86fb40c822e53de4570c2ff16"
+      },
+      "maxForceError": 0.002240130594088896,
+      "method": "CutoffPeriodic1nm_noLRC",
+      "oracleDirectEnergyKjMol": "-185.9188647737248162736226146660971354071644825580819525908423155652679272501434650494974995292454568",
+      "oracleLrcEnergyKjMol": "0.0",
+      "oracleTotalEnergyKjMol": "-185.9188647737248162736226146660971354071644825580819525908423155652679272501434650494974995292454568",
+      "pairDomain": {
+        "MgPhysicalIndex": 12129,
+        "includedPairs": 430,
+        "minimumSquaredCutoffMarginNm2": "0.000163549999999991020160905463401",
+        "nativeMgMgCoefficientKjNm4": 0.0018483776169520003,
+        "nonzeroMgPairsBeforeCutoff": 52476,
+        "physicalSelfPairAbsentButNativeLrcClassSelfTermRetained": true
+      },
+      "passed": true,
+      "periodic": true,
+      "source": "Derived physical A C4 component only; no full A prmtop or hybrid activity policy",
+      "switching": false
+    }
+  ],
+  "nativeEnergyTolerance": {
+    "absolute": 0.001,
+    "additionalLrcAbsolute": 1e-06,
+    "additionalLrcRelative": 2e-05,
+    "relative": 2e-05
+  },
+  "nativeForceTolerance": {
+    "absolute": 0.001,
+    "relative": 5e-05
+  },
+  "nativePolicy": {
+    "bytes": 1239,
+    "path": "evidence/full-hybrid-inputs/policies/c4-native-policy.json",
+    "sha256": "24bd0bd24020d766b7b13858030d85392d930355673886b7940101700c1359de"
+  },
+  "nativeSummary": {
+    "bytes": 18438,
+    "path": "evidence/full-hybrid-inputs/historical/current/c4-native-summary.json",
+    "sha256": "5f6d81974e907c5c5f63edfb3fd48928c038abdeed6a79414fa69406ac0e8912"
+  },
+  "passedWithinDeclaredScope": true,
+  "rawInputsStreamsParametersAndFullForceVectorsIncludedInGit": false,
+  "referencePolicy": {
+    "bytes": 3850,
+    "path": "evidence/full-hybrid-inputs/policies/c4-reference-policy.json",
+    "sha256": "60aed3ad31f79dc7e0824523e68cdf2386c53bbb6230f3cd594cdd5701ff14bb"
+  },
+  "referenceReport": {
+    "bytes": 54850,
+    "path": "evidence/full-hybrid-inputs/historical/current/c4-reference-report.json",
+    "sha256": "2c47bc9aaeabf8f395965d23431fdcab8fa8750fee7dd05a24668ce8c3328f94"
+  },
+  "referenceSummary": {
+    "alchemical_activity_policy_admitted": false,
+    "analytic_module_sha256": "35f549ce387c77e633250ca78b8d4462896e7043342557020ae82aa44b30fdb3",
+    "cases": [
+      {
+        "LRC_error": 6.622262287148128e-11,
+        "direct_energy_error": 0.0,
+        "direct_force_error": 2.7755575615628914e-17,
+        "expected_LRC": -0.0136353847812057,
+        "name": "n2_inside",
+        "observed_LRC": -0.013635384847428322,
+        "passed": true
+      },
+      {
+        "LRC_error": 6.622262807565171e-11,
+        "direct_energy_error": 0.0,
+        "direct_force_error": 0.0,
+        "expected_LRC": -0.0136353847812057,
+        "name": "n2_outside",
+        "observed_LRC": -0.013635384847428328,
+        "passed": true
+      },
+      {
+        "LRC_error": 6.622273389378375e-11,
+        "direct_energy_error": 0.0,
+        "direct_force_error": 8.881784197001252e-16,
+        "expected_LRC": -0.0136353847812057,
+        "name": "n2_periodic_inside",
+        "observed_LRC": -0.013635384847428433,
+        "passed": true
+      },
+      {
+        "LRC_error": 6.622262807565171e-11,
+        "direct_energy_error": 0.0,
+        "direct_force_error": 0.0,
+        "expected_LRC": -0.0136353847812057,
+        "name": "n2_excluded_inside",
+        "observed_LRC": -0.013635384847428328,
+        "passed": true
+      },
+      {
+        "LRC_error": 7.450046482504469e-11,
+        "direct_energy_error": 0.0,
+        "direct_force_error": 2.7755575615628914e-17,
+        "expected_LRC": -0.015339807878856412,
+        "name": "n3_zero_ghost",
+        "observed_LRC": -0.015339807953356877,
+        "passed": true
+      },
+      {
+        "LRC_error": 7.450045615142731e-11,
+        "direct_energy_error": 0.0,
+        "direct_force_error": 0.0,
+        "expected_LRC": -0.015339807878856412,
+        "name": "n3_zero_ghost_excluded",
+        "observed_LRC": -0.015339807953356868,
+        "passed": true
+      },
+      {
+        "LRC_error": 8.82968316517907e-11,
+        "direct_energy_error": 0.0,
+        "direct_force_error": 2.7755575615628914e-17,
+        "expected_LRC": -0.018180513041607598,
+        "name": "n8_zero_ghosts",
+        "observed_LRC": -0.01818051312990443,
+        "passed": true
+      },
+      {
+        "LRC_error": 8.669144568873577e-10,
+        "direct_energy_error": 5.551115123125783e-17,
+        "direct_force_error": 3.382710778154774e-17,
+        "expected_LRC": -0.12544553998709243,
+        "name": "n8_mixed_excluded",
+        "observed_LRC": -0.1254455408540069,
+        "passed": true
+      }
+    ],
+    "force_components_checked": 180,
+    "maximum_LRC_energy_absolute_error_kJ_mol": 8.669144568873577e-10,
+    "maximum_direct_energy_absolute_error_kJ_mol": 5.551115123125783e-17,
+    "maximum_direct_force_absolute_error_kJ_mol_nm": 8.881784197001252e-16,
+    "passed": true,
+    "policy_sha256": "60aed3ad31f79dc7e0824523e68cdf2386c53bbb6230f3cd594cdd5701ff14bb",
+    "production_ready": false,
+    "report": {
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/c4-endpoint/independent-lrc/attempts/20261102T105448.710401Z-76296/report.json",
+      "sha256": "2c47bc9aaeabf8f395965d23431fdcab8fa8750fee7dd05a24668ce8c3328f94"
+    },
+    "schema": "orvia.independent-c4-direct-lrc-summary.v1",
+    "scope": "Eight small independent static Reference fixtures. No full native endpoint, trajectory or model acceptance."
+  },
+  "retainedFailureAttempts": [
+    "evidence/full-hybrid-inputs/historical/c4-template-assumption-failure/",
+    "evidence/full-hybrid-inputs/historical/c4-diagonal-assumption-failure/"
+  ],
+  "runtime": {
+    "fullVersion": "8.6.1.dev-b399af4",
+    "gitRevision": "b399af4725573963b46d6c1083fdcf7a37615857",
+    "openmmVersion": "8.6.1",
+    "provenance": {
+      "bytes": 3781,
+      "path": "evidence/full-hybrid-inputs/sources/runtime-provenance.json",
+      "sha256": "9cc0fb0a5095a7fd312170bd8da2baf9c0317b2b8437c779591b16b2a72bf743"
+    }
+  },
+  "schema": "orvia.c4-endpoint-validation-checkpoint.v1",
+  "scope": "Exact native B44 C4-only component and derived physical A41 C4-only component at preserved assembled coordinates; full OpenCL single NoCutoff and 1nm periodic tails-on/off static queries. Physical A is not a complete native A force field; retained hybrid ghost activity and lambda coupling remain unselected.",
+  "singletonMgSelfClass": "Native C_MgMg is nonzero. The sole Mg has no direct selfpair, but its Ni(Ni+1)/2 LRC class term remains.",
+  "status": "passed_static_physical_endpoint_C4_components_science_unaccepted"
+}

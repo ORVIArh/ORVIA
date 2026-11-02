@@ -35,6 +35,8 @@ Useful commands from the repository root:
 
 The complete check uses an in-process local EVM. It requires no wallet, signing key or mainnet RPC. It writes reports and logs under `reports/` and compiler artifacts under `build/`.
 
+Set `ORVIA_RESEARCH_PYTHON` to the pinned research interpreter for numerical references and `ORVIA_PREPARATION_PYTHON` to the separately pinned OpenMM/Amber preparation interpreter described in [ligand preparation](docs/LIGAND_PREPARATION_v0_1.md). The preparation environment is distinct from the research virtual environment. `ORVIA_TEST_CONCURRENCY=8` runs up to eight EVM test files concurrently; the default is three, and supported values are 1–32. This changes scheduling only: every fixed check and test remains required, and the resolved concurrency is recorded in the validation summary.
+
 ## Keep results reproducible
 
 For changes to contracts, tests, references, scripts, scientific data or dependency pins, run the relevant checks while developing, then run the complete check before presenting a new full-suite result. Its input inventory binds those file sets. Changing them after a successful run invalidates that result.

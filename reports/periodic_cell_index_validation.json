@@ -1,0 +1,392 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "passed": true,
+  "mainnetTransactionsSent": 0,
+  "scope": "Local candidate membership and exact-EVM cutoff coverage. Not integrated in a force evaluator; no full-model speed, ensemble, or mainnet fee claim.",
+  "testSourceSha256": "b4d8e9633f15f5bef659579547adc7f82afc84199b39343051499b449b823e98",
+  "gas": [
+    {
+      "scenario": "build",
+      "work": 1,
+      "gasUsed": "381998"
+    },
+    {
+      "scenario": "build",
+      "work": 7,
+      "gasUsed": "1843103"
+    },
+    {
+      "scenario": "build",
+      "work": 3,
+      "gasUsed": "886071"
+    },
+    {
+      "scenario": "build",
+      "work": 11,
+      "gasUsed": "1626277"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "807340"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "867864"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "867822"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "868143"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "867897"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "1116422"
+    },
+    {
+      "scenario": "build",
+      "work": 1,
+      "gasUsed": "380439"
+    },
+    {
+      "scenario": "build",
+      "work": 1,
+      "gasUsed": "386866"
+    },
+    {
+      "scenario": "build",
+      "work": 1,
+      "gasUsed": "384051"
+    },
+    {
+      "scenario": "build",
+      "work": 1,
+      "gasUsed": "389972"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7428854"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7440535"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7440535"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7440535"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "7434035"
+    },
+    {
+      "scenario": "build",
+      "work": 32,
+      "gasUsed": "6538514"
+    }
+  ],
+  "boundAudit": {
+    "passed": true,
+    "scope": "Exact rational algebra for the source-audited restricted-domain candidate-completeness argument; not universal ABDK/EVM formal verification.",
+    "roundToNearestAssumed": false,
+    "basicOperationEnvelope": "2^-110 times operand scale plus min-subnormal quantum",
+    "boxDomain": "2^-32 <= each box length <= 2^32",
+    "cutoffDomain": "2^-64 <= cutoff < every half box length",
+    "coordinateDomain": "abs(fl(coordinate/boxLength)) <= 2^30",
+    "maximumAxisCells": 64,
+    "pointWrappingAndBinningErrorOverBoxLessThan": "2^-72",
+    "pairMinimumImageErrorOverBoxLessThan": "2^-71",
+    "combinedErrorOverBoxAtMost": "2^-70",
+    "cellWidthMinusCutoffOverBoxGreaterThan": "2^-40",
+    "nonNeighborEvmComponentOverCutoffGreaterThan": "1+2^-34",
+    "sqrtRelativeErrorLessThan": "2^-100 (restricted normal radicands)",
+    "exactRationalNormLowerBoundSquaredExceedsCutoffSquared": true,
+    "manualPinnedImplementationEnvelopeAuditRequired": true
+  },
+  "boundAuditSourceSha256": "1227a0c7da8a9b3d7df4331d99a1bcff39b3f4068b0b3b9d2fc28aad38249d22",
+  "compilation": {
+    "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+    "settings": {
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "evmVersion": "shanghai",
+      "outputSelection": {
+        "*": {
+          "*": [
+            "abi",
+            "evm.bytecode.object",
+            "evm.deployedBytecode.object"
+          ]
+        }
+      }
+    },
+    "sourceSha256": {
+      "contracts/core/PeriodicCellIndex.sol": "0c3b70b0a9f277be4087556b5ac200cb602e2f18fb90d16a272d30de9d234027",
+      "contracts/core/ExperimentRegistry.sol": "39c3e8382b3fae049c16da81b1ea586e36deaa5ecbbda466b8377e240f78f047",
+      "contracts/math/FloatMath.sol": "a474f7656f9ffc3d3149e6a0e08f2fcf6838483ae689d1e6a7cf7400f8bad74b",
+      "contracts/math/vendor/ABDKMathQuad.sol": "dd13f72bf828a699c94e96d1377daabce3dcc1d4b29af7215501a611d3cb7c9e",
+      "contracts/kernels/OrthorhombicGeometry.sol": "9521042dab915a3fc6cfe2bb1395c1aba0c6a2fad58d7623cd4a10435de3808b",
+      "contracts/core/BankedWorkingState.sol": "ed9fcee0659e2ed7dd9d90682e77bfd3aacc9056d17a0b62041cbc1947f99fe0",
+      "test/contracts/WorkingStateWriterHarness.sol": "f478b004274aaa2b515f2a6b30344d904e0c837a698d7b188cd66f47517d460f",
+      "test/contracts/PeriodicCellOracleHarness.sol": "414a709f151505232bcf46bef5474349279548c39f5114a1bc4210511fcfd8e7"
+    }
+  },
+  "bruteForce": {
+    "atoms": 17,
+    "orderedDistancesChecked": 289,
+    "insideIncludingSelfAndCoincident": 83,
+    "missedInsidePairs": 0,
+    "sourceMutationDoesNotChangeSnapshot": true
+  },
+  "grid": {
+    "maximumAxis": 64,
+    "maximumTotalCells": 262144,
+    "deduplicatedOneAndTwoCellAxes": true,
+    "invalidCursorRejected": true
+  },
+  "identity": {
+    "registeredFrozenSourceRequired": true,
+    "partialBuildRollback": true,
+    "unsupportedDomainRejected": true,
+    "nonCanonicalWordRejected": true,
+    "codeChangeRejected": true,
+    "exactPartitionMembership": true
+  },
+  "largeIndices": {
+    "actualIndexedAtoms": 1500,
+    "sourceWordOffset": 1000000,
+    "stride": 9,
+    "lastAtomSourceWord": 1013491,
+    "ascendingCoverageWithoutRepeatsOrSkips": true,
+    "completeMolecularForcePass": false
+  }
+}

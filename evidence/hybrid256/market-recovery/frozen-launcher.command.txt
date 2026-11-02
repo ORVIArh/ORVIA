@@ -1,0 +1,44 @@
+#!/bin/zsh
+# User-run launcher. --verify-only checks public files and never opens a wallet or RPC.
+set -eu
+if [[ $# -gt 1 || ( $# -eq 1 && "${1:-}" != "--verify-only" ) ]]; then
+  print -u2 'Usage: Deploy256.command [--verify-only]'
+  exit 64
+fi
+RELEASE_DIR="${0:A:h}"
+REPO_DIR='/Users/abhijith/Documents/ChatGPT/AURA/ORVIA'
+NODE_BIN='/Users/abhijith/.local/share/gh0st-tools/node-v24.22.1-darwin-arm64/bin/node'
+MANIFEST_SHA='0eb0fdd68ab31597f613319474d67c16bb2a4b8e65b391553be50c13ab1e8aa3'
+PLAN_SHA='814e9c0aced4f8c6ef24bf4ca7fe5d423ef8bb4e4d54216a3dea02484958b50c'
+cd "$REPO_DIR"
+"$NODE_BIN" --input-type=module - "$RELEASE_DIR" "$REPO_DIR" "$MANIFEST_SHA" "$PLAN_SHA" <<'NODE'
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+const [release,repo,expectedManifest,expectedPlan]=process.argv.slice(2);
+const digest=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
+function must(ok,message){if(!ok)throw new Error(message);}
+function checked(base,name,entry){
+  must(typeof name==='string'&&!path.isAbsolute(name)&&!name.split('/').includes('..'),'Unsafe manifest path');
+  const target=path.resolve(base,name),stat=fs.lstatSync(target);
+  must(stat.isFile()&&!stat.isSymbolicLink()&&fs.realpathSync(target)===target,'Non-regular or symlinked release file');
+  const bytes=fs.readFileSync(target);
+  must(bytes.length===entry.bytes&&digest(bytes)===entry.sha256,'Frozen file changed: '+name);
+}
+const bytes=fs.readFileSync(path.join(release,'manifest.json'));
+must(digest(bytes)===expectedManifest,'Frozen release manifest changed');
+const manifest=JSON.parse(bytes);
+must(manifest.schema==='orvia.hybrid256.frozen-release.v1'&&manifest.planSha256===expectedPlan,'Wrong release identity');
+for(const [name,entry] of Object.entries(manifest.files))checked(release,name,entry);
+for(const [name,entry] of Object.entries(manifest.sourceFiles))checked(repo,name,entry);
+must(process.execPath===manifest.node.path&&process.version===manifest.node.version
+  &&digest(fs.readFileSync(process.execPath))===manifest.node.sha256,'Reviewed Node executable changed');
+must(JSON.parse(fs.readFileSync(path.join(release,'plan.json'))).planSha256===expectedPlan,'Reviewed plan changed');
+console.log('Verified frozen release: 256 contracts / 33 transactions.');
+console.log('Plan: '+expectedPlan);
+NODE
+if [[ "${1:-}" == "--verify-only" ]]; then
+  exit 0
+fi
+print 'This launcher will deploy the reviewed 256 contracts to mainnet using the local encrypted wallet.'
+exec "$NODE_BIN" "$REPO_DIR/scripts/deployment/hybrid_operator_market.mjs" deploy   "$RELEASE_DIR/plan.json" "$RELEASE_DIR/spec.json" "$PLAN_SHA"

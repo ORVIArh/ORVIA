@@ -1,0 +1,109 @@
+{
+  "schema": "orvia.lossless-input-compression-review-packet.v1",
+  "payloadFiles": {
+    "README.md": {
+      "bytes": 6509,
+      "sha256": "fc2bfed6daa3f517bb9a6941a51cc1399fb0ca9451a076da4e6de420b2096fb5"
+    },
+    "audit_overlay.py": {
+      "bytes": 10384,
+      "sha256": "aee8e93fc3044ed74edadc5c5570be50d4e1efd1b6e3fb5466b83d4fb0dc41c8"
+    },
+    "independent-review/review.json": {
+      "bytes": 1732,
+      "sha256": "a689bcbb4aa9e1e7102704ec206635471ac9e2cb2edefef3580372ad60fa09e9"
+    },
+    "independent-review/review.py": {
+      "bytes": 4794,
+      "sha256": "53a236d860fac9adc0101d660904871d096502b35976541475c7ca349b316995"
+    },
+    "independent-review/typed-review.json": {
+      "bytes": 9934,
+      "sha256": "984c883e414c777f369143c9c4dbefddc0a572c8aa0b6d1c00654a558585679c"
+    },
+    "overlay-audit.json": {
+      "bytes": 42079,
+      "sha256": "c041c46ec6c444c409145158ef7836832c9e09a453bce11bfc3e49cec7579c4b"
+    },
+    "overlay-audit.log": {
+      "bytes": 2198,
+      "sha256": "eda4c672c09155c2e417881e04c4a175d76eca7a4059fa404efa0d20eb61a575"
+    },
+    "overlay-patches/complex33/angles.patches.bin.gz": {
+      "bytes": 165,
+      "sha256": "dae1023d16c1386efab05451a226f6e9dda8a8f84ac8e2ec6612a2b0692cede1"
+    },
+    "overlay-patches/complex33/bonds.patches.bin.gz": {
+      "bytes": 67,
+      "sha256": "5068a840ffbab479a7676b12094ead8fafd7126ed4304d7cd4bcf398c9d70580"
+    },
+    "overlay-patches/complex33/exceptions.patches.bin.gz": {
+      "bytes": 1218,
+      "sha256": "3121c94edd33905a2efaadb2879b7f8a31354aa4785f672ca80d9daf25f8ed2d"
+    },
+    "overlay-patches/complex33/nonbonded.patches.bin.gz": {
+      "bytes": 544,
+      "sha256": "5a67205a3bf4a0c95a834373e6e33c5183283a00abc73cf897d1c5f257184dfa"
+    },
+    "overlay-patches/complex33/torsions.patches.bin.gz": {
+      "bytes": 192,
+      "sha256": "3d45d822b42a8098e0a0fa8dcc478f8753f67b97e87f49e68f721046a3a444ea"
+    },
+    "overlay-patches/solvent33/angles.patches.bin.gz": {
+      "bytes": 160,
+      "sha256": "43e30dd3df6e9ea083a7e19b78cc3f0479a604a5d0b23ee891b22aa2eb516cea"
+    },
+    "overlay-patches/solvent33/bonds.patches.bin.gz": {
+      "bytes": 64,
+      "sha256": "d63429414dac110676ba6e07ad52939ebde5301fcf282c16a21f5b9edfa535d6"
+    },
+    "overlay-patches/solvent33/exceptions.patches.bin.gz": {
+      "bytes": 1211,
+      "sha256": "07bb697bcc21e5efce36f4ca28edbc185a25fa06986d030f48fd0b244110e3f7"
+    },
+    "overlay-patches/solvent33/nonbonded.patches.bin.gz": {
+      "bytes": 540,
+      "sha256": "01c528086ed177676f0ee7a325d59362d3c8d19bb5d47a58e2414a97408ff3af"
+    },
+    "overlay-patches/solvent33/torsions.patches.bin.gz": {
+      "bytes": 187,
+      "sha256": "7b95e528bf3b65ccb26e09f6df0fff18541ac2c8fc4ec22f80ded9ad0b31c685"
+    },
+    "source-input-manifest.json": {
+      "bytes": 13212,
+      "sha256": "bd94b3baf4a9f8e6ce28fabd77740856f2860fb5c084f80988041de75c6d7199"
+    },
+    "summary.json": {
+      "bytes": 2961,
+      "sha256": "6155b5b7497c524c658c817f5ac36803d66b7b2d626f8c93df3fa39dd94d6655"
+    },
+    "typed-packing/CHECKSUMS.sha256": {
+      "bytes": 332,
+      "sha256": "8a76810d43230100a3939c89e0439dbf6fe939611419c6799fca8975820f4860"
+    },
+    "typed-packing/README.md": {
+      "bytes": 6061,
+      "sha256": "cb57852dbf259dfb84ad7ccb9b3e0a2dff028f20b9176b502fd074b72c208f6f"
+    },
+    "typed-packing/audit.log": {
+      "bytes": 5838,
+      "sha256": "d1f35db21978d76394c6310b5860264f117e2be6dd2657a835dac95f89543924"
+    },
+    "typed-packing/audit_typed_packing.py": {
+      "bytes": 12281,
+      "sha256": "7bd25fdb7b8a8c5b419dbfdf873b5e507fabcc987a62ca440662b406160cabf0"
+    },
+    "typed-packing/typed-packing-audit.json": {
+      "bytes": 136313,
+      "sha256": "2f0cf14898ff327ad725158b398ef14ba4fb98eda4e94ced3c4a13a4271f2196"
+    }
+  },
+  "passedLosslessOfflineAudits": true,
+  "sourceWordsVerified": 10903836,
+  "typedLayoutWordComparisons": 43615344,
+  "independentOverlayReviewChecks": 1590,
+  "onChainImplemented": false,
+  "measuredGasSavings": false,
+  "scientificAcceptance": false,
+  "publicTransactionsSent": 0
+}

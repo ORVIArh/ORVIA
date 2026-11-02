@@ -38,7 +38,7 @@ with localcontext() as ctx:
   report.append({'name':v['name'],'absolute_errors':errors,'passed':True})
 print(json.dumps({'reference':'Independent Python Decimal, 100 digits','arithmetic_format':'binary128, upstream ABDK semantics','comparison_absolute_tolerance':'1e-30','comparison_relative_tolerance':'1e-28','vectors':report},indent=2))
 `;
-    const report=execFileSync(process.env.CODEX_PRIMARY_RUNTIME_PYTHON || 'python3',['-c',python],{input:JSON.stringify(actual),encoding:'utf8'});
+    const report=execFileSync(process.env.ORVIA_RESEARCH_PYTHON || process.env.CODEX_PRIMARY_RUNTIME_PYTHON || 'python3',['-c',python],{input:JSON.stringify(actual),encoding:'utf8'});
     fs.writeFileSync('reports/numerical_validation.json',report);
     assert.equal(JSON.parse(report).vectors.length,reference.vectors.length);
   });

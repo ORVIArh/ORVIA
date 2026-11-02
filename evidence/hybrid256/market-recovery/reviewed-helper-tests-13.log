@@ -1,0 +1,31 @@
+bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+This version of µWS is not compatible with your Node.js build:
+
+Error: Cannot find module '../binaries/uws_darwin_arm64_137.node'
+Require stack:
+- /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/node_modules/ganache/node_modules/@trufflesuite/uws-js-unofficial/src/uws.js
+- /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/node_modules/ganache/dist/node/core.js
+Falling back to a NodeJS implementation; performance may be degraded.
+
+
+✔ durable both-signature history precedes a single send and canonical replacement winner (59.021041ms)
+✔ canonical old winner never signs or sends (11.374792ms)
+✔ old winner after signing prevents broadcast (26.687541ms)
+✔ send rejection with old mining race selects old and never signs or sends twice (21.44025ms)
+✔ crash after durable history resumes same bytes without another signature (43.3885ms)
+✔ unknown pending nonce4 fails before signing (12.107834ms)
+✔ identified pending original admits exactly one replacement (26.305625ms)
+✔ returned send hash mismatch remains fatal (22.294834ms)
+✔ nonce4 after signing polls both instead of sending (22.527416ms)
+✔ substituted signed intent never reaches disk or network (14.029083ms)
+✔ low balance or insufficient saved gas fails before signature (17.197583ms)
+✔ production wrapper refuses an injected synthetic old hash (7.361583ms)
+✔ live base fee wins over observed price without historical ceiling (0.149042ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1051.926542

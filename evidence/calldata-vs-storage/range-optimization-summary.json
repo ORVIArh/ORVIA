@@ -1,0 +1,256 @@
+{
+  "status": "measured_range_optimization_with_rough_full_input_rate_projection",
+  "reportSha256": "b7f7cf041d52bbe2edcbacc350415243d082a791959d4ec154735b24997f95b9",
+  "calculatorSha256": "6d4f6e2d805593360fc22da6e1841d0c1d96ddda647f8bc8defff1f5509d1afb",
+  "countSourceSha256": "b09bb147833d2cd91a3aa588c91a30d34b6a49ed9faea63de39aa19c6bb3505c",
+  "pricing": {
+    "checkedAtUtc": "2026-11-02T14:43:59.624Z",
+    "chainId": 4663,
+    "providerHostname": "robinhood-mainnet.g.alchemy.com",
+    "blockNumber": "0x6376b2e",
+    "blockHash": "0x52d14488d514d2fee8267bb8c82959e5bce8ce60b62b4e056acd75fdf9cae9c8",
+    "gasPriceWei": "20216000",
+    "ethUsd": "2286.085",
+    "ethUsdSource": "https://api.coinbase.com/v2/prices/ETH-USD/spot",
+    "coinbaseResponseSha256": "89031ad8a8a8f104a77b2fc2152eb985cf7c218282c93decd3e1d935e33911a1",
+    "rpcCalls": [
+      {
+        "id": 2,
+        "method": "eth_getBlockByNumber",
+        "requestSha256": "ea099c30d3683d74a056405807b4ab857a06189f3e4702981d75935407ac986e",
+        "responseSha256": "630a4869a314e8d32ae79d9eb1c8952e7f73749ebeaab82f85cc676d0a0f7521"
+      },
+      {
+        "id": 3,
+        "method": "eth_gasPrice",
+        "requestSha256": "ab41cc9c1bab88ee00ba9e0b999a4df904f5192fe5742910e4398c79452b8b66",
+        "responseSha256": "e1119452e709c24dfbbc019b55a0e38cc3f04488d68ac88f41662f28072f86a3"
+      },
+      {
+        "id": 1,
+        "method": "eth_chainId",
+        "requestSha256": "09fabe0af56b7726f1666ddd147482df4d951f86f66124b936716c53ab0e8471",
+        "responseSha256": "1fb0f19b45a4203bd13cb5be1e8ad3aa569f42905377cd4643fc8bc07ecd3aa3"
+      }
+    ],
+    "transactionsSent": 0
+  },
+  "sameBlock16KiBGas": {
+    "baseline": 2909375,
+    "range": 2701791,
+    "reductionPercent": "7.135003222341568206229860365198711063373"
+  },
+  "measuredRangeGasByKiB": {
+    "1": 234495,
+    "2": 390782,
+    "4": 708288,
+    "8": 1358235,
+    "16": 2701791,
+    "32": 5608939,
+    "64": 12346042
+  },
+  "setupBaseline": {
+    "gas": "188447551",
+    "eth": "0.003809655691016",
+    "usd": "8.709196730396312360"
+  },
+  "scenarios": [
+    {
+      "kind": "aligned_range",
+      "maxPayloadKiB": 1,
+      "countsByLeaves": {
+        "1": 43042
+      },
+      "inputCalls": 43042,
+      "callsWithSetup": 43157,
+      "inputPass": {
+        "gas": "10093133790",
+        "eth": "0.204042792698640",
+        "usd": "466.459167746470424400"
+      },
+      "setupAndPass": {
+        "gas": "10281581341",
+        "eth": "0.207852448389656",
+        "usd": "475.168364476866736760"
+      }
+    },
+    {
+      "kind": "aligned_range",
+      "maxPayloadKiB": 2,
+      "countsByLeaves": {
+        "1": 14,
+        "2": 21514
+      },
+      "inputCalls": 21528,
+      "callsWithSetup": 21643,
+      "inputPass": {
+        "gas": "8410566878",
+        "eth": "0.170028020005648",
+        "usd": "388.698506114611808080"
+      },
+      "setupAndPass": {
+        "gas": "8599014429",
+        "eth": "0.173837675696664",
+        "usd": "397.407702845008120440"
+      }
+    },
+    {
+      "kind": "aligned_range",
+      "maxPayloadKiB": 4,
+      "countsByLeaves": {
+        "1": 14,
+        "2": 10,
+        "4": 10752
+      },
+      "inputCalls": 10776,
+      "callsWithSetup": 10891,
+      "inputPass": {
+        "gas": "7622703326",
+        "eth": "0.154100570438416",
+        "usd": "352.287002570706241360"
+      },
+      "setupAndPass": {
+        "gas": "7811150877",
+        "eth": "0.157910226129432",
+        "usd": "360.996199301102553720"
+      }
+    },
+    {
+      "kind": "aligned_range",
+      "maxPayloadKiB": 8,
+      "countsByLeaves": {
+        "1": 14,
+        "2": 10,
+        "4": 12,
+        "8": 5370
+      },
+      "inputCalls": 5406,
+      "callsWithSetup": 5521,
+      "inputPass": {
+        "gas": "7309412156",
+        "eth": "0.147767076145696",
+        "usd": "337.808096270533440160"
+      },
+      "setupAndPass": {
+        "gas": "7497859707",
+        "eth": "0.151576731836712",
+        "usd": "346.517293000929752520"
+      }
+    },
+    {
+      "kind": "aligned_range",
+      "maxPayloadKiB": 16,
+      "countsByLeaves": {
+        "1": 14,
+        "2": 10,
+        "4": 12,
+        "8": 12,
+        "16": 2679
+      },
+      "inputCalls": 2727,
+      "callsWithSetup": 2842,
+      "inputPass": {
+        "gas": "7270087115",
+        "eth": "0.146972081116840",
+        "usd": "335.990670059991171400"
+      },
+      "setupAndPass": {
+        "gas": "7458534666",
+        "eth": "0.150781736807856",
+        "usd": "344.699866790387483760"
+      }
+    },
+    {
+      "kind": "aligned_range",
+      "maxPayloadKiB": 32,
+      "countsByLeaves": {
+        "1": 14,
+        "2": 10,
+        "4": 12,
+        "8": 12,
+        "16": 7,
+        "32": 1336
+      },
+      "inputCalls": 1391,
+      "callsWithSetup": 1506,
+      "inputPass": {
+        "gas": "7544444067",
+        "eth": "0.152518481258472",
+        "usd": "348.670212227773962120"
+      },
+      "setupAndPass": {
+        "gas": "7732891618",
+        "eth": "0.156328136949488",
+        "usd": "357.379408958170274480"
+      }
+    },
+    {
+      "kind": "aligned_range",
+      "maxPayloadKiB": 64,
+      "countsByLeaves": {
+        "1": 14,
+        "2": 10,
+        "4": 12,
+        "8": 12,
+        "16": 7,
+        "32": 6,
+        "64": 665
+      },
+      "inputCalls": 726,
+      "callsWithSetup": 841,
+      "inputPass": {
+        "gas": "8294673127",
+        "eth": "0.167685111935432",
+        "usd": "383.342419118912063720"
+      },
+      "setupAndPass": {
+        "gas": "8483120678",
+        "eth": "0.171494767626448",
+        "usd": "392.051615849308376080"
+      }
+    },
+    {
+      "kind": "separate_proofs",
+      "maxPayloadKiB": 1,
+      "inputCalls": 43042,
+      "callsWithSetup": 43157,
+      "inputPass": {
+        "gas": "9847579180",
+        "eth": "0.199078660702880",
+        "usd": "455.110740052943424800"
+      },
+      "setupAndPass": {
+        "gas": "10036026731",
+        "eth": "0.202888316393896",
+        "usd": "463.819936783339737160"
+      }
+    },
+    {
+      "kind": "separate_proofs",
+      "maxPayloadKiB": 16,
+      "inputCalls": 2703,
+      "callsWithSetup": 2818,
+      "inputPass": {
+        "gas": "7864040625",
+        "eth": "0.158979445275000",
+        "usd": "363.440525151498375000"
+      },
+      "setupAndPass": {
+        "gas": "8052488176",
+        "eth": "0.162789100966016",
+        "usd": "372.149721881894687360"
+      }
+    }
+  ],
+  "lowestProjectedGasRangeCapKiB": 16,
+  "limitations": [
+    "Reference gas rates are from one float-only source stream, not all production codecs and proof depths.",
+    "Short final leaves use full-leaf reference rates; aligned tails are decomposed into powers of two.",
+    "About half the packed model still requires mixed-field or patch decoder integration.",
+    "Reuses the existing infrastructure/root setup allowance; redesigned deployment bytecode is unquoted.",
+    "No bank routing, actual forces, dynamics, working state or full campaign is priced."
+  ],
+  "productionIntegrated": false,
+  "mainnetReady": false,
+  "publicTransactionsSent": 0
+}

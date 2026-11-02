@@ -1,0 +1,7 @@
+{
+  "canonicalPipelineBeforePatchSha256": "3bc90af3b2c4c64a335b34ce291e3cf902863b33cc85ba33b5d030f6b214f7b9",
+  "canonicalFixtureBeforePatchSha256": "37f4908313fe980a84783970c76966df0f3449f07e0ad07f94e8ea13e47b7f60",
+  "frozenSpatialHamiltonianSha256": "0bc4672ea4f92688e0707a5bbed36aed594eef02f013f35e68bfbd4d33e56806",
+  "canonicalPipelineModified": false,
+  "scope": "Isolated owner-only pre-campaign spatial binder and campaign configuration commitment; isolated32core+224bank fixture."
+}

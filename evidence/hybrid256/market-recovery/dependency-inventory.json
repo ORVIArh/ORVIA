@@ -1,0 +1,38 @@
+{
+  "schema": "orvia.market-deployment-public-dependencies.v1",
+  "newPublicFiles": [
+    "scripts/deployment/hybrid_operator_market.mjs",
+    "scripts/deployment/market_recovery.mjs",
+    "scripts/deployment/hybrid_operator_reliable.mjs",
+    "scripts/deployment/verify_market_recovery.mjs",
+    "scripts/deployment/local_unlock_market.py",
+    "scripts/deployment/test_hybrid_market_policy.mjs",
+    "scripts/deployment/test_market_recovery_review.mjs"
+  ],
+  "existingRuntimeDependencies": [
+    "scripts/deployment/hybrid256.mjs",
+    "scripts/deployment/hybrid_operator.mjs",
+    "experimental/mainnet-lite/local_wallet.mjs",
+    "contracts/hybrid/ORVIAHybridCoordinator.sol",
+    "contracts/hybrid/ORVIAReportShard.sol",
+    "package.json",
+    "package-lock.json"
+  ],
+  "pinnedNpmDependencies": {
+    "ethers": "6.16.0",
+    "ganache": "7.9.2",
+    "solc": "0.8.26"
+  },
+  "runtimeNode": "24.22.1",
+  "tests": {
+    "marketPolicy": 5,
+    "independentRecoveryRaces": 13,
+    "combined": 18
+  },
+  "ci": {
+    "existingNpmHybridGlobIncludesMarketPolicy": true,
+    "newExplicitWorkflowStepIncludesRecoveryReview": true
+  },
+  "privateInputsIncluded": false,
+  "transactionSignaturesIncluded": false
+}

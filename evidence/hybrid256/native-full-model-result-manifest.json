@@ -1,0 +1,62 @@
+{
+  "schema": "orvia.native-full-model-result-manifest.v1",
+  "packet": {
+    "bytes": 2396,
+    "sha256": "1e81a3acc3292e1fe6f6efa5c5b9db3b599e6d2ad66f4101f11380d357391ca7"
+  },
+  "files": {
+    "reports/complex33.json": {
+      "bytes": 14197,
+      "sha256": "dd0ca342ac84408d62933609b24afbb4dc0303b984860ad922765e09f89b3f62"
+    },
+    "checkpoints/complex33.chk": {
+      "bytes": 11168787,
+      "sha256": "a34de02fe72f61c3a8bfb5049f1cfb4f2c4d681bc8614cd69e3c92f53deef255"
+    },
+    "positions/complex33.json": {
+      "bytes": 11688198,
+      "sha256": "2fc54913b13dd431601503cb1e63c27452c8dc136b4cebf41c8b3824b985373b"
+    },
+    "reports/solvent33.json": {
+      "bytes": 14178,
+      "sha256": "bb1f2e6a345368b55e89758ce14b7a5a5cb7d863750f127c12603ee316949ae3"
+    },
+    "checkpoints/solvent33.chk": {
+      "bytes": 12727827,
+      "sha256": "981a51a414da21d11c00994f9f51a9e0ee5995bf074bc130b97f86efeaf88594"
+    },
+    "positions/solvent33.json": {
+      "bytes": 13335615,
+      "sha256": "ce1aa431791eafc18e90312d34acd7a629306c22b91b1cc962e151be4198c1c1"
+    },
+    "sources/model_repair_gpu_matched.py": {
+      "bytes": 16830,
+      "sha256": "7e0472837473ac9aa75a16d7f833784c522a90e57a240380650f5c99d4772151"
+    },
+    "sources/model_repair_gpu.py": {
+      "bytes": 12239,
+      "sha256": "eba57e88be1549e43d0f6566bc0416b5d984bd405337617d56a7f3ab127ac199"
+    },
+    "environment/engine-build-report.json": {
+      "bytes": 5986,
+      "sha256": "82f3560f4ff7e0b780b65608f50d188e85d12a08b7bd5c14fba82d8236833f4f"
+    }
+  },
+  "publicEvidence": {
+    "inputs": {
+      "url": "https://raw.githubusercontent.com/ORVIArh/ORVIA/research/mainnet-readiness/evidence/phosphate-v0.3/phosphate-v0.3-inputs.tar.gz",
+      "bytes": 6996476,
+      "sha256": "68b8eb37010bb108e05aefff9d19d9fac5bf39fa3946ecb82edd731ce4507fc0"
+    },
+    "accuracy": {
+      "url": "https://raw.githubusercontent.com/ORVIArh/ORVIA/research/mainnet-readiness/evidence/phosphate-v0.3/native-double-pme/accuracy-evidence.zip",
+      "bytes": 8263914,
+      "sha256": "6db8c1556c7ef2684dedf7a95cadd12951827da0eb30c31245d4f3068a035619"
+    },
+    "engine": {
+      "url": "https://raw.githubusercontent.com/ORVIArh/ORVIA/research/mainnet-readiness/evidence/phosphate-v0.3/native-double-pme/engine-runtime-with-licenses.zip",
+      "bytes": 18266689,
+      "sha256": "88aa8f1997ea520027f6403822c5a2973363d15447b8f75e8d01b50bce641e50"
+    }
+  }
+}

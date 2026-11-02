@@ -1,0 +1,41 @@
+{
+  "schema": "orvia.hybrid-coordinator-tests.v1",
+  "passed": true,
+  "publicTransactionsSent": 0,
+  "scope": "Local EVM authorization/lifecycle/256-address tests; no computation or scientific proof",
+  "checks": [
+    "Zero owner/operator constructors rejected",
+    "Unready lifecycle and unauthorized provisioning rejected",
+    "Exactly256 actual contracts, deterministic CREATE2 and immutable writer/code identities",
+    "Experiment ownership, nonzero fields and check-mask admission enforced",
+    "Run IDs/configuration and initial checkpoint are immutable",
+    "Independent EIP712 digest agrees with onchain digest and strict integer transport",
+    "Every signed field tamper is rejected",
+    "Wrong chain, address, signer, expired and malformed/high-s signatures rejected",
+    "Permissionless relay advances state and stores exact historical report/event",
+    "Lineage, monotonic work, masks and completion gates enforced",
+    "Diagnostic completion and failed outcome cannot masquerade as non-diagnostic completion",
+    "Only owner cancellation; cancelled run is terminal",
+    "Mixed-validity batch rolls back prior reports and all events",
+    "Shard direct writes and runtime replacement rejected including terminal reads",
+    "Every one of255 lanes stores a distinct run without child creation"
+  ],
+  "compilation": {
+    "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+    "standardInputSha256": "896d902046e11fe76cdd19a3be8e6e2eb4bf34ec7ee45c0704a54fc8a4e69372",
+    "sourceHashes": {
+      "contracts/hybrid/ORVIAHybridCoordinator.sol": "cd633a152cb9d0737962874b30bf36aed7a195eaea375c9984c9c823db8563db",
+      "contracts/hybrid/ORVIAReportShard.sol": "ad027573551f677b32dd5b0e02bb751f45dc836f879ab8206ec8054d053ff4a2"
+    }
+  },
+  "coordinator": {
+    "address": "0x116915BC853D7B2793D9eFbD826e7ad80ac44Aee",
+    "runtimeBytes": 13044,
+    "deploymentGas": "2896494",
+    "operator": "0xa8189d88B4212Fbd3ADE63A8CBEC49AC82b81B8F"
+  },
+  "actualAddresses": 256,
+  "deploymentGas": "229756606",
+  "exercisedLanes": 255,
+  "status": "passed_local_256_address_lifecycle"
+}

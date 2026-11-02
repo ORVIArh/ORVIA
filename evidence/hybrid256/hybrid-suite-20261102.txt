@@ -1,0 +1,83 @@
+
+> orvia@0.6.0-dev test:hybrid
+> node --test scripts/hybrid/*.test.mjs scripts/deployment/test_hybrid*.mjs
+
+bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+This version of µWS is not compatible with your Node.js build:
+
+Error: Cannot find module '../binaries/uws_darwin_arm64_137.node'
+Require stack:
+- /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/node_modules/ganache/node_modules/@trufflesuite/uws-js-unofficial/src/uws.js
+- /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/node_modules/ganache/dist/node/core.js
+Falling back to a NodeJS implementation; performance may be degraded.
+
+
+✔ rehearses exactly 256 contracts across 33 local transactions (109468.267541ms)
+✔ rejects invalid, mismatched, or noncanonical release configuration (2708.990125ms)
+✔ rejects plan hash, source binding, transaction, and asserted readiness tampering (18821.918458ms)
+✔ rejects rehashed constructor-immutable and runtime-hash substitutions (8374.821083ms)
+✔ rejects every rehashed predecessor-state substitution before quoting (13908.09925ms)
+✔ detects actual source, lockfile, and directory-symlink drift (8239.035208ms)
+✔ quotes the entire 256-contract infrastructure with read-only mocked RPC (2813.61525ms)
+✔ rejects network, nonce, collision, malformed quantity, block-limit, and reorg hazards (31173.460375ms)
+✔ readOnlyRpc refuses writes and hides endpoint details in errors (2.560625ms)
+✔ independent repeated rehearsal confirms all constructor bindings and states (92432.63425ms)
+bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+This version of µWS is not compatible with your Node.js build:
+
+Error: Cannot find module '../binaries/uws_darwin_arm64_137.node'
+Require stack:
+- /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/node_modules/ganache/node_modules/@trufflesuite/uws-js-unofficial/src/uws.js
+- /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/node_modules/ganache/dist/node/core.js
+Falling back to a NodeJS implementation; performance may be degraded.
+
+
+✔ validates signed intent and rejects substitutions without displaying raw data (78.982084ms)
+✔ validates journal binding, totals, entry ordering, completion and fee guards (33.054ms)
+✔ recovers a crash before send using only identical signed bytes after fresh checks (18.537625ms)
+✔ does not retransmit an already confirmed journal transaction (2.980167ms)
+✔ waits for a known pending transaction without rebroadcasting (2.833792ms)
+✔ refuses retransmission for changed chain, consumed nonce, low balance, or insufficient gas (37.688666ms)
+✔ rejects reverted, reorged, and timed-out receipts (0.311458ms)
+✔ journal reader rejects unsafe permissions, hardlinks, and symlinks (7.858375ms)
+✔ prefix verification pins one block and rejects code, nonce, and reorg changes (43.739041ms)
+✔ Strict diagnostic artifact admission derives flags without pretending scientific proof (1208.31075ms)
+bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+This version of µWS is not compatible with your Node.js build:
+
+Error: Cannot find module '../binaries/uws_darwin_arm64_137.node'
+Require stack:
+- /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/node_modules/ganache/node_modules/@trufflesuite/uws-js-unofficial/src/uws.js
+- /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/node_modules/ganache/dist/node/core.js
+- /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/scripts/hybrid/coordinator.test.mjs
+Falling back to a NodeJS implementation; performance may be degraded.
+
+
+✔ Hybrid coordinator binds operator reports and all255 persistent lanes (131377.114583ms)
+✔ admits actual H200 report as 26 diagnostic comparisons, never full-model acceptance (6.851125ms)
+✔ refuses lying success flags and arithmetically inconsistent error summaries (8.470959ms)
+✔ does not admit changed tolerances, source, atom identity, missing minima or CPU fallback (20.0655ms)
+✔ retains a genuine numerical failure as a failed diagnostic (4.524625ms)
+✔ retains an RMS-only trajectory failure with truthful failed status (3.593166ms)
+✔ refuses impossible norm bounds and contradictory success status (6.23275ms)
+✔ freezes and brands fresh assessments so serialized objects cannot reach a signer (4.126334ms)
+✔ rejects symlinked or oversized artifacts (5.129125ms)
+bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+This version of µWS is not compatible with your Node.js build:
+
+Error: Cannot find module '../binaries/uws_darwin_arm64_137.node'
+Require stack:
+- /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/node_modules/ganache/node_modules/@trufflesuite/uws-js-unofficial/src/uws.js
+- /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/node_modules/ganache/dist/node/core.js
+Falling back to a NodeJS implementation; performance may be degraded.
+
+
+✔ Reviewed H200 diagnostic follows local register/start/sign/submit lifecycle (162823.73275ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 293043.172208

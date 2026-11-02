@@ -18,7 +18,10 @@ export const GENERATED_EVIDENCE = Object.freeze([
   'minimizer_execution_gas', 'neighbor_validation', 'neighbor_execution_gas', 'nonbonded_validation',
   'numerical_validation', 'periodic_dynamics_validation', 'periodic_dynamics_execution_gas',
   'scalar_random_validation', 'softcore_validation', 'switched_nonbonded_validation',
-  'timeseries_validation', 'timeseries_execution_gas'
+  'timeseries_validation', 'timeseries_execution_gas', 'partitioned_input_gas', 'sharded_state_gas',
+  'fixedpoint_pair_validation', 'fixedpoint_pair_gas', 'fixed96_ewald_validation', 'fixed96_ewald_gas',
+  'fixed96_softcore_validation', 'fixed96_softcore_domains', 'fixed96_softcore_gas',
+  'release256_validation'
 ].map(name => `reports/${name}.json`));
 export const BUILD_OUTPUTS = Object.freeze(['reports/compiled_sizes.json', 'build/artifacts.json']);
 export const INVENTORY_SCOPE = 'Exact contracts/test/reference/scripts/data file sets and package/dependency pins; excludes Python caches, docs/release notes and operational data/production_acceptance.json, data/operator_deployment.json, data/production_slot_evidence.json and data/production/ evidence (separately bound by readiness). Compiler artifacts, generated numerical/deployment evidence and all nine check logs are separately hash-bound; readiness/preflight/review/package metadata are excluded.';
