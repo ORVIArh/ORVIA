@@ -1,5 +1,7 @@
 # Calldata versus packed storage: GPU-backed comparison
 
+**Hybrid GPU follow-up:** [Runpod benchmark preparation](RUNPOD_BENCHMARK.md) packages CUDA accuracy checks and both full-size native candidate force fixtures. No CUDA run or full hybrid campaign price is claimed.
+
 **Simulation costs are separate:** [short, medium and long scenarios](SIMULATION_COST_SCENARIOS.md) count the proposed full schedules and quantify a constraint-solver cost sensitivity. The complete simulation total remains unquoted; input-pass prices must not be presented as full-run budgets.
 
 **Latest follow-up:** [shared proofs and bundled transactions](RANGE_AND_BATCH_OPTIMIZATION.md) reduce a four-operation 16 KiB workload to one transaction. The measured bundle uses 2.63% less target-estimated gas than four separate calls; the shared-proof optimization is measured separately. Source, rollback checks and reproducible evidence are included.

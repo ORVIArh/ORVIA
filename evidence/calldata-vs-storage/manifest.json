@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "scope": "GPU-verified input packing; isolated data-access, shared-proof and bounded-batch experiments",
+  "scope": "GPU-verified input packing; isolated data-access, shared-proof and bounded-batch experiments; external CUDA hybrid benchmark preparation",
   "productionReaderImplemented": false,
   "fullCampaignQuoted": false,
   "publicTransactionsSent": 0,
@@ -17,8 +17,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 7741,
-      "sha256": "bd1973e2e987f4c3424293befaeeb011d378275acdf5d06a2e67d453a88a7a7b"
+      "bytes": 7956,
+      "sha256": "5210783cb5d5a4a56a7806af3282546ea7db9d6b1f3eb0cc01c29b8ef9688dd3"
+    },
+    {
+      "path": "RUNPOD_BENCHMARK.md",
+      "bytes": 3662,
+      "sha256": "3fe3af8f93c90c37ff32961a5ce0c3acdecb3c16112e7c73f5d5f9ad53b6482c"
     },
     {
       "path": "SIMULATION_COST_SCENARIOS.md",
@@ -81,6 +86,11 @@
       "sha256": "eea261b49d36c599eac2303b6d82faed1f8fc0214f0b87cf5dc5aa4a0cd31574"
     },
     {
+      "path": "orvia-runpod-benchmark.tar.gz",
+      "bytes": 6955385,
+      "sha256": "71a7559f4fe841882104923d9c953d2031a2e9d4f4268a811a9d4dc0b48954e9"
+    },
+    {
       "path": "pricing.json",
       "bytes": 1236,
       "sha256": "d7bf37fae9061e432b223af1f3634a54c3bea7e570dafc90b46c525b1a86b406"
@@ -104,6 +114,11 @@
       "path": "review-scripts.zip",
       "bytes": 9906,
       "sha256": "05649ec13ae13e7c54bbbad7419762893febf82b1aec062e327d227b64c6b244"
+    },
+    {
+      "path": "runpod-preparation-status.json",
+      "bytes": 4262,
+      "sha256": "3044e7ca0bdebdcfb9729e1b778a25112775c0c28d6e377f025a4fc8847162d1"
     },
     {
       "path": "simulation-cost-scenarios.json",

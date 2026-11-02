@@ -1,0 +1,115 @@
+{
+  "schema": "orvia.runpod-preparation.v1",
+  "status": "prepared_not_cuda_executed",
+  "onchain_contract_target": 256,
+  "cloud_gpu_run_performed": false,
+  "scientific_acceptance": false,
+  "production_ready": false,
+  "full_campaign_cost": null,
+  "bundle": {
+    "file": "orvia-runpod-benchmark.tar.gz",
+    "bytes": 6955385,
+    "sha256": "71a7559f4fe841882104923d9c953d2031a2e9d4f4268a811a9d4dc0b48954e9"
+  },
+  "payload_files": {
+    "inputs/endpoints/A/parameters.json": {
+      "bytes": 52064,
+      "sha256": "3b895fe11c6192144e89a89488e91c8939d7b140308756f9371e6913f36208c7"
+    },
+    "inputs/endpoints/A/system.xml": {
+      "bytes": 41559,
+      "sha256": "c36171b19a956c67770f62f9904039a6eed7e24a33c0369b42927a221862682c"
+    },
+    "inputs/endpoints/B/parameters.json": {
+      "bytes": 56000,
+      "sha256": "5e97e15c92dcfa844e517766a6857a89256ce46db98dc1ba847b5d243b345c1a"
+    },
+    "inputs/endpoints/B/system.xml": {
+      "bytes": 44764,
+      "sha256": "abf9a367fa606f16b7301b572bac0fb0d5582cb6e2742c4000e78b32c4908a97"
+    },
+    "inputs/full/complex33/positions.json": {
+      "bytes": 5603053,
+      "sha256": "5166cb2fc1a43b9ddfdca6ca6f60a0bd8d9dd56fc8205428cd676095ffe2ce09"
+    },
+    "inputs/full/complex33/provenance.json": {
+      "bytes": 4676,
+      "sha256": "c0d820404ebe3aa9b19097f00ab2867d2e85353774f5e4e5b7bd6d6f401f15da"
+    },
+    "inputs/full/complex33/system.xml": {
+      "bytes": 50668109,
+      "sha256": "13939620df9a6c18ae249afa4add4e442b6004eadfc641d9078bcd45a798cc93"
+    },
+    "inputs/full/solvent33/positions.json": {
+      "bytes": 6663024,
+      "sha256": "605615683a59eee23b82217cf4d51954fa43ee7e081c6fb505d6fbdb12ecd5b3"
+    },
+    "inputs/full/solvent33/provenance.json": {
+      "bytes": 4266,
+      "sha256": "ccb6d64e0bf4f1ed590aede640b9abd9818995b35c0731827075506a8f094612"
+    },
+    "inputs/full/solvent33/system.xml": {
+      "bytes": 32283429,
+      "sha256": "e7927eda87abc0a7380cd6969b54f9e0c2c6f3a6ee5f85b5f61ccab4266af2c3"
+    },
+    "scripts/README.md": {
+      "bytes": 4707,
+      "sha256": "1c0bbef1c76fd9887efbc1e56c9f4ffa6eb264fdcd2e2f3b02c495b2481e5be6"
+    },
+    "scripts/benchmark_system.py": {
+      "bytes": 20755,
+      "sha256": "8c5d190e6c2d7c1d1d470e8334f3b261283b0d19f4fee4f040cbca81a4b2023a"
+    },
+    "scripts/export_native_candidates.py": {
+      "bytes": 9905,
+      "sha256": "6f9a16cbfa83ba353f6b173c65f05f5f68293e4ad66d1ba40ddbc50e4ca01a09"
+    },
+    "scripts/prepare_bundle.py": {
+      "bytes": 2830,
+      "sha256": "3ef252734ac976ba065fbb57514631fb845221a35cf8ab36657091c1b11819da"
+    },
+    "scripts/requirements-cuda.txt": {
+      "bytes": 35,
+      "sha256": "63f5dc789e726daee090fb9775cbce48d8325659864beaec1074cdcd0de77478"
+    },
+    "scripts/run_benchmark.py": {
+      "bytes": 18521,
+      "sha256": "f0c187f2b2f79a2d0281deb96c927ea69cacde22d385cb1c44a5af406aa192a8"
+    },
+    "scripts/validate_endpoints.py": {
+      "bytes": 14488,
+      "sha256": "676fb66566620c1ac6fb1819526cb4454fd98174978e3a60a8b44029b02b004c"
+    }
+  },
+  "local_orchestration_test": {
+    "scope": "Local Reference-only orchestration tests; synthetic endpoint-sized full-leg fixtures; zero CUDA execution or cloud actions",
+    "passed": true,
+    "checks": [
+      "actual Reference endpoint and both force subprocesses passed",
+      "all payloads manifest-verified",
+      "tampered declared input rejected before any subprocess",
+      "local timeout killed validator child, skipped force tests",
+      "synthetic metadata proves numerical failure does not mean context unavailability"
+    ],
+    "runner_sha256": "f0c187f2b2f79a2d0281deb96c927ea69cacde22d385cb1c44a5af406aa192a8",
+    "benchmark_sha256": "8c5d190e6c2d7c1d1d470e8334f3b261283b0d19f4fee4f040cbca81a4b2023a"
+  },
+  "full_package_test": "All hashes verified, no-CUDA path stopped without implicit CPU fallback",
+  "native_export_counts": {
+    "complex33": {
+      "atoms": 132935,
+      "water_constraints": 120519
+    },
+    "solvent33": {
+      "atoms": 151505,
+      "water_constraints": 151179
+    }
+  },
+  "claims_excluded": [
+    "A100 throughput",
+    "full-system numerical agreement",
+    "full trajectory throughput",
+    "cryptographic proof of GPU physics",
+    "complete campaign price"
+  ]
+}
