@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "packagingPassed": true,
+  "scope": "Exact public draft and read-only mainnet address-state evidence; not deployment, funding, fee, runtime-storage initialization or science acceptance.",
+  "targetChainId": 4663,
+  "sender": "0x2541a9e93B5C853E9208b0C5C7386dD458424c77",
+  "firstNonce": "0",
+  "protocolUnresolved": true,
+  "modelInputsUnresolved": true,
+  "planSha256": "7fd98c0988955fb0de57c060a56d45ca3a8ad313ef617d09bae59c585a19d252",
+  "planFileSha256": "623f21e88ffbce606d5901b30b44487a32257ed28b8cd9a9978a5c7c4c41939f",
+  "adapterSha256": "b39fd4bd415debd48e6c9c05c8422d64ba29d426214a23ab5ab5862e1997505e",
+  "sourceRecheckedAtPackaging": true,
+  "mainnetCollisionCheckPassed": true,
+  "readyForMainnet": false,
+  "scientificModelAccepted": false,
+  "publicTransactionsSent": 0,
+  "replayAdaptation": "Path/import changes plus a mandatory new output directory; the original executed source is retained unchanged.",
+  "files": [
+    {
+      "path": "attempts.json",
+      "bytes": 2565,
+      "sha256": "d570d2193e7d29694f8a51a2895302953d2c7e7ca9048d057bc4c784c003acfc"
+    },
+    {
+      "path": "attempts/official-partial.json",
+      "bytes": 77317,
+      "sha256": "572bae500b67b10cf697f13eb0d2b5e6f9ad256be3760e35fe43a0a2256156f7"
+    },
+    {
+      "path": "attempts/pinax-prefetch429.json",
+      "bytes": 12698,
+      "sha256": "fda0f08a33ca92ef545c911ded7940f2c06ad02047393b4c3e8d2f1e397dd6c4"
+    },
+    {
+      "path": "attempts/pinax-sequential.json",
+      "bytes": 34826,
+      "sha256": "03fa8410963bc9fea1af65a74d12890c0e60e089a04878deaaaff98a645f6728"
+    },
+    {
+      "path": "mainnet-state-check.json",
+      "bytes": 152898,
+      "sha256": "79c5fefac12280d05c29b61d64247755e5fc188a66ca3ca09914c009125aec61"
+    },
+    {
+      "path": "official-endpoint-check.json",
+      "bytes": 496,
+      "sha256": "31b5066fda404ddae251c07e666175a44bb1c883f202f5db771184b9e7f7eb13"
+    },
+    {
+      "path": "public-plan.json",
+      "bytes": 2619506,
+      "sha256": "623f21e88ffbce606d5901b30b44487a32257ed28b8cd9a9978a5c7c4c41939f"
+    },
+    {
+      "path": "public-spec.json",
+      "bytes": 139,
+      "sha256": "0ccfb6d4515b4c73a80d1b73ecefaf51e62de67912c4b05ad2db4e4c8a814896"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3484,
+      "sha256": "591e0fa530b766bbcb4d4fd960ee616934d30c5385872878da820cb9ed3cc45d"
+    },
+    {
+      "path": "recheck.mjs",
+      "bytes": 7376,
+      "sha256": "c0bff8f878210ef436fe134c89c22177d838d79e98edc7d3a8d5578f4094028a"
+    },
+    {
+      "path": "sources/check-alchemy-mainnet.mjs",
+      "bytes": 7157,
+      "sha256": "bdc2db78f22ce3c9e83868a159dc8e8c5e312328883bcf269551d2dd793d1902"
+    },
+    {
+      "path": "sources/check-official-mainnet.mjs",
+      "bytes": 3738,
+      "sha256": "42b4690a6e4537735ccbc9010ceca7efe7853b8a022c0fbada5c22cbcda17099"
+    },
+    {
+      "path": "sources/check-official-rpc.mjs",
+      "bytes": 1169,
+      "sha256": "5ee5e2c03b1d0061c07dcb51a0149fdb9fd04bea1060b2db689026e23467562f"
+    },
+    {
+      "path": "sources/check-pinax-prefetch.mjs",
+      "bytes": 4681,
+      "sha256": "96e1b378bca8e6e97ef2a9f9decd51c58fb384f2e9a9fefc172f036f9ca773b4"
+    },
+    {
+      "path": "sources/check-pinax-sequential.mjs",
+      "bytes": 3347,
+      "sha256": "53af66eb5b57822a8660f40786c9b6119388161239b5f7fa624715e4c8288745"
+    }
+  ]
+}
