@@ -1,0 +1,23 @@
+bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+This version of µWS is not compatible with your Node.js build:
+
+Error: Cannot find module '../binaries/uws_darwin_arm64_137.node'
+Require stack:
+- /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/node_modules/ganache/node_modules/@trufflesuite/uws-js-unofficial/src/uws.js
+- /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/node_modules/ganache/dist/node/core.js
+Falling back to a NodeJS implementation; performance may be degraded.
+
+
+▶ A molecular writer computes the entire selected Hamiltonian and authenticates sampling/continuation
+  ✔ all endpoint and intermediate bonded/LJ/Ewald energy components and forces match independent differentiated scalar energy (594752.259917ms)
+  ✔ registered hybrid topology rejects mass/topology substitution and external forces/energies (7900.05275ms)
+  ✔ absolute stochastic counters and exact immutable source state survive a real continuation across transaction partitions (273144.98ms)
+✔ A molecular writer computes the entire selected Hamiltonian and authenticates sampling/continuation (877381.68525ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 877596.354125
