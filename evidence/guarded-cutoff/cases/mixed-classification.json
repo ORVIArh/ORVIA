@@ -1,0 +1,564 @@
+{
+  "baseline_candidate_executed": false,
+  "classifications": [
+    {
+      "atoms": 4,
+      "counts": {
+        "direct_exception_pairs": 1,
+        "excluded_exception_pairs": 1,
+        "normal_below_or_at_switch": 2,
+        "normal_outside_or_at_cutoff": 1,
+        "normal_pairs": 4,
+        "normal_switched_inside_cutoff": 1,
+        "total_pairs": 6
+      },
+      "exact_cutoff_pair_count": 0,
+      "exact_cutoff_squared": "9",
+      "exact_switch_pair_count": 0,
+      "exact_switch_squared": "4",
+      "minimum_nonzero_squared_distance_boundary_gap": "11/16",
+      "minimum_squared_distance_boundary_gap": "11/16",
+      "name": "rich_reference_4atom_mixed",
+      "pair_order": "Lexicographic a<b, matching evaluator _pairIndices.",
+      "pairs": [
+        {
+          "atoms": [
+            0,
+            1
+          ],
+          "classification": "excluded_exception",
+          "distance_decimal_100_digits": "1",
+          "exact_minimum_image_displacement": [
+            "1",
+            "0",
+            "0"
+          ],
+          "exact_squared_distance": "1",
+          "ordered_pair_index": 0
+        },
+        {
+          "atoms": [
+            0,
+            2
+          ],
+          "classification": "normal_below_or_at_switch",
+          "distance_decimal_100_digits": "1.807104036850120037936016186590949100112928028658749395386686758238384678297671233624908673674644245",
+          "exact_minimum_image_displacement": [
+            "3/2",
+            "1",
+            "1/8"
+          ],
+          "exact_squared_distance": "209/64",
+          "ordered_pair_index": 1
+        },
+        {
+          "atoms": [
+            0,
+            3
+          ],
+          "classification": "normal_outside_or_at_cutoff",
+          "distance_decimal_100_digits": "3.439204123049401090898488599569819611263892549805983006355897683922484505196719370019327496134275504",
+          "exact_minimum_image_displacement": [
+            "3",
+            "5/4",
+            "9/8"
+          ],
+          "exact_squared_distance": "757/64",
+          "ordered_pair_index": 2
+        },
+        {
+          "atoms": [
+            1,
+            2
+          ],
+          "classification": "direct_exception",
+          "distance_decimal_100_digits": "1.125",
+          "exact_minimum_image_displacement": [
+            "1/2",
+            "1",
+            "1/8"
+          ],
+          "exact_squared_distance": "81/64",
+          "ordered_pair_index": 3
+        },
+        {
+          "atoms": [
+            1,
+            3
+          ],
+          "classification": "normal_switched_inside_cutoff",
+          "distance_decimal_100_digits": "2.613068120045859041745512732421645272783764673936842993724471549711468692732979181500312001667069537",
+          "exact_minimum_image_displacement": [
+            "2",
+            "5/4",
+            "9/8"
+          ],
+          "exact_squared_distance": "437/64",
+          "ordered_pair_index": 4
+        },
+        {
+          "atoms": [
+            2,
+            3
+          ],
+          "classification": "normal_below_or_at_switch",
+          "distance_decimal_100_digits": "1.820027472320129567774325622881758198444417420644119359594545447821028934656226295832394852270231688",
+          "exact_minimum_image_displacement": [
+            "3/2",
+            "1/4",
+            "1"
+          ],
+          "exact_squared_distance": "53/16",
+          "ordered_pair_index": 5
+        }
+      ]
+    },
+    {
+      "atoms": 8,
+      "counts": {
+        "direct_exception_pairs": 2,
+        "excluded_exception_pairs": 2,
+        "normal_below_or_at_switch": 4,
+        "normal_outside_or_at_cutoff": 17,
+        "normal_pairs": 24,
+        "normal_switched_inside_cutoff": 3,
+        "total_pairs": 28
+      },
+      "exact_cutoff_pair_count": 4,
+      "exact_cutoff_squared": "9",
+      "exact_switch_pair_count": 0,
+      "exact_switch_squared": "4",
+      "minimum_nonzero_squared_distance_boundary_gap": "5/64",
+      "minimum_squared_distance_boundary_gap": "0",
+      "name": "duplicated_reference_8atom_mixed",
+      "pair_order": "Lexicographic a<b, matching evaluator _pairIndices.",
+      "pairs": [
+        {
+          "atoms": [
+            0,
+            1
+          ],
+          "classification": "excluded_exception",
+          "distance_decimal_100_digits": "1",
+          "exact_minimum_image_displacement": [
+            "1",
+            "0",
+            "0"
+          ],
+          "exact_squared_distance": "1",
+          "ordered_pair_index": 0
+        },
+        {
+          "atoms": [
+            0,
+            2
+          ],
+          "classification": "normal_below_or_at_switch",
+          "distance_decimal_100_digits": "1.807104036850120037936016186590949100112928028658749395386686758238384678297671233624908673674644245",
+          "exact_minimum_image_displacement": [
+            "3/2",
+            "1",
+            "1/8"
+          ],
+          "exact_squared_distance": "209/64",
+          "ordered_pair_index": 1
+        },
+        {
+          "atoms": [
+            0,
+            3
+          ],
+          "classification": "normal_outside_or_at_cutoff",
+          "distance_decimal_100_digits": "3.439204123049401090898488599569819611263892549805983006355897683922484505196719370019327496134275504",
+          "exact_minimum_image_displacement": [
+            "3",
+            "5/4",
+            "9/8"
+          ],
+          "exact_squared_distance": "757/64",
+          "ordered_pair_index": 2
+        },
+        {
+          "atoms": [
+            0,
+            4
+          ],
+          "classification": "normal_outside_or_at_cutoff",
+          "distance_decimal_100_digits": "3",
+          "exact_minimum_image_displacement": [
+            "0",
+            "0",
+            "3"
+          ],
+          "exact_squared_distance": "9",
+          "ordered_pair_index": 3
+        },
+        {
+          "atoms": [
+            0,
+            5
+          ],
+          "classification": "normal_outside_or_at_cutoff",
+          "distance_decimal_100_digits": "3.162277660168379331998893544432718533719555139325216826857504852792594438639238221344248108379300295",
+          "exact_minimum_image_displacement": [
+            "1",
+            "0",
+            "3"
+          ],
+          "exact_squared_distance": "10",
+          "ordered_pair_index": 4
+        },
+        {
+          "atoms": [
+            0,
+            6
+          ],
+          "classification": "normal_outside_or_at_cutoff",
+          "distance_decimal_100_digits": "3.607717422415452981093733623977317397003799322201917880098804376458085053045418894389380694459348760",
+          "exact_minimum_image_displacement": [
+            "3/2",
+            "1",
+            "25/8"
+          ],
+          "exact_squared_distance": "833/64",
+          "ordered_pair_index": 5
+        },
+        {
+          "atoms": [
+            0,
+            7
+          ],
+          "classification": "normal_outside_or_at_cutoff",
+          "distance_decimal_100_digits": "5.057482081035977333500186219589515969100815432733357519988134715502346235632740415087935535561403325",
+          "exact_minimum_image_displacement": [
+            "3",
+            "5/4",
+            "-31/8"
+          ],
+          "exact_squared_distance": "1637/64",
+          "ordered_pair_index": 6
+        },
+        {
+          "atoms": [
+            1,
+            2
+          ],
+          "classification": "direct_exception",
+          "distance_decimal_100_digits": "1.125",
+          "exact_minimum_image_displacement": [
+            "1/2",
+            "1",
+            "1/8"
+          ],
+          "exact_squared_distance": "81/64",
+          "ordered_pair_index": 7
+        },
+        {
+          "atoms": [
+            1,
+            3
+          ],
+          "classification": "normal_switched_inside_cutoff",
+          "distance_decimal_100_digits": "2.613068120045859041745512732421645272783764673936842993724471549711468692732979181500312001667069537",
+          "exact_minimum_image_displacement": [
+            "2",
+            "5/4",
+            "9/8"
+          ],
+          "exact_squared_distance": "437/64",
+          "ordered_pair_index": 8
+        },
+        {
+          "atoms": [
+            1,
+            4
+          ],
+          "classification": "normal_outside_or_at_cutoff",
+          "distance_decimal_100_digits": "3.162277660168379331998893544432718533719555139325216826857504852792594438639238221344248108379300295",
+          "exact_minimum_image_displacement": [
+            "-1",
+            "0",
+            "3"
+          ],
+          "exact_squared_distance": "10",
+          "ordered_pair_index": 9
+        },
+        {
+          "atoms": [
+            1,
+            5
+          ],
+          "classification": "normal_outside_or_at_cutoff",
+          "distance_decimal_100_digits": "3",
+          "exact_minimum_image_displacement": [
+            "0",
+            "0",
+            "3"
+          ],
+          "exact_squared_distance": "9",
+          "ordered_pair_index": 10
+        },
+        {
+          "atoms": [
+            1,
+            6
+          ],
+          "classification": "normal_outside_or_at_cutoff",
+          "distance_decimal_100_digits": "3.318979511837938417495982428269399558993880152163483757402505193986667573251482542445750534145712406",
+          "exact_minimum_image_displacement": [
+            "1/2",
+            "1",
+            "25/8"
+          ],
+          "exact_squared_distance": "705/64",
+          "ordered_pair_index": 11
+        },
+        {
+          "atoms": [
+            1,
+            7
+          ],
+          "classification": "normal_outside_or_at_cutoff",
+          "distance_decimal_100_digits": "4.536311827906013782083320947446309296955849433448040266280910179502002962153381093387346212685852640",
+          "exact_minimum_image_displacement": [
+            "2",
+            "5/4",
+            "-31/8"
+          ],
+          "exact_squared_distance": "1317/64",
+          "ordered_pair_index": 12
+        },
+        {
+          "atoms": [
+            2,
+            3
+          ],
+          "classification": "normal_below_or_at_switch",
+          "distance_decimal_100_digits": "1.820027472320129567774325622881758198444417420644119359594545447821028934656226295832394852270231688",
+          "exact_minimum_image_displacement": [
+            "3/2",
+            "1/4",
+            "1"
+          ],
+          "exact_squared_distance": "53/16",
+          "ordered_pair_index": 13
+        },
+        {
+          "atoms": [
+            2,
+            4
+          ],
+          "classification": "normal_outside_or_at_cutoff",
+          "distance_decimal_100_digits": "3.393467990124556928557396760879472382950739655333938316020735020854516412963182547918719051383537111",
+          "exact_minimum_image_displacement": [
+            "-3/2",
+            "-1",
+            "23/8"
+          ],
+          "exact_squared_distance": "737/64",
+          "ordered_pair_index": 14
+        },
+        {
+          "atoms": [
+            2,
+            5
+          ],
+          "classification": "normal_outside_or_at_cutoff",
+          "distance_decimal_100_digits": "3.084740669813266490885460818424935914045552660435441298874018498496211603401608799424157598139526070",
+          "exact_minimum_image_displacement": [
+            "-1/2",
+            "-1",
+            "23/8"
+          ],
+          "exact_squared_distance": "609/64",
+          "ordered_pair_index": 15
+        },
+        {
+          "atoms": [
+            2,
+            6
+          ],
+          "classification": "normal_outside_or_at_cutoff",
+          "distance_decimal_100_digits": "3",
+          "exact_minimum_image_displacement": [
+            "0",
+            "0",
+            "3"
+          ],
+          "exact_squared_distance": "9",
+          "ordered_pair_index": 16
+        },
+        {
+          "atoms": [
+            2,
+            7
+          ],
+          "classification": "normal_outside_or_at_cutoff",
+          "distance_decimal_100_digits": "4.279310692155922440788238073607327410185524869570021128413739061959513897936455720826348869220242182",
+          "exact_minimum_image_displacement": [
+            "3/2",
+            "1/4",
+            "4"
+          ],
+          "exact_squared_distance": "293/16",
+          "ordered_pair_index": 17
+        },
+        {
+          "atoms": [
+            3,
+            4
+          ],
+          "classification": "normal_outside_or_at_cutoff",
+          "distance_decimal_100_digits": "3.752082754950908595431231371387684849000223610766330800942381700657222993152095706243060240733029457",
+          "exact_minimum_image_displacement": [
+            "-3",
+            "-5/4",
+            "15/8"
+          ],
+          "exact_squared_distance": "901/64",
+          "ordered_pair_index": 18
+        },
+        {
+          "atoms": [
+            3,
+            5
+          ],
+          "classification": "normal_outside_or_at_cutoff",
+          "distance_decimal_100_digits": "3.012992698298487413710769182862496290263048334790147993904723187718864997079493002854405923182566568",
+          "exact_minimum_image_displacement": [
+            "-2",
+            "-5/4",
+            "15/8"
+          ],
+          "exact_squared_distance": "581/64",
+          "ordered_pair_index": 19
+        },
+        {
+          "atoms": [
+            3,
+            6
+          ],
+          "classification": "normal_switched_inside_cutoff",
+          "distance_decimal_100_digits": "2.512468905280222567554816228189894046736255867506594322643207074332122807887992595309044423113488088",
+          "exact_minimum_image_displacement": [
+            "-3/2",
+            "-1/4",
+            "2"
+          ],
+          "exact_squared_distance": "101/16",
+          "ordered_pair_index": 20
+        },
+        {
+          "atoms": [
+            3,
+            7
+          ],
+          "classification": "normal_outside_or_at_cutoff",
+          "distance_decimal_100_digits": "3",
+          "exact_minimum_image_displacement": [
+            "0",
+            "0",
+            "3"
+          ],
+          "exact_squared_distance": "9",
+          "ordered_pair_index": 21
+        },
+        {
+          "atoms": [
+            4,
+            5
+          ],
+          "classification": "excluded_exception",
+          "distance_decimal_100_digits": "1",
+          "exact_minimum_image_displacement": [
+            "1",
+            "0",
+            "0"
+          ],
+          "exact_squared_distance": "1",
+          "ordered_pair_index": 22
+        },
+        {
+          "atoms": [
+            4,
+            6
+          ],
+          "classification": "normal_below_or_at_switch",
+          "distance_decimal_100_digits": "1.807104036850120037936016186590949100112928028658749395386686758238384678297671233624908673674644245",
+          "exact_minimum_image_displacement": [
+            "3/2",
+            "1",
+            "1/8"
+          ],
+          "exact_squared_distance": "209/64",
+          "ordered_pair_index": 23
+        },
+        {
+          "atoms": [
+            4,
+            7
+          ],
+          "classification": "normal_outside_or_at_cutoff",
+          "distance_decimal_100_digits": "3.439204123049401090898488599569819611263892549805983006355897683922484505196719370019327496134275504",
+          "exact_minimum_image_displacement": [
+            "3",
+            "5/4",
+            "9/8"
+          ],
+          "exact_squared_distance": "757/64",
+          "ordered_pair_index": 24
+        },
+        {
+          "atoms": [
+            5,
+            6
+          ],
+          "classification": "direct_exception",
+          "distance_decimal_100_digits": "1.125",
+          "exact_minimum_image_displacement": [
+            "1/2",
+            "1",
+            "1/8"
+          ],
+          "exact_squared_distance": "81/64",
+          "ordered_pair_index": 25
+        },
+        {
+          "atoms": [
+            5,
+            7
+          ],
+          "classification": "normal_switched_inside_cutoff",
+          "distance_decimal_100_digits": "2.613068120045859041745512732421645272783764673936842993724471549711468692732979181500312001667069537",
+          "exact_minimum_image_displacement": [
+            "2",
+            "5/4",
+            "9/8"
+          ],
+          "exact_squared_distance": "437/64",
+          "ordered_pair_index": 26
+        },
+        {
+          "atoms": [
+            6,
+            7
+          ],
+          "classification": "normal_below_or_at_switch",
+          "distance_decimal_100_digits": "1.820027472320129567774325622881758198444417420644119359594545447821028934656226295832394852270231688",
+          "exact_minimum_image_displacement": [
+            "3/2",
+            "1/4",
+            "1"
+          ],
+          "exact_squared_distance": "53/16",
+          "ordered_pair_index": 27
+        }
+      ]
+    }
+  ],
+  "floating_point_argument": "All coordinate/box values and their minimum-image displacements are small dyadic rationals. Their ordered squared norm is exactly representable in binary128. Non-boundary pairs have reported exact positive rational gaps. Exact cutoff ties have r^2=9 and sqrt(r^2)=3 exactly; the legacy >= comparison classifies them outside. Exact ties are counted separately.",
+  "method": "Decode each binary128 input to an exact Fraction; perform minimum-image quotient truncation/remainder adjustment and squared-distance comparisons using rational arithmetic. Decimal square roots are inspection only.",
+  "reference_sha256": "d096158bbce4144fbe09bf3c9141e4a9388aa57d7325a36af2bb152f84ab29d5",
+  "rich_fixture_pattern_sha256": "fb5d7523aeed90052dee2ca2887f158f3d526c766c820b07bfe2b1546de3115e",
+  "schema": "orvia.mixed-pair-exact-classification.v1"
+}
