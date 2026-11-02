@@ -32,7 +32,7 @@ Domain: name `ORVIAHybridCoordinator`, version `1`, actual chain ID and deployed
 
 ## Operations and limits
 
-Owner and operator are immutable EOAs/addresses. The production operator requested for release planning is `0x2541a9e93B5C853E9208b0C5C7386dD458424c77`; the constructor still requires explicit owner and operator arguments. Signer loss or compromise requires an operational migration/new deployment; this implementation has no hidden rotation or upgrade authority. Cancellation can stop an affected live run but does not erase history.
+Owner and operator are immutable EOAs/addresses. The production operator requested for release planning is `0x2541a9e93B5C853E9208b0C5C7386dD458424c77`; the constructor still requires explicit owner and operator arguments. Signer loss or compromise requires an operational migration/new deployment; this implementation has no key rotation, global pause or upgrade authority. Cancellation can stop an affected live run but does not erase history.
 
 Registering a protocol or accepting an operator signature does not change the original chemical-state selection. A benchmark of an alternative ADP/phosphate model must retain that identity and its diagnostic status; it cannot silently substitute for the original vanadate experiment.
 
