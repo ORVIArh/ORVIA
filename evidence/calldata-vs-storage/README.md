@@ -1,6 +1,6 @@
 # Calldata versus packed storage: GPU-backed comparison
 
-**Hybrid GPU follow-up:** [Runpod benchmark preparation](RUNPOD_BENCHMARK.md) packages CUDA accuracy checks and both full-size native candidate force fixtures. No CUDA run or full hybrid campaign price is claimed.
+**Hybrid GPU follow-up:** [Completed A100 benchmark](RUNPOD_BENCHMARK.md) measures both full-size native candidate force fixtures at 132–206 evaluations/second for the complex and 132–162 for solvent. CUDA execution is verified; endpoint accuracy and full-size scientific gates remain unmet. Results were retrieved and the GPU stopped. The full hybrid campaign price remains unknown.
 
 **Simulation costs are separate:** [short, medium and long scenarios](SIMULATION_COST_SCENARIOS.md) count the proposed full schedules and quantify a constraint-solver cost sensitivity. The complete simulation total remains unquoted; input-pass prices must not be presented as full-run budgets.
 

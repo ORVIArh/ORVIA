@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "scope": "GPU-verified input packing; isolated data-access, shared-proof and bounded-batch experiments; external CUDA hybrid benchmark preparation",
+  "scope": "GPU-verified input packing; isolated data-access, shared-proof and bounded-batch experiments; completed external A100 CUDA hardware benchmark with unmet scientific gates",
   "productionReaderImplemented": false,
   "fullCampaignQuoted": false,
   "publicTransactionsSent": 0,
@@ -17,13 +17,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 7956,
-      "sha256": "5210783cb5d5a4a56a7806af3282546ea7db9d6b1f3eb0cc01c29b8ef9688dd3"
+      "bytes": 8130,
+      "sha256": "42f4d72fc9ed79b0544200ac0a427d7c6fa1a3800c67b5424de948a055caf174"
     },
     {
       "path": "RUNPOD_BENCHMARK.md",
-      "bytes": 3662,
-      "sha256": "3fe3af8f93c90c37ff32961a5ce0c3acdecb3c16112e7c73f5d5f9ad53b6482c"
+      "bytes": 7209,
+      "sha256": "c38336b4324a2b4f8e3614dddcc55828181877fb5d76dc17deddebe1b5aeb2af"
     },
     {
       "path": "SIMULATION_COST_SCENARIOS.md",
@@ -114,6 +114,21 @@
       "path": "review-scripts.zip",
       "bytes": 9906,
       "sha256": "05649ec13ae13e7c54bbbad7419762893febf82b1aec062e327d227b64c6b244"
+    },
+    {
+      "path": "runpod-a100-20261102-results.tar.gz",
+      "bytes": 12873,
+      "sha256": "d3dd37d6bb800aa6b751a254c199b59954f565392b5dd57f4141fa4c37383de7"
+    },
+    {
+      "path": "runpod-a100-execution.json",
+      "bytes": 8780,
+      "sha256": "9801bb666dcef6ea6442168168ec5929edb2457033a7dfa849fe66ccbaefc091"
+    },
+    {
+      "path": "runpod-a100-launcher.sh",
+      "bytes": 5468,
+      "sha256": "a685a182c2321f9e16d3ac2e58cb9e54b2e7ef5b9de0eef61216535f65ba96ae"
     },
     {
       "path": "runpod-preparation-status.json",

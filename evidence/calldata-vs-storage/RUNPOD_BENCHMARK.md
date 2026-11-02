@@ -1,9 +1,81 @@
-# Runpod hybrid benchmark: prepared, not executed on CUDA
+# Runpod hybrid benchmark: A100 executed, scientific gates remain
+
+On 2026-11-02, one NVIDIA A100-SXM4-80GB completed all four native full-size
+fixed-coordinate force benchmarks. The endpoint numerical gate failed. The
+results were downloaded, their archive SHA-256 verified, and the Pod stopped.
+Runpod then showed compute and container storage **Not running**, total
+**$0.00/hour**; the refreshed account spend rate was also $0.000/hour.
+
+[Execution summary](runpod-a100-execution.json) ·
+[Raw reports and environment](runpod-a100-20261102-results.tar.gz) ·
+[Exact launcher used](runpod-a100-launcher.sh)
+
+## Measured force throughput
+
+| Native candidate | Atoms | CUDA precision | Force evaluations/second |
+|---|---:|---|---:|
+| Complex | 132,935 | Mixed | 206.39 |
+| Complex | 132,935 | Double | 132.29 |
+| Solvent | 151,505 | Mixed | 161.77 |
+| Solvent | 151,505 | Double | 131.51 |
+
+Each measurement contains three repeats of 20 evaluations after five warmups.
+Timing includes coordinate resubmission, energy/force evaluation and readback,
+and finite-value checks. It excludes context startup and warmup. These are
+short hardware measurements, not sustained simulation rates. All 17 payload
+hashes and both full-size input identities were verified. Actual CUDA precision,
+GPU identity, input hashes and per-repeat timings are in the raw reports.
+
+**Finite does not mean physically valid.** Candidate energies are extremely
+large (about 9.32e9 and 1.29e13 kJ/mol); maximum force components are close to
+2^31 kJ/mol/nm. These values require structural and numerical range/overflow
+checks. The force benchmark's hardware-pass flag must not be treated as a
+validated force-field or trajectory result. No full-size dynamics ran.
+
+## Endpoint accuracy
+
+| Endpoint / precision | Original + 8 perturbations | 20-step trajectory | Minimized-coordinate comparison |
+|---|---:|---|---|
+| A / mixed | 0/9 pass | Force comparison fails | Absolute and relative force fail |
+| B / mixed | 0/9 pass | Force comparison fails | Absolute and relative force fail |
+| A / double | 9/9 pass | Pass | Relative force fails |
+| B / double | 9/9 pass | Pass | Relative force fails |
+
+Double precision's minimized relative force L2 errors are **0.00148428** and
+**0.00151191**, versus the predeclared **0.00005** limit. Absolute force errors
+are 0.00419784 and 0.00427053 kJ/mol/nm (below 0.05), and energy errors also pass.
+The small reference force norms at minimized coordinates make the relative
+metric sensitive; this does not establish the implementation cause or justify
+relaxing the threshold. Neither precision fully passes the declared gate.
+The runner correctly exits 2 while preserving the successful hardware timings.
+
+## Runtime and total session cost
+
+The benchmark runner took **37.76 seconds**; the wrapper, including package
+installation and download, took **60 seconds**. This excludes provisioning,
+operator checks and result retrieval. The complete observed GPU session was
+approximately three minutes at $1.79/hour compute plus $0.007/hour container
+disk: **about $0.08–$0.09 total estimated usage**. This is not a settled invoice;
+Runpod says billing data is one hour behind, and no usage charge had posted.
+No persistent volume was created and ongoing spend was verified as zero.
+
+Environment: official `runpod/pytorch:1.5.0-cu1281-torch280-ubuntu2404`, Secure
+Cloud US-MD-1, Python 3.12.3, OpenMM package 8.6.1 (runtime build
+`8.6.1.dev-b399af4`), NumPy 2.5.4, NVIDIA driver 595.91.07. The source bundle
+was pinned to commit `dd01848fd9d6b83ec8471b2453f6eabf2d61236e`.
+
+**The total scientific campaign price remains unknown.** Neither ns/day nor
+full simulation cost can be inferred from these force timings. Full accepted
+integration, all sampling windows/repeats, analysis, retries, provisioning,
+storage, 256-contract deployment/setup and every report transaction must be
+included before quoting that total.
+
+## Scope and remaining work
 
 The proposed hybrid direction keeps a target of **256 on-chain contracts** for
 experiment registration, commitments, checkpoints and results, while external
 GPUs perform molecular calculations. This is an architecture proposal and
-benchmark preparation; no hybrid reporting contracts or full scientific
+benchmark implementation; no hybrid reporting contracts or full scientific
 campaign have been deployed by this work.
 
 ## Prepared package
@@ -44,22 +116,17 @@ Reference orchestration tests used explicitly labelled small synthetic fixtures;
 they do not constitute a full-size GPU benchmark. See
 [preparation status](runpod-preparation-status.json) for source hashes and scope.
 
-## Pending measurement and cost
+## Next validation gates
 
-The next run is one A100 80 GB with CUDA mixed and double precision. The observed
-Runpod A100 rate was $1.79/hour on 2026-11-02, approximately $1.80/hour including
-the selected 50 GB container disk, before applicable taxes. Current pricing and
-availability must be checked at launch. [Runpod pricing](https://www.runpod.io/pricing)
+Resolve the minimized-coordinate double-precision discrepancy and the full-size
+structure/range failures, approve the scientific model and protocol, then measure
+validated full trajectories and alchemical sampling. The 256-contract hybrid
+reporting design also requires implementation and validation before deployment.
+No mainnet or public-testnet transaction was sent during this benchmark.
 
-The runner permits at most 300 seconds per child process and 1,800 seconds
-overall. These are process limits, not billing limits. The operator must retrieve
-and verify results, then stop the Pod; persistent storage may remain billable.
-
-**No A100 throughput, CUDA numerical acceptance, full trajectory throughput, or
-complete campaign price is claimed.** Fixed-coordinate force timings cannot be
-converted directly into a complete simulation quote. Constraints, sampling,
-analysis, retries, provisioning/storage and all on-chain deployment/setup/report
-transactions must be measured and included in a total campaign estimate.
+The launcher used a 1,200-second runner deadline and a 240-second child deadline,
+within a roughly 30-minute preparation/run allowance. These limits stop
+processes, not billing; the Pod was stopped separately after retrieval.
 
 Signed GPU reports and hashes establish submission identity and committed data;
 they do not prove the physics was computed correctly. Independent validation
