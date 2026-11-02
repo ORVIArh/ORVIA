@@ -4,6 +4,8 @@ pragma solidity 0.8.26;
 /// @notice Small mainnet publication endpoint for GPU-produced ORVIA results.
 /// @dev This authenticates an operator's signed report; it does not prove or
 ///      execute the molecular calculation. Full inputs and outputs stay off-chain.
+///      The immutable operator must use an EOA signature. Identical reports may
+///      be relayed repeatedly; consumers must deduplicate by the EIP-712 digest.
 contract ORVIAResultAnchor {
     error InvalidOperator();
     error InvalidSignature();
@@ -69,6 +71,7 @@ contract ORVIAResultAnchor {
             v := byte(0, calldataload(add(signature.offset, 64)))
         }
         if (v != 27 && v != 28) revert InvalidSignature();
+        if (uint256(s) > 0x7fffffffffffffffffffffffffffffff5d576e7357a4501ddfe92f46681b20a0) revert InvalidSignature();
         signer = ecrecover(digest, v, r, s);
         if (signer == address(0)) revert InvalidSignature();
     }

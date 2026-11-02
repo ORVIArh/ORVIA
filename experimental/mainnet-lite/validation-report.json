@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 1,
+  "status": "passed_local_security_checks",
+  "passed": true,
+  "startedAtUtc": "2026-11-02T08:13:28.485Z",
+  "sourceSha256": "85c5296d4238f1a6907986f7e0eb4a1a457197f75ef8e77e140ae9982429b849",
+  "scriptSha256": "cb0560b9831176b0487f7f72d58c7ca884a254892bd50ca69cf3141a6e43c3be",
+  "dependencyLockSha256": "a6f990a92b0a6e52106bd67598e5cf33d867ddb22e3b0df8369e6437ec45ed24",
+  "executionScope": "In-process Ganache only; no remote RPC or target broadcast.",
+  "mainnetTransactionsSent": 0,
+  "scientificComputationVerified": false,
+  "duplicateSemantics": "Identical signed reports may emit repeatedly. Deduplicate by EIP-712 digest, not signature or event count.",
+  "limitations": [
+    "An operator signature authenticates an attestation, not scientific computation or correctness.",
+    "This checks an EOA operator; ERC-1271, key rotation and revocation are not provided by this contract.",
+    "No real scientific artifact availability, production key custody, target deployment or network-fee claim is tested."
+  ],
+  "checks": [
+    {
+      "name": "compiled_runtime_and_immutable_operator_match",
+      "passed": true
+    },
+    {
+      "name": "zero_operator_constructor_rejected",
+      "passed": true
+    },
+    {
+      "name": "valid_operator_signature_permissionless_relay_exact_event",
+      "passed": true
+    },
+    {
+      "name": "duplicate_report_allowed_from_another_relayer",
+      "passed": true
+    },
+    {
+      "name": "tampered_signed_inputHash_rejected",
+      "passed": true
+    },
+    {
+      "name": "tampered_signed_methodHash_rejected",
+      "passed": true
+    },
+    {
+      "name": "tampered_signed_settingsHash_rejected",
+      "passed": true
+    },
+    {
+      "name": "tampered_signed_outputHash_rejected",
+      "passed": true
+    },
+    {
+      "name": "tampered_signed_atomCount_rejected",
+      "passed": true
+    },
+    {
+      "name": "tampered_signed_sampleCount_rejected",
+      "passed": true
+    },
+    {
+      "name": "wrong_operator_signature_rejected",
+      "passed": true
+    },
+    {
+      "name": "wrong_domain_chain_rejected",
+      "passed": true
+    },
+    {
+      "name": "wrong_domain_contract_rejected",
+      "passed": true
+    },
+    {
+      "name": "wrong_domain_name_rejected",
+      "passed": true
+    },
+    {
+      "name": "wrong_domain_version_rejected",
+      "passed": true
+    },
+    {
+      "name": "cross_deployment_replay_rejected",
+      "passed": true
+    },
+    {
+      "name": "operator_signed_zero_inputHash_rejected",
+      "passed": true
+    },
+    {
+      "name": "operator_signed_zero_methodHash_rejected",
+      "passed": true
+    },
+    {
+      "name": "operator_signed_zero_settingsHash_rejected",
+      "passed": true
+    },
+    {
+      "name": "operator_signed_zero_outputHash_rejected",
+      "passed": true
+    },
+    {
+      "name": "operator_signed_zero_atomCount_rejected",
+      "passed": true
+    },
+    {
+      "name": "operator_signed_zero_sampleCount_rejected",
+      "passed": true
+    },
+    {
+      "name": "malformed_signature_empty_rejected",
+      "passed": true
+    },
+    {
+      "name": "malformed_signature_64_bytes_rejected",
+      "passed": true
+    },
+    {
+      "name": "malformed_signature_66_bytes_rejected",
+      "passed": true
+    },
+    {
+      "name": "malformed_signature_all_zero_65_bytes_rejected",
+      "passed": true
+    },
+    {
+      "name": "invalid_recovery_v_0_rejected",
+      "passed": true
+    },
+    {
+      "name": "invalid_recovery_v_1_rejected",
+      "passed": true
+    },
+    {
+      "name": "invalid_recovery_v_26_rejected",
+      "passed": true
+    },
+    {
+      "name": "invalid_recovery_v_29_rejected",
+      "passed": true
+    },
+    {
+      "name": "invalid_recovery_v_255_rejected",
+      "passed": true
+    },
+    {
+      "name": "invalid_signature_zero_r_rejected",
+      "passed": true
+    },
+    {
+      "name": "invalid_signature_zero_s_rejected",
+      "passed": true
+    },
+    {
+      "name": "invalid_signature_out_of_range_r_rejected",
+      "passed": true
+    },
+    {
+      "name": "invalid_signature_out_of_range_s_rejected",
+      "passed": true
+    },
+    {
+      "name": "malleable_high_s_signature_rejected",
+      "passed": true
+    },
+    {
+      "name": "maximum_uint32_uint64_counts_preserved_exactly",
+      "passed": true
+    },
+    {
+      "name": "source_script_and_dependency_lock_unchanged_during_run",
+      "passed": true
+    }
+  ],
+  "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+  "compilerSettings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "evmVersion": "shanghai",
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode.object",
+          "evm.deployedBytecode.object",
+          "evm.deployedBytecode.immutableReferences"
+        ]
+      }
+    }
+  },
+  "standardInputSha256": "943cf13809fd74b0131badae26b81874fd62a6c207ce6336cc707868ad75b848",
+  "creationTemplateKeccak256": "0x68f8c00860550aa11f4810fc10f4acda5475013a8325f6a3253a463dcc8ed3d0",
+  "runtimeTemplateKeccak256": "0x286b4e0cf51e7f5538e8410ca1aad4a5be00fd28d6d91a1de151dcd51235fefc",
+  "fixture": {
+    "synthetic": true,
+    "chainId": 4663,
+    "operator": "0x6898Cb97A6EBA968F1000478A20B3f3659D3b707",
+    "relayers": [
+      "0x9fE3dc7959818B64992Ed177aF013E335260Cd30",
+      "0x59fB6D14489a6D8EaB2Da95509D3749EC08D9594"
+    ],
+    "contract": "0x8d00Cbea5C013C96D3882C21A3230B74123CAB81",
+    "secondContract": "0x33106CE903D2ed08141f6a91677361332B6783fc",
+    "typedReportDigest": "0xea98b927f86c21e77b3b5f9c5db9695f853731e7202339a7f9893c0a4e95087d",
+    "report": {
+      "inputHash": "0x02f328466cd970ab2a46bdf1e325befd69fd77d5d13cc869b783e023a834a423",
+      "methodHash": "0x98bef1d97495fe2a241430844978d6830fbbc70c3925833b1fa4b41c0a13079b",
+      "settingsHash": "0x0b75e38feaba08c2c1d3da65a20c61d05f64364bcbf0490ca002cd2f4604a81c",
+      "outputHash": "0x50459c48c4d50e65134a3437962333b9a3206ba840d35bd98a4e0dc245408ed7",
+      "atomCount": "132936",
+      "sampleCount": "1000"
+    }
+  },
+  "localGas": {
+    "deploymentGas": "360077",
+    "validReportGas": "33080",
+    "duplicateReportGas": "33080"
+  },
+  "localRuntime": {
+    "runtimeKeccak256": "0x314651a49d80d073863545d1fe9c53ca25423ee95afc700c978f6374aba7229c",
+    "runtimeBytes": 1410,
+    "initcodeWithArgumentsBytes": 1619,
+    "creationWithArgumentsKeccak256": "0xad444a6822d5ab270c512fdeefa665d53759b4defa6a0096e94d2d931c97a29a"
+  },
+  "checkCount": 38,
+  "failedCheckCount": 0,
+  "completedAtUtc": "2026-11-02T08:13:29.348Z"
+}
