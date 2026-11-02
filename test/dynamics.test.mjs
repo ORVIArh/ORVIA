@@ -175,7 +175,7 @@ with localcontext() as c:
 print(json.dumps({'scope':'Eight-step finite four-atom validation fixture; not solvated myosin or free energy','oracle':'mpmath 90-digit energy differentiation and velocity Verlet','absolute_tolerance':'1e-25','relative_tolerance':'1e-24','checkpoints':report},indent=2))
 `;
     assert.equal(checkpoints.length, reference.checkpoints.length);
-    const result = execFileSync(process.env.CODEX_PRIMARY_RUNTIME_PYTHON || 'python3', ['-c', comparison],
+    const result = execFileSync(process.env.ORVIA_RESEARCH_PYTHON || process.env.CODEX_PRIMARY_RUNTIME_PYTHON || 'python3', ['-c', comparison],
       { input: JSON.stringify({ actual: checkpoints, expected: reference.checkpoints }), encoding: 'utf8' });
     fs.writeFileSync('reports/dynamics_validation.json', result);
   });

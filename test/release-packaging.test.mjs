@@ -6,7 +6,24 @@ import path from 'node:path';
 import {spawnSync} from 'node:child_process';
 import {pathToFileURL} from 'node:url';
 import {CHECK_NAMES, GENERATED_EVIDENCE, inputInventory, buildInventory, evidenceInventory, canonical, sha256, digestFile, verifyValidation} from '../scripts/validation_inventory.mjs';
+import {defaultChecks} from '../scripts/check.mjs';
 const project=process.cwd(),python=process.env.CODEX_PRIMARY_RUNTIME_PYTHON||'python3';
+test('Parallel scheduling preserves every fixed check and rejects invalid worker counts',()=>{
+ const original=process.env.ORVIA_TEST_CONCURRENCY;
+ try{
+  delete process.env.ORVIA_TEST_CONCURRENCY;
+  const baseline=defaultChecks();assert(baseline[1][2].includes('--test-concurrency=3'));
+  for(const value of ['1','8','32']){
+   process.env.ORVIA_TEST_CONCURRENCY=value;const checks=defaultChecks();
+   assert(checks[1][2].includes(`--test-concurrency=${value}`));
+   const withoutScheduling=rows=>rows.map(([name,command,args])=>[name,command,args.filter(x=>!x.startsWith('--test-concurrency='))]);
+   assert.deepEqual(withoutScheduling(checks),withoutScheduling(baseline));
+  }
+  for(const value of ['0','33','-1','1.5','08','8 --test-name-pattern=x']){
+   process.env.ORVIA_TEST_CONCURRENCY=value;assert.throws(()=>defaultChecks(),/integer from 1 to 32/);
+  }
+ }finally{if(original===undefined)delete process.env.ORVIA_TEST_CONCURRENCY;else process.env.ORVIA_TEST_CONCURRENCY=original;}
+});
 function fixture(t){
  const parent=fs.mkdtempSync(path.join(os.tmpdir(),'orvia-packaging-')),root=path.join(parent,'orvia');
  t.after(()=>fs.rmSync(parent,{recursive:true,force:true}));

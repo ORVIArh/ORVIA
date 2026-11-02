@@ -52,7 +52,7 @@ print(json.dumps({'scope':'Standalone unwrapped direct pairs; no full-system non
  'reference':'Independent Python Decimal, 100 digits','arithmetic_format':'binary128, upstream ABDK semantics',
  'comparison_absolute_tolerance':'1e-30','comparison_relative_tolerance':'1e-28','vectors':report},indent=2))
 `;
-    const report = execFileSync(process.env.CODEX_PRIMARY_RUNTIME_PYTHON || 'python3', ['-c', python], {
+    const report = execFileSync(process.env.ORVIA_RESEARCH_PYTHON || process.env.CODEX_PRIMARY_RUNTIME_PYTHON || 'python3', ['-c', python], {
       input: JSON.stringify(actual), encoding: 'utf8'
     });
     fs.writeFileSync('reports/nonbonded_validation.json', report);

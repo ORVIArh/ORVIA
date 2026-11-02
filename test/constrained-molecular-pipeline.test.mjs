@@ -49,7 +49,7 @@ test('Constrained substeps commit only after authenticated SHAKE/RATTLE converge
   assert.notEqual(await e.pipeline.sampleConstraintTranscript(cid,0),ZeroHash);
  }
  assert.deepEqual(observations[0],observations[1]);
- const reference=execFileSync(process.env.ORVIA_REFERENCE_PYTHON||'python3',['reference/constrained_pipeline_reference.py'],{input:JSON.stringify(observations[0]),encoding:'utf8'});
+ const reference=execFileSync(process.env.ORVIA_REFERENCE_PYTHON||process.env.ORVIA_RESEARCH_PYTHON||process.env.CODEX_PRIMARY_RUNTIME_PYTHON||'python3',['reference/constrained_pipeline_reference.py'],{input:JSON.stringify(observations[0]),encoding:'utf8'});
  report.reference=JSON.parse(reference);assert.equal(report.reference.passed,true);
  const bad=await campaign(2),badRun=await e.start(bad,0);await e.initialize(badRun);
  const checkpoint=(await e.pipeline.runInfo(badRun)).checkpoint;const old=await e.stateAt(badRun,2);
