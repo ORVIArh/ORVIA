@@ -1,0 +1,14 @@
+{
+  "schema": "orvia.experiment-selection.v1",
+  "name": "ORVIA-ADP-PHOSPHATE-v0.2",
+  "chemicalState": "ADP and inorganic phosphate",
+  "selection": "User explicitly chose validation of the existing phosphate model as a separately named experiment",
+  "selectedAtUtcDate": "2026-11-02",
+  "originalVanadateExperimentReplaced": false,
+  "preparationCandidateVersion": "0.2",
+  "status": "structure_repair_and_validation_in_progress",
+  "productionReady": false,
+  "nativeComplexAtoms": 132935,
+  "nativeSolventAtoms": 151505,
+  "alchemicalHybridAtomsNotUsedInNativeCounts": true
+}
