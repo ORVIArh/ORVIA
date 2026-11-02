@@ -1,0 +1,70 @@
+{
+  "scope": "New numerical policy, standalone repeated local pair calls; no full-trajectory/production gas claim",
+  "localChainId": 31337,
+  "rows": [
+    {
+      "implementation": "binary128",
+      "insideSwitch": false,
+      "receiptGas": "678714",
+      "callGas": [
+        "82891",
+        "80391",
+        "80392",
+        "80393",
+        "80393",
+        "80394",
+        "80395",
+        "80395"
+      ],
+      "warmMinimum": "80391"
+    },
+    {
+      "implementation": "binary128",
+      "insideSwitch": true,
+      "receiptGas": "960684",
+      "callGas": [
+        "118137",
+        "115637",
+        "115638",
+        "115639",
+        "115639",
+        "115640",
+        "115641",
+        "115641"
+      ],
+      "warmMinimum": "115637"
+    },
+    {
+      "implementation": "fixed96",
+      "insideSwitch": false,
+      "receiptGas": "388162",
+      "callGas": [
+        "46572",
+        "44072",
+        "44073",
+        "44074",
+        "44074",
+        "44075",
+        "44076",
+        "44076"
+      ],
+      "warmMinimum": "44072"
+    },
+    {
+      "implementation": "fixed96",
+      "insideSwitch": true,
+      "receiptGas": "493612",
+      "callGas": [
+        "59753",
+        "57253",
+        "57254",
+        "57255",
+        "57255",
+        "57256",
+        "57257",
+        "57257"
+      ],
+      "warmMinimum": "57253"
+    }
+  ]
+}

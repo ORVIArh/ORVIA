@@ -1,0 +1,65 @@
+{
+  "scope": "Standalone components on local Shanghai EVM, repeated warm locality; no target/full-trajectory claim",
+  "measurements": [
+    {
+      "operation": "real-small",
+      "implementation": "binary128",
+      "receiptGas": "919100",
+      "callGas": [
+        "298722",
+        "293720",
+        "293721"
+      ]
+    },
+    {
+      "operation": "real-small",
+      "implementation": "fixed96",
+      "receiptGas": "322197",
+      "callGas": [
+        "96421",
+        "96419",
+        "96420"
+      ]
+    },
+    {
+      "operation": "real-tail",
+      "implementation": "binary128",
+      "receiptGas": "2292998",
+      "callGas": [
+        "756688",
+        "751686",
+        "751687"
+      ]
+    },
+    {
+      "operation": "real-tail",
+      "implementation": "fixed96",
+      "receiptGas": "899880",
+      "callGas": [
+        "288982",
+        "288980",
+        "288981"
+      ]
+    },
+    {
+      "operation": "structure",
+      "implementation": "binary128",
+      "receiptGas": "2095034",
+      "callGas": [
+        "690641",
+        "685632",
+        "685632"
+      ]
+    },
+    {
+      "operation": "structure",
+      "implementation": "fixed96",
+      "receiptGas": "233586",
+      "callGas": [
+        "66825",
+        "66816",
+        "66816"
+      ]
+    }
+  ]
+}

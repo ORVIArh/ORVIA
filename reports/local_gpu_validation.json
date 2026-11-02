@@ -1,0 +1,287 @@
+{
+  "schema_version": "orvia.local-gpu-validation.v1",
+  "scope": "Actual Apple M5 OpenCL single-precision preparation/reference checks on real41/44-atom ligand endpoints; no full cardiac model, production inference, on-chain transaction or sampling-convergence claim.",
+  "openmm_version": "8.6.1.dev-b399af4",
+  "validator_sha256": "6d2cfd1f5acb6381a6997da785b62c840010cb64978397f4a9f65ca9b678f2b3",
+  "tolerances_predeclared": {
+    "energy_absolute_kJ_mol": 0.01,
+    "force_max_absolute_kJ_mol_nm": 0.05,
+    "force_relative_L2": 5e-05,
+    "trajectory_position_RMS_nm": 1e-05
+  },
+  "endpoint_checks": [
+    {
+      "endpoint": "A",
+      "atoms": 41,
+      "input_sha256": {
+        "system.xml": "c36171b19a956c67770f62f9904039a6eed7e24a33c0369b42927a221862682c",
+        "parameters.json": "0def588014882d5de506ee0ddc1613832dfcfec1e2a2c6ec3d9c8e3c126fd4bd"
+      },
+      "gpu_properties": {
+        "DeviceIndex": "0",
+        "DeviceName": "Apple M5",
+        "OpenCLPlatformIndex": "0",
+        "OpenCLPlatformName": "Apple",
+        "Precision": "single",
+        "UseCpuPme": "false",
+        "DisablePmeStream": "false"
+      },
+      "scenarios": [
+        {
+          "energy_absolute_kJ_mol": 0.00035955818214006285,
+          "force_max_absolute_kJ_mol_nm": 0.4206668957289139,
+          "force_relative_L2": 0.0001245129545494232,
+          "reference_energy_kJ_mol": -119.96674249259911,
+          "gpu_energy_kJ_mol": -119.96710205078125,
+          "reference_force_L2": 8203.471797569064,
+          "scenario": "original",
+          "passed": false
+        },
+        {
+          "energy_absolute_kJ_mol": 0.002298151075478927,
+          "force_max_absolute_kJ_mol_nm": 0.20017426692777462,
+          "force_relative_L2": 5.6148048599434324e-05,
+          "reference_energy_kJ_mol": -43.523278986036416,
+          "gpu_energy_kJ_mol": -43.52098083496094,
+          "reference_force_L2": 13219.304182484942,
+          "scenario": "perturbation_1",
+          "passed": false
+        },
+        {
+          "energy_absolute_kJ_mol": 0.0006125583553853176,
+          "force_max_absolute_kJ_mol_nm": 0.38025557998435033,
+          "force_relative_L2": 7.44038750857119e-05,
+          "reference_energy_kJ_mol": -67.42510002709383,
+          "gpu_energy_kJ_mol": -67.42571258544922,
+          "reference_force_L2": 11745.13514793378,
+          "scenario": "perturbation_2",
+          "passed": false
+        },
+        {
+          "energy_absolute_kJ_mol": 0.002735938432806506,
+          "force_max_absolute_kJ_mol_nm": 0.3593965304683593,
+          "force_relative_L2": 6.526622263319403e-05,
+          "reference_energy_kJ_mol": -50.53332439481915,
+          "gpu_energy_kJ_mol": -50.53606033325195,
+          "reference_force_L2": 13067.595436398928,
+          "scenario": "perturbation_3",
+          "passed": false
+        },
+        {
+          "energy_absolute_kJ_mol": 0.003437342185293346,
+          "force_max_absolute_kJ_mol_nm": 0.4748798192636059,
+          "force_relative_L2": 6.894300444942877e-05,
+          "reference_energy_kJ_mol": -12.99823409511498,
+          "gpu_energy_kJ_mol": -12.994796752929688,
+          "reference_force_L2": 15763.22469585914,
+          "scenario": "perturbation_4",
+          "passed": false
+        },
+        {
+          "energy_absolute_kJ_mol": 1.7269566626509913e-05,
+          "force_max_absolute_kJ_mol_nm": 0.3293929543785765,
+          "force_relative_L2": 6.306029568387238e-05,
+          "reference_energy_kJ_mol": -35.13669003634158,
+          "gpu_energy_kJ_mol": -35.1367073059082,
+          "reference_force_L2": 13288.578066425152,
+          "scenario": "perturbation_5",
+          "passed": false
+        },
+        {
+          "energy_absolute_kJ_mol": 0.004874186501865552,
+          "force_max_absolute_kJ_mol_nm": 0.37196640101592493,
+          "force_relative_L2": 6.541190150414273e-05,
+          "reference_energy_kJ_mol": -51.504988627419834,
+          "gpu_energy_kJ_mol": -51.50011444091797,
+          "reference_force_L2": 12428.058616973734,
+          "scenario": "perturbation_6",
+          "passed": false
+        },
+        {
+          "energy_absolute_kJ_mol": 0.0005734412259812416,
+          "force_max_absolute_kJ_mol_nm": 0.3098144948639856,
+          "force_relative_L2": 5.207638850875238e-05,
+          "reference_energy_kJ_mol": -39.178826615054106,
+          "gpu_energy_kJ_mol": -39.178253173828125,
+          "reference_force_L2": 13818.465853741072,
+          "scenario": "perturbation_7",
+          "passed": false
+        },
+        {
+          "energy_absolute_kJ_mol": 0.0013408853462237857,
+          "force_max_absolute_kJ_mol_nm": 0.24065340249762812,
+          "force_relative_L2": 6.0920856445612176e-05,
+          "reference_energy_kJ_mol": -53.523500423247526,
+          "gpu_energy_kJ_mol": -53.52484130859375,
+          "reference_force_L2": 12867.918556083181,
+          "scenario": "perturbation_8",
+          "passed": false
+        }
+      ],
+      "deterministic_short_trajectory": {
+        "steps": 20,
+        "dt_ps": 0.0002,
+        "position_RMS_difference_nm": 7.771539439139323e-07,
+        "final_comparison": {
+          "energy_absolute_kJ_mol": 0.0024532102260366173,
+          "force_max_absolute_kJ_mol_nm": 1.028660963472639,
+          "force_relative_L2": 0.0008993141662324928,
+          "reference_energy_kJ_mol": -163.19137227760885,
+          "gpu_energy_kJ_mol": -163.1889190673828,
+          "reference_force_L2": 3616.6279091440347
+        }
+      },
+      "external_gpu_minimized_fixture": {
+        "energy_absolute_kJ_mol": 9.900600645096347e-06,
+        "force_max_absolute_kJ_mol_nm": 0.006646312101022289,
+        "force_relative_L2": 0.003314767280655313,
+        "reference_energy_kJ_mol": -214.97873914864752,
+        "gpu_energy_kJ_mol": -214.97872924804688,
+        "reference_force_L2": 6.203647955272758,
+        "passed": false
+      },
+      "trajectory_passed": false,
+      "elapsed_seconds": 1.0065491199493408,
+      "passed": false
+    },
+    {
+      "endpoint": "B",
+      "atoms": 44,
+      "input_sha256": {
+        "system.xml": "abf9a367fa606f16b7301b572bac0fb0d5582cb6e2742c4000e78b32c4908a97",
+        "parameters.json": "41c8f9c37a4b019bcd1592f515c308a29646bd52d82f438c9058e0851046fcb6"
+      },
+      "gpu_properties": {
+        "DeviceIndex": "0",
+        "DeviceName": "Apple M5",
+        "OpenCLPlatformIndex": "0",
+        "OpenCLPlatformName": "Apple",
+        "Precision": "single",
+        "UseCpuPme": "false",
+        "DisablePmeStream": "false"
+      },
+      "scenarios": [
+        {
+          "energy_absolute_kJ_mol": 0.00011462041362619857,
+          "force_max_absolute_kJ_mol_nm": 0.42063728945095136,
+          "force_relative_L2": 0.00012935354820465308,
+          "reference_energy_kJ_mol": -68.91148739985005,
+          "gpu_energy_kJ_mol": -68.91160202026367,
+          "reference_force_L2": 8225.834400380301,
+          "scenario": "original",
+          "passed": false
+        },
+        {
+          "energy_absolute_kJ_mol": 0.0014629509418000453,
+          "force_max_absolute_kJ_mol_nm": 0.3645751732649387,
+          "force_relative_L2": 7.105735424534312e-05,
+          "reference_energy_kJ_mol": -3.521127686265231,
+          "gpu_energy_kJ_mol": -3.5225906372070312,
+          "reference_force_L2": 12064.108580379467,
+          "scenario": "perturbation_1",
+          "passed": false
+        },
+        {
+          "energy_absolute_kJ_mol": 0.0007796272097380097,
+          "force_max_absolute_kJ_mol_nm": 0.22879257807164777,
+          "force_relative_L2": 5.546209012422647e-05,
+          "reference_energy_kJ_mol": -8.975167749768332,
+          "gpu_energy_kJ_mol": -8.974388122558594,
+          "reference_force_L2": 12266.074648313623,
+          "scenario": "perturbation_2",
+          "passed": false
+        },
+        {
+          "energy_absolute_kJ_mol": 0.0026519324920286635,
+          "force_max_absolute_kJ_mol_nm": 0.31952460710047603,
+          "force_relative_L2": 6.111093009806027e-05,
+          "reference_energy_kJ_mol": 10.5243613746307,
+          "gpu_energy_kJ_mol": 10.521709442138672,
+          "reference_force_L2": 13222.604995687921,
+          "scenario": "perturbation_3",
+          "passed": false
+        },
+        {
+          "energy_absolute_kJ_mol": 0.002437171136023153,
+          "force_max_absolute_kJ_mol_nm": 0.3462846832134119,
+          "force_relative_L2": 7.23253604016199e-05,
+          "reference_energy_kJ_mol": 5.692111548577429,
+          "gpu_energy_kJ_mol": 5.689674377441406,
+          "reference_force_L2": 12610.739875095922,
+          "scenario": "perturbation_4",
+          "passed": false
+        },
+        {
+          "energy_absolute_kJ_mol": 0.0019630974510960186,
+          "force_max_absolute_kJ_mol_nm": 0.3111821832617352,
+          "force_relative_L2": 7.21815390395121e-05,
+          "reference_energy_kJ_mol": 17.00978617012703,
+          "gpu_energy_kJ_mol": 17.011749267578125,
+          "reference_force_L2": 13035.436030823997,
+          "scenario": "perturbation_5",
+          "passed": false
+        },
+        {
+          "energy_absolute_kJ_mol": 0.0005879900405147964,
+          "force_max_absolute_kJ_mol_nm": 0.33616386376252194,
+          "force_relative_L2": 6.189289215379558e-05,
+          "reference_energy_kJ_mol": 28.479515602345202,
+          "gpu_energy_kJ_mol": 28.478927612304688,
+          "reference_force_L2": 14697.592180775067,
+          "scenario": "perturbation_6",
+          "passed": false
+        },
+        {
+          "energy_absolute_kJ_mol": 0.002435467605323538,
+          "force_max_absolute_kJ_mol_nm": 0.34766700547788787,
+          "force_relative_L2": 5.975006775933695e-05,
+          "reference_energy_kJ_mol": -3.4468248108670423,
+          "gpu_energy_kJ_mol": -3.4443893432617188,
+          "reference_force_L2": 13494.551526160432,
+          "scenario": "perturbation_7",
+          "passed": false
+        },
+        {
+          "energy_absolute_kJ_mol": 0.001238127263491151,
+          "force_max_absolute_kJ_mol_nm": 0.29428118930354685,
+          "force_relative_L2": 6.288260363199305e-05,
+          "reference_energy_kJ_mol": 5.824426909001772,
+          "gpu_energy_kJ_mol": 5.823188781738281,
+          "reference_force_L2": 12930.23993969606,
+          "scenario": "perturbation_8",
+          "passed": false
+        }
+      ],
+      "deterministic_short_trajectory": {
+        "steps": 20,
+        "dt_ps": 0.0002,
+        "position_RMS_difference_nm": 9.869568382685988e-07,
+        "final_comparison": {
+          "energy_absolute_kJ_mol": 0.0035152623908061287,
+          "force_max_absolute_kJ_mol_nm": 2.248575197186412,
+          "force_relative_L2": 0.0011255708424180947,
+          "reference_energy_kJ_mol": -110.45481302240057,
+          "gpu_energy_kJ_mol": -110.45129776000977,
+          "reference_force_L2": 3662.73250324423
+        }
+      },
+      "external_gpu_minimized_fixture": {
+        "energy_absolute_kJ_mol": 3.2512951094076925e-05,
+        "force_max_absolute_kJ_mol_nm": 0.00573957199506836,
+        "force_relative_L2": 0.0030501699761460075,
+        "reference_energy_kJ_mol": -172.58199110765437,
+        "gpu_energy_kJ_mol": -172.58202362060547,
+        "reference_force_L2": 6.288123965005584,
+        "passed": false
+      },
+      "trajectory_passed": false,
+      "elapsed_seconds": 1.4474377632141113,
+      "passed": false
+    }
+  ],
+  "production_ready": false,
+  "status": "failed_strict_single_precision_tolerance",
+  "hardware_execution_verified": true,
+  "strict_numerical_acceptance": false,
+  "recommended_use": "Single GPU for external coordinate preparation with independent Reference/CPU final cleanup and audit; not a double-precision or on-chain arithmetic oracle."
+}

@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "sourceSha256": {
+    "contracts/math/Fixed96Math.sol": "10ef8e2d4db52cd9e317e3aba08db3cc4f21e8cc5ea6e03622619c9010582830",
+    "contracts/kernels/Fixed96SoftcoreLennardJonesKernel.sol": "2672972f4ba8c666a965459fcbf23e9350a39e009cba17fd5927ff0e8e30d250",
+    "contracts/math/FloatMath.sol": "a474f7656f9ffc3d3149e6a0e08f2fcf6838483ae689d1e6a7cf7400f8bad74b",
+    "contracts/math/vendor/ABDKMathQuad.sol": "dd13f72bf828a699c94e96d1377daabce3dcc1d4b29af7215501a611d3cb7c9e",
+    "contracts/kernels/SoftcoreLennardJonesKernel.sol": "fb6b215e82aff471a1f615f6809c45e1b3aeae6df804ed29673ae0e63207e2b4",
+    "test/Fixed96SoftcoreGasMeter.sol": "31a952407a87f79ef65035e2b31e4097323f64b3c26b043b931c0b91ef858da6"
+  },
+  "scope": "Explicit fixed-point domain rejection, including physically finite softened contacts outside supported output/intermediate ranges; no universal trajectory-domain guarantee.",
+  "finiteRejectedContact": {
+    "name": "finite-born-pair-outside-fixed96-physical-output-range",
+    "d": [
+      "0x00000000000000000000000000000000",
+      "0x00000000000000000000000000000000",
+      "0x00000000000000000000000000000000"
+    ],
+    "a": [
+      "0x3ffd556268746d426000000000000000",
+      "0x00000000000000000000000000000000"
+    ],
+    "b": [
+      "0x3ffd556268746d426000000000000000",
+      "0x3ffde1fc98e01fd13000000000000000"
+    ],
+    "lambda": "0x3ffeff7ced916872b000000000000000",
+    "alpha": "0x3ffe0000000000000000000000000000",
+    "binary128Result": [
+      "0x4029b5ecff808ce8f1aa79888e7ecf47",
+      "0x00000000000000000000000000000000",
+      "0x00000000000000000000000000000000",
+      "0x00000000000000000000000000000000",
+      "0x4035abc4de58ca709e2d8d9e283101d1"
+    ]
+  },
+  "rejections": [
+    {
+      "name": "invalid-lambda--0.01",
+      "status": "rejected"
+    },
+    {
+      "name": "invalid-lambda-1.01",
+      "status": "rejected"
+    },
+    {
+      "name": "zero-alpha",
+      "status": "rejected"
+    },
+    {
+      "name": "negative-epsilon",
+      "status": "rejected"
+    },
+    {
+      "name": "unrepresentable-sigma",
+      "status": "rejected"
+    },
+    {
+      "name": "displacement-upper-range",
+      "status": "rejected"
+    },
+    {
+      "name": "r6-intermediate-upper-range",
+      "status": "rejected"
+    },
+    {
+      "name": "sigma6-underflow",
+      "status": "rejected"
+    },
+    {
+      "name": "nonfinite-coordinate-0x7fff0000000000000000000000000000",
+      "status": "rejected"
+    },
+    {
+      "name": "nonfinite-lambda-0x7fff0000000000000000000000000000",
+      "status": "rejected"
+    },
+    {
+      "name": "nonfinite-coordinate-0xffff0000000000000000000000000000",
+      "status": "rejected"
+    },
+    {
+      "name": "nonfinite-lambda-0xffff0000000000000000000000000000",
+      "status": "rejected"
+    },
+    {
+      "name": "nonfinite-coordinate-0x7fff8000000000000000000000000000",
+      "status": "rejected"
+    },
+    {
+      "name": "nonfinite-lambda-0x7fff8000000000000000000000000000",
+      "status": "rejected"
+    },
+    {
+      "name": "active-singular-endpoint-0",
+      "status": "rejected"
+    },
+    {
+      "name": "active-singular-endpoint-1",
+      "status": "rejected"
+    },
+    {
+      "name": "finite-born-pair-outside-fixed96-physical-output-range",
+      "status": "rejected"
+    }
+  ]
+}

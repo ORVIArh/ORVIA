@@ -1,0 +1,6 @@
+2026-11-02T05:42:04.628Z DEBUG [stylus_tools::core::check] [0;0m[90mreading wasm file at [38;5;183;1mtarget/wasm32-unknown-unknown/release/orvia_quad_kernel.wasm[0;0m[0;0m
+2026-11-02T05:42:04.691Z INFO  [stylus_tools::core::check] [0;0m[90mcontract size: [33;1m18.4 KB[0;0m[90m (18427 bytes)[0;0m
+2026-11-02T05:42:04.691Z DEBUG [stylus_tools::core::check] [0;0m[90mwasm size: [38;5;48;1m55.7 KB[0;0m[90m (55747 bytes)[0;0m
+2026-11-02T05:42:04.691Z DEBUG [stylus_tools::core::check] [0;0m[90mconnecting to RPC: RootProvider { client: RpcClient(RpcClientInner { transport: BoxTransport { .. }, is_local: false, id: 0, poll_interval: 7000 }), .. }[0;0m
+2026-11-02T05:42:04.693Z DEBUG [reqwest::connect] starting new connection 'Some("robinhood.rpc.pinax.network")'
+[1m[31merror[0m[1m:[0m Stylus activations appear to be paused on this chain (activation gas charge is 18446744073709551615)

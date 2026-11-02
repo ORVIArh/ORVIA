@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 1,
+  "localChainId": 31337,
+  "scope": "Actual standalone local calls under different declared numerical policies, not full Ewald-backed sampling, total gas/fees or chain throughput.",
+  "sourceSha256": {
+    "contracts/math/Fixed96Math.sol": "10ef8e2d4db52cd9e317e3aba08db3cc4f21e8cc5ea6e03622619c9010582830",
+    "contracts/kernels/Fixed96SoftcoreLennardJonesKernel.sol": "2672972f4ba8c666a965459fcbf23e9350a39e009cba17fd5927ff0e8e30d250",
+    "contracts/math/FloatMath.sol": "a474f7656f9ffc3d3149e6a0e08f2fcf6838483ae689d1e6a7cf7400f8bad74b",
+    "contracts/math/vendor/ABDKMathQuad.sol": "dd13f72bf828a699c94e96d1377daabce3dcc1d4b29af7215501a611d3cb7c9e",
+    "contracts/kernels/SoftcoreLennardJonesKernel.sol": "fb6b215e82aff471a1f615f6809c45e1b3aeae6df804ed29673ae0e63207e2b4",
+    "test/Fixed96SoftcoreGasMeter.sol": "31a952407a87f79ef65035e2b31e4097323f64b3c26b043b931c0b91ef858da6"
+  },
+  "rows": [
+    {
+      "implementation": "binary128",
+      "scenario": "nonzero-interior",
+      "count": 0,
+      "receiptGas": "25127",
+      "callGas": []
+    },
+    {
+      "implementation": "binary128",
+      "scenario": "nonzero-interior",
+      "count": 1,
+      "receiptGas": "219980",
+      "callGas": [
+        "193592"
+      ]
+    },
+    {
+      "implementation": "binary128",
+      "scenario": "nonzero-interior",
+      "count": 2,
+      "receiptGas": "409783",
+      "callGas": [
+        "193592",
+        "188594"
+      ]
+    },
+    {
+      "implementation": "binary128",
+      "scenario": "nonzero-interior",
+      "count": 4,
+      "receiptGas": "789393",
+      "callGas": [
+        "193592",
+        "188593",
+        "188594",
+        "188595"
+      ]
+    },
+    {
+      "implementation": "binary128",
+      "scenario": "nonzero-interior",
+      "count": 8,
+      "receiptGas": "1548626",
+      "callGas": [
+        "193593",
+        "188593",
+        "188594",
+        "188595",
+        "188595",
+        "188595",
+        "188596",
+        "188597"
+      ]
+    },
+    {
+      "implementation": "binary128",
+      "scenario": "actual-hybrid-born-pair",
+      "count": 0,
+      "receiptGas": "25223",
+      "callGas": []
+    },
+    {
+      "implementation": "binary128",
+      "scenario": "actual-hybrid-born-pair",
+      "count": 1,
+      "receiptGas": "166480",
+      "callGas": [
+        "139996"
+      ]
+    },
+    {
+      "implementation": "binary128",
+      "scenario": "actual-hybrid-born-pair",
+      "count": 2,
+      "receiptGas": "302687",
+      "callGas": [
+        "139996",
+        "134998"
+      ]
+    },
+    {
+      "implementation": "binary128",
+      "scenario": "actual-hybrid-born-pair",
+      "count": 4,
+      "receiptGas": "575105",
+      "callGas": [
+        "139996",
+        "134997",
+        "134998",
+        "134999"
+      ]
+    },
+    {
+      "implementation": "binary128",
+      "scenario": "actual-hybrid-born-pair",
+      "count": 8,
+      "receiptGas": "1119954",
+      "callGas": [
+        "139997",
+        "134997",
+        "134998",
+        "134999",
+        "134999",
+        "134999",
+        "135000",
+        "135001"
+      ]
+    },
+    {
+      "implementation": "fixed96",
+      "scenario": "nonzero-interior",
+      "count": 0,
+      "receiptGas": "25127",
+      "callGas": []
+    },
+    {
+      "implementation": "fixed96",
+      "scenario": "nonzero-interior",
+      "count": 1,
+      "receiptGas": "81306",
+      "callGas": [
+        "54918"
+      ]
+    },
+    {
+      "implementation": "fixed96",
+      "scenario": "nonzero-interior",
+      "count": 2,
+      "receiptGas": "134935",
+      "callGas": [
+        "54918",
+        "52420"
+      ]
+    },
+    {
+      "implementation": "fixed96",
+      "scenario": "nonzero-interior",
+      "count": 4,
+      "receiptGas": "242197",
+      "callGas": [
+        "54918",
+        "52419",
+        "52420",
+        "52421"
+      ]
+    },
+    {
+      "implementation": "fixed96",
+      "scenario": "nonzero-interior",
+      "count": 8,
+      "receiptGas": "456734",
+      "callGas": [
+        "54919",
+        "52419",
+        "52420",
+        "52421",
+        "52421",
+        "52421",
+        "52422",
+        "52423"
+      ]
+    },
+    {
+      "implementation": "fixed96",
+      "scenario": "actual-hybrid-born-pair",
+      "count": 0,
+      "receiptGas": "25223",
+      "callGas": []
+    },
+    {
+      "implementation": "fixed96",
+      "scenario": "actual-hybrid-born-pair",
+      "count": 1,
+      "receiptGas": "70318",
+      "callGas": [
+        "43834"
+      ]
+    },
+    {
+      "implementation": "fixed96",
+      "scenario": "actual-hybrid-born-pair",
+      "count": 2,
+      "receiptGas": "112863",
+      "callGas": [
+        "43834",
+        "41336"
+      ]
+    },
+    {
+      "implementation": "fixed96",
+      "scenario": "actual-hybrid-born-pair",
+      "count": 4,
+      "receiptGas": "197957",
+      "callGas": [
+        "43834",
+        "41335",
+        "41336",
+        "41337"
+      ]
+    },
+    {
+      "implementation": "fixed96",
+      "scenario": "actual-hybrid-born-pair",
+      "count": 8,
+      "receiptGas": "368158",
+      "callGas": [
+        "43835",
+        "41335",
+        "41336",
+        "41337",
+        "41337",
+        "41337",
+        "41338",
+        "41339"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "scenario": "nonzero-interior",
+      "fixed96WarmMinimum": "52419",
+      "binary128WarmMinimum": "188593",
+      "ratio": 3.5977985081745167
+    },
+    {
+      "scenario": "actual-hybrid-born-pair",
+      "fixed96WarmMinimum": "41335",
+      "binary128WarmMinimum": "134997",
+      "ratio": 3.2659247610983426
+    }
+  ]
+}

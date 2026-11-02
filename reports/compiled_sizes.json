@@ -41,10 +41,12 @@
     "contracts/core/NeighborDynamicsCoordinator.sol": "28c24ac832cf8a419519c45824ae2ebbcd3b2b490f3d6fa26017e088766559c4",
     "contracts/core/NeighborList.sol": "ba4a3bb8b34b03fb94e541eb0ea0634dc9c00c4fa146314e6cb787d919de35d4",
     "contracts/core/PagedBondCoordinator.sol": "b3cf7b4f8e118caf12be9564b92df9ec8756e3c8d9da8b320e9b4873192a6164",
+    "contracts/core/PartitionedInputCatalog.sol": "e46ed09f4547af8f9247b17917286f6d0cdf7af39ecad899e526146c3e6a1ee5",
     "contracts/core/PeriodicDataset.sol": "1d01a1a4525f637b70781a8264f80e83e8c6686f0d33068b25446ff208fddb6e",
     "contracts/core/PeriodicDynamicsCoordinator.sol": "e5a2da4daa285563e4ecfdc3dc4d0ead3bdbaf35dd6fc4ccb9212173e6276c3f",
     "contracts/core/PeriodicMinimizer.sol": "48771b706224c06bfd6e9c7c7f82a6ec518f348ab007bed1f4701bcaa1cd69b9",
     "contracts/core/ResumableBondEngine.sol": "02d2098c3250c27c4c7fcc26dc1e7afa5151d83220662fc7864dec2dabe61984",
+    "contracts/core/ShardedWorkingState.sol": "10063a76f18f3e52a107adba5855da044a33914d8423a2ce4f1c1db870e2adb9",
     "contracts/core/WorkingStatePage.sol": "47441435615ea985ab4b4db97d10efc39da8c945823d38e651c7f454e3c2137a",
     "contracts/kernels/CoulombPairKernel.sol": "4640f583410bbf6e24d10f6df5b5bb8cae1a4a98aace7f979144375596bbdc93",
     "contracts/kernels/CounterRandom.sol": "98f38ee2e2962858ac681565b369a2a983f8aecd7b8188a9b191a4a4c5954190",
@@ -53,6 +55,11 @@
     "contracts/kernels/EwaldKernelBase.sol": "c9f44e1dbf573ad9505e886e0f3854c2ffda850e3a0fd0b08c22563f23031a17",
     "contracts/kernels/EwaldRealSpaceKernel.sol": "f4ceec084d7131de3141ad0f8be06dd1ff6dfa722d6499740af9de7cd431ebf1",
     "contracts/kernels/EwaldReciprocalKernel.sol": "7225171a789fdf4ced5256b293a428138e27c4c2dbe73eea5f22a52af94ec1bf",
+    "contracts/kernels/Fixed96EwaldRealSpaceKernel.sol": "d2a4c9287b5799275f1a792a39fa900810acf267164582f17be0c19a7375872c",
+    "contracts/kernels/Fixed96EwaldReciprocalKernel.sol": "91736ca32c7a2b08daf978aa7c39cb428324925f414ec0bb10484be6443a1467",
+    "contracts/kernels/Fixed96LennardJonesKernel.sol": "cc01b77c4ebe261be6c86eb7c3e58c6495ff6b5fc977878c2fd1daf910f070e9",
+    "contracts/kernels/Fixed96SoftcoreLennardJonesKernel.sol": "2f5ac2bc9f2359b6857423eb1dd289515221453aa03151d32e178ca8e6791359",
+    "contracts/kernels/FixedPointNonbondedKernel.sol": "20da03e08acfde6726a33cc6138dd345881289b2f4dafc52222e5b0c0ebfd466",
     "contracts/kernels/HarmonicAngleKernel.sol": "d525eeecc8625d1e05112dc2977a91fe1d688d7585f99d08151cdc73fa2cbe09",
     "contracts/kernels/HarmonicBondKernel.sol": "cbb2b99181ab7eec4a07dca99734e9ab2a3fa6ae4bd61b39d3a7bc6ef0f63108",
     "contracts/kernels/InlineNonbondedKernel.sol": "b72e7aebb809f72f8053bcecc4871c4cf06f4f4bf85fea43c76312226bde0451",
@@ -65,6 +72,8 @@
     "contracts/kernels/SwitchedNonbondedKernel.sol": "4755fd13b34f2d60b1ea545b79f9a74403e3cd424d6392d357d0a8e2b8d48ac3",
     "contracts/kernels/VelocityVerletKernel.sol": "0a1d7735e81e7c11c88f296cadc4044d4f07223fa22d45cfecaf37ed41da4d73",
     "contracts/math/ElementaryMath.sol": "9965604b32c46748605948c58f092ead3911e231baf39e7d4bea02beb3200062",
+    "contracts/math/Fixed96EwaldMath.sol": "f2a415768478fdf951d83d6f880ba98af50b9fa25382c6bb072b1189cff4775f",
+    "contracts/math/Fixed96Math.sol": "10ef8e2d4db52cd9e317e3aba08db3cc4f21e8cc5ea6e03622619c9010582830",
     "contracts/math/FloatMath.sol": "a474f7656f9ffc3d3149e6a0e08f2fcf6838483ae689d1e6a7cf7400f8bad74b",
     "contracts/math/ScalarMath.sol": "fd95d9e52db57f772946d1eff8d3c9b0e2518fdbdadb033160f4b5678df13f58",
     "contracts/math/vendor/ABDKMathQuad.sol": "dd13f72bf828a699c94e96d1377daabce3dcc1d4b29af7215501a611d3cb7c9e",
@@ -73,6 +82,8 @@
     "test/contracts/InlineKernelIdentityHarness.sol": "ed1a6e505c8bc07fb74309818ddbd547382bb45c4f4606498b86eb22fbc2304e",
     "test/contracts/NeighborListHarness.sol": "c61ac09e0152f7c10331ce3f63040f97037ebb92c80c0f8300544a1bf5d63ff1",
     "test/contracts/PairWorkMeter.sol": "13fb7d20185c41c8cd58db81f6efd33db8908b673d9e6814128d2c2b207fed8e",
+    "test/contracts/ShardedStateForceHarness.sol": "cdf84a93be5e3ca80271bb0dee7fd756f18cb481079713d82775ac3aa5fcce06",
+    "test/contracts/StaticCallWorkMeter.sol": "229429863c293b031767731ec1e5f19f2a993e524adc0516e100bcec956953ce",
     "test/contracts/TimeSeriesWriterHarness.sol": "49eb284d631f0c3e7520ca869d832d46a1be38d5019b45c83fd5a66509e20383",
     "test/contracts/WorkingStateWriterHarness.sol": "f478b004274aaa2b515f2a6b30344d904e0c837a698d7b188cd66f47517d460f"
   },
@@ -618,6 +629,15 @@
       "creationCodeWithinDocumentedInitLimit": true
     },
     {
+      "name": "PartitionedInputCatalog",
+      "file": "contracts/core/PartitionedInputCatalog.sol",
+      "testOnly": false,
+      "creationBytes": 8649,
+      "runtimeBytes": 8450,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
       "name": "PeriodicDataset",
       "file": "contracts/core/PeriodicDataset.sol",
       "testOnly": false,
@@ -843,6 +863,24 @@
       "creationCodeWithinDocumentedInitLimit": true
     },
     {
+      "name": "ShardedWorkingState",
+      "file": "contracts/core/ShardedWorkingState.sol",
+      "testOnly": false,
+      "creationBytes": 8357,
+      "runtimeBytes": 8031,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "VersionedStateShard",
+      "file": "contracts/core/ShardedWorkingState.sol",
+      "testOnly": false,
+      "creationBytes": 2041,
+      "runtimeBytes": 1909,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
       "name": "WorkingStatePage",
       "file": "contracts/core/WorkingStatePage.sol",
       "testOnly": false,
@@ -920,6 +958,51 @@
       "testOnly": false,
       "creationBytes": 11339,
       "runtimeBytes": 10653,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "Fixed96EwaldRealSpaceKernel",
+      "file": "contracts/kernels/Fixed96EwaldRealSpaceKernel.sol",
+      "testOnly": false,
+      "creationBytes": 3721,
+      "runtimeBytes": 3693,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "Fixed96EwaldReciprocalKernel",
+      "file": "contracts/kernels/Fixed96EwaldReciprocalKernel.sol",
+      "testOnly": false,
+      "creationBytes": 4923,
+      "runtimeBytes": 4895,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "Fixed96LennardJonesKernel",
+      "file": "contracts/kernels/Fixed96LennardJonesKernel.sol",
+      "testOnly": false,
+      "creationBytes": 2521,
+      "runtimeBytes": 2493,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "Fixed96SoftcoreLennardJonesKernel",
+      "file": "contracts/kernels/Fixed96SoftcoreLennardJonesKernel.sol",
+      "testOnly": false,
+      "creationBytes": 3155,
+      "runtimeBytes": 3127,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "FixedPointNonbondedKernel",
+      "file": "contracts/kernels/FixedPointNonbondedKernel.sol",
+      "testOnly": false,
+      "creationBytes": 3955,
+      "runtimeBytes": 3927,
       "fitsDocumentedRobinhoodCodeLimit": true,
       "creationCodeWithinDocumentedInitLimit": true
     },
@@ -1041,6 +1124,24 @@
       "creationCodeWithinDocumentedInitLimit": true
     },
     {
+      "name": "Fixed96EwaldMath",
+      "file": "contracts/math/Fixed96EwaldMath.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "Fixed96Math",
+      "file": "contracts/math/Fixed96Math.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
       "name": "FloatMath",
       "file": "contracts/math/FloatMath.sol",
       "testOnly": false,
@@ -1118,6 +1219,24 @@
       "testOnly": true,
       "creationBytes": 1562,
       "runtimeBytes": 1346,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "ShardedStateForceHarness",
+      "file": "test/contracts/ShardedStateForceHarness.sol",
+      "testOnly": true,
+      "creationBytes": 4252,
+      "runtimeBytes": 4224,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "StaticCallWorkMeter",
+      "file": "test/contracts/StaticCallWorkMeter.sol",
+      "testOnly": true,
+      "creationBytes": 923,
+      "runtimeBytes": 895,
       "fitsDocumentedRobinhoodCodeLimit": true,
       "creationCodeWithinDocumentedInitLimit": true
     },
