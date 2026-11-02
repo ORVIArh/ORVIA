@@ -1,0 +1,21 @@
+{
+  "angle_error_threshold_degrees": 30,
+  "angle_outlier_count": 0,
+  "bond_error_threshold_A": 0.25,
+  "bond_outlier_count": 0,
+  "heavy_clash_count": 0,
+  "maximum_angle_error_degrees": 22.230944117051123,
+  "maximum_bond_length_error_A": 0.14768595024886655,
+  "nonbonded_heavy_clash_overlap_threshold_A": 0.8,
+  "positions_sha256": "55366f20dab76493f67fd465f1cf88d2aa740c932cb080b1ef1730b96436d1c7",
+  "public_export": {
+    "local_path_prefix_replaced_with": "workspace:",
+    "numerical_fields_unchanged": true,
+    "source_sha256": "7f1a2d9b1aa2a94930458ccb64638c7f027d4b3271491af352ede3426e0e9a79"
+  },
+  "scientific_acceptance": false,
+  "source_sha256": "12b5e1aacd27179d2033a3b7774585d32eca181ca48573f71a87603bf61f8ffb",
+  "worst_angles": [],
+  "worst_bonds": [],
+  "worst_clashes": []
+}

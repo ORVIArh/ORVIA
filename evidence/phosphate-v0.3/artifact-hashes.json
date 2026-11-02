@@ -1,0 +1,34 @@
+{
+  "archive_relationship": "Public archive is repackaged with normalized evidence paths and no private source paths. Native model and coordinate bytes match the original local archive; compressed archive hashes intentionally differ.",
+  "models": {
+    "complex33": {
+      "atoms": 132935,
+      "positions_sha256": "55366f20dab76493f67fd465f1cf88d2aa740c932cb080b1ef1730b96436d1c7",
+      "system_xml_sha256": "13939620df9a6c18ae249afa4add4e442b6004eadfc641d9078bcd45a798cc93"
+    },
+    "solvent33": {
+      "atoms": 151505,
+      "positions_sha256": "f9425cc8ce73ff0d2dde297e467b71f64f8cd27ef1d8103e16297c8eca497e89",
+      "system_xml_sha256": "e7927eda87abc0a7380cd6969b54f9e0c2c6f3a6ee5f85b5f61ccab4266af2c3"
+    }
+  },
+  "original_local_input_archive_sha256": "b646065d0de242eeb3838b5cdede572de9d90cc61256599bf11ea8e3d2e18f9c",
+  "production_ready": false,
+  "protocols": {
+    "orvia_adp_phosphate_amber_hybrid_v0_2.json": "d7f17eb7b03a9339a4b87cbb7ec8e4db58ab9770a64eda606cab83be7d6b0f67",
+    "orvia_adp_phosphate_amber_hybrid_v0_3_amendment.json": "7b382bdf2766072594f43e76d2bdad506f160966b993e6cfb93236a97b9a3363"
+  },
+  "public_archive": {
+    "bytes": 6996476,
+    "file": "phosphate-v0.3-inputs.tar.gz",
+    "sha256": "68b8eb37010bb108e05aefff9d19d9fac5bf39fa3946ecb82edd731ce4507fc0"
+  },
+  "public_input_manifest_sha256": "0e45f83910c84291ec5ec189433cec4df6337481033ff71cb2784229755cf7da",
+  "reports": {
+    "ff03-stereochemistry-reference.json": "cb8bfe580b2a5653233366dbc1b391b0a45ae065fed25cac95c6f9b4cb1d34da",
+    "independent-geometry.json": "a13385a82d0cdcd8c26acfee4ea5feee62a5859d1f01a8a5887ad0142f4bc6d2",
+    "strict-geometry.json": "7ea76692c60ac82bfa2ffb7831a12470eda92757fb9643bec6b93776c124af7b"
+  },
+  "schema": "orvia.phosphate-public-artifact-identities.v1",
+  "scientific_acceptance": false
+}

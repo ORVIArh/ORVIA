@@ -1,0 +1,620 @@
+{
+  "elapsed_seconds": 14.004785333003383,
+  "legs": {
+    "complex33": {
+      "L_alpha_reference_sign": 1,
+      "all_tetrahedral_carbon_orientation_issues": [
+        {
+          "after_normalized_volume": -0.6378223263934235,
+          "atom": {
+            "element_number": 6,
+            "index0": 9548,
+            "name": "CA",
+            "residue": "THR",
+            "residue_index1": 597
+          },
+          "before_normalized_volume": 0.629807042090179,
+          "degenerate": false,
+          "neighbors": [
+            9546,
+            9549,
+            9550,
+            9558
+          ],
+          "orientation_inverted": true,
+          "verified_correction_to_known_L_amino_acid": true
+        },
+        {
+          "after_normalized_volume": -0.701365653671015,
+          "atom": {
+            "element_number": 6,
+            "index0": 9550,
+            "name": "CB",
+            "residue": "THR",
+            "residue_index1": 597
+          },
+          "before_normalized_volume": 0.7034349868464979,
+          "degenerate": false,
+          "neighbors": [
+            9548,
+            9551,
+            9552,
+            9556
+          ],
+          "orientation_inverted": true,
+          "verified_correction_to_known_L_amino_acid": true
+        },
+        {
+          "after_normalized_volume": -0.5979322274413322,
+          "atom": {
+            "element_number": 6,
+            "index0": 9576,
+            "name": "CA",
+            "residue": "ILE",
+            "residue_index1": 599
+          },
+          "before_normalized_volume": 0.617599595794454,
+          "degenerate": false,
+          "neighbors": [
+            9574,
+            9577,
+            9578,
+            9591
+          ],
+          "orientation_inverted": true,
+          "verified_correction_to_known_L_amino_acid": true
+        },
+        {
+          "after_normalized_volume": -0.616702183878781,
+          "atom": {
+            "element_number": 6,
+            "index0": 9668,
+            "name": "CA",
+            "residue": "LYS",
+            "residue_index1": 605
+          },
+          "before_normalized_volume": 0.6000145591762671,
+          "degenerate": false,
+          "neighbors": [
+            9666,
+            9669,
+            9670,
+            9686
+          ],
+          "orientation_inverted": true,
+          "verified_correction_to_known_L_amino_acid": true
+        },
+        {
+          "after_normalized_volume": -0.6178654108734803,
+          "atom": {
+            "element_number": 6,
+            "index0": 11262,
+            "name": "CA",
+            "residue": "PHE",
+            "residue_index1": 703
+          },
+          "before_normalized_volume": 0.6237927429898679,
+          "degenerate": false,
+          "neighbors": [
+            11260,
+            11263,
+            11264,
+            11278
+          ],
+          "orientation_inverted": true,
+          "verified_correction_to_known_L_amino_acid": true
+        }
+      ],
+      "angle_outlier_threshold_degrees": 30,
+      "angle_outliers": [
+        {
+          "after_degrees": 121.84299598905069,
+          "after_outlier": false,
+          "atoms": [
+            5392,
+            5403,
+            5405
+          ],
+          "before_degrees": 166.8250529357743,
+          "equilibrium_degrees": 116.60004997192425,
+          "new_outlier": false
+        },
+        {
+          "after_degrees": 128.7960692977492,
+          "after_outlier": false,
+          "atoms": [
+            5403,
+            5392,
+            5390
+          ],
+          "before_degrees": 159.4732841015791,
+          "equilibrium_degrees": 110.10004718618234,
+          "new_outlier": false
+        },
+        {
+          "after_degrees": 122.73721682926669,
+          "after_outlier": false,
+          "atoms": [
+            5403,
+            5405,
+            5407
+          ],
+          "before_degrees": 72.19116399999625,
+          "equilibrium_degrees": 121.90005224337536,
+          "new_outlier": false
+        },
+        {
+          "after_degrees": 119.15230692195172,
+          "after_outlier": false,
+          "atoms": [
+            5404,
+            5403,
+            5392
+          ],
+          "before_degrees": 83.71417165824593,
+          "equilibrium_degrees": 120.40005160051184,
+          "new_outlier": false
+        },
+        {
+          "after_degrees": 126.55484939717078,
+          "after_outlier": false,
+          "atoms": [
+            5368,
+            5388,
+            5390
+          ],
+          "before_degrees": 70.11832064276072,
+          "equilibrium_degrees": 116.60004997192425,
+          "new_outlier": false
+        },
+        {
+          "after_degrees": 107.44336001979904,
+          "after_outlier": false,
+          "atoms": [
+            5373,
+            5370,
+            5371
+          ],
+          "before_degrees": 66.72957664192535,
+          "equilibrium_degrees": 109.50004692903693,
+          "new_outlier": false
+        },
+        {
+          "after_degrees": 112.14875085889837,
+          "after_outlier": false,
+          "atoms": [
+            5379,
+            5376,
+            5377
+          ],
+          "before_degrees": 75.85564575720362,
+          "equilibrium_degrees": 109.50004692903693,
+          "new_outlier": false
+        }
+      ],
+      "atoms": 132935,
+      "bond_outlier_threshold_nm": 0.03,
+      "bond_outliers": [
+        {
+          "after_nm": 0.15137320132405446,
+          "after_outlier": false,
+          "atoms": [
+            5392,
+            5390
+          ],
+          "before_nm": 0.302082422527364,
+          "equilibrium_nm": 0.1449,
+          "new_outlier": false
+        },
+        {
+          "after_nm": 0.1586036450872597,
+          "after_outlier": false,
+          "atoms": [
+            5403,
+            5392
+          ],
+          "before_nm": 0.32545187048164326,
+          "equilibrium_nm": 0.1522,
+          "new_outlier": false
+        },
+        {
+          "after_nm": 0.1360162585246764,
+          "after_outlier": false,
+          "atoms": [
+            5403,
+            5405
+          ],
+          "before_nm": 0.25489380141541235,
+          "equilibrium_nm": 0.1335,
+          "new_outlier": false
+        },
+        {
+          "after_nm": 0.13560893113303055,
+          "after_outlier": false,
+          "atoms": [
+            5388,
+            5390
+          ],
+          "before_nm": 0.23219052521582395,
+          "equilibrium_nm": 0.1335,
+          "new_outlier": false
+        }
+      ],
+      "box_exactly_preserved": true,
+      "geometry_checks_passed": true,
+      "input_hashes": {
+        "workspace:output/full-model-repair/adppi-v0.3-clash-relief-r3/complex33/positions.json": "55366f20dab76493f67fd465f1cf88d2aa740c932cb080b1ef1730b96436d1c7",
+        "workspace:output/runpod-benchmark/full-inputs/complex33/positions.json": "5166cb2fc1a43b9ddfdca6ca6f60a0bd8d9dd56fc8205428cd676095ffe2ce09",
+        "workspace:work/scientific-preparation/data/prepared_candidate/cardiac_adppi_ff03_m3l_33_782_solvated_v0_1/complex_1264.prmtop.gz": "7ddd83496bd4832fc377ec174ffe6bb392adec87193cce6e1ba527f05ce1477a",
+        "workspace:work/scientific-preparation/data/prepared_candidate/ligand_endpoints_v0_1/B/input.sdf": "1079563327095792fc66add98a0d25b6ff6f0d5cad21a765f9d7827b2ce18491",
+        "workspace:work/scientific-preparation/data/prepared_candidate/ligand_endpoints_v0_1/B/parameters.json": "5e97e15c92dcfa844e517766a6857a89256ce46db98dc1ba847b5d243b345c1a"
+      },
+      "known_L_corrections_atom_indices0": [
+        9548,
+        9550,
+        9576,
+        9668,
+        11262
+      ],
+      "ligand_cip": {
+        "after": {
+          "13": "R"
+        },
+        "before": {
+          "13": "R"
+        },
+        "before_to_after_preserved": true,
+        "expected_from_SDF": {
+          "13": "R"
+        },
+        "expected_preserved": true,
+        "source_atom_mapping_by_exact_name": true
+      },
+      "magnesium_coordination": [
+        {
+          "magnesium": {
+            "element_number": 12,
+            "index0": 12132,
+            "name": "MG",
+            "residue": "MG",
+            "residue_index1": 754
+          },
+          "shell_cutoff_nm": 0.35,
+          "stages": {
+            "after": {
+              "nearest_heavy": [
+                {
+                  "distance_nm": 0.19256866307891268,
+                  "element_number": 8,
+                  "index0": 3325,
+                  "name": "OG",
+                  "residue": "SER",
+                  "residue_index1": 210,
+                  "within_0_35_nm": true
+                },
+                {
+                  "distance_nm": 0.1949043098548613,
+                  "element_number": 8,
+                  "index0": 2455,
+                  "name": "OG1",
+                  "residue": "THR",
+                  "residue_index1": 153,
+                  "within_0_35_nm": true
+                },
+                {
+                  "distance_nm": 0.20752146876889735,
+                  "element_number": 8,
+                  "index0": 12088,
+                  "name": "O2",
+                  "residue": "ADP",
+                  "residue_index1": 752,
+                  "within_0_35_nm": true
+                },
+                {
+                  "distance_nm": 0.21498144105945488,
+                  "element_number": 8,
+                  "index0": 12127,
+                  "name": "O2",
+                  "residue": "PHI",
+                  "residue_index1": 753,
+                  "within_0_35_nm": true
+                },
+                {
+                  "distance_nm": 0.2174803669299834,
+                  "element_number": 8,
+                  "index0": 12416,
+                  "name": "O",
+                  "residue": "WAT",
+                  "residue_index1": 1038,
+                  "within_0_35_nm": true
+                },
+                {
+                  "distance_nm": 0.2463875605626216,
+                  "element_number": 8,
+                  "index0": 12428,
+                  "name": "O",
+                  "residue": "WAT",
+                  "residue_index1": 1042,
+                  "within_0_35_nm": true
+                },
+                {
+                  "distance_nm": 0.29547211374341215,
+                  "element_number": 6,
+                  "index0": 3322,
+                  "name": "CB",
+                  "residue": "SER",
+                  "residue_index1": 210,
+                  "within_0_35_nm": true
+                },
+                {
+                  "distance_nm": 0.31674365029152485,
+                  "element_number": 6,
+                  "index0": 2449,
+                  "name": "CB",
+                  "residue": "THR",
+                  "residue_index1": 153,
+                  "within_0_35_nm": true
+                },
+                {
+                  "distance_nm": 0.3501519955676396,
+                  "element_number": 15,
+                  "index0": 12086,
+                  "name": "P1",
+                  "residue": "ADP",
+                  "residue_index1": 752,
+                  "within_0_35_nm": false
+                },
+                {
+                  "distance_nm": 0.3546811666835441,
+                  "element_number": 15,
+                  "index0": 12125,
+                  "name": "P1",
+                  "residue": "PHI",
+                  "residue_index1": 753,
+                  "within_0_35_nm": false
+                },
+                {
+                  "distance_nm": 0.3727984173786142,
+                  "element_number": 7,
+                  "index0": 3318,
+                  "name": "N",
+                  "residue": "SER",
+                  "residue_index1": 210,
+                  "within_0_35_nm": false
+                },
+                {
+                  "distance_nm": 0.38219992150705734,
+                  "element_number": 8,
+                  "index0": 12089,
+                  "name": "O3",
+                  "residue": "ADP",
+                  "residue_index1": 752,
+                  "within_0_35_nm": false
+                }
+              ],
+              "oxygen_nitrogen_sulfur_count_within_0_35_nm": 6
+            },
+            "before": {
+              "nearest_heavy": [
+                {
+                  "distance_nm": 0.1925686630789119,
+                  "element_number": 8,
+                  "index0": 3325,
+                  "name": "OG",
+                  "residue": "SER",
+                  "residue_index1": 210,
+                  "within_0_35_nm": true
+                },
+                {
+                  "distance_nm": 0.19490430985486215,
+                  "element_number": 8,
+                  "index0": 2455,
+                  "name": "OG1",
+                  "residue": "THR",
+                  "residue_index1": 153,
+                  "within_0_35_nm": true
+                },
+                {
+                  "distance_nm": 0.20752146876889735,
+                  "element_number": 8,
+                  "index0": 12088,
+                  "name": "O2",
+                  "residue": "ADP",
+                  "residue_index1": 752,
+                  "within_0_35_nm": true
+                },
+                {
+                  "distance_nm": 0.21498144105945488,
+                  "element_number": 8,
+                  "index0": 12127,
+                  "name": "O2",
+                  "residue": "PHI",
+                  "residue_index1": 753,
+                  "within_0_35_nm": true
+                },
+                {
+                  "distance_nm": 0.2174803669299834,
+                  "element_number": 8,
+                  "index0": 12416,
+                  "name": "O",
+                  "residue": "WAT",
+                  "residue_index1": 1038,
+                  "within_0_35_nm": true
+                },
+                {
+                  "distance_nm": 0.2463875605626216,
+                  "element_number": 8,
+                  "index0": 12428,
+                  "name": "O",
+                  "residue": "WAT",
+                  "residue_index1": 1042,
+                  "within_0_35_nm": true
+                },
+                {
+                  "distance_nm": 0.29547211374341215,
+                  "element_number": 6,
+                  "index0": 3322,
+                  "name": "CB",
+                  "residue": "SER",
+                  "residue_index1": 210,
+                  "within_0_35_nm": true
+                },
+                {
+                  "distance_nm": 0.3167436502915252,
+                  "element_number": 6,
+                  "index0": 2449,
+                  "name": "CB",
+                  "residue": "THR",
+                  "residue_index1": 153,
+                  "within_0_35_nm": true
+                },
+                {
+                  "distance_nm": 0.3501519955676396,
+                  "element_number": 15,
+                  "index0": 12086,
+                  "name": "P1",
+                  "residue": "ADP",
+                  "residue_index1": 752,
+                  "within_0_35_nm": false
+                },
+                {
+                  "distance_nm": 0.3546811666835441,
+                  "element_number": 15,
+                  "index0": 12125,
+                  "name": "P1",
+                  "residue": "PHI",
+                  "residue_index1": 753,
+                  "within_0_35_nm": false
+                },
+                {
+                  "distance_nm": 0.37279841737861363,
+                  "element_number": 7,
+                  "index0": 3318,
+                  "name": "N",
+                  "residue": "SER",
+                  "residue_index1": 210,
+                  "within_0_35_nm": false
+                },
+                {
+                  "distance_nm": 0.38219992150705734,
+                  "element_number": 8,
+                  "index0": 12089,
+                  "name": "O3",
+                  "residue": "ADP",
+                  "residue_index1": 752,
+                  "within_0_35_nm": false
+                }
+              ],
+              "oxygen_nitrogen_sulfur_count_within_0_35_nm": 6
+            }
+          }
+        }
+      ],
+      "protein_after_degenerate_count": 0,
+      "protein_after_nonL_count": 0,
+      "protein_alpha_centers": 701,
+      "protein_before_nonL_count": 4,
+      "protein_beta_centers": 89,
+      "protein_beta_issues": [],
+      "protein_issues": [],
+      "protein_new_inversions": [
+        {
+          "after_L": true,
+          "after_degenerate": false,
+          "after_normalized_volume": 0.6463812101776959,
+          "before_L": false,
+          "before_normalized_volume": -0.7371046115524642,
+          "ca_index0": 9548,
+          "residue": "THR",
+          "residue_index1": 597
+        },
+        {
+          "after_L": true,
+          "after_degenerate": false,
+          "after_normalized_volume": 0.5754953898644913,
+          "before_L": false,
+          "before_normalized_volume": -0.7479600573267449,
+          "ca_index0": 9576,
+          "residue": "ILE",
+          "residue_index1": 599
+        },
+        {
+          "after_L": true,
+          "after_degenerate": false,
+          "after_normalized_volume": 0.7166205777136061,
+          "before_L": false,
+          "before_normalized_volume": -0.6073819394082671,
+          "ca_index0": 9668,
+          "residue": "LYS",
+          "residue_index1": 605
+        },
+        {
+          "after_L": true,
+          "after_degenerate": false,
+          "after_normalized_volume": 0.6901581612980425,
+          "before_L": false,
+          "before_normalized_volume": -0.7312289912276936,
+          "ca_index0": 11262,
+          "residue": "PHE",
+          "residue_index1": 703
+        }
+      ],
+      "scope": "Stereochemistry and bonded geometry audit. Mg distance shells are diagnostic only; they do not validate coordination energetics, C4 parameters, density or equilibration."
+    },
+    "solvent33": {
+      "L_alpha_reference_sign": 1,
+      "all_tetrahedral_carbon_orientation_issues": [],
+      "angle_outlier_threshold_degrees": 30,
+      "angle_outliers": [],
+      "atoms": 151505,
+      "bond_outlier_threshold_nm": 0.03,
+      "bond_outliers": [],
+      "box_exactly_preserved": true,
+      "geometry_checks_passed": true,
+      "input_hashes": {
+        "workspace:output/full-model-repair/adppi-v0.3-clash-relief-r3/solvent33/positions.json": "f9425cc8ce73ff0d2dde297e467b71f64f8cd27ef1d8103e16297c8eca497e89",
+        "workspace:output/runpod-benchmark/full-inputs/solvent33/positions.json": "605615683a59eee23b82217cf4d51954fa43ee7e081c6fb505d6fbdb12ecd5b3",
+        "workspace:work/scientific-preparation/data/prepared_candidate/ligand_adppi_ff03_m3l_33_782_solvated_v0_1/solvent.prmtop.gz": "6d3b30f439688d8a5c2f0af5f54ce687ca191eab16f2c441dda842c4e607376f",
+        "workspace:work/scientific-preparation/data/prepared_candidate/ligand_endpoints_v0_1/B/input.sdf": "1079563327095792fc66add98a0d25b6ff6f0d5cad21a765f9d7827b2ce18491",
+        "workspace:work/scientific-preparation/data/prepared_candidate/ligand_endpoints_v0_1/B/parameters.json": "5e97e15c92dcfa844e517766a6857a89256ce46db98dc1ba847b5d243b345c1a"
+      },
+      "known_L_corrections_atom_indices0": [],
+      "ligand_cip": {
+        "after": {
+          "13": "R"
+        },
+        "before": {
+          "13": "R"
+        },
+        "before_to_after_preserved": true,
+        "expected_from_SDF": {
+          "13": "R"
+        },
+        "expected_preserved": true,
+        "source_atom_mapping_by_exact_name": true
+      },
+      "magnesium_coordination": [],
+      "protein_after_degenerate_count": 0,
+      "protein_after_nonL_count": 0,
+      "protein_alpha_centers": 0,
+      "protein_before_nonL_count": 0,
+      "protein_beta_centers": 0,
+      "protein_beta_issues": [],
+      "protein_issues": [],
+      "protein_new_inversions": [],
+      "scope": "Stereochemistry and bonded geometry audit. Mg distance shells are diagnostic only; they do not validate coordination energetics, C4 parameters, density or equilibration."
+    }
+  },
+  "passed": true,
+  "production_ready": false,
+  "public_export": {
+    "local_path_prefix_replaced_with": "workspace:",
+    "numerical_fields_unchanged": true,
+    "source_sha256": "235526fd81c9094f94e8790f627dd473729d24cb6162ce039d21a839d1109d00"
+  },
+  "schema": "orvia.nativeB-structure-validation.v1",
+  "scientific_acceptance": false,
+  "source_files_modified": false,
+  "source_sha256": "bea8dedf0893a2eefce258b95cf4d35fb0a89c821947423c8c9338d8c3da9633",
+  "status": "passed_geometry_only"
+}

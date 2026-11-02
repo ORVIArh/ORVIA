@@ -1,0 +1,44 @@
+{
+  "files": {
+    "evidence/ff03-stereochemistry-reference.json": {
+      "bytes": 1341,
+      "sha256": "cb8bfe580b2a5653233366dbc1b391b0a45ae065fed25cac95c6f9b4cb1d34da"
+    },
+    "evidence/independent-geometry.json": {
+      "bytes": 20506,
+      "sha256": "a13385a82d0cdcd8c26acfee4ea5feee62a5859d1f01a8a5887ad0142f4bc6d2"
+    },
+    "evidence/strict-geometry.json": {
+      "bytes": 800,
+      "sha256": "7ea76692c60ac82bfa2ffb7831a12470eda92757fb9643bec6b93776c124af7b"
+    },
+    "inputs/complex33/positions.json": {
+      "bytes": 5633255,
+      "sha256": "55366f20dab76493f67fd465f1cf88d2aa740c932cb080b1ef1730b96436d1c7"
+    },
+    "inputs/complex33/system.xml": {
+      "bytes": 50668109,
+      "sha256": "13939620df9a6c18ae249afa4add4e442b6004eadfc641d9078bcd45a798cc93"
+    },
+    "inputs/solvent33/positions.json": {
+      "bytes": 6708908,
+      "sha256": "f9425cc8ce73ff0d2dde297e467b71f64f8cd27ef1d8103e16297c8eca497e89"
+    },
+    "inputs/solvent33/system.xml": {
+      "bytes": 32283429,
+      "sha256": "e7927eda87abc0a7380cd6969b54f9e0c2c6f3a6ee5f85b5f61ccab4266af2c3"
+    },
+    "protocols/orvia_adp_phosphate_amber_hybrid_v0_2.json": {
+      "bytes": 15912,
+      "sha256": "d7f17eb7b03a9339a4b87cbb7ec8e4db58ab9770a64eda606cab83be7d6b0f67"
+    },
+    "protocols/orvia_adp_phosphate_amber_hybrid_v0_3_amendment.json": {
+      "bytes": 4321,
+      "sha256": "7b382bdf2766072594f43e76d2bdad506f160966b993e6cfb93236a97b9a3363"
+    }
+  },
+  "production_ready": false,
+  "schema": "orvia.public-phosphate-inputs.v0.3",
+  "scientific_acceptance": false,
+  "scope": "Input-only bundle; no GPU engine, validated trajectory, deployment or affinity result. Native XML and coordinate bytes are identical to the local frozen v0.3 candidate. Report paths alone are normalized for publication."
+}
