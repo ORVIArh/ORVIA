@@ -10,9 +10,32 @@ def sha(p):
  with Path(p).open('rb')as f:
   while b:=f.read(4*1024*1024):h.update(b)
  return h.hexdigest()
+EXPECTED_ORIGIN='https://github.com/openmm/openmm.git'
+EXPECTED_COMMIT='b399af4725573963b46d6c1083fdcf7a37615857'
+def upstream_license_files(source,commit):
+ """Require the exact license subtree from the pinned official Git objects."""
+ source=Path(source).resolve()
+ def git(*args):
+  return subprocess.run(['git','-C',str(source),*args],check=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE).stdout
+ names=git('ls-tree','-r','--name-only',commit,'--','docs-source/licenses').decode().splitlines()
+ if 'docs-source/licenses/Licenses.txt'not in names:raise ValueError('Pinned upstream license index is missing')
+ result=[]
+ for name in names:
+  rel=Path(name)
+  if rel.is_absolute()or'..'in rel.parts or not name.startswith('docs-source/licenses/'):raise ValueError('Unsafe upstream license path')
+  f=source/rel
+  if not f.is_file()or not f.resolve().is_relative_to(source):raise ValueError('Missing or unsafe upstream license file: '+name)
+  expected=hashlib.sha256(git('show',commit+':'+name)).hexdigest()
+  if sha(f)!=expected:raise ValueError('Upstream license differs from pinned Git object: '+name)
+  result.append((f,name,expected))
+ if not result:raise ValueError('No pinned upstream license files found')
+ return result
+
 def main():
  p=argparse.ArgumentParser(description=__doc__);p.add_argument('--build-report',type=Path,required=True);p.add_argument('--output',type=Path,required=True);p.add_argument('--patch-script',type=Path,required=True);p.add_argument('--build-script',type=Path,required=True);p.add_argument('--failed-attempt',type=Path,action='append',default=[]);a=p.parse_args();root=a.build_report.resolve().parent;report=json.loads(a.build_report.read_text())
  if report.get('buildPassed')is not True:raise ValueError('Successful source build required')
+ if report.get('upstreamOrigin')!=EXPECTED_ORIGIN or report.get('upstreamCommit')!=EXPECTED_COMMIT:raise ValueError('Pinned official upstream build required')
+ licenses=upstream_license_files(root/'source',EXPECTED_COMMIT)
  if a.output.exists()or Path(str(a.output)+'.sha256').exists():raise FileExistsError('Refusing existing archive')
  payload={};manifest={};external_allowed={a.patch_script.resolve(),a.build_script.resolve(),Path(__file__).resolve()}
  def add(f,rel,check=None):
@@ -52,16 +75,13 @@ def main():
   for pattern in ['*report.json','*command-*.log','*.patch']:
    for f in sorted(attempt.glob(pattern)):
     if f.is_file():add(f,'earlier-build-'+str(index)+'/'+f.name)
- for f in sorted((root/'source').glob('LICENSE*')):
-  if f.is_file():add(f,'upstream-license/'+f.name)
- for folder in ['licenses','LICENSES']:
-  for f in sorted((root/'source'/folder).rglob('*'))if(root/'source'/folder).is_dir()else[]:
-   if f.is_file():add(f,'upstream-license/'+folder+'/'+str(f.relative_to(root/'source'/folder)))
+ # OpenMM's authoritative license index is under docs-source, not repository root.
+ for f,name,digest in licenses:add(f,'upstream-license/'+name,digest)
  for rel in ['build/CMakeCache.txt','build/install_manifest.txt','source/README.md']:
   f=root/rel
   if f.exists():add(f,'evidence/'+rel.replace('/','-'))
  if sum(v['bytes']for v in manifest.values())>2*1024**3:raise ValueError('Unexpected engine artifact size')
- metadata={'schema':'orvia.experimental-native-double-pme-engine-export.v1','files':manifest,'sourceBuildReportSha256':sha(a.build_report),'upstreamOrigin':report['upstreamOrigin'],'upstreamCommit':report['upstreamCommit'],'sourcePatchScriptSha256':report['sourcePatchScriptSha256'],'host':{'system':platform.system(),'machine':platform.machine(),'python':platform.python_version()},'scope':'Pinned experimental native-double PME runtime plus exact source patch/build evidence; no scientific acceptance or physical parameter rounding.','existingEnvironmentModified':False,'privateCredentialsCollected':False,'scientificAcceptance':False,'portability':'Linux x86_64/compatible CPython3.12 and NVIDIA CUDA driver/runtime only; no macOS portability claim. Old absolute prefixes in original reports are historical; relocation needs explicit new environment binding.','reuseRecipe':'Create new Linux CPython3.12 venv with frozen dependencies, place python-site on its import path or install wrappers properly; LD_LIBRARY_PATH=<extracted>/runtime/prefix/lib; OPENMM_PLUGIN_DIR=<extracted>/runtime/prefix/lib/plugins. Verify all hashes and produce a new explicit relocation binding before running matched validation.'}
+ metadata={'schema':'orvia.experimental-native-double-pme-engine-export.v1','files':manifest,'upstreamLicenseFiles':{name:digest for _,name,digest in licenses},'sourceBuildReportSha256':sha(a.build_report),'upstreamOrigin':report['upstreamOrigin'],'upstreamCommit':report['upstreamCommit'],'sourcePatchScriptSha256':report['sourcePatchScriptSha256'],'host':{'system':platform.system(),'machine':platform.machine(),'python':platform.python_version()},'scope':'Pinned experimental native-double PME runtime plus exact source patch/build evidence; no scientific acceptance or physical parameter rounding.','existingEnvironmentModified':False,'privateCredentialsCollected':False,'scientificAcceptance':False,'portability':'Linux x86_64/compatible CPython3.12 and NVIDIA CUDA driver/runtime only; no macOS portability claim. Old absolute prefixes in original reports are historical; relocation needs explicit new environment binding.','reuseRecipe':'Create new Linux CPython3.12 venv with frozen dependencies, place python-site on its import path or install wrappers properly; LD_LIBRARY_PATH=<extracted>/runtime/prefix/lib; OPENMM_PLUGIN_DIR=<extracted>/runtime/prefix/lib/plugins. Verify all hashes and produce a new explicit relocation binding before running matched validation.'}
  data=(json.dumps(metadata,indent=2)+'\n').encode();a.output.parent.mkdir(parents=True,exist_ok=True)
  with a.output.open('wb')as raw:
   with gzip.GzipFile(fileobj=raw,filename='',mode='wb',mtime=0,compresslevel=6)as gz:
