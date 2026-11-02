@@ -1,0 +1,44 @@
+bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+This version of µWS is not compatible with your Node.js build:
+
+Error: Cannot find module '../binaries/uws_darwin_arm64_137.node'
+Require stack:
+- /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/node_modules/ganache/node_modules/@trufflesuite/uws-js-unofficial/src/uws.js
+- /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/node_modules/ganache/dist/node/core.js
+- /Users/abhijith/Documents/ChatGPT/AURA/ORVIA/package.json
+Falling back to a NodeJS implementation; performance may be degraded.
+
+
+{"nativeWork":1,"passed":true}
+{"nativeWork":8,"passed":true}
+{"case":"below_switch","passed":true,"states":1}
+{"case":"switch_prev_binary128","passed":true,"states":1}
+{"case":"switch_next_binary128","passed":true,"states":1}
+{"case":"cutoff_prev_binary128","passed":true,"states":1}
+{"case":"cutoff_exact","passed":true,"states":1}
+{"case":"cutoff_next_binary128","passed":true,"states":1}
+{"case":"charged_only_inside","passed":true,"states":1}
+{"case":"charged_only_outside","passed":true,"states":1}
+{"case":"inactive_overlap","passed":true,"states":1}
+{"case":"active_LJ_overlap","passed":true,"states":1}
+{"case":"active_charge_overlap","passed":true,"states":1}
+{"case":"softcore_overlap_endpoint_and_interior","passed":true,"states":3}
+{"case":"underflow_norm_active_LJ","passed":true,"states":1}
+{"case":"underflow_norm_inactive","passed":true,"states":1}
+{"case":"native_B_parameter_projection","passed":true,"states":1}
+{"case":"hybrid_charges_inside","passed":true,"states":3}
+{"case":"hybrid_charges_outside","passed":true,"states":3}
+{"case":"hybrid_ghost_overlap","passed":true,"states":3}
+{"case":"direct_exception_beyond_cutoff","passed":true,"states":3}
+{"case":"excluded_exception_beyond_cutoff","passed":true,"states":3}
+{"case":"direct_exception_overlap","passed":true,"states":3}
+{"case":"excluded_exception_overlap","passed":true,"states":3}
+{"case":"epsilon_product_overflow_fallback","passed":true,"states":1}
+{"case":"sigma_sum_overflow_fallback","passed":true,"states":1}
+{"case":"huge_sigma_zero_strength_fallback","passed":true,"states":1}
+{"case":"huge_single_epsilon_zero_partner_fallback","passed":true,"states":1}
+{"case":"huge_common_translation_inactive_fallback","passed":true,"states":1}
+{"case":"huge_coordinate_image_range_fallback","passed":true,"states":1}
+{"case":"anisotropic_huge_box_inactive_legacy_success","passed":true,"states":1}
+{"case":"huge_charge_self_overflow_fallback","passed":true,"states":1}
+{"status":"passed","native":[{"work":1,"unorderedPairs":120,"baselinePairStageGas":"102941528","candidatePairStageGas":"78460949","pairGasSaved":"24480579","pairGasSavingPercent":23.78105267681669,"baselinePrePairGas":"12759964","candidatePrePairGas":"13436809","baselineCompleteEvaluationGas":"672532830","candidateCompleteEvaluationGas":"649158236","exactOutputWordsCompared":58},{"work":8,"unorderedPairs":120,"baselinePairStageGas":"48751689","candidatePairStageGas":"29306414","pairGasSaved":"19445275","pairGasSavingPercent":39.886361680720434,"baselinePrePairGas":"12759964","candidatePrePairGas":"13436809","baselineCompleteEvaluationGas":"429283576","candidateCompleteEvaluationGas":"410569038","exactOutputWordsCompared":58}],"caseCount":30}

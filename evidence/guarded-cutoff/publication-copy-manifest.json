@@ -1,0 +1,173 @@
+{
+  "schema": "orvia.guarded-cutoff-publication-copy.v1",
+  "status": "historical_component_evidence",
+  "freshWholeEngineValidation": false,
+  "files": [
+    {
+      "path": "AlchemicalHamiltonianEvaluator.baseline.sol",
+      "sha256": "e9b600dbb007e1d6f479db23eea48316eadc21b4333ca9f0a37c5712a92a30ee",
+      "sourcePath": "output/256-pair-optimization/AlchemicalHamiltonianEvaluator.baseline.sol",
+      "bytes": 30108
+    },
+    {
+      "path": "AlchemicalHamiltonianEvaluator.candidate.sol",
+      "sha256": "a90eb8f88c0d2fdd7a6478a74510e88589099a5c79d3cd359443d363b847596b",
+      "sourcePath": "output/256-pair-optimization/AlchemicalHamiltonianEvaluator.candidate.sol",
+      "bytes": 31787
+    },
+    {
+      "path": "CutoffSnapshotWriter.sol",
+      "sha256": "54484e47e4cc033329db74e7815c7312d85a6b85a0f3a68fda0ca94fc21f14df",
+      "sourcePath": "output/256-pair-optimization/CutoffSnapshotWriter.sol",
+      "bytes": 863
+    },
+    {
+      "path": "analysis.log",
+      "sha256": "916831d1c675a045d453f8965146ddb4d97647de79c53f8ff436e6513c1a4738",
+      "sourcePath": "output/256-pair-optimization/analysis.log",
+      "bytes": 321
+    },
+    {
+      "path": "analyze_results.py",
+      "sha256": "f0f163034ec8ea85f7c73bc308af2ff193a17d5f664e20913eaaade794e3fe9f",
+      "sourcePath": "output/256-pair-optimization/analyze_results.py",
+      "bytes": 10596
+    },
+    {
+      "path": "artifact-manifest.json",
+      "sha256": "7d4300afee48055d48bc6638001f32cf9a590bc8b46354f2fa2c34c61b49840c",
+      "sourcePath": "output/256-pair-optimization/artifact-manifest.json",
+      "bytes": 4798
+    },
+    {
+      "path": "baseline-sources.json",
+      "sha256": "66654bd309d057eaf59819f88bfc02cc942061885482c36d6395e1db6bb9d5d6",
+      "sourcePath": "output/256-pair-optimization/baseline-sources.json",
+      "bytes": 731551
+    },
+    {
+      "path": "benchmark-primary-run.mjs",
+      "sha256": "6ac7e0a0183b4e53005ded73643085d927ec99be4fa14480e5ff7b89dc95c9b7",
+      "sourcePath": "output/256-pair-optimization/benchmark-primary-run.mjs",
+      "bytes": 15938
+    },
+    {
+      "path": "benchmark-report.json",
+      "sha256": "a795232c4494a80fdacaecc4587e8944bb704244df61129ebb766af5c4915887",
+      "sourcePath": "output/256-pair-optimization/benchmark-report.json",
+      "bytes": 622486
+    },
+    {
+      "path": "benchmark.log",
+      "sha256": "627fb236ca8c300d7ed83ecafeeafc123d44895402bf6b808ea150a19562a2be",
+      "sourcePath": "output/256-pair-optimization/benchmark.log",
+      "bytes": 3268
+    },
+    {
+      "path": "benchmark.mjs",
+      "sha256": "6ac7e0a0183b4e53005ded73643085d927ec99be4fa14480e5ff7b89dc95c9b7",
+      "sourcePath": "output/256-pair-optimization/benchmark.mjs",
+      "bytes": 15938
+    },
+    {
+      "path": "candidate-preparation.json",
+      "sha256": "043e78f8334474542634deea08ee14449e6bf83ac3f357923a4b49594c09b4ce",
+      "sourcePath": "output/256-pair-optimization/candidate-preparation.json",
+      "bytes": 7848
+    },
+    {
+      "path": "cases/README.md",
+      "sha256": "ccd8968dc55e3d01e7527da678cd40af27eeabf1993cd71a4db9df2080c66fc5",
+      "sourcePath": "output/256-pair-optimization/cases/README.md",
+      "bytes": 1810
+    },
+    {
+      "path": "cases/cases.json",
+      "sha256": "3f367cd1d62c41454d29b289d576d7df9158d2fe83b791e8143d5343b496455d",
+      "sourcePath": "output/256-pair-optimization/cases/cases.json",
+      "bytes": 119351
+    },
+    {
+      "path": "cases/extended-cases.json",
+      "sha256": "fbbe6569d202d4a8bfaa4f349de44e99b55e27ab8c0a2dc9390116b7c1b81692",
+      "sourcePath": "output/256-pair-optimization/cases/extended-cases.json",
+      "bytes": 66806
+    },
+    {
+      "path": "cases/generate_cases.py",
+      "sha256": "712f6d615b083856588d741644fe438a00657c3da5ffb41c824404bce7d3d5d8",
+      "sourcePath": "output/256-pair-optimization/cases/generate_cases.py",
+      "bytes": 16940
+    },
+    {
+      "path": "cases/generate_mixed_cases.py",
+      "sha256": "ceaa91752e1d3639fb582b5df4cf84da5457e07aa136b8e515dacc7934afdca3",
+      "sourcePath": "output/256-pair-optimization/cases/generate_mixed_cases.py",
+      "bytes": 11461
+    },
+    {
+      "path": "cases/guard-review.json",
+      "sha256": "c4e3b340788989b4513d82ee5109da7e2d91b83c140c84b7ccbe218ac26a357f",
+      "sourcePath": "output/256-pair-optimization/cases/guard-review.json",
+      "bytes": 3325
+    },
+    {
+      "path": "cases/mixed-cases.json",
+      "sha256": "0ae064dd81ea90d4088fbdf0910218b0566e481e2fa4c35d6bbb2a723cf758d2",
+      "sourcePath": "output/256-pair-optimization/cases/mixed-cases.json",
+      "bytes": 29497
+    },
+    {
+      "path": "cases/mixed-classification.json",
+      "sha256": "a05ecf956b9557069ecef5cd11768622aa2c622f4f4fc6f942613b6ce63922c0",
+      "sourcePath": "output/256-pair-optimization/cases/mixed-classification.json",
+      "bytes": 17737
+    },
+    {
+      "path": "compile.log",
+      "sha256": "1cafccde7af99b31aaea52554cae4675cd992030f17fdb888388d30bd41a44c8",
+      "sourcePath": "output/256-pair-optimization/compile.log",
+      "bytes": 565
+    },
+    {
+      "path": "mixed-benchmark-report.json",
+      "sha256": "23c71a48addf35cb375d7c2658ba403b6ac1fb56e6dcf7de22c0feeb76be1373",
+      "sourcePath": "output/256-pair-optimization/mixed-benchmark-report.json",
+      "bytes": 124550
+    },
+    {
+      "path": "mixed-benchmark.log",
+      "sha256": "526bb3a38b4d5ad8fae7c0882f544102ebde4ac158dac91744a18909344ab9e4",
+      "sourcePath": "output/256-pair-optimization/mixed-benchmark.log",
+      "bytes": 743
+    },
+    {
+      "path": "mixed-benchmark.mjs",
+      "sha256": "50f948d3e1aa6e25c0887d2cdb16991d38f20d181dbde194987242e3ee8f462e",
+      "sourcePath": "output/256-pair-optimization/mixed-benchmark.mjs",
+      "bytes": 16130
+    },
+    {
+      "path": "prepare_candidate.py",
+      "sha256": "78237889d7fd10709d16656c379034405825ecd69eb81bceb24e3581f34c5242",
+      "sourcePath": "output/256-pair-optimization/prepare_candidate.py",
+      "bytes": 5323
+    },
+    {
+      "path": "review-summary.json",
+      "sha256": "1a95277717b3a80238ee8fda53d9785431000d20b9e17b1cdb2c311ba5ce7b2a",
+      "sourcePath": "output/256-pair-optimization/review-summary.json",
+      "bytes": 34443
+    },
+    {
+      "path": "outside-pair-input.json",
+      "sha256": "e30b265546a49993f457eced1c5208aaddc8672a1662f15f21b8293610d0a01f",
+      "bytes": 3291
+    },
+    {
+      "path": "gas-report.source.json",
+      "sha256": "af3c055a668f0f48a9414519ed269f2a7ae0ec95076329747cc8ac36c1859d15",
+      "bytes": 41434
+    }
+  ]
+}

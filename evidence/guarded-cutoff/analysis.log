@@ -1,0 +1,9 @@
+{
+  "status": "passed_component_comparison",
+  "profiles": 34,
+  "evaluationsPerImplementation": 54,
+  "completeEvaluationsPerImplementation": 40,
+  "matchingRejectedEvaluationsPerImplementation": 14,
+  "rawOutputWordsCompared": 1020
+}
+reviewSummarySha256 1a95277717b3a80238ee8fda53d9785431000d20b9e17b1cdb2c311ba5ce7b2a

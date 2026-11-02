@@ -1,0 +1,887 @@
+{
+  "arithmeticBaselineCommit": "a4da915f9874ca6ea3bcb0a9b1a85d9e000cd1bd",
+  "arithmeticBaselineTree": "5c878d8c91e79561b126a6cf2563145d52e6b238",
+  "arithmeticPolicy": "Measured existing engine path at the captured baseline; candidate Fixed96 hot paths are not substituted into these receipt costs.",
+  "capturedFeeSnapshot": {
+    "block": {
+      "baseFeePerGas": "0x1315be0",
+      "hash": "0x96329512431e540912c5da3a4c11639d9394992912c5302bfe890586265e4ab9",
+      "number": "0x63370f5"
+    },
+    "chainId": 4663,
+    "gasPriceWei": "20020000",
+    "mainnetTransactionsSent": 0,
+    "observedAtUtc": "2026-11-02T07:14:33.013Z",
+    "scope": "One instantaneous trusted-provider quote; local-EVM gas multiplication excludes target L1 data fee and future price changes."
+  },
+  "fullCampaignEvaluationCount": {
+    "excluded": "Preparation/minimization, any additional equilibration schedule outside T, analysis, deployment, data/state I/O and recovery allowances are not supplied by this expression.",
+    "formulaPerLeg": "K * R * [T + 1 + S * (K - 1)]",
+    "fullCampaignQuoted": false,
+    "pairedPartialGasExpression": "K * R * [T + 1 + S * (K - 1)] * (G_outside_complex33 + G_outside_solvent33)",
+    "parametersDeclared": false,
+    "rationale": "One initial force plus T timestep forces per window; each retained configuration reuses its sampled-state force energy and evaluates the other K-1 states.",
+    "variables": {
+      "K": "lambda states/windows",
+      "R": "independent repeats",
+      "S": "retained configurations per window",
+      "T": "dynamics timesteps per window"
+    }
+  },
+  "limitations": [
+    "Only the dominant outside-cutoff native normal-pair scans are projected. This is not a measured full-sized force pass, lower-bound theorem, whole-force total, full campaign budget or mainnet quote.",
+    "Inside-cutoff ordinary/softcore interactions, all exceptions, reciprocal Ewald/self/background, bonded/improper terms and C4 are unpriced.",
+    "Rigid-water constraints (including 120519 in complex33), topology/import, output/state factories and writes, retained snapshots, sampling/analysis and input uploads/deployment are unpriced except small-fixture engine overhead already inseparable from the receipt fit.",
+    "The unaccepted hybrid has one extra atom; its additional pair scans are counted exactly but not classified/priced from the native-coordinate census.",
+    "Small N=16 outside-cutoff receipts do not bound full-index arithmetic, page/shard access, state locality, parameter distributions, accumulation or interleaving. The measured least-squares residual is not full-model uncertainty.",
+    "The projected gas-price multiplication uses a dated instantaneous fee snapshot and excludes unmeasured target-client behavior, L1 posting allocation and future fee changes.",
+    "Work=8 direct advance calls are not a fixed transaction count. A wrapper can combine calls subject to gas limits and semantics, changing intrinsic and amortized overhead; no campaign wrapper or target allocation throughput is measured.",
+    "The complex782 box is different and has no matched solvent leg here; it must not be combined with solvent33 as one physical cycle.",
+    "Candidate force-field/protonation/cofactor/constraint and quantum-quality gates remain unaccepted; costing does not clear them."
+  ],
+  "mainnetTransactionsSent": 0,
+  "matchedBoxPairedLegPartialProjections": [
+    {
+      "cutoffNm": 1.0,
+      "fullForcePassGas": null,
+      "fullForcePassMeasured": false,
+      "illustrativeExecutionFeeEthAtCapturedGasPrice": "176392.1173677783521115",
+      "illustrativeExecutionFeeWeiAtCapturedGasPrice": {
+        "decimal": "176392117367778352111500",
+        "denominator": "1",
+        "numerator": "176392117367778352111500"
+      },
+      "mainnetFeeQuote": false,
+      "outsideNonzeroLJPairs": 2655497449,
+      "outsideZeroLJPairs": 17601927347,
+      "pricedNativeNormalOutsidePairs": 20257424796,
+      "projectedGas": {
+        "decimal": "8810795073315602.0035714285714285714285714285714286",
+        "denominator": "280",
+        "numerator": "2467022620528368561"
+      },
+      "projectedGasRoundedUp": "8810795073315603",
+      "scope": "One native-coordinate outside-cutoff partial force pass in each matched-box 33\u2013782 leg; not the full paired force or campaign.",
+      "switchNm": 0.9
+    },
+    {
+      "cutoffNm": 2.0,
+      "fullForcePassGas": null,
+      "fullForcePassMeasured": false,
+      "illustrativeExecutionFeeEthAtCapturedGasPrice": "173053.265851630787319125",
+      "illustrativeExecutionFeeWeiAtCapturedGasPrice": {
+        "decimal": "173053265851630787319125",
+        "denominator": "1",
+        "numerator": "173053265851630787319125"
+      },
+      "mainnetFeeQuote": false,
+      "outsideNonzeroLJPairs": 2601942740,
+      "outsideZeroLJPairs": 17272195959,
+      "pricedNativeNormalOutsidePairs": 19874138699,
+      "projectedGas": {
+        "decimal": "8644019273308231.1348214285714285714285714285714286",
+        "denominator": "1120",
+        "numerator": "9681301586105218871"
+      },
+      "projectedGasRoundedUp": "8644019273308232",
+      "scope": "One native-coordinate outside-cutoff partial force pass in each matched-box 33\u2013782 leg; not the full paired force or campaign.",
+      "switchNm": 1.8
+    }
+  ],
+  "measuredBenchmark": {
+    "fixtureAtoms": 16,
+    "receipts": 135,
+    "scope": "Actual native atom parameters/coordinates selected only for outside-cutoff gas paths, not a molecular subsystem or trajectory.",
+    "work1BatchingSensitivity": {
+      "effectiveNonzeroLJGasPerPair": {
+        "decimal": "1102607.7333333333333333333333333333333333333333333",
+        "denominator": "15",
+        "numerator": "16539116"
+      },
+      "effectiveZeroLJGasPerPair": {
+        "decimal": "1083917.8285714285714285714285714285714285714285714",
+        "denominator": "35",
+        "numerator": "37937124"
+      },
+      "interpretation": "Effective direct-advance receipt costs at this batching/locality, including amortized call/transaction and engine overhead; not isolated kernel gas.",
+      "maximumAbsoluteFitResidualGasPerMeasuredBatch": {
+        "decimal": "4765.1714285714285714285714285714285714285714285714",
+        "denominator": "35",
+        "numerator": "166781"
+      },
+      "measuredReceiptGasTotal": "130350488",
+      "model": "gas = effectiveZeroLJ*zeroLJCount + effectiveNonzeroLJ*nonzeroLJCount; no separate intercept",
+      "pairWorkUnits": 120,
+      "receiptCount": 120,
+      "residualsGas": [
+        "1455.1714285714285714285714285714285714285714285714",
+        "904.26666666666666666666666666666666666666666666667",
+        "1299.1714285714285714285714285714285714285714285714",
+        "-1521.8285714285714285714285714285714285714285714286",
+        "-1497.8285714285714285714285714285714285714285714286",
+        "3988.1714285714285714285714285714285714285714285714",
+        "902.26666666666666666666666666666666666666666666667",
+        "3428.2666666666666666666666666666666666666666666667",
+        "720.26666666666666666666666666666666666666666666667",
+        "948.17142857142857142857142857142857142857142857143",
+        "-1720.8285714285714285714285714285714285714285714286",
+        "3899.2666666666666666666666666666666666666666666667",
+        "-1565.8285714285714285714285714285714285714285714286",
+        "-1541.8285714285714285714285714285714285714285714286",
+        "-1557.8285714285714285714285714285714285714285714286",
+        "-1136.8285714285714285714285714285714285714285714286",
+        "2031.1714285714285714285714285714285714285714285714",
+        "-970.82857142857142857142857142857142857142857142857",
+        "-832.82857142857142857142857142857142857142857142857",
+        "1865.1714285714285714285714285714285714285714285714",
+        "1579.1714285714285714285714285714285714285714285714",
+        "-1284.8285714285714285714285714285714285714285714286",
+        "-1022.8285714285714285714285714285714285714285714286",
+        "-1191.8285714285714285714285714285714285714285714286",
+        "-911.82857142857142857142857142857142857142857142857",
+        "1812.1714285714285714285714285714285714285714285714",
+        "-945.82857142857142857142857142857142857142857142857",
+        "-1140.8285714285714285714285714285714285714285714286",
+        "-1007.8285714285714285714285714285714285714285714286",
+        "-928.82857142857142857142857142857142857142857142857",
+        "-1018.8285714285714285714285714285714285714285714286",
+        "-973.82857142857142857142857142857142857142857142857",
+        "-963.82857142857142857142857142857142857142857142857",
+        "-1385.7333333333333333333333333333333333333333333333",
+        "-838.73333333333333333333333333333333333333333333333",
+        "-1247.7333333333333333333333333333333333333333333333",
+        "-1047.8285714285714285714285714285714285714285714286",
+        "1830.1714285714285714285714285714285714285714285714",
+        "-1217.7333333333333333333333333333333333333333333333",
+        "-1011.8285714285714285714285714285714285714285714286",
+        "-1043.8285714285714285714285714285714285714285714286",
+        "1934.1714285714285714285714285714285714285714285714",
+        "-947.82857142857142857142857142857142857142857142857",
+        "-990.82857142857142857142857142857142857142857142857",
+        "1774.1714285714285714285714285714285714285714285714",
+        "1735.1714285714285714285714285714285714285714285714",
+        "1664.1714285714285714285714285714285714285714285714",
+        "-1091.8285714285714285714285714285714285714285714286",
+        "-918.82857142857142857142857142857142857142857142857",
+        "1819.1714285714285714285714285714285714285714285714",
+        "2004.1714285714285714285714285714285714285714285714",
+        "-1009.8285714285714285714285714285714285714285714286",
+        "-1019.8285714285714285714285714285714285714285714286",
+        "1853.1714285714285714285714285714285714285714285714",
+        "-981.82857142857142857142857142857142857142857142857",
+        "4603.1714285714285714285714285714285714285714285714",
+        "-1110.8285714285714285714285714285714285714285714286",
+        "-952.82857142857142857142857142857142857142857142857",
+        "-828.82857142857142857142857142857142857142857142857",
+        "-776.82857142857142857142857142857142857142857142857",
+        "-764.82857142857142857142857142857142857142857142857",
+        "4505.1714285714285714285714285714285714285714285714",
+        "-904.82857142857142857142857142857142857142857142857",
+        "-901.82857142857142857142857142857142857142857142857",
+        "-782.82857142857142857142857142857142857142857142857",
+        "4765.1714285714285714285714285714285714285714285714",
+        "1735.1714285714285714285714285714285714285714285714",
+        "1787.1714285714285714285714285714285714285714285714",
+        "-968.82857142857142857142857142857142857142857142857",
+        "-884.82857142857142857142857142857142857142857142857",
+        "2200.1714285714285714285714285714285714285714285714",
+        "4642.1714285714285714285714285714285714285714285714",
+        "-755.82857142857142857142857142857142857142857142857",
+        "-796.82857142857142857142857142857142857142857142857",
+        "2134.1714285714285714285714285714285714285714285714",
+        "-1092.8285714285714285714285714285714285714285714286",
+        "-1123.8285714285714285714285714285714285714285714286",
+        "-1237.8285714285714285714285714285714285714285714286",
+        "-1141.8285714285714285714285714285714285714285714286",
+        "-1014.8285714285714285714285714285714285714285714286",
+        "-1276.8285714285714285714285714285714285714285714286",
+        "-1017.8285714285714285714285714285714285714285714286",
+        "-1034.8285714285714285714285714285714285714285714286",
+        "-1004.8285714285714285714285714285714285714285714286",
+        "-1311.7333333333333333333333333333333333333333333333",
+        "-1435.7333333333333333333333333333333333333333333333",
+        "-872.82857142857142857142857142857142857142857142857",
+        "-1152.8285714285714285714285714285714285714285714286",
+        "-1349.7333333333333333333333333333333333333333333333",
+        "-1130.8285714285714285714285714285714285714285714286",
+        "-859.82857142857142857142857142857142857142857142857",
+        "-986.82857142857142857142857142857142857142857142857",
+        "1523.2666666666666666666666666666666666666666666667",
+        "-903.82857142857142857142857142857142857142857142857",
+        "2098.1714285714285714285714285714285714285714285714",
+        "-1241.7333333333333333333333333333333333333333333333",
+        "-1021.8285714285714285714285714285714285714285714286",
+        "-823.82857142857142857142857142857142857142857142857",
+        "1782.1714285714285714285714285714285714285714285714",
+        "-968.82857142857142857142857142857142857142857142857",
+        "-800.82857142857142857142857142857142857142857142857",
+        "-1348.7333333333333333333333333333333333333333333333",
+        "-931.82857142857142857142857142857142857142857142857",
+        "-687.82857142857142857142857142857142857142857142857",
+        "-687.82857142857142857142857142857142857142857142857",
+        "2260.1714285714285714285714285714285714285714285714",
+        "1735.1714285714285714285714285714285714285714285714",
+        "-977.82857142857142857142857142857142857142857142857",
+        "-841.82857142857142857142857142857142857142857142857",
+        "2163.1714285714285714285714285714285714285714285714",
+        "-990.82857142857142857142857142857142857142857142857",
+        "-1065.8285714285714285714285714285714285714285714286",
+        "-825.82857142857142857142857142857142857142857142857",
+        "-932.82857142857142857142857142857142857142857142857",
+        "-793.82857142857142857142857142857142857142857142857",
+        "-1051.8285714285714285714285714285714285714285714286",
+        "1882.1714285714285714285714285714285714285714285714",
+        "-800.82857142857142857142857142857142857142857142857",
+        "1834.1714285714285714285714285714285714285714285714",
+        "4568.1714285714285714285714285714285714285714285714"
+      ],
+      "uncertaintyLimit": "Fit residuals describe these small-fixture batches only, not an error bound or confidence interval for full-system extrapolation.",
+      "workPerDirectAdvance": 1
+    },
+    "work8": {
+      "effectiveNonzeroLJGasPerPair": {
+        "decimal": "452989.16875",
+        "denominator": "160",
+        "numerator": "72478267"
+      },
+      "effectiveZeroLJGasPerPair": {
+        "decimal": "432218.77589285714285714285714285714285714285714286",
+        "denominator": "1120",
+        "numerator": "484085029"
+      },
+      "interpretation": "Effective direct-advance receipt costs at this batching/locality, including amortized call/transaction and engine overhead; not isolated kernel gas.",
+      "maximumAbsoluteFitResidualGasPerMeasuredBatch": {
+        "decimal": "114054.20714285714285714285714285714285714285714286",
+        "denominator": "140",
+        "numerator": "15967589"
+      },
+      "measuredReceiptGasTotal": "52177809",
+      "model": "gas = effectiveZeroLJ*zeroLJCount + effectiveNonzeroLJ*nonzeroLJCount; no separate intercept",
+      "pairWorkUnits": 120,
+      "receiptCount": 15,
+      "residualsGas": [
+        "4824.6142857142857142857142857142857142857142857143",
+        "25978.007142857142857142857142857142857142857142857",
+        "2238.7928571428571428571428571428571428571428571429",
+        "26950.792857142857142857142857142857142857142857143",
+        "-12081.778571428571428571428571428571428571428571429",
+        "35099.792857142857142857142857142857142857142857143",
+        "38415.792857142857142857142857142857142857142857143",
+        "330.79285714285714285714285714285714285714285714286",
+        "44559.792857142857142857142857142857142857142857143",
+        "27036.792857142857142857142857142857142857142857143",
+        "18826.007142857142857142857142857142857142857142857",
+        "-6984.3857142857142857142857142857142857142857142857",
+        "-34801.6",
+        "-56339.207142857142857142857142857142857142857142857",
+        "-114054.20714285714285714285714285714285714285714286"
+      ],
+      "uncertaintyLimit": "Fit residuals describe these small-fixture batches only, not an error bound or confidence interval for full-system extrapolation.",
+      "workPerDirectAdvance": 8
+    }
+  },
+  "models": {
+    "complex33": {
+      "boxNm": [
+        11.306514700000001,
+        11.1129538,
+        12.4094174
+      ],
+      "cutoffScenarios": [
+        {
+          "costingTransferLimit": "Measured costs use switch=0.9 nm/cutoff=1.0 nm. Applying the same costs to the alternative cutoff census is an unmeasured branch-cost sensitivity, not a validated cutoff-specific benchmark.",
+          "cutoffNm": 1.0,
+          "exactRationalExclusionBoundaryChecks": 0,
+          "excludedOrScaledPairsRemovedByBranch": {
+            "below_switch_nonzero_lj": 65885,
+            "below_switch_zero_lj": 121015,
+            "inside_switch_nonzero_lj": 0,
+            "inside_switch_zero_lj": 0,
+            "outside_cutoff_nonzero_lj": 0,
+            "outside_cutoff_zero_lj": 0
+          },
+          "nativeAllPairBinsBeforeExceptionRemoval": {
+            "below_switch_nonzero_lj": 3309315,
+            "below_switch_zero_lj": 14547994,
+            "inside_switch_nonzero_lj": 1197320,
+            "inside_switch_zero_lj": 5331882,
+            "outside_cutoff_nonzero_lj": 1372752251,
+            "outside_cutoff_zero_lj": 7438651883
+          },
+          "nativeNormalPairBinsAfterExceptionRemoval": {
+            "below_switch_nonzero_lj": 3243430,
+            "below_switch_zero_lj": 14426979,
+            "inside_switch_nonzero_lj": 1197320,
+            "inside_switch_zero_lj": 5331882,
+            "outside_cutoff_nonzero_lj": 1372752251,
+            "outside_cutoff_zero_lj": 7438651883
+          },
+          "outsideExceptionsRemoved": 0,
+          "partialOutsideProjection": {
+            "fullForcePassGas": null,
+            "fullForcePassMeasured": false,
+            "illustrativeExecutionFeeEthAtCapturedGasPrice": "76816.07758311563372725",
+            "illustrativeExecutionFeeWeiAtCapturedGasPrice": {
+              "decimal": "76816077583115633727250",
+              "denominator": "1",
+              "numerator": "76816077583115633727250"
+            },
+            "mainnetFeeQuote": false,
+            "outsideNonzeroLJPairs": 1372752251,
+            "outsideZeroLJPairs": 7438651883,
+            "pricedNativeNormalOutsidePairs": 8811404134,
+            "projectedGas": {
+              "decimal": "3836966912243538.1482142857142857142857142857142857",
+              "denominator": "560",
+              "numerator": "2148701470856381363"
+            },
+            "projectedGasRoundedUp": "3836966912243539"
+          },
+          "switchNm": 0.9
+        },
+        {
+          "costingTransferLimit": "Measured costs use switch=0.9 nm/cutoff=1.0 nm. Applying the same costs to the alternative cutoff census is an unmeasured branch-cost sensitivity, not a validated cutoff-specific benchmark.",
+          "cutoffNm": 2.0,
+          "exactRationalExclusionBoundaryChecks": 0,
+          "excludedOrScaledPairsRemovedByBranch": {
+            "below_switch_nonzero_lj": 65885,
+            "below_switch_zero_lj": 121015,
+            "inside_switch_nonzero_lj": 0,
+            "inside_switch_zero_lj": 0,
+            "outside_cutoff_nonzero_lj": 0,
+            "outside_cutoff_zero_lj": 0
+          },
+          "nativeAllPairBinsBeforeExceptionRemoval": {
+            "below_switch_nonzero_lj": 24917043,
+            "below_switch_zero_lj": 114899298,
+            "inside_switch_nonzero_lj": 8949928,
+            "inside_switch_zero_lj": 42935143,
+            "outside_cutoff_nonzero_lj": 1343391915,
+            "outside_cutoff_zero_lj": 7300697318
+          },
+          "nativeNormalPairBinsAfterExceptionRemoval": {
+            "below_switch_nonzero_lj": 24851158,
+            "below_switch_zero_lj": 114778283,
+            "inside_switch_nonzero_lj": 8949928,
+            "inside_switch_zero_lj": 42935143,
+            "outside_cutoff_nonzero_lj": 1343391915,
+            "outside_cutoff_zero_lj": 7300697318
+          },
+          "outsideExceptionsRemoved": 0,
+          "partialOutsideProjection": {
+            "fullForcePassGas": null,
+            "fullForcePassMeasured": false,
+            "illustrativeExecutionFeeEthAtCapturedGasPrice": "75356.089705527548006375",
+            "illustrativeExecutionFeeWeiAtCapturedGasPrice": {
+              "decimal": "75356089705527548006375",
+              "denominator": "1",
+              "numerator": "75356089705527548006375"
+            },
+            "mainnetFeeQuote": false,
+            "outsideNonzeroLJPairs": 1343391915,
+            "outsideZeroLJPairs": 7300697318,
+            "pricedNativeNormalOutsidePairs": 8644089233,
+            "projectedGas": {
+              "decimal": "3764040444831545.8544642857142857142857142857142857",
+              "denominator": "1120",
+              "numerator": "4215725298211331357"
+            },
+            "projectedGasRoundedUp": "3764040444831546"
+          },
+          "switchNm": 1.8
+        }
+      ],
+      "exactHybridUnorderedPairs": 8835923580,
+      "exceptionVerification": {
+        "nativeExcludedListEntriesIncludingZeroPlaceholders": 227995,
+        "numberExcludedArrayLength": 132935,
+        "sourceFlags": [
+          "EXCLUDED_ATOMS_LIST",
+          "NUMBER_EXCLUDED_ATOMS",
+          "POINTERS"
+        ],
+        "uniqueExcludedOrScaledPairs": 186900,
+        "zeroPlaceholders": 41095
+      },
+      "extraHybridPairScansNotCoveredByNativeCoordinateCensus": 132935,
+      "forceInventory": {
+        "angles": 22178,
+        "bonds": 132783,
+        "box_nm": [
+          11.306514700000001,
+          11.1129538,
+          12.4094174
+        ],
+        "c4_actual_atom_pairs_before_exclusions": 52479,
+        "c4_matrix_status": "native_candidate_complete_parameter_review_failed",
+        "c4_nonzero_type_pairs": 34,
+        "charged_atoms": 132935,
+        "excluded_or_scaled_pairs": 186900,
+        "hybrid_atoms_if_one_disappearing_H_added": 132936,
+        "periodic_improper_records": 2437,
+        "periodic_torsion_records": 46338,
+        "physical_atoms": 132935,
+        "production_ready": false,
+        "q_sigma_epsilon_units": [
+          "e",
+          "nm",
+          "kJ/mol"
+        ],
+        "rigid_water_distance_constraints": 120519,
+        "schema": "orvia.actual-native-force-inventory.v1",
+        "status": "UNACCEPTED_CANDIDATE_COST_INPUTS",
+        "zero_lj_epsilon_atoms": 80451
+      },
+      "gpuCensus": {
+        "atoms": 132935,
+        "boundaryPairs": 398883,
+        "device": "Apple M5",
+        "gpuKernelSeconds": 0.989113,
+        "squaredDistanceGuardNm2": 0.001,
+        "unorderedPairs": 8835790645
+      },
+      "hybridCandidateAtoms": 132936,
+      "hybridCountMeaning": "Inventory candidate with one added disappearing H; not an accepted hybrid model.",
+      "nativePhysicalAtoms": 132935,
+      "nativeUnorderedPairs": 8835790645,
+      "sourceParametersAccepted": false,
+      "theoreticalDirectAdvanceCallsForWholeHybridPairScanAtWork8": 1104490448
+    },
+    "complex782": {
+      "boxNm": [
+        11.6642696,
+        20.322884600000002,
+        15.244281899999999
+      ],
+      "cutoffScenarios": [
+        {
+          "costingTransferLimit": "Measured costs use switch=0.9 nm/cutoff=1.0 nm. Applying the same costs to the alternative cutoff census is an unmeasured branch-cost sensitivity, not a validated cutoff-specific benchmark.",
+          "cutoffNm": 1.0,
+          "exactRationalExclusionBoundaryChecks": 0,
+          "excludedOrScaledPairsRemovedByBranch": {
+            "below_switch_nonzero_lj": 68606,
+            "below_switch_zero_lj": 309582,
+            "inside_switch_nonzero_lj": 0,
+            "inside_switch_zero_lj": 0,
+            "outside_cutoff_nonzero_lj": 0,
+            "outside_cutoff_zero_lj": 0
+          },
+          "nativeAllPairBinsBeforeExceptionRemoval": {
+            "below_switch_nonzero_lj": 6344902,
+            "below_switch_zero_lj": 38505132,
+            "inside_switch_nonzero_lj": 2327256,
+            "inside_switch_zero_lj": 14141311,
+            "outside_cutoff_nonzero_lj": 6743070752,
+            "outside_cutoff_zero_lj": 45153756627
+          },
+          "nativeNormalPairBinsAfterExceptionRemoval": {
+            "below_switch_nonzero_lj": 6276296,
+            "below_switch_zero_lj": 38195550,
+            "inside_switch_nonzero_lj": 2327256,
+            "inside_switch_zero_lj": 14141311,
+            "outside_cutoff_nonzero_lj": 6743070752,
+            "outside_cutoff_zero_lj": 45153756627
+          },
+          "outsideExceptionsRemoved": 0,
+          "partialOutsideProjection": {
+            "fullForcePassGas": null,
+            "fullForcePassMeasured": false,
+            "illustrativeExecutionFeeEthAtCapturedGasPrice": "451868.205409758005994125",
+            "illustrativeExecutionFeeWeiAtCapturedGasPrice": {
+              "decimal": "451868205409758005994125",
+              "denominator": "1",
+              "numerator": "451868205409758005994125"
+            },
+            "mainnetFeeQuote": false,
+            "outsideNonzeroLJPairs": 6743070752,
+            "outsideZeroLJPairs": 45153756627,
+            "pricedNativeNormalOutsidePairs": 51896827379,
+            "projectedGas": {
+              "decimal": "22570839431056843.45625",
+              "denominator": "160",
+              "numerator": "3611334308969094953"
+            },
+            "projectedGasRoundedUp": "22570839431056844"
+          },
+          "switchNm": 0.9
+        },
+        {
+          "costingTransferLimit": "Measured costs use switch=0.9 nm/cutoff=1.0 nm. Applying the same costs to the alternative cutoff census is an unmeasured branch-cost sensitivity, not a validated cutoff-specific benchmark.",
+          "cutoffNm": 2.0,
+          "exactRationalExclusionBoundaryChecks": 0,
+          "excludedOrScaledPairsRemovedByBranch": {
+            "below_switch_nonzero_lj": 68606,
+            "below_switch_zero_lj": 309582,
+            "inside_switch_nonzero_lj": 0,
+            "inside_switch_zero_lj": 0,
+            "outside_cutoff_nonzero_lj": 0,
+            "outside_cutoff_zero_lj": 0
+          },
+          "nativeAllPairBinsBeforeExceptionRemoval": {
+            "below_switch_nonzero_lj": 49135722,
+            "below_switch_zero_lj": 304888494,
+            "inside_switch_nonzero_lj": 18027471,
+            "inside_switch_zero_lj": 113867753,
+            "outside_cutoff_nonzero_lj": 6684579717,
+            "outside_cutoff_zero_lj": 44787646823
+          },
+          "nativeNormalPairBinsAfterExceptionRemoval": {
+            "below_switch_nonzero_lj": 49067116,
+            "below_switch_zero_lj": 304578912,
+            "inside_switch_nonzero_lj": 18027471,
+            "inside_switch_zero_lj": 113867753,
+            "outside_cutoff_nonzero_lj": 6684579717,
+            "outside_cutoff_zero_lj": 44787646823
+          },
+          "outsideExceptionsRemoved": 0,
+          "partialOutsideProjection": {
+            "fullForcePassGas": null,
+            "fullForcePassMeasured": false,
+            "illustrativeExecutionFeeEthAtCapturedGasPrice": "448169.8039700003611775",
+            "illustrativeExecutionFeeWeiAtCapturedGasPrice": {
+              "decimal": "448169803970000361177500",
+              "denominator": "1",
+              "numerator": "448169803970000361177500"
+            },
+            "mainnetFeeQuote": false,
+            "outsideNonzeroLJPairs": 6684579717,
+            "outsideZeroLJPairs": 44787646823,
+            "pricedNativeNormalOutsidePairs": 51472226540,
+            "projectedGas": {
+              "decimal": "22386104094405612.446428571428571428571428571428571",
+              "denominator": "56",
+              "numerator": "1253621829286714297"
+            },
+            "projectedGasRoundedUp": "22386104094405613"
+          },
+          "switchNm": 1.8
+        }
+      ],
+      "exactHybridUnorderedPairs": 51958468341,
+      "exceptionVerification": {
+        "nativeExcludedListEntriesIncludingZeroPlaceholders": 482529,
+        "numberExcludedArrayLength": 322361,
+        "sourceFlags": [
+          "EXCLUDED_ATOMS_LIST",
+          "NUMBER_EXCLUDED_ATOMS",
+          "POINTERS"
+        ],
+        "uniqueExcludedOrScaledPairs": 378188,
+        "zeroPlaceholders": 104341
+      },
+      "extraHybridPairScansNotCoveredByNativeCoordinateCensus": 322361,
+      "forceInventory": {
+        "angles": 23092,
+        "bonds": 321842,
+        "box_nm": [
+          11.6642696,
+          20.322884600000002,
+          15.244281899999999
+        ],
+        "c4_actual_atom_pairs_before_exclusions": 116200,
+        "c4_matrix_status": "native_candidate_complete_parameter_review_failed",
+        "c4_nonzero_type_pairs": 34,
+        "charged_atoms": 322361,
+        "excluded_or_scaled_pairs": 378188,
+        "hybrid_atoms_if_one_disappearing_H_added": 322362,
+        "periodic_improper_records": 2540,
+        "periodic_torsion_records": 48234,
+        "physical_atoms": 322361,
+        "production_ready": false,
+        "q_sigma_epsilon_units": [
+          "e",
+          "nm",
+          "kJ/mol"
+        ],
+        "rigid_water_distance_constraints": 309072,
+        "schema": "orvia.actual-native-force-inventory.v1",
+        "status": "UNACCEPTED_CANDIDATE_COST_INPUTS",
+        "zero_lj_epsilon_atoms": 206156
+      },
+      "gpuCensus": {
+        "atoms": 322361,
+        "boundaryPairs": 1008131,
+        "device": "Apple M5",
+        "gpuKernelSeconds": 5.028549,
+        "squaredDistanceGuardNm2": 0.001,
+        "unorderedPairs": 51958145980
+      },
+      "hybridCandidateAtoms": 322362,
+      "hybridCountMeaning": "Inventory candidate with one added disappearing H; not an accepted hybrid model.",
+      "nativePhysicalAtoms": 322361,
+      "nativeUnorderedPairs": 51958145980,
+      "sourceParametersAccepted": false,
+      "theoreticalDirectAdvanceCallsForWholeHybridPairScanAtWork8": 6494808543
+    },
+    "solvent33": {
+      "boxNm": [
+        11.306514700000001,
+        11.1129538,
+        12.4094174
+      ],
+      "cutoffScenarios": [
+        {
+          "costingTransferLimit": "Measured costs use switch=0.9 nm/cutoff=1.0 nm. Applying the same costs to the alternative cutoff census is an unmeasured branch-cost sensitivity, not a validated cutoff-specific benchmark.",
+          "cutoffNm": 1.0,
+          "exactRationalExclusionBoundaryChecks": 0,
+          "excludedOrScaledPairsRemovedByBranch": {
+            "below_switch_nonzero_lj": 229,
+            "below_switch_zero_lj": 151179,
+            "inside_switch_nonzero_lj": 0,
+            "inside_switch_zero_lj": 0,
+            "outside_cutoff_nonzero_lj": 0,
+            "outside_cutoff_zero_lj": 0
+          },
+          "nativeAllPairBinsBeforeExceptionRemoval": {
+            "below_switch_nonzero_lj": 2500262,
+            "below_switch_zero_lj": 19971091,
+            "inside_switch_nonzero_lj": 937661,
+            "inside_switch_zero_lj": 7377084,
+            "outside_cutoff_nonzero_lj": 1282745198,
+            "outside_cutoff_zero_lj": 10163275464
+          },
+          "nativeNormalPairBinsAfterExceptionRemoval": {
+            "below_switch_nonzero_lj": 2500033,
+            "below_switch_zero_lj": 19819912,
+            "inside_switch_nonzero_lj": 937661,
+            "inside_switch_zero_lj": 7377084,
+            "outside_cutoff_nonzero_lj": 1282745198,
+            "outside_cutoff_zero_lj": 10163275464
+          },
+          "outsideExceptionsRemoved": 0,
+          "partialOutsideProjection": {
+            "fullForcePassGas": null,
+            "fullForcePassMeasured": false,
+            "illustrativeExecutionFeeEthAtCapturedGasPrice": "99576.03978466271838425",
+            "illustrativeExecutionFeeWeiAtCapturedGasPrice": {
+              "decimal": "99576039784662718384250",
+              "denominator": "1",
+              "numerator": "99576039784662718384250"
+            },
+            "mainnetFeeQuote": false,
+            "outsideNonzeroLJPairs": 1282745198,
+            "outsideZeroLJPairs": 10163275464,
+            "pricedNativeNormalOutsidePairs": 11446020662,
+            "projectedGas": {
+              "decimal": "4973828161072063.8553571428571428571428571428571429",
+              "denominator": "560",
+              "numerator": "2785343770200355759"
+            },
+            "projectedGasRoundedUp": "4973828161072064"
+          },
+          "switchNm": 0.9
+        },
+        {
+          "costingTransferLimit": "Measured costs use switch=0.9 nm/cutoff=1.0 nm. Applying the same costs to the alternative cutoff census is an unmeasured branch-cost sensitivity, not a validated cutoff-specific benchmark.",
+          "cutoffNm": 2.0,
+          "exactRationalExclusionBoundaryChecks": 0,
+          "excludedOrScaledPairsRemovedByBranch": {
+            "below_switch_nonzero_lj": 229,
+            "below_switch_zero_lj": 151179,
+            "inside_switch_nonzero_lj": 0,
+            "inside_switch_zero_lj": 0,
+            "outside_cutoff_nonzero_lj": 0,
+            "outside_cutoff_zero_lj": 0
+          },
+          "nativeAllPairBinsBeforeExceptionRemoval": {
+            "below_switch_nonzero_lj": 20090883,
+            "below_switch_zero_lj": 159427444,
+            "inside_switch_nonzero_lj": 7541413,
+            "inside_switch_zero_lj": 59697554,
+            "outside_cutoff_nonzero_lj": 1258550825,
+            "outside_cutoff_zero_lj": 9971498641
+          },
+          "nativeNormalPairBinsAfterExceptionRemoval": {
+            "below_switch_nonzero_lj": 20090654,
+            "below_switch_zero_lj": 159276265,
+            "inside_switch_nonzero_lj": 7541413,
+            "inside_switch_zero_lj": 59697554,
+            "outside_cutoff_nonzero_lj": 1258550825,
+            "outside_cutoff_zero_lj": 9971498641
+          },
+          "outsideExceptionsRemoved": 0,
+          "partialOutsideProjection": {
+            "fullForcePassGas": null,
+            "fullForcePassMeasured": false,
+            "illustrativeExecutionFeeEthAtCapturedGasPrice": "97697.17614610323931275",
+            "illustrativeExecutionFeeWeiAtCapturedGasPrice": {
+              "decimal": "97697176146103239312750",
+              "denominator": "1",
+              "numerator": "97697176146103239312750"
+            },
+            "mainnetFeeQuote": false,
+            "outsideNonzeroLJPairs": 1258550825,
+            "outsideZeroLJPairs": 9971498641,
+            "pricedNativeNormalOutsidePairs": 11230049466,
+            "projectedGas": {
+              "decimal": "4879978828476685.2803571428571428571428571428571429",
+              "denominator": "560",
+              "numerator": "2732788143946943757"
+            },
+            "projectedGasRoundedUp": "4879978828476686"
+          },
+          "switchNm": 1.8
+        }
+      ],
+      "exactHybridUnorderedPairs": 11476958265,
+      "exceptionVerification": {
+        "nativeExcludedListEntriesIncludingZeroPlaceholders": 202090,
+        "numberExcludedArrayLength": 151505,
+        "sourceFlags": [
+          "EXCLUDED_ATOMS_LIST",
+          "NUMBER_EXCLUDED_ATOMS",
+          "POINTERS"
+        ],
+        "uniqueExcludedOrScaledPairs": 151408,
+        "zeroPlaceholders": 50682
+      },
+      "extraHybridPairScansNotCoveredByNativeCoordinateCensus": 151505,
+      "forceInventory": {
+        "angles": 82,
+        "bonds": 151226,
+        "box_nm": [
+          11.306514700000001,
+          11.1129538,
+          12.4094174
+        ],
+        "c4_matrix_status": "not_applicable_no_polarization_ion",
+        "charged_atoms": 151505,
+        "excluded_or_scaled_pairs": 151408,
+        "hybrid_atoms_if_one_disappearing_H_added": 151506,
+        "periodic_improper_records": 14,
+        "periodic_torsion_records": 141,
+        "physical_atoms": 151505,
+        "production_ready": false,
+        "rigid_water_distance_constraints": 151179,
+        "schema": "orvia.actual-native-force-inventory.v1",
+        "status": "UNACCEPTED_CANDIDATE_COST_INPUTS",
+        "zero_lj_epsilon_atoms": 100786
+      },
+      "gpuCensus": {
+        "atoms": 151505,
+        "boundaryPairs": 517096,
+        "device": "Apple M5",
+        "gpuKernelSeconds": 1.013897,
+        "squaredDistanceGuardNm2": 0.001,
+        "unorderedPairs": 11476806760
+      },
+      "hybridCandidateAtoms": 151506,
+      "hybridCountMeaning": "Inventory candidate with one added disappearing H; not an accepted hybrid model.",
+      "nativePhysicalAtoms": 151505,
+      "nativeUnorderedPairs": 11476806760,
+      "sourceParametersAccepted": false,
+      "theoreticalDirectAdvanceCallsForWholeHybridPairScanAtWork8": 1434619784
+    }
+  },
+  "productionReady": false,
+  "runtime": {
+    "numpy": "2.5.4",
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "python": "3.12.16 (main, Oct 26 2026, 11:31:43) [Clang 21.1.8 ]"
+  },
+  "schema": "orvia.actual-native-outside-gas-projection.v1",
+  "scientificAcceptance": false,
+  "sourceFiles": [
+    {
+      "bytes": 15369,
+      "path": "output/gas-estimate/baseline-stage-receipts.json",
+      "sha256": "14f16a24aad692bef5691311656f8bb1b3dd882a89f3c028d73833982d6b6ebb"
+    },
+    {
+      "bytes": 18784,
+      "path": "output/gas-estimate/calculate_gas.py",
+      "sha256": "216ed27553491fa7f9e95b125beab2abcf20bbe72449c7c8dd374584518c2b2e"
+    },
+    {
+      "bytes": 3306,
+      "path": "output/gas-estimate/current-source-work-counts.json",
+      "sha256": "7f7bd6e0b1b44030cd9c76f89ac77a33cbf30231659670dd1a7f0fac7bef9a22"
+    },
+    {
+      "bytes": 429,
+      "path": "output/gas-estimate/fee-snapshot.json",
+      "sha256": "6afdeed12637354fe61f5d0fbaf319dae54b5c9f62f81090c8cad6b1a1fff315"
+    },
+    {
+      "bytes": 2299,
+      "path": "output/gas-estimate/gpu/complex33.json",
+      "sha256": "fb41be0b0a14957cb8f11127c9ad92d65d4a64476dfbc8a440545f390d061206"
+    },
+    {
+      "bytes": 2323,
+      "path": "output/gas-estimate/gpu/complex782.json",
+      "sha256": "fa6bf2e78d734c3c3eff3b6f19631810c40c2c4cec65060828a99a185e09a233"
+    },
+    {
+      "bytes": 5134,
+      "path": "output/gas-estimate/gpu/count_pairs.py",
+      "sha256": "72c02418991f644cbc911385ead9f1eaf929c347575593a005b4613d877f3718"
+    },
+    {
+      "bytes": 4756,
+      "path": "output/gas-estimate/gpu/pair_histogram.c",
+      "sha256": "5ce8b605b5ebfbfd23bcfbdd89f2b1c6c6013ecdca3111b86f21907a068c2c5d"
+    },
+    {
+      "bytes": 2303,
+      "path": "output/gas-estimate/gpu/solvent33.json",
+      "sha256": "753c3b17402bb5f3479c796f574d8388c04143ceed2f62bc66c77480acf5f8ab"
+    },
+    {
+      "bytes": 16411,
+      "path": "output/gas-estimate/native-outside-pair-gas.json",
+      "sha256": "570aafcf57181d603f789f6d528fc3ed9cdab59870f06389fd138021a2e25770"
+    },
+    {
+      "bytes": 3291,
+      "path": "output/gas-estimate/outside-pair-input.json",
+      "sha256": "e30b265546a49993f457eced1c5208aaddc8672a1662f15f21b8293610d0a01f"
+    },
+    {
+      "bytes": 3135846,
+      "path": "work/scientific-preparation/data/prepared_candidate/cardiac_adppi_ff03_m3l_1_782_solvated_v0_1/complex.prmtop.gz",
+      "sha256": "ac60a5d6eb37647a234592704e8584994c838ce2abca1458e48fae13f0fa189e"
+    },
+    {
+      "bytes": 780,
+      "path": "work/scientific-preparation/data/prepared_candidate/cardiac_adppi_ff03_m3l_1_782_solvated_v0_1/force_inventory.json",
+      "sha256": "309255f039022009aaf4d537b9eb73e1dfa9bf2ffbb5a5bc2c85bf6e50031196"
+    },
+    {
+      "bytes": 3182740,
+      "path": "work/scientific-preparation/data/prepared_candidate/cardiac_adppi_ff03_m3l_1_782_solvated_v0_1/particle_cost_inputs.json.gz",
+      "sha256": "4d238884f2cb1262d09fcf433b839f6e8aedf9f79edf58b47f330361ad91bd5a"
+    },
+    {
+      "bytes": 1568815,
+      "path": "work/scientific-preparation/data/prepared_candidate/cardiac_adppi_ff03_m3l_33_782_solvated_v0_1/complex.prmtop.gz",
+      "sha256": "709c6c24e182440835723960153113697c10547326d8b10236497998e6235eb3"
+    },
+    {
+      "bytes": 770,
+      "path": "work/scientific-preparation/data/prepared_candidate/cardiac_adppi_ff03_m3l_33_782_solvated_v0_1/force_inventory.json",
+      "sha256": "fa86eb6b3320294782be38e5684cc019abfedb57945fd9515a09b5d340647b8c"
+    },
+    {
+      "bytes": 1413529,
+      "path": "work/scientific-preparation/data/prepared_candidate/cardiac_adppi_ff03_m3l_33_782_solvated_v0_1/particle_cost_inputs.json.gz",
+      "sha256": "2f056ce6b98884a6296feb25b2310e654e6f4b50b792377bd84755fb675257ad"
+    },
+    {
+      "bytes": 601,
+      "path": "work/scientific-preparation/data/prepared_candidate/ligand_adppi_ff03_m3l_33_782_solvated_v0_1/force_inventory.json",
+      "sha256": "7be93cf40d34f472b3644bf7dfed413738f2b972696193e81780fbdab3888736"
+    },
+    {
+      "bytes": 1529233,
+      "path": "work/scientific-preparation/data/prepared_candidate/ligand_adppi_ff03_m3l_33_782_solvated_v0_1/particle_cost_inputs.json.gz",
+      "sha256": "2b43c7dce24ff0249a085ecb78934bb7fdb17b1eea0005b9870156b6c542c32d"
+    },
+    {
+      "bytes": 1254970,
+      "path": "work/scientific-preparation/data/prepared_candidate/ligand_adppi_ff03_m3l_33_782_solvated_v0_1/solvent.prmtop.gz",
+      "sha256": "6d3b30f439688d8a5c2f0af5f54ce687ca191eab16f2c441dda842c4e607376f"
+    }
+  ],
+  "status": "PARTIAL_PROJECTION_NOT_FULL_CAMPAIGN"
+}
