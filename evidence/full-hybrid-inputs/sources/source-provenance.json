@@ -1,0 +1,389 @@
+{
+  "allCopiesExactBytes": true,
+  "copiedFiles": [
+    {
+      "bytes": 21203,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/assemble_full_hybrid.py",
+      "path": "evidence/full-hybrid-inputs/sources/assemble_full_hybrid.py",
+      "sha256": "4ddd613cc8f59ec3c98ebf1f4b84e70121ffe5c68257190b3da0f319e644ec3a"
+    },
+    {
+      "bytes": 5139,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/verify_streams.py",
+      "path": "evidence/full-hybrid-inputs/sources/verify_streams.py",
+      "sha256": "9ef5383021acf44e49ec91da6f6781ee24457ca6a1de95725e9b5284a0250e52"
+    },
+    {
+      "bytes": 17636,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/independent-validation/validate_native_b_bonded.py",
+      "path": "evidence/full-hybrid-inputs/sources/validate_native_b_bonded.py",
+      "sha256": "5ce48a00c19fc0e1977c3e61411deab91a9721dc9496b0204812164aec369c28"
+    },
+    {
+      "bytes": 15863,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/independent-validation/audit_preservation.py",
+      "path": "evidence/full-hybrid-inputs/sources/audit_preservation.py",
+      "sha256": "f95456b9e9172c3883d3e2f19237cf0c8fe952aeefbdeb4d1e79e9337335eca0"
+    },
+    {
+      "bytes": 17878,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/c4-endpoint/validate_native_endpoints.py",
+      "path": "evidence/full-hybrid-inputs/sources/validate_native_endpoints.py",
+      "sha256": "feeaf0c9f17b9144f1d68300c23babf5850e95a179155eb495a906d290ef0648"
+    },
+    {
+      "bytes": 3396,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/c4-endpoint/independent-lrc/analytic_c4.py",
+      "path": "evidence/full-hybrid-inputs/sources/analytic_c4.py",
+      "sha256": "35f549ce387c77e633250ca78b8d4462896e7043342557020ae82aa44b30fdb3"
+    },
+    {
+      "bytes": 8959,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/c4-endpoint/independent-lrc/run_reference_fixtures.py",
+      "path": "evidence/full-hybrid-inputs/sources/run_reference_fixtures.py",
+      "sha256": "1e2d36978ce1084acaad8ff98fd8f3880cd63075582a4cf1846f8664408f339e"
+    },
+    {
+      "bytes": 72488,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/c4-endpoint/attempts/20261102T110015.135942Z/pinned-amber-file-parser.py",
+      "path": "evidence/full-hybrid-inputs/sources/amber_file_parser.py",
+      "sha256": "1e8a713cb6f641a9ece150973b6841be27463a971fd830200590d56a165a5a04"
+    },
+    {
+      "bytes": 21898,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/c4-endpoint/independent-lrc/CustomNonbondedForceImpl.cpp",
+      "path": "evidence/full-hybrid-inputs/sources/CustomNonbondedForceImpl.cpp",
+      "sha256": "fbd9fe8f649afd4c12134edc6b88faa6a46719b636ae97d571a7b6962f94a44e"
+    },
+    {
+      "bytes": 161525,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/c4-endpoint/independent-lrc/ReferenceKernels.cpp",
+      "path": "evidence/full-hybrid-inputs/sources/ReferenceKernels.cpp",
+      "sha256": "f1655375b986f94c41bcc2eacbfbffcc0fca7edf3cefc3f37ea81e89e12de002"
+    },
+    {
+      "bytes": 3302,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/legs/complex33/model-policy.json",
+      "path": "evidence/full-hybrid-inputs/policies/complex33-model-policy.json",
+      "sha256": "76b8a0b17821bf8d3ce98897d8e5fa1e56327cfc34c266e66bb7645559d8f5bf"
+    },
+    {
+      "bytes": 2857,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/legs/solvent33/model-policy.json",
+      "path": "evidence/full-hybrid-inputs/policies/solvent33-model-policy.json",
+      "sha256": "e99cfb2934e9aaf5b32d072491c21ec654d720411704cff7f0d1f03b71fac844"
+    },
+    {
+      "bytes": 2621,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/independent-validation/bonded-validation-policy.json",
+      "path": "evidence/full-hybrid-inputs/policies/bonded-validation-policy.json",
+      "sha256": "74c369b0df45a331d158f9437bdbaa96efbbd05732856362ac1a5fd365727ec1"
+    },
+    {
+      "bytes": 1239,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/c4-endpoint/attempts/20261102T110015.135942Z/policy.json",
+      "path": "evidence/full-hybrid-inputs/policies/c4-native-policy.json",
+      "sha256": "24bd0bd24020d766b7b13858030d85392d930355673886b7940101700c1359de"
+    },
+    {
+      "bytes": 3850,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/c4-endpoint/independent-lrc/policy.json",
+      "path": "evidence/full-hybrid-inputs/policies/c4-reference-policy.json",
+      "sha256": "60aed3ad31f79dc7e0824523e68cdf2386c53bbb6230f3cd594cdd5701ff14bb"
+    },
+    {
+      "bytes": 7432,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/c4-endpoint/independent-lrc/fixtures.json",
+      "path": "evidence/full-hybrid-inputs/policies/c4-reference-fixtures.json",
+      "sha256": "dbb0bf1c8d9394e267659f51900d88f2519d3d1e850694997ff37d8db5ddce4c"
+    },
+    {
+      "bytes": 1235,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/assembly-summary.json",
+      "path": "evidence/full-hybrid-inputs/historical/current/assembly-summary.json",
+      "sha256": "96d0578db0e3f47ebb041c788b7b0c2ee2d78ceec723179f2205d279e9243767"
+    },
+    {
+      "bytes": 6986,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/stream-verification.json",
+      "path": "evidence/full-hybrid-inputs/historical/current/raw-stream-verification.json",
+      "sha256": "d1181e760b9a0afe9ae74198acbccb49b0b13798f6a3bb2c2fafca6a175496d9"
+    },
+    {
+      "bytes": 1184,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/exception-canonicalization-audit.json",
+      "path": "evidence/full-hybrid-inputs/historical/current/exception-canonicalization-audit.json",
+      "sha256": "6a10aa5b7d44affb7ea4ac997465e562a791b794da083a24dcede45e7e90a845"
+    },
+    {
+      "bytes": 13569,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/legs/complex33/catalog-candidate.json",
+      "path": "evidence/full-hybrid-inputs/historical/current/complex33-catalog.json",
+      "sha256": "bdbd360cede4953cf9afe6530c2cd23f9304ea845d23b8f0b834ffb94e94f093"
+    },
+    {
+      "bytes": 13072,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/legs/solvent33/catalog-candidate.json",
+      "path": "evidence/full-hybrid-inputs/historical/current/solvent33-catalog.json",
+      "sha256": "40c9eae3da4f327f8d5a9dde91eac5bf4ac923dc7ebce30c0c58a26570856e2d"
+    },
+    {
+      "bytes": 1732,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/independent-validation/attempts/20261102T104204.534320Z-74914/summary.json",
+      "path": "evidence/full-hybrid-inputs/historical/current/bonded-summary.json",
+      "sha256": "d7b279854494d5370d36a79dff0d4cf7251d09a934c0f74fce4cc52781432917"
+    },
+    {
+      "bytes": 1577,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/independent-validation/attempts/preservation-20261102T104449.185117Z-75179/summary.json",
+      "path": "evidence/full-hybrid-inputs/historical/current/preservation-summary.json",
+      "sha256": "a2e557ee04274a7ec2747a23964d5c8c120df5412e2cab70b046728eb4e645c1"
+    },
+    {
+      "bytes": 18438,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/c4-endpoint/attempts/20261102T110015.135942Z/summary.json",
+      "path": "evidence/full-hybrid-inputs/historical/current/c4-native-summary.json",
+      "sha256": "5f6d81974e907c5c5f63edfb3fd48928c038abdeed6a79414fa69406ac0e8912"
+    },
+    {
+      "bytes": 54850,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/c4-endpoint/independent-lrc/attempts/20261102T105448.710401Z-76296/report.json",
+      "path": "evidence/full-hybrid-inputs/historical/current/c4-reference-report.json",
+      "sha256": "2c47bc9aaeabf8f395965d23431fdcab8fa8750fee7dd05a24668ce8c3328f94"
+    },
+    {
+      "bytes": 3214,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/c4-endpoint/independent-lrc/verification-summary.json",
+      "path": "evidence/full-hybrid-inputs/historical/current/c4-reference-summary.json",
+      "sha256": "4eaad3e6b776c598a9a7cb72e73f6c218c0eb180e2814202dc8f48d3a8345401"
+    },
+    {
+      "bytes": 24078,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/c4-audit/native-union-c4.json",
+      "path": "evidence/full-hybrid-inputs/historical/current/c4-audit-native-union.json",
+      "sha256": "4739c1b6da16940e19d60579b72bfa504618156c482dcee5f8cb51f4b4fba5ad"
+    },
+    {
+      "bytes": 15622,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/c4-audit/endpoint-differences.json",
+      "path": "evidence/full-hybrid-inputs/historical/current/c4-audit-endpoint-differences.json",
+      "sha256": "501e007aa59706e6cb3aa1847b9e4c69d457936dd617e04e471d511005bf7973"
+    },
+    {
+      "bytes": 6639,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/independent-validation/attempts/20261102T104204.534320Z-74914/complex33/report.json",
+      "path": "evidence/full-hybrid-inputs/historical/current/bonded-complex33.json",
+      "sha256": "ae45102b94d3db7623085e5d1da576cad8bb1ad6011cd1438876e9ca8e935bd4"
+    },
+    {
+      "bytes": 13441,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/independent-validation/attempts/preservation-20261102T104449.185117Z-75179/complex33/report.json",
+      "path": "evidence/full-hybrid-inputs/historical/current/preservation-complex33.json",
+      "sha256": "266b6dd29ee4ee26f9c6b38f6ff8ac678b2d80b1d37213fdb7f6db617d408aaf"
+    },
+    {
+      "bytes": 6607,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/independent-validation/attempts/20261102T104204.534320Z-74914/solvent33/report.json",
+      "path": "evidence/full-hybrid-inputs/historical/current/bonded-solvent33.json",
+      "sha256": "d9d0b524e5c2820407e97be4b767d1dba6faa73f92a783027bad6265792a44b0"
+    },
+    {
+      "bytes": 12601,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/independent-validation/attempts/preservation-20261102T104449.185117Z-75179/solvent33/report.json",
+      "path": "evidence/full-hybrid-inputs/historical/current/preservation-solvent33.json",
+      "sha256": "b6fc8dd963cbe0efdad0c3322663a99bf53ab7a47d1b836f87e7f19dd805155d"
+    },
+    {
+      "bytes": 21120,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/assemble_full_hybrid.py",
+      "path": "evidence/full-hybrid-inputs/historical/pre-exception-pair-canonicalization/assemble_full_hybrid.py",
+      "sha256": "bd733dc37dd65b3c076f70d9f6954eeb28dc45c55406f643c218e6a2fa7a07ae"
+    },
+    {
+      "bytes": 5139,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/verify_streams.py",
+      "path": "evidence/full-hybrid-inputs/historical/pre-exception-pair-canonicalization/verify_streams.py",
+      "sha256": "9ef5383021acf44e49ec91da6f6781ee24457ca6a1de95725e9b5284a0250e52"
+    },
+    {
+      "bytes": 1235,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/assembly-summary.json",
+      "path": "evidence/full-hybrid-inputs/historical/pre-exception-pair-canonicalization/assembly-summary.json",
+      "sha256": "21523097c87cde1933dc6c786c83f571f0d7055e8ca884af770def95f53c6503"
+    },
+    {
+      "bytes": 796,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/stream-verification.json",
+      "path": "evidence/full-hybrid-inputs/historical/pre-exception-pair-canonicalization/stream-verification.json",
+      "sha256": "125cec6dfb920c760226785862e7201bd0ae656ca5ec14797839db3b820cb647"
+    },
+    {
+      "bytes": 14978,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/relocation-manifest.json",
+      "path": "evidence/full-hybrid-inputs/historical/pre-exception-pair-canonicalization/relocation-manifest.json",
+      "sha256": "1500957b60c578dc7f7766b3a3f0f558f743a7f4f6df65613c68e22b019350db"
+    },
+    {
+      "bytes": 13569,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/complex33/catalog-candidate.json",
+      "path": "evidence/full-hybrid-inputs/historical/pre-exception-pair-canonicalization/complex33-catalog.json",
+      "sha256": "f98137c4c33d3107aee27dc7e1190eaa245e61cd3f23026ee5bc412d2002ff23"
+    },
+    {
+      "bytes": 13072,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/solvent33/catalog-candidate.json",
+      "path": "evidence/full-hybrid-inputs/historical/pre-exception-pair-canonicalization/solvent33-catalog.json",
+      "sha256": "cde7ca2f0f0c1d1337ccac13d6d3977f402f43ea1a622311c9fb62805b432dde"
+    },
+    {
+      "bytes": 1732,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/independent-validation/attempts/20261102T103250.885428Z-73733/summary.json",
+      "path": "evidence/full-hybrid-inputs/historical/bonded-before-exception-fix/summary.json",
+      "sha256": "363a139d91d4c753234b74d9312b835b8718c15adc7a33041942d5e46ceccf06"
+    },
+    {
+      "bytes": 6639,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/independent-validation/attempts/20261102T103250.885428Z-73733/complex33/report.json",
+      "path": "evidence/full-hybrid-inputs/historical/bonded-before-exception-fix/complex33-report.json",
+      "sha256": "34803686fa5fba252f0836a37e570ec9954b5c193de398026426e9555d86f8bf"
+    },
+    {
+      "bytes": 6607,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/independent-validation/attempts/20261102T103250.885428Z-73733/solvent33/report.json",
+      "path": "evidence/full-hybrid-inputs/historical/bonded-before-exception-fix/solvent33-report.json",
+      "sha256": "6173e4a2492c3bc5f011f564aca09f992042ae03655c590e6dc756d5e3c7f580"
+    },
+    {
+      "bytes": 1398,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/independent-validation/attempts/preservation-20261102T104352.786646Z-75113/summary.json",
+      "path": "evidence/full-hybrid-inputs/historical/preservation-field-name-failure/summary.json",
+      "sha256": "2c02ef9f07ad0123076022218f0014194305bc407d6027e297c08f66922a67e1"
+    },
+    {
+      "bytes": 15699,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/independent-validation/attempts/preservation-20261102T104352.786646Z-75113/audit_source.py",
+      "path": "evidence/full-hybrid-inputs/historical/preservation-field-name-failure/executed-source.py",
+      "sha256": "1b869a30ad9b0ffaaebe12761a9a821e9df99bfaf70728fe070cdf9151766e65"
+    },
+    {
+      "bytes": 13050,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/independent-validation/attempts/preservation-20261102T104352.786646Z-75113/complex33/report.json",
+      "path": "evidence/full-hybrid-inputs/historical/preservation-field-name-failure/complex33-report.json",
+      "sha256": "d5d30767d348bc2ca5630eef28235c88a832a5b3eeb9c5277cba4e4eff877ed3"
+    },
+    {
+      "bytes": 12210,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/independent-validation/attempts/preservation-20261102T104352.786646Z-75113/solvent33/report.json",
+      "path": "evidence/full-hybrid-inputs/historical/preservation-field-name-failure/solvent33-report.json",
+      "sha256": "dd22103a08f42661f30430e7420c321a9d176955d5a479a98f5e8ad1f963e166"
+    },
+    {
+      "bytes": 7970,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/c4-endpoint/attempts/20261102T105654.820831Z/summary.json",
+      "path": "evidence/full-hybrid-inputs/historical/c4-template-assumption-failure/summary.json",
+      "sha256": "b3e76d740da638421f2998586d7d777953815d4ff80efbb7409789de1b0b6d37"
+    },
+    {
+      "bytes": 1239,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/c4-endpoint/attempts/20261102T105654.820831Z/policy.json",
+      "path": "evidence/full-hybrid-inputs/historical/c4-template-assumption-failure/policy.json",
+      "sha256": "24bd0bd24020d766b7b13858030d85392d930355673886b7940101700c1359de"
+    },
+    {
+      "bytes": 17571,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/c4-endpoint/attempts/20261102T105654.820831Z/executed-source.py",
+      "path": "evidence/full-hybrid-inputs/historical/c4-template-assumption-failure/executed-source.py",
+      "sha256": "796b985c87c2b75ffbe72ad33dd49451ac014fb38c4f577cd2ad73c99a5d7064"
+    },
+    {
+      "bytes": 7839,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/c4-endpoint/attempts/20261102T105820.156970Z/summary.json",
+      "path": "evidence/full-hybrid-inputs/historical/c4-diagonal-assumption-failure/summary.json",
+      "sha256": "91c1ac6c6e41a768320b39771706bac456d5c112dd1716da13679264969c0512"
+    },
+    {
+      "bytes": 1239,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/c4-endpoint/attempts/20261102T105820.156970Z/policy.json",
+      "path": "evidence/full-hybrid-inputs/historical/c4-diagonal-assumption-failure/policy.json",
+      "sha256": "24bd0bd24020d766b7b13858030d85392d930355673886b7940101700c1359de"
+    },
+    {
+      "bytes": 17781,
+      "copyMode": "exact bytes",
+      "originalSourcePath": "output/full-hybrid-inputs/c4-endpoint/attempts/20261102T105820.156970Z/executed-source.py",
+      "path": "evidence/full-hybrid-inputs/historical/c4-diagonal-assumption-failure/executed-source.py",
+      "sha256": "1234e5d54277ae8f4faaea14557c90be858804d9f6aa77005c52e679667d63ff"
+    }
+  ],
+  "exactSourceAdaptation": "No source bytes changed for checkpoint. Reproduction wrapper may make separately hashed relocated copies.",
+  "excludedLargeAssets": [
+    "raw streams",
+    "assembled parameters",
+    "native scientific inputs",
+    "NPZ force vectors",
+    "large C4 export map arrays",
+    "runtime binaries"
+  ],
+  "officialSourcePin": {
+    "gitRevision": "b399af4725573963b46d6c1083fdcf7a37615857",
+    "repository": "https://github.com/openmm/openmm",
+    "urls": [
+      "https://raw.githubusercontent.com/openmm/openmm/b399af4725573963b46d6c1083fdcf7a37615857/openmmapi/src/CustomNonbondedForceImpl.cpp",
+      "https://raw.githubusercontent.com/openmm/openmm/b399af4725573963b46d6c1083fdcf7a37615857/platforms/reference/src/ReferenceKernels.cpp"
+    ]
+  },
+  "productionReady": false,
+  "schema": "orvia.full-hybrid-exact-source-and-record-copies.v1",
+  "scientificAcceptance": false
+}

@@ -1,0 +1,95 @@
+{
+  "binaryDependenciesBundled": false,
+  "dependencies": {
+    "tools/envs/preparation/lib/libOpenMM.dylib": {
+      "bytes": 3783520,
+      "includedInGit": false,
+      "sha256": "e96c251825155e465eb5282a0962277d57f8fdfa3cd92c88f00418d7b731392e"
+    },
+    "tools/envs/preparation/lib/libOpenMMAmoeba.dylib": {
+      "bytes": 361056,
+      "includedInGit": false,
+      "sha256": "5b5c0e08cff7ea02d24f467e19d2047f5955ed21442ea9a76964e3a58f110891"
+    },
+    "tools/envs/preparation/lib/libOpenMMAmoebaOpenCL.dylib": {
+      "bytes": 914224,
+      "includedInGit": false,
+      "sha256": "f0f8aea8a30a6bfbc373d3e93cd9986b24abfefa126db9e237e92fc577a2b6c5"
+    },
+    "tools/envs/preparation/lib/libOpenMMAmoebaReference.dylib": {
+      "bytes": 573536,
+      "includedInGit": false,
+      "sha256": "9485016e4d3874a58ccafdf183a90a5359215b7c2f000d74a3ee840b42c75af3"
+    },
+    "tools/envs/preparation/lib/libOpenMMCPU.dylib": {
+      "bytes": 656096,
+      "includedInGit": false,
+      "sha256": "292c61cb6a4ea7857fd2b6e8c1bf81f71cdd7d472bf2b1e0e800efeacff2bb70"
+    },
+    "tools/envs/preparation/lib/libOpenMMDrude.dylib": {
+      "bytes": 155712,
+      "includedInGit": false,
+      "sha256": "4e9132b4f56f5cf2e27e9bded5a0e4907bcb4a581a8c9a93c4d6f83b71b2bd4e"
+    },
+    "tools/envs/preparation/lib/libOpenMMDrudeOpenCL.dylib": {
+      "bytes": 124816,
+      "includedInGit": false,
+      "sha256": "6755a159100fd1bfa6604c87a7b080ca14065720be6f24ff2974c719e08afa29"
+    },
+    "tools/envs/preparation/lib/libOpenMMDrudeReference.dylib": {
+      "bytes": 82192,
+      "includedInGit": false,
+      "sha256": "35a333da6972a112b9ebedf08177c6d8d6e011e7ac50e37ca8e1160b0bb3ae09"
+    },
+    "tools/envs/preparation/lib/libOpenMMOpenCL.dylib": {
+      "bytes": 3029872,
+      "includedInGit": false,
+      "sha256": "c2b5ad2d08b6b550d2b22129bd63cb61389ab5ed23578d80417a7087c795563b"
+    },
+    "tools/envs/preparation/lib/libOpenMMPME.dylib": {
+      "bytes": 342528,
+      "includedInGit": false,
+      "sha256": "7f01c9f9755753606c760a96a15c793068af19a78e4182d0f7ac7c2212b48a4e"
+    },
+    "tools/envs/preparation/lib/libOpenMMRPMD.dylib": {
+      "bytes": 90000,
+      "includedInGit": false,
+      "sha256": "8ab1a11635dd0a00c8c90cc842a655480c3e3761b1676b469b7b4facc576d5a1"
+    },
+    "tools/envs/preparation/lib/libOpenMMRPMDOpenCL.dylib": {
+      "bytes": 144960,
+      "includedInGit": false,
+      "sha256": "f0df22d65f9f19538bbabb76d3cdc852f7516e3ceec205c5b66961633bc24a1c"
+    },
+    "tools/envs/preparation/lib/libOpenMMRPMDReference.dylib": {
+      "bytes": 214304,
+      "includedInGit": false,
+      "sha256": "08898034808df30f6c9961c0cc9ddb36d85b5eb7b3e93a74fdfea0cce47d17c7"
+    },
+    "tools/envs/preparation/lib/python3.12/site-packages/openmm/_openmm.cpython-312-darwin.so": {
+      "bytes": 3504048,
+      "includedInGit": false,
+      "sha256": "62ee6dd2edb4c69bacfab0d75a301770374334e4e15509d5313e7af8e277f04d"
+    },
+    "tools/envs/preparation/lib/python3.12/site-packages/openmm/app/internal/amber_file_parser.py": {
+      "bytes": 72488,
+      "includedInGit": false,
+      "sha256": "1e8a713cb6f641a9ece150973b6841be27463a971fd830200590d56a165a5a04"
+    },
+    "tools/envs/preparation/lib/python3.12/site-packages/openmm/openmm.py": {
+      "bytes": 937166,
+      "includedInGit": false,
+      "sha256": "5b67ec390bc0ced1cbfaad0f21168422ef8274c37caeb89c9da7347822b6f72d"
+    }
+  },
+  "fullVersion": "8.6.1.dev-b399af4",
+  "gitRevision": "b399af4725573963b46d6c1083fdcf7a37615857",
+  "machine": "arm64",
+  "nativeEndpointPlatform": "OpenCL single",
+  "openmmVersion": "8.6.1",
+  "productionReady": false,
+  "python": "3.12.16",
+  "schema": "orvia.full-hybrid-runtime-provenance.v1",
+  "scientificAcceptance": false,
+  "smallFixturePlatform": "Reference"
+}
