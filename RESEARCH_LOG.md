@@ -46,4 +46,10 @@ A local unsigned-package tool binds a supplied public operator/sender, nonce, pr
 
 ## Open questions
 
-The experiment lacks complete reviewed molecular systems and full-system acceptance of the connected development pipeline. No drug-binding free-energy result has been produced. Actual complete-campaign cost and duration remain unmeasured. All 64 production instances remain planned; mainnet readiness is false.
+The experiment lacks complete reviewed molecular systems and full-system acceptance of the connected development pipeline. No drug-binding free-energy result has been produced. Actual complete-campaign cost and duration remain unmeasured. The active target is 256 actual contracts; none has been deployed to mainnet and readiness remains false.
+
+## 2 November 2026 — 256-address constrained and spatial prototype
+
+A local fixture deployed 32 core contracts plus 224 fixed banks and verified all 256 distinct runtime identities, owner/configuration controls and absence of additional child creation. A constrained step and authenticated sample ran through spatial force evaluation. A separate preregistered two-state campaign completed chronology, sample selection, MBAR and accepted overlap/ESS diagnostics. Three repeat pairs were registered, but the full three-pair aggregation was not rerun in this fixture. Raw C4 remains standalone pending alchemical activity/coupling and long-range-energy validation. [Exact scope](docs/COMPLETE_256_PROTOTYPE.md).
+
+The local core/bank creation receipts total 183,998,164 gas. A 38-request read-only Robinhood probe returned exact runtime bytes for the 40,945-byte pipeline and 34,449-byte Hamiltonian at block `0x635744a`; no funds were spent or contracts persistently deployed. [Probe evidence](docs/TARGET_256_CREATION_PROBE.md). These focused passes do not replace the incomplete complete-suite summary or scientific readiness gate.
