@@ -36,6 +36,14 @@ The source changed after the earlier source-bound component checkpoint, includin
 
 The separate mainnet-lite candidate records operator-signed artifact hashes. It verifies an attestation, not molecular computation, and no accepted complete GPU molecular result has been produced for it. Its mixed target-creation/local-anchor gas illustration does not guarantee a $200 all-in budget. No mainnet transaction was sent.
 
+## 2 November 2026 — lightweight anchor controls and target fee rehearsal
+
+The separate result anchor now rejects malleable high-s signatures and documents its immutable EOA publisher and repeatable-event semantics. Its focused local validator passed 38 checks across authorization, all signed fields, domain separation, malformed signatures and exact events. This is component evidence, not scientific or whole-project acceptance.
+
+The updated read-only fee rehearsal checks exact constructor runtime plus valid and deliberately altered report calls on Robinhood Chain, and obtains both creation and report estimates from the target provider. The report call uses an ephemeral code override. Source/script/dependency/block bindings and fail-closed evidence replace the earlier mixed local/target illustration. The $200 network budget is conditional on an explicit $10,000/ETH ceiling and covers only deployment and one report, with refreshed real-wallet estimates required. No target transaction was sent.
+
+A local unsigned-package tool binds a supplied public operator/sender, nonce, predicted address, runtime and short-lived fee envelope. It requires matching focused validation and has no broadcast method. Full scientific acceptance and the complete engine validation remain pending.
+
 ## Open questions
 
 The experiment lacks complete reviewed molecular systems and full-system acceptance of the connected development pipeline. No drug-binding free-energy result has been produced. Actual complete-campaign cost and duration remain unmeasured. All 64 production instances remain planned; mainnet readiness is false.
