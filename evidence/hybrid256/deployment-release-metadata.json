@@ -1,0 +1,18 @@
+{
+  "release": "/Users/abhijith/Documents/ChatGPT/AURA/output/hybrid256-release",
+  "plan_sha256": "814e9c0aced4f8c6ef24bf4ca7fe5d423ef8bb4e4d54216a3dea02484958b50c",
+  "manifest_sha256": "825384ac2ad2e81d99de42e9b355aa739542bdf5f4228d304aed740c57848205",
+  "source_files": 9,
+  "release_files": 19,
+  "funding_with_25_percent_gas_margin_wei": "5880217085640000",
+  "funding_with_25_percent_gas_margin_eth": "0.00588021708564",
+  "launcher_sha256": "c9bdf01ed5c8264a146796789d11227def1e47a682e378aba9c0bc97ae2b3d53",
+  "archive": "/Users/abhijith/Documents/ChatGPT/AURA/output/ORVIA-Hybrid256-Release.tar.gz",
+  "archive_bytes": 924567,
+  "archive_sha256": "2e940e52a15cd79dc010658b36b85468f9730c7fd27075d68ba322e4b1cc16f1",
+  "verification_smoke_passed": true,
+  "tampered_quote_rejected": true,
+  "invalid_argument_rejected_before_deploy": true,
+  "rpc_url_absent": true,
+  "public_transactions_sent": 0
+}
