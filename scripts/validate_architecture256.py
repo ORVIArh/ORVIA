@@ -25,8 +25,12 @@ def validate(model):
     check(len(set(ids)) == len(ids), 'duplicate core slot')
     check(all(entry.get('purpose') and entry.get('contract') for entry in core), 'missing core responsibility')
     connected = [entry for entry in core if entry.get('status') == 'candidate_not_production_validated']
-    check(len(connected) == 24, 'connected prototype inventory changed; reconcile the allocation')
-    for entry in connected:
+    standalone = [entry for entry in core if entry.get('status') == 'raw_primitive_validated_alchemical_integration_required']
+    check(len(connected) == 31 and [entry['id'] for entry in standalone] == ['K16'],
+          'expected 31 molecular-path candidates plus the standalone C4 primitive')
+    check(model.get('molecularPathCoreCount') == len(connected) and model.get('standaloneComponentSlots') == ['K16'],
+          'component integration summary is inconsistent')
+    for entry in core:
         file = (ROOT / entry.get('source', '')).resolve()
         check(file.is_relative_to(ROOT) and file.is_file(), f"missing candidate source for {entry['id']}")
     expected = [('D', 'C02', 96), ('W', 'C05', 64), ('F', 'C06', 64)]
@@ -35,12 +39,44 @@ def validate(model):
     check(all(p.get('routerSlot') in ids for p in pools), 'bank router must itself be counted')
     count = len(core) + sum(p.get('count', 0) for p in pools)
     check(count == 256, 'actual core plus child-bank total differs from 256')
-    check(model.get('connectedPrototypeExpectedAddressCount') == len(connected) + 224,
-          'prototype count must include every child bank')
+    check(model.get('prototypeInventoryCoreCount') == len(core)
+          and model.get('prototypeInventoryAddressCount') == len(core) + 224,
+          'prototype inventory must include every core component and child bank')
     check(model.get('counts') == {'core': 32, 'inputBanks': 96, 'pipelineStateBanks': 64,
           'hamiltonianOutputBanks': 64, 'total': 256}, 'count summary is inconsistent')
     check(model.get('readyForMainnet') is False and model.get('scientificModelAccepted') is False,
           'allocation validation cannot promote readiness or scientific acceptance')
+    check(model.get('physicalModelFullyIntegrated') is False, 'C4 physical composition remains incomplete')
+    # Count and source claims require actual deployment and integration evidence.
+    try:
+        report = json.loads((ROOT / model['validatedLocalReport']).read_text())
+        inventory_bytes = (ROOT / model['deploymentInventory']).read_bytes()
+        inventory = json.loads(inventory_bytes)
+        check(report.get('passed') is True and report.get('actualLocalAddresses') == 256,
+              'missing passing 256-address local integration report')
+        check(report.get('deploymentInventorySha256') == hashlib.sha256(inventory_bytes).hexdigest(),
+              'integration report does not bind the deployment inventory')
+        check(report.get('noChildContractsCreatedDuringRuns') is True, 'unbounded child creation not ruled out')
+        check(report.get('rawC4', {}).get('standaloneOnly') is True
+              and report.get('rawC4', {}).get('integratedAlchemicalC4') is False,
+              'C4 integration scope must remain explicit')
+        deployed = inventory.get('core', [])
+        banks = inventory.get('banks', [])
+        check(len(deployed) == 32 and len(banks) == 224, 'wrong deployed core/bank totals')
+        addresses = [row['address'].lower() for row in deployed + banks]
+        check(len(addresses) == len(set(addresses)) == 256, 'deployed addresses are not 256 distinct contracts')
+        check(sorted(row['contract'] for row in deployed) == sorted(entry['contract'] for entry in core),
+              'deployed contract responsibilities do not match the architecture')
+        for name, expected_count in [('input', 96), ('pipeline', 64), ('hamiltonian', 64)]:
+            check(sorted(row['index'] for row in banks if row['pool'] == name) == list(range(expected_count)),
+                  f'incomplete {name} bank inventory')
+        for file, digest in report['compilation']['sourceSha256'].items():
+            source = (ROOT / file).resolve()
+            check(source.is_relative_to(ROOT) and source.is_file()
+                  and hashlib.sha256(source.read_bytes()).hexdigest() == digest,
+                  f'compiled source changed since 256-address validation: {file}')
+    except (KeyError, OSError, ValueError, TypeError) as error:
+        errors.append(f'256-address evidence unavailable or malformed: {error}')
     return errors
 
 
@@ -54,6 +90,6 @@ if __name__ == '__main__':
     if args.require_ready:
         errors.append('ORVIA-256 still requires full core integration, scientific acceptance and complete deployment evidence.')
     print(json.dumps({'designValid': not validate(model), 'readyForMainnet': False,
-          'targetActualContracts': 256, 'prototypeExpectedContracts': 248,
+          'targetActualContracts': 256, 'prototypeInventoryContracts': model.get('prototypeInventoryAddressCount'),
           'architectureSha256': hashlib.sha256(raw).hexdigest(), 'errors': errors}, indent=2))
     raise SystemExit(2 if errors else 0)
