@@ -1,5 +1,7 @@
 # Hybrid GPU result coordination
 
+**Deployed on Robinhood mainnet (4663):** coordinator `0x3B188B4c5B76b009d80455D3bbB7597983E390f0` plus 255 registered report shards. All 33 transactions confirmed; the full infrastructure fee was **0.004612876889674 ETH**. [Verified deployment and address inventory](../../evidence/hybrid256/MAINNET_DEPLOYMENT.md).
+
 This is a new hybrid architecture. The existing 32-core/224-bank molecular implementation remains unchanged. The hybrid deployment is **one `ORVIAHybridCoordinator` plus 255 `ORVIAReportShard` instances: exactly 256 addresses**. The coordinator is also the only factory; there is no extra implementation, proxy or library deployment. Shards are created in owner-authorized batches of 1–8 using CREATE2, and every lifecycle operation requires all 255 to exist.
 
 GPU computation is trusted operator work. EIP-712 verifies who attested to a result and binds its identities and progression; it does not prove that OpenMM ran correctly, that the inputs are scientifically accepted, or that a claimed validation flag is true. Full input/checkpoint/result files must remain available separately. Their on-chain hashes are not a data-availability service.
