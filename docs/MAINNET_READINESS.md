@@ -1,10 +1,18 @@
 # ORVIA mainnet readiness and deployment rehearsal
 
+## Current GPU hybrid release
+
+The active path is one coordinator plus 255 report shards, with external GPU calculations. [Hybrid evidence](../evidence/hybrid256/README.md) records the exact 256-contract tests, successful strict H200 endpoint repair, and scope limits. The dedicated planner rehearses complete constructor storage, runtime bindings and all 33 transactions; the secured local operator supports encrypted-wallet signing and resumable journals. A read-only mainnet quote estimated 0.00470417364414 ETH for all infrastructure transactions at its recorded price. Full scientific-model acceptance and campaign cost remain separate. No transaction has been broadcast by this preparation.
+
+The material below documents the earlier fully on-chain architecture and its legacy gates. It remains reproducibility evidence for that path; use the dedicated hybrid release and its source-bound checks for the current deployment.
+
+## Historical fully on-chain release state
+
 **Current release state: blocked for a complete ORVIA-001 mainnet launch. No Robinhood transaction has been broadcast.** The deployment tools distinguish a reproducible local fixture deployment from the complete scientific production system. New numerical modules do not automatically clear prepared-input, integration, size, cost or target-chain validation requirements.
 
 **Deployment policy: mainnet only (chain 4663).** Validation uses local EVMs, mainnet-pinned local forks and read-only mainnet calls. No public testnet deployment is planned or required. The user's removal of the funding cap does not waive scientific, source-integrity or full-workload acceptance.
 
-The active design is [ORVIA-256](ARCHITECTURE_256.md): 32 core components and 224 fixed storage banks. Its [complete local prototype](COMPLETE_256_PROTOTYPE.md) has passed, and the two large coordinator constructors returned exact runtime bytes in [read-only mainnet calls](TARGET_256_CREATION_PROBE.md). The raw C4 component remains outside the alchemical Hamiltonian, and full-model scientific and workload acceptance remain incomplete. The legacy rehearsal and 64-slot gate described below are retained for reproducibility; they do not authorize the active 256-contract release.
+The earlier fully on-chain design is [ORVIA-256](ARCHITECTURE_256.md): 32 core components and 224 fixed storage banks. Its [complete local prototype](COMPLETE_256_PROTOTYPE.md) has passed, and the two large coordinator constructors returned exact runtime bytes in [read-only mainnet calls](TARGET_256_CREATION_PROBE.md). The raw C4 component remains outside the alchemical Hamiltonian, and full-model scientific and workload acceptance remain incomplete. The legacy rehearsal and 64-slot gate described below are retained for reproducibility; they do not authorize the active 256-contract release.
 
 The [256-contract unsigned release adapter](RELEASE_256_PLAN.md) now derives the exact core/bank addresses, constructor runtime identities and bounded infrastructure calls from a declared public sender and nonce. It leaves unselected scientific protocol and input commitments unresolved, reports `prepared-but-blocked`, and has no signing or broadcast path. Its offline constructor witnesses do not rehearse constructor storage or complete initialization.
 
