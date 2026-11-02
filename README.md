@@ -6,7 +6,7 @@ Open molecular research on Robinhood Chain. Our goal is to make scientific calcu
 
 [Progress](STATUS.md) · [Roadmap](ROADMAP.md) · [Research log](RESEARCH_LOG.md) · [Architecture](docs/ARCHITECTURE.md) · [Release requirements](docs/PRODUCTION_GAPS.md)
 
-**Development checkpoint v0.5.1. Mainnet readiness remains false.** The original v0.5.0 archive was recovered and every packaged payload hash verified on 2 November 2026. Changes in this checkpoint receive a new source-bound validation run; the authoritative result is [validation_summary.json](reports/validation_summary.json).
+**v0.5.1 development checkpoint: 212 Node/EVM tests and 63 Python references passed.** All nine check groups and source/evidence integrity verification passed. [Validation evidence](reports/validation_summary.json). Mainnet readiness remains false.
 
 ORVIA targets fully on-chain molecular calculations on Robinhood Chain. The proposed first experiment compares compound 17 with aficamten in a declared cardiac-myosin state. Registered molecular inputs, numerical work, simulation state and analysis are intended to remain in contracts. Permissionless bounded transactions advance work; swap/pool triggers are deferred.
 
@@ -31,13 +31,13 @@ See [the manifest](data/contract_manifest.json) for exact source names and assoc
 
 ## Reproduce the checks
 
-The recovered v0.5.0 baseline recorded **205 Node/EVM tests and 63 independent Python reference tests passing** at `2026-11-01T20:38:21.755Z`. All 256 archived payloads matched their packaged SHA-256 hashes when recovered. Those are historical baseline results. Current-version results, exact inputs, compiler outputs, nine logs and generated evidence are bound by [validation_summary.json](reports/validation_summary.json); the separate mainnet gate remains false.
+The complete v0.5.1 run finished at `2026-11-02T04:59:25.175Z`: **212 Node/EVM tests and 63 independent Python reference tests passed**, with zero failed, cancelled or skipped Node tests. All nine groups and final integrity verification passed. The summary binds 159 inputs, two compiler outputs, 36 numerical/deployment reports and nine logs. [The research log](RESEARCH_LOG.md) preserves the recovered v0.5.0 baseline separately.
 
-Use Node.js/npm and Python 3. Dependencies are pinned in `package-lock.json` and `requirements-research.txt`.
+Use Node.js/npm and Python 3.12 for the pinned research dependencies. This continuation was tested with Node.js 24.22.1 and CPython 3.12.14. Dependencies are pinned in `package-lock.json` and `requirements-research.txt`.
 
 ```bash
 npm ci
-python3 -m venv .venv-research
+python3.12 -m venv .venv-research
 .venv-research/bin/python -m pip install -r requirements-research.txt
 ORVIA_RESEARCH_PYTHON=.venv-research/bin/python npm run check
 ```
@@ -61,7 +61,7 @@ Most dynamics paths are capped at 1,024 atoms and 4,096 steps. Full solvated myo
 
 The targeted neighbor suite passed **11 tests**. Its identical four-atom, three-step trajectory used **1.92% less advancement gas** with inline pair arithmetic (65,446,162 versus 66,727,850 gas). That complete-fixture result is distinct from the standalone pair microbenchmark's 51–53% saving. Neither is a measured full-myosin workload or mainnet fee estimate; the current complete source-bound suite is recorded separately in the validation summary.
 
-The target is Robinhood mainnet chain 4663. A provider listed in Robinhood's documentation now passes the [read-only network preflight](reports/mainnet_preflight.json). A [block-pinned local state-fork smoke check](docs/FORK_SMOKE.md) exercises two numerical kernels. It uses Ganache's Ethereum Shanghai rules and does not validate Robinhood Nitro execution rules, full molecular production, network throughput or mainnet fees. No signing key is included or requested.
+The target is Robinhood mainnet chain 4663. A provider listed in Robinhood's documentation now passes the [read-only network preflight](reports/mainnet_preflight.json). A [block-pinned local state-fork smoke check](docs/FORK_SMOKE.md) exercises two numerical kernels. It uses Ganache's Ethereum Shanghai rules and does not validate Robinhood Nitro execution rules, full molecular production, network throughput or mainnet fees. A separate [target-node read-only probe](docs/TARGET_NODE_EXECUTION.md) also returned the exact runtimes and numerical bytes for two kernels through the Robinhood provider. This is supplementary kernel evidence, outside the offline suite, and does not validate the full molecular pipeline or transaction fees. No signing key is included or requested.
 
 ## Detailed evidence
 

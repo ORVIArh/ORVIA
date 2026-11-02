@@ -20,6 +20,14 @@ Entries distinguish measured work, proposals and unresolved questions. Numerical
 - Recorded a separately named, **unapproved** [ADP/phosphate candidate protocol](docs/PROPOSED_ADPPI_PROTOCOL_v0_1.md). The original vanadate experiment and its failed readiness status remain unchanged.
 - Current full-suite outcome is recorded only in [validation_summary.json](reports/validation_summary.json). A checkpoint with an incomplete or failed summary must not be described as fully validated.
 
+## 2 November 2026 — supplementary target-node execution
+
+A separately packaged read-only probe source-compiled two kernels and executed contract creation and exact scalar/pair calls through the Robinhood provider at pinned block `0x6322b6e`. All runtime and numerical bytes matched; all 14 remote requests used the hardcoded read-method allowlist. Zero transactions were sent. The portable harness/report/manifest companion is outside the offline complete suite. [Methods, trust and limitations](docs/TARGET_NODE_EXECUTION.md). This does not clear full-system, transaction, gas or scientific acceptance.
+
+## 2 November 2026 — complete v0.5.1 validation
+
+The complete v0.5.1 run finished at `2026-11-02T04:59:25.175Z`: **212 Node/EVM tests and 63 Python reference tests passed**, with zero failed, cancelled or skipped Node tests. All nine check groups and the final integrity verifier passed. The summary binds 159 input files, two compiler outputs, 36 regenerated reports and nine logs. Mainnet readiness remains false.
+
 ## Open questions
 
 The original experiment lacks complete reviewed molecular systems and a single full-system sampling pipeline. No drug-binding free-energy result has been produced. Actual full-run cost and duration remain unmeasured. All 64 production instances remain planned; mainnet readiness is false.
