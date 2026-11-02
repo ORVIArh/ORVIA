@@ -7,9 +7,12 @@ import { CHECK_NAMES, INVENTORY_SCOPE, inputInventory, buildInventory, evidenceI
 export function defaultChecks(root = process.cwd()) {
   const python = process.env.CODEX_PRIMARY_RUNTIME_PYTHON || 'python3';
   const researchPython = process.env.ORVIA_RESEARCH_PYTHON || python;
+  const concurrency = process.env.ORVIA_TEST_CONCURRENCY || '3';
+  if (!/^(?:[1-9]|[12][0-9]|3[0-2])$/.test(concurrency))
+    throw new Error('ORVIA_TEST_CONCURRENCY must be an integer from 1 to 32.');
   return [
     ['compile', process.execPath, ['scripts/compile.mjs']],
-    ['evm_components', process.execPath, ['--test', '--test-concurrency=3', '--test-reporter=tap', ...fs.readdirSync(path.join(root, 'test')).filter(x => x.endsWith('.test.mjs')).sort().map(x => `test/${x}`)]],
+    ['evm_components', process.execPath, ['--test', `--test-concurrency=${concurrency}`, '--test-reporter=tap', ...fs.readdirSync(path.join(root, 'test')).filter(x => x.endsWith('.test.mjs')).sort().map(x => `test/${x}`)]],
     ['reference_oracle', researchPython, ['-m', 'unittest', 'discover', '-s', 'reference', '-p', 'test_*.py']],
     ['architecture_manifest', python, ['scripts/validate_manifest.py', '--self-test']],
     ['structure_audit', python, ['scripts/audit_structure.py', '--check']],
@@ -32,6 +35,7 @@ export function runChecks({root = process.cwd(), ...options} = {}) {
   try {
     if (Object.keys(options).length) throw new Error('Validation commands are fixed; injected check commands are not accepted.');
     const checks = defaultChecks(root);
+    summary.evmTestConcurrency = Number(checks[1][2].find(arg => arg.startsWith('--test-concurrency=')).split('=')[1]);
     if (canonical(checks.map(x => x[0])) !== canonical(CHECK_NAMES)) throw new Error('Expected exactly nine validation groups.');
     summary.inputInventory = inputInventory(root);
     summary.inputInventorySha256 = sha256(canonical(summary.inputInventory));save();
