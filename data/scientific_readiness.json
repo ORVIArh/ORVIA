@@ -1,0 +1,119 @@
+{
+  "schema_version": "orvia.scientific-readiness.v1",
+  "as_of_date": "2026-11-02",
+  "experiment": "ORVIA-001",
+  "status": "SCIENTIFIC_INPUTS_BLOCKED",
+  "ready_for_orvia_001_registration": false,
+  "source_integrity_and_mapping_checks": "PASS",
+  "external_model_inputs_only": true,
+  "production_result_computed_offchain": false,
+  "resolved_here": [
+    "Unique 24-common-heavy-atom A/B correspondence with preserved R stereochemistry.",
+    "Source-name mapping from both published graphs to assembly1 ligand coordinates.",
+    "Complete export of selected 6032 existing heavy-atom coordinates in original angstrom strings and exact decimal nanometers."
+  ],
+  "outputs": {
+    "data/prepared_candidate/ligand_atom_map.json": {
+      "bytes": 24373,
+      "sha256": "a62f7ad7d43202f8aff1d1a8624d7e2daf5dc8d72be4974e16f96a9b4423a21d"
+    },
+    "data/prepared_candidate/selected_heavy_coordinates.json": {
+      "bytes": 2939032,
+      "sha256": "47340aab89390e94a20cadf4f73708fb43695fc412571f0704bfb4734015b627"
+    },
+    "data/prepared_candidate/compound17_heavy_pose_candidate.sdf": {
+      "bytes": 2372,
+      "sha256": "278e0b4068bfb654e2e823109ff25837004d1acbbf76eac5bca78338b9c6706c"
+    },
+    "data/prepared_candidate/aficamten_heavy_source_pose.sdf": {
+      "bytes": 2456,
+      "sha256": "2d479179e00cfa1c01a9424f85a6bb26554a7f24834499aded48c411c41c7636"
+    }
+  },
+  "source_files": {
+    "data/source/9F6C.cif": "9b7f16917441dbb4afe4bca3b3ee2866878ecc97f566fba738f33490572de3aa",
+    "data/source/6I6.cif": "2fbc550eabade8660ade0c020cd4761cd8e7135c23fae61f819ece1ab808757f",
+    "data/source/compound17_pair_rows.json": "c34d542efb07a4fb7d9e6eccbe808146a8f3e1c064c2db1ef563e04f70d5dd99",
+    "data/preparation_decisions.json": "6471fba4e8de03c8e7ab1a37c70c7911170d20f6b961b0bec4aa1a3e2b2874b3"
+  },
+  "evidence_review": [
+    {
+      "id": "aficamten_structure",
+      "doi": "10.1038/s44161-024-00505-0",
+      "url": "https://www.nature.com/articles/s44161-024-00505-0",
+      "finding": "The primary aficamten structure paper deposits atomic model 9F6C. Its reported complex contains Mg/ADP/vanadate. A parameterized aficamten/compound17 RBFE system was not located in the reviewed availability statement.",
+      "boundary": "The availability statement is not proof that no relevant parameter set exists elsewhere."
+    },
+    {
+      "id": "related_charmm_myosin",
+      "doi": "10.1038/s41467-024-47587-9",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11161628/",
+      "finding": "Related OM/mavacamten cardiac-myosin simulations use CHARMM36m and build Mg/ADP/phosphate from a Mg/ADP/vanadate structure.",
+      "boundary": "Those simulations concern different ligands and phosphate, not a validated aficamten/compound17 vanadate model."
+    },
+    {
+      "id": "related_amber_myosin",
+      "doi": "10.3390/ijms251910425",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11477208/",
+      "finding": "Related OM simulations model missing loops, replace vanadate with H2PO4, convert trimethyllysine to lysine, and use AMBER ff14SB. Their trajectories are described as available upon request.",
+      "boundary": "These substitutions cannot silently preserve ORVIA-001 deposited chemistry; the reported trajectory availability is not an open downloadable prepared ORVIA input."
+    },
+    {
+      "id": "ptm_parameters",
+      "doi": "10.1021/ct400556v",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3904396/",
+      "finding": "Forcefield_PTM supplies published trimethyllysine parameters compatible with AMBER ff03, among other modifications.",
+      "boundary": "Availability of a residue parameter set does not establish compatibility with a different chosen protein force field or validate the assembled myosin system."
+    },
+    {
+      "id": "charmm_parameters",
+      "url": "https://mackerell.umaryland.edu/charmm_ff.shtml",
+      "finding": "The force-field authors distribute versioned CHARMM topology and parameter files.",
+      "boundary": "No CHARMM release is silently adopted here; complete topology/parameter coverage, functional forms and license/provenance must be pinned before export."
+    }
+  ],
+  "search_scope": [
+    "Primary aficamten structure/discovery evidence and their availability statements.",
+    "Related published cardiac-myosin molecular dynamics preparations.",
+    "Published trimethyllysine force fields and original force-field distribution."
+  ],
+  "scientific_input_blockers": [
+    {
+      "id": "missing_structure",
+      "status": "UNRESOLVED",
+      "required": "Explicit reviewed model for 65 missing residues, TRP130 CG and termini, retaining provenance and validation for all introduced coordinates."
+    },
+    {
+      "id": "cofactor_model",
+      "status": "UNRESOLVED",
+      "required": "Declared vanadate species/charge/coordination and compatible Mg/ADP/vanadate parameters with validation. No silent phosphate substitution or free vanadium-ion analogy."
+    },
+    {
+      "id": "complete_force_field",
+      "status": "UNRESOLVED",
+      "required": "Exact compatible protein/M3L/ligand/cofactor/water/ion force-field files and charges, all bonded terms/exceptions and supported functional forms; independent energy/force comparisons."
+    },
+    {
+      "id": "ligand_microstates_and_hybrid",
+      "status": "UNRESOLVED",
+      "required": "Simulation microstates, explicit hydrogens and their map, parameterized A/B endpoints, compound17 pose validation, hybrid topology and soft-core specification."
+    },
+    {
+      "id": "solvated_legs",
+      "status": "UNRESOLVED",
+      "required": "Complete complex and solvent legs with registered water/ion model, box, concentrations, temperature, pressure and canonical atom order."
+    },
+    {
+      "id": "sampling_and_acceptance",
+      "status": "UNRESOLVED",
+      "required": "Registered minimization/equilibration, lambda states, repeats/seeds, sample retention, overlap/decorrelation/uncertainty and failure/extension criteria; engine must implement every selected operation."
+    }
+  ],
+  "experimental_claim_limit": {
+    "matched_affinity_pair_available": false,
+    "required_for_deploying_research_software": false,
+    "required_for_claiming_experimentally_validated_affinity": true,
+    "note": "A research model can report its prediction with model uncertainty; functional ATPase IC50 cannot be relabeled Kd. Mainnet deployment alone cannot establish biological validity."
+  },
+  "engineering_and_chain_readiness": "Owned by the deployment/engine readiness reports; this audit cannot clear those gates."
+}

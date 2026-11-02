@@ -1,0 +1,2818 @@
+{
+  "schema_version": 1,
+  "project": "ORVIA",
+  "architecture_version": "0.5.1",
+  "as_of_date": "2026-11-02",
+  "scope": "stage_1_direct_advancement",
+  "status": "design_not_deployed",
+  "target": {
+    "name": "Robinhood Chain mainnet",
+    "chain_id": 4663,
+    "native_gas_token": "ETH",
+    "documented_runtime_limit": "96 KB",
+    "documented_initcode_limit": "192 KB",
+    "planning_runtime_limit_bytes": 98304,
+    "planning_initcode_limit_bytes": 196608,
+    "limit_interpretation": "Planning conversion treats KB as KiB; verify exact chain configuration and deployment simulation before broadcasting.",
+    "source": "https://docs.robinhood.com/chain/differences-from-ethereum/"
+  },
+  "requirements": {
+    "minimum_production_contracts": 50,
+    "planned_production_instances": 64,
+    "production_scientific_execution": "entirely_onchain_from_registered_inputs",
+    "swap_integration": "deferred",
+    "token_deployment": "not_required",
+    "compiled_production_system": false,
+    "scientifically_validated": false
+  },
+  "category_counts": {
+    "control": 4,
+    "compute": 24,
+    "input_storage": 16,
+    "working_storage": 16,
+    "analysis": 4
+  },
+  "counting_policy": "Each slot is one intended deployed contract instance. Reusable storage-page code can instantiate many addresses. Internal Solidity libraries are not additional deployed contracts. Repeats/lambda windows are state records, not deployment counts. Planned semantic partitions are not evidence that the dataset requires 64 contracts.",
+  "dependency_policy": {
+    "deployment_dependencies": "Must exist before this instance is deployed or linked. This graph must be acyclic.",
+    "configuration_dependencies": "Bound and validated before experiment freeze; may point to instances deployed later. The coordinator is deployed before writer-restricted pages and is configured with them once."
+  },
+  "experimental_source_candidates": [
+    {
+      "path": "contracts/core/ExperimentRegistry.sol",
+      "related_slots": [
+        "C01"
+      ],
+      "scope": "Compiled experimental registry for protocol/module identity and hashes; complete production protocol and scientific-input freeze semantics still require implementation and validation."
+    },
+    {
+      "path": "contracts/core/DatasetCatalog.sol",
+      "related_slots": [
+        "C02"
+      ],
+      "scope": "Experimental trusted-page factory and immutable ordered registry for initial position/bond streams. DynamicsDataset extends these streams with additional finite-system inputs; complete production scientific schemas remain unfinished."
+    },
+    {
+      "path": "contracts/core/DynamicsDataset.sol",
+      "related_slots": [
+        "C02"
+      ],
+      "scope": "Experimental trusted-page factory and frozen extension of a base coordinate/bond dataset with masses, initial velocities, harmonic angles, periodic torsions and explicitly listed direct pairs. Commits canonical schemas and exact coverage; physical domains are checked by the consuming coordinator."
+    },
+    {
+      "path": "contracts/core/DataPage.sol",
+      "related_slots": [
+        "D05",
+        "D06",
+        "D07",
+        "D08",
+        "D10",
+        "D13"
+      ],
+      "scope": "Bounded append-only pages with irreversible sealing, used for current development schemas covering coordinates, masses/velocities, bonds, angles, proper torsions and explicit direct pairs. Reusable page instances are not completed implementations of all production input roles."
+    },
+    {
+      "path": "contracts/core/ResumableBondEngine.sol",
+      "related_slots": [
+        "C03"
+      ],
+      "scope": "Compiled legacy harmonic-bond checkpoint fixture storing operands internally; alternative experimental path to PagedBondCoordinator, not an additional completed production slot or a dynamics/free-energy engine."
+    },
+    {
+      "path": "contracts/core/PagedBondCoordinator.sol",
+      "related_slots": [
+        "C03"
+      ],
+      "scope": "Compiled paged harmonic-bond fixture with resumable atom/bond validation, force accumulation and output sealing. Reads DatasetCatalog pages, writes WorkingStatePage namespaces, and permits at most 4096 atoms/16384 bonds. Isolated Lennard-Jones and Coulomb pair kernels are not wired into this coordinator; no dynamics integration."
+    },
+    {
+      "path": "contracts/core/DynamicsCoordinator.sol",
+      "related_slots": [
+        "C03",
+        "C04"
+      ],
+      "scope": "Experimental finite-system velocity-Verlet coordinator using frozen paged data, all implemented bonded and listed direct-pair kernels, deterministic staged execution and double-buffered state. Supports resumable timesteps and completion barriers; no periodic box, PME, thermostat, constraints, replica/alchemical sampling or full protein claim. This and the two harmonic coordinators are alternative experimental implementations, not three completed production slots."
+    },
+    {
+      "path": "contracts/core/WorkingStatePage.sol",
+      "related_slots": [
+        "W01",
+        "W02",
+        "W03",
+        "W04",
+        "W05",
+        "W06"
+      ],
+      "scope": "Generic immutable-writer namespaces used for force/energy fixtures and the dynamics coordinator double-buffered positions, velocities, forces and potential energy. The dynamics writer imposes timestep barriers; this does not complete the remaining production working-state roles."
+    },
+    {
+      "path": "contracts/math/FloatMath.sol",
+      "related_slots": [
+        "K01"
+      ],
+      "scope": "Standalone binary128-format arithmetic wrapper containing the pinned internal ABDK library. The internal library is not an additional deployment; extreme-domain and propagated-error budgets for production remain unresolved."
+    },
+    {
+      "path": "contracts/math/ElementaryMath.sol",
+      "related_slots": [
+        "K02"
+      ],
+      "scope": "Bounded deterministic binary128-format atan2, acos and sine/cosine functions for angular kernels, using documented polynomial/range-reduction semantics. Does not provide a complete correctly-rounded elementary-function suite, production exp/log or a propagated MD error budget."
+    },
+    {
+      "path": "contracts/kernels/HarmonicBondKernel.sol",
+      "related_slots": [
+        "K05"
+      ],
+      "scope": "Harmonic-bond energy/force kernel connected to both legacy harmonic fixtures and DynamicsCoordinator; primitive validation does not establish a full solvated-protein force field."
+    },
+    {
+      "path": "contracts/kernels/HarmonicAngleKernel.sol",
+      "related_slots": [
+        "K06"
+      ],
+      "scope": "Standard harmonic-angle energy and three-atom analytic forces, connected to DynamicsCoordinator with declared finite/noncollinear geometry domains and registered parameters; not a full protein force-field validation."
+    },
+    {
+      "path": "contracts/kernels/PeriodicTorsionKernel.sol",
+      "related_slots": [
+        "K07"
+      ],
+      "scope": "Periodic proper-torsion energy and four-atom analytic forces using the declared signed dihedral convention, connected to DynamicsCoordinator. Does not implement every production improper/CMAP or force-field torsion form."
+    },
+    {
+      "path": "contracts/kernels/LennardJonesKernel.sol",
+      "related_slots": [
+        "K11"
+      ],
+      "scope": "Unswitched direct Lennard-Jones pair kernel using explicitly supplied sigma/epsilon, connected through DynamicsCoordinator listed-pair records. No automatic mixing, pair enumeration, exclusions, cutoff, periodic images or tail correction; the older PagedBondCoordinator remains harmonic only."
+    },
+    {
+      "path": "contracts/kernels/CoulombPairKernel.sol",
+      "related_slots": [
+        "K12"
+      ],
+      "scope": "Direct Coulomb pair kernel using explicitly supplied charge product/prefactor, connected through DynamicsCoordinator listed pairs. This is not Ewald/PME real-space electrostatics and supplies no periodic images, reaction field or automatic dielectric convention; PagedBondCoordinator remains harmonic only."
+    },
+    {
+      "path": "contracts/kernels/VelocityVerletKernel.sol",
+      "related_slots": [
+        "K21"
+      ],
+      "scope": "Deterministic velocity-Verlet drift and final kick primitives used by DynamicsCoordinator. This is an integration foundation related to the planned Langevin slot, not an implemented Langevin thermostat or a production ensemble claim."
+    },
+    {
+      "path": "contracts/kernels/OrthorhombicGeometry.sol",
+      "related_slots": [
+        "K03"
+      ],
+      "scope": "Bounded minimum-image geometry for a constant orthorhombic box with declared half-box tie behavior and image-ratio bound. Not triclinic or variable-cell geometry."
+    },
+    {
+      "path": "contracts/kernels/SwitchedNonbondedKernel.sol",
+      "related_slots": [
+        "K11",
+        "K12"
+      ],
+      "scope": "Quintic-switched Lennard-Jones plus conducting-limit reaction-field Coulomb, or direct uncut explicit exceptions. This development electrostatics model is not Ewald/PME or a selected production myosin Hamiltonian."
+    },
+    {
+      "path": "contracts/core/PeriodicDataset.sol",
+      "related_slots": [
+        "C02",
+        "K09"
+      ],
+      "scope": "Sealed per-particle nonbonded parameters, explicit pair exceptions and constant box/cutoff configuration extending a frozen DynamicsDataset without listed pairs. Scientific topology completeness still requires prepared-input validation."
+    },
+    {
+      "path": "contracts/core/PeriodicDynamicsCoordinator.sol",
+      "related_slots": [
+        "C03",
+        "C04",
+        "K09"
+      ],
+      "scope": "Alternative staged velocity-Verlet coordinator with bonded minimum images, exhaustive lexicographic unordered-pair enumeration, on-chain Lorentz-Berthelot mixing and explicit exclusion/override handling. Double-buffered commit barriers and deterministic transaction partitioning; no neighbor list, PME, thermostat or production model claim."
+    },
+    {
+      "path": "contracts/math/ScalarMath.sol",
+      "related_slots": [
+        "K02"
+      ],
+      "scope": "Finite bounded log/exp/erf/erfc and cancellation-aware log1p/expm1; independent high-precision fixtures, no complete propagated molecular error budget."
+    },
+    {
+      "path": "contracts/kernels/CounterRandom.sol",
+      "related_slots": [
+        "K04"
+      ],
+      "scope": "Counter-addressed exact-grid open-interval uniforms and Box-Muller normals; registered seed/stream/replica/step/draw identity, no block entropy."
+    },
+    {
+      "path": "contracts/core/NeighborList.sol",
+      "related_slots": [
+        "K10",
+        "W07"
+      ],
+      "scope": "Immutable-writer resumable displacement check, reference copy and candidate list construction; conservative skin reuse, lexicographic pairs, quadratic rebuild cost."
+    },
+    {
+      "path": "contracts/core/NeighborDynamicsCoordinator.sol",
+      "related_slots": [
+        "C03",
+        "C04"
+      ],
+      "scope": "Alternative NVE coordinator with cached neighbor-list traversal matching the exhaustive periodic baseline; explicit original-external or exact-runtime-pinned inline pair admission with unchanged protocol/state commitments. Full-system scale remains unresolved."
+    },
+    {
+      "path": "contracts/kernels/LangevinBAOABKernel.sol",
+      "related_slots": [
+        "K21"
+      ],
+      "scope": "Binary128-format BAOAB drift/thermostat/kick primitives with registered deterministic normal inputs; finite declared domains."
+    },
+    {
+      "path": "contracts/core/LangevinDynamicsCoordinator.sol",
+      "related_slots": [
+        "C03",
+        "C04",
+        "K21",
+        "W13"
+      ],
+      "scope": "Neighbor-list BAOAB development dynamics with counter-based stochastic streams; separate from constrained and Ewald coordinators, not a combined production sampler."
+    },
+    {
+      "path": "contracts/kernels/DistanceConstraintKernel.sol",
+      "related_slots": [
+        "K19"
+      ],
+      "scope": "Mass-weighted SHAKE position and RATTLE velocity pair corrections with fail-closed geometric domains."
+    },
+    {
+      "path": "contracts/core/ConstraintSolver.sol",
+      "related_slots": [
+        "K19",
+        "W11"
+      ],
+      "scope": "Resumable iterative position/velocity constraints with separate full residual assessment, fixed tolerances and explicit convergence failure."
+    },
+    {
+      "path": "contracts/core/ConstraintCatalog.sol",
+      "related_slots": [
+        "C02",
+        "D14"
+      ],
+      "scope": "Sealed canonical distance-constraint sets bound to registered dataset identity; not automatic force-field constraint derivation."
+    },
+    {
+      "path": "contracts/core/ConstrainedDynamicsCoordinator.sol",
+      "related_slots": [
+        "C03",
+        "C04",
+        "K19"
+      ],
+      "scope": "Alternative neighbor-list NVE dynamics with SHAKE before forces and RATTLE before atomic state commit; not a constrained Langevin/Ewald/alchemical engine."
+    },
+    {
+      "path": "contracts/core/PeriodicMinimizer.sol",
+      "related_slots": [
+        "K20",
+        "W12"
+      ],
+      "scope": "Resumable complete periodic forces, gradient RMS and monotone Armijo backtracking; explicit convergence/iteration failure and no off-chain minimization result submission."
+    },
+    {
+      "path": "contracts/kernels/EwaldRealSpaceKernel.sol",
+      "related_slots": [
+        "K12"
+      ],
+      "scope": "Truncated erfc-screened pair electrostatics primitive with finite domains; production alpha/cutoff error calibration remains required."
+    },
+    {
+      "path": "contracts/kernels/EwaldReciprocalKernel.sol",
+      "related_slots": [
+        "K15"
+      ],
+      "scope": "Explicit canonical half-space reciprocal modes, charge structure factors, mode energy and force; direct Ewald sums, not PME mesh/FFT."
+    },
+    {
+      "path": "contracts/kernels/EwaldCorrections.sol",
+      "related_slots": [
+        "K18"
+      ],
+      "scope": "Self, uniform neutralizing background and excluded/scaled intracell pair corrections for declared tin-foil Ewald convention."
+    },
+    {
+      "path": "contracts/core/EwaldForceEvaluator.sol",
+      "related_slots": [
+        "K12",
+        "K15",
+        "K18",
+        "W06"
+      ],
+      "scope": "Bounded full direct Ewald forces on immutable factory-issued frozen snapshots; separate work state and terminal sealing."
+    },
+    {
+      "path": "contracts/core/EwaldDynamicsCoordinator.sol",
+      "related_slots": [
+        "C03",
+        "C04"
+      ],
+      "scope": "Alternative periodic NVE dynamics adding frozen-snapshot Ewald passes to LJ/bonded forces without reaction-field double counting; separate from constraints/Langevin."
+    },
+    {
+      "path": "contracts/kernels/SoftcoreLennardJonesKernel.sol",
+      "related_slots": [
+        "K23"
+      ],
+      "scope": "Two-endpoint p=2 softcore LJ energy, force and lambda derivative; primitive only, no complete charge/bonded hybrid Hamiltonian or production sampler."
+    },
+    {
+      "path": "contracts/kernels/MonteCarloAcceptance.sol",
+      "related_slots": [
+        "K22",
+        "K24"
+      ],
+      "scope": "Replica-exchange and symmetric-volume-proposal acceptance math; actual proposals, rollback, volume rescaling and exchange scheduling are not integrated."
+    },
+    {
+      "path": "contracts/kernels/InlineNonbondedKernel.sol",
+      "related_slots": [
+        "K11",
+        "K12"
+      ],
+      "scope": "Optional inlined binary128 switched-LJ/reaction-field kernel, sampled bitwise-equivalent to the original external path; explicitly admitted by NeighborDynamicsCoordinator under runtime/provenance checks. Other coordinators retain external kernels; no full-system feasibility claim."
+    },
+    {
+      "path": "contracts/analysis/ReducedPotentialCollector.sol",
+      "related_slots": [
+        "A01",
+        "W15"
+      ],
+      "scope": "Writer-bound chronological frozen-policy energy collection and on-chain reduced-potential centering; no approved production simulation writer yet."
+    },
+    {
+      "path": "contracts/analysis/MBARFreeEnergyEstimator.sol",
+      "related_slots": [
+        "A02"
+      ],
+      "scope": "Resumable 2-16 state log-sum-exp MBAR fixed point with gauge fixing, refreshed denominators and explicit nonconvergence; synthetic reference validation."
+    },
+    {
+      "path": "contracts/analysis/SamplingDiagnostics.sol",
+      "related_slots": [
+        "A03"
+      ],
+      "scope": "MBAR normalization, weight ESS and overlap connectivity under preregistered thresholds; weight ESS is not temporal decorrelation or proof of equilibration."
+    },
+    {
+      "path": "contracts/analysis/TimeSeriesDiagnostics.sol",
+      "related_slots": [
+        "A03",
+        "W16"
+      ],
+      "scope": "Writer-bound chronological observable covariance, Geyer positive/monotone pairs and conservative statistical inefficiency with explicit constant/short/truncated flags."
+    },
+    {
+      "path": "contracts/analysis/UncertaintyAndResults.sol",
+      "related_slots": [
+        "A04"
+      ],
+      "scope": "Preregistered complete paired independent-repeat plans and on-chain mean/SEM of complex-minus-solvent estimates; no MBAR covariance or proven repeat independence."
+    }
+  ],
+  "experimental_build": {
+    "status": "experimental_component_sources_present",
+    "report": "reports/compiled_sizes.json",
+    "deployable_component_count": 44,
+    "components": [
+      "ConstrainedDynamicsCoordinator",
+      "ConstraintCatalog",
+      "ConstraintSolver",
+      "CoulombPairKernel",
+      "CounterRandom",
+      "DataPage",
+      "DatasetCatalog",
+      "DistanceConstraintKernel",
+      "DynamicsCoordinator",
+      "DynamicsDataset",
+      "ElementaryMath",
+      "EwaldCorrections",
+      "EwaldDynamicsCoordinator",
+      "EwaldForceEvaluator",
+      "EwaldRealSpaceKernel",
+      "EwaldReciprocalKernel",
+      "ExperimentRegistry",
+      "FloatMath",
+      "HarmonicAngleKernel",
+      "HarmonicBondKernel",
+      "InlineNonbondedKernel",
+      "LangevinBAOABKernel",
+      "LangevinDynamicsCoordinator",
+      "LennardJonesKernel",
+      "MBARFreeEnergyEstimator",
+      "MonteCarloAcceptance",
+      "NeighborDynamicsCoordinator",
+      "NeighborList",
+      "OrthorhombicGeometry",
+      "PagedBondCoordinator",
+      "PeriodicDataset",
+      "PeriodicDynamicsCoordinator",
+      "PeriodicMinimizer",
+      "PeriodicTorsionKernel",
+      "ReducedPotentialCollector",
+      "ResumableBondEngine",
+      "SamplingDiagnostics",
+      "ScalarMath",
+      "SoftcoreLennardJonesKernel",
+      "SwitchedNonbondedKernel",
+      "TimeSeriesDiagnostics",
+      "UncertaintyAndResults",
+      "VelocityVerletKernel",
+      "WorkingStatePage"
+    ],
+    "excluded_artifact_types": [
+      "interfaces",
+      "internal_library",
+      "abstract_contract",
+      "test_harness"
+    ],
+    "scope": "Separate experimental source/build evidence; the compiled_sizes report and validation_summary establish completed checks. Does not change any production-slot implementation status or indicate a Robinhood deployment.",
+    "gas_scope": "Measured local fixtures and explicitly hypothetical workload projections. No complete prepared-model estimate, current mainnet fee or demonstrated throughput.",
+    "version": "0.5.1",
+    "count_semantics": "Distinct experimental deployable contract types, not addresses or completed production slots. Alternative coordinators do not compose automatically; reusable page types can have many instances.",
+    "excluded_components": [],
+    "paged_execution": {
+      "input_schema": "canonical_low_bits_positions_and_harmonic_bonds_v1",
+      "max_atoms": 4096,
+      "max_bonds": 16384,
+      "max_pages_per_stream": 16,
+      "max_records_per_advance": 16,
+      "stages": [
+        "ValidatingAtoms",
+        "ValidatingBonds",
+        "Running",
+        "Completed"
+      ],
+      "working_state": "isolated force and energy accumulators only; no current/next dynamics state",
+      "isolated_pair_kernels_integrated": false,
+      "singular_geometry_check": "Running stage; revert rolls back the current transaction, while successful earlier checkpoints remain partial work",
+      "complete_molecular_dynamics": false,
+      "scope": "Retained v0.2 harmonic-only regression implementation; DynamicsCoordinator is the separate v0.3 path."
+    },
+    "gas_reports": [
+      "reports/local_execution_gas.json",
+      "reports/paged_execution_gas.json",
+      "reports/dynamics_execution_gas.json",
+      "reports/periodic_dynamics_execution_gas.json",
+      "reports/constraints_execution_gas.json",
+      "reports/langevin_execution_gas.json",
+      "reports/ewald_execution_gas.json",
+      "reports/mbar_execution_gas.json",
+      "reports/timeseries_execution_gas.json",
+      "reports/workload_feasibility.json",
+      "reports/inline_nonbonded_gas.json",
+      "reports/constrained_execution_gas.json",
+      "reports/minimizer_execution_gas.json",
+      "reports/ewald_dynamics_execution_gas.json",
+      "reports/neighbor_execution_gas.json"
+    ],
+    "dynamics_execution": {
+      "implementation": "DynamicsCoordinator",
+      "dataset": "DynamicsDataset extending frozen DatasetCatalog inputs",
+      "system_scope": "finite explicitly declared interaction system, no periodic boundary",
+      "integrator": "deterministic velocity-Verlet",
+      "max_atoms": 1024,
+      "max_target_steps": 4096,
+      "max_records_per_advance": 8,
+      "force_terms": [
+        "harmonic_bonds",
+        "harmonic_angles",
+        "periodic_proper_torsions",
+        "listed_unswitched_lennard_jones",
+        "listed_direct_coulomb"
+      ],
+      "working_state": "Two buffers of position, velocity and force vectors plus per-buffer potential energies in a writer-restricted namespace; timestep buffer changes only after the final kick stage completes.",
+      "partial_state": "Loading and initial force stages are not a committed timestep. Failed transactions roll back their coordinator and page writes; earlier checkpoints persist. Final completion seals the namespace.",
+      "capacity_scope": "Development guards, not the intended solvated-myosin system capacity or scientifically sufficient sampling duration.",
+      "complete_production_molecular_dynamics": false,
+      "free_energy_estimation": false,
+      "not_implemented": [
+        "periodic_boundaries",
+        "PME_or_Ewald",
+        "neighbor_lists",
+        "automatic_pair_rules",
+        "constraints",
+        "thermostat",
+        "barostat",
+        "alchemical_sampling",
+        "free_energy_estimators",
+        "validated_full_protein_system"
+      ]
+    },
+    "periodic_execution": {
+      "implementation": "PeriodicDynamicsCoordinator",
+      "dataset": "PeriodicDataset extending frozen DynamicsDataset and DatasetCatalog inputs",
+      "system_scope": "constant orthorhombic periodic development Hamiltonian",
+      "integrator": "deterministic velocity-Verlet with unwrapped stored coordinates",
+      "max_atoms": 1024,
+      "max_target_steps": 4096,
+      "max_records_per_advance": 8,
+      "ordinary_pair_enumeration": "Every unordered pair i<j, lexicographic order; quadratic full scan each force pass; no neighbor list",
+      "ordinary_parameters": "Lorentz-Berthelot sigma/epsilon and product of registered atomic charges, calculated on-chain",
+      "ordinary_potential": "quintic-switched LJ plus conducting-limit reaction-field Coulomb; both zero at/beyond cutoff",
+      "exceptions": "canonical sorted explicit exclusions or direct uncut LJ/Coulomb parameter overrides; periodic minimum images",
+      "geometry": "minimum-image bonded arms and chain vectors; strict ordinary cutoff below every half-box length",
+      "complete_production_molecular_dynamics": false,
+      "free_energy_estimation": false,
+      "not_implemented": [
+        "neighbor_lists",
+        "PME_or_Ewald",
+        "triclinic_or_variable_cell",
+        "topology_derived_exception_generation",
+        "constraints",
+        "thermostat",
+        "barostat",
+        "alchemical_sampling",
+        "free_energy_estimators",
+        "validated_full_protein_system"
+      ]
+    },
+    "integration_status": {
+      "complete_production_pipeline": false,
+      "alternative_dynamics": [
+        "DynamicsCoordinator",
+        "PeriodicDynamicsCoordinator",
+        "NeighborDynamicsCoordinator",
+        "LangevinDynamicsCoordinator",
+        "ConstrainedDynamicsCoordinator",
+        "EwaldDynamicsCoordinator"
+      ],
+      "separate_components": [
+        "PeriodicMinimizer",
+        "SoftcoreLennardJonesKernel",
+        "MonteCarloAcceptance",
+        "InlineNonbondedKernel",
+        "ReducedPotentialCollector",
+        "MBARFreeEnergyEstimator",
+        "SamplingDiagnostics",
+        "TimeSeriesDiagnostics",
+        "UncertaintyAndResults"
+      ],
+      "not_integrated": [
+        "combined_constraints_thermostat_Ewald",
+        "complete_alchemical_Hamiltonian",
+        "volume_and_replica_proposals",
+        "production_sampling_to_analysis",
+        "correlation_aware_sample_selection",
+        "full_prepared_model_scale"
+      ],
+      "source_candidate_is_not_slot_completion": true
+    }
+  },
+  "scientific_blockers": [
+    "A complete prepared solvated hybrid cardiac-myosin/ligand model, repaired coordinates, microstates, compatible force-field terms, ions and parameters are not frozen.",
+    "Mg-ADP-vanadate is the original structural state. Public ADP-plus-phosphate models provide a declared alternative research route, not validated drop-in parameters for this target.",
+    "The heavy-atom transformation is mapped, but hybrid endpoint parameters, inserted/deleted atom coordinates and validated compound-17 pose remain unresolved. Functional ATPase IC50 is not Kd.",
+    "Neighbor, Ewald, constrained NVE and Langevin paths are separate validated development candidates; no single complete production Hamiltonian/ensemble/alchemical pipeline exists.",
+    "Analysis components use synthetic harnesses. Real on-chain sampling, correlation-aware input selection, complete repeat provenance and sufficient convergence evidence remain unfinished.",
+    "The actual prepared-system atom/page counts, target-chain cost and sufficient sampling budget are unknown. Current caps and quadratic rebuild/direct-reciprocal work are not validated for the intended solvated protein.",
+    "A combined full-system security/scientific validation, live Robinhood fork rehearsal and final operator transaction plan are missing."
+  ],
+  "slots": [
+    {
+      "id": "C01",
+      "name": "ExperimentRegistry",
+      "category": "control",
+      "instance_count": 1,
+      "purpose": "Records immutable scientific protocol versions, allowed module code hashes, seeds, input roots and experiment lifecycle permissions.",
+      "deployment_dependencies": [],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": null,
+      "notes": "Registry administration and immutable experiment registration.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": null
+    },
+    {
+      "id": "C02",
+      "name": "DatasetCatalog",
+      "category": "control",
+      "instance_count": 1,
+      "purpose": "Registers sealed input-page addresses, their schemas, content digests, licenses, provenance and complete byte coverage.",
+      "deployment_dependencies": [
+        "C01"
+      ],
+      "configuration_dependencies": [
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D05",
+        "D06",
+        "D07",
+        "D08",
+        "D09",
+        "D10",
+        "D11",
+        "D12",
+        "D13",
+        "D14",
+        "D15",
+        "D16"
+      ],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": null,
+      "notes": "Manifest and data-availability validation; never substitutes a content hash for accessible input bytes.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": null
+    },
+    {
+      "id": "C03",
+      "name": "SimulationCoordinator",
+      "category": "control",
+      "instance_count": 1,
+      "purpose": "Owns the execution cursor, enforces stage barriers and allowed writes, and commits bounded numerical work atomically.",
+      "deployment_dependencies": [
+        "C01",
+        "C02",
+        "C04",
+        "K01",
+        "K02",
+        "K03",
+        "K04",
+        "K05",
+        "K06",
+        "K07",
+        "K08",
+        "K09",
+        "K10",
+        "K11",
+        "K12",
+        "K13",
+        "K14",
+        "K15",
+        "K16",
+        "K17",
+        "K18",
+        "K19",
+        "K20",
+        "K21",
+        "K22",
+        "K23",
+        "K24",
+        "A01",
+        "A02",
+        "A03",
+        "A04"
+      ],
+      "configuration_dependencies": [
+        "W01",
+        "W02",
+        "W03",
+        "W04",
+        "W05",
+        "W06",
+        "W07",
+        "W08",
+        "W09",
+        "W10",
+        "W11",
+        "W12",
+        "W13",
+        "W14",
+        "W15",
+        "W16"
+      ],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": null,
+      "notes": "Permissionless bounded advanceExperiment; shared current-state snapshot and complete-step commit.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": null
+    },
+    {
+      "id": "C04",
+      "name": "WorkScheduler",
+      "category": "control",
+      "instance_count": 1,
+      "purpose": "Selects the next deterministic experiment, replica, lambda state and computation tile from registered schedules.",
+      "deployment_dependencies": [
+        "C01"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": null,
+      "notes": "Caller identity, wall-clock time and transaction batch size cannot change scientific work order.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": null
+    },
+    {
+      "id": "K01",
+      "name": "FloatingPointArithmetic",
+      "category": "compute",
+      "instance_count": 1,
+      "purpose": "Specified floating-point add, subtract, multiply, divide, comparisons and conversion, with explicit finite-value and rounding policy.",
+      "deployment_dependencies": [],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": null,
+      "notes": "",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": null
+    },
+    {
+      "id": "K02",
+      "name": "ElementaryFunctions",
+      "category": "compute",
+      "instance_count": 1,
+      "purpose": "Specified square root, exponential, logarithm and other required elementary functions, with measured error bounds.",
+      "deployment_dependencies": [
+        "K01"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": null,
+      "notes": "",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": null
+    },
+    {
+      "id": "K03",
+      "name": "VectorGeometry",
+      "category": "compute",
+      "instance_count": 1,
+      "purpose": "Distances, dot/cross products, periodic-cell geometry and stable bond/angle/torsion geometric primitives.",
+      "deployment_dependencies": [
+        "K01",
+        "K02"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": null,
+      "notes": "",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": null
+    },
+    {
+      "id": "K04",
+      "name": "CounterRandom",
+      "category": "compute",
+      "instance_count": 1,
+      "purpose": "Registered-seed counter generator and documented normal/uniform transforms; independent streams per replica and operation.",
+      "deployment_dependencies": [
+        "K01",
+        "K02"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": null,
+      "notes": "",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": null
+    },
+    {
+      "id": "K05",
+      "name": "HarmonicBondForces",
+      "category": "compute",
+      "instance_count": 1,
+      "purpose": "Harmonic bond energy and force calculations over ordered bond tiles.",
+      "deployment_dependencies": [
+        "K01",
+        "K03"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": null,
+      "notes": "",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": null
+    },
+    {
+      "id": "K06",
+      "name": "HarmonicAngleForces",
+      "category": "compute",
+      "instance_count": 1,
+      "purpose": "Angle energies and gradients with defined singular-geometry handling.",
+      "deployment_dependencies": [
+        "K01",
+        "K02",
+        "K03"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": null,
+      "notes": "",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": null
+    },
+    {
+      "id": "K07",
+      "name": "ProperTorsionForces",
+      "category": "compute",
+      "instance_count": 1,
+      "purpose": "Periodic proper-torsion energies and gradients using the selected force-field convention.",
+      "deployment_dependencies": [
+        "K01",
+        "K02",
+        "K03"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": null,
+      "notes": "",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": null
+    },
+    {
+      "id": "K08",
+      "name": "ImproperTorsionForces",
+      "category": "compute",
+      "instance_count": 1,
+      "purpose": "Improper-torsion energies and gradients in the selected force-field convention.",
+      "deployment_dependencies": [
+        "K01",
+        "K02",
+        "K03"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": null,
+      "notes": "",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": null
+    },
+    {
+      "id": "K09",
+      "name": "NonbondedParameterRules",
+      "category": "compute",
+      "instance_count": 1,
+      "purpose": "Applies mixing rules, exclusions, scaled 1-4 interactions and registered soft-core pair parameters.",
+      "deployment_dependencies": [
+        "K01",
+        "K02"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": null,
+      "notes": "",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": null
+    },
+    {
+      "id": "K10",
+      "name": "NeighborList",
+      "category": "compute",
+      "instance_count": 1,
+      "purpose": "Builds and maintains a deterministic periodic neighbor list with rebuild criteria checked against a frozen position snapshot.",
+      "deployment_dependencies": [
+        "K01",
+        "K03"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": null,
+      "notes": "",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": null
+    },
+    {
+      "id": "K11",
+      "name": "LennardJonesForces",
+      "category": "compute",
+      "instance_count": 1,
+      "purpose": "Real-space van der Waals energies, gradients and explicitly registered cutoff/switching contributions.",
+      "deployment_dependencies": [
+        "K01",
+        "K03",
+        "K09",
+        "K10"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": null,
+      "notes": "",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": null
+    },
+    {
+      "id": "K12",
+      "name": "RealSpaceElectrostatics",
+      "category": "compute",
+      "instance_count": 1,
+      "purpose": "Real-space electrostatic Ewald contributions, pair energies and gradients.",
+      "deployment_dependencies": [
+        "K01",
+        "K02",
+        "K03",
+        "K09",
+        "K10"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": null,
+      "notes": "",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": null
+    },
+    {
+      "id": "K13",
+      "name": "ChargeMeshAssignment",
+      "category": "compute",
+      "instance_count": 1,
+      "purpose": "Spreads charges to the registered periodic mesh with defined interpolation order.",
+      "deployment_dependencies": [
+        "K01",
+        "K03"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": null,
+      "notes": "",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": null
+    },
+    {
+      "id": "K14",
+      "name": "ForwardMeshTransform",
+      "category": "compute",
+      "instance_count": 1,
+      "purpose": "Resumable deterministic forward transforms for reciprocal-space electrostatics.",
+      "deployment_dependencies": [
+        "K01",
+        "K02"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": null,
+      "notes": "",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": null
+    },
+    {
+      "id": "K15",
+      "name": "ReciprocalElectrostatics",
+      "category": "compute",
+      "instance_count": 1,
+      "purpose": "Applies reciprocal-space Green functions and calculates mesh energy under registered Ewald conventions.",
+      "deployment_dependencies": [
+        "K01",
+        "K02"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": null,
+      "notes": "",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": null
+    },
+    {
+      "id": "K16",
+      "name": "InverseMeshTransform",
+      "category": "compute",
+      "instance_count": 1,
+      "purpose": "Resumable deterministic inverse transforms of reciprocal fields.",
+      "deployment_dependencies": [
+        "K01",
+        "K02"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": null,
+      "notes": "",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": null
+    },
+    {
+      "id": "K17",
+      "name": "MeshForceInterpolation",
+      "category": "compute",
+      "instance_count": 1,
+      "purpose": "Interpolates mesh-derived forces back to particle positions with the registered interpolation scheme.",
+      "deployment_dependencies": [
+        "K01",
+        "K03"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": null,
+      "notes": "",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": null
+    },
+    {
+      "id": "K18",
+      "name": "ElectrostaticCorrections",
+      "category": "compute",
+      "instance_count": 1,
+      "purpose": "Ewald self/background and exclusion corrections, consistent with the complete Hamiltonian.",
+      "deployment_dependencies": [
+        "K01",
+        "K02",
+        "K03",
+        "K09"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": null,
+      "notes": "",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": null
+    },
+    {
+      "id": "K19",
+      "name": "ConstraintSolver",
+      "category": "compute",
+      "instance_count": 1,
+      "purpose": "Resumable position and velocity constraint iterations with registered tolerances and nonconvergence termination.",
+      "deployment_dependencies": [
+        "K01",
+        "K03"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": null,
+      "notes": "",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": null
+    },
+    {
+      "id": "K20",
+      "name": "EnergyMinimizer",
+      "category": "compute",
+      "instance_count": 1,
+      "purpose": "Bounded minimisation steps and convergence decisions using complete energies and forces.",
+      "deployment_dependencies": [
+        "K01",
+        "K02",
+        "K03"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": null,
+      "notes": "",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": null
+    },
+    {
+      "id": "K21",
+      "name": "LangevinIntegrator",
+      "category": "compute",
+      "instance_count": 1,
+      "purpose": "Time integration and thermostat operations using fixed old-state buffers and registered stochastic streams.",
+      "deployment_dependencies": [
+        "K01",
+        "K02",
+        "K03",
+        "K04",
+        "K19"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": null,
+      "notes": "",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": null
+    },
+    {
+      "id": "K22",
+      "name": "Barostat",
+      "category": "compute",
+      "instance_count": 1,
+      "purpose": "Registered pressure-control proposals, coordinate scaling and acceptance using complete trial energies.",
+      "deployment_dependencies": [
+        "K01",
+        "K02",
+        "K03",
+        "K04"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": null,
+      "notes": "",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": null
+    },
+    {
+      "id": "K23",
+      "name": "AlchemicalHamiltonian",
+      "category": "compute",
+      "instance_count": 1,
+      "purpose": "Evaluates the declared lambda-dependent hybrid Hamiltonian and cross-state reduced potentials.",
+      "deployment_dependencies": [
+        "K01",
+        "K02",
+        "K05",
+        "K06",
+        "K07",
+        "K08",
+        "K09",
+        "K11",
+        "K12",
+        "K13",
+        "K14",
+        "K15",
+        "K16",
+        "K17",
+        "K18"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": null,
+      "notes": "",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": null
+    },
+    {
+      "id": "K24",
+      "name": "ReplicaExchange",
+      "category": "compute",
+      "instance_count": 1,
+      "purpose": "Hamiltonian replica-exchange proposals and acceptance, if selected in the frozen protocol, with deterministic stream assignment.",
+      "deployment_dependencies": [
+        "K01",
+        "K02",
+        "K04",
+        "K23"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": null,
+      "notes": "",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": null
+    },
+    {
+      "id": "D01",
+      "name": "AtomIdentityPage",
+      "category": "input_storage",
+      "instance_count": 1,
+      "purpose": "Atom identities, residue/chain/construct identity, element, mass references and canonical atom indexing.",
+      "deployment_dependencies": [],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": "ImmutableInputPage",
+      "notes": "Semantic partition; exact packed bytes and capacity are not measured. Uploaded over multiple transactions, then sealed.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": {
+        "schema_version": null,
+        "content_sha256": null,
+        "size_bytes": null,
+        "sealed": false
+      }
+    },
+    {
+      "id": "D02",
+      "name": "LigandAPage",
+      "category": "input_storage",
+      "instance_count": 1,
+      "purpose": "Complete compound-17 chemical graph, stereochemistry, protonation declaration and source evidence.",
+      "deployment_dependencies": [],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": "ImmutableInputPage",
+      "notes": "Semantic partition; exact packed bytes and capacity are not measured. Uploaded over multiple transactions, then sealed.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": {
+        "schema_version": null,
+        "content_sha256": null,
+        "size_bytes": null,
+        "sealed": false
+      }
+    },
+    {
+      "id": "D03",
+      "name": "LigandBPage",
+      "category": "input_storage",
+      "instance_count": 1,
+      "purpose": "Complete aficamten chemical graph, stereochemistry, protonation declaration and source evidence.",
+      "deployment_dependencies": [],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": "ImmutableInputPage",
+      "notes": "Semantic partition; exact packed bytes and capacity are not measured. Uploaded over multiple transactions, then sealed.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": {
+        "schema_version": null,
+        "content_sha256": null,
+        "size_bytes": null,
+        "sealed": false
+      }
+    },
+    {
+      "id": "D04",
+      "name": "HybridTopologyPage",
+      "category": "input_storage",
+      "instance_count": 1,
+      "purpose": "Verified atom mapping, hybrid topology and explicit changes between endpoints.",
+      "deployment_dependencies": [],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": "ImmutableInputPage",
+      "notes": "Semantic partition; exact packed bytes and capacity are not measured. Uploaded over multiple transactions, then sealed.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": {
+        "schema_version": null,
+        "content_sha256": null,
+        "size_bytes": null,
+        "sealed": false
+      }
+    },
+    {
+      "id": "D05",
+      "name": "ParticleParameterPage",
+      "category": "input_storage",
+      "instance_count": 1,
+      "purpose": "Per-particle charges, masses, Lennard-Jones parameter indices and endpoint-specific parameter assignments.",
+      "deployment_dependencies": [],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": "ImmutableInputPage",
+      "notes": "Semantic partition; exact packed bytes and capacity are not measured. Uploaded over multiple transactions, then sealed.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": {
+        "schema_version": null,
+        "content_sha256": null,
+        "size_bytes": null,
+        "sealed": false
+      }
+    },
+    {
+      "id": "D06",
+      "name": "BondParameterPage",
+      "category": "input_storage",
+      "instance_count": 1,
+      "purpose": "Bond graph and all harmonic-bond coefficients and equilibrium distances.",
+      "deployment_dependencies": [],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": "ImmutableInputPage",
+      "notes": "Semantic partition; exact packed bytes and capacity are not measured. Uploaded over multiple transactions, then sealed.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": {
+        "schema_version": null,
+        "content_sha256": null,
+        "size_bytes": null,
+        "sealed": false
+      }
+    },
+    {
+      "id": "D07",
+      "name": "AngleParameterPage",
+      "category": "input_storage",
+      "instance_count": 1,
+      "purpose": "Angle graph and all angle coefficients and equilibrium values.",
+      "deployment_dependencies": [],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": "ImmutableInputPage",
+      "notes": "Semantic partition; exact packed bytes and capacity are not measured. Uploaded over multiple transactions, then sealed.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": {
+        "schema_version": null,
+        "content_sha256": null,
+        "size_bytes": null,
+        "sealed": false
+      }
+    },
+    {
+      "id": "D08",
+      "name": "ProperTorsionPage",
+      "category": "input_storage",
+      "instance_count": 1,
+      "purpose": "Proper-torsion graph, periodicities, phases and coefficients.",
+      "deployment_dependencies": [],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": "ImmutableInputPage",
+      "notes": "Semantic partition; exact packed bytes and capacity are not measured. Uploaded over multiple transactions, then sealed.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": {
+        "schema_version": null,
+        "content_sha256": null,
+        "size_bytes": null,
+        "sealed": false
+      }
+    },
+    {
+      "id": "D09",
+      "name": "ImproperTorsionPage",
+      "category": "input_storage",
+      "instance_count": 1,
+      "purpose": "Improper-torsion definitions, conventions and coefficients.",
+      "deployment_dependencies": [],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": "ImmutableInputPage",
+      "notes": "Semantic partition; exact packed bytes and capacity are not measured. Uploaded over multiple transactions, then sealed.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": {
+        "schema_version": null,
+        "content_sha256": null,
+        "size_bytes": null,
+        "sealed": false
+      }
+    },
+    {
+      "id": "D10",
+      "name": "PairExceptionPage",
+      "category": "input_storage",
+      "instance_count": 1,
+      "purpose": "Nonbonded exclusions, scaled pair interactions and exception parameters.",
+      "deployment_dependencies": [],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": "ImmutableInputPage",
+      "notes": "Semantic partition; exact packed bytes and capacity are not measured. Uploaded over multiple transactions, then sealed.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": {
+        "schema_version": null,
+        "content_sha256": null,
+        "size_bytes": null,
+        "sealed": false
+      }
+    },
+    {
+      "id": "D11",
+      "name": "SolventIonInputPage",
+      "category": "input_storage",
+      "instance_count": 1,
+      "purpose": "Explicit solvent/ion atom identities, starting coordinates and parameter mappings for both thermodynamic legs.",
+      "deployment_dependencies": [],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": "ImmutableInputPage",
+      "notes": "Semantic partition; exact packed bytes and capacity are not measured. Uploaded over multiple transactions, then sealed.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": {
+        "schema_version": null,
+        "content_sha256": null,
+        "size_bytes": null,
+        "sealed": false
+      }
+    },
+    {
+      "id": "D12",
+      "name": "CofactorInputPage",
+      "category": "input_storage",
+      "instance_count": 1,
+      "purpose": "ADP, magnesium and declared vanadate/phosphate-state identities, coordinates and justified model parameters.",
+      "deployment_dependencies": [],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": "ImmutableInputPage",
+      "notes": "Semantic partition; exact packed bytes and capacity are not measured. Uploaded over multiple transactions, then sealed.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": {
+        "schema_version": null,
+        "content_sha256": null,
+        "size_bytes": null,
+        "sealed": false
+      }
+    },
+    {
+      "id": "D13",
+      "name": "StartingStructurePage",
+      "category": "input_storage",
+      "instance_count": 1,
+      "purpose": "Prepared protein/ligand positions, periodic boxes, retained waters and complete preparation provenance.",
+      "deployment_dependencies": [],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": "ImmutableInputPage",
+      "notes": "Semantic partition; exact packed bytes and capacity are not measured. Uploaded over multiple transactions, then sealed.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": {
+        "schema_version": null,
+        "content_sha256": null,
+        "size_bytes": null,
+        "sealed": false
+      }
+    },
+    {
+      "id": "D14",
+      "name": "SimulationProtocolPage",
+      "category": "input_storage",
+      "instance_count": 1,
+      "purpose": "Temperature, pressure, integrator settings, lambda schedule, repeat seeds, sampling schedule and stop/extend rules.",
+      "deployment_dependencies": [],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": "ImmutableInputPage",
+      "notes": "Semantic partition; exact packed bytes and capacity are not measured. Uploaded over multiple transactions, then sealed.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": {
+        "schema_version": null,
+        "content_sha256": null,
+        "size_bytes": null,
+        "sealed": false
+      }
+    },
+    {
+      "id": "D15",
+      "name": "NumericalSpecificationPage",
+      "category": "input_storage",
+      "instance_count": 1,
+      "purpose": "Units, constants, numerical format, rounding/error policy, mesh/cutoff conventions and validation tolerances.",
+      "deployment_dependencies": [],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": "ImmutableInputPage",
+      "notes": "Semantic partition; exact packed bytes and capacity are not measured. Uploaded over multiple transactions, then sealed.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": {
+        "schema_version": null,
+        "content_sha256": null,
+        "size_bytes": null,
+        "sealed": false
+      }
+    },
+    {
+      "id": "D16",
+      "name": "EvidenceProvenancePage",
+      "category": "input_storage",
+      "instance_count": 1,
+      "purpose": "Scientific source references, construct/assay metadata, complete input artifact hashes and claim boundaries.",
+      "deployment_dependencies": [],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": "ImmutableInputPage",
+      "notes": "Semantic partition; exact packed bytes and capacity are not measured. Uploaded over multiple transactions, then sealed.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": {
+        "schema_version": null,
+        "content_sha256": null,
+        "size_bytes": null,
+        "sealed": false
+      }
+    },
+    {
+      "id": "W01",
+      "name": "CurrentPositionPage",
+      "category": "working_storage",
+      "instance_count": 1,
+      "purpose": "Current particle coordinates for all registered replicas and both legs; held fixed during force evaluation.",
+      "deployment_dependencies": [
+        "C03"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": "EngineWorkingPage",
+      "notes": "Scientific state is namespaced by experiment/leg/replica. Only the pinned coordinator may write.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": {
+        "schema_version": null,
+        "content_sha256": null,
+        "size_bytes": null,
+        "sealed": false
+      }
+    },
+    {
+      "id": "W02",
+      "name": "StagedPositionPage",
+      "category": "working_storage",
+      "instance_count": 1,
+      "purpose": "Staged next-step/trial coordinates; become current only after all stage checks pass.",
+      "deployment_dependencies": [
+        "C03"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": "EngineWorkingPage",
+      "notes": "Scientific state is namespaced by experiment/leg/replica. Only the pinned coordinator may write.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": {
+        "schema_version": null,
+        "content_sha256": null,
+        "size_bytes": null,
+        "sealed": false
+      }
+    },
+    {
+      "id": "W03",
+      "name": "CurrentVelocityPage",
+      "category": "working_storage",
+      "instance_count": 1,
+      "purpose": "Current particle velocities for all replicas and both legs.",
+      "deployment_dependencies": [
+        "C03"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": "EngineWorkingPage",
+      "notes": "Scientific state is namespaced by experiment/leg/replica. Only the pinned coordinator may write.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": {
+        "schema_version": null,
+        "content_sha256": null,
+        "size_bytes": null,
+        "sealed": false
+      }
+    },
+    {
+      "id": "W04",
+      "name": "StagedVelocityPage",
+      "category": "working_storage",
+      "instance_count": 1,
+      "purpose": "Staged velocities and integrator intermediates prior to atomic timestep commit.",
+      "deployment_dependencies": [
+        "C03"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": "EngineWorkingPage",
+      "notes": "Scientific state is namespaced by experiment/leg/replica. Only the pinned coordinator may write.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": {
+        "schema_version": null,
+        "content_sha256": null,
+        "size_bytes": null,
+        "sealed": false
+      }
+    },
+    {
+      "id": "W05",
+      "name": "ForceAccumulatorPage",
+      "category": "working_storage",
+      "instance_count": 1,
+      "purpose": "Per-particle force accumulators, completion masks and deterministic accumulation cursors.",
+      "deployment_dependencies": [
+        "C03"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": "EngineWorkingPage",
+      "notes": "Scientific state is namespaced by experiment/leg/replica. Only the pinned coordinator may write.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": {
+        "schema_version": null,
+        "content_sha256": null,
+        "size_bytes": null,
+        "sealed": false
+      }
+    },
+    {
+      "id": "W06",
+      "name": "EnergyAccumulatorPage",
+      "category": "working_storage",
+      "instance_count": 1,
+      "purpose": "Energy components, virials and complete-energy checkpoints.",
+      "deployment_dependencies": [
+        "C03"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": "EngineWorkingPage",
+      "notes": "Scientific state is namespaced by experiment/leg/replica. Only the pinned coordinator may write.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": {
+        "schema_version": null,
+        "content_sha256": null,
+        "size_bytes": null,
+        "sealed": false
+      }
+    },
+    {
+      "id": "W07",
+      "name": "NeighborListPage",
+      "category": "working_storage",
+      "instance_count": 1,
+      "purpose": "Neighbor-list particle pairs, cell lists, reference positions and rebuild progress.",
+      "deployment_dependencies": [
+        "C03"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": "EngineWorkingPage",
+      "notes": "Scientific state is namespaced by experiment/leg/replica. Only the pinned coordinator may write.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": {
+        "schema_version": null,
+        "content_sha256": null,
+        "size_bytes": null,
+        "sealed": false
+      }
+    },
+    {
+      "id": "W08",
+      "name": "ChargeMeshPage",
+      "category": "working_storage",
+      "instance_count": 1,
+      "purpose": "Real-space charge grids and assignment progress for each active mesh.",
+      "deployment_dependencies": [
+        "C03"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": "EngineWorkingPage",
+      "notes": "Scientific state is namespaced by experiment/leg/replica. Only the pinned coordinator may write.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": {
+        "schema_version": null,
+        "content_sha256": null,
+        "size_bytes": null,
+        "sealed": false
+      }
+    },
+    {
+      "id": "W09",
+      "name": "ReciprocalMeshPage",
+      "category": "working_storage",
+      "instance_count": 1,
+      "purpose": "Complex reciprocal-space grids, transform cursors and Ewald coefficients.",
+      "deployment_dependencies": [
+        "C03"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": "EngineWorkingPage",
+      "notes": "Scientific state is namespaced by experiment/leg/replica. Only the pinned coordinator may write.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": {
+        "schema_version": null,
+        "content_sha256": null,
+        "size_bytes": null,
+        "sealed": false
+      }
+    },
+    {
+      "id": "W10",
+      "name": "PotentialMeshPage",
+      "category": "working_storage",
+      "instance_count": 1,
+      "purpose": "Inverse-transformed potential/field grids and force-interpolation progress.",
+      "deployment_dependencies": [
+        "C03"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": "EngineWorkingPage",
+      "notes": "Scientific state is namespaced by experiment/leg/replica. Only the pinned coordinator may write.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": {
+        "schema_version": null,
+        "content_sha256": null,
+        "size_bytes": null,
+        "sealed": false
+      }
+    },
+    {
+      "id": "W11",
+      "name": "ConstraintWorkspacePage",
+      "category": "working_storage",
+      "instance_count": 1,
+      "purpose": "Constraint iteration residuals, corrections and completion state.",
+      "deployment_dependencies": [
+        "C03"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": "EngineWorkingPage",
+      "notes": "Scientific state is namespaced by experiment/leg/replica. Only the pinned coordinator may write.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": {
+        "schema_version": null,
+        "content_sha256": null,
+        "size_bytes": null,
+        "sealed": false
+      }
+    },
+    {
+      "id": "W12",
+      "name": "MinimizerWorkspacePage",
+      "category": "working_storage",
+      "instance_count": 1,
+      "purpose": "Minimisation search directions, trial-state references and convergence history.",
+      "deployment_dependencies": [
+        "C03"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": "EngineWorkingPage",
+      "notes": "Scientific state is namespaced by experiment/leg/replica. Only the pinned coordinator may write.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": {
+        "schema_version": null,
+        "content_sha256": null,
+        "size_bytes": null,
+        "sealed": false
+      }
+    },
+    {
+      "id": "W13",
+      "name": "StochasticWorkspacePage",
+      "category": "working_storage",
+      "instance_count": 1,
+      "purpose": "Counter-generator stream indices, thermostat variables and barostat proposals.",
+      "deployment_dependencies": [
+        "C03"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": "EngineWorkingPage",
+      "notes": "Scientific state is namespaced by experiment/leg/replica. Only the pinned coordinator may write.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": {
+        "schema_version": null,
+        "content_sha256": null,
+        "size_bytes": null,
+        "sealed": false
+      }
+    },
+    {
+      "id": "W14",
+      "name": "ReplicaStatePage",
+      "category": "working_storage",
+      "instance_count": 1,
+      "purpose": "Replica/lambda assignments, exchange proposals, acceptances and phase state.",
+      "deployment_dependencies": [
+        "C03"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": "EngineWorkingPage",
+      "notes": "Scientific state is namespaced by experiment/leg/replica. Only the pinned coordinator may write.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": {
+        "schema_version": null,
+        "content_sha256": null,
+        "size_bytes": null,
+        "sealed": false
+      }
+    },
+    {
+      "id": "W15",
+      "name": "ReducedPotentialPage",
+      "category": "working_storage",
+      "instance_count": 1,
+      "purpose": "Registered energy samples across lambda states, sample provenance and completion counts.",
+      "deployment_dependencies": [
+        "C03"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": "EngineWorkingPage",
+      "notes": "Scientific state is namespaced by experiment/leg/replica. Only the pinned coordinator may write.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": {
+        "schema_version": null,
+        "content_sha256": null,
+        "size_bytes": null,
+        "sealed": false
+      }
+    },
+    {
+      "id": "W16",
+      "name": "AnalysisWorkspacePage",
+      "category": "working_storage",
+      "instance_count": 1,
+      "purpose": "Estimator iterates, decorrelation/overlap diagnostics, uncertainty summaries and result records.",
+      "deployment_dependencies": [
+        "C03"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": "EngineWorkingPage",
+      "notes": "Scientific state is namespaced by experiment/leg/replica. Only the pinned coordinator may write.",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": {
+        "schema_version": null,
+        "content_sha256": null,
+        "size_bytes": null,
+        "sealed": false
+      }
+    },
+    {
+      "id": "A01",
+      "name": "ReducedPotentialCollector",
+      "category": "analysis",
+      "instance_count": 1,
+      "purpose": "Converts complete sampled energies to reduced potentials with temperature and state bookkeeping.",
+      "deployment_dependencies": [
+        "K01",
+        "K02",
+        "K23"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": null,
+      "notes": "",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": null
+    },
+    {
+      "id": "A02",
+      "name": "MBARFreeEnergyEstimator",
+      "category": "analysis",
+      "instance_count": 1,
+      "purpose": "Resumable multistate free-energy estimation with explicit solver tolerance and nonconvergence state.",
+      "deployment_dependencies": [
+        "K01",
+        "K02",
+        "A01"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": null,
+      "notes": "",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": null
+    },
+    {
+      "id": "A03",
+      "name": "SamplingDiagnostics",
+      "category": "analysis",
+      "instance_count": 1,
+      "purpose": "Overlap, effective sample-size, correlation and replica-mixing diagnostics, evaluated by declared algorithms.",
+      "deployment_dependencies": [
+        "K01",
+        "K02",
+        "A01",
+        "A02"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": null,
+      "notes": "",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": null
+    },
+    {
+      "id": "A04",
+      "name": "UncertaintyAndResults",
+      "category": "analysis",
+      "instance_count": 1,
+      "purpose": "Combines preregistered repeat results, estimates uncertainty, subtracts solvent from complex legs and records claim status.",
+      "deployment_dependencies": [
+        "K01",
+        "K02",
+        "A02",
+        "A03"
+      ],
+      "configuration_dependencies": [],
+      "execution_location": "robinhood_evm",
+      "production_status": "planned",
+      "template": null,
+      "notes": "",
+      "code": {
+        "source": null,
+        "compiler_version": null,
+        "source_bundle_sha256": null,
+        "runtime_code_keccak256": null,
+        "runtime_size_bytes": null,
+        "initcode_size_bytes": null,
+        "source_bundle_file": null
+      },
+      "deployment": {
+        "chain_id": 4663,
+        "address": null,
+        "transaction_hash": null,
+        "block_number": null
+      },
+      "data": null
+    }
+  ]
+}
