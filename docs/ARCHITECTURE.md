@@ -1,5 +1,7 @@
 # ORVIA architecture and deployment accounting
 
+**Superseded deployment allocation:** the active target is now the [256-contract design](ARCHITECTURE_256.md), with every storage bank counted and no fixed dollar cap. This document retains the earlier 64-slot role plan and component history. Its old deployment counts and capacity observations are not the current allocation.
+
 The target is fully on-chain scientific execution from registered inputs on Robinhood Chain mainnet, chain 4663. Direct permissionless bounded calls trigger progress. A contract cannot wake itself up: a user or transaction submitter must call the advancement entry point and pay gas. Submission does not authorize supplying off-chain forces, trajectories or scientific results. Pool/swap-triggered submission is deferred.
 
 The draft design retains 64 production instances, above the requested minimum of 50. The count is a design constraint, not evidence of massive data, scientific accuracy or parallel chain throughput. The actual prepared model and final algorithms may require revising partitions while retaining the requested minimum. Empty or redundant contracts must not be used as evidence of computational scale.
