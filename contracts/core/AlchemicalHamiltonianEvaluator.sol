@@ -125,7 +125,10 @@ contract AlchemicalHamiltonianEvaluator {
     }
     function advance(uint256 id, uint256 work) external returns (uint256 processed, bool complete) {
         if (work == 0 || work > MAX_WORK) revert InvalidInput(); Run storage r = _get(id);
-        if (r.stage == Stage.Complete) revert WrongStage(); _assertRun(r);
+        _assertRun(r);
+        // Anyone may finish this job before its pipeline writer next advances.
+        // Preserve authenticated completed results for that writer to consume.
+        if (r.stage == Stage.Complete) return (0, true);
         AlchemicalTopologyCatalog.Definition memory d = AlchemicalTopologyCatalog(modules.topology).definition(r.input.topology);
         while (processed < work && r.stage != Stage.Complete) { _one(id, r, d); ++processed; }
         complete = r.stage == Stage.Complete; emit EvaluationAdvanced(id, r.stage, r.cursor, r.modeIndex);
