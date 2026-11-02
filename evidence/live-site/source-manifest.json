@@ -1,0 +1,298 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-11-02T18:42:41.580185+00:00",
+  "site": "https://orvia.fyi",
+  "release": "stress-workflow-and-terminal-status-fix",
+  "deploymentStatus": "published",
+  "productionDeployId": "6ae8d9a0d535b7bea82040ae",
+  "productionDeployUrl": "https://6ae8d9a0d535b7bea82040ae--orvia-7ulo.netlify.app",
+  "sourcePrefix": "orvia-site/",
+  "allowlist": {
+    "directories": [
+      "dist",
+      "src",
+      "server",
+      "test",
+      "netlify"
+    ],
+    "files": [
+      "package.json",
+      "package-lock.json",
+      "netlify.toml",
+      "README.md"
+    ]
+  },
+  "sourceFileCount": 67,
+  "sourceBytes": 9588754,
+  "files": {
+    "README.md": {
+      "bytes": 8843,
+      "sha256": "ed4e2d1ea1d9249cc7ca3edc1a9bd832d15f4caa3c35a4adecb386b1a8ff5f24"
+    },
+    "dist/app.js": {
+      "bytes": 17291,
+      "sha256": "7c6f4e1ffccaa3e573262c2e0a651c85233a0f73bd6d51713f4480719f2736f9"
+    },
+    "dist/assets/Manrope-LICENSE.txt": {
+      "bytes": 4387,
+      "sha256": "58172e0c0fac2cda8a37b348164bb55e44b0e69051e557e92b1d3f6910141f7b"
+    },
+    "dist/assets/Newsreader-LICENSE.txt": {
+      "bytes": 4394,
+      "sha256": "fdfad38143ec470553cae82a1e45320bdd1b9ec70415d37bd0171051d8a4ded8"
+    },
+    "dist/assets/heart-anatomy-license.txt": {
+      "bytes": 4507,
+      "sha256": "56431a50d6200be72339909859c74b02ed340c0796d91483f159d7dbe72123e2"
+    },
+    "dist/assets/heart-anatomy.glb": {
+      "bytes": 2524400,
+      "sha256": "b80a727d022a4ab07ccfcf15caccc228eaccb6d69ec0e72923324946ac35a946"
+    },
+    "dist/assets/heart-hero-dark.png": {
+      "bytes": 2239570,
+      "sha256": "9a2a03840c83baa968150a3c3f3d0fed71bf16f3e969e00bb1f050237f8d2bf4"
+    },
+    "dist/assets/heart-hero.png": {
+      "bytes": 2101170,
+      "sha256": "663a18a03b74238855f974ab901390b8421f7533d16ec41ecc93623c4d2f74ba"
+    },
+    "dist/assets/manrope-regular.ttf": {
+      "bytes": 96200,
+      "sha256": "ed335894f8d954263675f7e457bf657374d8b7be629be4dc43aef97c309ad3ae"
+    },
+    "dist/assets/manrope-semibold.ttf": {
+      "bytes": 96348,
+      "sha256": "68ed4be49ec7d32f07b42f9232dc01ca1df7a77be1d9b0731aac74db58235f34"
+    },
+    "dist/assets/molecule.json": {
+      "bytes": 33570,
+      "sha256": "62fbc92dfba19bea4e5cf5f5db00d0fce4598b4ce0f516be53fe1a680a76b203"
+    },
+    "dist/assets/newsreader-italic.woff2": {
+      "bytes": 146872,
+      "sha256": "5dfcd10d24af8c82927ba57f7983dd997f7b200594c09c35a1b1ed9fc4597506"
+    },
+    "dist/assets/newsreader-regular.woff2": {
+      "bytes": 132000,
+      "sha256": "6e4f2958c3a7c4a80acde4e5a679abe7e01bc1e30b92be3c7a8b696ef401d101"
+    },
+    "dist/assets/three-LICENSE.txt": {
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    },
+    "dist/contracts/catalog.json": {
+      "bytes": 72785,
+      "sha256": "5858f58c34c6c18c56cd6d68d5afe23af154c1c7be7913df8eb23e65dc7ecfa1"
+    },
+    "dist/contracts/contracts.css": {
+      "bytes": 6345,
+      "sha256": "1adac812d56b79d5c3364ee39827aaffc791cec5db5aa6a927920741352c58ad"
+    },
+    "dist/contracts/contracts.js": {
+      "bytes": 10585,
+      "sha256": "a6c76786ad0e82d43ce398901a8831b77b1b75ea4739d375264551e281db5d34"
+    },
+    "dist/contracts/index.html": {
+      "bytes": 8694,
+      "sha256": "564f88cf2742d426ea6d6ceb7371f25f890af049d8c85d8d0263f07acd6539b3"
+    },
+    "dist/contracts/source/ORVIAHybridCoordinator.sol": {
+      "bytes": 10847,
+      "sha256": "cd633a152cb9d0737962874b30bf36aed7a195eaea375c9984c9c823db8563db"
+    },
+    "dist/contracts/source/ORVIAReportShard.sol": {
+      "bytes": 5375,
+      "sha256": "ad027573551f677b32dd5b0e02bb751f45dc836f879ab8206ec8054d053ff4a2"
+    },
+    "dist/favicon.svg": {
+      "bytes": 491,
+      "sha256": "7c95af3956bb0b51cc84e517b96ca0e5f737df3188f8b20634db1a487b2ba089"
+    },
+    "dist/heart-scene.js": {
+      "bytes": 938199,
+      "sha256": "d2935ca56ac1c7d40bfc7063c5fa952c9159c69f5026138627192840254384ef"
+    },
+    "dist/index.html": {
+      "bytes": 34591,
+      "sha256": "a1ae36abf3a061b60c95c95b8e43516e489996d3b2551156f55f9b454fa792dc"
+    },
+    "dist/live/index.html": {
+      "bytes": 17429,
+      "sha256": "aae0d032cfc3677534fbc4a82b53da5d2753c497ef50fb30155ffb0c1f6f73eb"
+    },
+    "dist/live/live.css": {
+      "bytes": 17478,
+      "sha256": "8e3f3016e13d6d9c0841f1d6ce50f3e4c04890e5c17a08a3f4fab08a2cff1c2e"
+    },
+    "dist/live/live.js": {
+      "bytes": 17410,
+      "sha256": "922b4076705cc4b88c51515546058fcaa2a7701a77df51e5816b538467dbf3fb"
+    },
+    "dist/live/navigation.css": {
+      "bytes": 517,
+      "sha256": "43bfefdc2957db8270657506e7be0c18c3ce5fcec5cd6453abed4558075542c9"
+    },
+    "dist/live/viewer.js": {
+      "bytes": 582504,
+      "sha256": "9d490025f4beb82a0dd75e97f00701a3f948627a61c7cdbbdd5a1fc7effd861d"
+    },
+    "dist/molecule.js": {
+      "bytes": 8161,
+      "sha256": "8389de44df473313d0d7439e5c3cf388ea5c7a78145c5e7300d42ed10853c898"
+    },
+    "dist/motion.css": {
+      "bytes": 7062,
+      "sha256": "4ea831e71969654ce070b327e9d17dabfaa2937286ee6856c2c5973f167628d0"
+    },
+    "dist/orvia/index.html": {
+      "bytes": 23279,
+      "sha256": "f85159e245f0f2671f9fe62c8173dd91819eb85baf31155963b48147848b859d"
+    },
+    "dist/orvia/token.css": {
+      "bytes": 21721,
+      "sha256": "b96c74af99a89f926baeb40a1711a3b1c8d9e14585d2cb266a8983f56a4a237a"
+    },
+    "dist/orvia/token.js": {
+      "bytes": 6546,
+      "sha256": "ea966f5c603a6a8486dcd9ca7fe8953192a5255cc59a48fd3dc8dbfe5433b382"
+    },
+    "dist/polish.css": {
+      "bytes": 10210,
+      "sha256": "38c9cd40982e388a7db6b7c23c667c2bad744b318c7a7667cce1b31d36456d2b"
+    },
+    "dist/research.css": {
+      "bytes": 5027,
+      "sha256": "d4270e0a2a316738628112ccd6a1fdd4e514351fff20a51db02b5e8ce1cd077c"
+    },
+    "dist/site.js": {
+      "bytes": 14275,
+      "sha256": "f00972aab5c2030c1871b6f13ab771f095ac06cff0c97de7f71e954f1538e01b"
+    },
+    "dist/styles.css": {
+      "bytes": 47049,
+      "sha256": "6d7ec704d3c5f4e76625b54312f3e6004c8de390357f32e789e3193cd6cfb1d9"
+    },
+    "dist/theme-init.js": {
+      "bytes": 515,
+      "sha256": "c48ec7d73db50ddc89c818a3977cef8060c37a6f62611218913d4e94ffa862e2"
+    },
+    "dist/theme.css": {
+      "bytes": 10277,
+      "sha256": "47fb6616716423e1efd69d0d5d29c6bea7119335cea9d3482050c3d138817dc7"
+    },
+    "dist/typography.css": {
+      "bytes": 34439,
+      "sha256": "24466c5fa5139624e04ba2c06e0251059f481b2a90421b8c5dba13065da5c996"
+    },
+    "netlify.toml": {
+      "bytes": 241,
+      "sha256": "0c17edece005d61f231d39c17ebbaad6f1548ed8f05d5ed86ef5896f7b6b5ee7"
+    },
+    "netlify/functions/orvia-gpu.mjs": {
+      "bytes": 479,
+      "sha256": "bbb9d8fcd82418d01a346cea7e63c1911c26cec3e1706af0a8228b781faa5069"
+    },
+    "netlify/functions/orvia-status.mjs": {
+      "bytes": 1165,
+      "sha256": "88b3fee9b7d39818cbe4bf684f7fca160831ee7001b4c4dda51506b2d4af29c1"
+    },
+    "netlify/functions/orvia-trajectory.mjs": {
+      "bytes": 571,
+      "sha256": "44a8bbdb6fb5ffaf1122b8beb55380a55ecb84c19dbd6888de088cfdf886ff5f"
+    },
+    "netlify/functions/orvia-worker.mjs": {
+      "bytes": 548,
+      "sha256": "b59f98a0ffd2747dd079bbe809abcd62830c794ae293593f2b8cd60d0b37aeb1"
+    },
+    "package-lock.json": {
+      "bytes": 39282,
+      "sha256": "ca1db992e716d14ecc4fa70ee96762cd7ddfedbdbdc1609d66f42a59b1b8de09"
+    },
+    "package.json": {
+      "bytes": 490,
+      "sha256": "5b34c78d89a331b19e43366a887f8adf78f891e622a0c3d3a2e39d59b6aade0f"
+    },
+    "server/README.md": {
+      "bytes": 5629,
+      "sha256": "c2a4f50f1e5c8b10fe1560d8524da9da4a1bccd7546d2e977883faf90a1a8ed0"
+    },
+    "server/chain.mjs": {
+      "bytes": 5515,
+      "sha256": "4053c00983f60960359564153c72ebf9927e1a18707ce2debc43191b40ac7f16"
+    },
+    "server/data/evidence.mjs": {
+      "bytes": 74848,
+      "sha256": "9659d579e7ffaaef0058f114c860af3ebaff1b56c867d0bc69253e4075543098"
+    },
+    "server/gpu-metrics.mjs": {
+      "bytes": 4848,
+      "sha256": "6c98de509369269316e543550097ec999004828b9ceccba47888cf1ef67bfbd8"
+    },
+    "server/http.mjs": {
+      "bytes": 2268,
+      "sha256": "e4dc26fd3ea334e5e2fe80e7343e92fea11211ec4643d6cda02415e7b75124f9"
+    },
+    "server/status.mjs": {
+      "bytes": 2052,
+      "sha256": "52d79b8baea846e9c6e4d6c3bcb64faed03074779f9c9aa95fb92df08d1258a9"
+    },
+    "server/telemetry.mjs": {
+      "bytes": 7268,
+      "sha256": "1d2cfc5db1559e350a93062bcd982297117ab10223f2fd7c4834887f888b9473"
+    },
+    "server/trajectory.mjs": {
+      "bytes": 8708,
+      "sha256": "5f3ba094f3153b7beceb5a2b4f3ad7aa010e348ec4ff0c653467fcd822ba17e1"
+    },
+    "server/workflows.mjs": {
+      "bytes": 1354,
+      "sha256": "61f434b71540229f38b9dbe59bf5dfedc271de888a82d47d5b381cb9dd393fde"
+    },
+    "src/heart-anatomy.js": {
+      "bytes": 23110,
+      "sha256": "a2fa2c9ecabba031079118cbbfc1495e4cc56ff1b497f07cc6f4c779f8086173"
+    },
+    "src/heart-fibers.js": {
+      "bytes": 13699,
+      "sha256": "6d4aa02ef64435ea517ee65217d58769ffa92423d014db9ab56c310c6e0c938a"
+    },
+    "src/heart-scene.js": {
+      "bytes": 18738,
+      "sha256": "ea5bf7744b483f0ec7c6b92ae4e212db44c4399458120a33903ae0def75b841f"
+    },
+    "src/trajectory-data.js": {
+      "bytes": 3701,
+      "sha256": "33a9f79eaccf8bc83676a6e272d73f73eab4169e647112a95af9461ebcfb68ba"
+    },
+    "src/trajectory-data.test.mjs": {
+      "bytes": 3126,
+      "sha256": "667fd4dccdc9f235412e7694a027ed11d6b45fc05f572013a067e58b24feb3a5"
+    },
+    "src/trajectory-viewer.js": {
+      "bytes": 16225,
+      "sha256": "59835142410b650b7a9d29b1f655bdd4372a3178d7778c6aec2ed2e031ff7b8e"
+    },
+    "src/vessel-material.js": {
+      "bytes": 4779,
+      "sha256": "bb0660ae7ac478d4049187d3e7864244ccee2f384f0d3cee7c5016aa63dce0c8"
+    },
+    "test/gpu-metrics.test.mjs": {
+      "bytes": 3352,
+      "sha256": "e1e5110dd3fe91f141987bef5bf563213f1015b8d099fa1e2c9840d790ebc74d"
+    },
+    "test/live-backend.test.mjs": {
+      "bytes": 12301,
+      "sha256": "290ffc25581c40db006144eccf3e83b6f8abce0af1a621e7a0c4bcbe0c75598b"
+    },
+    "test/live-status-ui.test.mjs": {
+      "bytes": 3914,
+      "sha256": "71344f1c46a6ca7dc60c797478945648d380996d44a678f29da1bf02e6526fd3"
+    },
+    "test/trajectory.test.mjs": {
+      "bytes": 8099,
+      "sha256": "fb05f36dad9ce2a76e331523a510bf231fb24e5f2eb9912a04a90be7669a8eb2"
+    }
+  },
+  "publicVerificationAt": "2026-11-02T18:43:09.025860+00:00"
+}

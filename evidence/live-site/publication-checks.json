@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-02T18:42:41.580185+00:00",
+  "release": "stress-workflow-and-terminal-status-fix",
+  "deploymentStatus": "published",
+  "sourceFileCount": 67,
+  "explicitAllowlistOnly": true,
+  "symlinksIncluded": false,
+  "hiddenFilesIncluded": false,
+  "dependencyInstallIncluded": false,
+  "credentialOrEnvironmentFilesIncluded": false,
+  "secretPatternChecks": {
+    "private_key_block": "no_matches",
+    "known_provider_token": "no_matches",
+    "credential_url": "no_matches",
+    "alchemy_url_token": "no_matches",
+    "local_user_path": "no_matches",
+    "literal_sensitive_assignment": "no_matches"
+  },
+  "secretReviewScope": "Explicit source allowlist and known credential/literal/path patterns; no hosting credentials or local output were read into the archive.",
+  "sourceUnchangedByPackaging": true,
+  "tests": {
+    "focusedWarningAndBackend": {
+      "passed": 15,
+      "failed": 0,
+      "rerunAt": "2026-11-02T18:42:41.580185+00:00"
+    },
+    "stressHistoryMetricsAndViewer": {
+      "passed": 29,
+      "failed": 0,
+      "scope": "previous successful test run of unchanged frozen source"
+    }
+  },
+  "currentWorkflow": {
+    "jobId": "orvia-stress-20261102-02",
+    "totalSteps": 400000,
+    "representativeTrajectoryFrames": 101,
+    "representativeTrajectoryDurationFs": 8000,
+    "completionClaimed": false
+  },
+  "historicalWorkflow": {
+    "jobId": "orvia-live-20261102-01",
+    "readOnly": true,
+    "trajectoryCount": 2,
+    "trajectoryDurationFs": 100
+  },
+  "scientificAcceptance": false,
+  "gitCommitCreatedByPackaging": false,
+  "githubPublicationOfThisRevisionConfirmed": false,
+  "archiveRoundTripVerified": true,
+  "archiveEntryCount": 69,
+  "productionDeployId": "6ae8d9a0d535b7bea82040ae",
+  "productionDeployUrl": "https://6ae8d9a0d535b7bea82040ae--orvia-7ulo.netlify.app",
+  "publicVerification": {
+    "checkedAt": "2026-11-02T18:43:09.025860+00:00",
+    "site": "https://orvia.fyi",
+    "productionDeployId": "6ae8d9a0d535b7bea82040ae",
+    "checks": [
+      {
+        "path": "/live/",
+        "status": 200,
+        "bytes": 17429,
+        "sha256": "aae0d032cfc3677534fbc4a82b53da5d2753c497ef50fb30155ffb0c1f6f73eb",
+        "matchesLocalSource": true
+      },
+      {
+        "path": "/live/live.js",
+        "status": 200,
+        "bytes": 17410,
+        "sha256": "922b4076705cc4b88c51515546058fcaa2a7701a77df51e5816b538467dbf3fb",
+        "matchesLocalSource": true
+      },
+      {
+        "path": "/live/viewer.js",
+        "status": 200,
+        "bytes": 582504,
+        "sha256": "9d490025f4beb82a0dd75e97f00701a3f948627a61c7cdbbdd5a1fc7effd861d",
+        "matchesLocalSource": true
+      },
+      {
+        "path": "/contracts/",
+        "status": 200,
+        "bytes": 8694,
+        "sha256": "564f88cf2742d426ea6d6ceb7371f25f890af049d8c85d8d0263f07acd6539b3",
+        "matchesLocalSource": true
+      },
+      {
+        "path": "/api/orvia/status",
+        "status": 200,
+        "bytes": 63225,
+        "sha256": "dd2bccf084987516de53f4fd497355fd06776edcc2b3b27a332c1bba2e77cd1d",
+        "statusSummary": {
+          "schemaVersion": 1,
+          "chainAvailable": true,
+          "contracts": 256,
+          "reportMatches": true,
+          "jobId": "orvia-stress-20261102-02",
+          "jobState": "unknown",
+          "gpuMetrics": {
+            "available": false,
+            "stale": true,
+            "scope": "whole_device",
+            "reason": "no_samples"
+          },
+          "trajectories": [
+            {
+              "jobId": "orvia-live-20261102-01",
+              "modelId": "complex33",
+              "historical": true,
+              "durationFs": 100,
+              "sha256": "e8694d3133193d41725a3615cf3f3a6084b12c119823fc99f8308f49a22e9e07"
+            },
+            {
+              "jobId": "orvia-live-20261102-01",
+              "modelId": "solvent33",
+              "historical": true,
+              "durationFs": 100,
+              "sha256": "ab85e99ee9d3f1c8dff0db943a3804aadb39b1aecc69ba0593dadc31391681bb"
+            }
+          ]
+        }
+      },
+      {
+        "path": "/api/orvia/gpu",
+        "status": 404
+      }
+    ],
+    "historicalArtifactChecks": [
+      {
+        "modelId": "complex33",
+        "jobId": "orvia-live-20261102-01",
+        "status": 200,
+        "bytes": 2398851,
+        "sha256": "e8694d3133193d41725a3615cf3f3a6084b12c119823fc99f8308f49a22e9e07",
+        "hashMatches": true,
+        "historical": true
+      },
+      {
+        "modelId": "solvent33",
+        "jobId": "orvia-live-20261102-01",
+        "status": 200,
+        "bytes": 145990,
+        "sha256": "ab85e99ee9d3f1c8dff0db943a3804aadb39b1aecc69ba0593dadc31391681bb",
+        "hashMatches": true,
+        "historical": true
+      }
+    ],
+    "methodRestrictedRouteObservation": "GET /api/orvia/gpu is not mapped; this endpoint accepts POST only. No upload was attempted by this read-only check."
+  },
+  "sourceStillMatchesFrozenManifest": true
+}
