@@ -4,8 +4,8 @@
     "sha256": "c205be153469c5b4f511cdbe8bc38a2fa1aca852d28dc1f885bbafffbab0dfa7"
   },
   "gate-status.json": {
-    "bytes": 1422,
-    "sha256": "af905a96be960deeb25b98f0eab05c81cdbd6a83854274853056d58ce87e66db"
+    "bytes": 2118,
+    "sha256": "a41ec446a3855c03c23bf1c80d55e131d771a467bab376f71cf234c639fdc3c3"
   },
   "gpu-gate.json": {
     "bytes": 25275,
@@ -14,6 +14,10 @@
   "gpu-runtime-gate-input.tar.gz": {
     "bytes": 412990,
     "sha256": "0e62c5ee2e8077c69e2576714289b940a16cbcd6dd7ea2547b4efdc74881f9a3"
+  },
+  "gpu-scanner-pilot.json": {
+    "bytes": 79396,
+    "sha256": "3401df6a6666a42661f71ec3663010f65897724486939dda33eec25d69b70027"
   },
   "h200-runtime-gate-results.tar.gz": {
     "bytes": 32081,

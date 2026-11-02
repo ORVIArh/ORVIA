@@ -14,11 +14,25 @@
     "source_campaign": "workspace:output/quantum-corrected/v0.2-cpu-reproduction",
     "status": "in_progress"
   },
+  "full_molecule_gpu_heldouts": {
+    "completed_results_in_this_snapshot": 0,
+    "count": 6,
+    "original_maximum_optimization_steps": 60,
+    "status": "authorized_next_step_not_yet_observed"
+  },
   "full_simulation_cost": null,
   "geometry_changing_gpu_scanner": {
-    "acceptance_claimed": false,
-    "results_available": false,
-    "status": "pilot_in_progress_at_last_observation"
+    "final_gradient_max_error_hartree_per_bohr": 3.5286070776407996e-07,
+    "finite_difference_max_error_hartree_per_bohr": 9.107992516632635e-06,
+    "geometry_converged": false,
+    "hardware_execution_verified": true,
+    "maximum_geometry_steps": 3,
+    "report": "gpu-scanner-pilot.json",
+    "report_sha256": "3401df6a6666a42661f71ec3663010f65897724486939dda33eec25d69b70027",
+    "runtime_seconds": 430.186467085965,
+    "scientific_acceptance": false,
+    "source_archive_sha256": "88f4d81b7a142a540f3c32e46c7c0b0c4111893042f282f5f786de52079d009b",
+    "status": "passed_numerical_pilot_only"
   },
   "individual_parameter_identifiability": {
     "audit": "design-rank-audit.json",
@@ -34,5 +48,5 @@
   "production_ready": false,
   "schema": "orvia.quantum-gate-status.v1",
   "scientific_acceptance": false,
-  "updated_utc": "2026-11-02T16:45:00Z"
+  "updated_utc": "2026-11-02T16:50:04.420495+00:00"
 }
