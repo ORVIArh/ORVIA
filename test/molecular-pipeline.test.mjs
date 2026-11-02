@@ -67,7 +67,7 @@ async function setup(t){
  }
  const policy=tid=>({protocol,topology:tid,leg:id('ORVIA.SOLVENT.v1'),seed:id('Pipeline repeat seed'),stream:id('Pipeline declared random stream'),replica:7,dt:q(1/32),friction:q(2),kT:q(1),equilibrationSteps:1,stride:1,samplesPerState:4,maxLag:1,minimumChronologySamples:4,mbarTolerance:q(1e-10),overlapThreshold:q(.01),minimumESS:q(1),normalizationTolerance:q(1e-8),maxMbarIterations:1000});
  async function campaign(tid,overrides={}){const cid=id(`hybrid-campaign-${++serial}`);await transact(pipeline.createCampaign(cid,{...policy(tid),...overrides},{gasLimit}));return cid;}
- async function start(cid,stateIndex){const run=await pipeline.nextRun();await transact(pipeline.connect(contributor).startWindow(cid,stateIndex,{gasLimit}));return run;}
+ async function start(cid,stateIndex){const run=await pipeline.nextRun();await transact(pipeline.startWindow(cid,stateIndex,{gasLimit}));return run;}
  const gas=[];
  async function advance(run,work=8){const before=await pipeline.runInfo(run);const receipt=await transact(pipeline.connect(contributor).advance(run,work,{gasLimit}));gas.push({run:String(run),stage:Number(before.stage),step:String(before.step),work,gas:String(receipt.gasUsed)});return pipeline.runInfo(run);}
  async function initialize(run){for(let n=0;n<2000;++n){if((await pipeline.runInfo(run)).stage===4n)return;await advance(run,1);}assert.fail('initialization did not finish');}

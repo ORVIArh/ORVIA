@@ -13,8 +13,9 @@ const copy=x=>JSON.parse(JSON.stringify(x));
 const compilations=new Map();
 // The historical shared build predates this connected path. Compile this fixture's
 // complete dependency graph in memory, without changing shared artifacts/reports.
-function compileFixture(banked=false){
- if(compilations.has(banked))return compilations.get(banked);
+function compileFixture(banked=false,analysis=false){
+ const key=`${banked}:${analysis}`;
+ if(compilations.has(key))return compilations.get(key);
  const sources={};
  function add(file){
   if(sources[file])return;
@@ -22,18 +23,19 @@ function compileFixture(banked=false){
   for(const match of content.matchAll(/import\s+(?:[^;]*?from\s+)?["']([^"']+)["']\s*;/g))add(path.posix.normalize(path.posix.join(path.posix.dirname(file),match[1])));
  }
  for(const file of ['AlchemicalTopologyCatalog','AlchemicalHamiltonianEvaluator','MolecularSimulationPipeline',...(banked?['BankedWorkingState','BankedInputCatalog']:['ShardedWorkingState','PartitionedInputCatalog'])])add(`contracts/core/${file}.sol`);
+ if(analysis)add('contracts/analysis/UncertaintyAndResults.sol');
  assert.equal(solc.version(),'0.8.26+commit.8a97fa7a.Emscripten.clang');
  const settings={optimizer:{enabled:true,runs:200},evmVersion:'shanghai',outputSelection:{'*':{'*':['abi','evm.bytecode.object']}}};
  const input={language:'Solidity',sources,settings};const output=JSON.parse(solc.compile(JSON.stringify(input)));
  const errors=output.errors?.filter(x=>x.severity==='error')??[];assert.equal(errors.length,0,errors.map(x=>x.formattedMessage).join('\n'));
  for(const[file,contracts]of Object.entries(output.contracts))for(const[name,c]of Object.entries(contracts))if(c.evm.bytecode.object)artifacts[name]={source:file,abi:c.abi,bytecode:'0x'+c.evm.bytecode.object};
  const compilation={compiler:solc.version(),settings,sourceSha256:Object.fromEntries(Object.entries(sources).map(([file,{content}])=>[file,createHash('sha256').update(content).digest('hex')]))};
- compilations.set(banked,compilation);return compilation;
+ compilations.set(key,compilation);return compilation;
 }
 
 async function setup(t,options={}){
  const banked=options.banked===true;
- const compilation=compileFixture(banked);
+ const compilation=compileFixture(banked,options.analysis===true);
  const coreDeployments=[];
  const deployCore=async(name,signer,args=[])=>{const c=await deploy(name,signer,args);const receipt=await c.deploymentTransaction().wait();coreDeployments.push({contract:name,address:await c.getAddress(),gas:String(receipt.gasUsed)});return c;};
  const transport=ganache.provider({logging:{quiet:true},chain:{chainId:31337,hardfork:'shanghai',allowUnlimitedContractSize:true},miner:{blockGasLimit:30_000_000},wallet:{totalAccounts:3}});
@@ -65,6 +67,8 @@ async function setup(t,options={}){
  const collector=await deployCore('ReducedPotentialCollector',owner,[await pipeline.getAddress(),ma]);
  const chronology=await deployCore('TimeSeriesDiagnostics',owner,[await pipeline.getAddress(),ma]);
  const estimator=await deployCore('MBARFreeEnergyEstimator',owner,[await collector.getAddress(),ma,await scalar.getAddress()]);
+ const diagnostic=options.analysis?await deployCore('SamplingDiagnostics',owner,[estimator.target]):null;
+ const results=options.analysis?await deployCore('UncertaintyAndResults',owner,[diagnostic.target,ownerAddress]):null;
  const bankDeployments=[];
  if(banked){
   for(let i=0;i<96;i+=4){const r=await transact(inputs.createBanks(4,{gasLimit}));bankDeployments.push({pool:'input',gas:String(r.gasUsed)});}
@@ -73,6 +77,7 @@ async function setup(t,options={}){
  await transact(pipeline.bind(await state.getAddress(),await hamiltonian.getAddress(),await output.getAddress(),await collector.getAddress(),await chronology.getAddress(),await estimator.getAddress(),{gasLimit}));
  const protocol=id('ORVIA-ALCHEMICAL-PIPELINE-VALIDATION');
  const registered=[...Object.values(addresses),...await Promise.all([pipeline,state,hamiltonian,output,collector,chronology,estimator].map(c=>c.getAddress()))];
+ if(options.analysis)registered.push(diagnostic.target,results.target);
  await transact(registry.registerProtocol(protocol,id('Unconstrained finite hybrid model fixture; not molecular acceptance'),registered));
  let serial=0;
  async function stream(role,values){
@@ -97,13 +102,13 @@ async function setup(t,options={}){
  }
  const policy=tid=>({protocol,topology:tid,leg:id('ORVIA.SOLVENT.v1'),seed:id('Pipeline repeat seed'),stream:id('Pipeline declared random stream'),replica:7,dt:q(1/32),friction:q(2),kT:q(1),equilibrationSteps:1,stride:1,samplesPerState:4,maxLag:1,minimumChronologySamples:4,mbarTolerance:q(1e-10),overlapThreshold:q(.01),minimumESS:q(1),normalizationTolerance:q(1e-8),maxMbarIterations:1000});
  async function campaign(tid,overrides={}){const cid=id(`hybrid-campaign-${++serial}`);await transact(pipeline.createCampaign(cid,{...policy(tid),...overrides},{gasLimit}));return cid;}
- async function start(cid,stateIndex){const run=await pipeline.nextRun();await transact(pipeline.connect(contributor).startWindow(cid,stateIndex,{gasLimit}));return run;}
+ async function start(cid,stateIndex){const run=await pipeline.nextRun();await transact(pipeline.startWindow(cid,stateIndex,{gasLimit}));return run;}
  const gas=[];
  async function advance(run,work=8){const before=await pipeline.runInfo(run);const receipt=await transact(pipeline.connect(contributor).advance(run,work,{gasLimit}));gas.push({run:String(run),stage:Number(before.stage),step:String(before.step),work,gas:String(receipt.gasUsed)});return pipeline.runInfo(run);}
  async function initialize(run){for(let n=0;n<2000;++n){if((await pipeline.runInfo(run)).stage===4n)return;await advance(run,1);}assert.fail('initialization did not finish');}
  async function finish(run,schedule=[8]){for(let n=0;n<5000;++n){if((await pipeline.runInfo(run)).stage===11n)return;await advance(run,schedule[n%schedule.length]);}assert.fail('window did not finish');}
  async function stateAt(run,atoms){const r=[];for(let n=0;n<atoms;++n){const s=await pipeline.stateAt(run,n);r.push(s.map(x=>[...x]));}return r;}
- return{transport,provider,owner,contributor,math,topology,inputs,pipeline,state,output,hamiltonian,collector,chronology,estimator,protocol,makeTopology,campaign,start,advance,initialize,finish,stateAt,gas,compilation,coreDeployments,bankDeployments};
+ return{transport,provider,owner,contributor,math,topology,inputs,pipeline,state,output,hamiltonian,collector,chronology,estimator,diagnostic,results,protocol,makeTopology,campaign,start,advance,initialize,finish,stateAt,gas,compilation,coreDeployments,bankDeployments};
 }
 
 function harmonicFixture(){
