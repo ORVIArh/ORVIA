@@ -160,3 +160,7 @@ Immutable provided components are the supported dependency model. Pinning the ru
 ## v0.5.1 continuation evidence
 
 `reports/mainnet_preflight.json` is the successful provider read; `reports/official_public_preflight.json` retains the failed official-public probe. `reports/target_fork_smoke.json` records the kernel-only local state fork. None can replace the complete prepared-model pipeline/workload acceptance required by the production gate. No mainnet transactions were sent.
+
+## Supplementary actual target-node numerical execution
+
+The separate [target-node read-only probe](TARGET_NODE_EXECUTION.md) now passes exact creation-runtime and scalar/pair return checks through the Robinhood provider for two kernels. It is distinct from the Ganache state-fork smoke and from full transaction/model acceptance. The source-bound offline suite does not include this separately packaged network experiment. No transaction was sent and the mainnet gate remains closed.
