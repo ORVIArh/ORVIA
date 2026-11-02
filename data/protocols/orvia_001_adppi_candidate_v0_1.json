@@ -1,0 +1,176 @@
+{
+  "schema_version": "orvia.proposed-scientific-protocol.v0.1",
+  "protocol_id": "ORVIA-001-ADPPI-CANDIDATE",
+  "version": "0.1.0",
+  "as_of_date": "2026-11-02",
+  "status": "UNAPPROVED_DRAFT_INCOMPLETE_INPUTS",
+  "approved": false,
+  "registered": false,
+  "ready_for_execution": false,
+  "supersedes_original_orvia_001": false,
+  "original_model_retained": "ORVIA-001: deposited Mg/ADP/vanadate state; remains blocked",
+  "proposed_change": "Separately prepared Mg/ADP/H2PO4 molecular state, conditional on review and independent validation",
+  "objective": "Compound 17 to aficamten state-specific relative binding free energy",
+  "sign_convention": "delta_delta_G_bind = delta_G_complex_A_to_B - delta_G_solvent_A_to_B",
+  "receptor_candidate": {
+    "pdb_id": "9F6C",
+    "species": "Bos taurus",
+    "assembly_id": "1",
+    "polymer_label_asym_id": "A",
+    "preserve_modified_residues": [
+      "M3L129",
+      "M3L549"
+    ],
+    "construct_boundaries_and_caps": null,
+    "missing_sequence_ranges": [
+      [
+        1,
+        32
+      ],
+      [
+        202,
+        210
+      ],
+      [
+        370,
+        370
+      ],
+      [
+        626,
+        644
+      ],
+      [
+        732,
+        735
+      ]
+    ],
+    "incomplete_atom": "TRP130 CG",
+    "introduced_coordinate_artifacts": null
+  },
+  "cofactor_candidate": {
+    "species": [
+      {
+        "name": "ADP",
+        "net_charge_e": -3
+      },
+      {
+        "name": "Mg",
+        "net_charge_e": 2
+      },
+      {
+        "name": "H2PO4",
+        "net_charge_e": -1
+      }
+    ],
+    "basis": "Published myosin-5 components and source CHAMBER charge audit; not cardiac transfer validation",
+    "cardiac_coordination_validation": null,
+    "complete_compatible_parameters": null,
+    "parameters_transferred": false
+  },
+  "ligands": {
+    "A": "compound 17",
+    "B": "aficamten",
+    "common_heavy_atoms": 24,
+    "stereochemistry": "R retained",
+    "hydrogen_complete_map": null,
+    "microstates": null,
+    "endpoint_parameters": null,
+    "compound17_pose_validation": null,
+    "hybrid_topology": null,
+    "lambda_dependent_hamiltonian": null
+  },
+  "force_field": {
+    "family_for_investigation": "One compatible CHARMM-family model; no release adopted",
+    "protein_release_and_hashes": null,
+    "m3l_parameters_and_hashes": null,
+    "ligand_parameters_and_hashes": null,
+    "cofactor_parameters_and_hashes": null,
+    "water_and_ion_parameters_and_hashes": null,
+    "term_coverage_and_cmap_reconciliation": null
+  },
+  "proposed_sampling_plan": {
+    "planning_values_only": true,
+    "temperature_K": 300,
+    "minimum_independent_repeats_per_leg": 3,
+    "warning": "These values are neither approved conditions nor evidence of sufficient sampling",
+    "ensemble": null,
+    "pressure_or_fixed_density_method": null,
+    "pH_and_protonation_rationale": null,
+    "water_ion_model_and_concentrations": null,
+    "box_vectors": null,
+    "integrator_constraints_timestep": null,
+    "electrostatics": null,
+    "lambda_schedule": null,
+    "minimization_equilibration": null,
+    "production_length_and_extension_rule": null,
+    "seeds_and_draw_domain": null,
+    "sample_retention_and_decorrelation": null,
+    "estimator_and_uncertainty": null
+  },
+  "acceptance_requirements": {
+    "freeze_before_final_benchmark": true,
+    "energy_and_force_units_and_tolerances": null,
+    "constraint_and_ensemble_tolerances": null,
+    "overlap_and_effective_sample_thresholds": null,
+    "repeat_and_uncertainty_criteria": null,
+    "retain_failed_attempts": true,
+    "complete_parameter_import_rejects_unsupported_terms": true,
+    "transaction_partition_retry_invariance": true,
+    "full_system_gas_storage_measurement": null,
+    "full_engine_capability_evidence": null
+  },
+  "source_evidence": {
+    "immutable_local_inputs": {
+      "data/source/9F6C.cif": {
+        "sha256": "9b7f16917441dbb4afe4bca3b3ee2866878ecc97f566fba738f33490572de3aa",
+        "bytes": 2361217
+      },
+      "data/source/6I6.cif": {
+        "sha256": "2fbc550eabade8660ade0c020cd4761cd8e7135c23fae61f819ece1ab808757f",
+        "bytes": 9686
+      },
+      "data/source/compound17_pair_rows.json": {
+        "sha256": "c34d542efb07a4fb7d9e6eccbe808146a8f3e1c064c2db1ef563e04f70d5dd99",
+        "bytes": 717
+      },
+      "data/prepared_candidate/ligand_atom_map.json": {
+        "sha256": "a62f7ad7d43202f8aff1d1a8624d7e2daf5dc8d72be4974e16f96a9b4423a21d",
+        "bytes": 24373
+      },
+      "data/source/alternative_models/Primed_input.pdb.gz": {
+        "sha256": "6e813b922c27adbc806decb5729ea5a3217fd6ea31884ca9bff385fb51a61f4a",
+        "bytes": 7450998
+      },
+      "data/source/alternative_models/Input_parm.prmtop.gz": {
+        "sha256": "b7ff6a3e911d91e11f3bd791a8a71ad8490a189c3d97a39224f3128dd5ddae01",
+        "bytes": 1412048
+      }
+    },
+    "primary_methods": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12158783/",
+    "public_dataset": "https://doi.org/10.6084/m9.figshare.24948180.v1",
+    "charge_format_implementation": "https://parmed.github.io/ParmEd/html/_modules/parmed/amber/_chamberparm.html",
+    "limitations": [
+      "Source reference is mutant mouse myosin-5 actomyosin, not cardiac myosin or an aficamten complex.",
+      "Public topology and coordinates are not a matching complete pair; prefix truncation fails.",
+      "No simulation parameters are adopted or fitted by this draft."
+    ]
+  },
+  "execution_boundary": {
+    "target_chain": "Robinhood Chain",
+    "all_production_minimization_equilibration_sampling_analysis_onchain": true,
+    "conventional_reference_role": "Development validation only",
+    "initial_trigger": "Permissionless bounded direct advancement after experiment registration",
+    "swap_trigger": "Deferred"
+  },
+  "claims": {
+    "production_result_available": false,
+    "experimentally_validated_affinity": false,
+    "functional_IC50_is_Kd": false
+  },
+  "required_before_registration": [
+    "Explicitly select the molecular-state protocol without overwriting the original.",
+    "Provide complete reviewed coordinate/topology/force-field artifacts for both solvated legs.",
+    "Replace every null requirement with a reviewed value or evidenced inapplicability and immutable artifact hashes.",
+    "Validate the complete Hamiltonian, sampling and integrated on-chain engine before freezing a new registered protocol version."
+  ]
+}
