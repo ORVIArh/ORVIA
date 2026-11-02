@@ -1,0 +1,69 @@
+{
+  "schema": "orvia.six-native-gpu-heldout-jobs.v1",
+  "status": "completed_all_six",
+  "passed": true,
+  "workers": 2,
+  "max_wall_seconds": 4200,
+  "per_job_seconds": 1200,
+  "pilot_sha256": "3401df6a6666a42661f71ec3663010f65897724486939dda33eec25d69b70027",
+  "gate_sha256": "b6cbfdf318268549a83a7692e837b52853d03fd9678acfb1333bab769e613b2b",
+  "worker_sha256": "f8ca593635d1556ad0960639c41ef0c5b46c6b3bcea3a30d8e8e6d2cdc418b98",
+  "launcher_sha256": "d3831b9476160bb6d54d944ad7bcf36458eccc7bc0502bda11f846dd63c85173",
+  "scientific_acceptance": false,
+  "production_ready": false,
+  "automatic_pod_shutdown": false,
+  "billing_cost": null,
+  "finished": [
+    {
+      "job": "heldout_A_+090",
+      "exitcode": 0,
+      "timed_out": false,
+      "status": "completed",
+      "elapsed_seconds": 540.1743755259085,
+      "result_sha256": "d936731eebbbd979370545e2e311ad54041a0a891047dba52bef595946f21e99"
+    },
+    {
+      "job": "heldout_A_+030",
+      "exitcode": 0,
+      "timed_out": false,
+      "status": "completed",
+      "elapsed_seconds": 570.2227106459904,
+      "result_sha256": "81206ecd975025c5dfc3f5f25e10abaa79eee0194eceb6f9f681f122dd5986d8"
+    },
+    {
+      "job": "heldout_A_+150",
+      "exitcode": 0,
+      "timed_out": false,
+      "status": "completed",
+      "elapsed_seconds": 234.24823445407674,
+      "result_sha256": "10285312b92c32f417f3565bb5beccae57e93d584968bdd1dbf46b5b0c440475"
+    },
+    {
+      "job": "heldout_B_+030",
+      "exitcode": 0,
+      "timed_out": false,
+      "status": "completed",
+      "elapsed_seconds": 417.93535555386916,
+      "result_sha256": "05540f6969d473dc1576d51138265e34bab59727d414717031fce87e651bb1d4"
+    },
+    {
+      "job": "heldout_B_+090",
+      "exitcode": 0,
+      "timed_out": false,
+      "status": "completed",
+      "elapsed_seconds": 401.95054005109705,
+      "result_sha256": "a500640495e23e9e023e4f0891f74c4c57b8e04802d051c62a970c9b79eb1133"
+    },
+    {
+      "job": "heldout_B_+150",
+      "exitcode": 0,
+      "timed_out": false,
+      "status": "completed",
+      "elapsed_seconds": 277.3174717940856,
+      "result_sha256": "8aa315c6c52b4d3e0e7be2dc81eb51493eac5222bb1b3d15b8e9b7ccef6ab7e6"
+    }
+  ],
+  "elapsed_seconds": 1266.4891445350368,
+  "pending": [],
+  "active": {}
+}
