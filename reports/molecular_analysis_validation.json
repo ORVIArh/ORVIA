@@ -1,0 +1,274 @@
+{
+  "status": "passed_local_fixture",
+  "passed": true,
+  "mainnetTransactionsSent": 0,
+  "scope": "Local two-atom identical-endpoint test with three paired repeats. This validates authenticated wiring, not molecular accuracy, equilibration or production independence.",
+  "testSha256": "015d9254bbf3fa115770df554d5a2baf02469ace34305c925228f87f3d234576",
+  "compilation": {
+    "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+    "settings": {
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "evmVersion": "shanghai",
+      "outputSelection": {
+        "*": {
+          "*": [
+            "abi",
+            "evm.bytecode.object"
+          ]
+        }
+      }
+    },
+    "sourceSha256": {
+      "contracts/core/AlchemicalTopologyCatalog.sol": "f92337cf81ad28b0cf9842d3a34a8a119836aa5ed30698c681d621ff69ae362c",
+      "contracts/math/FloatMath.sol": "a474f7656f9ffc3d3149e6a0e08f2fcf6838483ae689d1e6a7cf7400f8bad74b",
+      "contracts/math/vendor/ABDKMathQuad.sol": "dd13f72bf828a699c94e96d1377daabce3dcc1d4b29af7215501a611d3cb7c9e",
+      "contracts/kernels/OrthorhombicGeometry.sol": "9521042dab915a3fc6cfe2bb1395c1aba0c6a2fad58d7623cd4a10435de3808b",
+      "contracts/core/AlchemicalHamiltonianEvaluator.sol": "e9b600dbb007e1d6f479db23eea48316eadc21b4333ca9f0a37c5712a92a30ee",
+      "contracts/core/ExperimentRegistry.sol": "39c3e8382b3fae049c16da81b1ea586e36deaa5ecbbda466b8377e240f78f047",
+      "contracts/kernels/HarmonicBondKernel.sol": "cbb2b99181ab7eec4a07dca99734e9ab2a3fa6ae4bd61b39d3a7bc6ef0f63108",
+      "contracts/kernels/HarmonicAngleKernel.sol": "d525eeecc8625d1e05112dc2977a91fe1d688d7585f99d08151cdc73fa2cbe09",
+      "contracts/math/ElementaryMath.sol": "9965604b32c46748605948c58f092ead3911e231baf39e7d4bea02beb3200062",
+      "contracts/kernels/PeriodicTorsionKernel.sol": "67e457741c247eb2af7248cd897a68b997caeb0db84c073c74e477570788765f",
+      "contracts/kernels/LennardJonesKernel.sol": "a02748bef456a33b15f0cfa7a1b5a20f23d6021f4e741b0cf0a9b61af457dca2",
+      "contracts/kernels/SoftcoreLennardJonesKernel.sol": "fb6b215e82aff471a1f615f6809c45e1b3aeae6df804ed29673ae0e63207e2b4",
+      "contracts/kernels/EwaldRealSpaceKernel.sol": "f4ceec084d7131de3141ad0f8be06dd1ff6dfa722d6499740af9de7cd431ebf1",
+      "contracts/kernels/EwaldKernelBase.sol": "c9f44e1dbf573ad9505e886e0f3854c2ffda850e3a0fd0b08c22563f23031a17",
+      "contracts/kernels/EwaldReciprocalKernel.sol": "7225171a789fdf4ced5256b293a428138e27c4c2dbe73eea5f22a52af94ec1bf",
+      "contracts/kernels/EwaldCorrections.sol": "0b8210b673f03606d1beb1d8a1663f2bc4bf371a884e5443733fa70ecc6d78e8",
+      "contracts/core/MolecularSimulationPipeline.sol": "55c9700c118c84369e7acc49ea27afcdbf35dc30772bc857b9288bbfda700553",
+      "contracts/kernels/LangevinBAOABKernel.sol": "a469bddd9acd9cf0551293f9f9112a8fba07a7f0caa5e3b6f0747982411541c9",
+      "contracts/math/ScalarMath.sol": "fd95d9e52db57f772946d1eff8d3c9b0e2518fdbdadb033160f4b5678df13f58",
+      "contracts/kernels/CounterRandom.sol": "98f38ee2e2962858ac681565b369a2a983f8aecd7b8188a9b191a4a4c5954190",
+      "contracts/analysis/ReducedPotentialCollector.sol": "87b5e30940220d30733252d51e64c37d222e0b52a5178c91f1df424f647a1fad",
+      "contracts/analysis/TimeSeriesDiagnostics.sol": "b0a6ec90fc2a645a59a73f71c3885234f38eaec0b812552a7b1ff16efd101794",
+      "contracts/analysis/MBARFreeEnergyEstimator.sol": "6026c479247a5ff326fa2feadb1e4659ef585512fb180460bebd0ab2407ce223",
+      "contracts/interfaces/IMolecularCampaignSource.sol": "845ec6a325995a24583570d1448826293c05b6aa06b5050d1eff8a1c96293168",
+      "contracts/core/BankedWorkingState.sol": "ed9fcee0659e2ed7dd9d90682e77bfd3aacc9056d17a0b62041cbc1947f99fe0",
+      "contracts/core/BankedInputCatalog.sol": "d956dd672852dc76fdc064bb6fecca55cc584ba7125df4b566b31bef9440c16b",
+      "contracts/analysis/UncertaintyAndResults.sol": "5c405ec23b23d916de5bdf7feae8b4f975cc4432323be47fdb4e9a3f605cf66b",
+      "contracts/analysis/SamplingDiagnostics.sol": "2ae107854eddc1bbb1659bace5abe0bf0e4010645fe219a0a5bac67073c5efb3"
+    }
+  },
+  "coreDeployments": [
+    {
+      "contract": "FloatMath",
+      "address": "0x9181bc2a66B7AF10Ce1eE8Ff3e8A4D42B7f2914E",
+      "gas": "1242164"
+    },
+    {
+      "contract": "ScalarMath",
+      "address": "0xc0bFc1F3bc14fE7A2903A3569F3F31B9a4f2E4e4",
+      "gas": "2911492"
+    },
+    {
+      "contract": "ElementaryMath",
+      "address": "0xa06d9806f3Da152dfBD93627e3582638f3289ceC",
+      "gas": "1647747"
+    },
+    {
+      "contract": "CounterRandom",
+      "address": "0xbB7623FD2F2F1a6535af4d5496a5Ec7B0C2E61a8",
+      "gas": "629225"
+    },
+    {
+      "contract": "LangevinBAOABKernel",
+      "address": "0x1396D6FE7725E57A9fA1eB14d292965406c6b5a5",
+      "gas": "1352630"
+    },
+    {
+      "contract": "ExperimentRegistry",
+      "address": "0x9d65f185337f46E3096162b7D388742Ca7c6a83F",
+      "gas": "608993"
+    },
+    {
+      "contract": "OrthorhombicGeometry",
+      "address": "0xdf43f0F7F2Ed3a6E5489eDcde41DBF2907a50185",
+      "gas": "1070576"
+    },
+    {
+      "contract": "HarmonicBondKernel",
+      "address": "0x8b5F0ABba133eD64fDd6Ad3a601c986BF6c25afe",
+      "gas": "717862"
+    },
+    {
+      "contract": "HarmonicAngleKernel",
+      "address": "0x811C283b215B3f97adBa0B90d4B872a2397d4540",
+      "gas": "1655515"
+    },
+    {
+      "contract": "PeriodicTorsionKernel",
+      "address": "0xb29A1F22824844392910aFD73a53924677cE692f",
+      "gas": "1886621"
+    },
+    {
+      "contract": "LennardJonesKernel",
+      "address": "0xAfe857c4C18aDCac155ba1456b07d9331af844C8",
+      "gas": "941910"
+    },
+    {
+      "contract": "SoftcoreLennardJonesKernel",
+      "address": "0xa6b7EE5E0a125f3e494aC8990951606587724dd7",
+      "gas": "1646334"
+    },
+    {
+      "contract": "EwaldRealSpaceKernel",
+      "address": "0x58ca2De74c9B9D80B2F6Db1429968913BD78F778",
+      "gas": "1066694"
+    },
+    {
+      "contract": "EwaldReciprocalKernel",
+      "address": "0xF7b66772b2A50726C8AB2cB9B0e5ACfB7494f360",
+      "gas": "2373036"
+    },
+    {
+      "contract": "EwaldCorrections",
+      "address": "0x7a8a8Cf5d3466944C669AB157e14AF0740e52f36",
+      "gas": "2174980"
+    },
+    {
+      "contract": "BankedInputCatalog",
+      "address": "0x60DADb8ef6D78A7bcEbFC79ec7a9dF6c13C5A2D6",
+      "gas": "1673103"
+    },
+    {
+      "contract": "AlchemicalTopologyCatalog",
+      "address": "0x4932879Cf11cc3647521a68eA5398b555E0315b4",
+      "gas": "3429432"
+    },
+    {
+      "contract": "MolecularSimulationPipeline",
+      "address": "0x2525A1F405265025A113c9Cd742d99Db09264471",
+      "gas": "6667387"
+    },
+    {
+      "contract": "BankedWorkingState",
+      "address": "0x495C7e9874cF9E36eB8De4Dc8a6442d436fEb570",
+      "gas": "2096546"
+    },
+    {
+      "contract": "AlchemicalHamiltonianEvaluator",
+      "address": "0x69F73E3839e51F912F72DbE264262Cee17a136D1",
+      "gas": "6790884"
+    },
+    {
+      "contract": "BankedWorkingState",
+      "address": "0x7001680690d732289B25d9C86Aca92057B9cA979",
+      "gas": "2096546"
+    },
+    {
+      "contract": "ReducedPotentialCollector",
+      "address": "0x1Cc6C43ed20B705383Ca0814b37e1b44899Ef221",
+      "gas": "2122838"
+    },
+    {
+      "contract": "TimeSeriesDiagnostics",
+      "address": "0x1220889E9A4B33b4380b63314d834Ef06195D3aa",
+      "gas": "2819384"
+    },
+    {
+      "contract": "MBARFreeEnergyEstimator",
+      "address": "0x1dDe1176dF32CD49E35D74572677224F860ae651",
+      "gas": "2223355"
+    },
+    {
+      "contract": "SamplingDiagnostics",
+      "address": "0xdC31ba43D8c342535fd475e81534457eB1552372",
+      "gas": "2581405"
+    },
+    {
+      "contract": "UncertaintyAndResults",
+      "address": "0x771d5a391c72dAFfA896bBfF2A8cB41BD07311dD",
+      "gas": "3045268"
+    }
+  ],
+  "preregistrationBeforeSelectedSeriesExists": true,
+  "actualLocalAddresses": 250,
+  "targetProductionAddresses": 256,
+  "preregisteredPairedRepeats": 3,
+  "completedWindows": 12,
+  "rawSamples": 48,
+  "chronology": [
+    {
+      "campaign": "0xb8d133d140ae62e744b6d5d22eabc00a1ee99ae2d80d5895be75152a87fc6a22",
+      "state": 0,
+      "valid": true,
+      "g": 1.5128512356908905
+    },
+    {
+      "campaign": "0xb8d133d140ae62e744b6d5d22eabc00a1ee99ae2d80d5895be75152a87fc6a22",
+      "state": 1,
+      "valid": true,
+      "g": 1.5074789867062472
+    },
+    {
+      "campaign": "0x933997682055c96b2cb6beeadb4f62fcd367ccaf317d104686a35d8ca848b2d8",
+      "state": 0,
+      "valid": true,
+      "g": 1
+    },
+    {
+      "campaign": "0x933997682055c96b2cb6beeadb4f62fcd367ccaf317d104686a35d8ca848b2d8",
+      "state": 1,
+      "valid": true,
+      "g": 1.1124342936910854
+    },
+    {
+      "campaign": "0xf5175a08ab064a23f0c94952131b0f61bd8e09a6fd79056ee89ca9c6b0efe53d",
+      "state": 0,
+      "valid": true,
+      "g": 1.5567754742829143
+    },
+    {
+      "campaign": "0xf5175a08ab064a23f0c94952131b0f61bd8e09a6fd79056ee89ca9c6b0efe53d",
+      "state": 1,
+      "valid": true,
+      "g": 1.2456717072873185
+    },
+    {
+      "campaign": "0x1abc955c386cb45d532d88180497cf70b64b9dc1d6c9e89423fb0ef386097cc3",
+      "state": 0,
+      "valid": true,
+      "g": 1.5128512356908905
+    },
+    {
+      "campaign": "0x1abc955c386cb45d532d88180497cf70b64b9dc1d6c9e89423fb0ef386097cc3",
+      "state": 1,
+      "valid": true,
+      "g": 1.5074789867062472
+    },
+    {
+      "campaign": "0x70217917c4e1a6de9c8abac2996cda225d6db67f02e7a82c35580727f8935ac5",
+      "state": 0,
+      "valid": true,
+      "g": 1
+    },
+    {
+      "campaign": "0x70217917c4e1a6de9c8abac2996cda225d6db67f02e7a82c35580727f8935ac5",
+      "state": 1,
+      "valid": true,
+      "g": 1.1124342936910854
+    },
+    {
+      "campaign": "0xb3ed07c81059ae7cc8e6defd5ac8193603ad549529cfb298f95bcd0331d36eb3",
+      "state": 0,
+      "valid": true,
+      "g": 1.5567754742829143
+    },
+    {
+      "campaign": "0xb3ed07c81059ae7cc8e6defd5ac8193603ad549529cfb298f95bcd0331d36eb3",
+      "state": 1,
+      "valid": true,
+      "g": 1.2456717072873185
+    }
+  ],
+  "computedDeltaDeltaG": 0,
+  "repeatSEM": 0,
+  "postStartRegistrationRejected": true,
+  "wrongRepeatOrderRejected": true,
+  "changedPipelineRejected": true,
+  "unauthorizedWindowStartRejected": true,
+  "contractCountUnchangedDuringRuns": true
+}

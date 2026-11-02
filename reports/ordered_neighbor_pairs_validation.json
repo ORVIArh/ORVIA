@@ -1,0 +1,342 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "passed": true,
+  "mainnetTransactionsSent": 0,
+  "scope": "Local candidate-pair enumeration and synthetic consumer rollback; not integrated Hamiltonian forces, full molecular execution or production speedup.",
+  "testSourceSha256": "22a8a7f1675bebe080e929b0e1817eead7b456b710f308611e56c2e33caa1f65",
+  "gas": [
+    {
+      "scenario": "bounded canonical merge",
+      "work": 32,
+      "gasUsed": "538453"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 32,
+      "gasUsed": "218316"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 32,
+      "gasUsed": "213516"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 32,
+      "gasUsed": "610011"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 32,
+      "gasUsed": "213516"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 32,
+      "gasUsed": "557268"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 32,
+      "gasUsed": "218369"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 32,
+      "gasUsed": "213516"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 32,
+      "gasUsed": "610048"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 32,
+      "gasUsed": "213516"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 32,
+      "gasUsed": "642874"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 32,
+      "gasUsed": "960635"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 32,
+      "gasUsed": "1137961"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 1,
+      "gasUsed": "432254"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 3,
+      "gasUsed": "271164"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 8,
+      "gasUsed": "218316"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 2,
+      "gasUsed": "213516"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 1,
+      "gasUsed": "179397"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 3,
+      "gasUsed": "539829"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 8,
+      "gasUsed": "218316"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 2,
+      "gasUsed": "213516"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 1,
+      "gasUsed": "179397"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 3,
+      "gasUsed": "540437"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 8,
+      "gasUsed": "218369"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 2,
+      "gasUsed": "213516"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 1,
+      "gasUsed": "179397"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 3,
+      "gasUsed": "539813"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 8,
+      "gasUsed": "218369"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 2,
+      "gasUsed": "213516"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 1,
+      "gasUsed": "179397"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 3,
+      "gasUsed": "539813"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 8,
+      "gasUsed": "266295"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 2,
+      "gasUsed": "451085"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 1,
+      "gasUsed": "212892"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 3,
+      "gasUsed": "503881"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 8,
+      "gasUsed": "319021"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 2,
+      "gasUsed": "451085"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 1,
+      "gasUsed": "217761"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 3,
+      "gasUsed": "318397"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 8,
+      "gasUsed": "659860"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 32,
+      "gasUsed": "538453"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 32,
+      "gasUsed": "538453"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 32,
+      "gasUsed": "218316"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 32,
+      "gasUsed": "213516"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 32,
+      "gasUsed": "610011"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 32,
+      "gasUsed": "213516"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 32,
+      "gasUsed": "557268"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 32,
+      "gasUsed": "218369"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 32,
+      "gasUsed": "213516"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 32,
+      "gasUsed": "610048"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 32,
+      "gasUsed": "213516"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 32,
+      "gasUsed": "642874"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 32,
+      "gasUsed": "960635"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 32,
+      "gasUsed": "1137961"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 1,
+      "gasUsed": "149216"
+    },
+    {
+      "scenario": "bounded canonical merge",
+      "work": 1,
+      "gasUsed": "149216"
+    }
+  ],
+  "compilation": {
+    "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+    "settings": {
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "evmVersion": "shanghai",
+      "outputSelection": {
+        "*": {
+          "*": [
+            "abi",
+            "evm.bytecode.object",
+            "evm.deployedBytecode.object"
+          ]
+        }
+      }
+    },
+    "sourceSha256": {
+      "contracts/core/BankedWorkingState.sol": "ed9fcee0659e2ed7dd9d90682e77bfd3aacc9056d17a0b62041cbc1947f99fe0",
+      "contracts/core/OrderedNeighborPairs.sol": "1133a7b059696623cc466f173ac1d6559dcc5afb80088ce7028c792af728c383",
+      "contracts/core/PeriodicCellIndex.sol": "0c3b70b0a9f277be4087556b5ac200cb602e2f18fb90d16a272d30de9d234027",
+      "contracts/core/ExperimentRegistry.sol": "39c3e8382b3fae049c16da81b1ea586e36deaa5ecbbda466b8377e240f78f047",
+      "contracts/math/FloatMath.sol": "a474f7656f9ffc3d3149e6a0e08f2fcf6838483ae689d1e6a7cf7400f8bad74b",
+      "contracts/math/vendor/ABDKMathQuad.sol": "dd13f72bf828a699c94e96d1377daabce3dcc1d4b29af7215501a611d3cb7c9e",
+      "contracts/kernels/OrthorhombicGeometry.sol": "9521042dab915a3fc6cfe2bb1395c1aba0c6a2fad58d7623cd4a10435de3808b",
+      "test/contracts/WorkingStateWriterHarness.sol": "f478b004274aaa2b515f2a6b30344d904e0c837a698d7b188cd66f47517d460f",
+      "test/contracts/OrderedPairOwnerHarness.sol": "d9e5186a33d5fbbe2fc49862a3e673b68e8b51d542f7c0ff0c30334156e7f385",
+      "test/contracts/PeriodicCellOracleHarness.sol": "414a709f151505232bcf46bef5474349279548c39f5114a1bc4210511fcfd8e7"
+    }
+  },
+  "coverage": {
+    "atoms": 9,
+    "candidatePairs": 12,
+    "exactEvmInsidePairs": 10,
+    "outsideCutoffCandidatesPreserved": 2,
+    "duplicatePairs": 0,
+    "missedInsidePairs": 0,
+    "canonicalOrder": true,
+    "partitionInvariant": true,
+    "workUnits": "51"
+  },
+  "rollback": {
+    "consumerFailureRollsBack": true,
+    "externalConsumptionRejected": true,
+    "boundsEnforced": true
+  },
+  "terminal": {
+    "idempotent": true,
+    "cellRuntimeChecked": true,
+    "ownerRuntimeChecked": true
+  }
+}

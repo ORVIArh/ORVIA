@@ -1,0 +1,289 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "passed": true,
+  "chainId": 31337,
+  "publicTransactionsSent": 0,
+  "scientificParameterAcceptance": false,
+  "productionIntegratorIntegrated": false,
+  "scope": "Synthetic three-atom SHAKE/RATTLE with real sealed topology, 96 input banks, frozen banked state; no production constrained BAOAB claim.",
+  "checks": [
+    {
+      "name": "sealed_role_exact_coverage_canonical_unique_pairs_and_catalog_auth",
+      "passed": true
+    },
+    {
+      "name": "writer_only_registration_frozen_writer_state_protocol_and_tolerance_binding",
+      "passed": true
+    },
+    {
+      "name": "coupled_position_projection_full_final_sweep_and_partition_invariance",
+      "passed": true
+    },
+    {
+      "name": "coupled_velocity_projection_conserves_mass_weighted_momentum",
+      "passed": true
+    },
+    {
+      "name": "iteration_cap_and_invalid_geometry_are_terminal_without_solution",
+      "passed": true
+    },
+    {
+      "name": "frozen_source_is_unchanged_by_live_mutation_and_dependency_tampering_reverts",
+      "passed": true
+    },
+    {
+      "name": "independent_110_digit_projection_residuals_and_mass_conservation",
+      "passed": true
+    },
+    {
+      "name": "132936_atom_index_capacity_with_explicitly_synthetic_metadata_and_sparse_state",
+      "passed": true
+    },
+    {
+      "name": "no_child_contracts_from_catalog_solver_or_projection_work",
+      "passed": true
+    }
+  ],
+  "scriptSha256": "d2a6b37a7bdb525330ee71906adc5dbea115d9438ce7030cce3c1e7890d63380",
+  "referenceSha256": "631ac990e4dcb892f4ea517db8483272b452dbc092185a21e25ba65df996365f",
+  "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+  "compilerInputSha256": "8598d5a7e4a30b80164facdb46564a6ec5eb5f47a2e614ab8e662ae1927e5e48",
+  "sources": {
+    "test/contracts/FullModelConstraintHarness.sol": "b9ff7a2f4a07dc04a29a4fc61303ccedbad96f53b1c0d925b7043591060cabba",
+    "contracts/core/BankedWorkingState.sol": "ed9fcee0659e2ed7dd9d90682e77bfd3aacc9056d17a0b62041cbc1947f99fe0",
+    "contracts/core/FullModelConstraintSolver.sol": "178329c41e7b113f7fc387497be6db2e22564c694151889cfc5cc568a56b6167",
+    "contracts/math/FloatMath.sol": "a474f7656f9ffc3d3149e6a0e08f2fcf6838483ae689d1e6a7cf7400f8bad74b",
+    "contracts/math/vendor/ABDKMathQuad.sol": "dd13f72bf828a699c94e96d1377daabce3dcc1d4b29af7215501a611d3cb7c9e",
+    "contracts/kernels/DistanceConstraintKernel.sol": "c5d05a76366559595f7c81617c6c65d72938a64eb12ba43708961c8f65756e37",
+    "contracts/core/FullModelConstraintCatalog.sol": "8ef6428c5f2783fbfdee8d752d2f2406d8cac06207f490f73cba2bc8203e3c6d",
+    "contracts/core/AlchemicalTopologyCatalog.sol": "f92337cf81ad28b0cf9842d3a34a8a119836aa5ed30698c681d621ff69ae362c",
+    "contracts/kernels/OrthorhombicGeometry.sol": "9521042dab915a3fc6cfe2bb1395c1aba0c6a2fad58d7623cd4a10435de3808b",
+    "contracts/core/BankedInputCatalog.sol": "d956dd672852dc76fdc064bb6fecca55cc584ba7125df4b566b31bef9440c16b"
+  },
+  "deployments": {
+    "catalog": {
+      "address": "0x65087940Ad00A109D56E8Ef0a99a2F437FD65C67",
+      "localGasUsed": "1690690",
+      "runtimeBytes": 7514
+    },
+    "solver": {
+      "address": "0xB17e8F464D8d481e42809C4f1Dcf502160b00754",
+      "localGasUsed": "3917132",
+      "runtimeBytes": 17792
+    },
+    "kernel": {
+      "address": "0x5715bcE796F055b8948174e3B98DfB41917F632D",
+      "localGasUsed": "1201946",
+      "runtimeBytes": 5298
+    }
+  },
+  "observations": [
+    {
+      "name": "coupled-position",
+      "mode": "position",
+      "anchor": [
+        [
+          "0x00000000000000000000000000000000",
+          "0x00000000000000000000000000000000",
+          "0x00000000000000000000000000000000"
+        ],
+        [
+          "0x3ffe8000000000000000000000000000",
+          "0x00000000000000000000000000000000",
+          "0x00000000000000000000000000000000"
+        ],
+        [
+          "0x00000000000000000000000000000000",
+          "0x3ffe8000000000000000000000000000",
+          "0x3fff0000000000000000000000000000"
+        ]
+      ],
+      "trial": [
+        [
+          "0x3ff847ae147ae147b000000000000000",
+          "0xbff947ae147ae147b000000000000000",
+          "0x3ff9eb851eb851eb8000000000000000"
+        ],
+        [
+          "0x3ffe8f5c28f5c28f6000000000000000",
+          "0x3ff847ae147ae147b000000000000000",
+          "0xbff847ae147ae147b000000000000000"
+        ],
+        [
+          "0xbff847ae147ae147b000000000000000",
+          "0x3ffe8f5c28f5c28f6000000000000000",
+          "0x3ffef5c28f5c28f5c000000000000000"
+        ]
+      ],
+      "masses": [
+        "0x40030000000000000000000000000000",
+        "0x3fff0000000000000000000000000000",
+        "0x40000000000000000000000000000000"
+      ],
+      "constraints": [
+        [
+          0,
+          1,
+          "0x3ffe8000000000000000000000000000"
+        ],
+        [
+          0,
+          2,
+          "0x3fff4000000000000000000000000000"
+        ],
+        [
+          1,
+          2,
+          "0x3fff752e50db3a3a1b1b33b0456f1fba"
+        ]
+      ],
+      "solution": [
+        [
+          "0x3ff85be9c902c8f4bcb4667f365e34d2",
+          "0xbff95a6f3d59bfba0fc2dbee6fc29d41",
+          "0x3ff9d28392e47ea855a6dac215a72e32"
+        ],
+        [
+          "0x3ffe84a295b5450a98ea9901965d4030",
+          "0x3ff9592bce0de3d45509abd381664f43",
+          "0x3ff737bd40b74e733ade3f12b221a6fe"
+        ],
+        [
+          "0xbff724b2a154dc2e65eca858fd336150",
+          "0x3ffe9137201e385f35fc904c4deb0dfa",
+          "0x3ffef83bd8e770b587fb6b1067e412ae"
+        ]
+      ],
+      "tolerance": "0x3fd719799812dea11000000000000000",
+      "maxSweeps": 256,
+      "sweeps": 26,
+      "maximumResidual": "0x3fd6aeabe740bd458b9ec55555555555"
+    },
+    {
+      "name": "coupled-velocity",
+      "mode": "velocity",
+      "anchor": [
+        [
+          "0x3ff85be9c902c8f4bcb4667f365e34d2",
+          "0xbff95a6f3d59bfba0fc2dbee6fc29d41",
+          "0x3ff9d28392e47ea855a6dac215a72e32"
+        ],
+        [
+          "0x3ffe84a295b5450a98ea9901965d4030",
+          "0x3ff9592bce0de3d45509abd381664f43",
+          "0x3ff737bd40b74e733ade3f12b221a6fe"
+        ],
+        [
+          "0xbff724b2a154dc2e65eca858fd336150",
+          "0x3ffe9137201e385f35fc904c4deb0dfa",
+          "0x3ffef83bd8e770b587fb6b1067e412ae"
+        ]
+      ],
+      "trial": [
+        [
+          "0x3ffb999999999999a000000000000000",
+          "0x3ffc999999999999a000000000000000",
+          "0xbffd3333333333333000000000000000"
+        ],
+        [
+          "0xbffd3333333333333000000000000000",
+          "0x3ffd999999999999a000000000000000",
+          "0x3ffc999999999999a000000000000000"
+        ],
+        [
+          "0x3ffe0000000000000000000000000000",
+          "0xbffb999999999999a000000000000000",
+          "0x3ffd999999999999a000000000000000"
+        ]
+      ],
+      "masses": [
+        "0x40030000000000000000000000000000",
+        "0x3fff0000000000000000000000000000",
+        "0x40000000000000000000000000000000"
+      ],
+      "constraints": [
+        [
+          0,
+          1,
+          "0x3ffe8000000000000000000000000000"
+        ],
+        [
+          0,
+          2,
+          "0x3fff4000000000000000000000000000"
+        ],
+        [
+          1,
+          2,
+          "0x3fff752e50db3a3a1b1b33b0456f1fba"
+        ]
+      ],
+      "solution": [
+        [
+          "0x3ffb868292f1202f8dfa9fe4b62aaf58",
+          "0x3ffcf3f06a1525baf21d83b98151f06c",
+          "0xbffcfa451d827862f92131c82449c873"
+        ],
+        [
+          "0x3ffbb195a6d5c2285bdce2cdd9464edf",
+          "0x3ffae5e2937b6d9add3de5778cd0062b",
+          "0xbffcf43ab2c53e4c81064be6ae78f88e"
+        ],
+        [
+          "0x3ffd5661bedca0f5808f23dcd881d71c",
+          "0xbffd215304bf80f88e49ed3d7e14c26f",
+          "0x3ffc991312432f0b198cb434798ac0d0"
+        ]
+      ],
+      "tolerance": "0x3fd719799812dea11000000000000000",
+      "maxSweeps": 256,
+      "sweeps": 29,
+      "maximumResidual": "0x3fd6d2c07a040560f3553ed3cec2f216"
+    }
+  ],
+  "position": {
+    "sweeps": 26,
+    "work1Transactions": 156,
+    "work8RemainingTransactions": 19,
+    "maximumResidual": "0x3fd6aeabe740bd458b9ec55555555555",
+    "work1GasUsed": "90444524"
+  },
+  "velocity": {
+    "sweeps": 29,
+    "transactions": 22,
+    "localGasUsed": "51270178"
+  },
+  "independentReference": {
+    "precisionDigits": 110,
+    "mpmathVersion": "1.4.1",
+    "cases": [
+      {
+        "name": "coupled-position",
+        "sweeps": 26,
+        "maximumResidual": "0.00000000000076502625992176644221177761392606877884533183643812490238247144968754771105722200948703778764976068650808310669",
+        "maximumAbsoluteReferenceError": "0.00000000000000000000000000000000075449719388817529759709903244258181804265777875153603202002301497750966252900790107679272396446201122001055752",
+        "massWeightedConservationError": "0.00000000000000000000000000000000587559096315012187983093270765167279600881791896960226750934452866204082965850830078125"
+      },
+      {
+        "name": "coupled-velocity",
+        "sweeps": 29,
+        "maximumResidual": "0.00000000000082911786203243404234731428330087490343539717155365020903721349240080480542390007621831151814731680533742862291",
+        "maximumAbsoluteReferenceError": "0.0000000000000000000000000000000013199883577546458901078948703123733927071720707869285872493942378199542792596641392919910765886869739207660621",
+        "massWeightedConservationError": "0.000000000000000000000000000000011603727914933096014662267104074187094192062430497713876320631243288516998291015625"
+      }
+    ]
+  },
+  "largeIndexCheck": {
+    "declaredAtoms": 132936,
+    "actuallyStoredAndEvaluatedAtoms": 2,
+    "topologyMetadata": "synthetic harness; not a validated full molecular topology",
+    "stateCapacityWords": 1196425,
+    "constraintAtoms": [
+      132934,
+      132935
+    ],
+    "unchangedUnconstrainedAtom": 100000
+  },
+  "completedAt": "2026-11-02T10:27:30.949Z"
+}
