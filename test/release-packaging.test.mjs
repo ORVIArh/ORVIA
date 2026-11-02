@@ -12,7 +12,7 @@ function fixture(t){
  t.after(()=>fs.rmSync(parent,{recursive:true,force:true}));
  for(const name of ['contracts','test/contracts','reference','scripts','data','reports','build','docs'])fs.mkdirSync(path.join(root,name),{recursive:true});
  for(const [name,text]of Object.entries({'package.json':'{"name":"synthetic-packaging-fixture","version":"0.5.0","type":"module"}','package-lock.json':'{}','requirements-research.txt':'# fixture','contracts/A.sol':'pragma solidity ^0.8.26; contract A {}','test/probe.test.mjs':'// synthetic fixture','reference/vector.json':'[1]','data/input.json':'{"frozen":true}','docs/release.md':'Release note'}))fs.writeFileSync(path.join(root,name),text);
- for(const name of ['check.mjs','validation_inventory.mjs','package.py'])fs.copyFileSync(path.join(project,'scripts',name),path.join(root,'scripts',name));
+ for(const name of ['check.mjs','check_preparation.mjs','validation_inventory.mjs','package.py'])fs.copyFileSync(path.join(project,'scripts',name),path.join(root,'scripts',name));
  return root;
 }
 // Deliberately constructed metadata in an isolated temporary directory exercises
@@ -85,6 +85,8 @@ test('Changes during a fixed-command run cannot yield accepted validation',async
  }
  fs.writeFileSync(path.join(root,'test/probe.test.mjs'),`import fs from 'node:fs';for(const name of ${JSON.stringify(GENERATED_EVIDENCE)})fs.writeFileSync(name,'{}');`);
  fs.writeFileSync(path.join(root,'reference/test_fixture.py'),'import unittest\nclass Check(unittest.TestCase):\n def test_fixture(self):self.assertTrue(True)\n');
+ fs.mkdirSync(path.join(root,'test/preparation'),{recursive:true});
+ fs.writeFileSync(path.join(root,'test/preparation/test_fixture.py'),'import unittest\nclass Check(unittest.TestCase):\n def test_fixture(self):self.assertTrue(True)\n');
  const result=runFixed(root);assert.equal(result.checks.length,9);assert.equal(result.passed,false);
  assert.ok(result.integrityErrors?.some(x=>x.includes('input')),JSON.stringify({status:result.status,error:result.error,checks:result.checks}));assert.notEqual(packageResult(root).status,0);
 });
