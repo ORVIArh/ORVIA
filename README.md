@@ -20,7 +20,7 @@
 
 ORVIA stands for **Onchain Research through Verified Inference and Analysis**. We are building toward molecular calculations whose inputs, intermediate state and analysis can be inspected on-chain. The proposed first experiment compares compound 17 with aficamten in a declared cardiac-myosin state.
 
-> **Current development: v0.6.0-dev.** A [local 256-contract prototype](docs/COMPLETE_256_PROTOTYPE.md) passed connected storage, constrained sampling, spatial force evaluation and one two-state analysis fixture. The complete current-source check remains incomplete, scientific acceptance is open, and mainnet readiness is false. No ORVIA production contract has been deployed to Robinhood. [Read the evidence →](reports/README.md)
+> **Active release: GPU hybrid, 256 contracts.** One coordinator plus 255 report shards passed local lifecycle/security checks across every lane. The strict endpoint GPU accuracy repair passed on H200 with unchanged tolerances. A read-only mainnet quote covers all 33 infrastructure transactions. Full-size ADP/phosphate preparation and scientific validation remain in progress; no public contract was deployed by this work. [Current hybrid evidence →](evidence/hybrid256/README.md)
 
 ## Find your starting point
 
@@ -32,7 +32,15 @@ ORVIA stands for **Onchain Research through Verified Inference and Analysis**. W
 | See what remains | [Current status](STATUS.md) · [Production gaps](docs/PRODUCTION_GAPS.md) |
 | Follow ongoing work | [Research log](RESEARCH_LOG.md) · [Development proposal](https://github.com/ORVIArh/ORVIA/pull/1) |
 
-## From molecular inputs to inspectable evidence
+## Active GPU hybrid workflow
+
+The user-selected hybrid computes molecular work on external GPUs and commits signed experiment, checkpoint and result hashes on chain. The 256 addresses are one coordinator/factory and 255 report shards. These are operator attestations, not proofs of correct computation. The separately named ADP/phosphate experiment preserves its chemical identity and does not replace the original vanadate protocol.
+
+[Hybrid contracts and trust model](contracts/hybrid/README.md) · [GPU accuracy evidence](evidence/hybrid256/README.md) · [Current status](STATUS.md)
+
+Run `npm run test:hybrid` for the dedicated local checks. No wallet or public-chain transaction is needed.
+
+## Earlier fully on-chain prototype
 
 <p align="center">
   <img src="assets/brand/research-flow.svg" alt="Intended workflow: register molecular inputs, compute bounded steps, and inspect state and analysis. The complete production path remains in development." width="100%">
@@ -50,7 +58,7 @@ The design uses permissionless, bounded transactions to advance scientific work.
 
 [Browse the current prototype and its limits →](docs/COMPLETE_256_PROTOTYPE.md)
 
-The active build has no imposed dollar cap; complete workload costs still need to be measured. The inventory contains **32 core contracts and 224 fixed storage banks**. Thirty-one core components participate in the connected architecture; the raw C4 pair kernel is exercised separately and is not integrated into the alchemical Hamiltonian. The fixture preregisters three repeat pairs but completes one campaign’s two-state analysis, not all repeats or a full prepared-myosin run.
+The earlier fully on-chain build has no imposed dollar cap; its complete workload costs remain unmeasured. Its inventory contains **32 core contracts and 224 fixed storage banks**. Thirty-one core components participate in the connected architecture; the raw C4 pair kernel is exercised separately and is not integrated into the alchemical Hamiltonian. The fixture preregisters three repeat pairs but completes one campaign’s two-state analysis, not all repeats or a full prepared-myosin run.
 
 ## Reproduce the checkpoint
 
@@ -81,7 +89,7 @@ ORVIA/
 
 ## Read the results in context
 
-The active [ORVIA-256 architecture](docs/ARCHITECTURE_256.md) counts every router and storage bank. Its 256 addresses were deployed locally; the [target-provider probe](docs/TARGET_256_CREATION_PROBE.md) separately returned exact runtime bytes for the two large coordinators through read-only calls. No persistent target-chain deployment followed. Small fixtures do not establish full-system accuracy, sufficient sampling, complete campaign costs or production throughput.
+The earlier fully on-chain [ORVIA-256 architecture](docs/ARCHITECTURE_256.md) counts every router and storage bank. Its 256 addresses were deployed locally; the [target-provider probe](docs/TARGET_256_CREATION_PROBE.md) separately returned exact runtime bytes for the two large coordinators through read-only calls. No persistent target-chain deployment followed. Small fixtures do not establish full-system accuracy, sufficient sampling, complete campaign costs or production throughput.
 
 The [v0.5.1 checkpoint](docs/DEVELOPMENT_CHECKPOINT.md) passed 212 Node/EVM tests, 63 Python references and nine check groups. Those results and its earlier 64-slot plan are historical; they do not validate the changed v0.6.0-dev source. The [current validation summary](reports/validation_summary.json) is explicitly incomplete.
 

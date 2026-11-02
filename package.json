@@ -7,6 +7,7 @@
   "scripts": {
     "compile": "node scripts/compile.mjs",
     "test": "node --test test/*.test.mjs",
+    "test:hybrid": "node --test scripts/hybrid/*.test.mjs scripts/deployment/test_hybrid*.mjs",
     "check:manifest": "python3 scripts/validate_manifest.py",
     "check": "node scripts/check.mjs"
   },

@@ -1,6 +1,22 @@
-# ORVIA v0.6.0-dev status
+# ORVIA hybrid release status
 
-**Active target: [ORVIA-256](docs/ARCHITECTURE_256.md), fully on-chain production from large registered molecular models.** The user removed the dollar cap and selected up to 256 actual contracts. The current design budgets 32 core contracts, 96 input banks, 64 pipeline-state banks and 64 Hamiltonian-output banks. The complete 256-address inventory now has a passing local integration fixture. The raw C4 component is exercised separately and still requires physical alchemical integration; this is not a production release. The single-result-anchor route is not selected.
+**Active target: external GPU calculation with exactly 256 on-chain attestation contracts.** The user selected the existing phosphate model as a separately named experiment on 2 November 2026. The original vanadate protocol remains historical scientific scope; it is not silently replaced.
+
+- One coordinator plus 255 report shards: local tests pass across all lanes.
+- Strict small-endpoint CUDA-double accuracy repair: H200 pass, unchanged tolerances.
+- Deployment tooling: 10 planner and 9 operator tests pass; exact constructors, runtime identities, 32 predecessor states, safe journals and recovery are checked.
+- Read-only mainnet quote: all 256 infrastructure contracts in 33 transactions, 0.00470417364414 ETH at the recorded price. This is not a full scientific campaign quote.
+- Full periodic-model preparation and scientific validation: in progress. GPU diagnostic success is not production scientific acceptance.
+- Public transactions: none sent by this work. Mainnet only; no public testnet.
+
+[Source-bound evidence and limits](evidence/hybrid256/README.md) · [Contract architecture and immutable-key limits](contracts/hybrid/README.md)
+
+## Historical fully on-chain development checkpoint
+
+The following v0.6.0-dev record describes the earlier compute-on-chain path. Its inventory, acceptance flags and blockers do not authorize or describe the new GPU hybrid release.
+
+
+**Historical target: [ORVIA-256](docs/ARCHITECTURE_256.md), fully on-chain production from large registered molecular models.** The user removed the dollar cap and selected up to 256 actual contracts. The current design budgets 32 core contracts, 96 input banks, 64 pipeline-state banks and 64 Hamiltonian-output banks. The complete 256-address inventory now has a passing local integration fixture. The raw C4 component is exercised separately and still requires physical alchemical integration; this is not a production release. The single-result-anchor route is not selected.
 
 **Mainnet only.** No public testnet deployment is planned. Local EVM checks, mainnet-pinned local forks and read-only chain-4663 simulations remain part of validation. Public deployment stays blocked until the complete 256-contract release and scientific evidence pass.
 
@@ -43,7 +59,7 @@ This inventory combines historical components with current development candidate
 
 ## 2 November 2026 continuation
 
-The source was recovered into a persistent local Git checkout. Neighbor NVE now explicitly admits the pinned inline pair runtime, with unchanged state/commitment barriers and new complete-fixture equivalence, interruption and rejection checks. See [compute costs](docs/COMPUTE_COST.md) for measured scope. The alternative public-model audit now detects the topology/PDB atom mismatch and verifies cofactor charge conventions. Its separately named ADP/phosphate protocol remains an unapproved proposal; the original vanadate-containing ORVIA-001 model remains selected and blocked. [Release notes](docs/RELEASE_v0_5_1.md), [roadmap](ROADMAP.md) and [research log](RESEARCH_LOG.md) track the changes and remaining work.
+The source was recovered into a persistent local Git checkout. Neighbor NVE now explicitly admits the pinned inline pair runtime, with unchanged state/commitment barriers and new complete-fixture equivalence, interruption and rejection checks. See [compute costs](docs/COMPUTE_COST.md) for measured scope. The alternative public-model audit now detects the topology/PDB atom mismatch and verifies cofactor charge conventions. At that checkpoint its separately named ADP/phosphate protocol was an unapproved proposal. The later user selection of a separate phosphate experiment is recorded at the top of this page. [Release notes](docs/RELEASE_v0_5_1.md), [roadmap](ROADMAP.md) and [research log](RESEARCH_LOG.md) track the changes and remaining work.
 
 The targeted neighbor suite passed **11/11 tests**, with zero failures or skips. The identical four-atom, three-step NVE fixture used **66,727,850 gas** through the original pair kernel and **65,446,162 gas** through the pinned inline kernel, a **1.92% advancement saving**. This excludes deployment, inputs and registration. The larger 51–53% figure concerns pair-only microbenchmarks; neither result establishes full-system feasibility. Current complete-suite acceptance remains separately governed by `validation_summary.json`.
 
