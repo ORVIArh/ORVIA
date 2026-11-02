@@ -2,6 +2,10 @@
 
 **Current release state: blocked for a complete ORVIA-001 mainnet launch. No Robinhood transaction has been broadcast.** The deployment tools distinguish a reproducible local fixture deployment from the complete scientific production system. New numerical modules do not automatically clear prepared-input, integration, size, cost or target-chain validation requirements.
 
+**Deployment policy: mainnet only (chain 4663).** Validation uses local EVMs, mainnet-pinned local forks and read-only mainnet calls. No public testnet deployment is planned or required. The user's removal of the funding cap does not waive scientific, source-integrity or full-workload acceptance.
+
+The active design is [ORVIA-256](ARCHITECTURE_256.md): 32 core components and 224 fixed storage banks. Its [complete local prototype](COMPLETE_256_PROTOTYPE.md) has passed, and the two large coordinator constructors returned exact runtime bytes in [read-only mainnet calls](TARGET_256_CREATION_PROBE.md). The raw C4 component remains outside the alchemical Hamiltonian, and full-model scientific and workload acceptance remain incomplete. The legacy rehearsal and 64-slot gate described below are retained for reproducibility; they do not authorize the active 256-contract release.
+
 ## Verified network documentation
 
 Robinhood's official documentation, checked on 2026-11-02, identifies mainnet chain ID **4663**, ETH gas and `https://robinhoodchain.blockscout.com`. Its public RPC is `https://rpc.mainnet.chain.robinhood.com`; the documentation describes it as rate-limited and recommends a provider endpoint for production.
@@ -27,7 +31,7 @@ The script calls only `eth_chainId`, `eth_getBlockByNumber` and `eth_gasPrice`. 
 
 `reports/mainnet_preflight.json` records the actual responses. The official public endpoint returned HTTP 403 in this workspace. On 2 November 2026, the Pinax endpoint listed in Robinhood documentation passed all three read-only methods and observed chain ID 4663. The separate reports retain both probes. A block-pinned local state-fork numerical-kernel smoke also passed; see [FORK_SMOKE.md](FORK_SMOKE.md) for the strict distinction between Ganache state-fork checks and Robinhood Nitro execution validation. Complete target execution and live transaction fee estimates remain unverified. The report fails closed rather than treating documentation as a successful RPC observation. Exit code 2 means blocked/inconclusive; it does not mean a deployment occurred.
 
-## Reproducible local deployment
+## Historical periodic-fixture local deployment
 
 ```bash
 npm run compile
@@ -70,13 +74,15 @@ The quoter verifies chain ID, records a reference block, obtains the pending non
 
 The tool only quotes a transaction executable against the current pending chain state. Constructors referencing not-yet-deployed dependencies require a target fork or the earlier deployments first. A quote for the first independent contract is not a quote for all later contracts or the entire scientific run. Read-only access now succeeds through the documented Pinax provider; a complete production quote still needs the actual public operator, exact transaction plan and executable dependency state. The retained HTTP 403 concerns the separate official-public endpoint probe.
 
-## Readiness gate and distinct blockers
+## Legacy readiness gate and current release blockers
 
 ```bash
 node scripts/deploy.mjs --readiness
 ```
 
 `reports/mainnet_readiness.json` lists every declared production slot, its experimental candidate sources and whether a complete measured production implementation is actually validated. The inventory is generated from the manifest; it does not convert a candidate source association into a completed slot. The declared production count must match its justified slot list and remain at least the requested minimum of 50.
+
+That slot logic belongs to the older manifest. While `data/architecture_256.json` is active, the command explicitly rejects authorization from that legacy gate. A source-bound 256-address release adapter, exact production input commitments and corresponding acceptance evidence are required before this restriction can be replaced.
 
 The gate consumes the current-version validation report, live preflight, `data/scientific_readiness.json`, per-slot evidence, public operator configuration and complete production acceptance evidence. Missing files keep readiness false. It requires `ready_for_orvia_001_registration == true` in the scientific audit. The gate cannot independently certify scientific truth merely because a JSON flag is set; those evidence records must arise from the actual reviewed checks.
 
