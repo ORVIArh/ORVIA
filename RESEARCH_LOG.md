@@ -28,6 +28,14 @@ A separately packaged read-only probe source-compiled two kernels and executed c
 
 The complete v0.5.1 run finished at `2026-11-02T04:59:25.175Z`: **212 Node/EVM tests and 63 Python reference tests passed**, with zero failed, cancelled or skipped Node tests. All nine check groups and the final integrity verifier passed. The summary binds 159 input files, two compiler outputs, 36 regenerated reports and nine logs. Mainnet readiness remains false.
 
+## 2 November 2026 — current v0.6.0-dev integration
+
+The current development snapshot adds authenticated sharded state/input, immutable snapshots, absolute-counter continuation, a finite endpoint-mixed Hamiltonian and a connected unconstrained BAOAB/cross-state-energy/sample-selection/MBAR pipeline. Independent small fixtures exercise those paths. Fixed-Q96 arithmetic candidates use an explicitly different numerical policy and have separate component evidence; they are not automatically admitted into a scientific campaign.
+
+The source changed after the earlier source-bound component checkpoint, including new engine inputs and softcore-v2 operation ordering. The current `reports/validation_summary.json` is therefore deliberately incomplete with `passed: false`. The historical v0.5.1 212+63 result above remains a historical result, not acceptance of this snapshot. A new complete current-source run is required before publishing a fresh validation claim.
+
+The separate mainnet-lite candidate records operator-signed artifact hashes. It verifies an attestation, not molecular computation, and no accepted complete GPU molecular result has been produced for it. Its mixed target-creation/local-anchor gas illustration does not guarantee a $200 all-in budget. No mainnet transaction was sent.
+
 ## Open questions
 
-The original experiment lacks complete reviewed molecular systems and a single full-system sampling pipeline. No drug-binding free-energy result has been produced. Actual full-run cost and duration remain unmeasured. All 64 production instances remain planned; mainnet readiness is false.
+The experiment lacks complete reviewed molecular systems and full-system acceptance of the connected development pipeline. No drug-binding free-energy result has been produced. Actual complete-campaign cost and duration remain unmeasured. All 64 production instances remain planned; mainnet readiness is false.

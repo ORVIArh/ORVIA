@@ -6,11 +6,11 @@ Open molecular research on Robinhood Chain. Our goal is to make scientific calcu
 
 [Progress](STATUS.md) · [Roadmap](ROADMAP.md) · [Research log](RESEARCH_LOG.md) · [Architecture](docs/ARCHITECTURE.md) · [Release requirements](docs/PRODUCTION_GAPS.md)
 
-**v0.5.1 development checkpoint: 212 Node/EVM tests and 63 Python references passed.** All nine check groups and source/evidence integrity verification passed. [Validation evidence](reports/validation_summary.json). Mainnet readiness remains false.
+**Current snapshot: v0.6.0-dev, integration in progress.** The [current validation summary](reports/validation_summary.json) is incomplete and does not claim a full-suite pass. The historical v0.5.1 checkpoint passed 212 Node/EVM tests, 63 Python references and all nine check groups; that result does not validate subsequent changes. Mainnet readiness remains false.
 
 ORVIA targets fully on-chain molecular calculations on Robinhood Chain. The proposed first experiment compares compound 17 with aficamten in a declared cardiac-myosin state. Registered molecular inputs, numerical work, simulation state and analysis are intended to remain in contracts. Permissionless bounded transactions advance work; swap/pool triggers are deferred.
 
-**This is a tested development system, not a mainnet-ready release or a binding-free-energy result.** The package contains 44 deployable experimental contract types and a 64-instance production design. All 64 production slots remain planned. No Robinhood contracts have been deployed. Alternative coordinators do not automatically form one combined production engine, and contract count does not measure scientific quality or computational throughput.
+**This is a development system, not a mainnet-ready release or a binding-free-energy result.** New candidates connect sharded state, a finite hybrid Hamiltonian, unconstrained sampling and analysis. They extend the older component inventory and still require current complete validation. The architecture describes 64 planned production slots; none is claimed complete and none has been deployed to Robinhood. Contract count does not measure scientific quality or computational throughput.
 
 ## Implemented and exercised
 
@@ -23,15 +23,15 @@ ORVIA targets fully on-chain molecular calculations on Robinhood Chain. The prop
 | Constraints | Pair SHAKE/RATTLE primitives, bounded solver/catalog and constrained NVE | Separate from the thermostat/Ewald paths; whole-molecule coordinate restrictions |
 | Electrostatics | Direct reciprocal Ewald, real/self/background/exception terms, frozen-snapshot force passes and NVE integration | Direct sums, not PME; small truncation fixtures do not establish full-system accuracy |
 | Minimization | Complete periodic force passes, RMS gradient and Armijo backtracking | Development Hamiltonian and explicit convergence limits |
-| Alchemical/MC math | Two-endpoint softcore LJ plus exchange/volume acceptance formulas | No complete alchemical Hamiltonian, proposal engine or integrated sampler |
-| Analysis | Frozen reduced potentials, general MBAR, overlap/weight ESS, chronological correlation diagnostics and preregistered repeat SEM | Synthetic writer fixtures; production sampler connection and correlation-aware sample selection missing |
+| Alchemical/MC math | Finite endpoint-mixed Hamiltonian and connected unconstrained BAOAB sampling candidate, plus exchange/volume acceptance primitives | Small-fixture evidence; complete prepared-model coverage, constraints and physical protocol acceptance remain missing |
+| Analysis | Computed cross-state energies, canonical sample chronology, correlation-based selection and MBAR connected in the development pipeline | Full-system equilibration, sampling, overlap and repeat uncertainty remain unvalidated |
 | Cost and deployment | Bitwise-equivalent inline pair integration, local gas benchmarks, source/runtime checks and unsigned fee tools | No complete prepared-system budget, Robinhood execution-client rehearsal or production fee quote |
 
 See [the manifest](data/contract_manifest.json) for exact source names and associations. A source associated with a slot is a candidate, not evidence that the production slot is finished.
 
 ## Reproduce the checks
 
-The complete v0.5.1 run finished at `2026-11-02T04:59:25.175Z`: **212 Node/EVM tests and 63 independent Python reference tests passed**, with zero failed, cancelled or skipped Node tests. All nine groups and final integrity verification passed. The summary binds 159 inputs, two compiler outputs, 36 numerical/deployment reports and nine logs. [The research log](RESEARCH_LOG.md) preserves the recovered v0.5.0 baseline separately.
+The historical v0.5.1 run finished at `2026-11-02T04:59:25.175Z`: **212 Node/EVM tests and 63 independent Python reference tests passed**, with zero failed, cancelled or skipped Node tests. Its nine groups and integrity verification bound 159 inputs, two compiler outputs, 36 reports and nine logs. [The research log](RESEARCH_LOG.md) preserves that checkpoint and the recovered v0.5.0 baseline. The current v0.6.0-dev source has changed since the later component checkpoint and needs a new complete run; its summary is deliberately marked incomplete.
 
 Use Node.js/npm and Python 3.12 for the pinned research dependencies. This continuation was tested with Node.js 24.22.1 and CPython 3.12.14. Dependencies are pinned in `package-lock.json` and `requirements-research.txt`.
 
@@ -41,6 +41,8 @@ python3.12 -m venv .venv-research
 .venv-research/bin/python -m pip install -r requirements-research.txt
 ORVIA_RESEARCH_PYTHON=.venv-research/bin/python npm run check
 ```
+
+The new native ligand-preparation checks additionally need a separate preparation environment with the declared AmberTools/OpenMM dependencies; set `ORVIA_PREPARATION_PYTHON` to that environment's Python. See [ligand preparation](docs/LIGAND_PREPARATION_v0_1.md). Do not combine its package versions with the pinned independent-reference environment.
 
 Compilation uses Solidity 0.8.26, optimizer 200, Shanghai EVM and no viaIR. EVM tests use in-process Ganache chain 31337. They require no mainnet account or RPC. Four experimental coordinators/minimizers exceed Ethereum's 24 KiB runtime ceiling; their dedicated tests explicitly relax local size enforcement and assert the documented Robinhood planning ceiling. This is not a Robinhood fork test. Compiler warnings are retained in the size report.
 
@@ -57,7 +59,7 @@ Both readiness commands are expected to reject this development package. A passi
 
 The reproducible original receptor mask contains 6,032 observed heavy-atom rows, with 65 missing residues and incomplete TRP130 chemistry. A unique 24-heavy-atom ligand map and derived compound-17 heavy pose are available. They are external model-input candidates, not complete force-field preparation. Public Mg–ADP–phosphate models provide an evidenced alternative to the original vanadate state, but require an explicit model choice and compatible target parameterization. Functional ATPase IC50 values must not be presented as Kd or a validated affinity result.
 
-Most dynamics paths are capped at 1,024 atoms and 4,096 steps. Full solvated myosin exceeds this development scope. Scaling requires bounded distributed data/state access and measured scientific workload, not just larger constants or more contract addresses. [The workload report](docs/WORKLOAD_FEASIBILITY.md) shows very large illustrative pair-only costs; it is not a measured myosin estimate or Robinhood throughput forecast. [Inline pair arithmetic](docs/COMPUTE_COST.md) now has an explicit integration path in the neighbor NVE coordinator. Its trajectory and gas tests remain small-fixture evidence, and other coordinators retain their original external pair path.
+Historical dynamics coordinators retain their 1,024-atom and 4,096-step caps. The new [sharded state](docs/SHARDED_STATE.md) and [connected molecular pipeline](docs/MOLECULAR_PIPELINE.md) implement bounded partitions, immutable snapshots and absolute-counter continuation beyond those historical limits. This does not establish a feasible or validated full solvated-myosin run. [The workload report](docs/WORKLOAD_FEASIBILITY.md) contains illustrative pair-only costs, not a complete campaign quote or Robinhood throughput forecast. [Inline pair arithmetic](docs/COMPUTE_COST.md) has a separate integration path in neighbor NVE, with small-fixture trajectory and gas evidence.
 
 The targeted neighbor suite passed **11 tests**. Its identical four-atom, three-step trajectory used **1.92% less advancement gas** with inline pair arithmetic (65,446,162 versus 66,727,850 gas). That complete-fixture result is distinct from the standalone pair microbenchmark's 51–53% saving. Neither is a measured full-myosin workload or mainnet fee estimate; the current complete source-bound suite is recorded separately in the validation summary.
 

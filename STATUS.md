@@ -1,14 +1,14 @@
-# ORVIA v0.5.1 status
+# ORVIA v0.6.0-dev status
 
-The complete v0.5.1 check passed **212 Node/EVM tests, 63 Python references and all nine check groups**, with zero failed, cancelled or skipped Node tests. Final integrity verification passed for 159 inputs, two compiler outputs, 36 regenerated reports and nine logs. [Validation summary](reports/validation_summary.json). The recovered v0.5.0 baseline remains documented separately in the research log.
+**Current integration is in progress; the complete current-source check has not passed.** [validation_summary.json](reports/validation_summary.json) is deliberately marked `development_in_progress` and `passed: false` after the connected engine and softcore-v2 changes. A previous source-bound component checkpoint cannot validate changed or newly added inputs.
 
-**Not ready for mainnet.** This checkpoint improves execution cost, input auditing and target-chain evidence. The complete prepared cardiac-myosin experiment and a single production sampling pipeline are unfinished. The release gate remains closed.
+The historical v0.5.1 check passed **212 Node/EVM tests, 63 Python references and all nine groups**, with integrity checks for 159 inputs, two compiler outputs, 36 reports and nine logs. That dated result and the recovered v0.5.0 baseline remain in the research log; neither is a pass for this development snapshot.
 
-There are 44 deployable experimental product types, excluding test harnesses, abstract contracts and the internal library. The architecture still describes 64 intended production instances; none is claimed as a complete validated production slot and none has been deployed to Robinhood. A reusable type can support multiple addresses; alternative coordinators are alternatives, not additional completed roles.
+**Not ready for mainnet.** The connected development pipeline now supplies a finite hybrid Hamiltonian, unconstrained sampling, computed cross-state energies, sample selection and MBAR. Sharded input/state and absolute-counter continuation extend the historical capacity guards. These are implementations and small-fixture results, not a complete accepted cardiac-myosin campaign. The architecture's 64 production slots remain planned and none has been deployed to Robinhood.
 
 ## Implemented development capabilities
 
-This inventory includes capabilities inherited from v0.5.0. The continuation section below identifies the v0.5.1 changes.
+This inventory combines historical components with current development candidates. See [the connected pipeline](docs/MOLECULAR_PIPELINE.md) and [sharded state](docs/SHARDED_STATE.md) for exact implementation boundaries.
 
 | Lane | Implemented behavior | Evidence and limits |
 |---|---|---|
@@ -17,8 +17,9 @@ This inventory includes capabilities inherited from v0.5.0. The continuation sec
 | Constraints | Sealed constraint data, bounded SHAKE/RATTLE and constrained NVE | Independent simultaneous multiplier/projection oracle; explicit failure and atomic commit |
 | Ewald | Screened real forces, direct reciprocal sums, corrections and snapshot-based NVE | Independently differentiated energies/trajectories; production truncation calibration missing |
 | Minimization | Complete forces, gradient RMS and Armijo trials | Independent reference and rollback tests; no off-chain minimization outputs accepted |
-| Alchemical math | Softcore LJ and Monte Carlo acceptance primitives | Independent derivatives/identities; complete sampler still missing |
-| Analysis | MBAR, overlap, weight ESS, time correlation and frozen paired-repeat SEM | Independent nonlinear/covariance references; synthetic writers only |
+| Alchemical math | Finite endpoint-mixed Hamiltonian, unconstrained BAOAB sampling and softcore/MC primitives | Independent small-fixture energies, derivatives and continuation checks; full prepared-system/protocol acceptance missing |
+| Analysis | Computed cross-state energies, canonical chronology, correlation-based selection, MBAR and paired-repeat primitives | Connected development sampler; full-system equilibration, overlap and repeat uncertainty remain unvalidated |
+| Scaling | Authenticated input streams, sharded COW state, immutable snapshots and absolute-counter continuation | Capacity/cross-page tests and local gas; no complete prepared-system gas/time acceptance |
 | Preparation | Reproducible ligand map and selected coordinate candidates; alternative cofactor model audit | Full model preparation remains blocked; source checks reproducible offline |
 | Deployment and cost | Local deployment rehearsal, runtime/source verification, unsigned quote tools, strict release gate and inline pair integration | Local state-fork kernel smoke only; no Robinhood execution-client rehearsal or complete production fee quote; feasibility gap remains |
 
@@ -27,8 +28,8 @@ This inventory includes capabilities inherited from v0.5.0. The continuation sec
 ## Work that still blocks a release
 
 1. Freeze a scientifically justified complete protein/ligand/solvent model with compatible parameters, special-state treatment and a hybrid topology. The 24-atom map alone is insufficient.
-2. Connect the selected electrostatics, constraints, thermostat, full alchemical Hamiltonian, minimization/equilibration, sample generation and analysis into one identity-bound production path. Actual volume/replica proposals remain separate missing work.
-3. Implement and validate state/input partitioning for the real model, bounded access at maximum scale, complete run retention and continuation. Demonstrate a scientifically sufficient workload within an explicit measured gas/time/fee budget.
+2. Complete the chosen protocol around the connected finite Hamiltonian/unconstrained sampler, including justified minimization/equilibration and any required constraints or volume/replica proposals. The current fixed-volume unconstrained path does not silently supply those capabilities.
+3. Validate the implemented state/input partitioning and retained continuation at the complete prepared-model workload. Demonstrate a scientifically sufficient schedule within an explicit measured gas/time/fee budget.
 4. Validate the complete Hamiltonian and ensemble against independent references, then demonstrate equilibration, overlap, temporal correlation control and repeat uncertainty on the actual declared experiment.
 5. Complete independent security review and a reproducible target-chain deployment/fork/source-verification rehearsal. Bind the final public operator address, nonce sequence and fresh live quotes to the reviewed production plan.
 
