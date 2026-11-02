@@ -1,0 +1,187 @@
+{
+  "schema": "orvia.adppi-v0.2-rigid-solvent-geometry-preparation.v1",
+  "status": "passed_same-composition_geometric_clash_relief_not_physical_acceptance",
+  "passedGeometricPreparation": true,
+  "scientificAcceptance": false,
+  "productionReady": false,
+  "sourceInputsModified": false,
+  "modelChoice": "Separately named ADPPI-v0.2; originalvanadate preserved",
+  "settings": {
+    "triggerRatioToNativeLJMinimum": 0.6,
+    "pushTargetRatio": 0.7,
+    "maxIterations": 250,
+    "maxPerIterationEntityTranslationNm": 0.02,
+    "maxTotalEntityTranslationNm": 1.0,
+    "mobileEntities": "Whole WAT/HOH residues and K+/Cl- ions only; Mg and other solutes fixed after explicit protein patch",
+    "method": "Deterministic simultaneous minimum-image pair-separation projections; not energy minimization or equilibrated dynamics"
+  },
+  "scriptSha256": "bea97fa2d380af16a8342b4163e305ed6c62f104d15e0a9713ee098d09aebf7e",
+  "legs": {
+    "complex33": {
+      "atoms": 132935,
+      "constraints": 120519,
+      "sourceSystemXml": "/Users/abhijith/Documents/ChatGPT/AURA/output/runpod-benchmark/full-inputs/complex33/system.xml",
+      "sourceSystemSha256": "13939620df9a6c18ae249afa4add4e442b6004eadfc641d9078bcd45a798cc93",
+      "positionsFile": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-model-repair/adppi-v0.2-clash-relief/complex33/positions.json",
+      "positionsSha256": "e9b425314e09bc22591c378304a201746d5830fd78364717018501b5f15ae71e",
+      "proteinPatchUsed": true,
+      "initialPositiveLJViolationsBelowTrigger": 79,
+      "finalPositiveLJViolationsBelowTrigger": 0,
+      "iterations": 11,
+      "steps": [
+        {
+          "iteration": 0,
+          "violatingPairs": 79,
+          "maxTargetDeficitNm": 0.24130069909852067,
+          "maxAppliedEntityTranslationNm": 0.020000000000000007
+        },
+        {
+          "iteration": 1,
+          "violatingPairs": 59,
+          "maxTargetDeficitNm": 0.2017744931130839,
+          "maxAppliedEntityTranslationNm": 0.020000000000000004
+        },
+        {
+          "iteration": 2,
+          "violatingPairs": 45,
+          "maxTargetDeficitNm": 0.16210570418857556,
+          "maxAppliedEntityTranslationNm": 0.020000000000000004
+        },
+        {
+          "iteration": 3,
+          "violatingPairs": 32,
+          "maxTargetDeficitNm": 0.12693237790304238,
+          "maxAppliedEntityTranslationNm": 0.020000000000000004
+        },
+        {
+          "iteration": 4,
+          "violatingPairs": 23,
+          "maxTargetDeficitNm": 0.11440400301843173,
+          "maxAppliedEntityTranslationNm": 0.020000000000000007
+        },
+        {
+          "iteration": 5,
+          "violatingPairs": 17,
+          "maxTargetDeficitNm": 0.10682985780680213,
+          "maxAppliedEntityTranslationNm": 0.020000000000000004
+        },
+        {
+          "iteration": 6,
+          "violatingPairs": 11,
+          "maxTargetDeficitNm": 0.09537756614233808,
+          "maxAppliedEntityTranslationNm": 0.02
+        },
+        {
+          "iteration": 7,
+          "violatingPairs": 6,
+          "maxTargetDeficitNm": 0.08156085395081639,
+          "maxAppliedEntityTranslationNm": 0.02
+        },
+        {
+          "iteration": 8,
+          "violatingPairs": 3,
+          "maxTargetDeficitNm": 0.06437712680373478,
+          "maxAppliedEntityTranslationNm": 0.020000000000000004
+        },
+        {
+          "iteration": 9,
+          "violatingPairs": 1,
+          "maxTargetDeficitNm": 0.047209433602320244,
+          "maxAppliedEntityTranslationNm": 0.019999999999999997
+        },
+        {
+          "iteration": 10,
+          "violatingPairs": 1,
+          "maxTargetDeficitNm": 0.03612778615784251,
+          "maxAppliedEntityTranslationNm": 0.02
+        }
+      ],
+      "mobileEntities": 40456,
+      "movedEntities": 129,
+      "maxEntityTranslationNm": 0.17224991623107822,
+      "maximumRigidWaterInternalVectorDifferenceNm": 8.881784197001252e-16,
+      "nonmobileCoordinatesExactlyRetainedAfterDeclaredProteinPatch": true,
+      "allAtomsParametersBoxRetained": true,
+      "sourceHashes": {
+        "/Users/abhijith/Documents/ChatGPT/AURA/work/scientific-preparation/data/prepared_candidate/cardiac_adppi_ff03_m3l_33_782_solvated_v0_1/complex_1264.prmtop.gz": "7ddd83496bd4832fc377ec174ffe6bb392adec87193cce6e1ba527f05ce1477a",
+        "/Users/abhijith/Documents/ChatGPT/AURA/output/runpod-benchmark/full-inputs/complex33/positions.json": "5166cb2fc1a43b9ddfdca6ca6f60a0bd8d9dd56fc8205428cd676095ffe2ce09",
+        "/Users/abhijith/Documents/ChatGPT/AURA/output/runpod-benchmark/full-inputs/complex33/system.xml": "13939620df9a6c18ae249afa4add4e442b6004eadfc641d9078bcd45a798cc93",
+        "/Users/abhijith/Documents/ChatGPT/AURA/output/full-model-repair/loop370/protein-coordinate-patch.json": "4a0005e1afd1d2d5996c0cc6164a5f8a9be6fb9bbd15d5f4e9b60a85c8ad1949"
+      },
+      "sourceHashesVerifiedAfterPreparation": true,
+      "elapsedSeconds": 2.806731791992206,
+      "scope": "Geometric clash relief only; full force-range/oracle and minimization/equilibration acceptance remain required."
+    },
+    "solvent33": {
+      "atoms": 151505,
+      "constraints": 151179,
+      "sourceSystemXml": "/Users/abhijith/Documents/ChatGPT/AURA/output/runpod-benchmark/full-inputs/solvent33/system.xml",
+      "sourceSystemSha256": "e7927eda87abc0a7380cd6969b54f9e0c2c6f3a6ee5f85b5f61ccab4266af2c3",
+      "positionsFile": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-model-repair/adppi-v0.2-clash-relief/solvent33/positions.json",
+      "positionsSha256": "00bbf79c9370f2c98211f80448122ac86bb1d44de744239dcdce4852505f11fe",
+      "proteinPatchUsed": false,
+      "initialPositiveLJViolationsBelowTrigger": 612,
+      "finalPositiveLJViolationsBelowTrigger": 0,
+      "iterations": 7,
+      "steps": [
+        {
+          "iteration": 0,
+          "violatingPairs": 612,
+          "maxTargetDeficitNm": 0.20565670004360362,
+          "maxAppliedEntityTranslationNm": 0.020000000000000007
+        },
+        {
+          "iteration": 1,
+          "violatingPairs": 425,
+          "maxTargetDeficitNm": 0.16565670004360447,
+          "maxAppliedEntityTranslationNm": 0.020000000000000004
+        },
+        {
+          "iteration": 2,
+          "violatingPairs": 236,
+          "maxTargetDeficitNm": 0.12565670004360532,
+          "maxAppliedEntityTranslationNm": 0.020000000000000004
+        },
+        {
+          "iteration": 3,
+          "violatingPairs": 159,
+          "maxTargetDeficitNm": 0.0856567000436044,
+          "maxAppliedEntityTranslationNm": 0.02
+        },
+        {
+          "iteration": 4,
+          "violatingPairs": 201,
+          "maxTargetDeficitNm": 0.052028615275687,
+          "maxAppliedEntityTranslationNm": 0.02
+        },
+        {
+          "iteration": 5,
+          "violatingPairs": 84,
+          "maxTargetDeficitNm": 0.05450946744591803,
+          "maxAppliedEntityTranslationNm": 0.020000000000000004
+        },
+        {
+          "iteration": 6,
+          "violatingPairs": 1,
+          "maxTargetDeficitNm": 0.054561860620102015,
+          "maxAppliedEntityTranslationNm": 0.02
+        }
+      ],
+      "mobileEntities": 50675,
+      "movedEntities": 1310,
+      "maxEntityTranslationNm": 0.10052731263490076,
+      "maximumRigidWaterInternalVectorDifferenceNm": 1.7763568394002505e-15,
+      "nonmobileCoordinatesExactlyRetainedAfterDeclaredProteinPatch": true,
+      "allAtomsParametersBoxRetained": true,
+      "sourceHashes": {
+        "/Users/abhijith/Documents/ChatGPT/AURA/work/scientific-preparation/data/prepared_candidate/ligand_adppi_ff03_m3l_33_782_solvated_v0_1/solvent.prmtop.gz": "6d3b30f439688d8a5c2f0af5f54ce687ca191eab16f2c441dda842c4e607376f",
+        "/Users/abhijith/Documents/ChatGPT/AURA/output/runpod-benchmark/full-inputs/solvent33/positions.json": "605615683a59eee23b82217cf4d51954fa43ee7e081c6fb505d6fbdb12ecd5b3",
+        "/Users/abhijith/Documents/ChatGPT/AURA/output/runpod-benchmark/full-inputs/solvent33/system.xml": "e7927eda87abc0a7380cd6969b54f9e0c2c6f3a6ee5f85b5f61ccab4266af2c3",
+        "/Users/abhijith/Documents/ChatGPT/AURA/output/full-model-repair/loop370/protein-coordinate-patch.json": "4a0005e1afd1d2d5996c0cc6164a5f8a9be6fb9bbd15d5f4e9b60a85c8ad1949"
+      },
+      "sourceHashesVerifiedAfterPreparation": true,
+      "elapsedSeconds": 2.738405124982819,
+      "scope": "Geometric clash relief only; full force-range/oracle and minimization/equilibration acceptance remain required."
+    }
+  }
+}
