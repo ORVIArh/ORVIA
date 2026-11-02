@@ -1,0 +1,43 @@
+{
+  "status": "measured_local_evm",
+  "targetChainId": 4663,
+  "localEvm": "Ganache Shanghai; exact target-client gas and L1 data fees may differ",
+  "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+  "optimizerRuns": 200,
+  "runtimeBytes": 1345,
+  "initcodeBytes": 1522,
+  "deploymentGas": "346009",
+  "firstAnchorTransactionGas": "33034",
+  "combinedGas": "379043",
+  "firstAnchorEvent": true,
+  "targetReadOnlyPreflight": {
+    "chainId": "4663",
+    "gasPriceWei": "20028000",
+    "deploymentEstimateGas": "352315",
+    "transactionSent": false,
+    "scope": "Read-only Robinhood Chain creation eth_estimateGas; may include target L1 data allocation. The anchor call has only local-EVM gas, so its target execution and L1 allocation are unmeasured."
+  },
+  "budgetEstimate": {
+    "projectedGas": "385349",
+    "firstTransactionGas": "33034",
+    "deploymentGas": "352315",
+    "ethUsd": {
+      "value": 2281.33,
+      "asOf": "2026-11-02",
+      "kind": "illustrative_assumption",
+      "note": "No live market price provenance is claimed."
+    },
+    "currentGasPriceFeeUsd": 0.01760677971395676,
+    "stress100GweiFeeUsd": 87.91082341699999,
+    "stress200GweiFeeUsd": 175.82164683399998,
+    "excludes": [
+      "Unmeasured target anchor execution and anchor-call L1 data allocation",
+      "wallet or relayer charges",
+      "future fee or ETH price movements"
+    ],
+    "kind": "Mixed target-creation estimate plus local anchor execution; not an all-in target fee quote.",
+    "budgetCapGuaranteed": false
+  },
+  "cryptographicScope": "EIP-712 operator signature over input, method, settings, output, atom count and sample count; no molecular computation is verified on-chain.",
+  "mainnetTransactionsSent": 0
+}
