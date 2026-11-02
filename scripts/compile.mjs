@@ -39,7 +39,7 @@ export function compile() {
   }
   const report = {
     compiler: solc.version(), settings,
-    scope: 'Experimental molecular numerics, alternative resumable dynamics and analysis components; no integrated production RBFE system, mainnet deployment or complete 64-slot implementation.',
+    scope: 'Experimental molecular numerics and the 256-address development prototype; no scientifically accepted production RBFE system or mainnet deployment.',
     targetChainId: 4663,
     documentedLimitsSource: 'https://docs.robinhood.com/chain/differences-from-ethereum/',
     constructorArgumentsIncludedInSizes: false,
