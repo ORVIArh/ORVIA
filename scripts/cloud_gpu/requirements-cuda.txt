@@ -1,0 +1,2 @@
+openmm[cuda12]==8.6.1
+numpy==2.5.4
