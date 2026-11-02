@@ -1,0 +1,28 @@
+{
+  "schema": "orvia.gpu-connection.independent-manifest-review.v1",
+  "passed": true,
+  "blockingFindings": [],
+  "manifestSha256": "2780caee024a46985c6ff221292fef08a89dc18d9eed23f3ac3e4e82f317df96",
+  "outerPlanSha256": "642b1cdc6dd18572453a89c208c189e32fddd0ac0f09f1cb7abb5a3b88b6d118",
+  "manifestFileCount": 6243,
+  "allListedFileBytesAndSha256Verified": true,
+  "nodeExecutableSha256": "6f32069480ec14d52b6d7b1f3c7124cfbbc46203abf5ddf5c65b127435f3f329",
+  "nodeExecutableHashVerified": true,
+  "runtimeSourceClosureFiles": 6224,
+  "closureScope": "All custom hybrid/deployment MJS/Python, both hybrid Solidity sources, wallet, package/lock files, and JS/CJS/MJS/JSON/NODE/WASM package runtime files checked against manifest. One unused node_modules/.bin CLI symlink is not a direct runtime payload; its resolved source target is frozen. Native artifacts and plan are included in the6243-file hash pass.",
+  "unusedCliSymlinkTargetsFrozen": 1,
+  "emptyRegularFilePolicy": "Bridge permits zero-length regular files only under unchanged size/hash binding; empty JSON still fails JSON parsing.",
+  "keySourceSha256": {
+    "scripts/hybrid/connect_gpu.mjs": "72032db71482bff3d24a9a7318c10cdccbbb4a0814e95c0151f10525ea47e94b",
+    "scripts/hybrid/connect_gpu_cost.mjs": "6cfb491d9825f946091d31a0ec41a7d43c796df3cb7abda18a0422e0c9450d97",
+    "scripts/hybrid/local_unlock_connect.py": "c6a98497d92299edcf573bc37b955a9ad4e1aa641d89341d81eb4166b6ca531f",
+    "scripts/deployment/local_unlock_market.py": "ec1c3e04a2132c9c864be613272f544c6b0a5396b9132e75be8dd0decf8f4956"
+  },
+  "privateDataRead": false,
+  "privateDataIncluded": false,
+  "rpcRequestsMade": 0,
+  "walletAccessed": false,
+  "publicTransactionsSent": 0,
+  "runtimeSourceFilesModified": false,
+  "scope": "Read-only frozen manifest integrity/dependency coverage review; source file hashes are bindings, not a scientific acceptance claim."
+}

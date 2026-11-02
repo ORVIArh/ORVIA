@@ -1,0 +1,33 @@
+{
+  "schema": "orvia.gpu-connection.bridge-review.v1",
+  "reviewedAtUtc": "2026-11-02T17:37:00.156123+00:00",
+  "tests": {
+    "connectionProgressAndFreezeGuards": {
+      "passed": 8,
+      "failed": 0
+    },
+    "syntheticPTYAndHTTPAgainstExactMarketBase": {
+      "passed": 12,
+      "failed": 0
+    },
+    "browserScriptSyntax": "passed"
+  },
+  "independentReview": "Passed after rejecting contradictory completion states; no new password or CSRF regression found. Frozen dependency coverage is verified separately at launch.",
+  "files": {
+    "scripts/hybrid/local_unlock_connect.py": {
+      "bytes": 11767,
+      "sha256": "c6a98497d92299edcf573bc37b955a9ad4e1aa641d89341d81eb4166b6ca531f"
+    },
+    "scripts/hybrid/test_local_unlock_connect.py": {
+      "bytes": 4552,
+      "sha256": "34f2f69f20ea5ad5254f640696644aa245010fabc75c9b5e9043962fc8968e26"
+    },
+    "scripts/deployment/local_unlock_market.py": {
+      "bytes": 18655,
+      "sha256": "ec1c3e04a2132c9c864be613272f544c6b0a5396b9132e75be8dd0decf8f4956"
+    }
+  },
+  "zeroByteRuntimeModules": "Regular zero-byte dependency files remain hash-bound. Empty JSON is still rejected by JSON parsing. Full frozen-file verification passed.",
+  "frozenManifestSha256": "2780caee024a46985c6ff221292fef08a89dc18d9eed23f3ac3e4e82f317df96",
+  "frozenFileCount": 6243
+}

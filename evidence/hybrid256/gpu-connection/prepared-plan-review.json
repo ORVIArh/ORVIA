@@ -1,0 +1,52 @@
+{
+  "schema": "orvia.gpu-connection.public-plan-review.v1",
+  "connectionPlanSha256": "642b1cdc6dd18572453a89c208c189e32fddd0ac0f09f1cb7abb5a3b88b6d118",
+  "operationPlanSha256": "f38ed11322ca6ca9b346ac9893d7510d281fc07283905af74ef8fdd9c490ee54",
+  "coordinator": "0x3B188B4c5B76b009d80455D3bbB7597983E390f0",
+  "chainId": 4663,
+  "runId": "0x3b60f0204b50f6099581f18463a5796efab01e23e36744b9dffc76d08ca29c69",
+  "diagnosticOnly": true,
+  "retrospective": true,
+  "scientificAcceptance": false,
+  "totalTransactions": 3,
+  "assessment": {
+    "experimentId": "0x4eeb96854ce18822ef54fe421ac1f7f8ee1f7a6b2aeace1abd857c66cfcfec61",
+    "configuration": {
+      "protocolHash": "0x1bbdb10481886087ce451a510a39a1d6f91045b1c2c2cfdc9c13b8532b19bbb5",
+      "modelHash": "0x1dc442c8bc786876c97102c0e9bdd767075f1544045a22a9f3fb47c0c1a509db",
+      "inputHash": "0x210d4192a840fb3fe8662dcff2474751af6d2dab1a754293e980a2799c52a24f",
+      "softwareHash": "0xd825ad4aff22d98c94bdbbf0f3ae7c0537cdcc38c04a40b81513e6d423f20244",
+      "environmentHash": "0x0ef6346a2c4e14120203195a615dc9b82ef670d14c1b0a3f3a7770128eb5b650",
+      "requiredChecks": 7,
+      "allowedChecks": 7,
+      "diagnosticOnly": true
+    },
+    "runConfigHash": "0x1bbdb10481886087ce451a510a39a1d6f91045b1c2c2cfdc9c13b8532b19bbb5",
+    "checkpointHash": "0x5c12df660b0649fd1a50e421f4e8e06ac6902fee635d174551bff1c9ae3438cc",
+    "resultHash": "0xef01459ab92929285cdeb2284df6fcad5d73927fde23e3cd9c0e7c84c8dcf2b5",
+    "completedSteps": "6",
+    "outcome": 1,
+    "checks": 7,
+    "diagnosticOnly": true,
+    "counterUnit": "completed native full-model comparison cases"
+  },
+  "connectionSourceSha256": {
+    "connect_gpu.mjs": "72032db71482bff3d24a9a7318c10cdccbbb4a0814e95c0151f10525ea47e94b",
+    "connect_gpu_cost.mjs": "6cfb491d9825f946091d31a0ec41a7d43c796df3cb7abda18a0422e0c9450d97",
+    "../deployment/hybrid_operator_market.mjs": "2074d602c493f6c4c685c727902cde1eb986165069bfa1a50a9aea3a7c8ac6b1",
+    "../deployment/market_recovery.mjs": "dd87d01f86a01944424b861fcd89b3e369afddaa0fda416a95e479475b12a193"
+  },
+  "operatorSourceSha256": {
+    "report_operator.mjs": "ea938f657c21b56e4b98a4abe82f6e1287aeb7c7be705671e75ddf9d450ffa5e",
+    "protocol_registry.mjs": "13ab0e74c9c7a57d09b05459bab464364ecbe207741786d39b630fae1da96c6d",
+    "admission.mjs": "acff0ad1dfdb353de0ff87ab72a10d9e7e860ea3896d296324ea644656597d05",
+    "precision_admission.mjs": "d5d85fdba7163925fa8f6ef2b885b275dd08394dafa23936b724c37f72dc35b0",
+    "native_full_model_admission.mjs": "5cc5299dc6aea878fdbf60c2135edd2b09fc5c287eba2145231163b54118c03b",
+    "attestation.mjs": "e9b848d92865ed3afdea0391f03161bce700032fdf4368da73afbd2b3c1d6733",
+    "../deployment/hybrid256.mjs": "acb8bf771ee67c1408bd9817cfb5c15d42e46127f5ab810c1b484ccb9759e242",
+    "../deployment/hybrid_operator.mjs": "2a1fd6b91779b86479607430ba7089b4ef64498fec497545ee53e22573d8cded",
+    "../../experimental/mainnet-lite/local_wallet.mjs": "d57fd0ec0e1f65b257199a598a4f4a24112ccf9e3700cb09bb15a48cac3b884b"
+  },
+  "localFreezeSha256": "2780caee024a46985c6ff221292fef08a89dc18d9eed23f3ac3e4e82f317df96",
+  "scope": "Prepared local plan review; does not itself prove a submitted or accepted report."
+}
