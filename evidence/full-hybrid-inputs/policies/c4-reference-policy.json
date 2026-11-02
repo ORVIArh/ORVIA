@@ -1,0 +1,70 @@
+{
+  "LRC_energy_absolute_tolerance_kJ_mol": 1e-06,
+  "LRC_energy_relative_tolerance": 2e-05,
+  "alchemical_activity_policy_admitted": false,
+  "analytic_formula": "-4*pi*N/(N+1)*sum(n_ij*Cij)/(V*cutoff)",
+  "analytic_module": {
+    "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/c4-endpoint/independent-lrc/analytic_c4.py",
+    "sha256": "35f549ce387c77e633250ca78b8d4462896e7043342557020ae82aa44b30fdb3"
+  },
+  "class_counts": {
+    "cross": "Ni*Nj",
+    "same": "Ni*(Ni+1)/2"
+  },
+  "comparison": "Reference tails-off direct energy/forces against exact rational scalar-gradient; tails-on minus tails-off energy against independent100digit analytic LRC; tails-on forces versus same direct oracle.",
+  "declared_before_first_energy": true,
+  "direct_energy_absolute_tolerance_kJ_mol": 1e-08,
+  "direct_energy_relative_tolerance": 1e-10,
+  "direct_force_absolute_tolerance_kJ_mol_nm": 1e-08,
+  "direct_force_relative_tolerance": 1e-10,
+  "exclusions_subtracted_in_LRC": false,
+  "fixtures": {
+    "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/c4-endpoint/independent-lrc/fixtures.json",
+    "sha256": "dbb0bf1c8d9394e267659f51900d88f2519d3d1e850694997ff37d8db5ddce4c"
+  },
+  "force": "-c/r^4; c=C(type1,type2)",
+  "interaction_groups": false,
+  "nonbonded_method": "CutoffPeriodic",
+  "pinned_sources": {
+    "CustomNonbondedForceImpl.cpp": {
+      "bytes": 21898,
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/c4-endpoint/independent-lrc/CustomNonbondedForceImpl.cpp",
+      "sha256": "fbd9fe8f649afd4c12134edc6b88faa6a46719b636ae97d571a7b6962f94a44e",
+      "url": "https://raw.githubusercontent.com/openmm/openmm/b399af4725573963b46d6c1083fdcf7a37615857/openmmapi/src/CustomNonbondedForceImpl.cpp"
+    },
+    "ReferenceKernels.cpp": {
+      "bytes": 161525,
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/c4-endpoint/independent-lrc/ReferenceKernels.cpp",
+      "sha256": "f1655375b986f94c41bcc2eacbfbffcc0fca7edf3cefc3f37ea81e89e12de002",
+      "url": "https://raw.githubusercontent.com/openmm/openmm/b399af4725573963b46d6c1083fdcf7a37615857/platforms/reference/src/ReferenceKernels.cpp"
+    }
+  },
+  "preparation_note": "An initial source-preparation command used systemPython lackingOpenMM and exitedbeforeenergy orcontext. Subsequent preparation uses the pinned existing preparation environment; no packages changed.",
+  "production_ready": false,
+  "runtime": {
+    "binaries": {
+      "/Users/abhijith/Documents/ChatGPT/AURA/tools/envs/preparation/lib/libOpenMM.dylib": {
+        "bytes": 3783520,
+        "sha256": "e96c251825155e465eb5282a0962277d57f8fdfa3cd92c88f00418d7b731392e"
+      },
+      "/Users/abhijith/Documents/ChatGPT/AURA/tools/envs/preparation/lib/python3.12/site-packages/openmm/_openmm.cpython-312-darwin.so": {
+        "bytes": 3504048,
+        "sha256": "62ee6dd2edb4c69bacfab0d75a301770374334e4e15509d5313e7af8e277f04d"
+      },
+      "/Users/abhijith/Documents/ChatGPT/AURA/tools/envs/preparation/lib/python3.12/site-packages/openmm/openmm.py": {
+        "bytes": 937166,
+        "sha256": "5b67ec390bc0ced1cbfaad0f21168422ef8274c37caeb89c9da7347822b6f72d"
+      }
+    },
+    "full_version": "8.6.1.dev-b399af4",
+    "git_revision": "b399af4725573963b46d6c1083fdcf7a37615857",
+    "machine": "arm64",
+    "openmm_version": "8.6.1",
+    "platform": "Reference",
+    "python": "3.12.16"
+  },
+  "schema": "orvia.independent-c4-lrc-policy.v1",
+  "scope": "Independent small static engineering fixtures only; no native fullmodel, optimizer, dynamics or scientific acceptance.",
+  "switching": false,
+  "zero_ghost_diagnostic": "For the same2activeatoms and unchangedweightedCsum, addingzero-typeghosts givesNfactors2/3,3/4,8/9. Magnitude ratios toN2 are9/8and4/3; directenergy/forces stayunchanged."
+}

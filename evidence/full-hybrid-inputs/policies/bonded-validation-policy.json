@@ -1,0 +1,34 @@
+{
+  "added_ghost_correction_source": "Frozen hybrid_model.model_policy.trees.A; preserves actual instantaneous anchor and ghost forces.",
+  "context_force_classes": [
+    "HarmonicBondForce",
+    "HarmonicAngleForce",
+    "PeriodicTorsionForce"
+  ],
+  "coordinate_check_rationale": "Data-preservation check allowing only floating unit-conversion roundoff, not a physical geometry tolerance. No coordinates are optimized or changed.",
+  "declared_before_assembled_parameter_evaluation": true,
+  "energy_absolute_tolerance_kJ_mol": 1e-05,
+  "energy_relative_tolerance": 1e-09,
+  "force_absolute_tolerance_kJ_mol_nm": 0.001,
+  "force_relative_tolerance": 2e-06,
+  "frozen_source_sha256": {
+    "/Users/abhijith/Documents/ChatGPT/AURA/work/scientific-preparation/data/prepared_candidate/cardiac_adppi_ff03_m3l_33_782_solvated_v0_1/complex.inpcrd.gz": "6859d9aac3b91f8c79a2e7ebf676609798043a416fe15822d7e84caab262262a",
+    "/Users/abhijith/Documents/ChatGPT/AURA/work/scientific-preparation/data/prepared_candidate/cardiac_adppi_ff03_m3l_33_782_solvated_v0_1/complex.prmtop.gz": "709c6c24e182440835723960153113697c10547326d8b10236497998e6235eb3",
+    "/Users/abhijith/Documents/ChatGPT/AURA/work/scientific-preparation/data/prepared_candidate/ligand_adppi_ff03_m3l_33_782_solvated_v0_1/solvent.inpcrd.gz": "7d3a8080584ac0cc244e1deb3cfc1877893bd2a2e4036d40c50c4dc2391cae82",
+    "/Users/abhijith/Documents/ChatGPT/AURA/work/scientific-preparation/data/prepared_candidate/ligand_adppi_ff03_m3l_33_782_solvated_v0_1/solvent.prmtop.gz": "6d3b30f439688d8a5c2f0af5f54ce687ca191eab16f2c441dda842c4e607376f",
+    "/Users/abhijith/Documents/ChatGPT/AURA/work/scientific-preparation/data/prepared_candidate/ligand_endpoints_v0_1/hybrid_model.json": "5573b43cd746f2e343cae6e2d32c6cf0358efc959170aaca232b686d63e1174a"
+  },
+  "native_builder": {
+    "constraints": null,
+    "nonbondedMethod": "NoCutoff",
+    "removeCMMotion": false,
+    "rigidWater": false
+  },
+  "native_coordinate_preservation_absolute_tolerance_nm": 1e-12,
+  "nonbonded_context_forbidden": true,
+  "production_ready": false,
+  "reference_platform": "Reference",
+  "schema": "orvia.full-hybrid.native-B-bonded-policy.v1",
+  "scope": "Static three-group bonded-only comparison: assembledB versus unchanged nativeB plus independently sourced positive A-only-H harmonic confinement. Every force component is checked. This is not nonbonded/C4/constraint/integrator/scientific acceptance.",
+  "zero_coefficient_terms": "Recorded and counted, but omitted from the assembled Reference system because their scalar energy is identically zero, matching engine zero-k skips."
+}

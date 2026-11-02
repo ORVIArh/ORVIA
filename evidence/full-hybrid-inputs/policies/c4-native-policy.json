@@ -1,0 +1,36 @@
+{
+  "derivedAStatus": "C4-only reference derived from pinned native matrix and A native atom types/exclusions at preserved assembled coordinates; not a complete native A system.",
+  "diagnosticMethods": [
+    "nativeNoCutoff_noLRC",
+    "nativeCutoffPeriodic1nm_LRC",
+    "counterfactualCutoffPeriodic1nm_noLRC"
+  ],
+  "fullCompositionExecutable": false,
+  "gpuEnergyTolerance": {
+    "absolute": 0.001,
+    "additionalLrcAbsolute": 1e-06,
+    "additionalLrcRelative": 2e-05,
+    "relative": 2e-05
+  },
+  "gpuForcePerComponentTolerance": {
+    "absolute": 0.001,
+    "relative": 5e-05
+  },
+  "inactiveRetainedHybridGhostC4Activity": null,
+  "lambdaC4Coupling": null,
+  "lrcAnalyticEnergyTolerance": {
+    "absolute": 1e-06,
+    "relative": 2e-05
+  },
+  "oracleDecimalDigits": 90,
+  "physicalEndpoints": [
+    "nativeB44",
+    "derivedPhysicalA41"
+  ],
+  "preregisteredBeforeFirstEnergy": true,
+  "productionReady": false,
+  "referenceSmallFixturePolicy": "Independent script preregisters1e-8+1e-10relative direct E/F and1e-6+2e-5relative LRC.",
+  "schema": "orvia.c4-physical-endpoint-diagnostic-policy.v1",
+  "scientificAcceptance": false,
+  "switching": "Pinned OpenMM Amber importer leaves C4 custom force unswitched; require false."
+}
