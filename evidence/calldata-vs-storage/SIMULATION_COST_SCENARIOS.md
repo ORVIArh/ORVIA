@@ -6,7 +6,7 @@ The previously estimated approximately 0.15 ETH covers an infrastructure allowan
 
 ## Schedules
 
-Each illustration uses both available candidate systems, 16 intermediate states, three independent repeat pairs and 100 raw samples per state: **96 windows**, arranged into six campaigns. Half of each window's steps are allocated to equilibration. These choices, including the illustrative 2 fs timestep, are not accepted scientific settings or a claim of sufficient sampling.
+Each illustration uses both available candidate systems, 16 total alchemical states, three independent repeat pairs and 100 raw samples per state: **96 windows**, arranged into six campaigns. Half of each window's steps are allocated to equilibration. These choices, including the illustrative 2 fs timestep, are not accepted scientific settings or a claim of sufficient sampling.
 
 | Scenario | Steps per window, including equilibration | Time per window at 2 fs | Total energy/force evaluations |
 |---|---:|---:|---:|
@@ -14,7 +14,7 @@ Each illustration uses both available candidate systems, 16 intermediate states,
 | Medium | 100,000 | 0.2 ns | 9,744,096 |
 | Long | 1,000,000 | 2 ns | 96,144,096 |
 
-The current pipeline performs one initial evaluation, one per step, and 15 additional state evaluations per retained raw sample. Therefore the total is `96 × (steps + 1 + 100 × 15)`. The short case still includes 144,000 cross-state evaluations. Sample strides are respectively 5, 500 and 5,000 after equilibration; 1,600 samples per campaign fit the current 4,096-sample limit. Numerical admission does not establish statistical quality.
+The current pipeline performs one initial evaluation, one per step, and 15 additional state evaluations per raw sample. Therefore the total is `96 × (steps + 1 + 100 × 15)`. The short case still includes 144,000 cross-state evaluations. Sample strides are respectively 5, 500 and 5,000 after equilibration; 1,600 samples per campaign fit the current 4,096-sample limit. Numerical admission does not establish statistical quality.
 
 The available assembled candidate has **132,936 complex atoms with 120,519 constraints**, and **151,506 solvent atoms with 151,179 constraints**. These are the existing ADP/phosphate candidate inputs. They are not an approved replacement for the selected original vanadate protocol. Its complete executable model and scientific acceptance remain unresolved.
 
