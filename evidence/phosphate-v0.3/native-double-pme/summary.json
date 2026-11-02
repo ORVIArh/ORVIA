@@ -1,0 +1,174 @@
+{
+  "schema": "orvia.phosphate-v03-native-double-pme-public-evidence.v1",
+  "status": "both_native_legs_passed_bounded_numerical_diagnostic_only",
+  "scientificAcceptance": false,
+  "productionReady": false,
+  "chemicalIdentity": "Separately named ADP/phosphate candidate; original vanadate experiment unchanged. Native B full-size models, not a complete A-to-B RBFE campaign.",
+  "hardware": "NVIDIA H200, actual CUDA double, UseCpuPme=false; CPU Reference oracle source unmodified.",
+  "engine": {
+    "upstreamCommit": "b399af4725573963b46d6c1083fdcf7a37615857",
+    "buildReportSha256": "82f3560f4ff7e0b780b65608f50d188e85d12a08b7bd5c14fba82d8236833f4f",
+    "patchScriptSha256": "e8265dda01a3c3cd3695f35fc31b891e7a5426c6762acc036a69d9276b38a108",
+    "buildScriptSha256": "f15c58dcb3e6c4a66b6fc46081e07ddf3aa27d61abcb309ae7196afc345f560c",
+    "modifiedSourceFiles": [
+      "platforms/common/src/CommonCalcNonbondedForce.cpp",
+      "platforms/common/src/kernels/nonbondedParameters.cc",
+      "platforms/common/src/kernels/nonbondedExceptions.cc",
+      "platforms/common/src/kernels/pmeExclusions.cc"
+    ],
+    "patchScope": "Experimental validation-only native double PME with no parameter offsets. Single/mixed, non-PME and CPU-PME modes rejected. No physical parameter rounding.",
+    "historicalBuildReportNumericalValidationPassed": false,
+    "portability": "Linux x86_64, CPython3.12, GLIBC2.38/GLIBCXX3.4.32, NVIDIA driver +libcufft.so.11/libnvrtc.so.12; relocation needs a new explicit environment binding."
+  },
+  "numericalPolicy": {
+    "actualMatchedAlphaInvNm": 2.628260884878466,
+    "actualMatchedGrid": [
+      96,
+      90,
+      100
+    ],
+    "energyAbsolute_kJ_mol": 0.01,
+    "forceMaxAbsolute_kJ_mol_nm": 0.05,
+    "forceRelativeL2": 5e-05,
+    "thresholdsRelaxed": false
+  },
+  "protocol": {
+    "restraintK_kJ_mol_nm2": [
+      1000,
+      100,
+      0
+    ],
+    "minimizerMaxIterations": [
+      200,
+      200,
+      400
+    ],
+    "minimizerForceTolerance_kJ_mol_nm": 10,
+    "minimizerConvergenceCertified": false,
+    "nveSteps": 10,
+    "nveDtFs": 0.1,
+    "integratedDurationFsPerLeg": 1,
+    "thermodynamicStabilityOrEnergyDriftCertified": false
+  },
+  "legs": {
+    "complex33": {
+      "particles": 132935,
+      "constraints": 120519,
+      "reportSha256": "dd0ca342ac84408d62933609b24afbb4dc0303b984860ad922765e09f89b3f62",
+      "sourceSystemSha256": "13939620df9a6c18ae249afa4add4e442b6004eadfc641d9078bcd45a798cc93",
+      "preparedPositionsSha256": "55366f20dab76493f67fd465f1cf88d2aa740c932cb080b1ef1730b96436d1c7",
+      "finalPositionsSha256": "2fc54913b13dd431601503cb1e63c27452c8dc136b4cebf41c8b3824b985373b",
+      "comparisons": {
+        "initial_comparison": {
+          "energy_absolute_kJ_mol": 0.005276940995827317,
+          "force_max_absolute_kJ_mol_nm": 0.004227899153988801,
+          "force_relative_L2": 5.06561710162801e-07,
+          "passed": true,
+          "reference_energy_kJ_mol": -1529385.840695455,
+          "target_energy_kJ_mol": -1529385.835418514,
+          "reference_force_L2": 350098.7430829364,
+          "force_difference_L2": 0.17734661802193935
+        },
+        "final_comparison": {
+          "energy_absolute_kJ_mol": 0.0026040012016892433,
+          "force_max_absolute_kJ_mol_nm": 0.0041785201219326495,
+          "force_relative_L2": 4.5434366140241384e-07,
+          "passed": true,
+          "reference_energy_kJ_mol": -2101725.9558911454,
+          "target_energy_kJ_mol": -2101725.953287144,
+          "reference_force_L2": 389519.2208955727,
+          "force_difference_L2": 0.17697558900831012
+        },
+        "post_nve_comparison": {
+          "energy_absolute_kJ_mol": 0.0026073846966028214,
+          "force_max_absolute_kJ_mol_nm": 0.004178294597060983,
+          "force_relative_L2": 4.5434953757711076e-07,
+          "passed": true,
+          "reference_energy_kJ_mol": -2101733.5500703957,
+          "target_energy_kJ_mol": -2101733.547463011,
+          "reference_force_L2": 389513.44913174154,
+          "force_difference_L2": 0.17697525549307222
+        }
+      },
+      "finalMaxAbsoluteForce_kJ_mol_nm": 2941.4791000671685,
+      "elapsedSeconds": 186.59629783406854
+    },
+    "solvent33": {
+      "particles": 151505,
+      "constraints": 151179,
+      "reportSha256": "bb1f2e6a345368b55e89758ce14b7a5a5cb7d863750f127c12603ee316949ae3",
+      "sourceSystemSha256": "e7927eda87abc0a7380cd6969b54f9e0c2c6f3a6ee5f85b5f61ccab4266af2c3",
+      "preparedPositionsSha256": "f9425cc8ce73ff0d2dde297e467b71f64f8cd27ef1d8103e16297c8eca497e89",
+      "finalPositionsSha256": "ce1aa431791eafc18e90312d34acd7a629306c22b91b1cc962e151be4198c1c1",
+      "comparisons": {
+        "initial_comparison": {
+          "energy_absolute_kJ_mol": 0.0001289381179958582,
+          "force_max_absolute_kJ_mol_nm": 0.004229224779805918,
+          "force_relative_L2": 1.790299985368512e-08,
+          "passed": true,
+          "reference_energy_kJ_mol": -1797075.2905442321,
+          "target_energy_kJ_mol": -1797075.2906731702,
+          "reference_force_L2": 524134.9143613743,
+          "force_difference_L2": 0.009383587295122946
+        },
+        "final_comparison": {
+          "energy_absolute_kJ_mol": 2.077268436551094e-05,
+          "force_max_absolute_kJ_mol_nm": 0.003743742059782562,
+          "force_relative_L2": 2.1335104099053514e-08,
+          "passed": true,
+          "reference_energy_kJ_mol": -2569090.7936565694,
+          "target_energy_kJ_mol": -2569090.7936357968,
+          "reference_force_L2": 441582.92719910137,
+          "force_difference_L2": 0.009421217720157598
+        },
+        "post_nve_comparison": {
+          "energy_absolute_kJ_mol": 2.0009931176900864e-05,
+          "force_max_absolute_kJ_mol_nm": 0.0037435037601767363,
+          "force_relative_L2": 2.13297542376684e-08,
+          "passed": true,
+          "reference_energy_kJ_mol": -2569099.6616130895,
+          "target_energy_kJ_mol": -2569099.6615930796,
+          "reference_force_L2": 441582.2146702353,
+          "force_difference_L2": 0.009418840114641449
+        }
+      },
+      "finalMaxAbsoluteForce_kJ_mol_nm": 2324.168549256865,
+      "elapsedSeconds": 163.88335046102293
+    }
+  },
+  "independentGeometry": {
+    "reportSha256": "8cad3d163d163ecfc1e3e0236814d3b40d50a6e98adf4252b4d0a9f70ea12ab8",
+    "bothLegsPassImplementedChecks": true,
+    "magnesiumCoordinationAccepted": false,
+    "note": "Mg O/N/S distance-shell count grows6 to7 within0.35nm; diagnostic proximity only."
+  },
+  "rawLocalResultArchive": {
+    "sha256": "42d411f327ca456cb2c2f8cf7a6c4a1be0c9bce4929330f9534676597966bc7a",
+    "bytes": 56802186,
+    "omittedFromGit": true,
+    "omittedContents": "Full stage arrays, matched XMLs and hardware-specific binary checkpoints remain local; final position arrays included publicly."
+  },
+  "inputArchiveSha256": "b646065d0de242eeb3838b5cdede572de9d90cc61256599bf11ea8e3d2e18f9c",
+  "historicalRuntimeArchiveSha256": "f24c7cf3e8546a567739ee103eabadf8ca5d84b5a48f092c7f2ff845291e0291",
+  "licenseSupplementSha256": "b9f1c5c71196405a7075067c39ce023d8b4b945c6b031ce636e58c0a7a72131c",
+  "licenseCorrection": "Original frozen runtime archive omitted upstream license files; public runtime zip includes unchanged historical archive plus exact pinned license archive and extracted license texts. New exporter now fails closed if exact pinned license files are missing.",
+  "limits": [
+    "Reported energy/force comparisons are executed runner results; byte/threshold review does not independently rerun force calculations or reconstruct omitted force vectors.",
+    "Native B-only numerical and geometry diagnostics do not validate hybrid endpoints, C4 coupling, PME charge corrections, parameter quality or free energies.",
+    "One femtosecond diagnostic with zero initial velocities does not establish equilibration, finite-temperature sampling, production timestep, ns/day, or ensemble/energy-drift acceptance.",
+    "Iteration-capped relaxation is not certified converged minimization.",
+    "No deployment, wallet action or public transaction is performed by this evidence packaging."
+  ],
+  "bundles": {
+    "accuracy-evidence.zip": {
+      "bytes": 8263914,
+      "sha256": "6db8c1556c7ef2684dedf7a95cadd12951827da0eb30c31245d4f3068a035619",
+      "payloadFiles": 84
+    },
+    "engine-runtime-with-licenses.zip": {
+      "bytes": 18266689,
+      "sha256": "88aa8f1997ea520027f6403822c5a2973363d15447b8f75e8d01b50bce641e50",
+      "payloadFiles": 5
+    }
+  }
+}

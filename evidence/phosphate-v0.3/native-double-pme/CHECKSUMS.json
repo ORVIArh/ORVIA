@@ -1,0 +1,18 @@
+{
+  "README.md": {
+    "bytes": 3679,
+    "sha256": "ba1b8b6d2e9c7ab2b92ac755a462c325e1cd8c29baeb665c4d77fd2e283eade9"
+  },
+  "accuracy-evidence.zip": {
+    "bytes": 8263914,
+    "sha256": "6db8c1556c7ef2684dedf7a95cadd12951827da0eb30c31245d4f3068a035619"
+  },
+  "engine-runtime-with-licenses.zip": {
+    "bytes": 18266689,
+    "sha256": "88aa8f1997ea520027f6403822c5a2973363d15447b8f75e8d01b50bce641e50"
+  },
+  "summary.json": {
+    "bytes": 8491,
+    "sha256": "10c43f6c19a49e6e734fbaeea86278624fb80f494dcdd23d002e817dac9b4e2f"
+  }
+}
