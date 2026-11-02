@@ -1,0 +1,351 @@
+{
+  "passed": true,
+  "status": "passed_local_fixture",
+  "scope": "Synthetic 3-atom constrained stochastic pipeline candidate; no production ensemble acceptance.",
+  "publicTransactionsSent": 0,
+  "historicalIsolatedPass": {
+    "reportSha256": "3a17601026573a4977065190625c6417dc06018895acdeec5449c6bb24f4f069",
+    "testSha256": "a7b22cff1fafa62fa125f6511fb088856b93dac9587c116e3fd1491ac35a2c1e",
+    "referenceSha256": "6335a0a4b08561a1f01cd75102c15d93a88096d17ce13c3d81635e3688981e7c",
+    "preservedAt": "../output/256-constraint-extra-validation/historical-passed"
+  },
+  "checks": [
+    "constraint tolerances, sweep cap, method and per-leg model are preregistration-bound",
+    "registration succeeds before windows and rejects after a window starts",
+    "nonzero tangential forces and nonzero-friction OU step completed with authenticated sample transcript",
+    "continued child preserves prior transcript/checkpoint and reproduces next stochastic step bit-for-bit",
+    "independent 110-digit two-step B/A/O/A/B forces and constrained positions/velocities"
+  ],
+  "files": {
+    "candidate": "3bc90af3b2c4c64a335b34ce291e3cf902863b33cc85ba33b5d030f6b214f7b9",
+    "fixture": "37f4908313fe980a84783970c76966df0f3449f07e0ad07f94e8ea13e47b7f60",
+    "test": "20e344e8bfd5f11cd69b97c197d00172bfc7516d6508f8d51ede91d3b450d3de",
+    "reference": "0acaf17440a9f1642d28c5d36564332527960b53c7845ccfcb325160cdad04c0"
+  },
+  "compilation": {
+    "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+    "settings": {
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "evmVersion": "shanghai",
+      "outputSelection": {
+        "*": {
+          "*": [
+            "abi",
+            "evm.bytecode.object"
+          ]
+        }
+      }
+    },
+    "sourceSha256": {
+      "contracts/core/AlchemicalTopologyCatalog.sol": "f92337cf81ad28b0cf9842d3a34a8a119836aa5ed30698c681d621ff69ae362c",
+      "contracts/math/FloatMath.sol": "a474f7656f9ffc3d3149e6a0e08f2fcf6838483ae689d1e6a7cf7400f8bad74b",
+      "contracts/math/vendor/ABDKMathQuad.sol": "dd13f72bf828a699c94e96d1377daabce3dcc1d4b29af7215501a611d3cb7c9e",
+      "contracts/kernels/OrthorhombicGeometry.sol": "9521042dab915a3fc6cfe2bb1395c1aba0c6a2fad58d7623cd4a10435de3808b",
+      "contracts/core/AlchemicalHamiltonianEvaluator.sol": "0bc4672ea4f92688e0707a5bbed36aed594eef02f013f35e68bfbd4d33e56806",
+      "contracts/core/ExperimentRegistry.sol": "39c3e8382b3fae049c16da81b1ea586e36deaa5ecbbda466b8377e240f78f047",
+      "contracts/kernels/HarmonicBondKernel.sol": "cbb2b99181ab7eec4a07dca99734e9ab2a3fa6ae4bd61b39d3a7bc6ef0f63108",
+      "contracts/kernels/HarmonicAngleKernel.sol": "d525eeecc8625d1e05112dc2977a91fe1d688d7585f99d08151cdc73fa2cbe09",
+      "contracts/math/ElementaryMath.sol": "9965604b32c46748605948c58f092ead3911e231baf39e7d4bea02beb3200062",
+      "contracts/kernels/PeriodicTorsionKernel.sol": "67e457741c247eb2af7248cd897a68b997caeb0db84c073c74e477570788765f",
+      "contracts/kernels/LennardJonesKernel.sol": "a02748bef456a33b15f0cfa7a1b5a20f23d6021f4e741b0cf0a9b61af457dca2",
+      "contracts/kernels/SoftcoreLennardJonesKernel.sol": "fb6b215e82aff471a1f615f6809c45e1b3aeae6df804ed29673ae0e63207e2b4",
+      "contracts/kernels/EwaldRealSpaceKernel.sol": "f4ceec084d7131de3141ad0f8be06dd1ff6dfa722d6499740af9de7cd431ebf1",
+      "contracts/kernels/EwaldKernelBase.sol": "c9f44e1dbf573ad9505e886e0f3854c2ffda850e3a0fd0b08c22563f23031a17",
+      "contracts/kernels/EwaldReciprocalKernel.sol": "7225171a789fdf4ced5256b293a428138e27c4c2dbe73eea5f22a52af94ec1bf",
+      "contracts/kernels/EwaldCorrections.sol": "0b8210b673f03606d1beb1d8a1663f2bc4bf371a884e5443733fa70ecc6d78e8",
+      "contracts/core/PeriodicCellIndex.sol": "0c3b70b0a9f277be4087556b5ac200cb602e2f18fb90d16a272d30de9d234027",
+      "contracts/core/OrderedNeighborPairs.sol": "1133a7b059696623cc466f173ac1d6559dcc5afb80088ce7028c792af728c383",
+      "contracts/core/MolecularSimulationPipeline.sol": "3bc90af3b2c4c64a335b34ce291e3cf902863b33cc85ba33b5d030f6b214f7b9",
+      "contracts/kernels/LangevinBAOABKernel.sol": "a469bddd9acd9cf0551293f9f9112a8fba07a7f0caa5e3b6f0747982411541c9",
+      "contracts/math/ScalarMath.sol": "fd95d9e52db57f772946d1eff8d3c9b0e2518fdbdadb033160f4b5678df13f58",
+      "contracts/kernels/CounterRandom.sol": "98f38ee2e2962858ac681565b369a2a983f8aecd7b8188a9b191a4a4c5954190",
+      "contracts/analysis/ReducedPotentialCollector.sol": "87b5e30940220d30733252d51e64c37d222e0b52a5178c91f1df424f647a1fad",
+      "contracts/analysis/TimeSeriesDiagnostics.sol": "b0a6ec90fc2a645a59a73f71c3885234f38eaec0b812552a7b1ff16efd101794",
+      "contracts/analysis/MBARFreeEnergyEstimator.sol": "6026c479247a5ff326fa2feadb1e4659ef585512fb180460bebd0ab2407ce223",
+      "contracts/interfaces/IMolecularCampaignSource.sol": "845ec6a325995a24583570d1448826293c05b6aa06b5050d1eff8a1c96293168",
+      "contracts/core/FullModelConstraintCatalog.sol": "8ef6428c5f2783fbfdee8d752d2f2406d8cac06207f490f73cba2bc8203e3c6d",
+      "contracts/core/FullModelConstraintSolver.sol": "178329c41e7b113f7fc387497be6db2e22564c694151889cfc5cc568a56b6167",
+      "contracts/kernels/DistanceConstraintKernel.sol": "c5d05a76366559595f7c81617c6c65d72938a64eb12ba43708961c8f65756e37",
+      "contracts/core/BankedWorkingState.sol": "ed9fcee0659e2ed7dd9d90682e77bfd3aacc9056d17a0b62041cbc1947f99fe0",
+      "contracts/core/BankedInputCatalog.sol": "d956dd672852dc76fdc064bb6fecca55cc584ba7125df4b566b31bef9440c16b",
+      "contracts/analysis/UncertaintyAndResults.sol": "5c405ec23b23d916de5bdf7feae8b4f975cc4432323be47fdb4e9a3f605cf66b",
+      "contracts/analysis/SamplingDiagnostics.sol": "2ae107854eddc1bbb1659bace5abe0bf0e4010645fe219a0a5bac67073c5efb3"
+    }
+  },
+  "observations": [
+    {
+      "step": 1,
+      "initial": [
+        [
+          [
+            "0x00000000000000000000000000000000",
+            "0x00000000000000000000000000000000",
+            "0x00000000000000000000000000000000"
+          ],
+          [
+            "0x00000000000000000000000000000000",
+            "0x3fff0000000000000000000000000000",
+            "0x00000000000000000000000000000000"
+          ],
+          [
+            "0x00000000000000000000000000000000",
+            "0x00000000000000000000000000000000",
+            "0x00000000000000000000000000000000"
+          ]
+        ],
+        [
+          [
+            "0x3fff0000000000000000000000000000",
+            "0x00000000000000000000000000000000",
+            "0x00000000000000000000000000000000"
+          ],
+          [
+            "0x00000000000000000000000000000000",
+            "0xbffe0000000000000000000000000000",
+            "0x00000000000000000000000000000000"
+          ],
+          [
+            "0x00000000000000000000000000000000",
+            "0x3ffdffffffffffffffffffffffffffff",
+            "0x00000000000000000000000000000000"
+          ]
+        ],
+        [
+          [
+            "0x3fff0000000000000000000000000000",
+            "0x3fff4000000000000000000000000000",
+            "0x00000000000000000000000000000000"
+          ],
+          [
+            "0x3ffc0000000000000000000000000000",
+            "0x3ffd0000000000000000000000000000",
+            "0xbffc0000000000000000000000000000"
+          ],
+          [
+            "0x00000000000000000000000000000000",
+            "0xbffdffffffffffffffffffffffffffff",
+            "0x00000000000000000000000000000000"
+          ]
+        ]
+      ],
+      "actual": [
+        [
+          [
+            "0x3ff30a45b4fcddacd52f8c5ef46fe292",
+            "0x3ff904464eb710f29a265aad22e67afe",
+            "0x3ff539faf17055e07e860044e98e1bfe"
+          ],
+          [
+            "0x3ffa0a3f1748117a5e70d2d89171bfca",
+            "0x3fff0883a9f14169a25ed86103102762",
+            "0x3ffc39f763b01b7bb000aa230f400226"
+          ],
+          [
+            "0x00000000000000000000000000000000",
+            "0x00000000000000000000000000000000",
+            "0x00000000000000000000000000000000"
+          ]
+        ],
+        [
+          [
+            "0x3ffefffd60d16b7cabebc450227ba711",
+            "0xbff7eae6a806199546a31652e92bedeb",
+            "0x3ff03bc88620109a12ea41b1df0b2b37"
+          ],
+          [
+            "0xbff64f0971d6c64e37fdf4ba7a995483",
+            "0xbffdd5a2d1aa89d933671113b3afd5b9",
+            "0x3ff73bd5b27c4f3495e81e7a349a0f42"
+          ],
+          [
+            "0x3ff463ab1208a0bf90b75267affa92d4",
+            "0x3ffe0c4bb3f42d1b01b0cfcc9734753f",
+            "0xbff45d7d3b3d932abc2aaa7a95cb5ad8"
+          ]
+        ],
+        [
+          [
+            "0x3fff0069c2a38250a65b79015e7d3f38",
+            "0x3fff4127eab2d3aa3cb04785ddb2b6f7",
+            "0xbff59af9d9a0111d47d35073145462d8"
+          ],
+          [
+            "0x3ffb4e1341d917d2057349ff7c1a2f92",
+            "0x3ffd4fc500b7643d3c8ccaa654a45393",
+            "0xbffb35f1e143d33dcb6da6029aaffdf6"
+          ],
+          [
+            "0xbff463ab1208a0bf90b75267affa92d4",
+            "0xbffe0c4bb3f42d1b01b0cfcc9734753f",
+            "0x3ff45d7d3b3d932abc2aaa7a95cb5ad8"
+          ]
+        ]
+      ],
+      "normal": [
+        [
+          "0x3ffbc65439dc85a7cdb3a12304603f99",
+          "0x3ffe53fd457f9889ac1eb60f8606583e",
+          "0x40003b352081e7829fe0f96d6cdbd018"
+        ],
+        [
+          "0x3ffcdc553ba35ac942276428da1f9358",
+          "0x3ffe83d28bb7b90e3ab84f07461d9ea5",
+          "0x3ffbc054a3d42fd712126b7b7c7329ff"
+        ],
+        [
+          "0xbfff2e704655b3b7e5de69bec30996a3",
+          "0x400025cc66437c28ff1447559b7caa14",
+          "0x3fff5865af24d0b2f6d6e91e05f60469"
+        ]
+      ]
+    },
+    {
+      "step": 2,
+      "initial": [
+        [
+          [
+            "0x3ff30a45b4fcddacd52f8c5ef46fe292",
+            "0x3ff904464eb710f29a265aad22e67afe",
+            "0x3ff539faf17055e07e860044e98e1bfe"
+          ],
+          [
+            "0x3ffa0a3f1748117a5e70d2d89171bfca",
+            "0x3fff0883a9f14169a25ed86103102762",
+            "0x3ffc39f763b01b7bb000aa230f400226"
+          ],
+          [
+            "0x00000000000000000000000000000000",
+            "0x00000000000000000000000000000000",
+            "0x00000000000000000000000000000000"
+          ]
+        ],
+        [
+          [
+            "0x3ffefffd60d16b7cabebc450227ba711",
+            "0xbff7eae6a806199546a31652e92bedeb",
+            "0x3ff03bc88620109a12ea41b1df0b2b37"
+          ],
+          [
+            "0xbff64f0971d6c64e37fdf4ba7a995483",
+            "0xbffdd5a2d1aa89d933671113b3afd5b9",
+            "0x3ff73bd5b27c4f3495e81e7a349a0f42"
+          ],
+          [
+            "0x3ff463ab1208a0bf90b75267affa92d4",
+            "0x3ffe0c4bb3f42d1b01b0cfcc9734753f",
+            "0xbff45d7d3b3d932abc2aaa7a95cb5ad8"
+          ]
+        ],
+        [
+          [
+            "0x3fff0069c2a38250a65b79015e7d3f38",
+            "0x3fff4127eab2d3aa3cb04785ddb2b6f7",
+            "0xbff59af9d9a0111d47d35073145462d8"
+          ],
+          [
+            "0x3ffb4e1341d917d2057349ff7c1a2f92",
+            "0x3ffd4fc500b7643d3c8ccaa654a45393",
+            "0xbffb35f1e143d33dcb6da6029aaffdf6"
+          ],
+          [
+            "0xbff463ab1208a0bf90b75267affa92d4",
+            "0xbffe0c4bb3f42d1b01b0cfcc9734753f",
+            "0x3ff45d7d3b3d932abc2aaa7a95cb5ad8"
+          ]
+        ]
+      ],
+      "actual": [
+        [
+          [
+            "0x3ff49f9094a53aa38bbfdd265866b3fd",
+            "0x3ffa046a57fac67d3d6e131c63402491",
+            "0x3ff6f0b8abde0614ad21d3123ce35fd4"
+          ],
+          [
+            "0x3ffa281899bee5e7590818063d559521",
+            "0x3fff009141c66c3209ac0a1e889bd8e2",
+            "0x3ffc6d7893a5e8ff664cd0aa47395cfa"
+          ],
+          [
+            "0x00000000000000000000000000000000",
+            "0x00000000000000000000000000000000",
+            "0x00000000000000000000000000000000"
+          ]
+        ],
+        [
+          [
+            "0x3ffeffda1635df2b4e630842a276798c",
+            "0xbff8ddf7f0b48190fc0fe6cb0695769d",
+            "0x3ff3629dc58e72d663764ea23507b97e"
+          ],
+          [
+            "0xbffa041d415caf3e06db41cf2b7dd744",
+            "0xbffdcc474d73da7e830f4b53006196b9",
+            "0x3ffa13b240739b518aa4f5a76c0e55a9"
+          ],
+          [
+            "0x3ff5561e2ce9f322fd8765230a9d6012",
+            "0x3ffe189ec26119dbe28547db05e18766",
+            "0xbff5423cf3839b684a788c7db3993991"
+          ]
+        ],
+        [
+          [
+            "0x3fff00b3dbbfae3f159c52d60b46d457",
+            "0x3fff426b66f50782b162eac567f66019",
+            "0xbff64a328fef83f4bebfc88f10155f32"
+          ],
+          [
+            "0x3ffb02b3e96f5143a4a822f230bb9bb7",
+            "0x3ffd372314f2661b278dee78ca1a607d",
+            "0xbffa79c643d26a9b8b70c9eb28a1ee87"
+          ],
+          [
+            "0xbff5561e2ce9f322fd8765230a9d6012",
+            "0xbffe189ec26119dbe28547db05e18766",
+            "0x3ff5423cf3839b684a788c7db3993991"
+          ]
+        ]
+      ],
+      "normal": [
+        [
+          "0x3ffb72a92593ff72c18ec04a91f9ab3c",
+          "0xbffd7b687069038f0953ef1b821cd871",
+          "0x3ffdb1325b962aafe51e3d838437c280"
+        ],
+        [
+          "0xbffe5dfd302864f4761a75a44f833cf0",
+          "0x3ffa0a11f148fedd091e1b5ad2822ba6",
+          "0x3ffe4fea486c3d4a399a9dc81f91d86e"
+        ],
+        [
+          "0xbffdfa01f7a0f6f427a2d64e8f245855",
+          "0xbffe0aaf992499c777b0675f971932a4",
+          "0x3ffe9c896aa87967f0ea44d557fc50a5"
+        ]
+      ]
+    }
+  ],
+  "reference": {
+    "passed": true,
+    "precisionDigits": 110,
+    "normalSource": "Conditions on exact CounterRandom binary128 draws; does not independently rederive the generator or establish an ensemble.",
+    "method": "Independent scalar-potential force differentiation plus projected B/A/O/A/B reference with actual half-drift duration.",
+    "cases": [
+      {
+        "step": 1,
+        "maximumAbsoluteError": "0.0000000000000000000000000000000043464859728734823115153096780584545214567835672387517032825304656948887204841638080446667480973152314312593305",
+        "initialForceReferenceError": "0.000000000000000000000000000000000048148248609680896326399448564623182963452541205384704880998469889163970947265625"
+      },
+      {
+        "step": 2,
+        "maximumAbsoluteError": "0.000000000000000000000000000000010447142362916557708249438394582275950455314683378144280288989873968065820604080004048431619465866829826222048",
+        "initialForceReferenceError": "0.00000000000000000000000000000000089327490375030464391914693331858019408821426217133196664676278971502570312504348516914958370054076141019749612"
+      }
+    ]
+  },
+  "completedAt": "2026-11-02T10:57:37.997Z"
+}

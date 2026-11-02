@@ -1,0 +1,104 @@
+{
+  "passed": true,
+  "status": "passed_local_fixture",
+  "testSha256": "2e1ca9258789a39df668ae4dec64444cb1b75a95528af6b6e7ccce7dcd92b6a1",
+  "scope": "Two-atom constrained dynamics prototype, not production molecular acceptance.",
+  "mainnetTransactionsSent": 0,
+  "compilation": {
+    "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+    "settings": {
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "evmVersion": "shanghai",
+      "outputSelection": {
+        "*": {
+          "*": [
+            "abi",
+            "evm.bytecode.object"
+          ]
+        }
+      }
+    },
+    "sourceSha256": {
+      "contracts/core/AlchemicalTopologyCatalog.sol": "f92337cf81ad28b0cf9842d3a34a8a119836aa5ed30698c681d621ff69ae362c",
+      "contracts/math/FloatMath.sol": "a474f7656f9ffc3d3149e6a0e08f2fcf6838483ae689d1e6a7cf7400f8bad74b",
+      "contracts/math/vendor/ABDKMathQuad.sol": "dd13f72bf828a699c94e96d1377daabce3dcc1d4b29af7215501a611d3cb7c9e",
+      "contracts/kernels/OrthorhombicGeometry.sol": "9521042dab915a3fc6cfe2bb1395c1aba0c6a2fad58d7623cd4a10435de3808b",
+      "contracts/core/AlchemicalHamiltonianEvaluator.sol": "a90eb8f88c0d2fdd7a6478a74510e88589099a5c79d3cd359443d363b847596b",
+      "contracts/core/ExperimentRegistry.sol": "39c3e8382b3fae049c16da81b1ea586e36deaa5ecbbda466b8377e240f78f047",
+      "contracts/kernels/HarmonicBondKernel.sol": "cbb2b99181ab7eec4a07dca99734e9ab2a3fa6ae4bd61b39d3a7bc6ef0f63108",
+      "contracts/kernels/HarmonicAngleKernel.sol": "d525eeecc8625d1e05112dc2977a91fe1d688d7585f99d08151cdc73fa2cbe09",
+      "contracts/math/ElementaryMath.sol": "9965604b32c46748605948c58f092ead3911e231baf39e7d4bea02beb3200062",
+      "contracts/kernels/PeriodicTorsionKernel.sol": "67e457741c247eb2af7248cd897a68b997caeb0db84c073c74e477570788765f",
+      "contracts/kernels/LennardJonesKernel.sol": "a02748bef456a33b15f0cfa7a1b5a20f23d6021f4e741b0cf0a9b61af457dca2",
+      "contracts/kernels/SoftcoreLennardJonesKernel.sol": "fb6b215e82aff471a1f615f6809c45e1b3aeae6df804ed29673ae0e63207e2b4",
+      "contracts/kernels/EwaldRealSpaceKernel.sol": "f4ceec084d7131de3141ad0f8be06dd1ff6dfa722d6499740af9de7cd431ebf1",
+      "contracts/kernels/EwaldKernelBase.sol": "c9f44e1dbf573ad9505e886e0f3854c2ffda850e3a0fd0b08c22563f23031a17",
+      "contracts/kernels/EwaldReciprocalKernel.sol": "7225171a789fdf4ced5256b293a428138e27c4c2dbe73eea5f22a52af94ec1bf",
+      "contracts/kernels/EwaldCorrections.sol": "0b8210b673f03606d1beb1d8a1663f2bc4bf371a884e5443733fa70ecc6d78e8",
+      "contracts/core/MolecularSimulationPipeline.sol": "3bc90af3b2c4c64a335b34ce291e3cf902863b33cc85ba33b5d030f6b214f7b9",
+      "contracts/kernels/LangevinBAOABKernel.sol": "a469bddd9acd9cf0551293f9f9112a8fba07a7f0caa5e3b6f0747982411541c9",
+      "contracts/math/ScalarMath.sol": "fd95d9e52db57f772946d1eff8d3c9b0e2518fdbdadb033160f4b5678df13f58",
+      "contracts/kernels/CounterRandom.sol": "98f38ee2e2962858ac681565b369a2a983f8aecd7b8188a9b191a4a4c5954190",
+      "contracts/analysis/ReducedPotentialCollector.sol": "87b5e30940220d30733252d51e64c37d222e0b52a5178c91f1df424f647a1fad",
+      "contracts/analysis/TimeSeriesDiagnostics.sol": "b0a6ec90fc2a645a59a73f71c3885234f38eaec0b812552a7b1ff16efd101794",
+      "contracts/analysis/MBARFreeEnergyEstimator.sol": "6026c479247a5ff326fa2feadb1e4659ef585512fb180460bebd0ab2407ce223",
+      "contracts/interfaces/IMolecularCampaignSource.sol": "845ec6a325995a24583570d1448826293c05b6aa06b5050d1eff8a1c96293168",
+      "contracts/core/FullModelConstraintCatalog.sol": "8ef6428c5f2783fbfdee8d752d2f2406d8cac06207f490f73cba2bc8203e3c6d",
+      "contracts/core/FullModelConstraintSolver.sol": "178329c41e7b113f7fc387497be6db2e22564c694151889cfc5cc568a56b6167",
+      "contracts/kernels/DistanceConstraintKernel.sol": "c5d05a76366559595f7c81617c6c65d72938a64eb12ba43708961c8f65756e37",
+      "contracts/core/BankedWorkingState.sol": "ed9fcee0659e2ed7dd9d90682e77bfd3aacc9056d17a0b62041cbc1947f99fe0",
+      "contracts/core/BankedInputCatalog.sol": "d956dd672852dc76fdc064bb6fecca55cc584ba7125df4b566b31bef9440c16b"
+    }
+  },
+  "reference": {
+    "passed": true,
+    "maximumAbsoluteError": "0.0000000000000000000000000000000082306794350746321818371595165222758946769102990090043143472110907014807236222545415664386107187932598363283069",
+    "decimalPrecision": 110,
+    "method": "Exact free-dimer circle rotation, two RATTLE half-drifts; independently derived, no Solidity arithmetic replay."
+  },
+  "offManifoldInitialPositionsRejected": true,
+  "failedStepKeepsCommittedCheckpoint": true,
+  "outsiderCompletionHandoff": true,
+  "partitionBitwiseEqual": true,
+  "actualLocalAddresses": 251,
+  "oneStep": [
+    [
+      [
+        "0x3ff27fffffffffffffffffffffffd85a",
+        "0x3ff8fff6ffebbfa4ddff5f626cd84355",
+        "0x00000000000000000000000000000000"
+      ],
+      [
+        "0x3ff97ff93ff0cfbba67f8789d1a227d0",
+        "0x3ffeffdbfffffffffffffffffffffffc",
+        "0x00000000000000000000000000000000"
+      ],
+      [
+        "0x00000000000000000000000000000000",
+        "0x00000000000000000000000000000000",
+        "0x00000000000000000000000000000000"
+      ]
+    ],
+    [
+      [
+        "0x3ffefff3ffffffffffffffffffffffff",
+        "0xbff7fff6ffebbfa4ddff5f626cd84355",
+        "0x00000000000000000000000000000000"
+      ],
+      [
+        "0xbff87ff93ff0cfbba67f8789d1a247d1",
+        "0xbffdffdbfffffffffffffffffffffffc",
+        "0x00000000000000000000000000000000"
+      ],
+      [
+        "0x00000000000000000000000000000000",
+        "0x00000000000000000000000000000000",
+        "0x00000000000000000000000000000000"
+      ]
+    ]
+  ],
+  "candidateSha256": "3bc90af3b2c4c64a335b34ce291e3cf902863b33cc85ba33b5d030f6b214f7b9"
+}

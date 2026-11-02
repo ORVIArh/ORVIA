@@ -1,0 +1,620 @@
+{
+  "status": "passed_read_only_creation",
+  "passed": true,
+  "startedAt": "2026-11-02T11:04:06.058Z",
+  "scope": "Provider-observed read-only creation of the two large ORVIA coordinators with temporary dependency code overrides.",
+  "targetChainId": 4663,
+  "provider": "https://robinhood.rpc.pinax.network",
+  "providerSource": "https://docs.robinhood.com/chain/connecting/",
+  "allowedMethods": [
+    "eth_chainId",
+    "eth_getBlockByNumber",
+    "eth_getCode",
+    "eth_getTransactionCount",
+    "eth_call"
+  ],
+  "mainnetTransactionsSent": 0,
+  "noSignerOrKeyLoaded": true,
+  "scientificModelAccepted": false,
+  "readyForMainnet": false,
+  "scriptSha256": "afa5f243b7075279efe2f4106cf017293b3b0c0afab39c6071f23dc0b7790a53",
+  "creationChecks": [
+    {
+      "contract": "MolecularSimulationPipeline",
+      "creationBytes": 42808,
+      "creationKeccak256": "0x8e3b7c91ec28deb24a4051b9e1c277c4ed9692246494c494de79f940ccd22f87",
+      "expectedRuntimeBytes": 40945,
+      "expectedRuntimeKeccak256": "0xbfe24022af8e04d867d07211048811e1677ff63f3c790fdb3b3d033bc25b2f1a",
+      "status": "passed",
+      "returnedRuntimeBytes": 40945,
+      "returnedRuntimeKeccak256": "0xbfe24022af8e04d867d07211048811e1677ff63f3c790fdb3b3d033bc25b2f1a",
+      "exactRuntimeMatch": true
+    },
+    {
+      "contract": "AlchemicalHamiltonianEvaluator",
+      "creationBytes": 37454,
+      "creationKeccak256": "0xffa2a7e5d36a8dc5ced6c288dbb98205ab59af8615c7a61066e61e8cd82625d2",
+      "expectedRuntimeBytes": 34449,
+      "expectedRuntimeKeccak256": "0x63044516a94a2413585c305e63c8fad42037ae83f6efa0dca072b1332efc6730",
+      "status": "passed",
+      "returnedRuntimeBytes": 34449,
+      "returnedRuntimeKeccak256": "0x63044516a94a2413585c305e63c8fad42037ae83f6efa0dca072b1332efc6730",
+      "exactRuntimeMatch": true
+    }
+  ],
+  "calls": [
+    {
+      "id": 1,
+      "method": "eth_chainId",
+      "requestSha256": "09fabe0af56b7726f1666ddd147482df4d951f86f66124b936716c53ab0e8471",
+      "httpStatus": 200,
+      "responseSha256": "1fb0f19b45a4203bd13cb5be1e8ad3aa569f42905377cd4643fc8bc07ecd3aa3",
+      "returned": true
+    },
+    {
+      "id": 2,
+      "method": "eth_getBlockByNumber",
+      "requestSha256": "ea099c30d3683d74a056405807b4ab857a06189f3e4702981d75935407ac986e",
+      "httpStatus": 200,
+      "responseSha256": "51b9c8996120db9d1b4e5300aa8d4ad96c981651bdcd87ddc3ef02a50caefb14",
+      "returned": true
+    },
+    {
+      "id": 3,
+      "method": "eth_getTransactionCount",
+      "requestSha256": "d1c8d84f6d66fd289bcf33166f31f1e67e116e16233f0dc6f9e04b6f96dbb77b",
+      "httpStatus": 200,
+      "responseSha256": "751e65cbbbb7a1f53512bde8030aa89563cca3fbe2118aea7fefe34765d41402",
+      "returned": true
+    },
+    {
+      "id": 4,
+      "method": "eth_getCode",
+      "requestSha256": "66d826c2590118aa6fb1ef822c53452fc73b32b7dae6ef7aa4266f0ad5da384a",
+      "httpStatus": 200,
+      "responseSha256": "4aa057413e1b170cfd7d7c65db1c6be280d6080d00172a319c9c0292940c5561",
+      "returned": true
+    },
+    {
+      "id": 5,
+      "method": "eth_getCode",
+      "requestSha256": "a81e1c55e34703892590b193e129ce2831f2b3d958698f1270a02ef5f52220f3",
+      "httpStatus": 200,
+      "responseSha256": "00654c2e799c17d88d99aeeb726995cad35215aadd24338ed8df5b7baa6a2110",
+      "returned": true
+    },
+    {
+      "id": 6,
+      "method": "eth_getCode",
+      "requestSha256": "410074db8b519ff13985ad1bfad99ed4f91aa1a07174348f028da4c1886a7e85",
+      "httpStatus": 200,
+      "responseSha256": "47bb4db4e2048a2dfd5efc310d13bacd23e67cff1d7e0ff6d4ab5bc0ad2b4944",
+      "returned": true
+    },
+    {
+      "id": 7,
+      "method": "eth_getCode",
+      "requestSha256": "b6009bacf05b740df151dc976fe798cac5e12b316796f2f15e7ac78e2c99b216",
+      "httpStatus": 200,
+      "responseSha256": "972e17d3d25574ce965e12dbfc8bfcf0c655679cbfb39b5376666a81f2b80dc4",
+      "returned": true
+    },
+    {
+      "id": 8,
+      "method": "eth_getCode",
+      "requestSha256": "6d583443be1d5771575d148f1813ac58eb2c66f3c7baecc05dc6b81d850233ab",
+      "httpStatus": 200,
+      "responseSha256": "c5cae5ab6e8870f6f89de66d9ebd99742942039a70147d75f4910bff789871af",
+      "returned": true
+    },
+    {
+      "id": 9,
+      "method": "eth_getCode",
+      "requestSha256": "b062abbfd755ee30d617b39ec087d896aba80c1dc303b7989883aeac75f7f589",
+      "httpStatus": 200,
+      "responseSha256": "1b49a77ab532b3227289d6798ca8a0dea44f9e67ce88c0c8685c590a8f9fc831",
+      "returned": true
+    },
+    {
+      "id": 10,
+      "method": "eth_getCode",
+      "requestSha256": "76bfe6b18d6626ae81c6484674ab3403e78fb96be4ce817be08771295ef3b3e4",
+      "httpStatus": 200,
+      "responseSha256": "d9992f1261b03bb094a8c0be582af6681615a11e0d5048ac78f64cf1573cfbff",
+      "returned": true
+    },
+    {
+      "id": 11,
+      "method": "eth_getCode",
+      "requestSha256": "f6e3182dc5d7517adcfb2dcac6720d9ee5c03c6c6028d85f36d47e2895657999",
+      "httpStatus": 200,
+      "responseSha256": "e44b77072fb20f80e30229ae8f640c2b39147084aa5154c47bfc2e00c64ceb7e",
+      "returned": true
+    },
+    {
+      "id": 12,
+      "method": "eth_getCode",
+      "requestSha256": "9190f54d50de51eb3d91e30971292943a7389ac28ffaa5521d72cacacdf7f7c7",
+      "httpStatus": 200,
+      "responseSha256": "54896796db5bc5bef1f5eb02f006c261cbbd06e20bdaac8e2b94195add4d0f60",
+      "returned": true
+    },
+    {
+      "id": 13,
+      "method": "eth_getCode",
+      "requestSha256": "d22410e10ac6634dfff46254cb60ad9933f3a50444da138d6792e56ac3f47d13",
+      "httpStatus": 200,
+      "responseSha256": "b15c5af37c2ad573da4217cd188d86f133a53232b5931c6314202a37fc1f444b",
+      "returned": true
+    },
+    {
+      "id": 14,
+      "method": "eth_getCode",
+      "requestSha256": "7af3cfb5d9784f66114f0ea680575b54e190864cc69028aeb5c3ab0043c1d28f",
+      "httpStatus": 200,
+      "responseSha256": "99c9f7f720e8511f1a6be0bd5096844c47add5abd299590fdb406e82b8aff5f8",
+      "returned": true
+    },
+    {
+      "id": 15,
+      "method": "eth_getCode",
+      "requestSha256": "9dd969cde596c13e39b36e4b3818eefd364dcba9f010011b77b8fd633ee61720",
+      "httpStatus": 200,
+      "responseSha256": "a86982ff23bac26680ef26f8df1f59c0d96db35f06ce5b8826c88f3cb8cabf7a",
+      "returned": true
+    },
+    {
+      "id": 16,
+      "method": "eth_getCode",
+      "requestSha256": "1d283c8e1d7071688f4850fe0b68f1e81bb2e8bb78e9e07b86e3c081377441e7",
+      "httpStatus": 200,
+      "responseSha256": "f72e57ca808a041e8b63bd429b3af33f79e2b4260f6583cdf82971b1a9035d26",
+      "returned": true
+    },
+    {
+      "id": 17,
+      "method": "eth_getCode",
+      "requestSha256": "b2412a72e67826ff51403fdf8285a71d02fea542f44ae08d36868c2c1eeb40ac",
+      "httpStatus": 200,
+      "responseSha256": "1082baf6c621d43f38fdea0bb7ff932c748c6178f0440382fc8a0535ffb07d90",
+      "returned": true
+    },
+    {
+      "id": 18,
+      "method": "eth_getCode",
+      "requestSha256": "3db900ef416dbde357782bed85b19b6ad400bbac94ff51c5defa4c163a530be5",
+      "httpStatus": 200,
+      "responseSha256": "832923f8fbc4479c79bc0cbc2da65f2c32d6337ae344710e5c5aad97e4b80109",
+      "returned": true
+    },
+    {
+      "id": 19,
+      "method": "eth_getCode",
+      "requestSha256": "298dcc42a391848b7f946edb076539b27575612671fba1d47b1c5ee26a952d08",
+      "httpStatus": 200,
+      "responseSha256": "f033b9d30fa26e2be2fd0476e955ce5190dafec21ef6af3da3b852e7e2fe13b1",
+      "returned": true
+    },
+    {
+      "id": 20,
+      "method": "eth_getCode",
+      "requestSha256": "696e5504a2d4b6af934ffc69a0faf2132b4736e08effa3af530ea5c91533e626",
+      "httpStatus": 200,
+      "responseSha256": "ae9288c64254cc3732682a2009285d0491cc7b150ac4994392be0203ee1fea7d",
+      "returned": true
+    },
+    {
+      "id": 21,
+      "method": "eth_getCode",
+      "requestSha256": "3ab2b7c2e26655236fa439a8c0870abfac94d04c02da0820fbddd142318b7f2a",
+      "httpStatus": 200,
+      "responseSha256": "25a890e606d396fd22e045f4eaa0ab741e08e60ed4a1a9812bb56e9f8d0f23c3",
+      "returned": true
+    },
+    {
+      "id": 22,
+      "method": "eth_getCode",
+      "requestSha256": "874c8ebfb7ec0dc0751ecd8fdd4b7cffa2ce4022f5d6b2dd4927ff3d44e47a56",
+      "httpStatus": 200,
+      "responseSha256": "f720950a30917e1c4fcaacb1133d4ebc559fcc1f75b0c4a0469b3376ccefff3d",
+      "returned": true
+    },
+    {
+      "id": 23,
+      "method": "eth_getCode",
+      "requestSha256": "b6d37f6697ddfb90df005a411abfde605cc6e77e7dd2a7fae276aa6848d4f144",
+      "httpStatus": 200,
+      "responseSha256": "1226d476411533f3494dbab9c56ae19d2fce9a7ccec6b61af9d8891838c7e552",
+      "returned": true
+    },
+    {
+      "id": 24,
+      "method": "eth_getCode",
+      "requestSha256": "7c4ed357d91ae0eb2ca8609a5108533d770f0677abd37010cf2c8de6e8e9183b",
+      "httpStatus": 200,
+      "responseSha256": "5ba4f29f371952b5b973dcd3a2066faf63a368a74dffee04652792d09046b2d1",
+      "returned": true
+    },
+    {
+      "id": 25,
+      "method": "eth_getCode",
+      "requestSha256": "4a5f5b81f0326fa5ac8819b9fd9e8937f06a2434556c2dc38a20d036e726a01b",
+      "httpStatus": 200,
+      "responseSha256": "1879be3e7b9faf5210606de29329622f965003c4dfef6b18f1710146f7d96a45",
+      "returned": true
+    },
+    {
+      "id": 26,
+      "method": "eth_getCode",
+      "requestSha256": "50b2a40358b9e38fa52705969c8335e0d1edd204790fcabe3842373254dca0f8",
+      "httpStatus": 200,
+      "responseSha256": "6b149f842253bc58aa795e41b53a9433c27a7449dbc17d79366f5f3ed34c7b17",
+      "returned": true
+    },
+    {
+      "id": 27,
+      "method": "eth_getCode",
+      "requestSha256": "0a7e807601cb025c99869260efd7cab6b31bdc8689db98c763a51241635a4849",
+      "httpStatus": 200,
+      "responseSha256": "d3bbc0f913cb141a6c2191eca04aaccc81339a0569339b2af886fcb6e682644a",
+      "returned": true
+    },
+    {
+      "id": 28,
+      "method": "eth_getCode",
+      "requestSha256": "56d3faf58bcc51d284ef37b74e955339909c9684a2469d8b629e0bdba9cce280",
+      "httpStatus": 200,
+      "responseSha256": "b9fe8cfd4c6e7975e02f4989841907da13a39f46fa5aa63bf95a33f01fc3e0e7",
+      "returned": true
+    },
+    {
+      "id": 29,
+      "method": "eth_getCode",
+      "requestSha256": "6d98dfa1c7889ec4f1980357b1879d70b9051c4729e2469825d2cc6eb7f63986",
+      "httpStatus": 200,
+      "responseSha256": "3224953a15680ee4ee7708c2689eba5c7a497c6db939764f521e5f9ab85aa3c7",
+      "returned": true
+    },
+    {
+      "id": 30,
+      "method": "eth_getCode",
+      "requestSha256": "73d4cf37c60fa67362416d19b56f2bc126b39cf50355b0a03d547a0853794f1f",
+      "httpStatus": 200,
+      "responseSha256": "b2a7d88acaffb5e526b7e5f94dff3c894dbc8d3f6041eef56aab930b8fd73a77",
+      "returned": true
+    },
+    {
+      "id": 31,
+      "method": "eth_getCode",
+      "requestSha256": "ef4ad5bb54b1dfdf8f223a753842c8c6cf49e7e9138061b049973632f6ec3149",
+      "httpStatus": 200,
+      "responseSha256": "b2c4085520353d1ce5a3747627ecada495c133a44fc5fb3a9ee84896ed49172f",
+      "returned": true
+    },
+    {
+      "id": 32,
+      "method": "eth_getCode",
+      "requestSha256": "eca800f7e4a89e55332a7ed6d0f47858463b7acf80c0b26437c2894a18dcd651",
+      "httpStatus": 200,
+      "responseSha256": "4cbce04f8f65352c00cfa0d29049c81178c5b1f77cab1166210b1134cd7b4550",
+      "returned": true
+    },
+    {
+      "id": 33,
+      "method": "eth_getCode",
+      "requestSha256": "650beaf40c5b9b162f33ef1a3d1c54cdd2b5c508d312e66ec8039e40f36efe9e",
+      "httpStatus": 200,
+      "responseSha256": "54374c2adff07d3d3a9928d190446c24c61ca99dc37402d1e41549a258eabeb2",
+      "returned": true
+    },
+    {
+      "id": 34,
+      "method": "eth_getCode",
+      "requestSha256": "6a501e1c5f538e72b93d0d1bf2bbbc4d085c4eef208c55aa5aa9fe7512cf061f",
+      "httpStatus": 200,
+      "responseSha256": "621af7cfccec2c58be828524dae416f4dbb9b72b6d26aa47419f8ca189a02155",
+      "returned": true
+    },
+    {
+      "id": 35,
+      "method": "eth_getCode",
+      "requestSha256": "ca3fe5fbd4a76904e09d866eeb11daa84aed75001ad7baa531a23fc44a1d3b16",
+      "httpStatus": 200,
+      "responseSha256": "8c153ff33478b69040d679ef2d6b471826de624e5c61c26026636423e26b2ec6",
+      "returned": true
+    },
+    {
+      "id": 36,
+      "method": "eth_call",
+      "requestSha256": "7866fadaa6bfcb2a8b660a10f43df8816e093e6f97f6f18f7cdbc1f5927f6db2",
+      "httpStatus": 200,
+      "responseSha256": "f36f5a5f03b4de1c5aa757340cf9be2d69175a69a115539d41a9df1a9e232da4",
+      "returned": true
+    },
+    {
+      "id": 37,
+      "method": "eth_call",
+      "requestSha256": "f3798ff60f49e570c2fea5d4ad4dbb8491511a8a76575788d377a39831224866",
+      "httpStatus": 200,
+      "responseSha256": "a2624be0cc505b000e9d2b03b16ea9402ece6295fc4655f154d16d0e82b6f77e",
+      "returned": true
+    },
+    {
+      "id": 38,
+      "method": "eth_getBlockByNumber",
+      "requestSha256": "5a0d707e70fc817bfedef343993c21221fe0674074d779dddf90cd0b406d8bdc",
+      "httpStatus": 200,
+      "responseSha256": "efae113af364b0e050b6b3538ee1781f461d58083e6f6df0e121f2a753487fb1",
+      "returned": true
+    }
+  ],
+  "limitations": [
+    "Runtime inputs come from the recorded local fixture; this probe does not independently compile them.",
+    "Only dependency runtime code is overridden; storage is not transplanted. Constructor dependencies requiring stored values can make a probe inconclusive.",
+    "eth_call is ephemeral and can use simulation-specific gas rules; success does not establish transaction admission, fees or sustained execution.",
+    "Provider responses are trusted observations, not independently verified state proofs.",
+    "No complete molecular trajectory, scientific acceptance or persistent deployment is established."
+  ],
+  "inputSha256": "7e51355017a8380124455fff846d95599ed85030473b444df66ee1c18b3e9905",
+  "inputFile": "deployment-runtime-input.json",
+  "compilation": {
+    "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+    "settings": {
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "evmVersion": "shanghai",
+      "outputSelection": {
+        "*": {
+          "*": [
+            "abi",
+            "evm.bytecode.object",
+            "evm.deployedBytecode.object"
+          ]
+        }
+      }
+    },
+    "standardInputSha256": "3a2cd66663b71666c7b2120fac51f00cfd336650579e2ace5badd5f8ac35250c",
+    "sourceSha256": {
+      "contracts/core/AlchemicalTopologyCatalog.sol": "f92337cf81ad28b0cf9842d3a34a8a119836aa5ed30698c681d621ff69ae362c",
+      "contracts/math/FloatMath.sol": "a474f7656f9ffc3d3149e6a0e08f2fcf6838483ae689d1e6a7cf7400f8bad74b",
+      "contracts/math/vendor/ABDKMathQuad.sol": "dd13f72bf828a699c94e96d1377daabce3dcc1d4b29af7215501a611d3cb7c9e",
+      "contracts/kernels/OrthorhombicGeometry.sol": "9521042dab915a3fc6cfe2bb1395c1aba0c6a2fad58d7623cd4a10435de3808b",
+      "contracts/core/AlchemicalHamiltonianEvaluator.sol": "0bc4672ea4f92688e0707a5bbed36aed594eef02f013f35e68bfbd4d33e56806",
+      "contracts/core/ExperimentRegistry.sol": "39c3e8382b3fae049c16da81b1ea586e36deaa5ecbbda466b8377e240f78f047",
+      "contracts/kernels/HarmonicBondKernel.sol": "cbb2b99181ab7eec4a07dca99734e9ab2a3fa6ae4bd61b39d3a7bc6ef0f63108",
+      "contracts/kernels/HarmonicAngleKernel.sol": "d525eeecc8625d1e05112dc2977a91fe1d688d7585f99d08151cdc73fa2cbe09",
+      "contracts/math/ElementaryMath.sol": "9965604b32c46748605948c58f092ead3911e231baf39e7d4bea02beb3200062",
+      "contracts/kernels/PeriodicTorsionKernel.sol": "67e457741c247eb2af7248cd897a68b997caeb0db84c073c74e477570788765f",
+      "contracts/kernels/LennardJonesKernel.sol": "a02748bef456a33b15f0cfa7a1b5a20f23d6021f4e741b0cf0a9b61af457dca2",
+      "contracts/kernels/SoftcoreLennardJonesKernel.sol": "fb6b215e82aff471a1f615f6809c45e1b3aeae6df804ed29673ae0e63207e2b4",
+      "contracts/kernels/EwaldRealSpaceKernel.sol": "f4ceec084d7131de3141ad0f8be06dd1ff6dfa722d6499740af9de7cd431ebf1",
+      "contracts/kernels/EwaldKernelBase.sol": "c9f44e1dbf573ad9505e886e0f3854c2ffda850e3a0fd0b08c22563f23031a17",
+      "contracts/kernels/EwaldReciprocalKernel.sol": "7225171a789fdf4ced5256b293a428138e27c4c2dbe73eea5f22a52af94ec1bf",
+      "contracts/kernels/EwaldCorrections.sol": "0b8210b673f03606d1beb1d8a1663f2bc4bf371a884e5443733fa70ecc6d78e8",
+      "contracts/core/PeriodicCellIndex.sol": "0c3b70b0a9f277be4087556b5ac200cb602e2f18fb90d16a272d30de9d234027",
+      "contracts/core/OrderedNeighborPairs.sol": "1133a7b059696623cc466f173ac1d6559dcc5afb80088ce7028c792af728c383",
+      "contracts/core/MolecularSimulationPipeline.sol": "0a0e37a8c2731babfaeede753a5e12bb513bde6c3d821f72283538f05da93139",
+      "contracts/kernels/LangevinBAOABKernel.sol": "a469bddd9acd9cf0551293f9f9112a8fba07a7f0caa5e3b6f0747982411541c9",
+      "contracts/math/ScalarMath.sol": "fd95d9e52db57f772946d1eff8d3c9b0e2518fdbdadb033160f4b5678df13f58",
+      "contracts/kernels/CounterRandom.sol": "98f38ee2e2962858ac681565b369a2a983f8aecd7b8188a9b191a4a4c5954190",
+      "contracts/analysis/ReducedPotentialCollector.sol": "87b5e30940220d30733252d51e64c37d222e0b52a5178c91f1df424f647a1fad",
+      "contracts/analysis/TimeSeriesDiagnostics.sol": "b0a6ec90fc2a645a59a73f71c3885234f38eaec0b812552a7b1ff16efd101794",
+      "contracts/analysis/MBARFreeEnergyEstimator.sol": "6026c479247a5ff326fa2feadb1e4659ef585512fb180460bebd0ab2407ce223",
+      "contracts/interfaces/IMolecularCampaignSource.sol": "845ec6a325995a24583570d1448826293c05b6aa06b5050d1eff8a1c96293168",
+      "contracts/core/FullModelConstraintCatalog.sol": "8ef6428c5f2783fbfdee8d752d2f2406d8cac06207f490f73cba2bc8203e3c6d",
+      "contracts/core/FullModelConstraintSolver.sol": "178329c41e7b113f7fc387497be6db2e22564c694151889cfc5cc568a56b6167",
+      "contracts/kernels/DistanceConstraintKernel.sol": "c5d05a76366559595f7c81617c6c65d72938a64eb12ba43708961c8f65756e37",
+      "contracts/core/BankedWorkingState.sol": "ed9fcee0659e2ed7dd9d90682e77bfd3aacc9056d17a0b62041cbc1947f99fe0",
+      "contracts/core/BankedInputCatalog.sol": "d956dd672852dc76fdc064bb6fecca55cc584ba7125df4b566b31bef9440c16b",
+      "contracts/analysis/UncertaintyAndResults.sol": "5c405ec23b23d916de5bdf7feae8b4f975cc4432323be47fdb4e9a3f605cf66b",
+      "contracts/analysis/SamplingDiagnostics.sol": "2ae107854eddc1bbb1659bace5abe0bf0e4010645fe219a0a5bac67073c5efb3",
+      "contracts/kernels/C4PairKernel.sol": "5b6f440d06375640229e7eecb453059b01fba8ca3f7aefcff76b58adb327214b"
+    }
+  },
+  "dependencyRuntimes": [
+    {
+      "contract": "FloatMath",
+      "address": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+      "runtimeKeccak256": "0x310794f2b49c3afde7f1e9c543121d8771acbe9612b4c479970d64dd668b8ac1",
+      "bytes": 5499
+    },
+    {
+      "contract": "ScalarMath",
+      "address": "0x5b1869D9A4C187F2EAa108f3062412ecf0526b24",
+      "runtimeKeccak256": "0x5a7407bafc9850ac1d44eff7d3e892e59a9c82d7b950ceabc7373b2948d4a4f2",
+      "bytes": 13275
+    },
+    {
+      "contract": "ElementaryMath",
+      "address": "0xCfEB869F69431e42cdB54A4F4f105C19C080A601",
+      "runtimeKeccak256": "0x04cf2b059d59776d82aa2d97da7e8c44e35028ff07f31c0c469d15ee35b72993",
+      "bytes": 7356
+    },
+    {
+      "contract": "CounterRandom",
+      "address": "0x254dffcd3277C0b1660F6d42EFbB754edaBAbC2B",
+      "runtimeKeccak256": "0xf832c9822b51b64ff2b64241a7a6e59f9ab1b4e19354083d89f47937f7760a85",
+      "bytes": 2582
+    },
+    {
+      "contract": "LangevinBAOABKernel",
+      "address": "0xC89Ce4735882C9F0f0FE26686c53074E09B0D550",
+      "runtimeKeccak256": "0xa0ba0598005ff38cb3059fc13db18cdbe03fabc80fc7c8fbb1f9ad0ea837ad25",
+      "bytes": 5960
+    },
+    {
+      "contract": "ExperimentRegistry",
+      "address": "0xD833215cBcc3f914bD1C9ece3EE7BF8B14f841bb",
+      "runtimeKeccak256": "0xb1e00fb16318a55d2925d5143ab24806af7f7913b799c13afe37b47903b6973f",
+      "bytes": 2560
+    },
+    {
+      "contract": "OrthorhombicGeometry",
+      "address": "0x9561C133DD8580860B6b7E504bC5Aa500f0f06a7",
+      "runtimeKeccak256": "0x2da587b1960d43ca8043837fbc822d3739499fa6c804dece118c2b9005860e48",
+      "bytes": 4687
+    },
+    {
+      "contract": "HarmonicBondKernel",
+      "address": "0xe982E462b094850F12AF94d21D470e21bE9D0E9C",
+      "runtimeKeccak256": "0x87268e232f430502fc35209f97cdf3a8debabe9a8d01b3ea8e83e6b334e72cf6",
+      "bytes": 3051
+    },
+    {
+      "contract": "HarmonicAngleKernel",
+      "address": "0x59d3631c86BbE35EF041872d502F218A39FBa150",
+      "runtimeKeccak256": "0x77d765175c214f51426171c38992d0b91b4ab45d51c7f97a9fe35575a79cc249",
+      "bytes": 7356
+    },
+    {
+      "contract": "PeriodicTorsionKernel",
+      "address": "0x0290FB167208Af455bB137780163b7B7a9a10C16",
+      "runtimeKeccak256": "0x66216e60827af2e3df1132ec995c2f9908c6f44397fc1c51e8df1cd6b1053d2e",
+      "bytes": 8433
+    },
+    {
+      "contract": "LennardJonesKernel",
+      "address": "0x9b1f7F645351AF3631a656421eD2e40f2802E6c0",
+      "runtimeKeccak256": "0xd817b7aab76bf39594818fbf12cd3792fb4251e76868cb8b879d09385fffecdf",
+      "bytes": 4087
+    },
+    {
+      "contract": "SoftcoreLennardJonesKernel",
+      "address": "0x67B5656d60a809915323Bf2C40A8bEF15A152e3e",
+      "runtimeKeccak256": "0xf998597a8503bcc131473c91f82cc7a859b38178275ee5c8a251ae117b77eb2e",
+      "bytes": 7350
+    },
+    {
+      "contract": "EwaldRealSpaceKernel",
+      "address": "0x2612Af3A521c2df9EAF28422Ca335b04AdF3ac66",
+      "runtimeKeccak256": "0xa04be0a858a1f8125ca575a9985d61265ddc666fdb423df9d492ff70729c222d",
+      "bytes": 4639
+    },
+    {
+      "contract": "EwaldReciprocalKernel",
+      "address": "0xA57B8a5584442B467b4689F1144D269d096A3daF",
+      "runtimeKeccak256": "0xcc6ebf364594ccfe364386ffb6554ca0efb46c5899ca5768f47c84fb48484e12",
+      "bytes": 10653
+    },
+    {
+      "contract": "EwaldCorrections",
+      "address": "0x26b4AFb60d6C903165150C6F0AA14F8016bE4aec",
+      "runtimeKeccak256": "0x9878cf0366cc681d6fdaff5fc605361bedd535077ab1e01a9e1ea19f08c46e42",
+      "bytes": 9767
+    },
+    {
+      "contract": "BankedInputCatalog",
+      "address": "0x630589690929E9cdEFDeF0734717a9eF3Ec7Fcfe",
+      "runtimeKeccak256": "0x3092f60d915064409748ee0fffdc5438dbf628278969fcb29889672ccc1bd808",
+      "bytes": 7386
+    },
+    {
+      "contract": "AlchemicalTopologyCatalog",
+      "address": "0x0E696947A06550DEf604e82C26fd9E493e576337",
+      "runtimeKeccak256": "0xfed34fba19c40a88730fafe2e24f89edd0415b36c8e454aa90b1a417509ae854",
+      "bytes": 15261
+    },
+    {
+      "contract": "MolecularSimulationPipeline",
+      "address": "0xDb56f2e9369E0D7bD191099125a3f6C370F8ed15",
+      "runtimeKeccak256": "0xbfe24022af8e04d867d07211048811e1677ff63f3c790fdb3b3d033bc25b2f1a",
+      "bytes": 40945
+    },
+    {
+      "contract": "BankedWorkingState",
+      "address": "0xA94B7f0465E98609391C623d0560C5720a3f2D33",
+      "runtimeKeccak256": "0x28f5ad9629f53fb9921849ca94bb7a8d683d4ab8e72527383f9ff5948a95bd66",
+      "bytes": 9467
+    },
+    {
+      "contract": "AlchemicalHamiltonianEvaluator",
+      "address": "0x6eD79Aa1c71FD7BdBC515EfdA3Bd4e26394435cC",
+      "runtimeKeccak256": "0x63044516a94a2413585c305e63c8fad42037ae83f6efa0dca072b1332efc6730",
+      "bytes": 34449
+    },
+    {
+      "contract": "BankedWorkingState",
+      "address": "0xb09bCc172050fBd4562da8b229Cf3E45Dc3045A6",
+      "runtimeKeccak256": "0x75bf68b811e65a278c7cef28fc3dbdd2271c7fd0b2bd1555b04cc888e43be019",
+      "bytes": 9467
+    },
+    {
+      "contract": "ReducedPotentialCollector",
+      "address": "0xFC628dd79137395F3C9744e33b1c5DE554D94882",
+      "runtimeKeccak256": "0xdd113280f2907575a5ceff5bdfc14a2f8d745af9f8feb6db4c21a69e5d7b6810",
+      "bytes": 9550
+    },
+    {
+      "contract": "TimeSeriesDiagnostics",
+      "address": "0x5f8e26fAcC23FA4cbd87b8d9Dbbd33D5047abDE1",
+      "runtimeKeccak256": "0x51718cb36c35dbf257baeedfae820bfb72e0673b66fe53c5bed207fd1919fa7d",
+      "bytes": 12776
+    },
+    {
+      "contract": "MBARFreeEnergyEstimator",
+      "address": "0x21a59654176f2689d12E828B77a783072CD26680",
+      "runtimeKeccak256": "0x7083653f192170281652df8446e5f87fa79b676cc28415513fcc0e8f8764c459",
+      "bytes": 9542
+    },
+    {
+      "contract": "SamplingDiagnostics",
+      "address": "0xD86C8F0327494034F60e25074420BcCF560D5610",
+      "runtimeKeccak256": "0x3a65537a53cf2a006b403f51e13b38a44af58918acd405a251523eac4f2548f7",
+      "bytes": 11080
+    },
+    {
+      "contract": "UncertaintyAndResults",
+      "address": "0x4bf749ec68270027C5910220CEAB30Cc284c7BA2",
+      "runtimeKeccak256": "0xe642f9de3b8c984742057d072e186d62dd2c62e262e195fce270100e0dc08c15",
+      "bytes": 13222
+    },
+    {
+      "contract": "DistanceConstraintKernel",
+      "address": "0xaD888d0Ade988EbEe74B8D4F39BF29a8d0fe8A8D",
+      "runtimeKeccak256": "0xdece2eb9ca0f81b0eee4b2470b890ae18ea4111fd92d56cec61a1e61536b37be",
+      "bytes": 5298
+    },
+    {
+      "contract": "FullModelConstraintCatalog",
+      "address": "0x7C728214be9A0049e6a86f2137ec61030D0AA964",
+      "runtimeKeccak256": "0xc3ee8ddda3d304a7d01f314f11efd2e025ad017e68d4c27ce5953854d1bd7258",
+      "bytes": 7514
+    },
+    {
+      "contract": "FullModelConstraintSolver",
+      "address": "0x5017A545b09ab9a30499DE7F431DF0855bCb7275",
+      "runtimeKeccak256": "0xae133830f92fca70c935fb0408e35c18715c47cbbf7fbe1305cdfee0807e6842",
+      "bytes": 17792
+    },
+    {
+      "contract": "PeriodicCellIndex",
+      "address": "0xFF6049B87215476aBf744eaA3a476cBAd46fB1cA",
+      "runtimeKeccak256": "0xc538da8429a096b47d343a88e5d13f9dc1b80554608da8ddcf3fbb348e69a3af",
+      "bytes": 13564
+    },
+    {
+      "contract": "OrderedNeighborPairs",
+      "address": "0xA586074FA4Fe3E546A132a16238abe37951D41fE",
+      "runtimeKeccak256": "0x223807d2cf91dfa943829b61b36fcfa429f023ff4850ff431c97a86814bbe819",
+      "bytes": 5037
+    },
+    {
+      "contract": "C4PairKernel",
+      "address": "0x2D8BE6BF0baA74e0A907016679CaE9190e80dD0A",
+      "runtimeKeccak256": "0x398d4a2168ec20f655bbf00a92efcf2fe5b5fd3f8831e6ac2e8ab488ecb11335",
+      "bytes": 3644
+    }
+  ],
+  "block": {
+    "number": "0x635744a",
+    "hash": "0xf2ca2859df1270a89f4d36527d0fe9c4e73b89edfc4d881793cf460ad6ab5989",
+    "stateRoot": "0x8cc2a565ce95f623e9c6ddec6800490927db727e2a9b9371ea4546697c8a2215",
+    "timestamp": "0x6ae86e28",
+    "gasLimit": "0x4000000000000"
+  },
+  "senderNonce": "0x0",
+  "pinnedBlockUnchanged": true,
+  "completedAt": "2026-11-02T11:04:17.282Z"
+}
