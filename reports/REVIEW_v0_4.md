@@ -1,0 +1,32 @@
+# ORVIA v0.4 engineering review
+
+This is a parallel source and numerical-design review, not an independent security audit or validation of a prepared cardiac-myosin simulation. It covers `OrthorhombicGeometry`, `SwitchedNonbondedKernel`, `PeriodicDataset`, and `PeriodicDynamicsCoordinator` and their integration with the existing arithmetic, bonded-force, integration, registry and storage components.
+
+## Finding resolved during review
+
+An exact half-box displacement has two equally near images. Keeping the signed remainder in the geometry primitive preserves exchange antisymmetry, but choosing either image does not define a unique energy gradient for a bonded term or an uncut explicit exception. It can also change the selected tie direction after an independent whole-box coordinate shift.
+
+The coordinator now rejects an exact half-box component in each bonded displacement and in each direct exception before adding any resulting force or energy. A failed transaction rolls back earlier work in that transaction. The lower-level geometry primitive retains its documented signed-tie convention. Ordinary cutoff pairs require `cutoff < min(box)/2`, so a half-box tie is outside their interaction range. This restriction is part of the supported numerical domain, not a physical model of a stretched molecular bond.
+
+## Source checks
+
+- **Energy and force consistency.** The switched-LJ force contains both `S * F_LJ` and `U_LJ * dS/dr * d/r`, with `d = b-a`. The factored conducting-reaction-field energy expands to `K * (1/r + r²/(2 rc³) - 3/(2 rc))`, and its force factor is `K * (-1/r³ + 1/rc³)`. Ordinary interactions return zero at and beyond the cutoff. Explicit overrides use unswitched, uncut LJ plus Coulomb at the nearest image; excluded pairs contribute zero without evaluating singular geometry.
+- **Periodic bonded geometry.** Bonds use the minimum-image bond vector, angles use two arms around their vertex, and torsions reconstruct the local chain from three consecutive minimum-image bond vectors. Stored positions remain unwrapped. No per-atom wrap tears a molecule across box faces.
+- **Pair completeness and order.** Each force pass evaluates every lexicographically ordered unordered pair `i < j`. The integer binary search inverts triangular pair offsets in at most ten iterations for the 1,024-atom limit. There is no submitted candidate list that can omit a regular pair. This is an exhaustive quadratic scan, not a neighbor-list implementation.
+- **Exceptions.** Every exception has canonical `a < b`, valid atom indices and supported kind. Strictly increasing `a*N+b` keys reject duplicate and reordered pairs. Exclusion payloads must contain canonical zero. Direct overrides validate their explicit parameters. The lookup is populated during validation and keyed by the run's distinct namespace; it is not shared between experiments.
+- **Configuration and input identity.** Twelve executable dependencies, their arithmetic links, both angular elementary-math links, and the composed LJ/Coulomb links are pinned. The immutable periodic dataset binds box, cutoff, switch distance, prefactor, counts, page identities/digests and the underlying dynamics commitment. The exact positive-binary128 `2*cutoff < box` check covers normal/subnormal transitions without an approximate half-box computation.
+- **Bounded execution and atomic state.** Numerical particle validation and exception validation precede force evaluation. Each advance processes at most eight atom or interaction records. It may cross stages, but the complete inactive buffer is committed only on the final kick. Transaction failure reverts all page, cursor, lookup and commit writes made by that transaction. Earlier successful transactions remain intact. Completion seals the working namespace.
+
+## Evidence and limits
+
+The geometry owner reports eight passing targeted local-EVM tests, including values one binary128 ULP on either side of a half-box boundary, the next representable image ratio above both signed bounds, signed zeros, and a positive cutoff rejected when a tiny half-length underflows. The independent reference owner reports thirteen passing periodic-reference tests. Its scalar-energy oracle also rejects half-box ties in bonded/direct-exception terms, and the main fixture stays away from those surfaces.
+
+The reviewed integration tests compare every position, velocity, force and potential-energy value at four checkpoints against that independent oracle. They also cover byte-identical final results across transaction partitions, independently reconstructed commitments, empty optional streams, validation errors, whole-transaction rollback, the final-kick commit barrier, and separate bonded/direct-exception half-box rejection. The source fixture covers excluded, explicit-override, inside-switch, switching and outside-cutoff pair regimes and an unwrapped atom crossing a periodic face.
+
+Actual integrated validation results must be read from `validation_summary.json`, `periodic_dynamics_validation.json`, `periodic_dynamics_execution_gas.json` and the referenced test logs; this source review does not substitute for that run. README, STATUS, ARCHITECTURE and the implementation-count manifest were reviewed for consistency with these limits. No unresolved blocking source finding remained at the end of this review.
+
+The supplied contracts are immutable implementations. Checking arbitrary proxy runtime hashes would not freeze their storage-backed behavior. The owner selects the scientific protocol and uploaded parameters; the checks bind that selection but do not establish that the selected force field or exception topology is scientifically correct.
+
+The model uses a fixed orthorhombic box, conducting-limit reaction-field electrostatics and no dispersion tail correction. It does not implement Ewald/PME, a neighbor-list cache, automatic bonded-topology exception derivation, constraints, thermostat/barostat, a prepared solvated protein, alchemical transformations or a binding-free-energy estimator. Finite-domain checks and the fixture oracle are not a global binary128 error bound. A tiny-fixture gas report does not establish worst-case gas at maximum atom/page counts or a production Robinhood fee estimate.
+
+Four additional component types do not add four completed production instances: the new coordinator is another progressive implementation alternative. Sixty-four production instances remain planned and none has been deployed to Robinhood Chain.

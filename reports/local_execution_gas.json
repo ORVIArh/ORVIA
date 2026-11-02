@@ -1,0 +1,22 @@
+{
+  "scope": "Local Ganache Shanghai EVM component fixture only; not RH mainnet gas pricing, not full molecule or RBFE cost.",
+  "chainId": 31337,
+  "transactions": [
+    {
+      "scenario": "3 bonds in one transaction",
+      "gasUsed": "489518"
+    },
+    {
+      "scenario": "single bond transaction 1",
+      "gasUsed": "220176"
+    },
+    {
+      "scenario": "single bond transaction 2",
+      "gasUsed": "203751"
+    },
+    {
+      "scenario": "single bond transaction 3",
+      "gasUsed": "247122"
+    }
+  ]
+}

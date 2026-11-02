@@ -1,0 +1,32 @@
+{
+  "scope": "Three-step orthorhombic four-atom validation fixture; not solvated myosin or free energy",
+  "oracle": "mpmath 90-digit energy differentiation and velocity Verlet",
+  "absolute_tolerance": "1e-25",
+  "relative_tolerance": "1e-24",
+  "checkpoints": [
+    {
+      "step": 0,
+      "component_values_checked": 37,
+      "max_absolute_error": "1.569447911210906274006964453479979211770053881001529520530265468060970306396484375E-33",
+      "passed": true
+    },
+    {
+      "step": 1,
+      "component_values_checked": 37,
+      "max_absolute_error": "4.5413303010597174283050791504410614352524638026722505428282661437988281250000E-33",
+      "passed": true
+    },
+    {
+      "step": 2,
+      "component_values_checked": 37,
+      "max_absolute_error": "8.78208288978259140299946919054476078556798320400802881860349159240722656250000E-33",
+      "passed": true
+    },
+    {
+      "step": 3,
+      "component_values_checked": 37,
+      "max_absolute_error": "1.06502087164202382331740512002384081324478681480058173565697529792785644531250000E-32",
+      "passed": true
+    }
+  ]
+}

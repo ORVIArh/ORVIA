@@ -1,0 +1,627 @@
+{
+  "scope": "Local Ganache Shanghai EVM, four-atom orthorhombic system; not Robinhood fees or protein/RBFE cost",
+  "chainId": 31337,
+  "primaryFixture": {
+    "atoms": 4,
+    "bonds": 3,
+    "angles": 2,
+    "torsions": 1,
+    "pairs": 6,
+    "exceptions": 2,
+    "steps": 3
+  },
+  "runs": [
+    {
+      "runId": "1",
+      "datasetId": "0xad840354df199278429dbf5c92706a51cc01686606556f46e1af1d01a7edafb0",
+      "atoms": 4,
+      "bonds": 3,
+      "angles": 2,
+      "torsions": 1,
+      "pairs": 6,
+      "dtBinary128": "0x3ff80000000000000000000000000000",
+      "targetSteps": 3
+    },
+    {
+      "runId": "2",
+      "datasetId": "0xad840354df199278429dbf5c92706a51cc01686606556f46e1af1d01a7edafb0",
+      "atoms": 4,
+      "bonds": 3,
+      "angles": 2,
+      "torsions": 1,
+      "pairs": 6,
+      "dtBinary128": "0x3ff80000000000000000000000000000",
+      "targetSteps": 3
+    },
+    {
+      "runId": "3",
+      "datasetId": "0x8078c8c1b080aae763fb7771d57a18788047eb1079f2d559e3b4189f81e22fdc",
+      "atoms": 2,
+      "bonds": 1,
+      "angles": 0,
+      "torsions": 0,
+      "pairs": 1,
+      "dtBinary128": "0x3fff0000000000000000000000000000",
+      "targetSteps": 1
+    },
+    {
+      "runId": "4",
+      "datasetId": "0xad840354df199278429dbf5c92706a51cc01686606556f46e1af1d01a7edafb0",
+      "atoms": 4,
+      "bonds": 3,
+      "angles": 2,
+      "torsions": 1,
+      "pairs": 6,
+      "dtBinary128": "0x3ff80000000000000000000000000000",
+      "targetSteps": 3
+    },
+    {
+      "runId": "5",
+      "datasetId": "0x189f93351dccb31bf3088c0d5580aa2488572e5217d21bd974290b96a1d0748a",
+      "atoms": 4,
+      "bonds": 3,
+      "angles": 2,
+      "torsions": 1,
+      "pairs": 6,
+      "dtBinary128": "0x3ff80000000000000000000000000000",
+      "targetSteps": 3
+    },
+    {
+      "runId": "6",
+      "datasetId": "0xa29db130476ec4f75c468f1789428212eb9248b2d19a0916acea1378efe6a593",
+      "atoms": 2,
+      "bonds": 1,
+      "angles": 0,
+      "torsions": 0,
+      "pairs": 1,
+      "dtBinary128": "0x3ffc0000000000000000000000000000",
+      "targetSteps": 2
+    },
+    {
+      "runId": "7",
+      "datasetId": "0xc37d9be55afbb1f31938de649ea2826de2dc046c3cecbab8aeb53792a09ab677",
+      "atoms": 4,
+      "bonds": 3,
+      "angles": 2,
+      "torsions": 1,
+      "pairs": 6,
+      "dtBinary128": "0x3ff80000000000000000000000000000",
+      "targetSteps": 3
+    },
+    {
+      "runId": "8",
+      "datasetId": "0x139be2526d3d911c8addecc2091c0c242a56c97ee7e5cf787c9aa54d76915cdb",
+      "atoms": 4,
+      "bonds": 3,
+      "angles": 2,
+      "torsions": 1,
+      "pairs": 6,
+      "dtBinary128": "0x3ff80000000000000000000000000000",
+      "targetSteps": 3
+    },
+    {
+      "runId": "9",
+      "datasetId": "0x13219f1bd0f192d1759731097aaa5402798816a432dc60a374072df97f2a8b10",
+      "atoms": 4,
+      "bonds": 3,
+      "angles": 2,
+      "torsions": 1,
+      "pairs": 6,
+      "dtBinary128": "0x3ff80000000000000000000000000000",
+      "targetSteps": 3
+    },
+    {
+      "runId": "10",
+      "datasetId": "0x562d9352874d693e3ea668a9f2e0597946952f4d8a7f221303c99554e072a185",
+      "atoms": 4,
+      "bonds": 3,
+      "angles": 2,
+      "torsions": 1,
+      "pairs": 6,
+      "dtBinary128": "0x3ff80000000000000000000000000000",
+      "targetSteps": 3
+    },
+    {
+      "runId": "11",
+      "datasetId": "0x76662213a8a00b97d754c5bb5346e05f269c77736ccd05e2cf545b2a8cb1bab9",
+      "atoms": 4,
+      "bonds": 3,
+      "angles": 2,
+      "torsions": 1,
+      "pairs": 6,
+      "dtBinary128": "0x3ff80000000000000000000000000000",
+      "targetSteps": 3
+    },
+    {
+      "runId": "12",
+      "datasetId": "0x1542acf79c4cc1d351b89ef493f8a55a0459b85962477823838698666a00ecd5",
+      "atoms": 4,
+      "bonds": 3,
+      "angles": 2,
+      "torsions": 1,
+      "pairs": 6,
+      "dtBinary128": "0x3ff80000000000000000000000000000",
+      "targetSteps": 3
+    },
+    {
+      "runId": "13",
+      "datasetId": "0x655a9e2bb53e156f25ea4979b6358f4651bf94b7f03081bcd0eb8785faa8bbda",
+      "atoms": 2,
+      "bonds": 1,
+      "angles": 0,
+      "torsions": 0,
+      "pairs": 1,
+      "dtBinary128": "0x3ffc0000000000000000000000000000",
+      "targetSteps": 1
+    },
+    {
+      "runId": "14",
+      "datasetId": "0xc5311f0f7bb96f61d7037dbf2c6edb988082fd0f6789396bbabaf4251666f340",
+      "atoms": 3,
+      "bonds": 1,
+      "angles": 0,
+      "torsions": 0,
+      "pairs": 3,
+      "dtBinary128": "0x3ffc0000000000000000000000000000",
+      "targetSteps": 1
+    }
+  ],
+  "transactions": [
+    {
+      "runId": "1",
+      "phaseBefore": 1,
+      "work": 1,
+      "gasUsed": "822999"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 1,
+      "work": 1,
+      "gasUsed": "847039"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 1,
+      "work": 1,
+      "gasUsed": "869699"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 1,
+      "work": 1,
+      "gasUsed": "894753"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 2,
+      "work": 1,
+      "gasUsed": "679783"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 2,
+      "work": 1,
+      "gasUsed": "681853"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 2,
+      "work": 1,
+      "gasUsed": "687030"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 3,
+      "work": 1,
+      "gasUsed": "691867"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 3,
+      "work": 1,
+      "gasUsed": "699827"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 4,
+      "work": 1,
+      "gasUsed": "718857"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 5,
+      "work": 1,
+      "gasUsed": "714655"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 5,
+      "work": 1,
+      "gasUsed": "723778"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 6,
+      "work": 1,
+      "gasUsed": "930893"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 6,
+      "work": 1,
+      "gasUsed": "1074763"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 6,
+      "work": 1,
+      "gasUsed": "1015848"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 7,
+      "work": 1,
+      "gasUsed": "1704771"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 7,
+      "work": 1,
+      "gasUsed": "1698659"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 8,
+      "work": 1,
+      "gasUsed": "2797155"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 9,
+      "work": 1,
+      "gasUsed": "697768"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 9,
+      "work": 1,
+      "gasUsed": "1091327"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 9,
+      "work": 1,
+      "gasUsed": "934045"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 9,
+      "work": 1,
+      "gasUsed": "1097970"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 9,
+      "work": 1,
+      "gasUsed": "1156482"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 9,
+      "work": 1,
+      "gasUsed": "1094881"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 10,
+      "work": 1,
+      "gasUsed": "895953"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 10,
+      "work": 8,
+      "gasUsed": "4481671"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 13,
+      "work": 8,
+      "gasUsed": "4890588"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 15,
+      "work": 8,
+      "gasUsed": "1869195"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 11,
+      "work": 8,
+      "gasUsed": "6166223"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 14,
+      "work": 8,
+      "gasUsed": "2474619"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 10,
+      "work": 8,
+      "gasUsed": "4020597"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 13,
+      "work": 8,
+      "gasUsed": "4891496"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 15,
+      "work": 8,
+      "gasUsed": "916684"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 1,
+      "work": 1,
+      "gasUsed": "822999"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 1,
+      "work": 4,
+      "gasUsed": "1383255"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 2,
+      "work": 3,
+      "gasUsed": "798520"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 3,
+      "work": 2,
+      "gasUsed": "786969"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 5,
+      "work": 8,
+      "gasUsed": "5951694"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 9,
+      "work": 1,
+      "gasUsed": "697768"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 9,
+      "work": 4,
+      "gasUsed": "2266423"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 9,
+      "work": 3,
+      "gasUsed": "1608846"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 10,
+      "work": 2,
+      "gasUsed": "1150102"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 11,
+      "work": 8,
+      "gasUsed": "6297854"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 14,
+      "work": 1,
+      "gasUsed": "935799"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 14,
+      "work": 4,
+      "gasUsed": "2086450"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 15,
+      "work": 3,
+      "gasUsed": "912069"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 10,
+      "work": 2,
+      "gasUsed": "1015643"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 10,
+      "work": 8,
+      "gasUsed": "6020039"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 14,
+      "work": 1,
+      "gasUsed": "698559"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 14,
+      "work": 4,
+      "gasUsed": "2273227"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 14,
+      "work": 3,
+      "gasUsed": "1276945"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 15,
+      "work": 2,
+      "gasUsed": "823858"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 10,
+      "work": 8,
+      "gasUsed": "3102595"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 12,
+      "work": 1,
+      "gasUsed": "1700394"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 13,
+      "work": 4,
+      "gasUsed": "3535053"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 14,
+      "work": 3,
+      "gasUsed": "1993224"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 15,
+      "work": 2,
+      "gasUsed": "815025"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 15,
+      "work": 8,
+      "gasUsed": "828534"
+    },
+    {
+      "runId": "3",
+      "phaseBefore": 1,
+      "work": 1,
+      "gasUsed": "662502"
+    },
+    {
+      "runId": "3",
+      "phaseBefore": 1,
+      "work": 1,
+      "gasUsed": "691696"
+    },
+    {
+      "runId": "3",
+      "phaseBefore": 2,
+      "work": 1,
+      "gasUsed": "566396"
+    },
+    {
+      "runId": "3",
+      "phaseBefore": 6,
+      "work": 1,
+      "gasUsed": "813696"
+    },
+    {
+      "runId": "3",
+      "phaseBefore": 9,
+      "work": 1,
+      "gasUsed": "860603"
+    },
+    {
+      "runId": "3",
+      "phaseBefore": 10,
+      "work": 2,
+      "gasUsed": "864834"
+    },
+    {
+      "runId": "6",
+      "phaseBefore": 1,
+      "work": 1,
+      "gasUsed": "642602"
+    },
+    {
+      "runId": "6",
+      "phaseBefore": 1,
+      "work": 1,
+      "gasUsed": "671796"
+    },
+    {
+      "runId": "6",
+      "phaseBefore": 2,
+      "work": 1,
+      "gasUsed": "566396"
+    },
+    {
+      "runId": "6",
+      "phaseBefore": 6,
+      "work": 1,
+      "gasUsed": "875142"
+    },
+    {
+      "runId": "6",
+      "phaseBefore": 9,
+      "work": 1,
+      "gasUsed": "860698"
+    },
+    {
+      "runId": "6",
+      "phaseBefore": 10,
+      "work": 2,
+      "gasUsed": "865457"
+    },
+    {
+      "runId": "6",
+      "phaseBefore": 11,
+      "work": 2,
+      "gasUsed": "1196441"
+    },
+    {
+      "runId": "6",
+      "phaseBefore": 15,
+      "work": 1,
+      "gasUsed": "598349"
+    },
+    {
+      "runId": "6",
+      "phaseBefore": 15,
+      "work": 2,
+      "gasUsed": "777978"
+    },
+    {
+      "runId": "6",
+      "phaseBefore": 10,
+      "work": 8,
+      "gasUsed": "1479621"
+    },
+    {
+      "runId": "13",
+      "phaseBefore": 1,
+      "work": 3,
+      "gasUsed": "851907"
+    },
+    {
+      "runId": "14",
+      "phaseBefore": 1,
+      "work": 7,
+      "gasUsed": "1711841"
+    }
+  ]
+}

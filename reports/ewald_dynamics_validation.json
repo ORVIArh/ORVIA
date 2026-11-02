@@ -1,0 +1,63 @@
+{
+  "scope": "Two-atom finite Ewald NVE oracle with nonzero bond and LJ terms; not a converged molecular model.",
+  "localUnlimitedContractSize": true,
+  "runtimeBytes": 30938,
+  "runtimeLimitAssumption": 98304,
+  "checks": [
+    {
+      "label": "initial force pass",
+      "absolute_tolerance": "1e-27",
+      "relative_tolerance": "1e-26",
+      "checkpoints": [
+        {
+          "step": 0,
+          "values_checked": 19,
+          "maximum_absolute_error": "4.4266805263186667009926074159329199787263408172951719675099812448024749755859375E-34"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "label": "two-step normal-pair trajectory",
+      "absolute_tolerance": "1e-27",
+      "relative_tolerance": "1e-26",
+      "checkpoints": [
+        {
+          "step": 0,
+          "values_checked": 19,
+          "maximum_absolute_error": "4.4266805263186667009926074159329199787263408172951719675099812448024749755859375E-34"
+        },
+        {
+          "step": 1,
+          "values_checked": 19,
+          "maximum_absolute_error": "5.533135588080850747507736051768892687191080956866910503200910985469818115234375E-34"
+        },
+        {
+          "step": 2,
+          "values_checked": 19,
+          "maximum_absolute_error": "7.284442574698897673794137400222151733055452764953308553479351103305816650390625E-34"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "label": "one-step direct-exception trajectory",
+      "absolute_tolerance": "1e-27",
+      "relative_tolerance": "1e-26",
+      "checkpoints": [
+        {
+          "step": 0,
+          "values_checked": 19,
+          "maximum_absolute_error": "1.411427019864482463563704091484684032706679958004789342829162441194057464599609375E-33"
+        },
+        {
+          "step": 1,
+          "values_checked": 19,
+          "maximum_absolute_error": "1.559726441390703006837068186080428392590044679200637720767503790557384490966796875E-33"
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "passed": true
+}

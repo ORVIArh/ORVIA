@@ -1,0 +1,34 @@
+{
+  "scope": "Local Ganache Shanghai EVM harmonic component fixture only; not Robinhood mainnet pricing, a full protein calculation, or an RBFE cost estimate.",
+  "chainId": 31337,
+  "fixture": {
+    "atoms": 4,
+    "bonds": 3,
+    "positionPages": 2,
+    "bondPages": 3
+  },
+  "transactions": [
+    {
+      "scenario": "4-atom validation batch",
+      "requestedWork": 4,
+      "gasUsed": "336110"
+    },
+    {
+      "scenario": "3-bond validation batch",
+      "requestedWork": 3,
+      "gasUsed": "339809"
+    },
+    {
+      "scenario": "3-bond force batch and output seal",
+      "requestedWork": 16,
+      "processedWork": 3,
+      "gasUsed": "1043585"
+    },
+    {
+      "scenario": "all validation and force stages in one transaction",
+      "requestedWork": 16,
+      "processedWork": 10,
+      "gasUsed": "1227507"
+    }
+  ]
+}

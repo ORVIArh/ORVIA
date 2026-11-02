@@ -1,0 +1,925 @@
+{
+  "scope": "Local EVM advancement only; deployment/uploads/registration excluded",
+  "chainId": 31337,
+  "runs": [
+    {
+      "runId": "1",
+      "datasetId": "0xad840354df199278429dbf5c92706a51cc01686606556f46e1af1d01a7edafb0",
+      "settings": {
+        "initialStep": "0x40010000000000000000000000000000",
+        "forceTolerance": "0x3fe10000000000000000000000000000",
+        "armijo": "0x3ffd0000000000000000000000000000",
+        "maxIterations": 10,
+        "maxTrials": 8
+      }
+    },
+    {
+      "runId": "2",
+      "datasetId": "0xad840354df199278429dbf5c92706a51cc01686606556f46e1af1d01a7edafb0",
+      "settings": {
+        "initialStep": "0x40010000000000000000000000000000",
+        "forceTolerance": "0x3fe10000000000000000000000000000",
+        "armijo": "0x3ffd0000000000000000000000000000",
+        "maxIterations": 10,
+        "maxTrials": 8
+      }
+    },
+    {
+      "runId": "3",
+      "datasetId": "0xad840354df199278429dbf5c92706a51cc01686606556f46e1af1d01a7edafb0",
+      "settings": {
+        "initialStep": "0x3ffd0000000000000000000000000000",
+        "forceTolerance": "0x3fe10000000000000000000000000000",
+        "armijo": "0x3ffd0000000000000000000000000000",
+        "maxIterations": 1,
+        "maxTrials": 8
+      }
+    },
+    {
+      "runId": "4",
+      "datasetId": "0xad840354df199278429dbf5c92706a51cc01686606556f46e1af1d01a7edafb0",
+      "settings": {
+        "initialStep": "0x40010000000000000000000000000000",
+        "forceTolerance": "0x3fe10000000000000000000000000000",
+        "armijo": "0x3ffd0000000000000000000000000000",
+        "maxIterations": 10,
+        "maxTrials": 1
+      }
+    },
+    {
+      "runId": "5",
+      "datasetId": "0x8078c8c1b080aae763fb7771d57a18788047eb1079f2d559e3b4189f81e22fdc",
+      "settings": {
+        "initialStep": "0x40010000000000000000000000000000",
+        "forceTolerance": "0x3fe10000000000000000000000000000",
+        "armijo": "0x3ffd0000000000000000000000000000",
+        "maxIterations": 10,
+        "maxTrials": 8
+      }
+    },
+    {
+      "runId": "6",
+      "datasetId": "0xad840354df199278429dbf5c92706a51cc01686606556f46e1af1d01a7edafb0",
+      "settings": {
+        "initialStep": "0x40010000000000000000000000000000",
+        "forceTolerance": "0x3fe10000000000000000000000000000",
+        "armijo": "0x3ffd0000000000000000000000000000",
+        "maxIterations": 10,
+        "maxTrials": 8
+      }
+    },
+    {
+      "runId": "7",
+      "datasetId": "0x189f93351dccb31bf3088c0d5580aa2488572e5217d21bd974290b96a1d0748a",
+      "settings": {
+        "initialStep": "0x3ff30000000000000000000000000000",
+        "forceTolerance": "0x3fe10000000000000000000000000000",
+        "armijo": "0x3ffd0000000000000000000000000000",
+        "maxIterations": 1,
+        "maxTrials": 8
+      }
+    }
+  ],
+  "transactions": [
+    {
+      "runId": "1",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "655069"
+    },
+    {
+      "runId": "1",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "679109"
+    },
+    {
+      "runId": "1",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "687561"
+    },
+    {
+      "runId": "1",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "579862"
+    },
+    {
+      "runId": "1",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "590904"
+    },
+    {
+      "runId": "1",
+      "stage": 5,
+      "work": 1,
+      "gasUsed": "614373"
+    },
+    {
+      "runId": "1",
+      "stage": 5,
+      "work": 1,
+      "gasUsed": "617978"
+    },
+    {
+      "runId": "1",
+      "stage": 5,
+      "work": 1,
+      "gasUsed": "623785"
+    },
+    {
+      "runId": "1",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "889236"
+    },
+    {
+      "runId": "1",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "864290"
+    },
+    {
+      "runId": "1",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "597848"
+    },
+    {
+      "runId": "1",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "601298"
+    },
+    {
+      "runId": "1",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "606209"
+    },
+    {
+      "runId": "1",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "591178"
+    },
+    {
+      "runId": "1",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "567840"
+    },
+    {
+      "runId": "1",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "608073"
+    },
+    {
+      "runId": "1",
+      "stage": 11,
+      "work": 1,
+      "gasUsed": "633356"
+    },
+    {
+      "runId": "1",
+      "stage": 11,
+      "work": 1,
+      "gasUsed": "622521"
+    },
+    {
+      "runId": "1",
+      "stage": 11,
+      "work": 1,
+      "gasUsed": "609080"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "work": 1,
+      "gasUsed": "891713"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "work": 1,
+      "gasUsed": "865653"
+    },
+    {
+      "runId": "1",
+      "stage": 15,
+      "work": 1,
+      "gasUsed": "599610"
+    },
+    {
+      "runId": "1",
+      "stage": 15,
+      "work": 1,
+      "gasUsed": "603060"
+    },
+    {
+      "runId": "1",
+      "stage": 15,
+      "work": 1,
+      "gasUsed": "608137"
+    },
+    {
+      "runId": "1",
+      "stage": 16,
+      "work": 1,
+      "gasUsed": "592114"
+    },
+    {
+      "runId": "1",
+      "stage": 16,
+      "work": 1,
+      "gasUsed": "568792"
+    },
+    {
+      "runId": "1",
+      "stage": 16,
+      "work": 1,
+      "gasUsed": "588407"
+    },
+    {
+      "runId": "1",
+      "stage": 17,
+      "work": 1,
+      "gasUsed": "567491"
+    },
+    {
+      "runId": "1",
+      "stage": 11,
+      "work": 1,
+      "gasUsed": "613056"
+    },
+    {
+      "runId": "1",
+      "stage": 11,
+      "work": 1,
+      "gasUsed": "602621"
+    },
+    {
+      "runId": "1",
+      "stage": 11,
+      "work": 1,
+      "gasUsed": "627496"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "work": 1,
+      "gasUsed": "753536"
+    },
+    {
+      "runId": "1",
+      "stage": 17,
+      "work": 1,
+      "gasUsed": "553170"
+    },
+    {
+      "runId": "1",
+      "stage": 11,
+      "work": 1,
+      "gasUsed": "619056"
+    },
+    {
+      "runId": "1",
+      "stage": 11,
+      "work": 1,
+      "gasUsed": "602621"
+    },
+    {
+      "runId": "1",
+      "stage": 11,
+      "work": 1,
+      "gasUsed": "612385"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "work": 1,
+      "gasUsed": "829749"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "work": 1,
+      "gasUsed": "842991"
+    },
+    {
+      "runId": "1",
+      "stage": 15,
+      "work": 1,
+      "gasUsed": "599610"
+    },
+    {
+      "runId": "1",
+      "stage": 15,
+      "work": 1,
+      "gasUsed": "603060"
+    },
+    {
+      "runId": "1",
+      "stage": 15,
+      "work": 1,
+      "gasUsed": "608137"
+    },
+    {
+      "runId": "1",
+      "stage": 16,
+      "work": 1,
+      "gasUsed": "568621"
+    },
+    {
+      "runId": "1",
+      "stage": 16,
+      "work": 1,
+      "gasUsed": "568621"
+    },
+    {
+      "runId": "1",
+      "stage": 16,
+      "work": 1,
+      "gasUsed": "583903"
+    },
+    {
+      "runId": "1",
+      "stage": 17,
+      "work": 8,
+      "gasUsed": "582692"
+    },
+    {
+      "runId": "2",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "655069"
+    },
+    {
+      "runId": "2",
+      "stage": 1,
+      "work": 8,
+      "gasUsed": "1541303"
+    },
+    {
+      "runId": "2",
+      "stage": 6,
+      "work": 3,
+      "gasUsed": "1000884"
+    },
+    {
+      "runId": "2",
+      "stage": 9,
+      "work": 2,
+      "gasUsed": "667114"
+    },
+    {
+      "runId": "2",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "567840"
+    },
+    {
+      "runId": "2",
+      "stage": 10,
+      "work": 8,
+      "gasUsed": "1610048"
+    },
+    {
+      "runId": "2",
+      "stage": 15,
+      "work": 3,
+      "gasUsed": "699695"
+    },
+    {
+      "runId": "2",
+      "stage": 16,
+      "work": 2,
+      "gasUsed": "623624"
+    },
+    {
+      "runId": "2",
+      "stage": 11,
+      "work": 1,
+      "gasUsed": "613056"
+    },
+    {
+      "runId": "2",
+      "stage": 11,
+      "work": 8,
+      "gasUsed": "1355616"
+    },
+    {
+      "runId": "2",
+      "stage": 12,
+      "work": 3,
+      "gasUsed": "983113"
+    },
+    {
+      "runId": "2",
+      "stage": 15,
+      "work": 2,
+      "gasUsed": "646484"
+    },
+    {
+      "runId": "2",
+      "stage": 16,
+      "work": 1,
+      "gasUsed": "568621"
+    },
+    {
+      "runId": "2",
+      "stage": 16,
+      "work": 8,
+      "gasUsed": "622722"
+    },
+    {
+      "runId": "3",
+      "stage": 1,
+      "work": 8,
+      "gasUsed": "1317093"
+    },
+    {
+      "runId": "3",
+      "stage": 6,
+      "work": 8,
+      "gasUsed": "1526255"
+    },
+    {
+      "runId": "3",
+      "stage": 11,
+      "work": 8,
+      "gasUsed": "1641389"
+    },
+    {
+      "runId": "3",
+      "stage": 16,
+      "work": 8,
+      "gasUsed": "719977"
+    },
+    {
+      "runId": "4",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "655069"
+    },
+    {
+      "runId": "4",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "679109"
+    },
+    {
+      "runId": "4",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "687561"
+    },
+    {
+      "runId": "4",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "579862"
+    },
+    {
+      "runId": "4",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "590904"
+    },
+    {
+      "runId": "4",
+      "stage": 5,
+      "work": 1,
+      "gasUsed": "614373"
+    },
+    {
+      "runId": "4",
+      "stage": 5,
+      "work": 1,
+      "gasUsed": "617978"
+    },
+    {
+      "runId": "4",
+      "stage": 5,
+      "work": 1,
+      "gasUsed": "623785"
+    },
+    {
+      "runId": "4",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "889236"
+    },
+    {
+      "runId": "4",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "864290"
+    },
+    {
+      "runId": "4",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "597848"
+    },
+    {
+      "runId": "4",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "601298"
+    },
+    {
+      "runId": "4",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "606209"
+    },
+    {
+      "runId": "4",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "591178"
+    },
+    {
+      "runId": "4",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "567840"
+    },
+    {
+      "runId": "4",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "608073"
+    },
+    {
+      "runId": "4",
+      "stage": 11,
+      "work": 1,
+      "gasUsed": "633356"
+    },
+    {
+      "runId": "4",
+      "stage": 11,
+      "work": 1,
+      "gasUsed": "622521"
+    },
+    {
+      "runId": "4",
+      "stage": 11,
+      "work": 1,
+      "gasUsed": "609080"
+    },
+    {
+      "runId": "4",
+      "stage": 12,
+      "work": 1,
+      "gasUsed": "891713"
+    },
+    {
+      "runId": "4",
+      "stage": 12,
+      "work": 1,
+      "gasUsed": "865653"
+    },
+    {
+      "runId": "4",
+      "stage": 15,
+      "work": 1,
+      "gasUsed": "599610"
+    },
+    {
+      "runId": "4",
+      "stage": 15,
+      "work": 1,
+      "gasUsed": "603060"
+    },
+    {
+      "runId": "4",
+      "stage": 15,
+      "work": 1,
+      "gasUsed": "608137"
+    },
+    {
+      "runId": "4",
+      "stage": 16,
+      "work": 1,
+      "gasUsed": "592114"
+    },
+    {
+      "runId": "4",
+      "stage": 16,
+      "work": 1,
+      "gasUsed": "568792"
+    },
+    {
+      "runId": "4",
+      "stage": 16,
+      "work": 1,
+      "gasUsed": "588407"
+    },
+    {
+      "runId": "4",
+      "stage": 17,
+      "work": 8,
+      "gasUsed": "565638"
+    },
+    {
+      "runId": "5",
+      "stage": 1,
+      "work": 8,
+      "gasUsed": "1336993"
+    },
+    {
+      "runId": "5",
+      "stage": 6,
+      "work": 8,
+      "gasUsed": "1424413"
+    },
+    {
+      "runId": "6",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "655069"
+    },
+    {
+      "runId": "6",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "679109"
+    },
+    {
+      "runId": "6",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "687561"
+    },
+    {
+      "runId": "6",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "579862"
+    },
+    {
+      "runId": "6",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "590904"
+    },
+    {
+      "runId": "6",
+      "stage": 5,
+      "work": 1,
+      "gasUsed": "614373"
+    },
+    {
+      "runId": "6",
+      "stage": 5,
+      "work": 1,
+      "gasUsed": "617978"
+    },
+    {
+      "runId": "6",
+      "stage": 5,
+      "work": 1,
+      "gasUsed": "623785"
+    },
+    {
+      "runId": "6",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "889236"
+    },
+    {
+      "runId": "6",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "864290"
+    },
+    {
+      "runId": "6",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "597848"
+    },
+    {
+      "runId": "6",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "601298"
+    },
+    {
+      "runId": "6",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "606209"
+    },
+    {
+      "runId": "6",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "591178"
+    },
+    {
+      "runId": "6",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "567840"
+    },
+    {
+      "runId": "6",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "608073"
+    },
+    {
+      "runId": "7",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "755434"
+    },
+    {
+      "runId": "7",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "759574"
+    },
+    {
+      "runId": "7",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "802134"
+    },
+    {
+      "runId": "7",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "807826"
+    },
+    {
+      "runId": "7",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "660327"
+    },
+    {
+      "runId": "7",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "662397"
+    },
+    {
+      "runId": "7",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "668112"
+    },
+    {
+      "runId": "7",
+      "stage": 3,
+      "work": 1,
+      "gasUsed": "672399"
+    },
+    {
+      "runId": "7",
+      "stage": 3,
+      "work": 1,
+      "gasUsed": "680897"
+    },
+    {
+      "runId": "7",
+      "stage": 4,
+      "work": 1,
+      "gasUsed": "699603"
+    },
+    {
+      "runId": "7",
+      "stage": 5,
+      "work": 1,
+      "gasUsed": "694838"
+    },
+    {
+      "runId": "7",
+      "stage": 5,
+      "work": 1,
+      "gasUsed": "704499"
+    },
+    {
+      "runId": "7",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "911414"
+    },
+    {
+      "runId": "7",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "1055284"
+    },
+    {
+      "runId": "7",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "996907"
+    },
+    {
+      "runId": "7",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "1685277"
+    },
+    {
+      "runId": "7",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "1679703"
+    },
+    {
+      "runId": "7",
+      "stage": 8,
+      "work": 1,
+      "gasUsed": "2778208"
+    },
+    {
+      "runId": "7",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "678313"
+    },
+    {
+      "runId": "7",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "1071836"
+    },
+    {
+      "runId": "7",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "914554"
+    },
+    {
+      "runId": "7",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "1078491"
+    },
+    {
+      "runId": "7",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "1136991"
+    },
+    {
+      "runId": "7",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "1075750"
+    },
+    {
+      "runId": "7",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "672843"
+    },
+    {
+      "runId": "7",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "652928"
+    },
+    {
+      "runId": "7",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "655982"
+    },
+    {
+      "runId": "7",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "692827"
+    },
+    {
+      "runId": "7",
+      "stage": 11,
+      "work": 8,
+      "gasUsed": "3238407"
+    },
+    {
+      "runId": "7",
+      "stage": 13,
+      "work": 8,
+      "gasUsed": "5798651"
+    },
+    {
+      "runId": "7",
+      "stage": 16,
+      "work": 8,
+      "gasUsed": "839654"
+    }
+  ]
+}

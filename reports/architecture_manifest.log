@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "mode": "architecture_design",
+  "planned_contract_instances": 64,
+  "deployed_contract_instances": 0,
+  "category_counts": {
+    "control": 4,
+    "compute": 24,
+    "input_storage": 16,
+    "working_storage": 16,
+    "analysis": 4
+  },
+  "self_test": "passed",
+  "errors": [],
+  "notice": "A valid design manifest does not establish code completeness, scientific validity or successful deployment."
+}

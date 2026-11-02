@@ -1,0 +1,1170 @@
+{
+  "scope": "Three-atom SHAKE/RATTLE cutoff-model fixture on local Ganache with 96KiB assertion and unlimited-size engine; not a Robinhood fork or fee estimate",
+  "chainId": 31337,
+  "runtimeBytes": 35808,
+  "primaryFixture": {
+    "atoms": 3,
+    "constraints": 2,
+    "steps": 2,
+    "dt": 0.03125
+  },
+  "transactions": [
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "888939"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "912979"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "903910"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "746387"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "756551"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 3,
+      "work": 1,
+      "gasUsed": "768602"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "833607"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "845323"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "724390"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "744290"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "745092"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "826863"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "846735"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "854868"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 8,
+      "work": 1,
+      "gasUsed": "1056385"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 8,
+      "work": 1,
+      "gasUsed": "1049895"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "1342439"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 11,
+      "work": 1,
+      "gasUsed": "1055758"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 11,
+      "work": 1,
+      "gasUsed": "1056392"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 11,
+      "work": 1,
+      "gasUsed": "1066440"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 12,
+      "work": 1,
+      "gasUsed": "961225"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 12,
+      "work": 1,
+      "gasUsed": "955675"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 12,
+      "work": 1,
+      "gasUsed": "961818"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 13,
+      "work": 1,
+      "gasUsed": "832902"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 14,
+      "work": 1,
+      "gasUsed": "842260"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 14,
+      "work": 1,
+      "gasUsed": "862160"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 14,
+      "work": 1,
+      "gasUsed": "870133"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 15,
+      "work": 1,
+      "gasUsed": "882601"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 15,
+      "work": 1,
+      "gasUsed": "929156"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 16,
+      "work": 8,
+      "execution": "external solver",
+      "gasUsed": "886125"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 16,
+      "work": 8,
+      "execution": "external solver",
+      "gasUsed": "486168"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 16,
+      "work": 1,
+      "gasUsed": "782789"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 17,
+      "work": 1,
+      "gasUsed": "765690"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 18,
+      "work": 1,
+      "gasUsed": "798478"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 18,
+      "work": 1,
+      "gasUsed": "793682"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 18,
+      "work": 1,
+      "gasUsed": "806194"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 19,
+      "work": 1,
+      "gasUsed": "745707"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 19,
+      "work": 1,
+      "gasUsed": "746511"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 19,
+      "work": 1,
+      "gasUsed": "753525"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 20,
+      "work": 1,
+      "gasUsed": "1101566"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 20,
+      "work": 1,
+      "gasUsed": "1062118"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 21,
+      "work": 1,
+      "gasUsed": "1746547"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 23,
+      "work": 1,
+      "gasUsed": "1061317"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 23,
+      "work": 1,
+      "gasUsed": "1062051"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 23,
+      "work": 1,
+      "gasUsed": "1070770"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 24,
+      "work": 1,
+      "gasUsed": "791140"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 24,
+      "work": 1,
+      "gasUsed": "791125"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 24,
+      "work": 1,
+      "gasUsed": "797298"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 25,
+      "work": 1,
+      "gasUsed": "814338"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 26,
+      "work": 1,
+      "gasUsed": "882284"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 26,
+      "work": 1,
+      "gasUsed": "882284"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 26,
+      "work": 1,
+      "gasUsed": "890423"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 27,
+      "work": 1,
+      "gasUsed": "880254"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 27,
+      "work": 1,
+      "gasUsed": "927122"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 28,
+      "work": 8,
+      "gasUsed": "1485465"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 28,
+      "work": 8,
+      "gasUsed": "1446551"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 12,
+      "work": 8,
+      "gasUsed": "2004305"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 16,
+      "work": 8,
+      "gasUsed": "1593567"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 16,
+      "work": 8,
+      "gasUsed": "1461102"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 18,
+      "work": 8,
+      "gasUsed": "2981728"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 23,
+      "work": 8,
+      "gasUsed": "2098888"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 26,
+      "work": 8,
+      "gasUsed": "1776673"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 28,
+      "work": 8,
+      "gasUsed": "1401074"
+    },
+    {
+      "runId": "1",
+      "engine": "constrained-primary",
+      "stage": 29,
+      "work": 8,
+      "gasUsed": "812407"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "888939"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 1,
+      "work": 3,
+      "gasUsed": "1166006"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 2,
+      "work": 2,
+      "gasUsed": "831943"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 6,
+      "work": 8,
+      "gasUsed": "1438408"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 8,
+      "work": 1,
+      "gasUsed": "1056385"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 8,
+      "work": 3,
+      "gasUsed": "1983415"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 11,
+      "work": 2,
+      "gasUsed": "1395659"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 12,
+      "work": 8,
+      "gasUsed": "2157173"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 15,
+      "work": 1,
+      "gasUsed": "929156"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 16,
+      "work": 3,
+      "gasUsed": "1136745"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 16,
+      "work": 2,
+      "gasUsed": "968044"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 16,
+      "work": 8,
+      "gasUsed": "1476099"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 17,
+      "work": 1,
+      "gasUsed": "765690"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 18,
+      "work": 3,
+      "gasUsed": "961152"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 19,
+      "work": 2,
+      "gasUsed": "787496"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 19,
+      "work": 8,
+      "gasUsed": "3540669"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 24,
+      "work": 1,
+      "gasUsed": "791125"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 24,
+      "work": 3,
+      "gasUsed": "1087876"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 26,
+      "work": 2,
+      "gasUsed": "1061878"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 27,
+      "work": 8,
+      "gasUsed": "1731216"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 28,
+      "work": 1,
+      "gasUsed": "808598"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 28,
+      "work": 3,
+      "gasUsed": "1057876"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 28,
+      "work": 2,
+      "gasUsed": "882913"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 29,
+      "work": 8,
+      "gasUsed": "1685383"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 14,
+      "work": 1,
+      "gasUsed": "882060"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 14,
+      "work": 3,
+      "gasUsed": "1247253"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 16,
+      "work": 2,
+      "gasUsed": "1104226"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 16,
+      "work": 8,
+      "gasUsed": "1591002"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 16,
+      "work": 1,
+      "gasUsed": "782755"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 16,
+      "work": 3,
+      "gasUsed": "895872"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 18,
+      "work": 2,
+      "gasUsed": "884114"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 18,
+      "work": 8,
+      "gasUsed": "2981728"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 23,
+      "work": 1,
+      "gasUsed": "1061990"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 23,
+      "work": 3,
+      "gasUsed": "1245831"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 24,
+      "work": 2,
+      "gasUsed": "916380"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 26,
+      "work": 8,
+      "gasUsed": "1900658"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 28,
+      "work": 1,
+      "gasUsed": "809504"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 28,
+      "work": 3,
+      "gasUsed": "1073698"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 28,
+      "work": 2,
+      "gasUsed": "949227"
+    },
+    {
+      "runId": "2",
+      "engine": "constrained-partition",
+      "stage": 28,
+      "work": 8,
+      "gasUsed": "1122740"
+    },
+    {
+      "runId": "3",
+      "engine": "failure",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "888939"
+    },
+    {
+      "runId": "3",
+      "engine": "failure",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "912979"
+    },
+    {
+      "runId": "3",
+      "engine": "failure",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "903910"
+    },
+    {
+      "runId": "3",
+      "engine": "failure",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "746387"
+    },
+    {
+      "runId": "3",
+      "engine": "failure",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "756551"
+    },
+    {
+      "runId": "3",
+      "engine": "failure",
+      "stage": 3,
+      "work": 1,
+      "gasUsed": "768602"
+    },
+    {
+      "runId": "3",
+      "engine": "failure",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "833607"
+    },
+    {
+      "runId": "3",
+      "engine": "failure",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "845323"
+    },
+    {
+      "runId": "3",
+      "engine": "failure",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "724390"
+    },
+    {
+      "runId": "3",
+      "engine": "failure",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "744290"
+    },
+    {
+      "runId": "3",
+      "engine": "failure",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "745092"
+    },
+    {
+      "runId": "3",
+      "engine": "failure",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "826863"
+    },
+    {
+      "runId": "3",
+      "engine": "failure",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "846735"
+    },
+    {
+      "runId": "3",
+      "engine": "failure",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "854868"
+    },
+    {
+      "runId": "3",
+      "engine": "failure",
+      "stage": 8,
+      "work": 1,
+      "gasUsed": "1056385"
+    },
+    {
+      "runId": "3",
+      "engine": "failure",
+      "stage": 8,
+      "work": 1,
+      "gasUsed": "1049895"
+    },
+    {
+      "runId": "3",
+      "engine": "failure",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "1342439"
+    },
+    {
+      "runId": "3",
+      "engine": "failure",
+      "stage": 11,
+      "work": 1,
+      "gasUsed": "1055758"
+    },
+    {
+      "runId": "3",
+      "engine": "failure",
+      "stage": 11,
+      "work": 1,
+      "gasUsed": "1056392"
+    },
+    {
+      "runId": "3",
+      "engine": "failure",
+      "stage": 11,
+      "work": 1,
+      "gasUsed": "1066440"
+    },
+    {
+      "runId": "3",
+      "engine": "failure",
+      "stage": 12,
+      "work": 8,
+      "gasUsed": "2157173"
+    },
+    {
+      "runId": "3",
+      "engine": "failure",
+      "stage": 15,
+      "work": 8,
+      "gasUsed": "1407424"
+    },
+    {
+      "runId": "4",
+      "engine": "initial-target",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "888939"
+    },
+    {
+      "runId": "4",
+      "engine": "initial-target",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "912979"
+    },
+    {
+      "runId": "4",
+      "engine": "initial-target",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "903910"
+    },
+    {
+      "runId": "4",
+      "engine": "initial-target",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "746387"
+    },
+    {
+      "runId": "4",
+      "engine": "initial-target",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "756551"
+    },
+    {
+      "runId": "4",
+      "engine": "initial-target",
+      "stage": 3,
+      "work": 1,
+      "gasUsed": "768602"
+    },
+    {
+      "runId": "5",
+      "engine": "wrapped",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "888939"
+    },
+    {
+      "runId": "5",
+      "engine": "wrapped",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "912979"
+    },
+    {
+      "runId": "5",
+      "engine": "wrapped",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "903910"
+    },
+    {
+      "runId": "5",
+      "engine": "wrapped",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "746387"
+    },
+    {
+      "runId": "5",
+      "engine": "wrapped",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "756551"
+    },
+    {
+      "runId": "5",
+      "engine": "wrapped",
+      "stage": 3,
+      "work": 1,
+      "gasUsed": "768602"
+    },
+    {
+      "runId": "6",
+      "engine": "crossing",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "888939"
+    },
+    {
+      "runId": "6",
+      "engine": "crossing",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "912979"
+    },
+    {
+      "runId": "6",
+      "engine": "crossing",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "903910"
+    },
+    {
+      "runId": "6",
+      "engine": "crossing",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "746387"
+    },
+    {
+      "runId": "6",
+      "engine": "crossing",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "756551"
+    },
+    {
+      "runId": "6",
+      "engine": "crossing",
+      "stage": 3,
+      "work": 1,
+      "gasUsed": "768602"
+    },
+    {
+      "runId": "6",
+      "engine": "crossing",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "833546"
+    },
+    {
+      "runId": "6",
+      "engine": "crossing",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "845323"
+    },
+    {
+      "runId": "6",
+      "engine": "crossing",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "724390"
+    },
+    {
+      "runId": "6",
+      "engine": "crossing",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "744290"
+    },
+    {
+      "runId": "6",
+      "engine": "crossing",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "745092"
+    },
+    {
+      "runId": "6",
+      "engine": "crossing",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "826863"
+    },
+    {
+      "runId": "6",
+      "engine": "crossing",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "846735"
+    },
+    {
+      "runId": "6",
+      "engine": "crossing",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "854868"
+    },
+    {
+      "runId": "6",
+      "engine": "crossing",
+      "stage": 8,
+      "work": 1,
+      "gasUsed": "1056385"
+    },
+    {
+      "runId": "6",
+      "engine": "crossing",
+      "stage": 8,
+      "work": 1,
+      "gasUsed": "1049895"
+    },
+    {
+      "runId": "6",
+      "engine": "crossing",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "1342439"
+    },
+    {
+      "runId": "6",
+      "engine": "crossing",
+      "stage": 11,
+      "work": 1,
+      "gasUsed": "1055758"
+    },
+    {
+      "runId": "6",
+      "engine": "crossing",
+      "stage": 11,
+      "work": 1,
+      "gasUsed": "1056392"
+    },
+    {
+      "runId": "6",
+      "engine": "crossing",
+      "stage": 11,
+      "work": 1,
+      "gasUsed": "1066440"
+    },
+    {
+      "runId": "6",
+      "engine": "crossing",
+      "stage": 12,
+      "work": 1,
+      "gasUsed": "961225"
+    },
+    {
+      "runId": "6",
+      "engine": "crossing",
+      "stage": 12,
+      "work": 1,
+      "gasUsed": "955675"
+    },
+    {
+      "runId": "6",
+      "engine": "crossing",
+      "stage": 12,
+      "work": 1,
+      "gasUsed": "961818"
+    },
+    {
+      "runId": "6",
+      "engine": "crossing",
+      "stage": 13,
+      "work": 1,
+      "gasUsed": "832902"
+    },
+    {
+      "runId": "6",
+      "engine": "crossing",
+      "stage": 14,
+      "work": 1,
+      "gasUsed": "842260"
+    },
+    {
+      "runId": "6",
+      "engine": "crossing",
+      "stage": 14,
+      "work": 1,
+      "gasUsed": "862160"
+    },
+    {
+      "runId": "6",
+      "engine": "crossing",
+      "stage": 14,
+      "work": 1,
+      "gasUsed": "870133"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "common_heavy_atoms": 24,
+  "B_only_heavy_atoms": 1,
+  "selected_receptor_heavy_atom_rows": 6032,
+  "outputs_checked": 5,
+  "self_test": "PASS",
+  "ready_for_orvia_001_registration": false
+}

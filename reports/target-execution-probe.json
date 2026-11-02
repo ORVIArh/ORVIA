@@ -1,0 +1,267 @@
+{
+  "schemaVersion": 1,
+  "startedAtUtc": "2026-11-02T04:54:15.283Z",
+  "status": "passed",
+  "scope": "Two source-compiled numerical kernels, actual target-provider read-only eth_call execution only.",
+  "mode": "target_node_eth_call_creation_and_ephemeral_state_override",
+  "providerOrigin": "https://robinhood.rpc.pinax.network",
+  "requestedBlockTag": "0x6322b6e",
+  "providerSource": "https://docs.robinhood.com/chain/connecting/",
+  "targetChainId": 4663,
+  "networkReadAllowlist": [
+    "eth_chainId",
+    "web3_clientVersion",
+    "eth_getBlockByNumber",
+    "eth_getCode",
+    "eth_getTransactionCount",
+    "eth_call"
+  ],
+  "syntheticAddresses": {
+    "sender": "0x0000000000000000000000000000000000009000",
+    "FloatMath": "0x0000000000000000000000000000000000009011",
+    "InlineNonbondedKernel": "0x0000000000000000000000000000000000009012"
+  },
+  "noSignerOrAccountKeyLoaded": true,
+  "transactionSendMethodsAvailable": false,
+  "mainnetTransactionsSent": 0,
+  "broadcastExclusionBasis": "All network operations pass the hardcoded read-only RPC allowlist; no send/sign method exists in this harness.",
+  "productionReady": false,
+  "fullPreparedModelValidated": false,
+  "fullPipelineValidated": false,
+  "scriptSha256": "c3ea7e00960b834fb39ba902ddf0aeb50be449da8bdb777dd1ef694af27d3390",
+  "semanticReferences": [
+    "https://geth.ethereum.org/docs/interacting-with-geth/rpc/objects",
+    "https://geth.ethereum.org/docs/interacting-with-geth/rpc/ns-eth",
+    "https://docs.arbitrum.io/run-a-node/nitro/cli-flags-reference"
+  ],
+  "creationSimulations": [
+    {
+      "contract": "FloatMath",
+      "creationBytes": 5527,
+      "creationKeccak256": "0x137e0b39de220e386cfb147962776b839a6b30993205f90860114db71bf1e843",
+      "expectedRuntimeBytes": 5499,
+      "expectedRuntimeKeccak256": "0x310794f2b49c3afde7f1e9c543121d8771acbe9612b4c479970d64dd668b8ac1",
+      "status": "passed",
+      "returnedRuntimeBytes": 5499,
+      "returnedRuntimeKeccak256": "0x310794f2b49c3afde7f1e9c543121d8771acbe9612b4c479970d64dd668b8ac1",
+      "runtimeMatched": true
+    },
+    {
+      "contract": "InlineNonbondedKernel",
+      "creationBytes": 7615,
+      "creationKeccak256": "0xf6532a1cfa4d5947904f93b7acc857f60e412fee29cd4e9d1924d07952920687",
+      "expectedRuntimeBytes": 7587,
+      "expectedRuntimeKeccak256": "0xca35f552c4acce35ce3fd4025e4276c81df2d4cc2f77bcf7c0cab7202306a28b",
+      "status": "passed",
+      "returnedRuntimeBytes": 7587,
+      "returnedRuntimeKeccak256": "0xca35f552c4acce35ce3fd4025e4276c81df2d4cc2f77bcf7c0cab7202306a28b",
+      "runtimeMatched": true
+    }
+  ],
+  "overrideCalls": [
+    {
+      "name": "binary128_1_plus_2_equals_3",
+      "contract": "FloatMath",
+      "address": "0x0000000000000000000000000000000000009011",
+      "calldata": "0x126aa3cd3fff0000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000",
+      "expectedReturnData": "0x4000800000000000000000000000000000000000000000000000000000000000",
+      "status": "passed",
+      "returnData": "0x4000800000000000000000000000000000000000000000000000000000000000",
+      "expectedBytesMatched": true
+    },
+    {
+      "name": "direct_exception_LJ_r1_sigma1_epsilon1_neutral",
+      "contract": "InlineNonbondedKernel",
+      "address": "0x0000000000000000000000000000000000009012",
+      "calldata": "0xab55f6d93fff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003fff0000000000000000000000000000000000000000000000000000000000003fff00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003fff000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000040008000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001",
+      "expectedReturnData": "0x0000000000000000000000000000000000000000000000000000000000000000c00380000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "status": "passed",
+      "returnData": "0x0000000000000000000000000000000000000000000000000000000000000000c00380000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "expectedBytesMatched": true
+    }
+  ],
+  "requests": [
+    {
+      "id": 1,
+      "method": "eth_chainId",
+      "requestSha256": "7cd718c15e7d48ea187956a752c86b96515cded0520142627ba5da9729233bee",
+      "httpStatus": 200,
+      "responseSha256": "1fb0f19b45a4203bd13cb5be1e8ad3aa569f42905377cd4643fc8bc07ecd3aa3",
+      "status": "returned"
+    },
+    {
+      "id": 2,
+      "method": "web3_clientVersion",
+      "requestSha256": "012f2bc33050a58519e1bf4ace5540c8e78f75237dbe67d6fcb1c5b43a066f99",
+      "httpStatus": 200,
+      "responseSha256": "86ebaebbb3ccee550a4e08ba0ef0990e2c279ae84b1ad40cbe418020446aa33e",
+      "status": "returned"
+    },
+    {
+      "id": 3,
+      "method": "eth_getBlockByNumber",
+      "requestSha256": "884a3ea10ffa983e9dd18e98cab1cadd1cbfeb27c0ffde55563aca5397e7fad0",
+      "httpStatus": 200,
+      "responseSha256": "7156afd2648a8a43a585f87dcd48ab8cf592ad56e36a0ead3f9666584a678434",
+      "status": "returned"
+    },
+    {
+      "id": 4,
+      "method": "eth_getTransactionCount",
+      "requestSha256": "40f5a41c54f8e492ebbd2cee0ec27bab3c994ac0da08efd183630e3a895a9710",
+      "httpStatus": 200,
+      "responseSha256": "e2c4b10f1e146bbc8da6398a19c28ab108d3bdfb0c4f387ff1c0fe40fa7dd3fe",
+      "status": "returned"
+    },
+    {
+      "id": 5,
+      "method": "eth_getCode",
+      "requestSha256": "78e863944b298e2153432b2bcd3d19d335ef9d0ed2f21d7598367d1d130d7c1c",
+      "httpStatus": 200,
+      "responseSha256": "00654c2e799c17d88d99aeeb726995cad35215aadd24338ed8df5b7baa6a2110",
+      "status": "returned"
+    },
+    {
+      "id": 6,
+      "method": "eth_getCode",
+      "requestSha256": "5ff89af6ea24de90244aad91005a9387fbc0502ef9838cc5109b794bf4c455f3",
+      "httpStatus": 200,
+      "responseSha256": "47bb4db4e2048a2dfd5efc310d13bacd23e67cff1d7e0ff6d4ab5bc0ad2b4944",
+      "status": "returned"
+    },
+    {
+      "id": 7,
+      "method": "eth_call",
+      "requestSha256": "c73d2ed17deffb38b7740780de6f0359d7fec3ba0ea5309fb289761cce37c296",
+      "httpStatus": 200,
+      "responseSha256": "0226a712229a84d2795a67566e2b40f2ae1ed85cc13c83b96545d909ea1269c4",
+      "status": "returned"
+    },
+    {
+      "id": 8,
+      "method": "eth_call",
+      "requestSha256": "6580a6fb10fbff1f77a5f4a071c658261ac028f2ce46779f84cec5786357d78e",
+      "httpStatus": 200,
+      "responseSha256": "dd64f5356bf87d33ec6fdbce8a6b893807c95929732900575c07d7393d49ae1b",
+      "status": "returned"
+    },
+    {
+      "id": 9,
+      "method": "eth_call",
+      "requestSha256": "b0108043c85eeaea7a1aef0b9344b0df36252dd23c00a0c99f6efc6ffd541cb7",
+      "httpStatus": 200,
+      "responseSha256": "5243c43b07c73d7db4f2b8a65ab4ea566b596e92629243001b67201abca03399",
+      "status": "returned"
+    },
+    {
+      "id": 10,
+      "method": "eth_call",
+      "requestSha256": "4b83de4d0fdf47c272fdc195ae434081214563138a70181ee5e8252f7143f584",
+      "httpStatus": 200,
+      "responseSha256": "a4cabaef4a9781d4d3a0dfd869f9cbf0f4671620a05d96ecadf5641485422e61",
+      "status": "returned"
+    },
+    {
+      "id": 11,
+      "method": "eth_getCode",
+      "requestSha256": "a43b09e7472baf0841e70be04907a3ac8348bc7ec5778029fd650bb8b72655e8",
+      "httpStatus": 200,
+      "responseSha256": "e44b77072fb20f80e30229ae8f640c2b39147084aa5154c47bfc2e00c64ceb7e",
+      "status": "returned"
+    },
+    {
+      "id": 12,
+      "method": "eth_getCode",
+      "requestSha256": "f34a43ce0d01cf0bbe206f436406b031767ad0f72352c09fc70e9967bbd06d78",
+      "httpStatus": 200,
+      "responseSha256": "54896796db5bc5bef1f5eb02f006c261cbbd06e20bdaac8e2b94195add4d0f60",
+      "status": "returned"
+    },
+    {
+      "id": 13,
+      "method": "eth_getTransactionCount",
+      "requestSha256": "fa2fe05c6cee211a696bba46e012548a83b81fb99a3b0d48cdd61ef3a7d2d1dd",
+      "httpStatus": 200,
+      "responseSha256": "6f51e39d85331530d76b59d1238dcc56ac059e01914df735d2d07f31a1576eaf",
+      "status": "returned"
+    },
+    {
+      "id": 14,
+      "method": "eth_getBlockByNumber",
+      "requestSha256": "71b542b046c5b42e55c2f121ecdccbbbc7d62a4b598abf5a2896f652f2ff1e17",
+      "httpStatus": 200,
+      "responseSha256": "cc433268aa2091b924b788b567a2df537203e1b32ab7e0baa102acff79a42577",
+      "status": "returned"
+    }
+  ],
+  "limitations": [
+    "RPC results and advertised chain/client identity are trusted provider responses, not independently verified state proofs.",
+    "eth_call and state overrides are ephemeral simulations; no code is persistently deployed and no transaction gas payment is made.",
+    "Repeated code/nonce reads query the same pinned snapshot; they do not monitor latest-state changes or independently prove nonpersistence.",
+    "A successful two-kernel smoke check does not validate the integrated molecular engine, transaction admission, block capacity, full-system cost or scientific sampling.",
+    "A provider may run eth_call under simulation-specific gas/fee rules; this is not evidence for every production Nitro execution behavior.",
+    "This script and report are supplementary outside the source-bound complete validation suite."
+  ],
+  "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+  "compilerSettings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "evmVersion": "shanghai",
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode.object",
+          "evm.deployedBytecode.object",
+          "evm.deployedBytecode.immutableReferences"
+        ]
+      }
+    }
+  },
+  "standardInputSha256": "0a3b870b748b7ecdc0200ed45e00f378c41b76fb8ac305f67fc02279c9781a38",
+  "sourceSha256": {
+    "contracts/math/FloatMath.sol": "a474f7656f9ffc3d3149e6a0e08f2fcf6838483ae689d1e6a7cf7400f8bad74b",
+    "contracts/math/vendor/ABDKMathQuad.sol": "dd13f72bf828a699c94e96d1377daabce3dcc1d4b29af7215501a611d3cb7c9e",
+    "contracts/kernels/InlineNonbondedKernel.sol": "b72e7aebb809f72f8053bcecc4871c4cf06f4f4bf85fea43c76312226bde0451"
+  },
+  "packageLockSha256": "1395d695ad1c8ccf26cfeca269d5823253783252dea1031b3679fdb15ed12294",
+  "advertisedClientVersion": "nitro/vlocal+unknown-unknown/linux-amd64/go1.25.12",
+  "pinnedBlock": {
+    "number": "0x6322b6e",
+    "hash": "0x810cbd206b365ca434c92ada0b1f26983c1a5fe5d4db338a6a6af8eda7c80471",
+    "stateRoot": "0x18eb7e5170aaf7660debc528f2cfec71f10d4e79f8731a97ac1d5adee1e12477",
+    "timestamp": "0x6ae8165c",
+    "gasLimit": "0x4000000000000"
+  },
+  "callGasAllowance": "0x1c9c380",
+  "senderNonceBefore": "0x0",
+  "syntheticCodeBefore": {
+    "FloatMath": "0x",
+    "InlineNonbondedKernel": "0x"
+  },
+  "overrideRuntimeHashes": {
+    "0x0000000000000000000000000000000000009011": "0x310794f2b49c3afde7f1e9c543121d8771acbe9612b4c479970d64dd668b8ac1",
+    "0x0000000000000000000000000000000000009012": "0xca35f552c4acce35ce3fd4025e4276c81df2d4cc2f77bcf7c0cab7202306a28b"
+  },
+  "syntheticCodeAfter": {
+    "FloatMath": "0x",
+    "InlineNonbondedKernel": "0x"
+  },
+  "senderNonceAfter": "0x0",
+  "pinnedBlockUnchangedAfterProbe": true,
+  "syntheticAccountReadsAtPinnedSnapshotUnchanged": true,
+  "syntheticAccountRecheckScope": "Same pinned historical block before/after calls; not latest-state monitoring or independent proof of nonpersistence.",
+  "creationRuntimeChecksPassed": true,
+  "numericOverrideChecksPassed": true,
+  "completedAtUtc": "2026-11-02T04:54:22.697Z",
+  "rpcReadCounts": {
+    "eth_chainId": 1,
+    "web3_clientVersion": 1,
+    "eth_getBlockByNumber": 2,
+    "eth_getCode": 4,
+    "eth_getTransactionCount": 2,
+    "eth_call": 4
+  }
+}

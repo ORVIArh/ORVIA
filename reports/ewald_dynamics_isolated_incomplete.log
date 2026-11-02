@@ -1,0 +1,14 @@
+TAP version 13
+# This version of µWS is not compatible with your Node.js build:
+# Error: Cannot find module '../binaries/uws_linux_x64_137.node'
+# Require stack:
+# - /workspace/scratch/86493af163c4/orvia/node_modules/ganache/node_modules/@trufflesuite/uws-js-unofficial/src/uws.js
+# - /workspace/scratch/86493af163c4/orvia/node_modules/ganache/dist/node/core.js
+# Falling back to a NodeJS implementation; performance may be degraded.
+# Subtest: Ewald NVE integrates complete on-chain electrostatic forces with bonded and LJ terms
+    # Subtest: uninitialized and partially merged forces are never presented as committed state
+    ok 1 - uninitialized and partially merged forces are never presented as committed state
+      ---
+      duration_ms: 527880.234766
+      type: 'test'
+      ...

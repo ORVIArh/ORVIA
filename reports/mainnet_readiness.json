@@ -1,0 +1,1047 @@
+{
+  "schemaVersion": 1,
+  "readyForMainnet": false,
+  "broadcastEnabled": false,
+  "targetChainId": 4663,
+  "plannedInstances": 64,
+  "completeValidatedSlots": 0,
+  "inventory": [
+    {
+      "slot": "C01",
+      "name": "ExperimentRegistry",
+      "category": "control",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/core/ExperimentRegistry.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "C02",
+      "name": "DatasetCatalog",
+      "category": "control",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/core/DatasetCatalog.sol",
+        "contracts/core/DynamicsDataset.sol",
+        "contracts/core/PeriodicDataset.sol",
+        "contracts/core/ConstraintCatalog.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "C03",
+      "name": "SimulationCoordinator",
+      "category": "control",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/core/ResumableBondEngine.sol",
+        "contracts/core/PagedBondCoordinator.sol",
+        "contracts/core/DynamicsCoordinator.sol",
+        "contracts/core/PeriodicDynamicsCoordinator.sol",
+        "contracts/core/NeighborDynamicsCoordinator.sol",
+        "contracts/core/LangevinDynamicsCoordinator.sol",
+        "contracts/core/ConstrainedDynamicsCoordinator.sol",
+        "contracts/core/EwaldDynamicsCoordinator.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "C04",
+      "name": "WorkScheduler",
+      "category": "control",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/core/DynamicsCoordinator.sol",
+        "contracts/core/PeriodicDynamicsCoordinator.sol",
+        "contracts/core/NeighborDynamicsCoordinator.sol",
+        "contracts/core/LangevinDynamicsCoordinator.sol",
+        "contracts/core/ConstrainedDynamicsCoordinator.sol",
+        "contracts/core/EwaldDynamicsCoordinator.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "K01",
+      "name": "FloatingPointArithmetic",
+      "category": "compute",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/math/FloatMath.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "K02",
+      "name": "ElementaryFunctions",
+      "category": "compute",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/math/ElementaryMath.sol",
+        "contracts/math/ScalarMath.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "K03",
+      "name": "VectorGeometry",
+      "category": "compute",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/kernels/OrthorhombicGeometry.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "K04",
+      "name": "CounterRandom",
+      "category": "compute",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/kernels/CounterRandom.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "K05",
+      "name": "HarmonicBondForces",
+      "category": "compute",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/kernels/HarmonicBondKernel.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "K06",
+      "name": "HarmonicAngleForces",
+      "category": "compute",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/kernels/HarmonicAngleKernel.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "K07",
+      "name": "ProperTorsionForces",
+      "category": "compute",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/kernels/PeriodicTorsionKernel.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "K08",
+      "name": "ImproperTorsionForces",
+      "category": "compute",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [],
+      "implementationState": "no_registered_candidate"
+    },
+    {
+      "slot": "K09",
+      "name": "NonbondedParameterRules",
+      "category": "compute",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/core/PeriodicDataset.sol",
+        "contracts/core/PeriodicDynamicsCoordinator.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "K10",
+      "name": "NeighborList",
+      "category": "compute",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/core/NeighborList.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "K11",
+      "name": "LennardJonesForces",
+      "category": "compute",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/kernels/LennardJonesKernel.sol",
+        "contracts/kernels/SwitchedNonbondedKernel.sol",
+        "contracts/kernels/InlineNonbondedKernel.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "K12",
+      "name": "RealSpaceElectrostatics",
+      "category": "compute",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/kernels/CoulombPairKernel.sol",
+        "contracts/kernels/SwitchedNonbondedKernel.sol",
+        "contracts/kernels/EwaldRealSpaceKernel.sol",
+        "contracts/core/EwaldForceEvaluator.sol",
+        "contracts/kernels/InlineNonbondedKernel.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "K13",
+      "name": "ChargeMeshAssignment",
+      "category": "compute",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [],
+      "implementationState": "no_registered_candidate"
+    },
+    {
+      "slot": "K14",
+      "name": "ForwardMeshTransform",
+      "category": "compute",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [],
+      "implementationState": "no_registered_candidate"
+    },
+    {
+      "slot": "K15",
+      "name": "ReciprocalElectrostatics",
+      "category": "compute",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/kernels/EwaldReciprocalKernel.sol",
+        "contracts/core/EwaldForceEvaluator.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "K16",
+      "name": "InverseMeshTransform",
+      "category": "compute",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [],
+      "implementationState": "no_registered_candidate"
+    },
+    {
+      "slot": "K17",
+      "name": "MeshForceInterpolation",
+      "category": "compute",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [],
+      "implementationState": "no_registered_candidate"
+    },
+    {
+      "slot": "K18",
+      "name": "ElectrostaticCorrections",
+      "category": "compute",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/kernels/EwaldCorrections.sol",
+        "contracts/core/EwaldForceEvaluator.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "K19",
+      "name": "ConstraintSolver",
+      "category": "compute",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/kernels/DistanceConstraintKernel.sol",
+        "contracts/core/ConstraintSolver.sol",
+        "contracts/core/ConstrainedDynamicsCoordinator.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "K20",
+      "name": "EnergyMinimizer",
+      "category": "compute",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/core/PeriodicMinimizer.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "K21",
+      "name": "LangevinIntegrator",
+      "category": "compute",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/kernels/VelocityVerletKernel.sol",
+        "contracts/kernels/LangevinBAOABKernel.sol",
+        "contracts/core/LangevinDynamicsCoordinator.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "K22",
+      "name": "Barostat",
+      "category": "compute",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/kernels/MonteCarloAcceptance.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "K23",
+      "name": "AlchemicalHamiltonian",
+      "category": "compute",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/kernels/SoftcoreLennardJonesKernel.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "K24",
+      "name": "ReplicaExchange",
+      "category": "compute",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/kernels/MonteCarloAcceptance.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "D01",
+      "name": "AtomIdentityPage",
+      "category": "input_storage",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [],
+      "implementationState": "no_registered_candidate"
+    },
+    {
+      "slot": "D02",
+      "name": "LigandAPage",
+      "category": "input_storage",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [],
+      "implementationState": "no_registered_candidate"
+    },
+    {
+      "slot": "D03",
+      "name": "LigandBPage",
+      "category": "input_storage",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [],
+      "implementationState": "no_registered_candidate"
+    },
+    {
+      "slot": "D04",
+      "name": "HybridTopologyPage",
+      "category": "input_storage",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [],
+      "implementationState": "no_registered_candidate"
+    },
+    {
+      "slot": "D05",
+      "name": "ParticleParameterPage",
+      "category": "input_storage",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/core/DataPage.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "D06",
+      "name": "BondParameterPage",
+      "category": "input_storage",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/core/DataPage.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "D07",
+      "name": "AngleParameterPage",
+      "category": "input_storage",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/core/DataPage.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "D08",
+      "name": "ProperTorsionPage",
+      "category": "input_storage",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/core/DataPage.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "D09",
+      "name": "ImproperTorsionPage",
+      "category": "input_storage",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [],
+      "implementationState": "no_registered_candidate"
+    },
+    {
+      "slot": "D10",
+      "name": "PairExceptionPage",
+      "category": "input_storage",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/core/DataPage.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "D11",
+      "name": "SolventIonInputPage",
+      "category": "input_storage",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [],
+      "implementationState": "no_registered_candidate"
+    },
+    {
+      "slot": "D12",
+      "name": "CofactorInputPage",
+      "category": "input_storage",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [],
+      "implementationState": "no_registered_candidate"
+    },
+    {
+      "slot": "D13",
+      "name": "StartingStructurePage",
+      "category": "input_storage",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/core/DataPage.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "D14",
+      "name": "SimulationProtocolPage",
+      "category": "input_storage",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/core/ConstraintCatalog.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "D15",
+      "name": "NumericalSpecificationPage",
+      "category": "input_storage",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [],
+      "implementationState": "no_registered_candidate"
+    },
+    {
+      "slot": "D16",
+      "name": "EvidenceProvenancePage",
+      "category": "input_storage",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [],
+      "implementationState": "no_registered_candidate"
+    },
+    {
+      "slot": "W01",
+      "name": "CurrentPositionPage",
+      "category": "working_storage",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/core/WorkingStatePage.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "W02",
+      "name": "StagedPositionPage",
+      "category": "working_storage",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/core/WorkingStatePage.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "W03",
+      "name": "CurrentVelocityPage",
+      "category": "working_storage",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/core/WorkingStatePage.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "W04",
+      "name": "StagedVelocityPage",
+      "category": "working_storage",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/core/WorkingStatePage.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "W05",
+      "name": "ForceAccumulatorPage",
+      "category": "working_storage",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/core/WorkingStatePage.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "W06",
+      "name": "EnergyAccumulatorPage",
+      "category": "working_storage",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/core/WorkingStatePage.sol",
+        "contracts/core/EwaldForceEvaluator.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "W07",
+      "name": "NeighborListPage",
+      "category": "working_storage",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/core/NeighborList.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "W08",
+      "name": "ChargeMeshPage",
+      "category": "working_storage",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [],
+      "implementationState": "no_registered_candidate"
+    },
+    {
+      "slot": "W09",
+      "name": "ReciprocalMeshPage",
+      "category": "working_storage",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [],
+      "implementationState": "no_registered_candidate"
+    },
+    {
+      "slot": "W10",
+      "name": "PotentialMeshPage",
+      "category": "working_storage",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [],
+      "implementationState": "no_registered_candidate"
+    },
+    {
+      "slot": "W11",
+      "name": "ConstraintWorkspacePage",
+      "category": "working_storage",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/core/ConstraintSolver.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "W12",
+      "name": "MinimizerWorkspacePage",
+      "category": "working_storage",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/core/PeriodicMinimizer.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "W13",
+      "name": "StochasticWorkspacePage",
+      "category": "working_storage",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/core/LangevinDynamicsCoordinator.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "W14",
+      "name": "ReplicaStatePage",
+      "category": "working_storage",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [],
+      "implementationState": "no_registered_candidate"
+    },
+    {
+      "slot": "W15",
+      "name": "ReducedPotentialPage",
+      "category": "working_storage",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/analysis/ReducedPotentialCollector.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "W16",
+      "name": "AnalysisWorkspacePage",
+      "category": "working_storage",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/analysis/TimeSeriesDiagnostics.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "A01",
+      "name": "ReducedPotentialCollector",
+      "category": "analysis",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/analysis/ReducedPotentialCollector.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "A02",
+      "name": "MBARFreeEnergyEstimator",
+      "category": "analysis",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/analysis/MBARFreeEnergyEstimator.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "A03",
+      "name": "SamplingDiagnostics",
+      "category": "analysis",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/analysis/SamplingDiagnostics.sol",
+        "contracts/analysis/TimeSeriesDiagnostics.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    },
+    {
+      "slot": "A04",
+      "name": "UncertaintyAndResults",
+      "category": "analysis",
+      "productionStatus": "planned",
+      "validated": false,
+      "experimentalCandidates": [
+        "contracts/analysis/UncertaintyAndResults.sol"
+      ],
+      "implementationState": "experimental_candidates_only"
+    }
+  ],
+  "productionAcceptance": {
+    "passed": false,
+    "requiredCapabilities": [
+      "prepared_input_loading_and_sealing",
+      "minimization_and_constraints",
+      "equilibration_and_production_sampling",
+      "periodic_long_range_electrostatics",
+      "alchemical_lambda_protocol",
+      "onchain_complete_cross_state_energies",
+      "predeclared_paired_repeats_and_sample_chronology",
+      "free_energy_overlap_correlation_and_uncertainty_acceptance",
+      "permissionless_resume_partition_and_fault_recovery",
+      "full_model_target_execution_and_source_verification"
+    ],
+    "blockers": [
+      "Production acceptance: complete end-to-end pipeline and measured full-system workload evidence is missing."
+    ]
+  },
+  "blockers": [
+    "The complete production system is not compiled.",
+    "Scientific input/method validation is incomplete.",
+    "Scientific blockers remain recorded.",
+    "The prepared ORVIA-001 model is not accepted by the scientific-readiness audit.",
+    "A public operator, nonce-pinned production plan and verified live fee quotes are missing.",
+    "Production acceptance: complete end-to-end pipeline and measured full-system workload evidence is missing.",
+    "C01: complete measured production implementation is not validated.",
+    "C01: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "C02: complete measured production implementation is not validated.",
+    "C02: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "C03: complete measured production implementation is not validated.",
+    "C03: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "C04: complete measured production implementation is not validated.",
+    "C04: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "K01: complete measured production implementation is not validated.",
+    "K01: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "K02: complete measured production implementation is not validated.",
+    "K02: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "K03: complete measured production implementation is not validated.",
+    "K03: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "K04: complete measured production implementation is not validated.",
+    "K04: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "K05: complete measured production implementation is not validated.",
+    "K05: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "K06: complete measured production implementation is not validated.",
+    "K06: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "K07: complete measured production implementation is not validated.",
+    "K07: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "K08: complete measured production implementation is not validated.",
+    "K08: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "K09: complete measured production implementation is not validated.",
+    "K09: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "K10: complete measured production implementation is not validated.",
+    "K10: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "K11: complete measured production implementation is not validated.",
+    "K11: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "K12: complete measured production implementation is not validated.",
+    "K12: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "K13: complete measured production implementation is not validated.",
+    "K13: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "K14: complete measured production implementation is not validated.",
+    "K14: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "K15: complete measured production implementation is not validated.",
+    "K15: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "K16: complete measured production implementation is not validated.",
+    "K16: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "K17: complete measured production implementation is not validated.",
+    "K17: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "K18: complete measured production implementation is not validated.",
+    "K18: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "K19: complete measured production implementation is not validated.",
+    "K19: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "K20: complete measured production implementation is not validated.",
+    "K20: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "K21: complete measured production implementation is not validated.",
+    "K21: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "K22: complete measured production implementation is not validated.",
+    "K22: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "K23: complete measured production implementation is not validated.",
+    "K23: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "K24: complete measured production implementation is not validated.",
+    "K24: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "D01: complete measured production implementation is not validated.",
+    "D01: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "D01: prepared populated sealed data is missing.",
+    "D02: complete measured production implementation is not validated.",
+    "D02: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "D02: prepared populated sealed data is missing.",
+    "D03: complete measured production implementation is not validated.",
+    "D03: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "D03: prepared populated sealed data is missing.",
+    "D04: complete measured production implementation is not validated.",
+    "D04: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "D04: prepared populated sealed data is missing.",
+    "D05: complete measured production implementation is not validated.",
+    "D05: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "D05: prepared populated sealed data is missing.",
+    "D06: complete measured production implementation is not validated.",
+    "D06: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "D06: prepared populated sealed data is missing.",
+    "D07: complete measured production implementation is not validated.",
+    "D07: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "D07: prepared populated sealed data is missing.",
+    "D08: complete measured production implementation is not validated.",
+    "D08: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "D08: prepared populated sealed data is missing.",
+    "D09: complete measured production implementation is not validated.",
+    "D09: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "D09: prepared populated sealed data is missing.",
+    "D10: complete measured production implementation is not validated.",
+    "D10: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "D10: prepared populated sealed data is missing.",
+    "D11: complete measured production implementation is not validated.",
+    "D11: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "D11: prepared populated sealed data is missing.",
+    "D12: complete measured production implementation is not validated.",
+    "D12: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "D12: prepared populated sealed data is missing.",
+    "D13: complete measured production implementation is not validated.",
+    "D13: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "D13: prepared populated sealed data is missing.",
+    "D14: complete measured production implementation is not validated.",
+    "D14: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "D14: prepared populated sealed data is missing.",
+    "D15: complete measured production implementation is not validated.",
+    "D15: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "D15: prepared populated sealed data is missing.",
+    "D16: complete measured production implementation is not validated.",
+    "D16: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "D16: prepared populated sealed data is missing.",
+    "W01: complete measured production implementation is not validated.",
+    "W01: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "W02: complete measured production implementation is not validated.",
+    "W02: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "W03: complete measured production implementation is not validated.",
+    "W03: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "W04: complete measured production implementation is not validated.",
+    "W04: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "W05: complete measured production implementation is not validated.",
+    "W05: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "W06: complete measured production implementation is not validated.",
+    "W06: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "W07: complete measured production implementation is not validated.",
+    "W07: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "W08: complete measured production implementation is not validated.",
+    "W08: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "W09: complete measured production implementation is not validated.",
+    "W09: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "W10: complete measured production implementation is not validated.",
+    "W10: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "W11: complete measured production implementation is not validated.",
+    "W11: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "W12: complete measured production implementation is not validated.",
+    "W12: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "W13: complete measured production implementation is not validated.",
+    "W13: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "W14: complete measured production implementation is not validated.",
+    "W14: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "W15: complete measured production implementation is not validated.",
+    "W15: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "W16: complete measured production implementation is not validated.",
+    "W16: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "A01: complete measured production implementation is not validated.",
+    "A01: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "A02: complete measured production implementation is not validated.",
+    "A02: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "A03: complete measured production implementation is not validated.",
+    "A03: target-fork, source-verification or maximum-work gas evidence is missing.",
+    "A04: complete measured production implementation is not validated.",
+    "A04: target-fork, source-verification or maximum-work gas evidence is missing."
+  ],
+  "blockerGroups": {
+    "externalEvidence": [],
+    "scientificInputs": [
+      "A complete validated prepared myosin/ligand/solvent model, including special cofactor and modified-residue parameters, is unresolved."
+    ],
+    "productionPipelineAndWorkload": [
+      "Production acceptance: complete end-to-end pipeline and measured full-system workload evidence is missing."
+    ],
+    "implementationAndValidation": [
+      "The complete production system is not compiled.",
+      "Scientific input/method validation is incomplete.",
+      "Scientific blockers remain recorded.",
+      "Production acceptance: complete end-to-end pipeline and measured full-system workload evidence is missing.",
+      "C01: complete measured production implementation is not validated.",
+      "C01: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "C02: complete measured production implementation is not validated.",
+      "C02: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "C03: complete measured production implementation is not validated.",
+      "C03: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "C04: complete measured production implementation is not validated.",
+      "C04: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "K01: complete measured production implementation is not validated.",
+      "K01: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "K02: complete measured production implementation is not validated.",
+      "K02: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "K03: complete measured production implementation is not validated.",
+      "K03: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "K04: complete measured production implementation is not validated.",
+      "K04: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "K05: complete measured production implementation is not validated.",
+      "K05: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "K06: complete measured production implementation is not validated.",
+      "K06: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "K07: complete measured production implementation is not validated.",
+      "K07: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "K08: complete measured production implementation is not validated.",
+      "K08: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "K09: complete measured production implementation is not validated.",
+      "K09: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "K10: complete measured production implementation is not validated.",
+      "K10: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "K11: complete measured production implementation is not validated.",
+      "K11: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "K12: complete measured production implementation is not validated.",
+      "K12: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "K13: complete measured production implementation is not validated.",
+      "K13: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "K14: complete measured production implementation is not validated.",
+      "K14: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "K15: complete measured production implementation is not validated.",
+      "K15: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "K16: complete measured production implementation is not validated.",
+      "K16: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "K17: complete measured production implementation is not validated.",
+      "K17: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "K18: complete measured production implementation is not validated.",
+      "K18: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "K19: complete measured production implementation is not validated.",
+      "K19: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "K20: complete measured production implementation is not validated.",
+      "K20: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "K21: complete measured production implementation is not validated.",
+      "K21: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "K22: complete measured production implementation is not validated.",
+      "K22: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "K23: complete measured production implementation is not validated.",
+      "K23: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "K24: complete measured production implementation is not validated.",
+      "K24: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "D01: complete measured production implementation is not validated.",
+      "D01: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "D01: prepared populated sealed data is missing.",
+      "D02: complete measured production implementation is not validated.",
+      "D02: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "D02: prepared populated sealed data is missing.",
+      "D03: complete measured production implementation is not validated.",
+      "D03: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "D03: prepared populated sealed data is missing.",
+      "D04: complete measured production implementation is not validated.",
+      "D04: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "D04: prepared populated sealed data is missing.",
+      "D05: complete measured production implementation is not validated.",
+      "D05: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "D05: prepared populated sealed data is missing.",
+      "D06: complete measured production implementation is not validated.",
+      "D06: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "D06: prepared populated sealed data is missing.",
+      "D07: complete measured production implementation is not validated.",
+      "D07: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "D07: prepared populated sealed data is missing.",
+      "D08: complete measured production implementation is not validated.",
+      "D08: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "D08: prepared populated sealed data is missing.",
+      "D09: complete measured production implementation is not validated.",
+      "D09: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "D09: prepared populated sealed data is missing.",
+      "D10: complete measured production implementation is not validated.",
+      "D10: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "D10: prepared populated sealed data is missing.",
+      "D11: complete measured production implementation is not validated.",
+      "D11: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "D11: prepared populated sealed data is missing.",
+      "D12: complete measured production implementation is not validated.",
+      "D12: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "D12: prepared populated sealed data is missing.",
+      "D13: complete measured production implementation is not validated.",
+      "D13: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "D13: prepared populated sealed data is missing.",
+      "D14: complete measured production implementation is not validated.",
+      "D14: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "D14: prepared populated sealed data is missing.",
+      "D15: complete measured production implementation is not validated.",
+      "D15: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "D15: prepared populated sealed data is missing.",
+      "D16: complete measured production implementation is not validated.",
+      "D16: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "D16: prepared populated sealed data is missing.",
+      "W01: complete measured production implementation is not validated.",
+      "W01: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "W02: complete measured production implementation is not validated.",
+      "W02: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "W03: complete measured production implementation is not validated.",
+      "W03: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "W04: complete measured production implementation is not validated.",
+      "W04: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "W05: complete measured production implementation is not validated.",
+      "W05: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "W06: complete measured production implementation is not validated.",
+      "W06: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "W07: complete measured production implementation is not validated.",
+      "W07: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "W08: complete measured production implementation is not validated.",
+      "W08: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "W09: complete measured production implementation is not validated.",
+      "W09: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "W10: complete measured production implementation is not validated.",
+      "W10: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "W11: complete measured production implementation is not validated.",
+      "W11: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "W12: complete measured production implementation is not validated.",
+      "W12: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "W13: complete measured production implementation is not validated.",
+      "W13: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "W14: complete measured production implementation is not validated.",
+      "W14: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "W15: complete measured production implementation is not validated.",
+      "W15: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "W16: complete measured production implementation is not validated.",
+      "W16: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "A01: complete measured production implementation is not validated.",
+      "A01: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "A02: complete measured production implementation is not validated.",
+      "A02: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "A03: complete measured production implementation is not validated.",
+      "A03: target-fork, source-verification or maximum-work gas evidence is missing.",
+      "A04: complete measured production implementation is not validated.",
+      "A04: target-fork, source-verification or maximum-work gas evidence is missing."
+    ],
+    "operatorConfiguration": [
+      "Final public operator address, nonce-pinned production plan and live per-transaction fee quotes are required before signing. No private key belongs in the release bundle."
+    ]
+  },
+  "notice": "A structural gate cannot certify scientific correctness or independent security review. No signer or broadcaster is provided by this tool.",
+  "validationIntegrity": {
+    "passed": true,
+    "errors": [],
+    "scope": "Exact contracts/test/reference/scripts/data file sets and package/dependency pins; excludes Python caches, docs/release notes and operational data/production_acceptance.json, data/operator_deployment.json, data/production_slot_evidence.json and data/production/ evidence (separately bound by readiness). Compiler artifacts, generated numerical/deployment evidence and all nine check logs are separately hash-bound; readiness/preflight/review/package metadata are excluded."
+  }
+}

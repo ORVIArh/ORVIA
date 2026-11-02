@@ -1,0 +1,263 @@
+{
+  "scope": "Finite Ewald component and complete sealed-snapshot force evaluation, not PME or a converged protein model",
+  "absolute_tolerance": "1e-27",
+  "relative_tolerance": "1e-26",
+  "tail_relative_tolerance": "1e-25",
+  "values_checked": 63,
+  "maximum_absolute_error": "1.42355710081041741038073143550403211230872432806039929136779773980379104614258E-33",
+  "checks": [
+    {
+      "label": "real0.energy",
+      "absolute_error": "5.217787672077107148974173861003772483452175160991701046483665704727172851562E-34"
+    },
+    {
+      "label": "real0.force0",
+      "absolute_error": "5.1432091204486572823490010218974449164394819837422476069271564483642578125E-34"
+    },
+    {
+      "label": "real0.force1",
+      "absolute_error": "0E-5075"
+    },
+    {
+      "label": "real0.force2",
+      "absolute_error": "0E-5075"
+    },
+    {
+      "label": "real1.energy",
+      "absolute_error": "1.30087399905070139968043047552049640749365365991641120588047970086336135864258E-33"
+    },
+    {
+      "label": "real1.force0",
+      "absolute_error": "9.6917286958050121982108054612130021682968109016554926285439580678939819335938E-34"
+    },
+    {
+      "label": "real1.force1",
+      "absolute_error": "4.8458643479025060991054027306065010841484054508277458142719790339469909667969E-34"
+    },
+    {
+      "label": "real1.force2",
+      "absolute_error": "1.21146608697562652477635068265162527103710136270693650356799475848674774169922E-34"
+    },
+    {
+      "label": "real2.energy",
+      "absolute_error": "1.415285262417813178316498000791697241341909877262969066748118475079536437988281E-33"
+    },
+    {
+      "label": "real2.force0",
+      "absolute_error": "7.9691221592157894177408407603104405644068094501648408405344868078827857971191E-34"
+    },
+    {
+      "label": "real2.force1",
+      "absolute_error": "0E-5075"
+    },
+    {
+      "label": "real2.force2",
+      "absolute_error": "0E-5075"
+    },
+    {
+      "label": "real3.energy",
+      "absolute_error": "0E-5075"
+    },
+    {
+      "label": "real3.force0",
+      "absolute_error": "0E-5075"
+    },
+    {
+      "label": "real3.force1",
+      "absolute_error": "0E-5075"
+    },
+    {
+      "label": "real3.force2",
+      "absolute_error": "0E-5075"
+    },
+    {
+      "label": "real4.energy",
+      "absolute_error": "0E-5075"
+    },
+    {
+      "label": "real4.force0",
+      "absolute_error": "0E-5075"
+    },
+    {
+      "label": "real4.force1",
+      "absolute_error": "0E-5075"
+    },
+    {
+      "label": "real4.force2",
+      "absolute_error": "0E-5075"
+    },
+    {
+      "label": "real5.energy",
+      "absolute_error": "5.05086258843623627913071853547361983246066539422775861809705453569295308816708E-139"
+    },
+    {
+      "label": "real5.force0",
+      "absolute_error": "1.576922839229902173882464650359733966322719670291336468012715983623504992246360E-137"
+    },
+    {
+      "label": "real5.force1",
+      "absolute_error": "0E-5075"
+    },
+    {
+      "label": "real5.force2",
+      "absolute_error": "0E-5075"
+    },
+    {
+      "label": "real6.energy",
+      "absolute_error": "0E-5075"
+    },
+    {
+      "label": "real6.force0",
+      "absolute_error": "0E-5075"
+    },
+    {
+      "label": "real6.force1",
+      "absolute_error": "0E-5075"
+    },
+    {
+      "label": "real6.force2",
+      "absolute_error": "0E-5075"
+    },
+    {
+      "label": "exceptions0.energy",
+      "absolute_error": "1.33297283145715533056469677456357852946928868738666770913447868078947067260742E-33"
+    },
+    {
+      "label": "exceptions0.force0",
+      "absolute_error": "1.067648917148449390496885179605323763878388550984792848392898850142955780029297E-33"
+    },
+    {
+      "label": "exceptions0.force1",
+      "absolute_error": "5.33824458574224695248442589802661881939194275492396424196449425071477890014648E-34"
+    },
+    {
+      "label": "exceptions0.force2",
+      "absolute_error": "1.334561146435561738121106474506654704847985688730991055491123562678694725036621E-34"
+    },
+    {
+      "label": "exceptions1.energy",
+      "absolute_error": "3.589925862392144541463667429611196770151465047455428466936554759740829467773E-35"
+    },
+    {
+      "label": "exceptions1.force0",
+      "absolute_error": "3.751200008160390384722674793957899239740710965331659123081266880035400390625E-35"
+    },
+    {
+      "label": "exceptions1.force1",
+      "absolute_error": "0E-5075"
+    },
+    {
+      "label": "exceptions1.force2",
+      "absolute_error": "0E-5075"
+    },
+    {
+      "label": "exceptions2.energy",
+      "absolute_error": "2.833427773844271189146710511645426724175025663253046714426875114440917968750E-34"
+    },
+    {
+      "label": "exceptions2.force0",
+      "absolute_error": "1.10092401903077611359943737671574076388976117269157434786068852842091381205591E-45"
+    },
+    {
+      "label": "exceptions2.force1",
+      "absolute_error": "0E-5075"
+    },
+    {
+      "label": "exceptions2.force2",
+      "absolute_error": "0E-5075"
+    },
+    {
+      "label": "exceptions3.energy",
+      "absolute_error": "6.853685309394110932814612515991267691174003422301071746884621679782867431641E-35"
+    },
+    {
+      "label": "exceptions3.force0",
+      "absolute_error": "0E-5075"
+    },
+    {
+      "label": "exceptions3.force1",
+      "absolute_error": "0E-5075"
+    },
+    {
+      "label": "exceptions3.force2",
+      "absolute_error": "0E-5075"
+    },
+    {
+      "label": "exceptions4.energy",
+      "absolute_error": "0E-109"
+    },
+    {
+      "label": "exceptions4.force0",
+      "absolute_error": "0E-109"
+    },
+    {
+      "label": "exceptions4.force1",
+      "absolute_error": "0E-5075"
+    },
+    {
+      "label": "exceptions4.force2",
+      "absolute_error": "0E-5075"
+    },
+    {
+      "label": "background",
+      "absolute_error": "2.709940665663681570249076258138547490238226045705165731804979912833195800781E-36"
+    },
+    {
+      "label": "evaluation0.energy",
+      "absolute_error": "4.7664154482002644929487561373310951402749101768783339537482783198356628417969E-34"
+    },
+    {
+      "label": "evaluation0.force0.0",
+      "absolute_error": "2.6366465173883410747643574432022846044265852082204127355835586786270141601562E-34"
+    },
+    {
+      "label": "evaluation0.force0.1",
+      "absolute_error": "2.18076057244960553987832756636526957463544539861806169497463852167129516602E-36"
+    },
+    {
+      "label": "evaluation0.force0.2",
+      "absolute_error": "3.5962217942385419020431967192802537707239260886999949383447058498859405517578E-35"
+    },
+    {
+      "label": "evaluation0.force1.0",
+      "absolute_error": "2.6366465173883410747643574432022846044265852082204127355835586786270141601562E-34"
+    },
+    {
+      "label": "evaluation0.force1.1",
+      "absolute_error": "2.18076057244960553987832756636526957463544539861806169497463852167129516602E-36"
+    },
+    {
+      "label": "evaluation0.force1.2",
+      "absolute_error": "2.3925155789965194938832105051646741966376125585653773163197441026568412780762E-35"
+    },
+    {
+      "label": "evaluation1.energy",
+      "absolute_error": "1.42355710081041741038073143550403211230872432806039929136779773980379104614258E-33"
+    },
+    {
+      "label": "evaluation1.force0.0",
+      "absolute_error": "6.3899312881244743202903720705083530953121809357224699216260011307895183563232E-34"
+    },
+    {
+      "label": "evaluation1.force0.1",
+      "absolute_error": "2.44011778795147276183378438566869774952799340629778703988220039755105972290039E-34"
+    },
+    {
+      "label": "evaluation1.force0.2",
+      "absolute_error": "9.0401441421849724640507063872350766181348667044117014346633600071072578430176E-35"
+    },
+    {
+      "label": "evaluation1.force1.0",
+      "absolute_error": "6.3899312881244743202903720705083530953121809357224699216260011307895183563232E-34"
+    },
+    {
+      "label": "evaluation1.force1.1",
+      "absolute_error": "2.50030309871357388224178369637447672823230908280451792098344848491251468658447E-34"
+    },
+    {
+      "label": "evaluation1.force1.2",
+      "absolute_error": "8.4382910345639612599707132801772868310917099393443926236508791334927082061768E-35"
+    }
+  ],
+  "passed": true
+}

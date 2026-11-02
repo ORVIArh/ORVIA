@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-01",
+  "endpoint": "https://rpc.mainnet.chain.robinhood.com",
+  "methods": [
+    "eth_chainId",
+    "eth_getBlockByNumber"
+  ],
+  "mode": "read_only",
+  "status": "inconclusive_http_403",
+  "chainIdObserved": null,
+  "targetChainIdFromOfficialDocumentation": 4663,
+  "reference": "https://docs.robinhood.com/chain/deploy-smart-contracts/",
+  "transactionsSent": 0,
+  "forkValidationPerformed": false
+}

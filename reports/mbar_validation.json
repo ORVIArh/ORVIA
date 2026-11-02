@@ -1,0 +1,9 @@
+{
+  "scope": "Synthetic three-state MBAR and weights, not molecular free energies",
+  "values_checked": 24,
+  "maximum_absolute_error": "8.534661276571299488889953880815148246469983709435597196701905886584E-24",
+  "absolute_tolerance": "1e-16",
+  "relative_tolerance": "1e-16",
+  "passed": true
+}
+

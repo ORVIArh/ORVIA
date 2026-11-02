@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "scope": "Supplementary target-node eth_call probe; outside canonical ORVIA full-suite validation",
+  "recordedStatus": "passed",
+  "recordedBlock": {
+    "number": "0x6322b6e",
+    "hash": "0x810cbd206b365ca434c92ada0b1f26983c1a5fe5d4db338a6a6af8eda7c80471",
+    "stateRoot": "0x18eb7e5170aaf7660debc528f2cfec71f10d4e79f8731a97ac1d5adee1e12477",
+    "timestamp": "0x6ae8165c",
+    "gasLimit": "0x4000000000000"
+  },
+  "files": {
+    "target-execution-probe.mjs": {
+      "sha256": "c3ea7e00960b834fb39ba902ddf0aeb50be449da8bdb777dd1ef694af27d3390",
+      "bytes": 15192
+    },
+    "target-execution-probe.json": {
+      "sha256": "1b380f511efaa1d5542afd8516d7206d68258f73c4e9e0d9bea5b0a2fe45593d",
+      "bytes": 12128
+    },
+    "target-execution-probe-README.md": {
+      "sha256": "012633346dd436c825274d2c2572f5efa01717d175d82decc8a7801a87138448",
+      "bytes": 4109
+    }
+  },
+  "mainnetTransactionsSent": 0,
+  "broadcastExclusionBasis": "All network operations pass the hardcoded read-only RPC allowlist; no send/sign method exists in this harness.",
+  "productionReady": false,
+  "manifestDoesNotHashItself": true
+}

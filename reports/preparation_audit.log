@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "candidate_assembly": "1",
+  "selected_heavy_atom_rows": 6032,
+  "common_6A_contact_residues": 27,
+  "molecular_dynamics_ready": false,
+  "self_test": "PASS"
+}

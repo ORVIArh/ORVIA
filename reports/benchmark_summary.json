@@ -1,0 +1,126 @@
+{
+  "version": "0.4.0",
+  "scope": "Local Ganache Shanghai EVM development fixtures. Advancement gas excludes deployment, input uploads and registration. Not Robinhood fees or full protein/RBFE costs.",
+  "local_chain_id": 31337,
+  "implemented_component_types": [
+    "ExperimentRegistry",
+    "DatasetCatalog",
+    "DynamicsDataset",
+    "DataPage",
+    "ResumableBondEngine",
+    "PagedBondCoordinator",
+    "DynamicsCoordinator",
+    "WorkingStatePage",
+    "FloatMath",
+    "ElementaryMath",
+    "HarmonicBondKernel",
+    "HarmonicAngleKernel",
+    "PeriodicTorsionKernel",
+    "LennardJonesKernel",
+    "CoulombPairKernel",
+    "VelocityVerletKernel",
+    "OrthorhombicGeometry",
+    "SwitchedNonbondedKernel",
+    "PeriodicDataset",
+    "PeriodicDynamicsCoordinator"
+  ],
+  "planned_production_instances": 64,
+  "robinhood_deployments": 0,
+  "validation": {
+    "evm_tests_passed": 89,
+    "reference_tests_passed": 34,
+    "check_groups_passed": 7,
+    "architecture_mutation_cases": 12
+  },
+  "fixtures": {
+    "finite_system": {
+      "scope": "Eight-step finite four-atom validation fixture; not solvated myosin or free energy",
+      "trajectory_checkpoints": 9,
+      "scalar_values_compared": 333,
+      "maximum_observed_absolute_reference_error": "3.28221457052398275771729862046115608428851201833342441415902584747970104217529296875E-33",
+      "absolute_tolerance": "1e-25",
+      "relative_tolerance": "1e-24",
+      "gas_schedules": [
+        {
+          "parameters": {
+            "runId": "1",
+            "datasetId": "0xcc1c472ac45057fc8f5ae3c6bbdeeea85aa86808d71fbebceca11bea42630fa5",
+            "atoms": 4,
+            "bonds": 3,
+            "angles": 2,
+            "torsions": 1,
+            "pairs": 1,
+            "dtBinary128": "0x3ff80000000000000000000000000000",
+            "targetSteps": 8
+          },
+          "schedule": "Initialization record by record, then batches up to 8",
+          "advancement_transactions": 34,
+          "advancement_gas": 64169476,
+          "largest_transaction_gas": 4864266
+        },
+        {
+          "parameters": {
+            "runId": "2",
+            "datasetId": "0xcc1c472ac45057fc8f5ae3c6bbdeeea85aa86808d71fbebceca11bea42630fa5",
+            "atoms": 4,
+            "bonds": 3,
+            "angles": 2,
+            "torsions": 1,
+            "pairs": 1,
+            "dtBinary128": "0x3ff80000000000000000000000000000",
+            "targetSteps": 8
+          },
+          "schedule": "Repeating batch limits 1,4,3,2,8",
+          "advancement_transactions": 40,
+          "advancement_gas": 68188267,
+          "largest_transaction_gas": 4856299
+        }
+      ]
+    },
+    "periodic": {
+      "scope": "Three-step orthorhombic four-atom validation fixture; not solvated myosin or free energy",
+      "trajectory_checkpoints": 4,
+      "scalar_values_compared": 148,
+      "maximum_observed_absolute_reference_error": "1.06502087164202382331740512002384081324478681480058173565697529792785644531250000E-32",
+      "absolute_tolerance": "1e-25",
+      "relative_tolerance": "1e-24",
+      "gas_schedules": [
+        {
+          "parameters": {
+            "runId": "1",
+            "datasetId": "0xad840354df199278429dbf5c92706a51cc01686606556f46e1af1d01a7edafb0",
+            "atoms": 4,
+            "bonds": 3,
+            "angles": 2,
+            "torsions": 1,
+            "pairs": 6,
+            "dtBinary128": "0x3ff80000000000000000000000000000",
+            "targetSteps": 3
+          },
+          "schedule": "Initialization record by record and staged-state checks, then batches up to 8",
+          "advancement_transactions": 33,
+          "advancement_gas": 54933728,
+          "largest_transaction_gas": 6166223
+        },
+        {
+          "parameters": {
+            "runId": "2",
+            "datasetId": "0xad840354df199278429dbf5c92706a51cc01686606556f46e1af1d01a7edafb0",
+            "atoms": 4,
+            "bonds": 3,
+            "angles": 2,
+            "torsions": 1,
+            "pairs": 6,
+            "dtBinary128": "0x3ff80000000000000000000000000000",
+            "targetSteps": 3
+          },
+          "schedule": "Repeating batch limits 1,4,3,2,8",
+          "advancement_transactions": 25,
+          "advancement_gas": 49781844,
+          "largest_transaction_gas": 6297854
+        }
+      ]
+    }
+  },
+  "production_ready": false
+}

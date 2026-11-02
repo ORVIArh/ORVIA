@@ -1,0 +1,1534 @@
+{
+  "scope": "Finite two-atom Ewald NVE, 13 canonical modes; local measurements only",
+  "localUnlimitedContractSize": true,
+  "transactions": [
+    {
+      "runId": "1",
+      "stage": 1,
+      "cursor": 0,
+      "work": 1,
+      "gas": "853360"
+    },
+    {
+      "runId": "1",
+      "stage": 1,
+      "cursor": 1,
+      "work": 1,
+      "gas": "884558"
+    },
+    {
+      "runId": "1",
+      "stage": 2,
+      "cursor": 0,
+      "work": 1,
+      "gas": "683941"
+    },
+    {
+      "runId": "1",
+      "stage": 6,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1077897"
+    },
+    {
+      "runId": "1",
+      "stage": 9,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1102623"
+    },
+    {
+      "runId": "1",
+      "stage": 10,
+      "cursor": 0,
+      "work": 1,
+      "gas": "757922"
+    },
+    {
+      "runId": "1",
+      "stage": 10,
+      "cursor": 1,
+      "work": 1,
+      "gas": "725498"
+    },
+    {
+      "runId": "1",
+      "stage": 11,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1383875"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "980679"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "926685"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1506821"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1029277"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1595445"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1639355"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1634814"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1635764"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "998199"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1596171"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1623592"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1639539"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1641533"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "971736"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1595440"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1631291"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1634935"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1644072"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "995364"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1596920"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1628475"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1639646"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1645127"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "983331"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1605726"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1624980"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1652655"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1645890"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "974113"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1596084"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1622642"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1638736"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1640691"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "997596"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1598509"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1626662"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1645089"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1647940"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "981713"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1596928"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1623794"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1640266"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1641646"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "972350"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1594609"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1623394"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1634093"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1637462"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "995978"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1604228"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1627488"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1647505"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1645391"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "983296"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1504362"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1644282"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1570281"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1649329"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "974078"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1596551"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1625101"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1639774"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1642962"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "997561"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1599396"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1623576"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1646071"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1644964"
+    },
+    {
+      "runId": "1",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "932978"
+    },
+    {
+      "runId": "1",
+      "stage": 13,
+      "cursor": 0,
+      "work": 1,
+      "gas": "727104"
+    },
+    {
+      "runId": "1",
+      "stage": 13,
+      "cursor": 1,
+      "work": 1,
+      "gas": "713712"
+    },
+    {
+      "runId": "1",
+      "stage": 14,
+      "cursor": 0,
+      "work": 8,
+      "gas": "3222171"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "926851"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1506826"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1029443"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1595611"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1639521"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1634980"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1635930"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "998365"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1596243"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1623758"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1639611"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1641699"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "971902"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1595564"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1626260"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1634987"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1640288"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "995530"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1597116"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1628641"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1639842"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1645293"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "983497"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1600594"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1625173"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1647767"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1646083"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "974279"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1596302"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1623976"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1640055"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1641431"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "997762"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1598809"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1626815"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1645389"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1648093"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "981879"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1597040"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1623960"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1640378"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1641812"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "972516"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1594775"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1623560"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1634156"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1637628"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "996144"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1599314"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1628123"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1642124"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1645557"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "983462"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1595038"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1628206"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1641637"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1649495"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "974244"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1596717"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1625267"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1639940"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1643128"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "997727"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1599562"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1623742"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1646237"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1645130"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "933144"
+    },
+    {
+      "runId": "1",
+      "stage": 22,
+      "cursor": 0,
+      "work": 1,
+      "gas": "727705"
+    },
+    {
+      "runId": "1",
+      "stage": 22,
+      "cursor": 1,
+      "work": 2,
+      "gas": "783970"
+    },
+    {
+      "runId": "1",
+      "stage": 23,
+      "cursor": 1,
+      "work": 1,
+      "gas": "726844"
+    },
+    {
+      "runId": "1",
+      "stage": 14,
+      "cursor": 0,
+      "work": 8,
+      "gas": "2914402"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 8,
+      "gas": "5960551"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 8,
+      "gas": "7319408"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 8,
+      "gas": "6717897"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 8,
+      "gas": "7370120"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 8,
+      "gas": "6704871"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 8,
+      "gas": "6719293"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 8,
+      "gas": "7349757"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 8,
+      "gas": "6698504"
+    },
+    {
+      "runId": "1",
+      "stage": 21,
+      "cursor": 0,
+      "work": 8,
+      "gas": "4057537"
+    },
+    {
+      "runId": "3",
+      "stage": 1,
+      "cursor": 0,
+      "work": 8,
+      "gas": "2992571"
+    },
+    {
+      "runId": "2",
+      "stage": 1,
+      "cursor": 0,
+      "work": 8,
+      "gas": "2992571"
+    },
+    {
+      "runId": "2",
+      "origin": "evaluator",
+      "stage": 12,
+      "work": 8,
+      "gas": "4518583"
+    },
+    {
+      "runId": "2",
+      "origin": "evaluator",
+      "stage": 12,
+      "work": 8,
+      "gas": "5260514"
+    },
+    {
+      "runId": "2",
+      "origin": "evaluator",
+      "stage": 12,
+      "work": 8,
+      "gas": "5336376"
+    },
+    {
+      "runId": "2",
+      "origin": "evaluator",
+      "stage": 12,
+      "work": 8,
+      "gas": "5925747"
+    },
+    {
+      "runId": "2",
+      "origin": "evaluator",
+      "stage": 12,
+      "work": 8,
+      "gas": "5297742"
+    },
+    {
+      "runId": "2",
+      "origin": "evaluator",
+      "stage": 12,
+      "work": 8,
+      "gas": "5926139"
+    },
+    {
+      "runId": "2",
+      "origin": "evaluator",
+      "stage": 12,
+      "work": 8,
+      "gas": "5218343"
+    },
+    {
+      "runId": "2",
+      "origin": "evaluator",
+      "stage": 12,
+      "work": 8,
+      "gas": "5246243"
+    },
+    {
+      "runId": "2",
+      "origin": "evaluator",
+      "stage": 12,
+      "work": 8,
+      "gas": "3685613"
+    },
+    {
+      "runId": "2",
+      "stage": 12,
+      "cursor": 0,
+      "work": 1,
+      "gas": "631755"
+    },
+    {
+      "runId": "2",
+      "stage": 13,
+      "cursor": 0,
+      "work": 1,
+      "gas": "727104"
+    },
+    {
+      "runId": "2",
+      "stage": 13,
+      "cursor": 1,
+      "work": 4,
+      "gas": "1658876"
+    },
+    {
+      "runId": "2",
+      "stage": 18,
+      "cursor": 0,
+      "work": 3,
+      "gas": "1301996"
+    },
+    {
+      "runId": "2",
+      "stage": 20,
+      "cursor": 0,
+      "work": 2,
+      "gas": "1654402"
+    },
+    {
+      "runId": "2",
+      "stage": 21,
+      "cursor": 0,
+      "work": 8,
+      "gas": "5960551"
+    },
+    {
+      "runId": "2",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1596243"
+    },
+    {
+      "runId": "2",
+      "stage": 21,
+      "cursor": 0,
+      "work": 4,
+      "gas": "3753764"
+    },
+    {
+      "runId": "2",
+      "stage": 21,
+      "cursor": 0,
+      "work": 3,
+      "gas": "3441474"
+    },
+    {
+      "runId": "2",
+      "stage": 21,
+      "cursor": 0,
+      "work": 2,
+      "gas": "1933949"
+    },
+    {
+      "runId": "2",
+      "stage": 21,
+      "cursor": 0,
+      "work": 8,
+      "gas": "7354947"
+    },
+    {
+      "runId": "2",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1646083"
+    },
+    {
+      "runId": "2",
+      "stage": 21,
+      "cursor": 0,
+      "work": 4,
+      "gas": "3699506"
+    },
+    {
+      "runId": "2",
+      "stage": 21,
+      "cursor": 0,
+      "work": 3,
+      "gas": "2818365"
+    },
+    {
+      "runId": "2",
+      "stage": 21,
+      "cursor": 0,
+      "work": 2,
+      "gas": "2570335"
+    },
+    {
+      "runId": "2",
+      "stage": 21,
+      "cursor": 0,
+      "work": 8,
+      "gas": "6685177"
+    },
+    {
+      "runId": "2",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "1623560"
+    },
+    {
+      "runId": "2",
+      "stage": 21,
+      "cursor": 0,
+      "work": 4,
+      "gas": "3733736"
+    },
+    {
+      "runId": "2",
+      "stage": 21,
+      "cursor": 0,
+      "work": 3,
+      "gas": "3500067"
+    },
+    {
+      "runId": "2",
+      "stage": 21,
+      "cursor": 0,
+      "work": 2,
+      "gas": "1862731"
+    },
+    {
+      "runId": "2",
+      "stage": 21,
+      "cursor": 0,
+      "work": 8,
+      "gas": "7373658"
+    },
+    {
+      "runId": "2",
+      "stage": 21,
+      "cursor": 0,
+      "work": 1,
+      "gas": "997727"
+    },
+    {
+      "runId": "2",
+      "stage": 21,
+      "cursor": 0,
+      "work": 4,
+      "gas": "4385465"
+    },
+    {
+      "runId": "2",
+      "stage": 21,
+      "cursor": 0,
+      "work": 3,
+      "gas": "1082647"
+    },
+    {
+      "runId": "2",
+      "stage": 23,
+      "cursor": 0,
+      "work": 2,
+      "gas": "821707"
+    },
+    {
+      "runId": "4",
+      "stage": 1,
+      "cursor": 0,
+      "work": 8,
+      "gas": "2324572"
+    },
+    {
+      "runId": "4",
+      "stage": 11,
+      "cursor": 0,
+      "work": 8,
+      "gas": "4464719"
+    },
+    {
+      "runId": "4",
+      "stage": 12,
+      "cursor": 0,
+      "work": 8,
+      "gas": "7489503"
+    },
+    {
+      "runId": "4",
+      "stage": 12,
+      "cursor": 0,
+      "work": 8,
+      "gas": "6770205"
+    },
+    {
+      "runId": "4",
+      "stage": 12,
+      "cursor": 0,
+      "work": 8,
+      "gas": "6855672"
+    },
+    {
+      "runId": "4",
+      "stage": 12,
+      "cursor": 0,
+      "work": 8,
+      "gas": "7452465"
+    },
+    {
+      "runId": "4",
+      "stage": 12,
+      "cursor": 0,
+      "work": 8,
+      "gas": "6783978"
+    },
+    {
+      "runId": "4",
+      "stage": 12,
+      "cursor": 0,
+      "work": 8,
+      "gas": "7495505"
+    },
+    {
+      "runId": "4",
+      "stage": 12,
+      "cursor": 0,
+      "work": 8,
+      "gas": "6633268"
+    },
+    {
+      "runId": "4",
+      "stage": 12,
+      "cursor": 0,
+      "work": 8,
+      "gas": "6827654"
+    },
+    {
+      "runId": "4",
+      "stage": 13,
+      "cursor": 0,
+      "work": 8,
+      "gas": "2379002"
+    },
+    {
+      "runId": "4",
+      "stage": 20,
+      "cursor": 0,
+      "work": 8,
+      "gas": "4449147"
+    },
+    {
+      "runId": "4",
+      "stage": 21,
+      "cursor": 0,
+      "work": 8,
+      "gas": "7490643"
+    },
+    {
+      "runId": "4",
+      "stage": 21,
+      "cursor": 0,
+      "work": 8,
+      "gas": "6762306"
+    },
+    {
+      "runId": "4",
+      "stage": 21,
+      "cursor": 0,
+      "work": 8,
+      "gas": "6846732"
+    },
+    {
+      "runId": "4",
+      "stage": 21,
+      "cursor": 0,
+      "work": 8,
+      "gas": "7457037"
+    },
+    {
+      "runId": "4",
+      "stage": 21,
+      "cursor": 0,
+      "work": 8,
+      "gas": "6785185"
+    },
+    {
+      "runId": "4",
+      "stage": 21,
+      "cursor": 0,
+      "work": 8,
+      "gas": "7486480"
+    },
+    {
+      "runId": "4",
+      "stage": 21,
+      "cursor": 0,
+      "work": 8,
+      "gas": "6773642"
+    },
+    {
+      "runId": "4",
+      "stage": 21,
+      "cursor": 0,
+      "work": 8,
+      "gas": "6828900"
+    },
+    {
+      "runId": "4",
+      "stage": 22,
+      "cursor": 0,
+      "work": 8,
+      "gas": "1009727"
+    }
+  ],
+  "totalGas": "531260988",
+  "maximumTransactionGas": "7495505"
+}

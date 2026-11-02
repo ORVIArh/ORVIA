@@ -1,0 +1,39 @@
+{
+  "scope": "Local EVM comparison against the exhaustive periodic cutoff engine; not prepared protein or mainnet validation",
+  "passed": true,
+  "periodic": {
+    "atoms": 4,
+    "steps": 3,
+    "bitwiseComparedScalars": 148,
+    "builds": 2,
+    "reuses": 2,
+    "candidateCount": 5
+  },
+  "inline": {
+    "policy": "0xc8d1c8e182f6ced43ef0b49d56c26e37138f52ec77f3d9b040ef40ba3139e4ce",
+    "kernelRuntimeHash": "0xca35f552c4acce35ce3fd4025e4276c81df2d4cc2f77bcf7c0cab7202306a28b",
+    "initialAndCompletedCheckpoints": 4,
+    "bitwiseEqual": true,
+    "externalAdvancementGas": "66727850",
+    "inlineAdvancementGas": "65446162",
+    "gasReductionPercent": 1.9207692140538022,
+    "scope": "Same four-atom, three-step trajectory and batching; advancement only, excluding deployments and input preparation; local chain 31337",
+    "partitionInvariant": true,
+    "commitBarrier": true,
+    "failureRollback": true,
+    "forgedIdentityRejection": true,
+    "moduleCodeChangeRejection": true
+  },
+  "partitionInvariant": true,
+  "sparse": {
+    "atoms": 6,
+    "steps": 2,
+    "bitwiseComparedScalars": 165,
+    "builds": 1,
+    "reuses": 2,
+    "candidateCount": 4,
+    "allPairCount": 15,
+    "directExceptionBeyondCutoff": true
+  },
+  "emptyListCommits": true
+}

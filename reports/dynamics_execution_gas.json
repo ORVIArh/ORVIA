@@ -1,0 +1,610 @@
+{
+  "scope": "Local Ganache Shanghai EVM, four-atom finite system; not Robinhood fees or protein/RBFE cost",
+  "chainId": 31337,
+  "primaryFixture": {
+    "atoms": 4,
+    "bonds": 3,
+    "angles": 2,
+    "torsions": 1,
+    "pairs": 1,
+    "steps": 8
+  },
+  "runs": [
+    {
+      "runId": "1",
+      "datasetId": "0xcc1c472ac45057fc8f5ae3c6bbdeeea85aa86808d71fbebceca11bea42630fa5",
+      "atoms": 4,
+      "bonds": 3,
+      "angles": 2,
+      "torsions": 1,
+      "pairs": 1,
+      "dtBinary128": "0x3ff80000000000000000000000000000",
+      "targetSteps": 8
+    },
+    {
+      "runId": "2",
+      "datasetId": "0xcc1c472ac45057fc8f5ae3c6bbdeeea85aa86808d71fbebceca11bea42630fa5",
+      "atoms": 4,
+      "bonds": 3,
+      "angles": 2,
+      "torsions": 1,
+      "pairs": 1,
+      "dtBinary128": "0x3ff80000000000000000000000000000",
+      "targetSteps": 8
+    },
+    {
+      "runId": "3",
+      "datasetId": "0x60130a188bfd53ec24e8752ea7fccc417583940295ee3c3ddb87e85a3f23cd4e",
+      "atoms": 2,
+      "bonds": 1,
+      "angles": 0,
+      "torsions": 0,
+      "pairs": 0,
+      "dtBinary128": "0x3fff0000000000000000000000000000",
+      "targetSteps": 1
+    },
+    {
+      "runId": "4",
+      "datasetId": "0xcc1c472ac45057fc8f5ae3c6bbdeeea85aa86808d71fbebceca11bea42630fa5",
+      "atoms": 4,
+      "bonds": 3,
+      "angles": 2,
+      "torsions": 1,
+      "pairs": 1,
+      "dtBinary128": "0x3ff80000000000000000000000000000",
+      "targetSteps": 8
+    },
+    {
+      "runId": "5",
+      "datasetId": "0xda68a694767185015c3ec34eb19a84e23668eb3a2ad66e1c4f948ed0ee3f0eba",
+      "atoms": 4,
+      "bonds": 3,
+      "angles": 2,
+      "torsions": 1,
+      "pairs": 1,
+      "dtBinary128": "0x3ff80000000000000000000000000000",
+      "targetSteps": 8
+    },
+    {
+      "runId": "6",
+      "datasetId": "0x986f66af3c44092ecc19f6d58cf48179cf2b38fc852c0c326a87c4bd6be91fba",
+      "atoms": 2,
+      "bonds": 1,
+      "angles": 0,
+      "torsions": 0,
+      "pairs": 0,
+      "dtBinary128": "0x3ffc0000000000000000000000000000",
+      "targetSteps": 2
+    }
+  ],
+  "transactions": [
+    {
+      "runId": "1",
+      "phaseBefore": 1,
+      "work": 1,
+      "gasUsed": "639035"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 1,
+      "work": 1,
+      "gasUsed": "661695"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 1,
+      "work": 1,
+      "gasUsed": "703565"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 1,
+      "work": 1,
+      "gasUsed": "728424"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 2,
+      "work": 1,
+      "gasUsed": "549107"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 2,
+      "work": 1,
+      "gasUsed": "551177"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 2,
+      "work": 1,
+      "gasUsed": "556170"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 3,
+      "work": 1,
+      "gasUsed": "560106"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 3,
+      "work": 1,
+      "gasUsed": "567888"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 4,
+      "work": 1,
+      "gasUsed": "585124"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 5,
+      "work": 1,
+      "gasUsed": "568825"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 6,
+      "work": 1,
+      "gasUsed": "684281"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 6,
+      "work": 1,
+      "gasUsed": "830844"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 6,
+      "work": 1,
+      "gasUsed": "771790"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 7,
+      "work": 1,
+      "gasUsed": "1344764"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 7,
+      "work": 1,
+      "gasUsed": "1339360"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 8,
+      "work": 1,
+      "gasUsed": "2302629"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 9,
+      "work": 1,
+      "gasUsed": "810486"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 10,
+      "work": 1,
+      "gasUsed": "766723"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 10,
+      "work": 8,
+      "gasUsed": "3537312"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 13,
+      "work": 8,
+      "gasUsed": "3261824"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 10,
+      "work": 8,
+      "gasUsed": "4710481"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 14,
+      "work": 8,
+      "gasUsed": "1547031"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 10,
+      "work": 8,
+      "gasUsed": "4864266"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 15,
+      "work": 8,
+      "gasUsed": "1393432"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 11,
+      "work": 8,
+      "gasUsed": "4855371"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 15,
+      "work": 8,
+      "gasUsed": "1509983"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 11,
+      "work": 8,
+      "gasUsed": "4662306"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 15,
+      "work": 8,
+      "gasUsed": "1610455"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 11,
+      "work": 8,
+      "gasUsed": "4531859"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 15,
+      "work": 8,
+      "gasUsed": "1715192"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 12,
+      "work": 8,
+      "gasUsed": "4402959"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 10,
+      "work": 8,
+      "gasUsed": "2387302"
+    },
+    {
+      "runId": "1",
+      "phaseBefore": 12,
+      "work": 8,
+      "gasUsed": "3657710"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 1,
+      "work": 1,
+      "gasUsed": "639035"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 1,
+      "work": 4,
+      "gasUsed": "1113821"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 2,
+      "work": 3,
+      "gasUsed": "655256"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 3,
+      "work": 2,
+      "gasUsed": "646314"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 5,
+      "work": 8,
+      "gasUsed": "4779135"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 10,
+      "work": 1,
+      "gasUsed": "766723"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 10,
+      "work": 4,
+      "gasUsed": "1578089"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 11,
+      "work": 3,
+      "gasUsed": "1774929"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 12,
+      "work": 2,
+      "gasUsed": "3063051"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 14,
+      "work": 8,
+      "gasUsed": "1684138"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 10,
+      "work": 1,
+      "gasUsed": "660205"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 11,
+      "work": 4,
+      "gasUsed": "2053210"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 12,
+      "work": 3,
+      "gasUsed": "3322051"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 15,
+      "work": 2,
+      "gasUsed": "685577"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 15,
+      "work": 8,
+      "gasUsed": "1610683"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 11,
+      "work": 1,
+      "gasUsed": "772599"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 12,
+      "work": 4,
+      "gasUsed": "4069244"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 15,
+      "work": 3,
+      "gasUsed": "773451"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 15,
+      "work": 2,
+      "gasUsed": "752825"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 10,
+      "work": 8,
+      "gasUsed": "3076641"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 13,
+      "work": 1,
+      "gasUsed": "2297788"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 14,
+      "work": 4,
+      "gasUsed": "1074285"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 15,
+      "work": 3,
+      "gasUsed": "896192"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 10,
+      "work": 2,
+      "gasUsed": "804064"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 11,
+      "work": 8,
+      "gasUsed": "4856299"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 15,
+      "work": 1,
+      "gasUsed": "598398"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 15,
+      "work": 4,
+      "gasUsed": "983897"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 10,
+      "work": 3,
+      "gasUsed": "1125034"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 11,
+      "work": 2,
+      "gasUsed": "1004448"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 12,
+      "work": 8,
+      "gasUsed": "4403082"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 10,
+      "work": 1,
+      "gasUsed": "657212"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 10,
+      "work": 4,
+      "gasUsed": "1208139"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 11,
+      "work": 3,
+      "gasUsed": "1774808"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 12,
+      "work": 2,
+      "gasUsed": "3061837"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 14,
+      "work": 8,
+      "gasUsed": "1546790"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 10,
+      "work": 1,
+      "gasUsed": "660205"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 11,
+      "work": 4,
+      "gasUsed": "2053090"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 12,
+      "work": 3,
+      "gasUsed": "3321133"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 15,
+      "work": 2,
+      "gasUsed": "685577"
+    },
+    {
+      "runId": "2",
+      "phaseBefore": 15,
+      "work": 8,
+      "gasUsed": "699012"
+    },
+    {
+      "runId": "3",
+      "phaseBefore": 1,
+      "work": 1,
+      "gasUsed": "518554"
+    },
+    {
+      "runId": "3",
+      "phaseBefore": 1,
+      "work": 1,
+      "gasUsed": "546173"
+    },
+    {
+      "runId": "3",
+      "phaseBefore": 2,
+      "work": 1,
+      "gasUsed": "456142"
+    },
+    {
+      "runId": "3",
+      "phaseBefore": 6,
+      "work": 1,
+      "gasUsed": "591460"
+    },
+    {
+      "runId": "3",
+      "phaseBefore": 10,
+      "work": 2,
+      "gasUsed": "754869"
+    },
+    {
+      "runId": "6",
+      "phaseBefore": 1,
+      "work": 1,
+      "gasUsed": "498654"
+    },
+    {
+      "runId": "6",
+      "phaseBefore": 1,
+      "work": 1,
+      "gasUsed": "526273"
+    },
+    {
+      "runId": "6",
+      "phaseBefore": 2,
+      "work": 1,
+      "gasUsed": "456142"
+    },
+    {
+      "runId": "6",
+      "phaseBefore": 6,
+      "work": 1,
+      "gasUsed": "652906"
+    },
+    {
+      "runId": "6",
+      "phaseBefore": 10,
+      "work": 2,
+      "gasUsed": "755492"
+    },
+    {
+      "runId": "6",
+      "phaseBefore": 11,
+      "work": 1,
+      "gasUsed": "654946"
+    },
+    {
+      "runId": "6",
+      "phaseBefore": 15,
+      "work": 1,
+      "gasUsed": "490014"
+    },
+    {
+      "runId": "6",
+      "phaseBefore": 15,
+      "work": 2,
+      "gasUsed": "667930"
+    },
+    {
+      "runId": "6",
+      "phaseBefore": 10,
+      "work": 8,
+      "gasUsed": "931470"
+    }
+  ]
+}

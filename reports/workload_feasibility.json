@@ -1,0 +1,1151 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-01T19:45:57.829Z",
+  "status": "local_partial_workload_measurement_only",
+  "mainnetReadinessDemonstrated": false,
+  "productionMyosinModelEstimated": false,
+  "mainnetTransactionsSent": 0,
+  "chain": {
+    "localChainId": 31337,
+    "localEngine": "ganache 7.9.2",
+    "hardfork": "shanghai",
+    "localBlockGasLimit": 30000000,
+    "targetChainId": 4663,
+    "targetGasScheduleVerified": false,
+    "targetSustainedGasPerSecond": null,
+    "targetRpcLastEvidence": "reports/mainnet_preflight.json; HTTP 403 observed, no capacity inferred."
+  },
+  "provenance": {
+    "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+    "settings": {
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "evmVersion": "shanghai",
+      "outputSelection": {
+        "*": {
+          "*": [
+            "abi",
+            "evm.bytecode",
+            "evm.deployedBytecode"
+          ]
+        }
+      }
+    },
+    "standardInputSha256": "3c06cfef5d4339c35b7d82fe0088d87c3f98628e3f9453c5151f07abdd219919",
+    "sourceSha256": {
+      "contracts/math/vendor/ABDKMathQuad.sol": "dd13f72bf828a699c94e96d1377daabce3dcc1d4b29af7215501a611d3cb7c9e",
+      "contracts/math/FloatMath.sol": "a474f7656f9ffc3d3149e6a0e08f2fcf6838483ae689d1e6a7cf7400f8bad74b",
+      "contracts/kernels/LennardJonesKernel.sol": "a02748bef456a33b15f0cfa7a1b5a20f23d6021f4e741b0cf0a9b61af457dca2",
+      "contracts/kernels/CoulombPairKernel.sol": "4640f583410bbf6e24d10f6df5b5bb8cae1a4a98aace7f979144375596bbdc93",
+      "contracts/kernels/SwitchedNonbondedKernel.sol": "4755fd13b34f2d60b1ea545b79f9a74403e3cd424d6392d357d0a8e2b8d48ac3",
+      "test/contracts/PairWorkMeter.sol": "13fb7d20185c41c8cd58db81f6efd33db8908b673d9e6814128d2c2b207fed8e"
+    },
+    "deployed": [
+      {
+        "name": "FloatMath",
+        "source": "contracts/math/FloatMath.sol",
+        "address": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+        "runtimeKeccak256": "0x310794f2b49c3afde7f1e9c543121d8771acbe9612b4c479970d64dd668b8ac1",
+        "runtimeBytes": 5499,
+        "deploymentGas": "1242164"
+      },
+      {
+        "name": "LennardJonesKernel",
+        "source": "contracts/kernels/LennardJonesKernel.sol",
+        "address": "0x5b1869D9A4C187F2EAa108f3062412ecf0526b24",
+        "runtimeKeccak256": "0xd817b7aab76bf39594818fbf12cd3792fb4251e76868cb8b879d09385fffecdf",
+        "runtimeBytes": 4087,
+        "deploymentGas": "941910"
+      },
+      {
+        "name": "CoulombPairKernel",
+        "source": "contracts/kernels/CoulombPairKernel.sol",
+        "address": "0xCfEB869F69431e42cdB54A4F4f105C19C080A601",
+        "runtimeKeccak256": "0xe4e02a465113f68f1d546077fad70d268263e18acf60c81dbe88b51f43daa2cc",
+        "runtimeBytes": 3050,
+        "deploymentGas": "717646"
+      },
+      {
+        "name": "SwitchedNonbondedKernel",
+        "source": "contracts/kernels/SwitchedNonbondedKernel.sol",
+        "address": "0x254dffcd3277C0b1660F6d42EFbB754edaBAbC2B",
+        "runtimeKeccak256": "0x00008b86a02257ce9de75d656461ed947897b06cac6b4f575a1406643785c28b",
+        "runtimeBytes": 9897,
+        "deploymentGas": "2210089"
+      },
+      {
+        "name": "PairWorkMeter",
+        "source": "test/contracts/PairWorkMeter.sol",
+        "address": "0xC89Ce4735882C9F0f0FE26686c53074E09B0D550",
+        "runtimeKeccak256": "0x9463bd90b0b4c08937f43bf9b16723a50626631b4288c862c36da4c6d4cb2216",
+        "runtimeBytes": 1346,
+        "deploymentGas": "349765"
+      }
+    ]
+  },
+  "method": {
+    "counts": [
+      0,
+      1,
+      2,
+      4,
+      8
+    ],
+    "transactionGas": "Receipt gasUsed, including local EVM transaction intrinsic gas.",
+    "intrinsicGas": "21000 + 4 per zero calldata byte + 16 per nonzero calldata byte; Shanghai, no access list.",
+    "fixedOverheadSubtraction": "Subtract zero-pair executionGas after separately removing each transaction intrinsic gas. Positive-count slopes cancel baseline and first-call cold overhead.",
+    "callGas": "gasleft immediately before kernel.evaluate minus gasleft after ABI return decoding. Includes call/return marshalling and a small meter-instruction overhead; excludes checksum, event, loop control and transaction intrinsic gas.",
+    "warmProxy": "Minimum of calls 2..8 in an eight-pair transaction. Identical repeated inputs favor warm account access; not a varied-trajectory average or worst case.",
+    "repeatedRunsRequiredForGasNoise": false,
+    "deterministicGas": true,
+    "included": "Current charged, nonzero LJ plus conducting reaction-field kernel: validation, distance, force/energy arithmetic, external numerical calls, and call/return marshalling inside the measured interval.",
+    "boundMeaning": "Conditional partial-work lower-bound accounting proxy for workloads using these measured nonzero charged paths. Not a mathematical lower bound on arbitrary inputs, another electrostatics method, another implementation, or Robinhood execution."
+  },
+  "exclusions": [
+    "bonded forces and constraints",
+    "periodic nearest-image geometry and pair-parameter mixing",
+    "neighbor-list construction, rebuilds, exclusions and out-of-cutoff skin candidates",
+    "Ewald/PME real-space replacement and reciprocal-space work",
+    "coordinate/velocity/force storage and dataset reads",
+    "coordinator integrity assertions, work dispatch and transaction overhead",
+    "integration, thermostat and random generation",
+    "all-state alchemical sample energies, MBAR, diagnostics and uncertainty",
+    "input preparation/uploads, deployment, equilibration and restart work",
+    "chain L1/data fees, contention and scheduling"
+  ],
+  "formulas": {
+    "pairsPerStep": "N*z/2 for average symmetric within-cutoff neighbor count z, counting each unordered pair once",
+    "timeSteps": "ceil(T/dt) for requested duration T and integration step dt in the same units; the tables specify steps directly",
+    "gasSingleSimulation": "pairs_per_step * steps * favorable_warm_pair_gas_proxy",
+    "gasCampaign": "sum over systems/legs/lambda windows/repeats of each simulation pair gas; homogeneous simplification multiplies by legs*lambda_states*replicas",
+    "timeHypothesis": "partial_pair_gas / explicitly hypothetical sustained dedicated gas_per_second"
+  },
+  "currentDevelopmentCaps": [
+    {
+      "file": "contracts/core/NeighborDynamicsCoordinator.sol",
+      "sourceSha256": "aed5af1f5238de42b38f8f5a5c648cef1d27083c279d8277e1ef5ff21fbf2d54",
+      "maxAtoms": 1024,
+      "maxSteps": 4096,
+      "maxWork": 8
+    },
+    {
+      "file": "contracts/core/LangevinDynamicsCoordinator.sol",
+      "sourceSha256": "280b9baf7db089a91d5fb9c47d951140a176bfe7f00599ce8aea787363f5eb3f",
+      "maxAtoms": 1024,
+      "maxSteps": 4096,
+      "maxWork": 8
+    }
+  ],
+  "benchmarkCases": [
+    {
+      "name": "below_switch_charged",
+      "insideSwitch": false,
+      "displacementDecimal": [
+        1,
+        0.25,
+        0.125
+      ],
+      "parametersDecimal": {
+        "sigma": 0.5,
+        "epsilon": 0.125,
+        "chargeProduct": -0.25,
+        "prefactor": 1,
+        "switchDistance": 2,
+        "cutoff": 3,
+        "exception": false
+      },
+      "binary128Arguments": [
+        [
+          "0x3fff0000000000000000000000000000",
+          "0x3ffd0000000000000000000000000000",
+          "0x3ffc0000000000000000000000000000"
+        ],
+        "0x3ffe0000000000000000000000000000",
+        "0x3ffc0000000000000000000000000000",
+        "0xbffd0000000000000000000000000000",
+        "0x3fff0000000000000000000000000000",
+        "0x40000000000000000000000000000000",
+        "0x40008000000000000000000000000000",
+        false
+      ],
+      "energy": "0xbffc03ee61ef7913c9b7c84caaad5fb8",
+      "forceOnA": [
+        "0x3ffcfbb04ebe46e260ec6c7633c384c6",
+        "0x3ffafbb04ebe46e260ec6c7633c384c6",
+        "0x3ff9fbb04ebe46e260ec6c7633c384c6"
+      ],
+      "transactions": [
+        {
+          "count": 0,
+          "transactionHash": "0x1556660f5554bb26620c2195e4973c959ad890fc02d13eead8bfe23d829f0af4",
+          "transactionGas": 26482,
+          "intrinsicGas": 21320,
+          "executionGas": 5162,
+          "callGas": [],
+          "measuredCallGasSum": 0,
+          "outputDigest": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "outputsVerified": true,
+          "fixedOverheadSubtractedExecutionGas": 0
+        },
+        {
+          "count": 1,
+          "transactionHash": "0x69fda74eadd57bfe9dad08e2c8d22c5f59312e3126ff64b4b16743f052735a6b",
+          "transactionGas": 207445,
+          "intrinsicGas": 21332,
+          "executionGas": 186113,
+          "callGas": [
+            180130
+          ],
+          "measuredCallGasSum": 180130,
+          "outputDigest": "0xb568f643b4b425578684e534a9775819d5fbacee99cb45c1ea9bf58c5be28f59",
+          "outputsVerified": true,
+          "fixedOverheadSubtractedExecutionGas": 180951
+        },
+        {
+          "count": 2,
+          "transactionHash": "0xfd586248cc5a30c5feca48f66d17bd018b8fa8023961b50b2d87124217369a05",
+          "transactionGas": 380898,
+          "intrinsicGas": 21332,
+          "executionGas": 359566,
+          "callGas": [
+            180130,
+            172630
+          ],
+          "measuredCallGasSum": 352760,
+          "outputDigest": "0x6d59cda47074f5a6bbb990b2686510d038f7ceeb3589db4e26253364b3c60951",
+          "outputsVerified": true,
+          "fixedOverheadSubtractedExecutionGas": 354404
+        },
+        {
+          "count": 4,
+          "transactionHash": "0x316a2146318ddf060ef9c5c01109fc045372211b02757b96e3d2ea0653e24296",
+          "transactionGas": 727804,
+          "intrinsicGas": 21332,
+          "executionGas": 706472,
+          "callGas": [
+            180130,
+            172630,
+            172631,
+            172632
+          ],
+          "measuredCallGasSum": 698023,
+          "outputDigest": "0x463eb103dc7d9081d61d6cbfd7d327a9741a9ce2d49cdbe14e1b90d74f3417c2",
+          "outputsVerified": true,
+          "fixedOverheadSubtractedExecutionGas": 701310
+        },
+        {
+          "count": 8,
+          "transactionHash": "0xb5fe163139ed5220f1e58cdfec5d64664dd897912c00163fc42c95260ef90275",
+          "transactionGas": 1421626,
+          "intrinsicGas": 21332,
+          "executionGas": 1400294,
+          "callGas": [
+            180130,
+            172630,
+            172631,
+            172632,
+            172632,
+            172633,
+            172634,
+            172634
+          ],
+          "measuredCallGasSum": 1388556,
+          "outputDigest": "0x03712e26ec283ea9394007be5944e2b6418dfa1b8df4a4718773aad9b6a2fc07",
+          "outputsVerified": true,
+          "fixedOverheadSubtractedExecutionGas": 1395132
+        }
+      ],
+      "zeroPairFixedExecutionGas": 5162,
+      "marginalSlopes": [
+        {
+          "fromPairs": 1,
+          "toPairs": 2,
+          "marginalTransactionGasPerPair": 173453
+        },
+        {
+          "fromPairs": 2,
+          "toPairs": 4,
+          "marginalTransactionGasPerPair": 173453
+        },
+        {
+          "fromPairs": 4,
+          "toPairs": 8,
+          "marginalTransactionGasPerPair": 173455.5
+        }
+      ],
+      "firstCallGasInEightPairBatch": 180130,
+      "warmCallGasRange": {
+        "minimum": 172630,
+        "maximum": 172634
+      },
+      "favorableWarmPairGasProxy": 172630
+    },
+    {
+      "name": "inside_switch_charged",
+      "insideSwitch": true,
+      "displacementDecimal": [
+        2.5,
+        0.25,
+        0.125
+      ],
+      "parametersDecimal": {
+        "sigma": 0.5,
+        "epsilon": 0.125,
+        "chargeProduct": -0.25,
+        "prefactor": 1,
+        "switchDistance": 2,
+        "cutoff": 3,
+        "exception": false
+      },
+      "binary128Arguments": [
+        [
+          "0x40004000000000000000000000000000",
+          "0x3ffd0000000000000000000000000000",
+          "0x3ffc0000000000000000000000000000"
+        ],
+        "0x3ffe0000000000000000000000000000",
+        "0x3ffc0000000000000000000000000000",
+        "0xbffd0000000000000000000000000000",
+        "0x3fff0000000000000000000000000000",
+        "0x40000000000000000000000000000000",
+        "0x40008000000000000000000000000000",
+        false
+      ],
+      "energy": "0xbff6e3f14542169c78e39dc5ac6b299c",
+      "forceOnA": [
+        "0x3ff9098143e8363e8ea30a0d56b63eba",
+        "0x3ff5a8ced30d23974a9e767bbdf0645d",
+        "0x3ff4a8ced30d23974a9e767bbdf0645d"
+      ],
+      "transactions": [
+        {
+          "count": 0,
+          "transactionHash": "0xd9397a13811d5bbe342da69b8aad3ac7d9bb73b806ae656bcd491754d42ec87d",
+          "transactionGas": 26484,
+          "intrinsicGas": 21332,
+          "executionGas": 5152,
+          "callGas": [],
+          "measuredCallGasSum": 0,
+          "outputDigest": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "outputsVerified": true,
+          "fixedOverheadSubtractedExecutionGas": 0
+        },
+        {
+          "count": 1,
+          "transactionHash": "0xd98207212e5923e5557650ae6ea49335b4859e524cd0b747b8ecd46a4950ff48",
+          "transactionGas": 272276,
+          "intrinsicGas": 21344,
+          "executionGas": 250932,
+          "callGas": [
+            244959
+          ],
+          "measuredCallGasSum": 244959,
+          "outputDigest": "0xe01092f65d2c1df1dafec773dc5fd8e5812e3a8bf1aa0b65ab30fece4d2bc38a",
+          "outputsVerified": true,
+          "fixedOverheadSubtractedExecutionGas": 245780
+        },
+        {
+          "count": 2,
+          "transactionHash": "0xaffefae9a41684dd59d764689153026776acbb82db752dd274351f887bf89d43",
+          "transactionGas": 510558,
+          "intrinsicGas": 21344,
+          "executionGas": 489214,
+          "callGas": [
+            244959,
+            237459
+          ],
+          "measuredCallGasSum": 482418,
+          "outputDigest": "0x2d28c84a53c3759e947096199162d7282e46127f524eba17a2341bd91ce2b1c8",
+          "outputsVerified": true,
+          "fixedOverheadSubtractedExecutionGas": 484062
+        },
+        {
+          "count": 4,
+          "transactionHash": "0xd3e1f50987ec9c7cbc3a26047d8ebbf3e6ab9933f74873152b90ecb6d4381fa9",
+          "transactionGas": 987122,
+          "intrinsicGas": 21344,
+          "executionGas": 965778,
+          "callGas": [
+            244959,
+            237459,
+            237460,
+            237461
+          ],
+          "measuredCallGasSum": 957339,
+          "outputDigest": "0x5b9e6f89e135f946c4c8137bc9825e5e7777c9c04cf7a423dfac4559c35e6923",
+          "outputsVerified": true,
+          "fixedOverheadSubtractedExecutionGas": 960626
+        },
+        {
+          "count": 8,
+          "transactionHash": "0xaa849a4d71ad7abe5503ea7725d46fc75d3705dfc928638d730fbb75031bd0ba",
+          "transactionGas": 1940260,
+          "intrinsicGas": 21344,
+          "executionGas": 1918916,
+          "callGas": [
+            244959,
+            237459,
+            237460,
+            237461,
+            237461,
+            237462,
+            237463,
+            237463
+          ],
+          "measuredCallGasSum": 1907188,
+          "outputDigest": "0x8298e2f9ba5f8197ea12138370143e4343fdde5c9cb919383b2a364ac9a36c62",
+          "outputsVerified": true,
+          "fixedOverheadSubtractedExecutionGas": 1913764
+        }
+      ],
+      "zeroPairFixedExecutionGas": 5152,
+      "marginalSlopes": [
+        {
+          "fromPairs": 1,
+          "toPairs": 2,
+          "marginalTransactionGasPerPair": 238282
+        },
+        {
+          "fromPairs": 2,
+          "toPairs": 4,
+          "marginalTransactionGasPerPair": 238282
+        },
+        {
+          "fromPairs": 4,
+          "toPairs": 8,
+          "marginalTransactionGasPerPair": 238284.5
+        }
+      ],
+      "firstCallGasInEightPairBatch": 244959,
+      "warmCallGasRange": {
+        "minimum": 237459,
+        "maximum": 237463
+      },
+      "favorableWarmPairGasProxy": 237459
+    }
+  ],
+  "scenarios": [
+    {
+      "kernelCase": "below_switch_charged",
+      "atoms": 1000,
+      "meanWithinCutoffNeighbors": 100,
+      "steps": 1000,
+      "replicas": 1,
+      "lambdaStates": 1,
+      "legs": 1,
+      "pairsPerStep": "50000",
+      "simulationCount": "1",
+      "pairEvaluations": "50000000",
+      "pairGasProxy": 172630,
+      "partialPairGas": "8631500000000",
+      "hypotheticalDedicatedThroughput": [
+        {
+          "gasPerSecond": 100000000,
+          "seconds": 86315,
+          "days": 0.9990162037037037,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        },
+        {
+          "gasPerSecond": 1000000000,
+          "seconds": 8631.5,
+          "days": 0.09990162037037037,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        }
+      ],
+      "satisfiesOnlyDevelopmentCountCaps": true
+    },
+    {
+      "kernelCase": "below_switch_charged",
+      "atoms": 1000,
+      "meanWithinCutoffNeighbors": 100,
+      "steps": 1000000,
+      "replicas": 1,
+      "lambdaStates": 1,
+      "legs": 1,
+      "pairsPerStep": "50000",
+      "simulationCount": "1",
+      "pairEvaluations": "50000000000",
+      "pairGasProxy": 172630,
+      "partialPairGas": "8631500000000000",
+      "hypotheticalDedicatedThroughput": [
+        {
+          "gasPerSecond": 100000000,
+          "seconds": 86315000,
+          "days": 999.0162037037037,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        },
+        {
+          "gasPerSecond": 1000000000,
+          "seconds": 8631500,
+          "days": 99.90162037037037,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        }
+      ],
+      "satisfiesOnlyDevelopmentCountCaps": false
+    },
+    {
+      "kernelCase": "below_switch_charged",
+      "atoms": 1000,
+      "meanWithinCutoffNeighbors": 500,
+      "steps": 1000,
+      "replicas": 1,
+      "lambdaStates": 1,
+      "legs": 1,
+      "pairsPerStep": "250000",
+      "simulationCount": "1",
+      "pairEvaluations": "250000000",
+      "pairGasProxy": 172630,
+      "partialPairGas": "43157500000000",
+      "hypotheticalDedicatedThroughput": [
+        {
+          "gasPerSecond": 100000000,
+          "seconds": 431575,
+          "days": 4.995081018518518,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        },
+        {
+          "gasPerSecond": 1000000000,
+          "seconds": 43157.5,
+          "days": 0.49950810185185185,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        }
+      ],
+      "satisfiesOnlyDevelopmentCountCaps": true
+    },
+    {
+      "kernelCase": "below_switch_charged",
+      "atoms": 1000,
+      "meanWithinCutoffNeighbors": 500,
+      "steps": 1000000,
+      "replicas": 1,
+      "lambdaStates": 1,
+      "legs": 1,
+      "pairsPerStep": "250000",
+      "simulationCount": "1",
+      "pairEvaluations": "250000000000",
+      "pairGasProxy": 172630,
+      "partialPairGas": "43157500000000000",
+      "hypotheticalDedicatedThroughput": [
+        {
+          "gasPerSecond": 100000000,
+          "seconds": 431575000,
+          "days": 4995.081018518518,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        },
+        {
+          "gasPerSecond": 1000000000,
+          "seconds": 43157500,
+          "days": 499.50810185185185,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        }
+      ],
+      "satisfiesOnlyDevelopmentCountCaps": false
+    },
+    {
+      "kernelCase": "below_switch_charged",
+      "atoms": 10000,
+      "meanWithinCutoffNeighbors": 100,
+      "steps": 1000,
+      "replicas": 1,
+      "lambdaStates": 1,
+      "legs": 1,
+      "pairsPerStep": "500000",
+      "simulationCount": "1",
+      "pairEvaluations": "500000000",
+      "pairGasProxy": 172630,
+      "partialPairGas": "86315000000000",
+      "hypotheticalDedicatedThroughput": [
+        {
+          "gasPerSecond": 100000000,
+          "seconds": 863150,
+          "days": 9.990162037037036,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        },
+        {
+          "gasPerSecond": 1000000000,
+          "seconds": 86315,
+          "days": 0.9990162037037037,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        }
+      ],
+      "satisfiesOnlyDevelopmentCountCaps": false
+    },
+    {
+      "kernelCase": "below_switch_charged",
+      "atoms": 10000,
+      "meanWithinCutoffNeighbors": 100,
+      "steps": 1000000,
+      "replicas": 1,
+      "lambdaStates": 1,
+      "legs": 1,
+      "pairsPerStep": "500000",
+      "simulationCount": "1",
+      "pairEvaluations": "500000000000",
+      "pairGasProxy": 172630,
+      "partialPairGas": "86315000000000000",
+      "hypotheticalDedicatedThroughput": [
+        {
+          "gasPerSecond": 100000000,
+          "seconds": 863150000,
+          "days": 9990.162037037036,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        },
+        {
+          "gasPerSecond": 1000000000,
+          "seconds": 86315000,
+          "days": 999.0162037037037,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        }
+      ],
+      "satisfiesOnlyDevelopmentCountCaps": false
+    },
+    {
+      "kernelCase": "below_switch_charged",
+      "atoms": 10000,
+      "meanWithinCutoffNeighbors": 500,
+      "steps": 1000,
+      "replicas": 1,
+      "lambdaStates": 1,
+      "legs": 1,
+      "pairsPerStep": "2500000",
+      "simulationCount": "1",
+      "pairEvaluations": "2500000000",
+      "pairGasProxy": 172630,
+      "partialPairGas": "431575000000000",
+      "hypotheticalDedicatedThroughput": [
+        {
+          "gasPerSecond": 100000000,
+          "seconds": 4315750,
+          "days": 49.95081018518518,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        },
+        {
+          "gasPerSecond": 1000000000,
+          "seconds": 431575,
+          "days": 4.995081018518518,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        }
+      ],
+      "satisfiesOnlyDevelopmentCountCaps": false
+    },
+    {
+      "kernelCase": "below_switch_charged",
+      "atoms": 10000,
+      "meanWithinCutoffNeighbors": 500,
+      "steps": 1000000,
+      "replicas": 1,
+      "lambdaStates": 1,
+      "legs": 1,
+      "pairsPerStep": "2500000",
+      "simulationCount": "1",
+      "pairEvaluations": "2500000000000",
+      "pairGasProxy": 172630,
+      "partialPairGas": "431575000000000000",
+      "hypotheticalDedicatedThroughput": [
+        {
+          "gasPerSecond": 100000000,
+          "seconds": 4315750000,
+          "days": 49950.81018518518,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        },
+        {
+          "gasPerSecond": 1000000000,
+          "seconds": 431575000,
+          "days": 4995.081018518518,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        }
+      ],
+      "satisfiesOnlyDevelopmentCountCaps": false
+    },
+    {
+      "kernelCase": "below_switch_charged",
+      "atoms": 100000,
+      "meanWithinCutoffNeighbors": 100,
+      "steps": 1000,
+      "replicas": 1,
+      "lambdaStates": 1,
+      "legs": 1,
+      "pairsPerStep": "5000000",
+      "simulationCount": "1",
+      "pairEvaluations": "5000000000",
+      "pairGasProxy": 172630,
+      "partialPairGas": "863150000000000",
+      "hypotheticalDedicatedThroughput": [
+        {
+          "gasPerSecond": 100000000,
+          "seconds": 8631500,
+          "days": 99.90162037037037,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        },
+        {
+          "gasPerSecond": 1000000000,
+          "seconds": 863150,
+          "days": 9.990162037037036,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        }
+      ],
+      "satisfiesOnlyDevelopmentCountCaps": false
+    },
+    {
+      "kernelCase": "below_switch_charged",
+      "atoms": 100000,
+      "meanWithinCutoffNeighbors": 100,
+      "steps": 1000000,
+      "replicas": 1,
+      "lambdaStates": 1,
+      "legs": 1,
+      "pairsPerStep": "5000000",
+      "simulationCount": "1",
+      "pairEvaluations": "5000000000000",
+      "pairGasProxy": 172630,
+      "partialPairGas": "863150000000000000",
+      "hypotheticalDedicatedThroughput": [
+        {
+          "gasPerSecond": 100000000,
+          "seconds": 8631500000,
+          "days": 99901.62037037036,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        },
+        {
+          "gasPerSecond": 1000000000,
+          "seconds": 863150000,
+          "days": 9990.162037037036,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        }
+      ],
+      "satisfiesOnlyDevelopmentCountCaps": false
+    },
+    {
+      "kernelCase": "below_switch_charged",
+      "atoms": 100000,
+      "meanWithinCutoffNeighbors": 500,
+      "steps": 1000,
+      "replicas": 1,
+      "lambdaStates": 1,
+      "legs": 1,
+      "pairsPerStep": "25000000",
+      "simulationCount": "1",
+      "pairEvaluations": "25000000000",
+      "pairGasProxy": 172630,
+      "partialPairGas": "4315750000000000",
+      "hypotheticalDedicatedThroughput": [
+        {
+          "gasPerSecond": 100000000,
+          "seconds": 43157500,
+          "days": 499.50810185185185,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        },
+        {
+          "gasPerSecond": 1000000000,
+          "seconds": 4315750,
+          "days": 49.95081018518518,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        }
+      ],
+      "satisfiesOnlyDevelopmentCountCaps": false
+    },
+    {
+      "kernelCase": "below_switch_charged",
+      "atoms": 100000,
+      "meanWithinCutoffNeighbors": 500,
+      "steps": 1000000,
+      "replicas": 1,
+      "lambdaStates": 1,
+      "legs": 1,
+      "pairsPerStep": "25000000",
+      "simulationCount": "1",
+      "pairEvaluations": "25000000000000",
+      "pairGasProxy": 172630,
+      "partialPairGas": "4315750000000000000",
+      "hypotheticalDedicatedThroughput": [
+        {
+          "gasPerSecond": 100000000,
+          "seconds": 43157500000,
+          "days": 499508.10185185185,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        },
+        {
+          "gasPerSecond": 1000000000,
+          "seconds": 4315750000,
+          "days": 49950.81018518518,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        }
+      ],
+      "satisfiesOnlyDevelopmentCountCaps": false
+    },
+    {
+      "kernelCase": "inside_switch_charged",
+      "atoms": 1000,
+      "meanWithinCutoffNeighbors": 100,
+      "steps": 1000,
+      "replicas": 1,
+      "lambdaStates": 1,
+      "legs": 1,
+      "pairsPerStep": "50000",
+      "simulationCount": "1",
+      "pairEvaluations": "50000000",
+      "pairGasProxy": 237459,
+      "partialPairGas": "11872950000000",
+      "hypotheticalDedicatedThroughput": [
+        {
+          "gasPerSecond": 100000000,
+          "seconds": 118729.5,
+          "days": 1.3741840277777777,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        },
+        {
+          "gasPerSecond": 1000000000,
+          "seconds": 11872.95,
+          "days": 0.13741840277777778,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        }
+      ],
+      "satisfiesOnlyDevelopmentCountCaps": true
+    },
+    {
+      "kernelCase": "inside_switch_charged",
+      "atoms": 1000,
+      "meanWithinCutoffNeighbors": 100,
+      "steps": 1000000,
+      "replicas": 1,
+      "lambdaStates": 1,
+      "legs": 1,
+      "pairsPerStep": "50000",
+      "simulationCount": "1",
+      "pairEvaluations": "50000000000",
+      "pairGasProxy": 237459,
+      "partialPairGas": "11872950000000000",
+      "hypotheticalDedicatedThroughput": [
+        {
+          "gasPerSecond": 100000000,
+          "seconds": 118729500,
+          "days": 1374.1840277777778,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        },
+        {
+          "gasPerSecond": 1000000000,
+          "seconds": 11872950,
+          "days": 137.41840277777777,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        }
+      ],
+      "satisfiesOnlyDevelopmentCountCaps": false
+    },
+    {
+      "kernelCase": "inside_switch_charged",
+      "atoms": 1000,
+      "meanWithinCutoffNeighbors": 500,
+      "steps": 1000,
+      "replicas": 1,
+      "lambdaStates": 1,
+      "legs": 1,
+      "pairsPerStep": "250000",
+      "simulationCount": "1",
+      "pairEvaluations": "250000000",
+      "pairGasProxy": 237459,
+      "partialPairGas": "59364750000000",
+      "hypotheticalDedicatedThroughput": [
+        {
+          "gasPerSecond": 100000000,
+          "seconds": 593647.5,
+          "days": 6.870920138888889,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        },
+        {
+          "gasPerSecond": 1000000000,
+          "seconds": 59364.75,
+          "days": 0.6870920138888889,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        }
+      ],
+      "satisfiesOnlyDevelopmentCountCaps": true
+    },
+    {
+      "kernelCase": "inside_switch_charged",
+      "atoms": 1000,
+      "meanWithinCutoffNeighbors": 500,
+      "steps": 1000000,
+      "replicas": 1,
+      "lambdaStates": 1,
+      "legs": 1,
+      "pairsPerStep": "250000",
+      "simulationCount": "1",
+      "pairEvaluations": "250000000000",
+      "pairGasProxy": 237459,
+      "partialPairGas": "59364750000000000",
+      "hypotheticalDedicatedThroughput": [
+        {
+          "gasPerSecond": 100000000,
+          "seconds": 593647500,
+          "days": 6870.920138888889,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        },
+        {
+          "gasPerSecond": 1000000000,
+          "seconds": 59364750,
+          "days": 687.0920138888889,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        }
+      ],
+      "satisfiesOnlyDevelopmentCountCaps": false
+    },
+    {
+      "kernelCase": "inside_switch_charged",
+      "atoms": 10000,
+      "meanWithinCutoffNeighbors": 100,
+      "steps": 1000,
+      "replicas": 1,
+      "lambdaStates": 1,
+      "legs": 1,
+      "pairsPerStep": "500000",
+      "simulationCount": "1",
+      "pairEvaluations": "500000000",
+      "pairGasProxy": 237459,
+      "partialPairGas": "118729500000000",
+      "hypotheticalDedicatedThroughput": [
+        {
+          "gasPerSecond": 100000000,
+          "seconds": 1187295,
+          "days": 13.741840277777778,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        },
+        {
+          "gasPerSecond": 1000000000,
+          "seconds": 118729.5,
+          "days": 1.3741840277777777,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        }
+      ],
+      "satisfiesOnlyDevelopmentCountCaps": false
+    },
+    {
+      "kernelCase": "inside_switch_charged",
+      "atoms": 10000,
+      "meanWithinCutoffNeighbors": 100,
+      "steps": 1000000,
+      "replicas": 1,
+      "lambdaStates": 1,
+      "legs": 1,
+      "pairsPerStep": "500000",
+      "simulationCount": "1",
+      "pairEvaluations": "500000000000",
+      "pairGasProxy": 237459,
+      "partialPairGas": "118729500000000000",
+      "hypotheticalDedicatedThroughput": [
+        {
+          "gasPerSecond": 100000000,
+          "seconds": 1187295000,
+          "days": 13741.840277777777,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        },
+        {
+          "gasPerSecond": 1000000000,
+          "seconds": 118729500,
+          "days": 1374.1840277777778,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        }
+      ],
+      "satisfiesOnlyDevelopmentCountCaps": false
+    },
+    {
+      "kernelCase": "inside_switch_charged",
+      "atoms": 10000,
+      "meanWithinCutoffNeighbors": 500,
+      "steps": 1000,
+      "replicas": 1,
+      "lambdaStates": 1,
+      "legs": 1,
+      "pairsPerStep": "2500000",
+      "simulationCount": "1",
+      "pairEvaluations": "2500000000",
+      "pairGasProxy": 237459,
+      "partialPairGas": "593647500000000",
+      "hypotheticalDedicatedThroughput": [
+        {
+          "gasPerSecond": 100000000,
+          "seconds": 5936475,
+          "days": 68.70920138888889,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        },
+        {
+          "gasPerSecond": 1000000000,
+          "seconds": 593647.5,
+          "days": 6.870920138888889,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        }
+      ],
+      "satisfiesOnlyDevelopmentCountCaps": false
+    },
+    {
+      "kernelCase": "inside_switch_charged",
+      "atoms": 10000,
+      "meanWithinCutoffNeighbors": 500,
+      "steps": 1000000,
+      "replicas": 1,
+      "lambdaStates": 1,
+      "legs": 1,
+      "pairsPerStep": "2500000",
+      "simulationCount": "1",
+      "pairEvaluations": "2500000000000",
+      "pairGasProxy": 237459,
+      "partialPairGas": "593647500000000000",
+      "hypotheticalDedicatedThroughput": [
+        {
+          "gasPerSecond": 100000000,
+          "seconds": 5936475000,
+          "days": 68709.20138888889,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        },
+        {
+          "gasPerSecond": 1000000000,
+          "seconds": 593647500,
+          "days": 6870.920138888889,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        }
+      ],
+      "satisfiesOnlyDevelopmentCountCaps": false
+    },
+    {
+      "kernelCase": "inside_switch_charged",
+      "atoms": 100000,
+      "meanWithinCutoffNeighbors": 100,
+      "steps": 1000,
+      "replicas": 1,
+      "lambdaStates": 1,
+      "legs": 1,
+      "pairsPerStep": "5000000",
+      "simulationCount": "1",
+      "pairEvaluations": "5000000000",
+      "pairGasProxy": 237459,
+      "partialPairGas": "1187295000000000",
+      "hypotheticalDedicatedThroughput": [
+        {
+          "gasPerSecond": 100000000,
+          "seconds": 11872950,
+          "days": 137.41840277777777,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        },
+        {
+          "gasPerSecond": 1000000000,
+          "seconds": 1187295,
+          "days": 13.741840277777778,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        }
+      ],
+      "satisfiesOnlyDevelopmentCountCaps": false
+    },
+    {
+      "kernelCase": "inside_switch_charged",
+      "atoms": 100000,
+      "meanWithinCutoffNeighbors": 100,
+      "steps": 1000000,
+      "replicas": 1,
+      "lambdaStates": 1,
+      "legs": 1,
+      "pairsPerStep": "5000000",
+      "simulationCount": "1",
+      "pairEvaluations": "5000000000000",
+      "pairGasProxy": 237459,
+      "partialPairGas": "1187295000000000000",
+      "hypotheticalDedicatedThroughput": [
+        {
+          "gasPerSecond": 100000000,
+          "seconds": 11872950000,
+          "days": 137418.40277777778,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        },
+        {
+          "gasPerSecond": 1000000000,
+          "seconds": 1187295000,
+          "days": 13741.840277777777,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        }
+      ],
+      "satisfiesOnlyDevelopmentCountCaps": false
+    },
+    {
+      "kernelCase": "inside_switch_charged",
+      "atoms": 100000,
+      "meanWithinCutoffNeighbors": 500,
+      "steps": 1000,
+      "replicas": 1,
+      "lambdaStates": 1,
+      "legs": 1,
+      "pairsPerStep": "25000000",
+      "simulationCount": "1",
+      "pairEvaluations": "25000000000",
+      "pairGasProxy": 237459,
+      "partialPairGas": "5936475000000000",
+      "hypotheticalDedicatedThroughput": [
+        {
+          "gasPerSecond": 100000000,
+          "seconds": 59364750,
+          "days": 687.0920138888889,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        },
+        {
+          "gasPerSecond": 1000000000,
+          "seconds": 5936475,
+          "days": 68.70920138888889,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        }
+      ],
+      "satisfiesOnlyDevelopmentCountCaps": false
+    },
+    {
+      "kernelCase": "inside_switch_charged",
+      "atoms": 100000,
+      "meanWithinCutoffNeighbors": 500,
+      "steps": 1000000,
+      "replicas": 1,
+      "lambdaStates": 1,
+      "legs": 1,
+      "pairsPerStep": "25000000",
+      "simulationCount": "1",
+      "pairEvaluations": "25000000000000",
+      "pairGasProxy": 237459,
+      "partialPairGas": "5936475000000000000",
+      "hypotheticalDedicatedThroughput": [
+        {
+          "gasPerSecond": 100000000,
+          "seconds": 59364750000,
+          "days": 687092.0138888889,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        },
+        {
+          "gasPerSecond": 1000000000,
+          "seconds": 5936475000,
+          "days": 68709.20138888889,
+          "status": "Hypothetical entire sustained allocation; not a Robinhood capacity measurement or forecast."
+        }
+      ],
+      "satisfiesOnlyDevelopmentCountCaps": false
+    }
+  ],
+  "checks": {
+    "actualTransactionsPassed": 10,
+    "outputDigestsVerified": 10,
+    "zeroPairBaselines": 2,
+    "positiveMeasuredCalls": true,
+    "firstCallCostsMoreThanWarmCalls": true,
+    "receiptWorkAtLeastMeasuredCallGas": true,
+    "receiptSlopesAtLeastWarmCallGas": true,
+    "insideSwitchCostsMoreThanBelowSwitch": true,
+    "formulaIntegerArithmetic": "BigInt for counts and total gas"
+  },
+  "sources": [
+    "https://eips.ethereum.org/EIPS/eip-2929",
+    "https://eips.ethereum.org/EIPS/eip-2028"
+  ],
+  "limitations": [
+    "These scenarios are parameter choices, not prepared myosin atom counts, neighbor counts, accepted sampling lengths or production resource estimates.",
+    "Scenarios above current atom/step caps cannot execute through current coordinators; lifting a constant would not establish scalability or scientific validity.",
+    "One pair-force evaluation per pair per integration step is assumed; initialization and extra force evaluations only increase this accounting.",
+    "Both branches are shown separately; actual branch mixture and zero-strength early exits change cost.",
+    "The measured conducting reaction-field model is not Ewald/PME and cannot stand in for an unimplemented full RBFE force path.",
+    "More contracts or transactions distribute finite work; they do not remove total gas, sequential timestep dependence or chain capacity constraints.",
+    "A finite compute schedule may be resumable, but this benchmark establishes neither an acceptable scientific runtime nor unlimited on-chain capacity."
+  ]
+}

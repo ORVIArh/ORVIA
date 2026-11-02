@@ -1,0 +1,2 @@
+PASS: source hashes and structural audit reproduce exactly
+{"source_atom_rows": 11944, "assembly_atom_rows": {"1": 6053, "2": 5891}, "prepared_atom_count": null, "status": "SOURCE_AUDIT_ONLY_NOT_SIMULATION_READY"}

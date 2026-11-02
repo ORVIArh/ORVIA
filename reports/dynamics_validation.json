@@ -1,0 +1,62 @@
+{
+  "scope": "Eight-step finite four-atom validation fixture; not solvated myosin or free energy",
+  "oracle": "mpmath 90-digit energy differentiation and velocity Verlet",
+  "absolute_tolerance": "1e-25",
+  "relative_tolerance": "1e-24",
+  "checkpoints": [
+    {
+      "step": 0,
+      "component_values_checked": 37,
+      "max_absolute_error": "2.148123371529642600675990509768752793409170639210191756960725606991350650787353515625E-33",
+      "passed": true
+    },
+    {
+      "step": 1,
+      "component_values_checked": 37,
+      "max_absolute_error": "1.86348653105746377585884378972811435716126995996993503069256937673389911651611328125E-33",
+      "passed": true
+    },
+    {
+      "step": 2,
+      "component_values_checked": 37,
+      "max_absolute_error": "1.519580445915661257327485647014374801148574209750775634499237021692097187042236328125E-33",
+      "passed": true
+    },
+    {
+      "step": 3,
+      "component_values_checked": 37,
+      "max_absolute_error": "1.6875271376167790788413035817440991892140456087460672083915660121738910675048828125E-33",
+      "passed": true
+    },
+    {
+      "step": 4,
+      "component_values_checked": 37,
+      "max_absolute_error": "1.9796022902951500342174218507676303579526352435238783690461201840341091156005859375E-33",
+      "passed": true
+    },
+    {
+      "step": 5,
+      "component_values_checked": 37,
+      "max_absolute_error": "2.248208328255401888811269390337901636954892050811065825763591941654682159423828125E-33",
+      "passed": true
+    },
+    {
+      "step": 6,
+      "component_values_checked": 37,
+      "max_absolute_error": "2.8669846440303055710243224981918079029135562263033303234076194546222686767578125E-33",
+      "passed": true
+    },
+    {
+      "step": 7,
+      "component_values_checked": 37,
+      "max_absolute_error": "2.9606904201004785689622096108775814242819768249766468260751233932673931121826171875E-33",
+      "passed": true
+    },
+    {
+      "step": 8,
+      "component_values_checked": 37,
+      "max_absolute_error": "3.28221457052398275771729862046115608428851201833342441415902584747970104217529296875E-33",
+      "passed": true
+    }
+  ]
+}

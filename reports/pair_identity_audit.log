@@ -1,0 +1,3 @@
+PASS: pinned local source hashes, two published rows and provenance agree
+CHEMISTRY PASS: RDKit 2026.09.1; graph, stereochemistry and CCD checks reproduce
+SCIENTIFIC RUN: BLOCKED; this identity audit does not resolve model inputs

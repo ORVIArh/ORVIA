@@ -1,0 +1,310 @@
+{
+  "scope": "Complete on-chain electrostatic snapshot fixture; 2 atoms, 13 canonical reciprocal modes; deployment/uploads/registration excluded; not target-chain fees",
+  "chainId": 31337,
+  "transactions": [
+    {
+      "runId": "1",
+      "stage": 1,
+      "cursor": 0,
+      "modeIndex": 0,
+      "work": 8,
+      "gasUsed": "4320762"
+    },
+    {
+      "runId": "1",
+      "stage": 5,
+      "cursor": 0,
+      "modeIndex": 1,
+      "work": 8,
+      "gasUsed": "5063383"
+    },
+    {
+      "runId": "1",
+      "stage": 7,
+      "cursor": 0,
+      "modeIndex": 2,
+      "work": 8,
+      "gasUsed": "5139245"
+    },
+    {
+      "runId": "1",
+      "stage": 6,
+      "cursor": 0,
+      "modeIndex": 4,
+      "work": 8,
+      "gasUsed": "5728616"
+    },
+    {
+      "runId": "1",
+      "stage": 7,
+      "cursor": 1,
+      "modeIndex": 5,
+      "work": 8,
+      "gasUsed": "5100611"
+    },
+    {
+      "runId": "1",
+      "stage": 6,
+      "cursor": 1,
+      "modeIndex": 7,
+      "work": 8,
+      "gasUsed": "5728318"
+    },
+    {
+      "runId": "1",
+      "stage": 5,
+      "cursor": 0,
+      "modeIndex": 9,
+      "work": 8,
+      "gasUsed": "5021212"
+    },
+    {
+      "runId": "1",
+      "stage": 7,
+      "cursor": 0,
+      "modeIndex": 10,
+      "work": 8,
+      "gasUsed": "5049112"
+    },
+    {
+      "runId": "1",
+      "stage": 6,
+      "cursor": 0,
+      "modeIndex": 12,
+      "work": 8,
+      "gasUsed": "3489172"
+    },
+    {
+      "runId": "2",
+      "stage": 1,
+      "cursor": 0,
+      "modeIndex": 0,
+      "work": 1,
+      "gasUsed": "505118"
+    },
+    {
+      "runId": "2",
+      "stage": 1,
+      "cursor": 1,
+      "modeIndex": 0,
+      "work": 4,
+      "gasUsed": "1980826"
+    },
+    {
+      "runId": "2",
+      "stage": 6,
+      "cursor": 1,
+      "modeIndex": 0,
+      "work": 3,
+      "gasUsed": "2691080"
+    },
+    {
+      "runId": "2",
+      "stage": 5,
+      "cursor": 0,
+      "modeIndex": 1,
+      "work": 2,
+      "gasUsed": "1237957"
+    },
+    {
+      "runId": "2",
+      "stage": 6,
+      "cursor": 1,
+      "modeIndex": 1,
+      "work": 8,
+      "gasUsed": "5742842"
+    },
+    {
+      "runId": "2",
+      "stage": 5,
+      "cursor": 0,
+      "modeIndex": 3,
+      "work": 1,
+      "gasUsed": "517803"
+    },
+    {
+      "runId": "2",
+      "stage": 6,
+      "cursor": 0,
+      "modeIndex": 3,
+      "work": 4,
+      "gasUsed": "3414756"
+    },
+    {
+      "runId": "2",
+      "stage": 5,
+      "cursor": 0,
+      "modeIndex": 4,
+      "work": 3,
+      "gasUsed": "1990374"
+    },
+    {
+      "runId": "2",
+      "stage": 7,
+      "cursor": 0,
+      "modeIndex": 4,
+      "work": 2,
+      "gasUsed": "1953330"
+    },
+    {
+      "runId": "2",
+      "stage": 5,
+      "cursor": 0,
+      "modeIndex": 5,
+      "work": 8,
+      "gasUsed": "5048615"
+    },
+    {
+      "runId": "2",
+      "stage": 7,
+      "cursor": 0,
+      "modeIndex": 6,
+      "work": 1,
+      "gasUsed": "1169528"
+    },
+    {
+      "runId": "2",
+      "stage": 7,
+      "cursor": 1,
+      "modeIndex": 6,
+      "work": 4,
+      "gasUsed": "2749059"
+    },
+    {
+      "runId": "2",
+      "stage": 7,
+      "cursor": 0,
+      "modeIndex": 7,
+      "work": 3,
+      "gasUsed": "2044084"
+    },
+    {
+      "runId": "2",
+      "stage": 6,
+      "cursor": 0,
+      "modeIndex": 8,
+      "work": 2,
+      "gasUsed": "1873191"
+    },
+    {
+      "runId": "2",
+      "stage": 7,
+      "cursor": 0,
+      "modeIndex": 8,
+      "work": 8,
+      "gasUsed": "5146816"
+    },
+    {
+      "runId": "2",
+      "stage": 6,
+      "cursor": 0,
+      "modeIndex": 10,
+      "work": 1,
+      "gasUsed": "1026801"
+    },
+    {
+      "runId": "2",
+      "stage": 6,
+      "cursor": 1,
+      "modeIndex": 10,
+      "work": 4,
+      "gasUsed": "2733453"
+    },
+    {
+      "runId": "2",
+      "stage": 6,
+      "cursor": 0,
+      "modeIndex": 11,
+      "work": 3,
+      "gasUsed": "2643664"
+    },
+    {
+      "runId": "2",
+      "stage": 7,
+      "cursor": 1,
+      "modeIndex": 11,
+      "work": 2,
+      "gasUsed": "1299307"
+    },
+    {
+      "runId": "2",
+      "stage": 6,
+      "cursor": 0,
+      "modeIndex": 12,
+      "work": 8,
+      "gasUsed": "3489172"
+    },
+    {
+      "runId": "3",
+      "stage": 1,
+      "cursor": 0,
+      "modeIndex": 0,
+      "work": 8,
+      "gasUsed": "2998969"
+    },
+    {
+      "runId": "3",
+      "stage": 7,
+      "cursor": 0,
+      "modeIndex": 0,
+      "work": 8,
+      "gasUsed": "5134663"
+    },
+    {
+      "runId": "3",
+      "stage": 6,
+      "cursor": 0,
+      "modeIndex": 2,
+      "work": 8,
+      "gasUsed": "5758000"
+    },
+    {
+      "runId": "3",
+      "stage": 7,
+      "cursor": 1,
+      "modeIndex": 3,
+      "work": 8,
+      "gasUsed": "5114506"
+    },
+    {
+      "runId": "3",
+      "stage": 6,
+      "cursor": 1,
+      "modeIndex": 5,
+      "work": 8,
+      "gasUsed": "5794929"
+    },
+    {
+      "runId": "3",
+      "stage": 5,
+      "cursor": 0,
+      "modeIndex": 7,
+      "work": 8,
+      "gasUsed": "5062130"
+    },
+    {
+      "runId": "3",
+      "stage": 7,
+      "cursor": 0,
+      "modeIndex": 8,
+      "work": 8,
+      "gasUsed": "5168174"
+    },
+    {
+      "runId": "3",
+      "stage": 6,
+      "cursor": 0,
+      "modeIndex": 10,
+      "work": 8,
+      "gasUsed": "5594440"
+    },
+    {
+      "runId": "3",
+      "stage": 7,
+      "cursor": 1,
+      "modeIndex": 11,
+      "work": 8,
+      "gasUsed": "4375775"
+    }
+  ]
+}

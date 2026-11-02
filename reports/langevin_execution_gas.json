@@ -1,0 +1,308 @@
+{
+  "scope": "Two-atom BAOAB cutoff-model fixture on local Ganache with a 96KiB code-size assertion and unlimited-size engine enabled; not a Robinhood fork or fee estimate",
+  "chainId": 31337,
+  "runtimeBytes": 26358,
+  "primaryFixture": {
+    "atoms": 2,
+    "steps": 3,
+    "friction": 2,
+    "kT": 2.5,
+    "dt": 0.03125
+  },
+  "transactions": [
+    {
+      "runId": "1",
+      "engine": "stochastic-primary",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "783002"
+    },
+    {
+      "runId": "1",
+      "engine": "stochastic-primary",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "852357"
+    },
+    {
+      "runId": "1",
+      "engine": "stochastic-primary",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "676529"
+    },
+    {
+      "runId": "1",
+      "engine": "stochastic-primary",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "640244"
+    },
+    {
+      "runId": "1",
+      "engine": "stochastic-primary",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "660946"
+    },
+    {
+      "runId": "1",
+      "engine": "stochastic-primary",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "750090"
+    },
+    {
+      "runId": "1",
+      "engine": "stochastic-primary",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "1022541"
+    },
+    {
+      "runId": "1",
+      "engine": "stochastic-primary",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "1065276"
+    },
+    {
+      "runId": "1",
+      "engine": "stochastic-primary",
+      "stage": 11,
+      "work": 1,
+      "gasUsed": "2534873"
+    },
+    {
+      "runId": "1",
+      "engine": "stochastic-primary",
+      "stage": 11,
+      "work": 8,
+      "gasUsed": "5326501"
+    },
+    {
+      "runId": "1",
+      "engine": "stochastic-primary",
+      "stage": 11,
+      "work": 8,
+      "gasUsed": "5290355"
+    },
+    {
+      "runId": "1",
+      "engine": "stochastic-primary",
+      "stage": 11,
+      "work": 8,
+      "gasUsed": "3314277"
+    },
+    {
+      "runId": "2",
+      "engine": "stochastic-partition",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "783002"
+    },
+    {
+      "runId": "2",
+      "engine": "stochastic-partition",
+      "stage": 1,
+      "work": 3,
+      "gasUsed": "942597"
+    },
+    {
+      "runId": "2",
+      "engine": "stochastic-partition",
+      "stage": 6,
+      "work": 2,
+      "gasUsed": "790624"
+    },
+    {
+      "runId": "2",
+      "engine": "stochastic-partition",
+      "stage": 7,
+      "work": 8,
+      "gasUsed": "6133882"
+    },
+    {
+      "runId": "2",
+      "engine": "stochastic-partition",
+      "stage": 17,
+      "work": 1,
+      "gasUsed": "706593"
+    },
+    {
+      "runId": "2",
+      "engine": "stochastic-partition",
+      "stage": 17,
+      "work": 3,
+      "gasUsed": "4248734"
+    },
+    {
+      "runId": "2",
+      "engine": "stochastic-partition",
+      "stage": 12,
+      "work": 2,
+      "gasUsed": "711113"
+    },
+    {
+      "runId": "2",
+      "engine": "stochastic-partition",
+      "stage": 13,
+      "work": 8,
+      "gasUsed": "5137334"
+    },
+    {
+      "runId": "2",
+      "engine": "stochastic-partition",
+      "stage": 13,
+      "work": 1,
+      "gasUsed": "1066202"
+    },
+    {
+      "runId": "2",
+      "engine": "stochastic-partition",
+      "stage": 16,
+      "work": 3,
+      "gasUsed": "1257880"
+    },
+    {
+      "runId": "3",
+      "engine": "zero-friction",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "783002"
+    },
+    {
+      "runId": "3",
+      "engine": "zero-friction",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "852357"
+    },
+    {
+      "runId": "3",
+      "engine": "zero-friction",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "676529"
+    },
+    {
+      "runId": "3",
+      "engine": "zero-friction",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "640244"
+    },
+    {
+      "runId": "3",
+      "engine": "zero-friction",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "660946"
+    },
+    {
+      "runId": "3",
+      "engine": "zero-friction",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "750090"
+    },
+    {
+      "runId": "3",
+      "engine": "zero-friction",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "1022541"
+    },
+    {
+      "runId": "3",
+      "engine": "zero-friction",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "1065276"
+    },
+    {
+      "runId": "1",
+      "engine": "verlet",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "766643"
+    },
+    {
+      "runId": "1",
+      "engine": "verlet",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "835998"
+    },
+    {
+      "runId": "1",
+      "engine": "verlet",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "660171"
+    },
+    {
+      "runId": "1",
+      "engine": "verlet",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "623886"
+    },
+    {
+      "runId": "1",
+      "engine": "verlet",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "644588"
+    },
+    {
+      "runId": "1",
+      "engine": "verlet",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "733732"
+    },
+    {
+      "runId": "1",
+      "engine": "verlet",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "1006180"
+    },
+    {
+      "runId": "1",
+      "engine": "verlet",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "1048916"
+    },
+    {
+      "runId": "3",
+      "engine": "zero-friction",
+      "stage": 11,
+      "work": 8,
+      "gasUsed": "2538679"
+    },
+    {
+      "runId": "3",
+      "engine": "zero-friction",
+      "stage": 11,
+      "work": 8,
+      "gasUsed": "2363335"
+    },
+    {
+      "runId": "1",
+      "engine": "verlet",
+      "stage": 11,
+      "work": 8,
+      "gasUsed": "2158215"
+    },
+    {
+      "runId": "1",
+      "engine": "verlet",
+      "stage": 11,
+      "work": 8,
+      "gasUsed": "1982167"
+    }
+  ]
+}

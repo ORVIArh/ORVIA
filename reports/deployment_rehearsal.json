@@ -1,0 +1,1194 @@
+{
+  "schemaVersion": 1,
+  "mode": "local_rehearsal",
+  "targetChainId": 4663,
+  "executionChainId": 31337,
+  "passed": true,
+  "productionReady": false,
+  "mainnetTransactionsSent": 0,
+  "scope": "Deployment/configuration/input upload and one permissionless loading unit for the existing four-atom periodic fixture. Does not execute or validate the complete myosin system or a mainnet fork.",
+  "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+  "standardInputSha256": "90a1626aa1e78894681717987c2419a28e9b292b7cec885241c4778c6abc6754",
+  "fixtureSha256": "784f734925b604a2e54081155feb040fa803ac07ba090e8d39f395c5f5ce5ca4",
+  "coreInstances": 16,
+  "populatedInputPageInstances": 7,
+  "totalLocalInstances": 23,
+  "productionPlannedInstances": 64,
+  "owner": "0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1",
+  "planSha256": "393369c40e25ddb0753af1d162fd461a0fcab684b216c5a74d22350e1e593287",
+  "plan": {
+    "schemaVersion": 1,
+    "mode": "local_periodic_fixture",
+    "completeProductionPlan": false,
+    "targetChainId": 4663,
+    "executionChainId": 31337,
+    "owner": "0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1",
+    "firstNonce": 0,
+    "plannedProductionInstances": 64,
+    "entries": [
+      {
+        "key": "math",
+        "contract": "FloatMath",
+        "address": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+        "nonce": 0,
+        "args": []
+      },
+      {
+        "key": "elementary",
+        "contract": "ElementaryMath",
+        "address": "0x5b1869D9A4C187F2EAa108f3062412ecf0526b24",
+        "nonce": 1,
+        "args": [
+          "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab"
+        ]
+      },
+      {
+        "key": "registry",
+        "contract": "ExperimentRegistry",
+        "address": "0xCfEB869F69431e42cdB54A4F4f105C19C080A601",
+        "nonce": 2,
+        "args": [
+          "0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"
+        ]
+      },
+      {
+        "key": "base",
+        "contract": "DatasetCatalog",
+        "address": "0x254dffcd3277C0b1660F6d42EFbB754edaBAbC2B",
+        "nonce": 3,
+        "args": [
+          "0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"
+        ]
+      },
+      {
+        "key": "dynamics",
+        "contract": "DynamicsDataset",
+        "address": "0xC89Ce4735882C9F0f0FE26686c53074E09B0D550",
+        "nonce": 4,
+        "args": [
+          "0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1",
+          "0x254dffcd3277C0b1660F6d42EFbB754edaBAbC2B"
+        ]
+      },
+      {
+        "key": "dataset",
+        "contract": "PeriodicDataset",
+        "address": "0xD833215cBcc3f914bD1C9ece3EE7BF8B14f841bb",
+        "nonce": 5,
+        "args": [
+          "0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1",
+          "0xC89Ce4735882C9F0f0FE26686c53074E09B0D550"
+        ]
+      },
+      {
+        "key": "integrator",
+        "contract": "VelocityVerletKernel",
+        "address": "0x9561C133DD8580860B6b7E504bC5Aa500f0f06a7",
+        "nonce": 6,
+        "args": [
+          "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab"
+        ]
+      },
+      {
+        "key": "bond",
+        "contract": "HarmonicBondKernel",
+        "address": "0xe982E462b094850F12AF94d21D470e21bE9D0E9C",
+        "nonce": 7,
+        "args": [
+          "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab"
+        ]
+      },
+      {
+        "key": "angle",
+        "contract": "HarmonicAngleKernel",
+        "address": "0x59d3631c86BbE35EF041872d502F218A39FBa150",
+        "nonce": 8,
+        "args": [
+          "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+          "0x5b1869D9A4C187F2EAa108f3062412ecf0526b24"
+        ]
+      },
+      {
+        "key": "torsion",
+        "contract": "PeriodicTorsionKernel",
+        "address": "0x0290FB167208Af455bB137780163b7B7a9a10C16",
+        "nonce": 9,
+        "args": [
+          "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+          "0x5b1869D9A4C187F2EAa108f3062412ecf0526b24"
+        ]
+      },
+      {
+        "key": "lj",
+        "contract": "LennardJonesKernel",
+        "address": "0x9b1f7F645351AF3631a656421eD2e40f2802E6c0",
+        "nonce": 10,
+        "args": [
+          "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab"
+        ]
+      },
+      {
+        "key": "coulomb",
+        "contract": "CoulombPairKernel",
+        "address": "0x67B5656d60a809915323Bf2C40A8bEF15A152e3e",
+        "nonce": 11,
+        "args": [
+          "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab"
+        ]
+      },
+      {
+        "key": "geometry",
+        "contract": "OrthorhombicGeometry",
+        "address": "0x2612Af3A521c2df9EAF28422Ca335b04AdF3ac66",
+        "nonce": 12,
+        "args": [
+          "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab"
+        ]
+      },
+      {
+        "key": "nonbonded",
+        "contract": "SwitchedNonbondedKernel",
+        "address": "0xA57B8a5584442B467b4689F1144D269d096A3daF",
+        "nonce": 13,
+        "args": [
+          "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+          "0x9b1f7F645351AF3631a656421eD2e40f2802E6c0",
+          "0x67B5656d60a809915323Bf2C40A8bEF15A152e3e"
+        ]
+      },
+      {
+        "key": "engine",
+        "contract": "PeriodicDynamicsCoordinator",
+        "address": "0x26b4AFb60d6C903165150C6F0AA14F8016bE4aec",
+        "nonce": 14,
+        "args": [
+          "0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1",
+          {
+            "registry": "0xCfEB869F69431e42cdB54A4F4f105C19C080A601",
+            "dataset": "0xD833215cBcc3f914bD1C9ece3EE7BF8B14f841bb",
+            "math": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+            "integrator": "0x9561C133DD8580860B6b7E504bC5Aa500f0f06a7",
+            "bond": "0xe982E462b094850F12AF94d21D470e21bE9D0E9C",
+            "angle": "0x59d3631c86BbE35EF041872d502F218A39FBa150",
+            "torsion": "0x0290FB167208Af455bB137780163b7B7a9a10C16",
+            "lj": "0x9b1f7F645351AF3631a656421eD2e40f2802E6c0",
+            "coulomb": "0x67B5656d60a809915323Bf2C40A8bEF15A152e3e",
+            "elementary": "0x5b1869D9A4C187F2EAa108f3062412ecf0526b24",
+            "geometry": "0x2612Af3A521c2df9EAF28422Ca335b04AdF3ac66",
+            "nonbonded": "0xA57B8a5584442B467b4689F1144D269d096A3daF"
+          }
+        ]
+      },
+      {
+        "key": "working",
+        "contract": "WorkingStatePage",
+        "address": "0x630589690929E9cdEFDeF0734717a9eF3Ec7Fcfe",
+        "nonce": 15,
+        "args": [
+          "0x26b4AFb60d6C903165150C6F0AA14F8016bE4aec"
+        ]
+      }
+    ],
+    "modules": {
+      "registry": "0xCfEB869F69431e42cdB54A4F4f105C19C080A601",
+      "dataset": "0xD833215cBcc3f914bD1C9ece3EE7BF8B14f841bb",
+      "math": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+      "integrator": "0x9561C133DD8580860B6b7E504bC5Aa500f0f06a7",
+      "bond": "0xe982E462b094850F12AF94d21D470e21bE9D0E9C",
+      "angle": "0x59d3631c86BbE35EF041872d502F218A39FBa150",
+      "torsion": "0x0290FB167208Af455bB137780163b7B7a9a10C16",
+      "lj": "0x9b1f7F645351AF3631a656421eD2e40f2802E6c0",
+      "coulomb": "0x67B5656d60a809915323Bf2C40A8bEF15A152e3e",
+      "elementary": "0x5b1869D9A4C187F2EAa108f3062412ecf0526b24",
+      "geometry": "0x2612Af3A521c2df9EAF28422Ca335b04AdF3ac66",
+      "nonbonded": "0xA57B8a5584442B467b4689F1144D269d096A3daF"
+    },
+    "addresses": {
+      "math": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+      "elementary": "0x5b1869D9A4C187F2EAa108f3062412ecf0526b24",
+      "registry": "0xCfEB869F69431e42cdB54A4F4f105C19C080A601",
+      "base": "0x254dffcd3277C0b1660F6d42EFbB754edaBAbC2B",
+      "dynamics": "0xC89Ce4735882C9F0f0FE26686c53074E09B0D550",
+      "dataset": "0xD833215cBcc3f914bD1C9ece3EE7BF8B14f841bb",
+      "integrator": "0x9561C133DD8580860B6b7E504bC5Aa500f0f06a7",
+      "bond": "0xe982E462b094850F12AF94d21D470e21bE9D0E9C",
+      "angle": "0x59d3631c86BbE35EF041872d502F218A39FBa150",
+      "torsion": "0x0290FB167208Af455bB137780163b7B7a9a10C16",
+      "lj": "0x9b1f7F645351AF3631a656421eD2e40f2802E6c0",
+      "coulomb": "0x67B5656d60a809915323Bf2C40A8bEF15A152e3e",
+      "geometry": "0x2612Af3A521c2df9EAF28422Ca335b04AdF3ac66",
+      "nonbonded": "0xA57B8a5584442B467b4689F1144D269d096A3daF",
+      "engine": "0x26b4AFb60d6C903165150C6F0AA14F8016bE4aec",
+      "working": "0x630589690929E9cdEFDeF0734717a9eF3Ec7Fcfe"
+    }
+  },
+  "dependencyChecks": [
+    {
+      "label": "registry.owner",
+      "expected": "0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1",
+      "observed": "0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1",
+      "passed": true
+    },
+    {
+      "label": "base.owner",
+      "expected": "0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1",
+      "observed": "0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1",
+      "passed": true
+    },
+    {
+      "label": "dynamics.owner",
+      "expected": "0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1",
+      "observed": "0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1",
+      "passed": true
+    },
+    {
+      "label": "dataset.owner",
+      "expected": "0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1",
+      "observed": "0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1",
+      "passed": true
+    },
+    {
+      "label": "engine.owner",
+      "expected": "0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1",
+      "observed": "0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1",
+      "passed": true
+    },
+    {
+      "label": "elementary.numericalMath",
+      "expected": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+      "observed": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+      "passed": true
+    },
+    {
+      "label": "integrator.numericalMath",
+      "expected": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+      "observed": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+      "passed": true
+    },
+    {
+      "label": "bond.numericalMath",
+      "expected": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+      "observed": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+      "passed": true
+    },
+    {
+      "label": "angle.numericalMath",
+      "expected": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+      "observed": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+      "passed": true
+    },
+    {
+      "label": "torsion.numericalMath",
+      "expected": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+      "observed": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+      "passed": true
+    },
+    {
+      "label": "lj.numericalMath",
+      "expected": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+      "observed": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+      "passed": true
+    },
+    {
+      "label": "coulomb.numericalMath",
+      "expected": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+      "observed": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+      "passed": true
+    },
+    {
+      "label": "geometry.numericalMath",
+      "expected": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+      "observed": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+      "passed": true
+    },
+    {
+      "label": "nonbonded.numericalMath",
+      "expected": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+      "observed": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+      "passed": true
+    },
+    {
+      "label": "angle.elementaryMath",
+      "expected": "0x5b1869D9A4C187F2EAa108f3062412ecf0526b24",
+      "observed": "0x5b1869D9A4C187F2EAa108f3062412ecf0526b24",
+      "passed": true
+    },
+    {
+      "label": "torsion.elementaryMath",
+      "expected": "0x5b1869D9A4C187F2EAa108f3062412ecf0526b24",
+      "observed": "0x5b1869D9A4C187F2EAa108f3062412ecf0526b24",
+      "passed": true
+    },
+    {
+      "label": "nonbonded.ljKernel",
+      "expected": "0x9b1f7F645351AF3631a656421eD2e40f2802E6c0",
+      "observed": "0x9b1f7F645351AF3631a656421eD2e40f2802E6c0",
+      "passed": true
+    },
+    {
+      "label": "nonbonded.coulombKernel",
+      "expected": "0x67B5656d60a809915323Bf2C40A8bEF15A152e3e",
+      "observed": "0x67B5656d60a809915323Bf2C40A8bEF15A152e3e",
+      "passed": true
+    },
+    {
+      "label": "dynamics.baseCatalog",
+      "expected": "0x254dffcd3277C0b1660F6d42EFbB754edaBAbC2B",
+      "observed": "0x254dffcd3277C0b1660F6d42EFbB754edaBAbC2B",
+      "passed": true
+    },
+    {
+      "label": "dataset.dynamicsCatalog",
+      "expected": "0xC89Ce4735882C9F0f0FE26686c53074E09B0D550",
+      "observed": "0xC89Ce4735882C9F0f0FE26686c53074E09B0D550",
+      "passed": true
+    },
+    {
+      "label": "working.writer",
+      "expected": "0x26b4AFb60d6C903165150C6F0AA14F8016bE4aec",
+      "observed": "0x26b4AFb60d6C903165150C6F0AA14F8016bE4aec",
+      "passed": true
+    },
+    {
+      "label": "engine.statePage",
+      "expected": "0x630589690929E9cdEFDeF0734717a9eF3Ec7Fcfe",
+      "observed": "0x630589690929E9cdEFDeF0734717a9eF3Ec7Fcfe",
+      "passed": true
+    }
+  ],
+  "sourceVerificationDescriptors": [
+    {
+      "label": "math",
+      "contract": "FloatMath",
+      "fullyQualifiedName": "contracts/math/FloatMath.sol:FloatMath",
+      "address": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+      "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+      "standardInputSha256": "90a1626aa1e78894681717987c2419a28e9b292b7cec885241c4778c6abc6754",
+      "constructorArguments": "0x",
+      "deploymentTransactionHash": "0xf171f3420b22e6feb8a69b515601f38a1739bdc918c9e67ef4ea2faed8943418",
+      "runtimeCodeKeccak256": "0x310794f2b49c3afde7f1e9c543121d8771acbe9612b4c479970d64dd668b8ac1",
+      "runtimeBytes": 5499,
+      "initcodeBytesIncludingArguments": 5527,
+      "sourceVerifiedOnExplorer": false,
+      "compilerTemplateMatchedOutsideImmutables": true
+    },
+    {
+      "label": "elementary",
+      "contract": "ElementaryMath",
+      "fullyQualifiedName": "contracts/math/ElementaryMath.sol:ElementaryMath",
+      "address": "0x5b1869D9A4C187F2EAa108f3062412ecf0526b24",
+      "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+      "standardInputSha256": "90a1626aa1e78894681717987c2419a28e9b292b7cec885241c4778c6abc6754",
+      "constructorArguments": "0x000000000000000000000000e78a0f7e598cc8b0bb87894b0f60dd2a88d6a8ab",
+      "deploymentTransactionHash": "0x4c913fe8f67bca70c8138b28fb705a9d3bb857f51ae336adcb8e904c5d7f3c8c",
+      "runtimeCodeKeccak256": "0x04cf2b059d59776d82aa2d97da7e8c44e35028ff07f31c0c469d15ee35b72993",
+      "runtimeBytes": 7356,
+      "initcodeBytesIncludingArguments": 7589,
+      "sourceVerifiedOnExplorer": false,
+      "compilerTemplateMatchedOutsideImmutables": true
+    },
+    {
+      "label": "registry",
+      "contract": "ExperimentRegistry",
+      "fullyQualifiedName": "contracts/core/ExperimentRegistry.sol:ExperimentRegistry",
+      "address": "0xCfEB869F69431e42cdB54A4F4f105C19C080A601",
+      "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+      "standardInputSha256": "90a1626aa1e78894681717987c2419a28e9b292b7cec885241c4778c6abc6754",
+      "constructorArguments": "0x00000000000000000000000090f8bf6a479f320ead074411a4b0e7944ea8c9c1",
+      "deploymentTransactionHash": "0xd5fa314583742b338773df24263b322ba7b1bb8c8dfed3588cdc17bb8089b334",
+      "runtimeCodeKeccak256": "0xb1e00fb16318a55d2925d5143ab24806af7f7913b799c13afe37b47903b6973f",
+      "runtimeBytes": 2560,
+      "initcodeBytesIncludingArguments": 2763,
+      "sourceVerifiedOnExplorer": false,
+      "compilerTemplateMatchedOutsideImmutables": true
+    },
+    {
+      "label": "base",
+      "contract": "DatasetCatalog",
+      "fullyQualifiedName": "contracts/core/DatasetCatalog.sol:DatasetCatalog",
+      "address": "0x254dffcd3277C0b1660F6d42EFbB754edaBAbC2B",
+      "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+      "standardInputSha256": "90a1626aa1e78894681717987c2419a28e9b292b7cec885241c4778c6abc6754",
+      "constructorArguments": "0x00000000000000000000000090f8bf6a479f320ead074411a4b0e7944ea8c9c1",
+      "deploymentTransactionHash": "0xd4116bd9d2a2dca52202fc8666ff530d00d933c9e1ab15eacc8d0edc05894fe5",
+      "runtimeCodeKeccak256": "0xcbd52012bba88d731cd4034ceaf33ce0878c86424603188249ab0ea2e48db9c2",
+      "runtimeBytes": 8132,
+      "initcodeBytesIncludingArguments": 8349,
+      "sourceVerifiedOnExplorer": false,
+      "compilerTemplateMatchedOutsideImmutables": true
+    },
+    {
+      "label": "dynamics",
+      "contract": "DynamicsDataset",
+      "fullyQualifiedName": "contracts/core/DynamicsDataset.sol:DynamicsDataset",
+      "address": "0xC89Ce4735882C9F0f0FE26686c53074E09B0D550",
+      "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+      "standardInputSha256": "90a1626aa1e78894681717987c2419a28e9b292b7cec885241c4778c6abc6754",
+      "constructorArguments": "0x00000000000000000000000090f8bf6a479f320ead074411a4b0e7944ea8c9c1000000000000000000000000254dffcd3277c0b1660f6d42efbb754edababc2b",
+      "deploymentTransactionHash": "0xc9183d5cb07be8fa1d06b49d824953e2c0627a48427f64f5a869a5e1c96e1c0d",
+      "runtimeCodeKeccak256": "0x8ec81916dee3281891b603b104e31969853254edd3b6c4705a36ec883135f46a",
+      "runtimeBytes": 10214,
+      "initcodeBytesIncludingArguments": 10615,
+      "sourceVerifiedOnExplorer": false,
+      "compilerTemplateMatchedOutsideImmutables": true
+    },
+    {
+      "label": "dataset",
+      "contract": "PeriodicDataset",
+      "fullyQualifiedName": "contracts/core/PeriodicDataset.sol:PeriodicDataset",
+      "address": "0xD833215cBcc3f914bD1C9ece3EE7BF8B14f841bb",
+      "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+      "standardInputSha256": "90a1626aa1e78894681717987c2419a28e9b292b7cec885241c4778c6abc6754",
+      "constructorArguments": "0x00000000000000000000000090f8bf6a479f320ead074411a4b0e7944ea8c9c1000000000000000000000000c89ce4735882c9f0f0fe26686c53074e09b0d550",
+      "deploymentTransactionHash": "0x366a04f766fd628ad411ddc6391d462028a248d42f23683f5b08e578b26927c8",
+      "runtimeCodeKeccak256": "0xfbc346c3a7fab763ce121e8fce85bb76c7c4a1dfa35ed3fa225e96dd32c85bb4",
+      "runtimeBytes": 11940,
+      "initcodeBytesIncludingArguments": 12362,
+      "sourceVerifiedOnExplorer": false,
+      "compilerTemplateMatchedOutsideImmutables": true
+    },
+    {
+      "label": "integrator",
+      "contract": "VelocityVerletKernel",
+      "fullyQualifiedName": "contracts/kernels/VelocityVerletKernel.sol:VelocityVerletKernel",
+      "address": "0x9561C133DD8580860B6b7E504bC5Aa500f0f06a7",
+      "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+      "standardInputSha256": "90a1626aa1e78894681717987c2419a28e9b292b7cec885241c4778c6abc6754",
+      "constructorArguments": "0x000000000000000000000000e78a0f7e598cc8b0bb87894b0f60dd2a88d6a8ab",
+      "deploymentTransactionHash": "0x377c4d6d1a966718a0ad20fc0264f92a558dbc31f1c776de8667b233cf25ff8b",
+      "runtimeCodeKeccak256": "0xf358938ba394467553ea1810afe17288141360144d563db2e10f109246bb25f1",
+      "runtimeBytes": 3055,
+      "initcodeBytesIncludingArguments": 3281,
+      "sourceVerifiedOnExplorer": false,
+      "compilerTemplateMatchedOutsideImmutables": true
+    },
+    {
+      "label": "bond",
+      "contract": "HarmonicBondKernel",
+      "fullyQualifiedName": "contracts/kernels/HarmonicBondKernel.sol:HarmonicBondKernel",
+      "address": "0xe982E462b094850F12AF94d21D470e21bE9D0E9C",
+      "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+      "standardInputSha256": "90a1626aa1e78894681717987c2419a28e9b292b7cec885241c4778c6abc6754",
+      "constructorArguments": "0x000000000000000000000000e78a0f7e598cc8b0bb87894b0f60dd2a88d6a8ab",
+      "deploymentTransactionHash": "0x99a62a0f2c419c3afdbc7240a52a8d297370101d5fc1f2f0e719e91cfea53f66",
+      "runtimeCodeKeccak256": "0x87268e232f430502fc35209f97cdf3a8debabe9a8d01b3ea8e83e6b334e72cf6",
+      "runtimeBytes": 3051,
+      "initcodeBytesIncludingArguments": 3255,
+      "sourceVerifiedOnExplorer": false,
+      "compilerTemplateMatchedOutsideImmutables": true
+    },
+    {
+      "label": "angle",
+      "contract": "HarmonicAngleKernel",
+      "fullyQualifiedName": "contracts/kernels/HarmonicAngleKernel.sol:HarmonicAngleKernel",
+      "address": "0x59d3631c86BbE35EF041872d502F218A39FBa150",
+      "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+      "standardInputSha256": "90a1626aa1e78894681717987c2419a28e9b292b7cec885241c4778c6abc6754",
+      "constructorArguments": "0x000000000000000000000000e78a0f7e598cc8b0bb87894b0f60dd2a88d6a8ab0000000000000000000000005b1869d9a4c187f2eaa108f3062412ecf0526b24",
+      "deploymentTransactionHash": "0xe54dcc4757af85ba926af85e56385b130d1bbe1881923c5dc8eb5a084fc97e96",
+      "runtimeCodeKeccak256": "0x5f4e220949b5fde0014cd98768daaf905a6e582904f8e06f8b542ec41a63e869",
+      "runtimeBytes": 7356,
+      "initcodeBytesIncludingArguments": 7839,
+      "sourceVerifiedOnExplorer": false,
+      "compilerTemplateMatchedOutsideImmutables": true
+    },
+    {
+      "label": "torsion",
+      "contract": "PeriodicTorsionKernel",
+      "fullyQualifiedName": "contracts/kernels/PeriodicTorsionKernel.sol:PeriodicTorsionKernel",
+      "address": "0x0290FB167208Af455bB137780163b7B7a9a10C16",
+      "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+      "standardInputSha256": "90a1626aa1e78894681717987c2419a28e9b292b7cec885241c4778c6abc6754",
+      "constructorArguments": "0x000000000000000000000000e78a0f7e598cc8b0bb87894b0f60dd2a88d6a8ab0000000000000000000000005b1869d9a4c187f2eaa108f3062412ecf0526b24",
+      "deploymentTransactionHash": "0xf3666b1fdd448d1da8cb426ecb6d597f14b47da26ce1f561a657a201f3a3baa8",
+      "runtimeCodeKeccak256": "0x66555c4ff3bb6b93e53952bb5f47717fd7fe38a5745417400dd7330529681428",
+      "runtimeBytes": 8433,
+      "initcodeBytesIncludingArguments": 8965,
+      "sourceVerifiedOnExplorer": false,
+      "compilerTemplateMatchedOutsideImmutables": true
+    },
+    {
+      "label": "lj",
+      "contract": "LennardJonesKernel",
+      "fullyQualifiedName": "contracts/kernels/LennardJonesKernel.sol:LennardJonesKernel",
+      "address": "0x9b1f7F645351AF3631a656421eD2e40f2802E6c0",
+      "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+      "standardInputSha256": "90a1626aa1e78894681717987c2419a28e9b292b7cec885241c4778c6abc6754",
+      "constructorArguments": "0x000000000000000000000000e78a0f7e598cc8b0bb87894b0f60dd2a88d6a8ab",
+      "deploymentTransactionHash": "0xe3db5b80bb5aea45215c21df102f0acd71ea981a60fb838582f608bab3ca005f",
+      "runtimeCodeKeccak256": "0xd817b7aab76bf39594818fbf12cd3792fb4251e76868cb8b879d09385fffecdf",
+      "runtimeBytes": 4087,
+      "initcodeBytesIncludingArguments": 4291,
+      "sourceVerifiedOnExplorer": false,
+      "compilerTemplateMatchedOutsideImmutables": true
+    },
+    {
+      "label": "coulomb",
+      "contract": "CoulombPairKernel",
+      "fullyQualifiedName": "contracts/kernels/CoulombPairKernel.sol:CoulombPairKernel",
+      "address": "0x67B5656d60a809915323Bf2C40A8bEF15A152e3e",
+      "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+      "standardInputSha256": "90a1626aa1e78894681717987c2419a28e9b292b7cec885241c4778c6abc6754",
+      "constructorArguments": "0x000000000000000000000000e78a0f7e598cc8b0bb87894b0f60dd2a88d6a8ab",
+      "deploymentTransactionHash": "0xbda78229ef452389940c382e90d7e3e56ed1683513ae1f4b1f5ad561d241ed62",
+      "runtimeCodeKeccak256": "0xe4e02a465113f68f1d546077fad70d268263e18acf60c81dbe88b51f43daa2cc",
+      "runtimeBytes": 3050,
+      "initcodeBytesIncludingArguments": 3254,
+      "sourceVerifiedOnExplorer": false,
+      "compilerTemplateMatchedOutsideImmutables": true
+    },
+    {
+      "label": "geometry",
+      "contract": "OrthorhombicGeometry",
+      "fullyQualifiedName": "contracts/kernels/OrthorhombicGeometry.sol:OrthorhombicGeometry",
+      "address": "0x2612Af3A521c2df9EAF28422Ca335b04AdF3ac66",
+      "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+      "standardInputSha256": "90a1626aa1e78894681717987c2419a28e9b292b7cec885241c4778c6abc6754",
+      "constructorArguments": "0x000000000000000000000000e78a0f7e598cc8b0bb87894b0f60dd2a88d6a8ab",
+      "deploymentTransactionHash": "0xeb05d0aebf0813d6de13991fed323e6d87680c3f6eecc0fee50b334350ff7dae",
+      "runtimeCodeKeccak256": "0x2da587b1960d43ca8043837fbc822d3739499fa6c804dece118c2b9005860e48",
+      "runtimeBytes": 4687,
+      "initcodeBytesIncludingArguments": 4920,
+      "sourceVerifiedOnExplorer": false,
+      "compilerTemplateMatchedOutsideImmutables": true
+    },
+    {
+      "label": "nonbonded",
+      "contract": "SwitchedNonbondedKernel",
+      "fullyQualifiedName": "contracts/kernels/SwitchedNonbondedKernel.sol:SwitchedNonbondedKernel",
+      "address": "0xA57B8a5584442B467b4689F1144D269d096A3daF",
+      "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+      "standardInputSha256": "90a1626aa1e78894681717987c2419a28e9b292b7cec885241c4778c6abc6754",
+      "constructorArguments": "0x000000000000000000000000e78a0f7e598cc8b0bb87894b0f60dd2a88d6a8ab0000000000000000000000009b1f7f645351af3631a656421ed2e40f2802e6c000000000000000000000000067b5656d60a809915323bf2c40a8bef15a152e3e",
+      "deploymentTransactionHash": "0xb5b790fb02152785e1c285457056d6d648bcdbf65513eb5e65530235e5e304b5",
+      "runtimeCodeKeccak256": "0x7e11e0f55685beacb358fcbe695f86192597b354b7bb636ecb6bd279c4cf5d87",
+      "runtimeBytes": 9897,
+      "initcodeBytesIncludingArguments": 10653,
+      "sourceVerifiedOnExplorer": false,
+      "compilerTemplateMatchedOutsideImmutables": true
+    },
+    {
+      "label": "engine",
+      "contract": "PeriodicDynamicsCoordinator",
+      "fullyQualifiedName": "contracts/core/PeriodicDynamicsCoordinator.sol:PeriodicDynamicsCoordinator",
+      "address": "0x26b4AFb60d6C903165150C6F0AA14F8016bE4aec",
+      "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+      "standardInputSha256": "90a1626aa1e78894681717987c2419a28e9b292b7cec885241c4778c6abc6754",
+      "constructorArguments": "0x00000000000000000000000090f8bf6a479f320ead074411a4b0e7944ea8c9c1000000000000000000000000cfeb869f69431e42cdb54a4f4f105c19c080a601000000000000000000000000d833215cbcc3f914bd1c9ece3ee7bf8b14f841bb000000000000000000000000e78a0f7e598cc8b0bb87894b0f60dd2a88d6a8ab0000000000000000000000009561c133dd8580860b6b7e504bc5aa500f0f06a7000000000000000000000000e982e462b094850f12af94d21d470e21be9d0e9c00000000000000000000000059d3631c86bbe35ef041872d502f218a39fba1500000000000000000000000000290fb167208af455bb137780163b7b7a9a10c160000000000000000000000009b1f7f645351af3631a656421ed2e40f2802e6c000000000000000000000000067b5656d60a809915323bf2c40a8bef15a152e3e0000000000000000000000005b1869d9a4c187f2eaa108f3062412ecf0526b240000000000000000000000002612af3a521c2df9eaf28422ca335b04adf3ac66000000000000000000000000a57b8a5584442b467b4689f1144d269d096a3daf",
+      "deploymentTransactionHash": "0x66f4cb9fa1756a862992fd8826d0370f92bcefc7099448a9a55d83e38df4c85a",
+      "runtimeCodeKeccak256": "0x0b83f4ea2e616b481eb3e2ef325d8bef67e879a5d7dac1c2b3a95f326de92037",
+      "runtimeBytes": 21670,
+      "initcodeBytesIncludingArguments": 24523,
+      "sourceVerifiedOnExplorer": false,
+      "compilerTemplateMatchedOutsideImmutables": true
+    },
+    {
+      "label": "working",
+      "contract": "WorkingStatePage",
+      "fullyQualifiedName": "contracts/core/WorkingStatePage.sol:WorkingStatePage",
+      "address": "0x630589690929E9cdEFDeF0734717a9eF3Ec7Fcfe",
+      "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+      "standardInputSha256": "90a1626aa1e78894681717987c2419a28e9b292b7cec885241c4778c6abc6754",
+      "constructorArguments": "0x00000000000000000000000026b4afb60d6c903165150c6f0aa14f8016be4aec",
+      "deploymentTransactionHash": "0x25674092483f3a25da401ded8de1dfbff961f524cf018a3bced38955968db6f5",
+      "runtimeCodeKeccak256": "0x11b4f1ae9566a19856238e4c3b15bca4174cab77d1e2eb4b104a53f88b204669",
+      "runtimeBytes": 2478,
+      "initcodeBytesIncludingArguments": 2721,
+      "sourceVerifiedOnExplorer": false,
+      "compilerTemplateMatchedOutsideImmutables": true
+    },
+    {
+      "label": "positions",
+      "contract": "DataPage",
+      "fullyQualifiedName": "contracts/core/DataPage.sol:DataPage",
+      "address": "0x05678a3797bf8dC4dE0C6B0Fd13c3C455629E02f",
+      "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+      "standardInputSha256": "90a1626aa1e78894681717987c2419a28e9b292b7cec885241c4778c6abc6754",
+      "constructorArguments": "0x00000000000000000000000090f8bf6a479f320ead074411a4b0e7944ea8c9c117b1bac8083602c4036ec159876d9ffbb8946bb7c32128d29505e3c7f5d1467a000000000000000000000000000000000000000000000000000000000000000c",
+      "deploymentTransactionHash": "0xfbf1d85f3d01f8d59e6fd98e6ba4d1227227f775e33c3ab18a3ddf46a0739b0c",
+      "runtimeCodeKeccak256": "0x659e49c7fd92bfa04fa29322742cbd7f753863ece0854a21e1c1d4fe081a529d",
+      "runtimeBytes": 1929,
+      "initcodeBytesIncludingArguments": 2413,
+      "sourceVerifiedOnExplorer": false,
+      "compilerTemplateMatchedOutsideImmutables": true,
+      "creationViaFactory": true
+    },
+    {
+      "label": "bonds",
+      "contract": "DataPage",
+      "fullyQualifiedName": "contracts/core/DataPage.sol:DataPage",
+      "address": "0x332280007303d5942dd60A945169b2b303320686",
+      "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+      "standardInputSha256": "90a1626aa1e78894681717987c2419a28e9b292b7cec885241c4778c6abc6754",
+      "constructorArguments": "0x00000000000000000000000090f8bf6a479f320ead074411a4b0e7944ea8c9c17c5b68c9095b93b3d98d0d4e536c9bc7ebb25bc4e4af8ace03f68d72b8e7aa6f000000000000000000000000000000000000000000000000000000000000000c",
+      "deploymentTransactionHash": "0x3b951f1180eb7e45445970cb54f1f95ed72150f8e8cbdf443701ffe21db3e97d",
+      "runtimeCodeKeccak256": "0xc631eea7d21b842a631dbccf9b3e1a45d0e9b72d8effcfa4685f2ee1f59f98cf",
+      "runtimeBytes": 1929,
+      "initcodeBytesIncludingArguments": 2413,
+      "sourceVerifiedOnExplorer": false,
+      "compilerTemplateMatchedOutsideImmutables": true,
+      "creationViaFactory": true
+    },
+    {
+      "label": "particles",
+      "contract": "DataPage",
+      "fullyQualifiedName": "contracts/core/DataPage.sol:DataPage",
+      "address": "0x141f5fCa84Cc82EF0A6751241019471731289456",
+      "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+      "standardInputSha256": "90a1626aa1e78894681717987c2419a28e9b292b7cec885241c4778c6abc6754",
+      "constructorArguments": "0x00000000000000000000000090f8bf6a479f320ead074411a4b0e7944ea8c9c170493eb676c0f37927cbff38ce03a906d2b0ad5c2c25a997a2e9d7b1885b30cc0000000000000000000000000000000000000000000000000000000000000010",
+      "deploymentTransactionHash": "0xc5fb48e03170f89a27dccf5f706ff3857d0dc888f0454489787dd8a607399b08",
+      "runtimeCodeKeccak256": "0x795b72ab280f19705b73650c9ca06e643930b0d6a83ba3cc120402a619255e10",
+      "runtimeBytes": 1929,
+      "initcodeBytesIncludingArguments": 2413,
+      "sourceVerifiedOnExplorer": false,
+      "compilerTemplateMatchedOutsideImmutables": true,
+      "creationViaFactory": true
+    },
+    {
+      "label": "angles",
+      "contract": "DataPage",
+      "fullyQualifiedName": "contracts/core/DataPage.sol:DataPage",
+      "address": "0x5CB1848a868b67C6E8D2719647Ffe6c092a64ebd",
+      "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+      "standardInputSha256": "90a1626aa1e78894681717987c2419a28e9b292b7cec885241c4778c6abc6754",
+      "constructorArguments": "0x00000000000000000000000090f8bf6a479f320ead074411a4b0e7944ea8c9c10479a741cc0f8e953bdae20af63044f3fd8656dfe6db768ae05ab0560ff9efc2000000000000000000000000000000000000000000000000000000000000000a",
+      "deploymentTransactionHash": "0xde767f60a29d8db79a2dc8cbd7bfa4d874521e55317bfe77d44a1546ed09caf8",
+      "runtimeCodeKeccak256": "0xa1976ee74cc4180de4240a3a2b5901f3e93145e9ab048c888e497a41516ae3e9",
+      "runtimeBytes": 1929,
+      "initcodeBytesIncludingArguments": 2413,
+      "sourceVerifiedOnExplorer": false,
+      "compilerTemplateMatchedOutsideImmutables": true,
+      "creationViaFactory": true
+    },
+    {
+      "label": "torsions",
+      "contract": "DataPage",
+      "fullyQualifiedName": "contracts/core/DataPage.sol:DataPage",
+      "address": "0xdC59263fc2C043625d07ffBaEC5E16393eAdf53b",
+      "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+      "standardInputSha256": "90a1626aa1e78894681717987c2419a28e9b292b7cec885241c4778c6abc6754",
+      "constructorArguments": "0x00000000000000000000000090f8bf6a479f320ead074411a4b0e7944ea8c9c1411317d0fa5a0bfcab7fe33e3307c1fba4feefcc357d49107573970ca36a919a0000000000000000000000000000000000000000000000000000000000000007",
+      "deploymentTransactionHash": "0x2fe68489d4c913e8bfade606b6c4a6ceedd6307267e1317f3ceb0da489471d5a",
+      "runtimeCodeKeccak256": "0x5e9db499f5906049900ff657ad16e24fd7810e79fdab344615e48b1a442f5936",
+      "runtimeBytes": 1929,
+      "initcodeBytesIncludingArguments": 2413,
+      "sourceVerifiedOnExplorer": false,
+      "compilerTemplateMatchedOutsideImmutables": true,
+      "creationViaFactory": true
+    },
+    {
+      "label": "nonbonded",
+      "contract": "DataPage",
+      "fullyQualifiedName": "contracts/core/DataPage.sol:DataPage",
+      "address": "0x8C6AAd0C92a48112aAa0e6e8F98A160120f17059",
+      "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+      "standardInputSha256": "90a1626aa1e78894681717987c2419a28e9b292b7cec885241c4778c6abc6754",
+      "constructorArguments": "0x00000000000000000000000090f8bf6a479f320ead074411a4b0e7944ea8c9c17e661ea97d87a96b220742ba7c76b07d19f372e3896467642c4b00e53d48bc3c000000000000000000000000000000000000000000000000000000000000000c",
+      "deploymentTransactionHash": "0x4f33387b249b36854100ba152162e2323d36e2d090ac000e1e0fe943c1fd3f12",
+      "runtimeCodeKeccak256": "0x0868de5f10da62ef471abea233ada7f08bdc21b6725d5e75f6e78b063f3814aa",
+      "runtimeBytes": 1929,
+      "initcodeBytesIncludingArguments": 2413,
+      "sourceVerifiedOnExplorer": false,
+      "compilerTemplateMatchedOutsideImmutables": true,
+      "creationViaFactory": true
+    },
+    {
+      "label": "exceptions",
+      "contract": "DataPage",
+      "fullyQualifiedName": "contracts/core/DataPage.sol:DataPage",
+      "address": "0x358e56e10a4a906ABd6a941aDd851aedD69F65e2",
+      "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+      "standardInputSha256": "90a1626aa1e78894681717987c2419a28e9b292b7cec885241c4778c6abc6754",
+      "constructorArguments": "0x00000000000000000000000090f8bf6a479f320ead074411a4b0e7944ea8c9c167c4c51032b614f39d45a0606429a941da3c0f7e2c00dd932683961751cb737e000000000000000000000000000000000000000000000000000000000000000c",
+      "deploymentTransactionHash": "0x7eb3019e688933e81fb5a8efb16b18ad6dcfcb817a71064a71c80224eebdcaf0",
+      "runtimeCodeKeccak256": "0x9a88d18075c4c0a27b692785f67debe67a5160b582c64896d082b3b1d813f68b",
+      "runtimeBytes": 1929,
+      "initcodeBytesIncludingArguments": 2413,
+      "sourceVerifiedOnExplorer": false,
+      "compilerTemplateMatchedOutsideImmutables": true,
+      "creationViaFactory": true
+    }
+  ],
+  "inputPages": [
+    {
+      "label": "positions",
+      "address": "0x05678a3797bf8dC4dE0C6B0Fd13c3C455629E02f",
+      "role": "0x17b1bac8083602c4036ec159876d9ffbb8946bb7c32128d29505e3c7f5d1467a",
+      "words": 12,
+      "populatedBytes": 384,
+      "digest": "0x5afe182ee524617645d25727736b1ec23fee5267469a9180e9e3b0f97423eff6",
+      "sealed": true
+    },
+    {
+      "label": "bonds",
+      "address": "0x332280007303d5942dd60A945169b2b303320686",
+      "role": "0x7c5b68c9095b93b3d98d0d4e536c9bc7ebb25bc4e4af8ace03f68d72b8e7aa6f",
+      "words": 12,
+      "populatedBytes": 384,
+      "digest": "0x008c7171cc52504cef91a1a714a6577ff1aed027a1353cb16b43c12dd6842b93",
+      "sealed": true
+    },
+    {
+      "label": "particles",
+      "address": "0x141f5fCa84Cc82EF0A6751241019471731289456",
+      "role": "0x70493eb676c0f37927cbff38ce03a906d2b0ad5c2c25a997a2e9d7b1885b30cc",
+      "words": 16,
+      "populatedBytes": 512,
+      "digest": "0x470b6e3566fa3dec926dc0857171f0a3a7e7efaadad1046a148599ef6fc826c1",
+      "sealed": true
+    },
+    {
+      "label": "angles",
+      "address": "0x5CB1848a868b67C6E8D2719647Ffe6c092a64ebd",
+      "role": "0x0479a741cc0f8e953bdae20af63044f3fd8656dfe6db768ae05ab0560ff9efc2",
+      "words": 10,
+      "populatedBytes": 320,
+      "digest": "0x9ba22d2b1d3f9f0522ca7bb9fa0474b8a4801df84808a6bef67fa79d0756633f",
+      "sealed": true
+    },
+    {
+      "label": "torsions",
+      "address": "0xdC59263fc2C043625d07ffBaEC5E16393eAdf53b",
+      "role": "0x411317d0fa5a0bfcab7fe33e3307c1fba4feefcc357d49107573970ca36a919a",
+      "words": 7,
+      "populatedBytes": 224,
+      "digest": "0x8b015f9fe76fe4876dffbe898feaeeec7c42c0c539d081a2bba170b4bfcfeeb6",
+      "sealed": true
+    },
+    {
+      "label": "nonbonded",
+      "address": "0x8C6AAd0C92a48112aAa0e6e8F98A160120f17059",
+      "role": "0x7e661ea97d87a96b220742ba7c76b07d19f372e3896467642c4b00e53d48bc3c",
+      "words": 12,
+      "populatedBytes": 384,
+      "digest": "0x407aa7fe9f95b3f763b807018881cba5aea39edf25af320fc2fb337f8e4f29c1",
+      "sealed": true
+    },
+    {
+      "label": "exceptions",
+      "address": "0x358e56e10a4a906ABd6a941aDd851aedD69F65e2",
+      "role": "0x67c4c51032b614f39d45a0606429a941da3c0f7e2c00dd932683961751cb737e",
+      "words": 12,
+      "populatedBytes": 384,
+      "digest": "0x128a7006ef2a095a7e9729857725d96b0f49df1a12e5614ec1638c73e2bff7d3",
+      "sealed": true
+    }
+  ],
+  "protocolId": "0xec6673c169ad19f5186ec302f4dc73f0720cf3c010ae93cc9b1e649f5c615134",
+  "protocolManifest": "0x4ff09ce2f4714a199a39f1e4318ad4d8e1fc9edb34c1c6130457fd42365390e9",
+  "datasetId": "0x798a4f434c90a1ccf972da44cdb73dc2e1528ae1fe8d9e6e94991f3f8b27f538",
+  "datasetCommitment": "0x82e785e632b941403c0efaa1027defed59288f8d0cf3c7703aa7dd7cdefa7b3c",
+  "runId": "1",
+  "completedSteps": 0,
+  "transactions": [
+    {
+      "phase": "core_deployment",
+      "label": "math",
+      "transactionHash": "0xf171f3420b22e6feb8a69b515601f38a1739bdc918c9e67ef4ea2faed8943418",
+      "gasEstimate": "1242164",
+      "gasLimit": "1500596",
+      "gasUsed": "1242164",
+      "calldataBytes": 5527
+    },
+    {
+      "phase": "core_deployment",
+      "label": "elementary",
+      "transactionHash": "0x4c913fe8f67bca70c8138b28fb705a9d3bb857f51ae336adcb8e904c5d7f3c8c",
+      "gasEstimate": "1647747",
+      "gasLimit": "1987296",
+      "gasUsed": "1647747",
+      "calldataBytes": 7589
+    },
+    {
+      "phase": "core_deployment",
+      "label": "registry",
+      "transactionHash": "0xd5fa314583742b338773df24263b322ba7b1bb8c8dfed3588cdc17bb8089b334",
+      "gasEstimate": "608993",
+      "gasLimit": "740791",
+      "gasUsed": "608993",
+      "calldataBytes": 2763
+    },
+    {
+      "phase": "core_deployment",
+      "label": "base",
+      "transactionHash": "0xd4116bd9d2a2dca52202fc8666ff530d00d933c9e1ab15eacc8d0edc05894fe5",
+      "gasEstimate": "1810748",
+      "gasLimit": "2182897",
+      "gasUsed": "1810748",
+      "calldataBytes": 8349
+    },
+    {
+      "phase": "core_deployment",
+      "label": "dynamics",
+      "transactionHash": "0xc9183d5cb07be8fa1d06b49d824953e2c0627a48427f64f5a869a5e1c96e1c0d",
+      "gasEstimate": "2262654",
+      "gasLimit": "2725184",
+      "gasUsed": "2262654",
+      "calldataBytes": 10615
+    },
+    {
+      "phase": "core_deployment",
+      "label": "dataset",
+      "transactionHash": "0x366a04f766fd628ad411ddc6391d462028a248d42f23683f5b08e578b26927c8",
+      "gasEstimate": "2635110",
+      "gasLimit": "3172132",
+      "gasUsed": "2635110",
+      "calldataBytes": 12362
+    },
+    {
+      "phase": "core_deployment",
+      "label": "integrator",
+      "transactionHash": "0x377c4d6d1a966718a0ad20fc0264f92a558dbc31f1c776de8667b233cf25ff8b",
+      "gasEstimate": "717961",
+      "gasLimit": "871553",
+      "gasUsed": "717961",
+      "calldataBytes": 3281
+    },
+    {
+      "phase": "core_deployment",
+      "label": "bond",
+      "transactionHash": "0x99a62a0f2c419c3afdbc7240a52a8d297370101d5fc1f2f0e719e91cfea53f66",
+      "gasEstimate": "717862",
+      "gasLimit": "871434",
+      "gasUsed": "717862",
+      "calldataBytes": 3255
+    },
+    {
+      "phase": "core_deployment",
+      "label": "angle",
+      "transactionHash": "0xe54dcc4757af85ba926af85e56385b130d1bbe1881923c5dc8eb5a084fc97e96",
+      "gasEstimate": "1655515",
+      "gasLimit": "1996618",
+      "gasUsed": "1655515",
+      "calldataBytes": 7839
+    },
+    {
+      "phase": "core_deployment",
+      "label": "torsion",
+      "transactionHash": "0xf3666b1fdd448d1da8cb426ecb6d597f14b47da26ce1f561a657a201f3a3baa8",
+      "gasEstimate": "1886621",
+      "gasLimit": "2273945",
+      "gasUsed": "1886621",
+      "calldataBytes": 8965
+    },
+    {
+      "phase": "core_deployment",
+      "label": "lj",
+      "transactionHash": "0xe3db5b80bb5aea45215c21df102f0acd71ea981a60fb838582f608bab3ca005f",
+      "gasEstimate": "941910",
+      "gasLimit": "1140292",
+      "gasUsed": "941910",
+      "calldataBytes": 4291
+    },
+    {
+      "phase": "core_deployment",
+      "label": "coulomb",
+      "transactionHash": "0xbda78229ef452389940c382e90d7e3e56ed1683513ae1f4b1f5ad561d241ed62",
+      "gasEstimate": "717646",
+      "gasLimit": "871175",
+      "gasUsed": "717646",
+      "calldataBytes": 3254
+    },
+    {
+      "phase": "core_deployment",
+      "label": "geometry",
+      "transactionHash": "0xeb05d0aebf0813d6de13991fed323e6d87680c3f6eecc0fee50b334350ff7dae",
+      "gasEstimate": "1070576",
+      "gasLimit": "1294691",
+      "gasUsed": "1070576",
+      "calldataBytes": 4920
+    },
+    {
+      "phase": "core_deployment",
+      "label": "nonbonded",
+      "transactionHash": "0xb5b790fb02152785e1c285457056d6d648bcdbf65513eb5e65530235e5e304b5",
+      "gasEstimate": "2210089",
+      "gasLimit": "2662106",
+      "gasUsed": "2210089",
+      "calldataBytes": 10653
+    },
+    {
+      "phase": "core_deployment",
+      "label": "engine",
+      "transactionHash": "0x66f4cb9fa1756a862992fd8826d0370f92bcefc7099448a9a55d83e38df4c85a",
+      "gasEstimate": "5384724",
+      "gasLimit": "6471668",
+      "gasUsed": "5384724",
+      "calldataBytes": 24523
+    },
+    {
+      "phase": "core_deployment",
+      "label": "working",
+      "transactionHash": "0x25674092483f3a25da401ded8de1dfbff961f524cf018a3bced38955968db6f5",
+      "gasEstimate": "593100",
+      "gasLimit": "721720",
+      "gasUsed": "593100",
+      "calldataBytes": 2721
+    },
+    {
+      "phase": "configuration",
+      "label": "bind working page",
+      "transactionHash": "0x0cd86f0ebc3551e00185e84fc3c242ee0f90471624fd340046d58f050dcb9ec2",
+      "gasEstimate": "93597",
+      "gasLimit": "122316",
+      "gasUsed": "93597",
+      "calldataBytes": 36
+    },
+    {
+      "phase": "configuration",
+      "label": "register fixture protocol",
+      "transactionHash": "0xc74c7df5c7375c4f986f1b8e8abdfd86472b4501f12ac5fc3e99d4ad70da7198",
+      "gasEstimate": "971947",
+      "gasLimit": "1176336",
+      "gasUsed": "971947",
+      "calldataBytes": 644
+    },
+    {
+      "phase": "input_page_deployment",
+      "label": "create positions",
+      "transactionHash": "0xfbf1d85f3d01f8d59e6fd98e6ba4d1227227f775e33c3ab18a3ddf46a0739b0c",
+      "gasEstimate": "488197",
+      "gasLimit": "595836",
+      "gasUsed": "488197",
+      "calldataBytes": 68
+    },
+    {
+      "phase": "input_upload",
+      "label": "append positions:0",
+      "transactionHash": "0xe1d614bb21a46d8d0f76294af074f2a3987b7f7ae2a51a64f70839da9c92cd70",
+      "gasEstimate": "247734",
+      "gasLimit": "307280",
+      "gasUsed": "247734",
+      "calldataBytes": 452
+    },
+    {
+      "phase": "input_seal",
+      "label": "seal positions",
+      "transactionHash": "0x9f2d3a15fc874d3129463b88b0fe3b7410d050ce7dd9ff7f4f6bb902b060a086",
+      "gasEstimate": "49829",
+      "gasLimit": "69794",
+      "gasUsed": "49829",
+      "calldataBytes": 36
+    },
+    {
+      "phase": "input_page_deployment",
+      "label": "create bonds",
+      "transactionHash": "0x3b951f1180eb7e45445970cb54f1f95ed72150f8e8cbdf443701ffe21db3e97d",
+      "gasEstimate": "488211",
+      "gasLimit": "595853",
+      "gasUsed": "488211",
+      "calldataBytes": 68
+    },
+    {
+      "phase": "input_upload",
+      "label": "append bonds:0",
+      "transactionHash": "0x337a68a6e27e70fff9a9fb7011d692b2b51e1cfee0b783d7d2811708b1654da9",
+      "gasEstimate": "307362",
+      "gasLimit": "378834",
+      "gasUsed": "307362",
+      "calldataBytes": 452
+    },
+    {
+      "phase": "input_seal",
+      "label": "seal bonds",
+      "transactionHash": "0xe6919c13d51be5f5fb6804a70b2b3222ca8f3325db92da8bb31b560019d319d3",
+      "gasEstimate": "49817",
+      "gasLimit": "69780",
+      "gasUsed": "49817",
+      "calldataBytes": 36
+    },
+    {
+      "phase": "dataset_registration",
+      "label": "register base",
+      "transactionHash": "0x4e10a3865acfa416d137a44e28d6f0bd2cf0160c2bf42bd65d386e53e942ef07",
+      "gasEstimate": "325190",
+      "gasLimit": "400228",
+      "gasUsed": "325190",
+      "calldataBytes": 292
+    },
+    {
+      "phase": "input_page_deployment",
+      "label": "create particles",
+      "transactionHash": "0xc5fb48e03170f89a27dccf5f706ff3857d0dc888f0454489787dd8a607399b08",
+      "gasEstimate": "488281",
+      "gasLimit": "595937",
+      "gasUsed": "488281",
+      "calldataBytes": 68
+    },
+    {
+      "phase": "input_upload",
+      "label": "append particles:0",
+      "transactionHash": "0xdb239b880b15131a54931625ce34eb7e663bf26ede406f466b3f3878f7e7a9c0",
+      "gasEstimate": "379128",
+      "gasLimit": "464953",
+      "gasUsed": "379128",
+      "calldataBytes": 580
+    },
+    {
+      "phase": "input_seal",
+      "label": "seal particles",
+      "transactionHash": "0x1814aa178cab1064d531a8db225cfa83ea499b9d964e4ce7c37347d48daee634",
+      "gasEstimate": "49829",
+      "gasLimit": "69794",
+      "gasUsed": "49829",
+      "calldataBytes": 36
+    },
+    {
+      "phase": "input_page_deployment",
+      "label": "create angles",
+      "transactionHash": "0xde767f60a29d8db79a2dc8cbd7bfa4d874521e55317bfe77d44a1546ed09caf8",
+      "gasEstimate": "488295",
+      "gasLimit": "595954",
+      "gasUsed": "488295",
+      "calldataBytes": 68
+    },
+    {
+      "phase": "input_upload",
+      "label": "append angles:0",
+      "transactionHash": "0x90d41684a0e53e732d47ad8b4a4e65996e595661c7b3f04e85734437f48b502c",
+      "gasEstimate": "261661",
+      "gasLimit": "323993",
+      "gasUsed": "261661",
+      "calldataBytes": 388
+    },
+    {
+      "phase": "input_seal",
+      "label": "seal angles",
+      "transactionHash": "0x7ec49e9e72db3fbb658b557af45a06ae7e8b9428baa6c3f3fbc633d3a6790c5a",
+      "gasEstimate": "49829",
+      "gasLimit": "69794",
+      "gasUsed": "49829",
+      "calldataBytes": 36
+    },
+    {
+      "phase": "input_page_deployment",
+      "label": "create torsions",
+      "transactionHash": "0x2fe68489d4c913e8bfade606b6c4a6ceedd6307267e1317f3ceb0da489471d5a",
+      "gasEstimate": "488309",
+      "gasLimit": "595970",
+      "gasUsed": "488309",
+      "calldataBytes": 68
+    },
+    {
+      "phase": "input_upload",
+      "label": "append torsions:0",
+      "transactionHash": "0x0a60f164e55003b877f0c4a0733620709fa9c52c33dcab4bec84b566d7cbdebc",
+      "gasEstimate": "192996",
+      "gasLimit": "241595",
+      "gasUsed": "192996",
+      "calldataBytes": 292
+    },
+    {
+      "phase": "input_seal",
+      "label": "seal torsions",
+      "transactionHash": "0x4cea1cd45ab95b89fa4ae2cded23db359a9b63d686aab84f15201f2112631d20",
+      "gasEstimate": "49829",
+      "gasLimit": "69794",
+      "gasUsed": "49829",
+      "calldataBytes": 36
+    },
+    {
+      "phase": "dataset_registration",
+      "label": "register dynamics",
+      "transactionHash": "0x6edf64b842a0dc87a468c7f97bce54241a6778cb237e81241a994a557f66c42b",
+      "gasEstimate": "758748",
+      "gasLimit": "920497",
+      "gasUsed": "758748",
+      "calldataBytes": 548
+    },
+    {
+      "phase": "input_page_deployment",
+      "label": "create nonbonded",
+      "transactionHash": "0x4f33387b249b36854100ba152162e2323d36e2d090ac000e1e0fe943c1fd3f12",
+      "gasEstimate": "488218",
+      "gasLimit": "595861",
+      "gasUsed": "488218",
+      "calldataBytes": 68
+    },
+    {
+      "phase": "input_upload",
+      "label": "append nonbonded:0",
+      "transactionHash": "0x9fed3e91077f3210bc01437bb26911f7c5d308244b1fac53c8a69383d70a88bf",
+      "gasEstimate": "327406",
+      "gasLimit": "402887",
+      "gasUsed": "327406",
+      "calldataBytes": 452
+    },
+    {
+      "phase": "input_seal",
+      "label": "seal nonbonded",
+      "transactionHash": "0x92b98276bafc1653a4a6363fb254bf5a7a7434dd458193d5115b5d82645e91c8",
+      "gasEstimate": "49829",
+      "gasLimit": "69794",
+      "gasUsed": "49829",
+      "calldataBytes": 36
+    },
+    {
+      "phase": "input_page_deployment",
+      "label": "create exceptions",
+      "transactionHash": "0x7eb3019e688933e81fb5a8efb16b18ad6dcfcb817a71064a71c80224eebdcaf0",
+      "gasEstimate": "488232",
+      "gasLimit": "595878",
+      "gasUsed": "488232",
+      "calldataBytes": 68
+    },
+    {
+      "phase": "input_upload",
+      "label": "append exceptions:0",
+      "transactionHash": "0x5d7641a9aa3def686298cd8c0d375324701b103125b499efa39533e3d239286c",
+      "gasEstimate": "247614",
+      "gasLimit": "307136",
+      "gasUsed": "247614",
+      "calldataBytes": 452
+    },
+    {
+      "phase": "input_seal",
+      "label": "seal exceptions",
+      "transactionHash": "0xa6b97fc7491d8c9c1a6b2ece36b78432338696e6f4ef4cd94124e58e4041ffe7",
+      "gasEstimate": "49829",
+      "gasLimit": "69794",
+      "gasUsed": "49829",
+      "calldataBytes": 36
+    },
+    {
+      "phase": "dataset_registration",
+      "label": "register periodic",
+      "transactionHash": "0x87b59ba3ff636e6b14de9ed4ac6fe76c8234f27647871869a4c958204d03ba63",
+      "gasEstimate": "720827",
+      "gasLimit": "874992",
+      "gasUsed": "720827",
+      "calldataBytes": 516
+    },
+    {
+      "phase": "experiment_registration",
+      "label": "register fixture experiment",
+      "transactionHash": "0xf97c1bd0da64fbaad56901c537dd6542dc32b1c9d00674841d4199653734c088",
+      "gasEstimate": "804259",
+      "gasLimit": "975110",
+      "gasUsed": "804259",
+      "calldataBytes": 132
+    },
+    {
+      "phase": "permissionless_smoke",
+      "label": "load first particle",
+      "transactionHash": "0xb588bb39b42bfe0190e212b878aa402c5bbcd1de69883900d1f8dc746e3be872",
+      "gasEstimate": "682686",
+      "gasLimit": "829223",
+      "gasUsed": "682686",
+      "calldataBytes": 68
+    }
+  ],
+  "gasByPhase": {
+    "core_deployment": "26103420",
+    "configuration": "1065544",
+    "input_page_deployment": "3417743",
+    "input_upload": "1963901",
+    "input_seal": "348791",
+    "dataset_registration": "1804765",
+    "experiment_registration": "804259",
+    "permissionless_smoke": "682686"
+  },
+  "totalMeasuredGas": "36191109",
+  "feeLimitations": "Local execution gas only. No live Robinhood estimate, L1 data fee, maximum-sized input quote or complete scientific run quote."
+}

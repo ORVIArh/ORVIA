@@ -1,0 +1,31 @@
+{
+  "scope": "Three-atom harmonic-chain minimization plus four-atom complete periodic force checks; not prepared protein or mainnet validation",
+  "passed": true,
+  "initialEnergy": "1",
+  "finalEnergy": "0",
+  "acceptedIterations": 1,
+  "rejectedTrials": 2,
+  "forceRMS": "0",
+  "exactFinalPositions": [
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      2,
+      0,
+      0
+    ],
+    [
+      3,
+      0,
+      0
+    ]
+  ],
+  "independentReference": "Exact harmonic-chain minimum and independent 100-digit derivatives of the complete periodic Hamiltonian",
+  "partitionInvariant": true,
+  "explicitFailureLimits": true,
+  "gasFailureDoesNotBacktrack": true,
+  "completePeriodicHamiltonianDerivativeChecks": 26
+}

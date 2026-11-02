@@ -1,0 +1,9 @@
+{
+  "scope": "Synthetic observable moments and finite-lag Geyer initial monotone estimate; not stationarity evidence",
+  "values_checked": 13,
+  "maximum_absolute_error": "2.82469725176794591781543431579122673385588575071590268635E-33",
+  "absolute_tolerance": "1e-27",
+  "relative_tolerance": "1e-27",
+  "passed": true
+}
+

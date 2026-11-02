@@ -1,0 +1,2583 @@
+{
+  "scope": "Four-atom trajectory, six-atom sparse fixture and two-atom edge cases; local EVM advancement only, excluding deployment/uploads/registration; not protein or Robinhood cost",
+  "chainId": 31337,
+  "runs": [
+    {
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "1",
+      "datasetId": "0xad840354df199278429dbf5c92706a51cc01686606556f46e1af1d01a7edafb0",
+      "atoms": 4,
+      "bondCount": 3,
+      "angleCount": 2,
+      "torsionCount": 1,
+      "allPairCount": 6,
+      "dt": "0x3ff80000000000000000000000000000",
+      "steps": 3,
+      "skin": null
+    },
+    {
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "datasetId": "0xad840354df199278429dbf5c92706a51cc01686606556f46e1af1d01a7edafb0",
+      "atoms": 4,
+      "bondCount": 3,
+      "angleCount": 2,
+      "torsionCount": 1,
+      "allPairCount": 6,
+      "dt": "0x3ff80000000000000000000000000000",
+      "steps": 3,
+      "skin": "0x3ffe0000000000000000000000000000"
+    },
+    {
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "2",
+      "datasetId": "0xad840354df199278429dbf5c92706a51cc01686606556f46e1af1d01a7edafb0",
+      "atoms": 4,
+      "bondCount": 3,
+      "angleCount": 2,
+      "torsionCount": 1,
+      "allPairCount": 6,
+      "dt": "0x3ff80000000000000000000000000000",
+      "steps": 3,
+      "skin": "0x3ffe0000000000000000000000000000"
+    },
+    {
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "datasetId": "0xad840354df199278429dbf5c92706a51cc01686606556f46e1af1d01a7edafb0",
+      "atoms": 4,
+      "bondCount": 3,
+      "angleCount": 2,
+      "torsionCount": 1,
+      "allPairCount": 6,
+      "dt": "0x3ff80000000000000000000000000000",
+      "steps": 3,
+      "skin": "0x3ffe0000000000000000000000000000"
+    },
+    {
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "datasetId": "0xad840354df199278429dbf5c92706a51cc01686606556f46e1af1d01a7edafb0",
+      "atoms": 4,
+      "bondCount": 3,
+      "angleCount": 2,
+      "torsionCount": 1,
+      "allPairCount": 6,
+      "dt": "0x3ff80000000000000000000000000000",
+      "steps": 3,
+      "skin": "0x3ffe0000000000000000000000000000"
+    },
+    {
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "3",
+      "datasetId": "0x8078c8c1b080aae763fb7771d57a18788047eb1079f2d559e3b4189f81e22fdc",
+      "atoms": 2,
+      "bondCount": 1,
+      "angleCount": 0,
+      "torsionCount": 0,
+      "allPairCount": 1,
+      "dt": "0x3fff0000000000000000000000000000",
+      "steps": 1,
+      "skin": "0x3ffe0000000000000000000000000000"
+    },
+    {
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "3",
+      "datasetId": "0x8078c8c1b080aae763fb7771d57a18788047eb1079f2d559e3b4189f81e22fdc",
+      "atoms": 2,
+      "bondCount": 1,
+      "angleCount": 0,
+      "torsionCount": 0,
+      "allPairCount": 1,
+      "dt": "0x3fff0000000000000000000000000000",
+      "steps": 1,
+      "skin": "0x3ffe0000000000000000000000000000"
+    },
+    {
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "4",
+      "datasetId": "0xad840354df199278429dbf5c92706a51cc01686606556f46e1af1d01a7edafb0",
+      "atoms": 4,
+      "bondCount": 3,
+      "angleCount": 2,
+      "torsionCount": 1,
+      "allPairCount": 6,
+      "dt": "0x3ff80000000000000000000000000000",
+      "steps": 1,
+      "skin": "0x3ffe0000000000000000000000000000"
+    },
+    {
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "2",
+      "datasetId": "0x189f93351dccb31bf3088c0d5580aa2488572e5217d21bd974290b96a1d0748a",
+      "atoms": 6,
+      "bondCount": 1,
+      "angleCount": 0,
+      "torsionCount": 0,
+      "allPairCount": 15,
+      "dt": "0x3ff90000000000000000000000000000",
+      "steps": 2,
+      "skin": null
+    },
+    {
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "datasetId": "0x189f93351dccb31bf3088c0d5580aa2488572e5217d21bd974290b96a1d0748a",
+      "atoms": 6,
+      "bondCount": 1,
+      "angleCount": 0,
+      "torsionCount": 0,
+      "allPairCount": 15,
+      "dt": "0x3ff90000000000000000000000000000",
+      "steps": 2,
+      "skin": "0x3ffe0000000000000000000000000000"
+    },
+    {
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "5",
+      "datasetId": "0xa29db130476ec4f75c468f1789428212eb9248b2d19a0916acea1378efe6a593",
+      "atoms": 2,
+      "bondCount": 1,
+      "angleCount": 0,
+      "torsionCount": 0,
+      "allPairCount": 1,
+      "dt": "0x3ffc0000000000000000000000000000",
+      "steps": 1,
+      "skin": "0x3ffe0000000000000000000000000000"
+    }
+  ],
+  "transactions": [
+    {
+      "engine": "allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "1",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "877634"
+    },
+    {
+      "engine": "allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "1",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "901674"
+    },
+    {
+      "engine": "allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "1",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "924334"
+    },
+    {
+      "engine": "allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "1",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "949388"
+    },
+    {
+      "engine": "allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "1",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "734418"
+    },
+    {
+      "engine": "allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "1",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "736488"
+    },
+    {
+      "engine": "allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "1",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "741665"
+    },
+    {
+      "engine": "allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "1",
+      "stage": 3,
+      "work": 1,
+      "gasUsed": "746502"
+    },
+    {
+      "engine": "allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "1",
+      "stage": 3,
+      "work": 1,
+      "gasUsed": "754462"
+    },
+    {
+      "engine": "allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "1",
+      "stage": 4,
+      "work": 1,
+      "gasUsed": "773492"
+    },
+    {
+      "engine": "allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "1",
+      "stage": 5,
+      "work": 1,
+      "gasUsed": "769290"
+    },
+    {
+      "engine": "allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "1",
+      "stage": 5,
+      "work": 1,
+      "gasUsed": "778413"
+    },
+    {
+      "engine": "allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "1",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "985528"
+    },
+    {
+      "engine": "allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "1",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "1129398"
+    },
+    {
+      "engine": "allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "1",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "1070483"
+    },
+    {
+      "engine": "allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "1",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "1759406"
+    },
+    {
+      "engine": "allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "1",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "1753294"
+    },
+    {
+      "engine": "allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "1",
+      "stage": 8,
+      "work": 1,
+      "gasUsed": "2851790"
+    },
+    {
+      "engine": "allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "1",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "752403"
+    },
+    {
+      "engine": "allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "1",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "1145962"
+    },
+    {
+      "engine": "allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "1",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "988680"
+    },
+    {
+      "engine": "allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "1",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "1152605"
+    },
+    {
+      "engine": "allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "1",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "1211117"
+    },
+    {
+      "engine": "allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "1",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "1149516"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "895763"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "919803"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "942463"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "967878"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "752547"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "754617"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "760155"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 3,
+      "work": 1,
+      "gasUsed": "764631"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 3,
+      "work": 1,
+      "gasUsed": "772952"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 4,
+      "work": 1,
+      "gasUsed": "791982"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 5,
+      "work": 1,
+      "gasUsed": "814111"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 5,
+      "work": 1,
+      "gasUsed": "827679"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "753006"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "753006"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "772906"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "773708"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "715569"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "861306"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "861271"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "739121"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "859088"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "867544"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "1003657"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "1147527"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "1088973"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 8,
+      "work": 1,
+      "gasUsed": "1777535"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 8,
+      "work": 1,
+      "gasUsed": "1771784"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "2874566"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "1172222"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "1014940"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "1178865"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "1237377"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "1176137"
+    },
+    {
+      "engine": "allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "1",
+      "stage": 10,
+      "work": 8,
+      "gasUsed": "3788358"
+    },
+    {
+      "engine": "allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "1",
+      "stage": 12,
+      "work": 8,
+      "gasUsed": "5852317"
+    },
+    {
+      "engine": "allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "1",
+      "stage": 15,
+      "work": 8,
+      "gasUsed": "1687758"
+    },
+    {
+      "engine": "allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "1",
+      "stage": 11,
+      "work": 8,
+      "gasUsed": "6352068"
+    },
+    {
+      "engine": "allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "1",
+      "stage": 14,
+      "work": 8,
+      "gasUsed": "2662858"
+    },
+    {
+      "engine": "allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "1",
+      "stage": 10,
+      "work": 8,
+      "gasUsed": "3157230"
+    },
+    {
+      "engine": "allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "1",
+      "stage": 12,
+      "work": 8,
+      "gasUsed": "5853220"
+    },
+    {
+      "engine": "allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "1",
+      "stage": 15,
+      "work": 8,
+      "gasUsed": "1060481"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 11,
+      "work": 8,
+      "gasUsed": "1893459"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 13,
+      "work": 8,
+      "gasUsed": "6588403"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 16,
+      "work": 8,
+      "gasUsed": "2622666"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 11,
+      "work": 8,
+      "gasUsed": "1402279"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 12,
+      "work": 8,
+      "gasUsed": "1192940"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 12,
+      "work": 8,
+      "gasUsed": "6460836"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 16,
+      "work": 8,
+      "gasUsed": "2710913"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 11,
+      "work": 8,
+      "gasUsed": "1462056"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 13,
+      "work": 8,
+      "gasUsed": "6589130"
+    },
+    {
+      "engine": "neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "1",
+      "stage": 16,
+      "work": 8,
+      "gasUsed": "2440479"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "905743"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "929783"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "952443"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "977858"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "762527"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "764597"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "770135"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 3,
+      "work": 1,
+      "gasUsed": "774611"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 3,
+      "work": 1,
+      "gasUsed": "782932"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 4,
+      "work": 1,
+      "gasUsed": "801962"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 5,
+      "work": 1,
+      "gasUsed": "824091"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 5,
+      "work": 1,
+      "gasUsed": "837659"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "762986"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "762986"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "782886"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "783688"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "725549"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "871286"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "871251"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "749101"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "869068"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "877524"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "1013637"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "1157507"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "1098953"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 8,
+      "work": 1,
+      "gasUsed": "1787515"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 8,
+      "work": 1,
+      "gasUsed": "1781764"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "2884546"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "1089963"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "1003163"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "1089195"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "1125535"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "1093878"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 11,
+      "work": 8,
+      "gasUsed": "1903439"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 13,
+      "work": 8,
+      "gasUsed": "6484387"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 16,
+      "work": 8,
+      "gasUsed": "2318935"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 11,
+      "work": 8,
+      "gasUsed": "1412259"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 12,
+      "work": 8,
+      "gasUsed": "1202920"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 12,
+      "work": 8,
+      "gasUsed": "6378577"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 16,
+      "work": 8,
+      "gasUsed": "2385425"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 11,
+      "work": 8,
+      "gasUsed": "1472036"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 13,
+      "work": 8,
+      "gasUsed": "6485114"
+    },
+    {
+      "engine": "inline-primary",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "1",
+      "stage": 16,
+      "work": 8,
+      "gasUsed": "2136748"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "905743"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "929783"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "952443"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "977858"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "762527"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "764597"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "770135"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 3,
+      "work": 1,
+      "gasUsed": "774611"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 3,
+      "work": 1,
+      "gasUsed": "782932"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 4,
+      "work": 1,
+      "gasUsed": "801962"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 5,
+      "work": 1,
+      "gasUsed": "824091"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 5,
+      "work": 1,
+      "gasUsed": "837659"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "762986"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "762986"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "782886"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "783688"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "725549"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "871286"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "871251"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "749101"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "869068"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "877524"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "1013637"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "1157507"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "1098953"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 8,
+      "work": 1,
+      "gasUsed": "1787515"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 8,
+      "work": 1,
+      "gasUsed": "1781764"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "2884546"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "1089963"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "1003163"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "1089195"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "1125535"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "1093878"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 11,
+      "work": 1,
+      "gasUsed": "978697"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 11,
+      "work": 1,
+      "gasUsed": "972180"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 11,
+      "work": 8,
+      "gasUsed": "2171534"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 13,
+      "work": 3,
+      "gasUsed": "3118079"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 15,
+      "work": 2,
+      "gasUsed": "3208708"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 16,
+      "work": 1,
+      "gasUsed": "1004917"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 16,
+      "work": 8,
+      "gasUsed": "2318935"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 11,
+      "work": 3,
+      "gasUsed": "1218548"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 12,
+      "work": 2,
+      "gasUsed": "807423"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 12,
+      "work": 1,
+      "gasUsed": "766953"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 12,
+      "work": 8,
+      "gasUsed": "1152938"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 12,
+      "work": 3,
+      "gasUsed": "988568"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 13,
+      "work": 2,
+      "gasUsed": "1506619"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 13,
+      "work": 1,
+      "gasUsed": "1099762"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 14,
+      "work": 8,
+      "gasUsed": "6406371"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 17,
+      "work": 3,
+      "gasUsed": "987310"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 17,
+      "work": 2,
+      "gasUsed": "967028"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 11,
+      "work": 1,
+      "gasUsed": "864117"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 11,
+      "work": 8,
+      "gasUsed": "1912569"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 13,
+      "work": 3,
+      "gasUsed": "3117871"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 15,
+      "work": 2,
+      "gasUsed": "3209630"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 16,
+      "work": 1,
+      "gasUsed": "1004945"
+    },
+    {
+      "engine": "inline-partition",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "2",
+      "stage": 16,
+      "work": 8,
+      "gasUsed": "2136748"
+    },
+    {
+      "engine": "partition",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "2",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "895763"
+    },
+    {
+      "engine": "partition",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "2",
+      "stage": 1,
+      "work": 8,
+      "gasUsed": "1694578"
+    },
+    {
+      "engine": "partition",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "2",
+      "stage": 4,
+      "work": 3,
+      "gasUsed": "1023538"
+    },
+    {
+      "engine": "partition",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "2",
+      "stage": 6,
+      "work": 2,
+      "gasUsed": "794738"
+    },
+    {
+      "engine": "partition",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "2",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "772906"
+    },
+    {
+      "engine": "partition",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "2",
+      "stage": 6,
+      "work": 8,
+      "gasUsed": "1684466"
+    },
+    {
+      "engine": "partition",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "2",
+      "stage": 7,
+      "work": 3,
+      "gasUsed": "2520319"
+    },
+    {
+      "engine": "partition",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "2",
+      "stage": 8,
+      "work": 2,
+      "gasUsed": "3868394"
+    },
+    {
+      "engine": "partition",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "2",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "1172222"
+    },
+    {
+      "engine": "partition",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "2",
+      "stage": 10,
+      "work": 8,
+      "gasUsed": "3344552"
+    },
+    {
+      "engine": "partition",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "2",
+      "stage": 12,
+      "work": 3,
+      "gasUsed": "840249"
+    },
+    {
+      "engine": "partition",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "2",
+      "stage": 12,
+      "work": 2,
+      "gasUsed": "1209958"
+    },
+    {
+      "engine": "partition",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "2",
+      "stage": 13,
+      "work": 1,
+      "gasUsed": "1082560"
+    },
+    {
+      "engine": "partition",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "2",
+      "stage": 13,
+      "work": 8,
+      "gasUsed": "6758079"
+    },
+    {
+      "engine": "partition",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "2",
+      "stage": 16,
+      "work": 3,
+      "gasUsed": "1359010"
+    },
+    {
+      "engine": "partition",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "2",
+      "stage": 17,
+      "work": 2,
+      "gasUsed": "897408"
+    },
+    {
+      "engine": "partition",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "2",
+      "stage": 11,
+      "work": 1,
+      "gasUsed": "910418"
+    },
+    {
+      "engine": "partition",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "2",
+      "stage": 11,
+      "work": 8,
+      "gasUsed": "1402279"
+    },
+    {
+      "engine": "partition",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "2",
+      "stage": 12,
+      "work": 3,
+      "gasUsed": "811639"
+    },
+    {
+      "engine": "partition",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "2",
+      "stage": 12,
+      "work": 2,
+      "gasUsed": "848816"
+    },
+    {
+      "engine": "partition",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "2",
+      "stage": 12,
+      "work": 1,
+      "gasUsed": "842528"
+    },
+    {
+      "engine": "partition",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "2",
+      "stage": 12,
+      "work": 8,
+      "gasUsed": "4100718"
+    },
+    {
+      "engine": "partition",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "2",
+      "stage": 15,
+      "work": 3,
+      "gasUsed": "3559361"
+    },
+    {
+      "engine": "partition",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "2",
+      "stage": 16,
+      "work": 2,
+      "gasUsed": "1678247"
+    },
+    {
+      "engine": "partition",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "2",
+      "stage": 16,
+      "work": 1,
+      "gasUsed": "1176913"
+    },
+    {
+      "engine": "partition",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "2",
+      "stage": 17,
+      "work": 8,
+      "gasUsed": "1612591"
+    },
+    {
+      "engine": "partition",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "2",
+      "stage": 12,
+      "work": 3,
+      "gasUsed": "843487"
+    },
+    {
+      "engine": "partition",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "2",
+      "stage": 12,
+      "work": 2,
+      "gasUsed": "1209965"
+    },
+    {
+      "engine": "partition",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "2",
+      "stage": 13,
+      "work": 1,
+      "gasUsed": "1082538"
+    },
+    {
+      "engine": "partition",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "2",
+      "stage": 13,
+      "work": 8,
+      "gasUsed": "6758810"
+    },
+    {
+      "engine": "partition",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "2",
+      "stage": 16,
+      "work": 3,
+      "gasUsed": "1358979"
+    },
+    {
+      "engine": "partition",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "2",
+      "stage": 17,
+      "work": 2,
+      "gasUsed": "901493"
+    },
+    {
+      "engine": "rollback",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "3",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "735266"
+    },
+    {
+      "engine": "rollback",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "3",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "764821"
+    },
+    {
+      "engine": "rollback",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "3",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "648694"
+    },
+    {
+      "engine": "rollback",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "3",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "612409"
+    },
+    {
+      "engine": "rollback",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "3",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "633111"
+    },
+    {
+      "engine": "rollback",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "3",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "721155"
+    },
+    {
+      "engine": "rollback",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "3",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "891830"
+    },
+    {
+      "engine": "rollback",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "3",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "941859"
+    },
+    {
+      "engine": "rollback",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "3",
+      "stage": 11,
+      "work": 4,
+      "gasUsed": "1019487"
+    },
+    {
+      "engine": "rollback",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "3",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "745246"
+    },
+    {
+      "engine": "rollback",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "3",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "774801"
+    },
+    {
+      "engine": "rollback",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "3",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "658674"
+    },
+    {
+      "engine": "rollback",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "3",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "622389"
+    },
+    {
+      "engine": "rollback",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "3",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "643091"
+    },
+    {
+      "engine": "rollback",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "3",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "731135"
+    },
+    {
+      "engine": "rollback",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "3",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "901810"
+    },
+    {
+      "engine": "rollback",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "3",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "894332"
+    },
+    {
+      "engine": "rollback",
+      "implementation": "NeighborDynamicsCoordinator:inline",
+      "runId": "3",
+      "stage": 11,
+      "work": 4,
+      "gasUsed": "1029467"
+    },
+    {
+      "engine": "sparse-allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "2",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "757369"
+    },
+    {
+      "engine": "sparse-allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "2",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "781409"
+    },
+    {
+      "engine": "sparse-allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "2",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "804069"
+    },
+    {
+      "engine": "sparse-allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "2",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "804069"
+    },
+    {
+      "engine": "sparse-allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "2",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "804069"
+    },
+    {
+      "engine": "sparse-allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "2",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "809223"
+    },
+    {
+      "engine": "sparse-allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "2",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "659226"
+    },
+    {
+      "engine": "sparse-allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "2",
+      "stage": 5,
+      "work": 1,
+      "gasUsed": "694343"
+    },
+    {
+      "engine": "sparse-allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "2",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "908016"
+    },
+    {
+      "engine": "sparse-allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "2",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "1091613"
+    },
+    {
+      "engine": "sparse-allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "2",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "904119"
+    },
+    {
+      "engine": "sparse-allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "2",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "904119"
+    },
+    {
+      "engine": "sparse-allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "2",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "1105827"
+    },
+    {
+      "engine": "sparse-allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "2",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "904147"
+    },
+    {
+      "engine": "sparse-allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "2",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "906127"
+    },
+    {
+      "engine": "sparse-allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "2",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "906224"
+    },
+    {
+      "engine": "sparse-allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "2",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "906205"
+    },
+    {
+      "engine": "sparse-allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "2",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "906224"
+    },
+    {
+      "engine": "sparse-allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "2",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "1078591"
+    },
+    {
+      "engine": "sparse-allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "2",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "907705"
+    },
+    {
+      "engine": "sparse-allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "2",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "907627"
+    },
+    {
+      "engine": "sparse-allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "2",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "908439"
+    },
+    {
+      "engine": "sparse-allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "2",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "908321"
+    },
+    {
+      "engine": "sparse-allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "2",
+      "stage": 9,
+      "work": 1,
+      "gasUsed": "1067589"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "775498"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "799538"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "822198"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "822198"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "822198"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "827713"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "678442"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 5,
+      "work": 1,
+      "gasUsed": "743609"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "652641"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "672541"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "672541"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "672541"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "672541"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "673343"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "755756"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "754066"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "754066"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "658646"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "754066"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "754695"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "754791"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "754695"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "754791"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "776707"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "755504"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "755504"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "756239"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "756198"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "784363"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "931515"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "1117873"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "1132087"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "1104851"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 10,
+      "work": 1,
+      "gasUsed": "1094210"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 11,
+      "work": 8,
+      "gasUsed": "1887720"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 12,
+      "work": 8,
+      "gasUsed": "2525837"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 16,
+      "work": 8,
+      "gasUsed": "1841230"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 11,
+      "work": 8,
+      "gasUsed": "1521033"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 12,
+      "work": 8,
+      "gasUsed": "2946198"
+    },
+    {
+      "engine": "sparse-neighbors",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "4",
+      "stage": 17,
+      "work": 8,
+      "gasUsed": "1149979"
+    },
+    {
+      "engine": "sparse-allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "2",
+      "stage": 10,
+      "work": 8,
+      "gasUsed": "2565319"
+    },
+    {
+      "engine": "sparse-allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "2",
+      "stage": 14,
+      "work": 8,
+      "gasUsed": "2945497"
+    },
+    {
+      "engine": "sparse-allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "2",
+      "stage": 14,
+      "work": 8,
+      "gasUsed": "2765197"
+    },
+    {
+      "engine": "sparse-allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "2",
+      "stage": 15,
+      "work": 8,
+      "gasUsed": "1583441"
+    },
+    {
+      "engine": "sparse-allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "2",
+      "stage": 10,
+      "work": 8,
+      "gasUsed": "2947560"
+    },
+    {
+      "engine": "sparse-allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "2",
+      "stage": 14,
+      "work": 8,
+      "gasUsed": "2913800"
+    },
+    {
+      "engine": "sparse-allpairs",
+      "implementation": "PeriodicDynamicsCoordinator",
+      "runId": "2",
+      "stage": 14,
+      "work": 8,
+      "gasUsed": "1869832"
+    },
+    {
+      "engine": "empty",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "5",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "715366"
+    },
+    {
+      "engine": "empty",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "5",
+      "stage": 1,
+      "work": 1,
+      "gasUsed": "744921"
+    },
+    {
+      "engine": "empty",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "5",
+      "stage": 2,
+      "work": 1,
+      "gasUsed": "648694"
+    },
+    {
+      "engine": "empty",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "5",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "612409"
+    },
+    {
+      "engine": "empty",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "5",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "633111"
+    },
+    {
+      "engine": "empty",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "5",
+      "stage": 6,
+      "work": 1,
+      "gasUsed": "718197"
+    },
+    {
+      "engine": "empty",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "5",
+      "stage": 7,
+      "work": 1,
+      "gasUsed": "892955"
+    },
+    {
+      "engine": "empty",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "5",
+      "stage": 11,
+      "work": 2,
+      "gasUsed": "883568"
+    },
+    {
+      "engine": "empty",
+      "implementation": "NeighborDynamicsCoordinator:external",
+      "runId": "5",
+      "stage": 12,
+      "work": 8,
+      "gasUsed": "1134316"
+    }
+  ]
+}

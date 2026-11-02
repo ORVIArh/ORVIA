@@ -1,0 +1,214 @@
+{
+  "scope": "Local fixture MBAR advancement only; excludes input collection, deployment, diagnostics and repeat summaries",
+  "chainId": 31337,
+  "transactions": [
+    {
+      "analysisId": "1",
+      "gasUsed": "3311117"
+    },
+    {
+      "analysisId": "1",
+      "gasUsed": "3204416"
+    },
+    {
+      "analysisId": "1",
+      "gasUsed": "3188522"
+    },
+    {
+      "analysisId": "1",
+      "gasUsed": "3819599"
+    },
+    {
+      "analysisId": "1",
+      "gasUsed": "3499249"
+    },
+    {
+      "analysisId": "1",
+      "gasUsed": "3786548"
+    },
+    {
+      "analysisId": "1",
+      "gasUsed": "3148923"
+    },
+    {
+      "analysisId": "1",
+      "gasUsed": "2974404"
+    },
+    {
+      "analysisId": "1",
+      "gasUsed": "3508632"
+    },
+    {
+      "analysisId": "1",
+      "gasUsed": "210204"
+    },
+    {
+      "analysisId": "2",
+      "gasUsed": "74240"
+    },
+    {
+      "analysisId": "2",
+      "gasUsed": "438444"
+    },
+    {
+      "analysisId": "2",
+      "gasUsed": "1924167"
+    },
+    {
+      "analysisId": "2",
+      "gasUsed": "3199624"
+    },
+    {
+      "analysisId": "2",
+      "gasUsed": "135662"
+    },
+    {
+      "analysisId": "2",
+      "gasUsed": "1051733"
+    },
+    {
+      "analysisId": "2",
+      "gasUsed": "2134201"
+    },
+    {
+      "analysisId": "2",
+      "gasUsed": "3412050"
+    },
+    {
+      "analysisId": "2",
+      "gasUsed": "286067"
+    },
+    {
+      "analysisId": "2",
+      "gasUsed": "664698"
+    },
+    {
+      "analysisId": "2",
+      "gasUsed": "1096206"
+    },
+    {
+      "analysisId": "2",
+      "gasUsed": "3876165"
+    },
+    {
+      "analysisId": "2",
+      "gasUsed": "77040"
+    },
+    {
+      "analysisId": "2",
+      "gasUsed": "411977"
+    },
+    {
+      "analysisId": "2",
+      "gasUsed": "2732394"
+    },
+    {
+      "analysisId": "2",
+      "gasUsed": "3148923"
+    },
+    {
+      "analysisId": "2",
+      "gasUsed": "292957"
+    },
+    {
+      "analysisId": "2",
+      "gasUsed": "900721"
+    },
+    {
+      "analysisId": "2",
+      "gasUsed": "1244315"
+    },
+    {
+      "analysisId": "2",
+      "gasUsed": "3662831"
+    },
+    {
+      "analysisId": "2",
+      "gasUsed": "291179"
+    },
+    {
+      "analysisId": "2",
+      "gasUsed": "414467"
+    },
+    {
+      "analysisId": "2",
+      "gasUsed": "210204"
+    },
+    {
+      "analysisId": "3",
+      "gasUsed": "3311117"
+    },
+    {
+      "analysisId": "3",
+      "gasUsed": "3204416"
+    },
+    {
+      "analysisId": "3",
+      "gasUsed": "3188522"
+    },
+    {
+      "analysisId": "3",
+      "gasUsed": "3819599"
+    },
+    {
+      "analysisId": "3",
+      "gasUsed": "3499249"
+    },
+    {
+      "analysisId": "3",
+      "gasUsed": "3786548"
+    },
+    {
+      "analysisId": "3",
+      "gasUsed": "3148923"
+    },
+    {
+      "analysisId": "3",
+      "gasUsed": "2974404"
+    },
+    {
+      "analysisId": "3",
+      "gasUsed": "3508632"
+    },
+    {
+      "analysisId": "3",
+      "gasUsed": "210204"
+    },
+    {
+      "analysisId": "4",
+      "gasUsed": "1572712"
+    },
+    {
+      "analysisId": "5",
+      "gasUsed": "3311117"
+    },
+    {
+      "analysisId": "5",
+      "gasUsed": "940532"
+    },
+    {
+      "analysisId": "6",
+      "gasUsed": "1175840"
+    },
+    {
+      "analysisId": "7",
+      "gasUsed": "1154929"
+    },
+    {
+      "analysisId": "8",
+      "gasUsed": "1152574"
+    },
+    {
+      "analysisId": "9",
+      "gasUsed": "1154929"
+    },
+    {
+      "analysisId": "10",
+      "gasUsed": "1169509"
+    },
+    {
+      "analysisId": "11",
+      "gasUsed": "1154929"
+    }
+  ]
+}
