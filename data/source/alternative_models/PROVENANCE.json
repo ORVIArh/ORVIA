@@ -1,0 +1,28 @@
+{
+  "schema": "orvia.public-source-package.v1",
+  "article_doi": "10.1038/s41586-025-08876-5",
+  "dataset_doi": "10.6084/m9.figshare.24948180.v1",
+  "source_url": "https://ndownloader.figshare.com/files/52336004",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "attribution": "Klebl, McMillan, Risi et al., Nature 642, 519\u2013526 (2025)",
+  "scope": "Two complete selected members only; full 1.97 GB ZIP and trajectories excluded. Scientific input readiness remains false.",
+  "files": [
+    {
+      "file": "Primed_input.pdb.gz",
+      "packaged_bytes": 7450998,
+      "packaged_sha256": "6e813b922c27adbc806decb5729ea5a3217fd6ea31884ca9bff385fb51a61f4a",
+      "uncompressed_bytes": 36989365,
+      "uncompressed_sha256": "aaa0e02334fb5d553750a451c4a5304823199a31a55747c25dbbc44a93269017",
+      "modification": "Deterministic gzip compression; uncompressed source bytes unchanged."
+    },
+    {
+      "file": "Input_parm.prmtop.gz",
+      "packaged_bytes": 1412048,
+      "packaged_sha256": "b7ff6a3e911d91e11f3bd791a8a71ad8490a189c3d97a39224f3128dd5ddae01",
+      "uncompressed_bytes": 11380370,
+      "uncompressed_sha256": "4bd79fded29062a2d848119343666c6fde47ed1cf58253664a4d84555b299b7f",
+      "modification": "Deterministic gzip compression; uncompressed source bytes unchanged."
+    }
+  ]
+}
