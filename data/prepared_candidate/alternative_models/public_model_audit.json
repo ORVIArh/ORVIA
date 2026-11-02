@@ -1,0 +1,346 @@
+{
+  "schema": "orvia.public-model-audit.v1",
+  "provenance": {
+    "article_doi": "10.1038/s41586-025-08876-5",
+    "dataset_doi": "10.6084/m9.figshare.24948180.v1",
+    "source_url": "https://ndownloader.figshare.com/files/52336004",
+    "source_archive_bytes": 1973011747,
+    "source_archive_reported_md5": "6ba4268bb23317f68f50dc9d6cb49cda",
+    "complete_archive_downloaded": false,
+    "members": [
+      {
+        "name": "MD_trajectories/Primed_input.pdb",
+        "offset": 281,
+        "compressed": 7660313,
+        "size": 36989365,
+        "crc32": "72516113",
+        "sha256": "aaa0e02334fb5d553750a451c4a5304823199a31a55747c25dbbc44a93269017"
+      },
+      {
+        "name": "MD_trajectories/Primed_RPI/Input_parm.prmtop",
+        "offset": 1348960111,
+        "compressed": 1454021,
+        "size": 11380370,
+        "crc32": "f10b25f4",
+        "sha256": "4bd79fded29062a2d848119343666c6fde47ed1cf58253664a4d84555b299b7f"
+      }
+    ],
+    "license": "CC BY 4.0",
+    "attribution": "Klebl, McMillan, Risi et al., Nature 642, 519–526 (2025)"
+  },
+  "source_force_field_label": [
+    "1    CHARMM36 ALL-ATOM FORCE FIELD"
+  ],
+  "topology_atoms": 29549,
+  "topology_residues": 1871,
+  "topology_residue_counts": {
+    "ADP": 4,
+    "ALA": 144,
+    "ARG": 89,
+    "ASN": 69,
+    "ASP": 101,
+    "CYS": 31,
+    "GLN": 65,
+    "GLU": 138,
+    "GLY": 121,
+    "H2PO": 1,
+    "HSD": 48,
+    "HSE": 2,
+    "ILE": 139,
+    "LEU": 148,
+    "LYS": 119,
+    "MET": 67,
+    "MG": 9,
+    "PHE": 76,
+    "PRO": 83,
+    "SER": 105,
+    "THR": 114,
+    "TRP": 19,
+    "TYR": 81,
+    "VAL": 98
+  },
+  "source_pdb_atoms": 468219,
+  "positional_identity_audit": {
+    "index_base": 0,
+    "compared_atoms": 29549,
+    "coordinate_atoms": 468219,
+    "matching_prefix_atoms": 29544,
+    "mismatch_count": 5,
+    "mismatches": [
+      {
+        "source_atom_index": 29544,
+        "expected_topology": {
+          "atom_name": "MG",
+          "residue_name": "MG"
+        },
+        "positional_pdb": {
+          "atom_name": "C1",
+          "residue_name": "ACET"
+        }
+      },
+      {
+        "source_atom_index": 29545,
+        "expected_topology": {
+          "atom_name": "MG",
+          "residue_name": "MG"
+        },
+        "positional_pdb": {
+          "atom_name": "C2",
+          "residue_name": "ACET"
+        }
+      },
+      {
+        "source_atom_index": 29546,
+        "expected_topology": {
+          "atom_name": "MG",
+          "residue_name": "MG"
+        },
+        "positional_pdb": {
+          "atom_name": "H1",
+          "residue_name": "ACET"
+        }
+      },
+      {
+        "source_atom_index": 29547,
+        "expected_topology": {
+          "atom_name": "MG",
+          "residue_name": "MG"
+        },
+        "positional_pdb": {
+          "atom_name": "H2",
+          "residue_name": "ACET"
+        }
+      },
+      {
+        "source_atom_index": 29548,
+        "expected_topology": {
+          "atom_name": "MG",
+          "residue_name": "MG"
+        },
+        "positional_pdb": {
+          "atom_name": "H3",
+          "residue_name": "ACET"
+        }
+      }
+    ],
+    "directly_runnable_matching_pair": false,
+    "interpretation": "A matching prefix is component evidence, not a complete coordinate/topology correspondence."
+  },
+  "selected_cofactor_charge_audit": {
+    "storage_convention": "CHAMBER: raw CHARGE / sqrt(332.0716)",
+    "scaling_factor_decimal": "18.2228318326214051686479355207270737549920",
+    "primary_implementation_source": "https://parmed.github.io/ParmEd/html/_modules/parmed/amber/_chamberparm.html",
+    "tolerance_e": "1e-12",
+    "residues": [
+      {
+        "source_residue_index": 1857,
+        "residue_label": "H2PO",
+        "atom_count": 7,
+        "sum_charge_e": "-0.999999999999999595636506817243",
+        "nearest_integer_charge_e": -1,
+        "absolute_residual_e": "0.000000000000000404363493182757"
+      },
+      {
+        "source_residue_index": 1858,
+        "residue_label": "MG",
+        "atom_count": 1,
+        "sum_charge_e": "2.000000000000000091242905835419",
+        "nearest_integer_charge_e": 2,
+        "absolute_residual_e": "0.000000000000000091242905835419"
+      },
+      {
+        "source_residue_index": 1859,
+        "residue_label": "ADP",
+        "atom_count": 39,
+        "sum_charge_e": "-2.999999999999999694562082464133",
+        "nearest_integer_charge_e": -3,
+        "absolute_residual_e": "0.000000000000000305437917535867"
+      }
+    ],
+    "inference_limit": "Net charges in this source model; not a pH assignment or transferable cardiac force field.",
+    "production_parameters_exported": false
+  },
+  "selected_cofactor_cross_boundary_bonded_records": {
+    "BONDS_INC_HYDROGEN": 0,
+    "BONDS_WITHOUT_HYDROGEN": 0,
+    "ANGLES_INC_HYDROGEN": 0,
+    "ANGLES_WITHOUT_HYDROGEN": 0,
+    "DIHEDRALS_INC_HYDROGEN": 0,
+    "DIHEDRALS_WITHOUT_HYDROGEN": 0,
+    "CHARMM_UREY_BRADLEY": 0,
+    "CHARMM_IMPROPERS": 0
+  },
+  "source_pdb_atom_residue_counts": {
+    "ACET": 728,
+    "ADP": 156,
+    "ALA": 1454,
+    "ARG": 2136,
+    "ASN": 966,
+    "ASP": 1219,
+    "CLA": 78,
+    "CYS": 341,
+    "GLN": 1107,
+    "GLU": 2071,
+    "GLY": 847,
+    "H2PO": 7,
+    "HSD": 816,
+    "HSE": 34,
+    "ILE": 2641,
+    "LEU": 2812,
+    "LYS": 2618,
+    "MET": 1139,
+    "MG": 9,
+    "PHE": 1526,
+    "POT": 206,
+    "PRO": 1162,
+    "SER": 1155,
+    "THR": 1608,
+    "TRP": 456,
+    "TYR": 1701,
+    "VAL": 1568,
+    "WAT": 437658
+  },
+  "selected_cofactor_atoms": 47,
+  "selected_cofactor_residues": [
+    {
+      "source_residue_index": 1857,
+      "label": "H2PO",
+      "source_atom_indices": [
+        29377,
+        29378,
+        29379,
+        29380,
+        29381,
+        29382,
+        29383
+      ]
+    },
+    {
+      "source_residue_index": 1858,
+      "label": "MG",
+      "source_atom_indices": [
+        29384
+      ]
+    },
+    {
+      "source_residue_index": 1859,
+      "label": "ADP",
+      "source_atom_indices": [
+        29385,
+        29386,
+        29387,
+        29388,
+        29389,
+        29390,
+        29391,
+        29392,
+        29393,
+        29394,
+        29395,
+        29396,
+        29397,
+        29398,
+        29399,
+        29400,
+        29401,
+        29402,
+        29403,
+        29404,
+        29405,
+        29406,
+        29407,
+        29408,
+        29409,
+        29410,
+        29411,
+        29412,
+        29413,
+        29414,
+        29415,
+        29416,
+        29417,
+        29418,
+        29419,
+        29420,
+        29421,
+        29422,
+        29423
+      ]
+    }
+  ],
+  "internal_term_counts": {
+    "BONDS_INC_HYDROGEN": 14,
+    "BONDS_WITHOUT_HYDROGEN": 33,
+    "ANGLES_INC_HYDROGEN": 28,
+    "ANGLES_WITHOUT_HYDROGEN": 51,
+    "DIHEDRALS_INC_HYDROGEN": 59,
+    "DIHEDRALS_WITHOUT_HYDROGEN": 73,
+    "CHARMM_UREY_BRADLEY": 13,
+    "CHARMM_IMPROPERS": 2
+  },
+  "declared_formats": {
+    "CTITLE": "%FORMAT(a80)",
+    "POINTERS": "%FORMAT(10I8)",
+    "FORCE_FIELD_TYPE": "%FORMAT(i2,a78)",
+    "ATOM_NAME": "%FORMAT(20a4)",
+    "CHARGE": "%FORMAT(3E24.16)",
+    "ATOMIC_NUMBER": "%FORMAT(10I8)",
+    "MASS": "%FORMAT(5E16.8)",
+    "ATOM_TYPE_INDEX": "%FORMAT(10I8)",
+    "NUMBER_EXCLUDED_ATOMS": "%FORMAT(10I8)",
+    "NONBONDED_PARM_INDEX": "%FORMAT(10I8)",
+    "RESIDUE_LABEL": "%FORMAT(20a4)",
+    "RESIDUE_POINTER": "%FORMAT(10I8)",
+    "BOND_FORCE_CONSTANT": "%FORMAT(5E16.8)",
+    "BOND_EQUIL_VALUE": "%FORMAT(5E16.8)",
+    "ANGLE_FORCE_CONSTANT": "%FORMAT(5E16.8)",
+    "ANGLE_EQUIL_VALUE": "%FORMAT(3E25.17)",
+    "CHARMM_UREY_BRADLEY_COUNT": "%FORMAT(2I8)",
+    "CHARMM_UREY_BRADLEY": "%FORMAT(10I8)",
+    "CHARMM_UREY_BRADLEY_FORCE_CONSTANT": "%FORMAT(5E16.8)",
+    "CHARMM_UREY_BRADLEY_EQUIL_VALUE": "%FORMAT(5E16.8)",
+    "DIHEDRAL_FORCE_CONSTANT": "%FORMAT(5E16.8)",
+    "DIHEDRAL_PERIODICITY": "%FORMAT(5E16.8)",
+    "DIHEDRAL_PHASE": "%FORMAT(5E16.8)",
+    "SCEE_SCALE_FACTOR": "%FORMAT(5E16.8)",
+    "SCNB_SCALE_FACTOR": "%FORMAT(5E16.8)",
+    "CHARMM_NUM_IMPROPERS": "%FORMAT(10I8)",
+    "CHARMM_IMPROPERS": "%FORMAT(10I8)",
+    "CHARMM_NUM_IMPR_TYPES": "%FORMAT(I8)",
+    "CHARMM_IMPROPER_FORCE_CONSTANT": "%FORMAT(5E16.8)",
+    "CHARMM_IMPROPER_PHASE": "%FORMAT(5E16.8)",
+    "SOLTY": "%FORMAT(5E16.8)",
+    "LENNARD_JONES_ACOEF": "%FORMAT(3E24.16)",
+    "LENNARD_JONES_BCOEF": "%FORMAT(3E24.16)",
+    "LENNARD_JONES_14_ACOEF": "%FORMAT(3E24.16)",
+    "LENNARD_JONES_14_BCOEF": "%FORMAT(3E24.16)",
+    "BONDS_INC_HYDROGEN": "%FORMAT(10I8)",
+    "BONDS_WITHOUT_HYDROGEN": "%FORMAT(10I8)",
+    "ANGLES_INC_HYDROGEN": "%FORMAT(10I8)",
+    "ANGLES_WITHOUT_HYDROGEN": "%FORMAT(10I8)",
+    "DIHEDRALS_INC_HYDROGEN": "%FORMAT(10I8)",
+    "DIHEDRALS_WITHOUT_HYDROGEN": "%FORMAT(10I8)",
+    "EXCLUDED_ATOMS_LIST": "%FORMAT(10I8)",
+    "HBOND_ACOEF": "%FORMAT(5E16.8)",
+    "HBOND_BCOEF": "%FORMAT(5E16.8)",
+    "HBCUT": "%FORMAT(5E16.8)",
+    "AMBER_ATOM_TYPE": "%FORMAT(20a4)",
+    "TREE_CHAIN_CLASSIFICATION": "%FORMAT(20a4)",
+    "JOIN_ARRAY": "%FORMAT(10I8)",
+    "IROTAT": "%FORMAT(10I8)",
+    "SOLVENT_POINTERS": "%FORMAT(3I8)",
+    "ATOMS_PER_MOLECULE": "%FORMAT(10I8)",
+    "BOX_DIMENSIONS": "%FORMAT(5E16.8)"
+  },
+  "cmap_flags_present": [],
+  "decision": "Published component evidence supports investigating a separately declared ADP+Pi model; it does not complete ORVIA-001.",
+  "limitations": [
+    "Analysis topology has 29,549 atoms, while supplied solvated PDB has 468,219; these cannot be used directly as a matching runnable pair.",
+    "The first 29,544 positional atom/residue identities match, but the final five topology Mg atoms overlap PDB acetate atoms; a simple prefix truncation does not repair the pair.",
+    "The 47 extracted cofactor atoms pass positional name/residue checks and source charge sums, not full interaction, coordination, transferability or thermodynamic validation.",
+    "No CMAP flags occur in the inspected exported topology; reconcile this with the declared protein force field before reuse.",
+    "No aficamten, compound17, or cardiac-myosin prepared complex occurs in this selected source.",
+    "Compatible complete protein/cofactor/ligand parameters, solvent and ions, missing residues, hybrid mapping and validation remain necessary.",
+    "A clinical or experimentally validated affinity claim is not implied; matched Kd is not a prerequisite for deploying a research engine."
+  ]
+}
