@@ -1,0 +1,13 @@
+{
+  "manifestSha256": "0eb0fdd68ab31597f613319474d67c16bb2a4b8e65b391553be50c13ab1e8aa3",
+  "launcherSha256": "93dd1b963879136d2690d901a081727072878e2e53c449582a78d77738e0d7d6",
+  "bridgeSha256": "ec1c3e04a2132c9c864be613272f544c6b0a5396b9132e75be8dd0decf8f4956",
+  "sources": {
+    "scripts/deployment/hybrid_operator_market.mjs": "2074d602c493f6c4c685c727902cde1eb986165069bfa1a50a9aea3a7c8ac6b1",
+    "scripts/deployment/market_recovery.mjs": "dd87d01f86a01944424b861fcd89b3e369afddaa0fda416a95e479475b12a193"
+  },
+  "helperTests": 13,
+  "operatorTests": 13,
+  "bridgeTests": 12,
+  "publicTransactionsSent": 0
+}
