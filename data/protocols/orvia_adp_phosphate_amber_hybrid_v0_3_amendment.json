@@ -1,0 +1,79 @@
+{
+  "schema": "orvia.hybrid-research-protocol-amendment.v1",
+  "protocol_id": "ORVIA-ADP-PHOSPHATE-AMBER-GPU-HYBRID-v0.3",
+  "parent_protocol_id": "ORVIA-ADP-PHOSPHATE-AMBER-GPU-HYBRID-v0.2",
+  "parent_artifact": "data/protocols/orvia_adp_phosphate_amber_hybrid_v0_2.json",
+  "parent_sha256": "d7f17eb7b03a9339a4b87cbb7ec8e4db58ab9770a64eda606cab83be7d6b0f67",
+  "status": "COORDINATE_REPAIR_VALIDATED_OTHER_EXECUTION_GATES_OPEN",
+  "scientific_acceptance": false,
+  "production_ready": false,
+  "ready_for_sampling": false,
+  "inheritance": "All chemical model, native Hamiltonian, numerical/parameter/alchemical/ensemble/sampling limits and schedule from the frozen parent remain unchanged. Only the coordinate candidate and completed geometric subchecks are amended.",
+  "coordinate_changes": {
+    "corrected_author_residues": [
+      "THR629 alpha and beta",
+      "ILE631 alpha with beta preserved",
+      "LYS637 alpha",
+      "PHE735 alpha"
+    ],
+    "author_map_verified": "Native residue indices1-750 map exactly to author33-782; all target residues and the two mobile loops are absent from observed source heavy coordinates.",
+    "mobile_unobserved_author_windows": [
+      [
+        626,
+        644
+      ],
+      [
+        732,
+        735
+      ]
+    ],
+    "mobile_protein_atoms": 343,
+    "fixed_protein_atoms": 11699,
+    "fixed_protein_coordinates_bit_preserved_vs_v0_2": true,
+    "maximum_mobile_displacement_nm": 0.7013871562136321,
+    "temporary_preparation_only": "Native dry ff03.r1 protein potential plus fixed atoms and one-sided chirality walls; OpenCL AppleM5 single-precision minimization followed by independent Reference cleanup. Walls and altered masses are not part of any native/production System.",
+    "preparation_chirality_wall": {
+      "k_kJ_mol": 100000,
+      "soft_target_normalized_positive_volume": 0.4,
+      "minimum_accepted_normalized_positive_volume": 0.25,
+      "protect_alpha_beta_heavy_and_four_substituent_volumes": true
+    },
+    "solvent_clash_relief": "Same unchanged0.60 native-LJ trigger,0.70 target and rigid-whole-water/K+/Cl- translations as parent; Mg and all other solutes fixed.",
+    "prior_failed_attempts_retained": [
+      "workspace:output/full-model-repair/adppi-v0.3-stereochemistry",
+      "workspace:output/full-model-repair/adppi-v0.3-stereochemistry-r2",
+      "workspace:output/full-model-repair/adppi-v0.3-clash-relief"
+    ]
+  },
+  "candidate_bindings": {
+    "complex33": {
+      "native_atoms": 132935,
+      "positions_sha256": "55366f20dab76493f67fd465f1cf88d2aa740c932cb080b1ef1730b96436d1c7",
+      "native_system_xml_sha256": "13939620df9a6c18ae249afa4add4e442b6004eadfc641d9078bcd45a798cc93",
+      "positions_artifact": "workspace:output/full-model-repair/adppi-v0.3-clash-relief-r3/complex33/positions.json"
+    },
+    "solvent33": {
+      "native_atoms": 151505,
+      "positions_sha256": "f9425cc8ce73ff0d2dde297e467b71f64f8cd27ef1d8103e16297c8eca497e89",
+      "native_system_xml_sha256": "e7927eda87abc0a7380cd6969b54f9e0c2c6f3a6ee5f85b5f61ccab4266af2c3",
+      "positions_artifact": "workspace:output/full-model-repair/adppi-v0.3-clash-relief-r3/solvent33/positions.json"
+    }
+  },
+  "passed_geometric_subchecks": {
+    "independent_structure_audit_sha256": "235526fd81c9094f94e8790f627dd473729d24cb6162ce039d21a839d1109d00",
+    "legacy_stricter_geometry_audit_sha256": "7f1a2d9b1aa2a94930458ccb64638c7f027d4b3271491af352ede3426e0e9a79",
+    "alpha_centers": 701,
+    "beta_centers": 89,
+    "remaining_incorrect_or_degenerate_protein_stereocenters": 0,
+    "native_B_ligand_CIP": "R at native atom13 retained in both legs",
+    "unexplained_tetrahedral_inversions": 0,
+    "bond_outliers_above_0_25_A": 0,
+    "angle_outliers_above_30_degrees": 0,
+    "Bondi_heavy_clashes_above_0_8_A": 0,
+    "native_positive_LJ_contacts_below_0_6_minimum": 0,
+    "maximum_bond_length_error_A": 0.14768595024886655,
+    "maximum_angle_error_degrees": 22.230944117051123,
+    "Mg_first_shell": "Six O/N/S neighbors within0.35nm retained; distance-shell agreement does not validate coordination energetics."
+  },
+  "remaining_gates": "All parent G2-G6 gates remain open, plus physical/microstate/loop-conformation/coordination uncertainty in G1. Geometric consistency does not establish equilibration or binding-affinity validity."
+}
