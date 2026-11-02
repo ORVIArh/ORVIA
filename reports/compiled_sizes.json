@@ -1,0 +1,1149 @@
+{
+  "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+  "settings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "evmVersion": "shanghai",
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "metadata"
+        ]
+      }
+    }
+  },
+  "scope": "Experimental molecular numerics, alternative resumable dynamics and analysis components; no integrated production RBFE system, mainnet deployment or complete 64-slot implementation.",
+  "targetChainId": 4663,
+  "documentedLimitsSource": "https://docs.robinhood.com/chain/differences-from-ethereum/",
+  "constructorArgumentsIncludedInSizes": false,
+  "sources": {
+    "contracts/analysis/MBARFreeEnergyEstimator.sol": "6026c479247a5ff326fa2feadb1e4659ef585512fb180460bebd0ab2407ce223",
+    "contracts/analysis/ReducedPotentialCollector.sol": "87b5e30940220d30733252d51e64c37d222e0b52a5178c91f1df424f647a1fad",
+    "contracts/analysis/SamplingDiagnostics.sol": "2ae107854eddc1bbb1659bace5abe0bf0e4010645fe219a0a5bac67073c5efb3",
+    "contracts/analysis/TimeSeriesDiagnostics.sol": "b0a6ec90fc2a645a59a73f71c3885234f38eaec0b812552a7b1ff16efd101794",
+    "contracts/analysis/UncertaintyAndResults.sol": "91e5c891c836c662e6e3815f4d6e273b07d957cb00a5b5996bb8be407187c80e",
+    "contracts/core/ConstrainedDynamicsCoordinator.sol": "b4b257bc6f75b7c3650a678f4949a1a824e59f228ca0de4f35ba1d391c1100cb",
+    "contracts/core/ConstraintCatalog.sol": "5556f2331b6f6c933b04689df091ae3f481713c1b3b4c8676c1d4ce99cf5d295",
+    "contracts/core/ConstraintSolver.sol": "fb07f0e9048a57a5d75e7e4684d3a04ead9f465916a614245ca3c4d477696d01",
+    "contracts/core/DataPage.sol": "2182a9cb818bb6845db7b4a098130f2d0538bf01bf46b80e453e9f57ab30f44e",
+    "contracts/core/DatasetCatalog.sol": "a501f219ff82529604c878e1e595cc051c2eb9361b973be29f652c58730fb60d",
+    "contracts/core/DynamicsCoordinator.sol": "bc2fa4517c012b1959fcc86ff4ed7c394589033b9cf760acfc2fad3dec70ad36",
+    "contracts/core/DynamicsDataset.sol": "273bba6245f387a9407d17c17b542dc7196475d90027dac9be5d38337e316a97",
+    "contracts/core/EwaldDynamicsCoordinator.sol": "48f9b079bffc46ab69245f858022ea4b7f7b0f9f507478e57b8b2a1d61dab1d4",
+    "contracts/core/EwaldForceEvaluator.sol": "f2b8a2a42820cb1915cf484ef4d39bc60f4194a1e562cc2f1d99e61c92e3c025",
+    "contracts/core/ExperimentRegistry.sol": "39c3e8382b3fae049c16da81b1ea586e36deaa5ecbbda466b8377e240f78f047",
+    "contracts/core/LangevinDynamicsCoordinator.sol": "280b9baf7db089a91d5fb9c47d951140a176bfe7f00599ce8aea787363f5eb3f",
+    "contracts/core/NeighborDynamicsCoordinator.sol": "28c24ac832cf8a419519c45824ae2ebbcd3b2b490f3d6fa26017e088766559c4",
+    "contracts/core/NeighborList.sol": "ba4a3bb8b34b03fb94e541eb0ea0634dc9c00c4fa146314e6cb787d919de35d4",
+    "contracts/core/PagedBondCoordinator.sol": "b3cf7b4f8e118caf12be9564b92df9ec8756e3c8d9da8b320e9b4873192a6164",
+    "contracts/core/PeriodicDataset.sol": "1d01a1a4525f637b70781a8264f80e83e8c6686f0d33068b25446ff208fddb6e",
+    "contracts/core/PeriodicDynamicsCoordinator.sol": "e5a2da4daa285563e4ecfdc3dc4d0ead3bdbaf35dd6fc4ccb9212173e6276c3f",
+    "contracts/core/PeriodicMinimizer.sol": "48771b706224c06bfd6e9c7c7f82a6ec518f348ab007bed1f4701bcaa1cd69b9",
+    "contracts/core/ResumableBondEngine.sol": "02d2098c3250c27c4c7fcc26dc1e7afa5151d83220662fc7864dec2dabe61984",
+    "contracts/core/WorkingStatePage.sol": "47441435615ea985ab4b4db97d10efc39da8c945823d38e651c7f454e3c2137a",
+    "contracts/kernels/CoulombPairKernel.sol": "4640f583410bbf6e24d10f6df5b5bb8cae1a4a98aace7f979144375596bbdc93",
+    "contracts/kernels/CounterRandom.sol": "98f38ee2e2962858ac681565b369a2a983f8aecd7b8188a9b191a4a4c5954190",
+    "contracts/kernels/DistanceConstraintKernel.sol": "c5d05a76366559595f7c81617c6c65d72938a64eb12ba43708961c8f65756e37",
+    "contracts/kernels/EwaldCorrections.sol": "0b8210b673f03606d1beb1d8a1663f2bc4bf371a884e5443733fa70ecc6d78e8",
+    "contracts/kernels/EwaldKernelBase.sol": "c9f44e1dbf573ad9505e886e0f3854c2ffda850e3a0fd0b08c22563f23031a17",
+    "contracts/kernels/EwaldRealSpaceKernel.sol": "f4ceec084d7131de3141ad0f8be06dd1ff6dfa722d6499740af9de7cd431ebf1",
+    "contracts/kernels/EwaldReciprocalKernel.sol": "7225171a789fdf4ced5256b293a428138e27c4c2dbe73eea5f22a52af94ec1bf",
+    "contracts/kernels/HarmonicAngleKernel.sol": "d525eeecc8625d1e05112dc2977a91fe1d688d7585f99d08151cdc73fa2cbe09",
+    "contracts/kernels/HarmonicBondKernel.sol": "cbb2b99181ab7eec4a07dca99734e9ab2a3fa6ae4bd61b39d3a7bc6ef0f63108",
+    "contracts/kernels/InlineNonbondedKernel.sol": "b72e7aebb809f72f8053bcecc4871c4cf06f4f4bf85fea43c76312226bde0451",
+    "contracts/kernels/LangevinBAOABKernel.sol": "a469bddd9acd9cf0551293f9f9112a8fba07a7f0caa5e3b6f0747982411541c9",
+    "contracts/kernels/LennardJonesKernel.sol": "a02748bef456a33b15f0cfa7a1b5a20f23d6021f4e741b0cf0a9b61af457dca2",
+    "contracts/kernels/MonteCarloAcceptance.sol": "52c08fdd13314924be09046b07cd07d11d6180d82fba8f2591eb9f9c367c2147",
+    "contracts/kernels/OrthorhombicGeometry.sol": "9521042dab915a3fc6cfe2bb1395c1aba0c6a2fad58d7623cd4a10435de3808b",
+    "contracts/kernels/PeriodicTorsionKernel.sol": "67e457741c247eb2af7248cd897a68b997caeb0db84c073c74e477570788765f",
+    "contracts/kernels/SoftcoreLennardJonesKernel.sol": "fb6b215e82aff471a1f615f6809c45e1b3aeae6df804ed29673ae0e63207e2b4",
+    "contracts/kernels/SwitchedNonbondedKernel.sol": "4755fd13b34f2d60b1ea545b79f9a74403e3cd424d6392d357d0a8e2b8d48ac3",
+    "contracts/kernels/VelocityVerletKernel.sol": "0a1d7735e81e7c11c88f296cadc4044d4f07223fa22d45cfecaf37ed41da4d73",
+    "contracts/math/ElementaryMath.sol": "9965604b32c46748605948c58f092ead3911e231baf39e7d4bea02beb3200062",
+    "contracts/math/FloatMath.sol": "a474f7656f9ffc3d3149e6a0e08f2fcf6838483ae689d1e6a7cf7400f8bad74b",
+    "contracts/math/ScalarMath.sol": "fd95d9e52db57f772946d1eff8d3c9b0e2518fdbdadb033160f4b5678df13f58",
+    "contracts/math/vendor/ABDKMathQuad.sol": "dd13f72bf828a699c94e96d1377daabce3dcc1d4b29af7215501a611d3cb7c9e",
+    "test/contracts/AnalysisWriterHarness.sol": "7b85cfb2cae4e780b714e8ab8fe0cefb8b3587c36aa1b20ee6a9ed8bed3a4fcd",
+    "test/contracts/ConstraintHarness.sol": "cc92af67b0bea92d3f5d6cf834f2142c74122b88b345afec47bdcba4cd43655a",
+    "test/contracts/InlineKernelIdentityHarness.sol": "ed1a6e505c8bc07fb74309818ddbd547382bb45c4f4606498b86eb22fbc2304e",
+    "test/contracts/NeighborListHarness.sol": "c61ac09e0152f7c10331ce3f63040f97037ebb92c80c0f8300544a1bf5d63ff1",
+    "test/contracts/PairWorkMeter.sol": "13fb7d20185c41c8cd58db81f6efd33db8908b673d9e6814128d2c2b207fed8e",
+    "test/contracts/TimeSeriesWriterHarness.sol": "49eb284d631f0c3e7520ca869d832d46a1be38d5019b45c83fd5a66509e20383",
+    "test/contracts/WorkingStateWriterHarness.sol": "f478b004274aaa2b515f2a6b30344d904e0c837a698d7b188cd66f47517d460f"
+  },
+  "contracts": [
+    {
+      "name": "IMBARScalarMath",
+      "file": "contracts/analysis/MBARFreeEnergyEstimator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "MBARFreeEnergyEstimator",
+      "file": "contracts/analysis/MBARFreeEnergyEstimator.sol",
+      "testOnly": false,
+      "creationBytes": 10562,
+      "runtimeBytes": 9542,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "ReducedPotentialCollector",
+      "file": "contracts/analysis/ReducedPotentialCollector.sol",
+      "testOnly": false,
+      "creationBytes": 9911,
+      "runtimeBytes": 9550,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "SamplingDiagnostics",
+      "file": "contracts/analysis/SamplingDiagnostics.sol",
+      "testOnly": false,
+      "creationBytes": 12091,
+      "runtimeBytes": 11080,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "TimeSeriesDiagnostics",
+      "file": "contracts/analysis/TimeSeriesDiagnostics.sol",
+      "testOnly": false,
+      "creationBytes": 13167,
+      "runtimeBytes": 12776,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "UncertaintyAndResults",
+      "file": "contracts/analysis/UncertaintyAndResults.sol",
+      "testOnly": false,
+      "creationBytes": 10157,
+      "runtimeBytes": 9040,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "ConstrainedDynamicsCoordinator",
+      "file": "contracts/core/ConstrainedDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 38704,
+      "runtimeBytes": 35808,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IConstrainedDynamicsAngleKernel",
+      "file": "contracts/core/ConstrainedDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IConstrainedDynamicsAngularIdentity",
+      "file": "contracts/core/ConstrainedDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IConstrainedDynamicsData",
+      "file": "contracts/core/ConstrainedDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IConstrainedDynamicsElementary",
+      "file": "contracts/core/ConstrainedDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IConstrainedDynamicsIntegrator",
+      "file": "contracts/core/ConstrainedDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IConstrainedDynamicsMathIdentity",
+      "file": "contracts/core/ConstrainedDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IConstrainedDynamicsPairKernel",
+      "file": "contracts/core/ConstrainedDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IConstrainedDynamicsTorsionKernel",
+      "file": "contracts/core/ConstrainedDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IConstrainedGeometry",
+      "file": "contracts/core/ConstrainedDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IConstrainedNonbonded",
+      "file": "contracts/core/ConstrainedDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "ConstraintCatalog",
+      "file": "contracts/core/ConstraintCatalog.sol",
+      "testOnly": false,
+      "creationBytes": 5341,
+      "runtimeBytes": 4930,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IConstraintDataset",
+      "file": "contracts/core/ConstraintCatalog.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "ConstraintSolver",
+      "file": "contracts/core/ConstraintSolver.sol",
+      "testOnly": false,
+      "creationBytes": 14076,
+      "runtimeBytes": 13320,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "DataPage",
+      "file": "contracts/core/DataPage.sol",
+      "testOnly": false,
+      "creationBytes": 2317,
+      "runtimeBytes": 1929,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "DatasetCatalog",
+      "file": "contracts/core/DatasetCatalog.sol",
+      "testOnly": false,
+      "creationBytes": 8317,
+      "runtimeBytes": 8132,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "DynamicsCoordinator",
+      "file": "contracts/core/DynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 19275,
+      "runtimeBytes": 17292,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IDynamicsAngleKernel",
+      "file": "contracts/core/DynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IDynamicsAngularIdentity",
+      "file": "contracts/core/DynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IDynamicsData",
+      "file": "contracts/core/DynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IDynamicsElementary",
+      "file": "contracts/core/DynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IDynamicsIntegrator",
+      "file": "contracts/core/DynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IDynamicsMathIdentity",
+      "file": "contracts/core/DynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IDynamicsPairKernel",
+      "file": "contracts/core/DynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IDynamicsTorsionKernel",
+      "file": "contracts/core/DynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "DynamicsDataset",
+      "file": "contracts/core/DynamicsDataset.sol",
+      "testOnly": false,
+      "creationBytes": 10551,
+      "runtimeBytes": 10214,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "EwaldDynamicsCoordinator",
+      "file": "contracts/core/EwaldDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 33389,
+      "runtimeBytes": 30938,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "EwaldForceEvaluator",
+      "file": "contracts/core/EwaldForceEvaluator.sol",
+      "testOnly": false,
+      "creationBytes": 24478,
+      "runtimeBytes": 21793,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "ExperimentRegistry",
+      "file": "contracts/core/ExperimentRegistry.sol",
+      "testOnly": false,
+      "creationBytes": 2731,
+      "runtimeBytes": 2560,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "ILangevinDynamicsAngleKernel",
+      "file": "contracts/core/LangevinDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "ILangevinDynamicsAngularIdentity",
+      "file": "contracts/core/LangevinDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "ILangevinDynamicsData",
+      "file": "contracts/core/LangevinDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "ILangevinDynamicsElementary",
+      "file": "contracts/core/LangevinDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "ILangevinDynamicsIntegrator",
+      "file": "contracts/core/LangevinDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "ILangevinDynamicsMathIdentity",
+      "file": "contracts/core/LangevinDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "ILangevinDynamicsPairKernel",
+      "file": "contracts/core/LangevinDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "ILangevinDynamicsTorsionKernel",
+      "file": "contracts/core/LangevinDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "ILangevinGeometry",
+      "file": "contracts/core/LangevinDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "ILangevinNonbonded",
+      "file": "contracts/core/LangevinDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "ILangevinRandom",
+      "file": "contracts/core/LangevinDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "LangevinDynamicsCoordinator",
+      "file": "contracts/core/LangevinDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 29383,
+      "runtimeBytes": 26358,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "INeighborDynamicsAngleKernel",
+      "file": "contracts/core/NeighborDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "INeighborDynamicsAngularIdentity",
+      "file": "contracts/core/NeighborDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "INeighborDynamicsData",
+      "file": "contracts/core/NeighborDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "INeighborDynamicsElementary",
+      "file": "contracts/core/NeighborDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "INeighborDynamicsIntegrator",
+      "file": "contracts/core/NeighborDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "INeighborDynamicsMathIdentity",
+      "file": "contracts/core/NeighborDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "INeighborDynamicsPairKernel",
+      "file": "contracts/core/NeighborDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "INeighborDynamicsTorsionKernel",
+      "file": "contracts/core/NeighborDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "INeighborGeometry",
+      "file": "contracts/core/NeighborDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "INeighborNonbonded",
+      "file": "contracts/core/NeighborDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "NeighborDynamicsCoordinator",
+      "file": "contracts/core/NeighborDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 40495,
+      "runtimeBytes": 24198,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "NeighborList",
+      "file": "contracts/core/NeighborList.sol",
+      "testOnly": false,
+      "creationBytes": 11620,
+      "runtimeBytes": 10780,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "PagedBondCoordinator",
+      "file": "contracts/core/PagedBondCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 9610,
+      "runtimeBytes": 8624,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "PeriodicDataset",
+      "file": "contracts/core/PeriodicDataset.sol",
+      "testOnly": false,
+      "creationBytes": 12298,
+      "runtimeBytes": 11940,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IPeriodicDynamicsAngleKernel",
+      "file": "contracts/core/PeriodicDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IPeriodicDynamicsAngularIdentity",
+      "file": "contracts/core/PeriodicDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IPeriodicDynamicsData",
+      "file": "contracts/core/PeriodicDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IPeriodicDynamicsElementary",
+      "file": "contracts/core/PeriodicDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IPeriodicDynamicsIntegrator",
+      "file": "contracts/core/PeriodicDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IPeriodicDynamicsMathIdentity",
+      "file": "contracts/core/PeriodicDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IPeriodicDynamicsPairKernel",
+      "file": "contracts/core/PeriodicDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IPeriodicDynamicsTorsionKernel",
+      "file": "contracts/core/PeriodicDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IPeriodicGeometry",
+      "file": "contracts/core/PeriodicDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IPeriodicNonbonded",
+      "file": "contracts/core/PeriodicDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "PeriodicDynamicsCoordinator",
+      "file": "contracts/core/PeriodicDynamicsCoordinator.sol",
+      "testOnly": false,
+      "creationBytes": 24107,
+      "runtimeBytes": 21670,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IMinimizerDynamicsAngleKernel",
+      "file": "contracts/core/PeriodicMinimizer.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IMinimizerDynamicsAngularIdentity",
+      "file": "contracts/core/PeriodicMinimizer.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IMinimizerDynamicsData",
+      "file": "contracts/core/PeriodicMinimizer.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IMinimizerDynamicsElementary",
+      "file": "contracts/core/PeriodicMinimizer.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IMinimizerDynamicsMathIdentity",
+      "file": "contracts/core/PeriodicMinimizer.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IMinimizerDynamicsPairKernel",
+      "file": "contracts/core/PeriodicMinimizer.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IMinimizerDynamicsTorsionKernel",
+      "file": "contracts/core/PeriodicMinimizer.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IMinimizerGeometry",
+      "file": "contracts/core/PeriodicMinimizer.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IMinimizerNonbonded",
+      "file": "contracts/core/PeriodicMinimizer.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "PeriodicMinimizer",
+      "file": "contracts/core/PeriodicMinimizer.sol",
+      "testOnly": false,
+      "creationBytes": 30146,
+      "runtimeBytes": 27792,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IOrviaBondKernel",
+      "file": "contracts/core/ResumableBondEngine.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IOrviaFloatMath",
+      "file": "contracts/core/ResumableBondEngine.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "ResumableBondEngine",
+      "file": "contracts/core/ResumableBondEngine.sol",
+      "testOnly": false,
+      "creationBytes": 8252,
+      "runtimeBytes": 7502,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "WorkingStatePage",
+      "file": "contracts/core/WorkingStatePage.sol",
+      "testOnly": false,
+      "creationBytes": 2689,
+      "runtimeBytes": 2478,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "CoulombPairKernel",
+      "file": "contracts/kernels/CoulombPairKernel.sol",
+      "testOnly": false,
+      "creationBytes": 3222,
+      "runtimeBytes": 3050,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "CounterRandom",
+      "file": "contracts/kernels/CounterRandom.sol",
+      "testOnly": false,
+      "creationBytes": 3215,
+      "runtimeBytes": 2582,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "DistanceConstraintKernel",
+      "file": "contracts/kernels/DistanceConstraintKernel.sol",
+      "testOnly": false,
+      "creationBytes": 5520,
+      "runtimeBytes": 5298,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "EwaldCorrections",
+      "file": "contracts/kernels/EwaldCorrections.sol",
+      "testOnly": false,
+      "creationBytes": 10243,
+      "runtimeBytes": 9767,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "EwaldKernelBase",
+      "file": "contracts/kernels/EwaldKernelBase.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IEwaldScalarMath",
+      "file": "contracts/kernels/EwaldKernelBase.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "EwaldRealSpaceKernel",
+      "file": "contracts/kernels/EwaldRealSpaceKernel.sol",
+      "testOnly": false,
+      "creationBytes": 5093,
+      "runtimeBytes": 4639,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "EwaldReciprocalKernel",
+      "file": "contracts/kernels/EwaldReciprocalKernel.sol",
+      "testOnly": false,
+      "creationBytes": 11339,
+      "runtimeBytes": 10653,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "HarmonicAngleKernel",
+      "file": "contracts/kernels/HarmonicAngleKernel.sol",
+      "testOnly": false,
+      "creationBytes": 7775,
+      "runtimeBytes": 7356,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "HarmonicBondKernel",
+      "file": "contracts/kernels/HarmonicBondKernel.sol",
+      "testOnly": false,
+      "creationBytes": 3223,
+      "runtimeBytes": 3051,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "InlineNonbondedKernel",
+      "file": "contracts/kernels/InlineNonbondedKernel.sol",
+      "testOnly": false,
+      "creationBytes": 7615,
+      "runtimeBytes": 7587,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "LangevinBAOABKernel",
+      "file": "contracts/kernels/LangevinBAOABKernel.sol",
+      "testOnly": false,
+      "creationBytes": 6436,
+      "runtimeBytes": 5960,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "LennardJonesKernel",
+      "file": "contracts/kernels/LennardJonesKernel.sol",
+      "testOnly": false,
+      "creationBytes": 4259,
+      "runtimeBytes": 4087,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "IMCScalarMath",
+      "file": "contracts/kernels/MonteCarloAcceptance.sol",
+      "testOnly": false,
+      "creationBytes": 0,
+      "runtimeBytes": 0,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "MonteCarloAcceptance",
+      "file": "contracts/kernels/MonteCarloAcceptance.sol",
+      "testOnly": false,
+      "creationBytes": 4321,
+      "runtimeBytes": 3857,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "OrthorhombicGeometry",
+      "file": "contracts/kernels/OrthorhombicGeometry.sol",
+      "testOnly": false,
+      "creationBytes": 4888,
+      "runtimeBytes": 4687,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "PeriodicTorsionKernel",
+      "file": "contracts/kernels/PeriodicTorsionKernel.sol",
+      "testOnly": false,
+      "creationBytes": 8901,
+      "runtimeBytes": 8433,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "SoftcoreLennardJonesKernel",
+      "file": "contracts/kernels/SoftcoreLennardJonesKernel.sol",
+      "testOnly": false,
+      "creationBytes": 7557,
+      "runtimeBytes": 7350,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "SwitchedNonbondedKernel",
+      "file": "contracts/kernels/SwitchedNonbondedKernel.sol",
+      "testOnly": false,
+      "creationBytes": 10557,
+      "runtimeBytes": 9897,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "VelocityVerletKernel",
+      "file": "contracts/kernels/VelocityVerletKernel.sol",
+      "testOnly": false,
+      "creationBytes": 3249,
+      "runtimeBytes": 3055,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "ElementaryMath",
+      "file": "contracts/math/ElementaryMath.sol",
+      "testOnly": false,
+      "creationBytes": 7557,
+      "runtimeBytes": 7356,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "FloatMath",
+      "file": "contracts/math/FloatMath.sol",
+      "testOnly": false,
+      "creationBytes": 5527,
+      "runtimeBytes": 5499,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "ScalarMath",
+      "file": "contracts/math/ScalarMath.sol",
+      "testOnly": false,
+      "creationBytes": 13504,
+      "runtimeBytes": 13275,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "ABDKMathQuad",
+      "file": "contracts/math/vendor/ABDKMathQuad.sol",
+      "testOnly": false,
+      "creationBytes": 135,
+      "runtimeBytes": 85,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "AnalysisWriterHarness",
+      "file": "test/contracts/AnalysisWriterHarness.sol",
+      "testOnly": true,
+      "creationBytes": 1588,
+      "runtimeBytes": 1526,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "ConstraintHarness",
+      "file": "test/contracts/ConstraintHarness.sol",
+      "testOnly": true,
+      "creationBytes": 1965,
+      "runtimeBytes": 1888,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "ForgedFloatMathIdentity",
+      "file": "test/contracts/InlineKernelIdentityHarness.sol",
+      "testOnly": true,
+      "creationBytes": 178,
+      "runtimeBytes": 152,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "ForgedInlineKernelIdentity",
+      "file": "test/contracts/InlineKernelIdentityHarness.sol",
+      "testOnly": true,
+      "creationBytes": 226,
+      "runtimeBytes": 200,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "NeighborListHarness",
+      "file": "test/contracts/NeighborListHarness.sol",
+      "testOnly": true,
+      "creationBytes": 17248,
+      "runtimeBytes": 17220,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "PairWorkMeter",
+      "file": "test/contracts/PairWorkMeter.sol",
+      "testOnly": true,
+      "creationBytes": 1562,
+      "runtimeBytes": 1346,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "TimeSeriesWriterHarness",
+      "file": "test/contracts/TimeSeriesWriterHarness.sol",
+      "testOnly": true,
+      "creationBytes": 1449,
+      "runtimeBytes": 1387,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    },
+    {
+      "name": "WorkingStateWriterHarness",
+      "file": "test/contracts/WorkingStateWriterHarness.sol",
+      "testOnly": true,
+      "creationBytes": 516,
+      "runtimeBytes": 488,
+      "fitsDocumentedRobinhoodCodeLimit": true,
+      "creationCodeWithinDocumentedInitLimit": true
+    }
+  ],
+  "warnings": [
+    "Warning: Contract code size is 35808 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries.\n  --> contracts/core/ConstrainedDynamicsCoordinator.sol:65:1:\n   |\n65 | contract ConstrainedDynamicsCoordinator {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n",
+    "Warning: Contract code size is 30938 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries.\n  --> contracts/core/EwaldDynamicsCoordinator.sol:28:1:\n   |\n28 | contract EwaldDynamicsCoordinator {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n",
+    "Warning: Contract code size is 26358 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries.\n  --> contracts/core/LangevinDynamicsCoordinator.sol:73:1:\n   |\n73 | contract LangevinDynamicsCoordinator {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n",
+    "Warning: Contract code size is 27792 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries.\n  --> contracts/core/PeriodicMinimizer.sol:56:1:\n   |\n56 | contract PeriodicMinimizer {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n"
+  ]
+}

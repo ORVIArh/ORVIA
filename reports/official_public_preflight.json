@@ -1,0 +1,46 @@
+{
+  "checked_at_utc": "2026-11-02T04:29:32.653921+00:00",
+  "as_of_date_india": "2026-11-02",
+  "target_chain_id": 4663,
+  "endpoint": "https://rpc.mainnet.chain.robinhood.com",
+  "endpoint_source": "official_public",
+  "mode": "read_only",
+  "transactions_sent": 0,
+  "fork_validation_performed": false,
+  "chain_id_observed": null,
+  "status": "blocked_or_inconclusive",
+  "checks": [
+    {
+      "method": "eth_chainId",
+      "read_only": true,
+      "status": "http_error",
+      "http_status": 403
+    },
+    {
+      "method": "eth_getBlockByNumber",
+      "read_only": true,
+      "status": "http_error",
+      "http_status": 403
+    },
+    {
+      "method": "eth_gasPrice",
+      "read_only": true,
+      "status": "http_error",
+      "http_status": 403
+    }
+  ],
+  "documented_limits": {
+    "runtime": "96 KB",
+    "initcode": "192 KB",
+    "planning_runtime_bytes": 98304,
+    "planning_initcode_bytes": 196608,
+    "exact_chain_configuration_verified": false
+  },
+  "fee_scope": "A live eth_estimateGas quote for each exact transaction is still required; local EVM gas does not include Robinhood L1 data fees.",
+  "sources": [
+    "https://docs.robinhood.com/chain/connecting/",
+    "https://docs.robinhood.com/chain/differences-from-ethereum/",
+    "https://docs.robinhood.com/chain/gas-and-fees/",
+    "https://docs.robinhood.com/chain/deploy-smart-contracts/"
+  ]
+}

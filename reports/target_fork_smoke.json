@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "checkedAtUtc": "2026-11-02T04:36:20.042Z",
+  "status": "passed",
+  "scope": "Two compiled ORVIA numerical kernels deployed and queried on a local Shanghai simulator seeded from a pinned Robinhood block.",
+  "mode": "local_state_fork_smoke",
+  "sourceChain": {
+    "chainId": 4663,
+    "number": "0x6320d44",
+    "height": 103943492,
+    "hash": "0x8f3be64b058302b2b578d668d05ae970d75be594653daf3a446fa8c7c7c2f8fc",
+    "stateRoot": "0x346d5c000a08641bf93509aa3faf2cc52db11b6e18aa6595b36324b32049089c",
+    "timestamp": "0x6ae8133c",
+    "gasLimit": "0x4000000000000"
+  },
+  "executionChainId": 31337,
+  "sourceBlockUnchangedAfterRun": true,
+  "mainnetTransactionsSent": 0,
+  "productionReady": false,
+  "completePreparedModelValidated": false,
+  "targetExecutionRulesValidated": false,
+  "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+  "compilerSettings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "evmVersion": "shanghai",
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode.object",
+          "evm.deployedBytecode.object",
+          "evm.deployedBytecode.immutableReferences"
+        ]
+      }
+    }
+  },
+  "harnessSourceSha256": {
+    "scripts/deployment/fork.mjs": "477d3a273a91bc3747413cff1c213b98ea3728dcdb42cae52f9aafad1327ac73",
+    "scripts/fork-smoke.mjs": "534b169d532520eb3498b959583d00c221b37312e8268e1082c6b8f49fe8daae"
+  },
+  "standardInputSha256": "0a3b870b748b7ecdc0200ed45e00f378c41b76fb8ac305f67fc02279c9781a38",
+  "sourceSha256": {
+    "contracts/math/FloatMath.sol": "a474f7656f9ffc3d3149e6a0e08f2fcf6838483ae689d1e6a7cf7400f8bad74b",
+    "contracts/math/vendor/ABDKMathQuad.sol": "dd13f72bf828a699c94e96d1377daabce3dcc1d4b29af7215501a611d3cb7c9e",
+    "contracts/kernels/InlineNonbondedKernel.sol": "b72e7aebb809f72f8053bcecc4871c4cf06f4f4bf85fea43c76312226bde0451"
+  },
+  "deployments": [
+    {
+      "contract": "FloatMath",
+      "address": "0x8C9E0820C488d9211F9ab6e151E1473F35BC57DD",
+      "localTransactionHash": "0x125f2723a7fb63665081ee767af3840e4564c755cbabeeae8d2737eb93e290f5",
+      "localExecutionGas": "1242164",
+      "runtimeCodeKeccak256": "0x310794f2b49c3afde7f1e9c543121d8771acbe9612b4c479970d64dd668b8ac1",
+      "runtimeBytes": 5499,
+      "runtimeMatched": true
+    },
+    {
+      "contract": "InlineNonbondedKernel",
+      "address": "0x8FcbA46706D623CcfDB4b3A437336Cd9771B12A2",
+      "localTransactionHash": "0xed82d92862a174a1578f39d69e1a1d412753429947dc9a2cd6b8e099e3269938",
+      "localExecutionGas": "1693811",
+      "runtimeCodeKeccak256": "0xca35f552c4acce35ce3fd4025e4276c81df2d4cc2f77bcf7c0cab7202306a28b",
+      "runtimeBytes": 7587,
+      "runtimeMatched": true
+    }
+  ],
+  "scalarResult": "0x40008000000000000000000000000000",
+  "pairResult": {
+    "energy": "0x00000000000000000000000000000000",
+    "force": [
+      "0xc0038000000000000000000000000000",
+      "0x00000000000000000000000000000000",
+      "0x00000000000000000000000000000000"
+    ]
+  },
+  "upstreamReadCounts": {
+    "eth_chainId": 2,
+    "eth_getBlockByNumber": 4,
+    "eth_blockNumber": 1,
+    "net_version": 1,
+    "eth_getTransactionCount": 4,
+    "eth_getCode": 3,
+    "eth_getBalance": 3
+  },
+  "limitations": [
+    "Ganache applies local Ethereum Shanghai rules, not a Robinhood Nitro execution client.",
+    "Inherited state is trusted RPC data; a stateRoot binding is recorded but state proofs are not independently verified.",
+    "This is a kernel smoke check, not the integrated 64-instance or full prepared molecular experiment.",
+    "Local execution gas excludes Robinhood L1 data fees and does not establish network throughput or a full-run cost."
+  ]
+}

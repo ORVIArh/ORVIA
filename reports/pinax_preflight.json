@@ -1,0 +1,55 @@
+{
+  "checked_at_utc": "2026-11-02T04:29:44.383981+00:00",
+  "as_of_date_india": "2026-11-02",
+  "target_chain_id": 4663,
+  "endpoint": "https://robinhood.rpc.pinax.network/[provider-path-redacted]",
+  "endpoint_source": "operator_environment",
+  "mode": "read_only",
+  "transactions_sent": 0,
+  "fork_validation_performed": false,
+  "chain_id_observed": 4663,
+  "status": "verified_read_only",
+  "checks": [
+    {
+      "method": "eth_chainId",
+      "read_only": true,
+      "status": "ok",
+      "result": "0x1237",
+      "decimal": "4663"
+    },
+    {
+      "method": "eth_getBlockByNumber",
+      "read_only": true,
+      "status": "ok",
+      "result": {
+        "number": "0x631feb6",
+        "hash": "0x87bed13da68a476b88209fe0313862e440f47b77ea8f6a48c123ff55514e041c",
+        "timestamp": "0x6ae811b6",
+        "gasLimit": "0x4000000000000",
+        "gasUsed": "0x68ab",
+        "baseFeePerGas": "0x1315be0"
+      }
+    },
+    {
+      "method": "eth_gasPrice",
+      "read_only": true,
+      "status": "ok",
+      "result": "0x1312d00",
+      "decimal": "20000000"
+    }
+  ],
+  "documented_limits": {
+    "runtime": "96 KB",
+    "initcode": "192 KB",
+    "planning_runtime_bytes": 98304,
+    "planning_initcode_bytes": 196608,
+    "exact_chain_configuration_verified": false
+  },
+  "fee_scope": "A live eth_estimateGas quote for each exact transaction is still required; local EVM gas does not include Robinhood L1 data fees.",
+  "sources": [
+    "https://docs.robinhood.com/chain/connecting/",
+    "https://docs.robinhood.com/chain/differences-from-ethereum/",
+    "https://docs.robinhood.com/chain/gas-and-fees/",
+    "https://docs.robinhood.com/chain/deploy-smart-contracts/"
+  ]
+}
