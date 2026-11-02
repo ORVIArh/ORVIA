@@ -1,0 +1,52 @@
+{
+  "scope": "Measured bounded 4x16KiB data-access bundle; full-input counts are layout projections only",
+  "reportSha256": "dfb90f63eb3247e1a7f159f383a2db35dacc85c0ec0b4d7589478bfe3505f1d5",
+  "calculatorSha256": "43d77edbd9bfc95ab455748f5ac77a05c0cdba482fe8aaa8c0b9cfccf12ab2a3",
+  "rangeSummarySha256": "9a8e695efb90f612e08eda6db325dbda4207ac441bcee05d7c243c79045a6622",
+  "fourthChildRollbackSha256": "3490aa03600d98067fcf839123bb10df12f8187ccacc114a99e123facf595d1e",
+  "sourceSha256": "de42770b994cb6f9f0cb55aa79b7e88adf86cb2e9fd62c7a9eb5875dcd41dac1",
+  "block": {
+    "number": "0x63769ad",
+    "hash": "0xe454bce15614c974b891257b55ff6076f487a38fd51de571e81b66d246443cc5"
+  },
+  "sameActualPayloadBytes": 65536,
+  "comparison": {
+    "separate4x16TargetGas": "10834995",
+    "single64TargetGas": "12349477",
+    "bundled4x16TargetGas": "10549574",
+    "separate4x16LocalGas": "10393288",
+    "single64LocalGas": "12134703",
+    "bundled4x16LocalGas": "10331640"
+  },
+  "targetGasSavedVsSeparate": 285421,
+  "targetPercentSavedVsSeparate": "2.634251330988154586135018982472996065065",
+  "targetPercentSavedVsSingle64": "14.57473057361052617855800695041579493609",
+  "localGasSavedVsSeparate": 61648,
+  "localPercentSavedVsSeparate": "0.5931520419717032761913265561389235052468",
+  "fullInputLayoutProjection": {
+    "payloadBytes": 44065024,
+    "streamCount": 24,
+    "countsByLeaves": {
+      "1": 14,
+      "2": 10,
+      "4": 12,
+      "8": 12,
+      "16": 2679
+    },
+    "rangeOperations": 2727,
+    "maxOperationsPerTransaction": 4,
+    "dataTransactions": 682,
+    "previousSetupTransactionsAllowance": 115,
+    "setupAndDataTransactions": 797,
+    "assumptions": [
+      "Cross-stream grouping permitted",
+      "All required codecs integrated",
+      "Existing setup allowance retained, not requoted",
+      "One input pass, not a force evaluation or simulation"
+    ],
+    "fullInputBundleGasQuoted": false
+  },
+  "productionIntegrated": false,
+  "mainnetReady": false,
+  "publicTransactionsSent": 0
+}

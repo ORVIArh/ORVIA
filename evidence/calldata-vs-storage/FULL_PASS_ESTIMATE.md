@@ -1,5 +1,7 @@
 # Full packed-input pass: 1 KiB versus 16 KiB calldata
 
+**Historical estimate.** The [shared-proof and transaction-batching follow-up](RANGE_AND_BATCH_OPTIMIZATION.md) now includes newer measurements and a proposed 682-data-transaction layout. The figures below retain their original fee snapshot and individual-proof assumptions.
+
 **Rough projection for one complete pass over the current 44,065,024 packed input bytes, not a complete molecular simulation:** approximately **$395.72 using 1 KiB calls**, or **$354.25 using 16 KiB calls**, including the existing 256-contract deployment baseline and an illustrative root-registration allowance.
 
 This scales the measured data-access/expansion/digest rates from the [calldata comparison](README.md). It is not 43,042 or 2,703 individually simulated transactions, and it is not a production deployment quote. The integrated calldata reader is not implemented.

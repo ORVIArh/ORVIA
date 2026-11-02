@@ -1,19 +1,34 @@
 {
   "schemaVersion": 1,
-  "scope": "GPU-verified input packing and isolated conditional mainnet data-access microbenchmark",
+  "scope": "GPU-verified input packing; isolated data-access, shared-proof and bounded-batch experiments",
   "productionReaderImplemented": false,
   "fullCampaignQuoted": false,
   "publicTransactionsSent": 0,
   "files": [
     {
       "path": "FULL_PASS_ESTIMATE.md",
-      "bytes": 5500,
-      "sha256": "7452199c2965d37d9869b0a90c6a61dcfa12ce3df481534deba7ee15829a5b9f"
+      "bytes": 5776,
+      "sha256": "8d7ed5a5deb35cb48cd214a675598b724a108d99e8184d18705ce34e716e1af1"
+    },
+    {
+      "path": "RANGE_AND_BATCH_OPTIMIZATION.md",
+      "bytes": 7971,
+      "sha256": "058c2f9419ce4e8823205b8f59fae1948c78186a75b3bd0c6f8ce4675dfcabd6"
     },
     {
       "path": "README.md",
-      "bytes": 7088,
-      "sha256": "2a2f4878409c2f256bad75ab656ff5106be37d166d212303fbd10ffe1c281523"
+      "bytes": 7446,
+      "sha256": "99fb213dd10bf2f7cd4d8ec2b4a11b8d91001e007b95597679f4ef1d6e4593b8"
+    },
+    {
+      "path": "batch-optimization-summary.json",
+      "bytes": 2021,
+      "sha256": "f5bbbc4c490353b8c921a74befcaa97e14eb34a181cac4124158d58133854473"
+    },
+    {
+      "path": "bundle-evm-packet.zip",
+      "bytes": 103022,
+      "sha256": "83c8cb18d84bb991277f0420437083c6ddbaa2fb9eaef6f8dbd36dffc55b6df2"
     },
     {
       "path": "comparison.json",
@@ -56,9 +71,29 @@
       "sha256": "4900181fe700c8566a2874f328cd4630c3f020197bccbc875ab89a345da9d745"
     },
     {
+      "path": "optimization-review-packet.zip",
+      "bytes": 172020,
+      "sha256": "eea261b49d36c599eac2303b6d82faed1f8fc0214f0b87cf5dc5aa4a0cd31574"
+    },
+    {
       "path": "pricing.json",
       "bytes": 1236,
       "sha256": "d7bf37fae9061e432b223af1f3634a54c3bea7e570dafc90b46c525b1a86b406"
+    },
+    {
+      "path": "range-data-packet.zip",
+      "bytes": 77634,
+      "sha256": "511bee8a192762e3f45c5cbe8c4bad4e196f06e41415282b4414b1dafa7d0470"
+    },
+    {
+      "path": "range-evm-packet.zip",
+      "bytes": 156336,
+      "sha256": "de3c00e6d730bbab8298796d0bc0970dd4335101497e8e6ed8ac8b0abf3558f4"
+    },
+    {
+      "path": "range-optimization-summary.json",
+      "bytes": 7095,
+      "sha256": "9a8e695efb90f612e08eda6db325dbda4207ac441bcee05d7c243c79045a6622"
     },
     {
       "path": "review-scripts.zip",
