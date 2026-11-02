@@ -1,0 +1,31 @@
+{
+  "attempt_directory": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/independent-validation/attempts/preservation-20261102T104352.786646Z-75113",
+  "context_created": false,
+  "force_evaluated": false,
+  "legs": [
+    {
+      "failed_criteria": [],
+      "leg": "complex33",
+      "passed": false,
+      "report": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/independent-validation/attempts/preservation-20261102T104352.786646Z-75113/complex33/report.json",
+      "sha256": "d5d30767d348bc2ca5630eef28235c88a832a5b3eeb9c5277cba4e4eff877ed3",
+      "status": "failed_preservation"
+    },
+    {
+      "failed_criteria": [],
+      "leg": "solvent33",
+      "passed": false,
+      "report": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/independent-validation/attempts/preservation-20261102T104352.786646Z-75113/solvent33/report.json",
+      "sha256": "dd22103a08f42661f30430e7420c321a9d176955d5a479a98f5e8ad1f963e166",
+      "status": "failed_preservation"
+    }
+  ],
+  "passed": false,
+  "production_ready": false,
+  "schema": "orvia.full-hybrid.independent-preservation.v1",
+  "script": {
+    "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/independent-validation/audit_preservation.py",
+    "sha256": "1b869a30ad9b0ffaaebe12761a9a821e9df99bfaf70728fe070cdf9151766e65"
+  },
+  "status": "failed_preservation"
+}

@@ -1,0 +1,400 @@
+{
+  "canonical_zero_exclusion_sigma_changes": {
+    "A": 154832,
+    "B": 154832
+  },
+  "checks": [
+    {
+      "criterion": "A finalized parameter hash",
+      "passed": true
+    },
+    {
+      "criterion": "B finalized parameter hash",
+      "passed": true
+    },
+    {
+      "criterion": "Independently reconstructed global maps",
+      "passed": true
+    },
+    {
+      "criterion": "A all native environment masses/q/sigma/epsilon exactly preserved",
+      "fields": {
+        "charge": {
+          "compared": 132891,
+          "maximum_absolute_difference": 0.0,
+          "nonidentical": 0
+        },
+        "epsilon": {
+          "compared": 132891,
+          "maximum_absolute_difference": 0.0,
+          "nonidentical": 0
+        },
+        "mass": {
+          "compared": 132891,
+          "maximum_absolute_difference": 0.0,
+          "nonidentical": 0
+        },
+        "sigma": {
+          "compared": 132891,
+          "maximum_absolute_difference": 0.0,
+          "nonidentical": 0
+        }
+      },
+      "passed": true
+    },
+    {
+      "criterion": "A all45 ligand rows exactly equal frozen hybrid",
+      "passed": true,
+      "scalar_values_compared": 180
+    },
+    {
+      "criterion": "A all native coordinates exactly preserved",
+      "passed": true,
+      "scalar_values_compared": 398805
+    },
+    {
+      "criterion": "A no particle sigma normalization required/applied",
+      "normalization_count": 0,
+      "passed": true
+    },
+    {
+      "criterion": "B all native environment masses/q/sigma/epsilon exactly preserved",
+      "fields": {
+        "charge": {
+          "compared": 132891,
+          "maximum_absolute_difference": 0.0,
+          "nonidentical": 0
+        },
+        "epsilon": {
+          "compared": 132891,
+          "maximum_absolute_difference": 0.0,
+          "nonidentical": 0
+        },
+        "mass": {
+          "compared": 132891,
+          "maximum_absolute_difference": 0.0,
+          "nonidentical": 0
+        },
+        "sigma": {
+          "compared": 132891,
+          "maximum_absolute_difference": 0.0,
+          "nonidentical": 0
+        }
+      },
+      "passed": true
+    },
+    {
+      "criterion": "B all45 ligand rows exactly equal frozen hybrid",
+      "passed": true,
+      "scalar_values_compared": 180
+    },
+    {
+      "criterion": "B all native coordinates exactly preserved",
+      "passed": true,
+      "scalar_values_compared": 398805
+    },
+    {
+      "criterion": "B no particle sigma normalization required/applied",
+      "normalization_count": 0,
+      "passed": true
+    },
+    {
+      "criterion": "harmonic_bonds native ligand/environment isolation",
+      "passed": true
+    },
+    {
+      "criterion": "harmonic_angles native ligand/environment isolation",
+      "passed": true
+    },
+    {
+      "criterion": "periodic_torsions native ligand/environment isolation",
+      "passed": true
+    },
+    {
+      "criterion": "exceptions native ligand/environment isolation",
+      "passed": true
+    },
+    {
+      "criterion": "Endpoint exception pair identities align",
+      "passed": true
+    },
+    {
+      "actual_records": 132787,
+      "criterion": "A harmonic_bonds exact ordered-tuple/parameter multiset and multiplicity",
+      "expected_records": 132787,
+      "mismatch_artifact": null,
+      "passed": true,
+      "unique_expected_records": 132787
+    },
+    {
+      "actual_records": 22187,
+      "criterion": "A harmonic_angles exact ordered-tuple/parameter multiset and multiplicity",
+      "expected_records": 22187,
+      "mismatch_artifact": null,
+      "passed": true,
+      "unique_expected_records": 22187
+    },
+    {
+      "actual_records": 46357,
+      "criterion": "A periodic_torsions exact ordered-tuple/parameter multiset and multiplicity",
+      "expected_records": 46357,
+      "mismatch_artifact": null,
+      "passed": true,
+      "unique_expected_records": 46357
+    },
+    {
+      "actual_records": 186910,
+      "criterion": "A exceptions exact ordered-tuple/parameter multiset and multiplicity",
+      "expected_records": 186910,
+      "mismatch_artifact": null,
+      "passed": true,
+      "unique_expected_records": 186910
+    },
+    {
+      "criterion": "A exceptions strictly a<b, globally sorted, unique",
+      "passed": true
+    },
+    {
+      "actual_records": 132787,
+      "criterion": "B harmonic_bonds exact ordered-tuple/parameter multiset and multiplicity",
+      "expected_records": 132787,
+      "mismatch_artifact": null,
+      "passed": true,
+      "unique_expected_records": 132787
+    },
+    {
+      "actual_records": 22187,
+      "criterion": "B harmonic_angles exact ordered-tuple/parameter multiset and multiplicity",
+      "expected_records": 22187,
+      "mismatch_artifact": null,
+      "passed": true,
+      "unique_expected_records": 22187
+    },
+    {
+      "actual_records": 46357,
+      "criterion": "B periodic_torsions exact ordered-tuple/parameter multiset and multiplicity",
+      "expected_records": 46357,
+      "mismatch_artifact": null,
+      "passed": true,
+      "unique_expected_records": 46357
+    },
+    {
+      "actual_records": 186910,
+      "criterion": "B exceptions exact ordered-tuple/parameter multiset and multiplicity",
+      "expected_records": 186910,
+      "mismatch_artifact": null,
+      "passed": true,
+      "unique_expected_records": 186910
+    },
+    {
+      "criterion": "B exceptions strictly a<b, globally sorted, unique",
+      "passed": true
+    },
+    {
+      "arrays": 10,
+      "criterion": "All native signed record/exclusion/scaling flag arrays exactly retained",
+      "passed": true
+    },
+    {
+      "constraints": 120519,
+      "criterion": "All water constraints map exactly with identical distance values/order",
+      "passed": true
+    },
+    {
+      "criterion": "Constraint implementation/additional-H choices remain unaccepted",
+      "passed": true
+    },
+    {
+      "criterion": "C4 sidecar raw written native1264 tables exactly retained",
+      "passed": true,
+      "table_lengths": {
+        "AMBER_ATOM_TYPE": 132935,
+        "ATOM_TYPE_INDEX": 132935,
+        "LENNARD_JONES_CCOEF": 666,
+        "NONBONDED_PARM_INDEX": 1296
+      }
+    },
+    {
+      "criterion": "C4 native source hashes bind actual written1264",
+      "passed": true
+    },
+    {
+      "criterion": "All base/1264 common native flags remain identical",
+      "passed": true
+    },
+    {
+      "criterion": "Unresolved alchemical C4 choices remain unselected",
+      "passed": true
+    }
+  ],
+  "context_created": false,
+  "environment_particle_stats": {
+    "A": {
+      "charge": {
+        "compared": 132891,
+        "maximum_absolute_difference": 0.0,
+        "nonidentical": 0
+      },
+      "epsilon": {
+        "compared": 132891,
+        "maximum_absolute_difference": 0.0,
+        "nonidentical": 0
+      },
+      "mass": {
+        "compared": 132891,
+        "maximum_absolute_difference": 0.0,
+        "nonidentical": 0
+      },
+      "sigma": {
+        "compared": 132891,
+        "maximum_absolute_difference": 0.0,
+        "nonidentical": 0
+      }
+    },
+    "B": {
+      "charge": {
+        "compared": 132891,
+        "maximum_absolute_difference": 0.0,
+        "nonidentical": 0
+      },
+      "epsilon": {
+        "compared": 132891,
+        "maximum_absolute_difference": 0.0,
+        "nonidentical": 0
+      },
+      "mass": {
+        "compared": 132891,
+        "maximum_absolute_difference": 0.0,
+        "nonidentical": 0
+      },
+      "sigma": {
+        "compared": 132891,
+        "maximum_absolute_difference": 0.0,
+        "nonidentical": 0
+      }
+    }
+  },
+  "error": "KeyError: 'sha256'",
+  "failed_criteria": [],
+  "force_evaluated": false,
+  "leg": "complex33",
+  "multiplicity_coverage": {
+    "exceptions": {
+      "cross_component_records": 0,
+      "native": 186900,
+      "replaced_native_ligand": 229,
+      "retained_native_environment": 186671
+    },
+    "harmonic_angles": {
+      "cross_component_records": 0,
+      "native": 22178,
+      "replaced_native_ligand": 82,
+      "retained_native_environment": 22096
+    },
+    "harmonic_bonds": {
+      "cross_component_records": 0,
+      "native": 132783,
+      "replaced_native_ligand": 47,
+      "retained_native_environment": 132736
+    },
+    "periodic_torsions": {
+      "cross_component_records": 0,
+      "native": 46338,
+      "replaced_native_ligand": 141,
+      "retained_native_environment": 46197
+    }
+  },
+  "native_full_B_to_frozen_B_last_digit_comparison": {
+    "charge": {
+      "compared": 44,
+      "maximum_absolute_difference": 0.0,
+      "nonidentical": 0,
+      "note": "Diagnostic of explicit frozen ligand replacement; environment preservation is checked separately with exact equality."
+    },
+    "epsilon": {
+      "compared": 44,
+      "maximum_absolute_difference": 0.0,
+      "nonidentical": 0,
+      "note": "Diagnostic of explicit frozen ligand replacement; environment preservation is checked separately with exact equality."
+    },
+    "mass": {
+      "compared": 44,
+      "maximum_absolute_difference": 0.0,
+      "nonidentical": 0,
+      "note": "Diagnostic of explicit frozen ligand replacement; environment preservation is checked separately with exact equality."
+    },
+    "sigma": {
+      "compared": 44,
+      "maximum_absolute_difference": 0.0,
+      "nonidentical": 0,
+      "note": "Diagnostic of explicit frozen ligand replacement; environment preservation is checked separately with exact equality."
+    }
+  },
+  "native_torsion_sign_flags": {
+    "active_14_records": 31939,
+    "active_14_unique_pairs": 31939,
+    "ignored_14": 14399,
+    "improper": 2437,
+    "proper": 43901,
+    "raw_exact_duplicate_records": 0,
+    "records": 46338
+  },
+  "optimizer_run": false,
+  "passed": false,
+  "production_ready": false,
+  "source_files": {
+    "A": {
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/legs/complex33/A.parameters.json.gz",
+      "sha256": "6e14e0377e02e991860ff32b595fa3ad2adf78250d9028f239984481b5fb619c"
+    },
+    "B": {
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/legs/complex33/B.parameters.json.gz",
+      "sha256": "7b1a2083067ec5de292c6a9c413c230f7171cc1ad4e8ea93c57cda5e580463de"
+    },
+    "c4": {
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/legs/complex33/c4.unresolved.json.gz",
+      "sha256": "bf62d1360d2019f47b58f0c790f54dc2afc2caf07d2d5c45e56f9527560d4b2c"
+    },
+    "catalog": {
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/legs/complex33/catalog-candidate.json",
+      "sha256": "bdbd360cede4953cf9afe6530c2cd23f9304ea845d23b8f0b834ffb94e94f093"
+    },
+    "constraints": {
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/legs/complex33/constraints.unresolved.json.gz",
+      "sha256": "23a9e30594bf8eb55a2fb37eb42602b6d054334a24f77b86560159bc8959b320"
+    },
+    "global_map": {
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/legs/complex33/global-map.json.gz",
+      "sha256": "5055392bd2e26320818c5d04835786511e271d0f9a15e22e6f20e948655e4dd1"
+    },
+    "hybrid_model": {
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/work/scientific-preparation/data/prepared_candidate/ligand_endpoints_v0_1/hybrid_model.json",
+      "sha256": "5573b43cd746f2e343cae6e2d32c6cf0358efc959170aaca232b686d63e1174a"
+    },
+    "native1264": {
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/work/scientific-preparation/data/prepared_candidate/cardiac_adppi_ff03_m3l_33_782_solvated_v0_1/complex_1264.prmtop.gz",
+      "sha256": "7ddd83496bd4832fc377ec174ffe6bb392adec87193cce6e1ba527f05ce1477a"
+    },
+    "native_constraints": {
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/work/scientific-preparation/data/prepared_candidate/cardiac_adppi_ff03_m3l_33_782_solvated_v0_1/water_constraints.json.gz",
+      "sha256": "823d3c6d32f523a42202c2cb06d249566ca3f7580477b5155ee35b48ed8a6d63"
+    },
+    "native_coordinates": {
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/work/scientific-preparation/data/prepared_candidate/cardiac_adppi_ff03_m3l_33_782_solvated_v0_1/complex.inpcrd.gz",
+      "sha256": "6859d9aac3b91f8c79a2e7ebf676609798043a416fe15822d7e84caab262262a"
+    },
+    "native_records": {
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/legs/complex33/native-records.json.gz",
+      "sha256": "b16c5b7fbcd8129f8b816723e0cea43737eb858d0863617442f3ebe6f981c4f7"
+    },
+    "native_topology": {
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/work/scientific-preparation/data/prepared_candidate/cardiac_adppi_ff03_m3l_33_782_solvated_v0_1/complex.prmtop.gz",
+      "sha256": "709c6c24e182440835723960153113697c10547326d8b10236497998e6235eb3"
+    },
+    "normalizations": {
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/legs/complex33/normalizations.json.gz",
+      "sha256": "322a07a0344df753820227b3c5045d0dab262db48b21454c26255a5c7044a752"
+    }
+  },
+  "status": "failed_preservation"
+}
