@@ -1,8 +1,8 @@
 {
-  "checked_at_utc": "2026-11-02T04:29:44.383981+00:00",
+  "checked_at_utc": "2026-11-02T12:32:07.899396+00:00",
   "as_of_date_india": "2026-11-02",
   "target_chain_id": 4663,
-  "endpoint": "https://robinhood.rpc.pinax.network/[provider-path-redacted]",
+  "endpoint": "https://robinhood-mainnet.g.alchemy.com/[provider-path-redacted]",
   "endpoint_source": "operator_environment",
   "mode": "read_only",
   "transactions_sent": 0,
@@ -22,20 +22,20 @@
       "read_only": true,
       "status": "ok",
       "result": {
-        "number": "0x631feb6",
-        "hash": "0x87bed13da68a476b88209fe0313862e440f47b77ea8f6a48c123ff55514e041c",
-        "timestamp": "0x6ae811b6",
+        "number": "0x6363b74",
+        "hash": "0xec703e49ec320ea3f89dec4ec010bec40bf472a7aa52e68dfc285ec0c0f79a59",
+        "timestamp": "0x6ae882c7",
         "gasLimit": "0x4000000000000",
-        "gasUsed": "0x68ab",
-        "baseFeePerGas": "0x1315be0"
+        "gasUsed": "0x7bbef",
+        "baseFeePerGas": "0x1312d00"
       }
     },
     {
       "method": "eth_gasPrice",
       "read_only": true,
       "status": "ok",
-      "result": "0x1312d00",
-      "decimal": "20000000"
+      "result": "0x13301c0",
+      "decimal": "20120000"
     }
   ],
   "documented_limits": {
