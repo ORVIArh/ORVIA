@@ -1,0 +1,14 @@
+{
+  "status": "not_admitted_activation_paused",
+  "sourceAndEvidenceSha256": {
+    "experimental/stylus/quad-kernel/Cargo.toml": "3a4c56e39cd97a8ff9c237b972de2f6fb0b233f4ba1e7b25e73a56b9c425ccaa",
+    "experimental/stylus/quad-kernel/Cargo.lock": "25d71076402651a115387913531333e708aa6741b53a45261e91ae9767c6fa53",
+    "experimental/stylus/quad-kernel/src/lib.rs": "5e3ed28b90c325834409576b2fb64dad4dcf97c1dbffc657a7e22622edd3b6d7",
+    "experimental/stylus/artifacts/orvia_quad_kernel.wasm": "964e44425bea67f69fcf6abedd6df42644784ddd5497331e9773b012a175c9b8",
+    "experimental/stylus/scripts/parameters.mjs": "5eacb6bcf9b6d1208b1dacafadabad4afc65d76260a296ddb74dcbd0a60e1c72",
+    "reports/stylus_activation_check.log": "287ed31f85eb56bf91381acb99e0ee62d41bfbb96fddbb75ec40725faef6d24c",
+    "reports/stylus_parameters.json": "89c2e2b3b73f63f40dce14993df6daa3cf61ae21fc32941e4ee054c20f5db9ac"
+  },
+  "wasmExecutionValidated": false,
+  "mainnetTransactionsSent": 0
+}
