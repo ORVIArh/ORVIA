@@ -4,6 +4,8 @@
 
 **Mainnet only.** No public testnet deployment is planned. Local EVM checks, mainnet-pinned local forks and read-only chain-4663 simulations remain part of validation. Public deployment stays blocked until the complete 256-contract release and scientific evidence pass.
 
+The [256-address release planner](docs/RELEASE_256_PLAN.md) now produces an unsigned infrastructure candidate for the public operator. It binds exact constructors, dependencies, fixed-bank identities and configuration calls while retaining unresolved production protocol/input fields and all acceptance blockers. It neither accesses the encrypted wallet nor broadcasts transactions.
+
 **Current integration is in progress; the complete current-source check has not passed.** [validation_summary.json](reports/validation_summary.json) is deliberately marked `development_in_progress` and `passed: false` after the connected engine and softcore-v2 changes. A previous source-bound component checkpoint cannot validate changed or newly added inputs.
 
 The historical v0.5.1 check passed **212 Node/EVM tests, 63 Python references and all nine groups**, with integrity checks for 159 inputs, two compiler outputs, 36 reports and nine logs. That dated result and the recovered v0.5.0 baseline remain in the research log; neither is a pass for this development snapshot.
