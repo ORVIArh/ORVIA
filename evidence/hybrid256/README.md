@@ -1,5 +1,9 @@
 # GPU hybrid release evidence
 
+**Mainnet infrastructure is deployed:** all 256 contracts and 33 transactions are confirmed and verified. Actual full deployment fee: **0.004612876889674 ETH**. [Deployment evidence and all addresses](MAINNET_DEPLOYMENT.md). The historical estimates below are preserved as estimates.
+
+**Full-model numerical update:** both complete native periodic models passed H200/Reference checks before and after relaxation and short dynamics. [Source-bound evidence and limits](../phosphate-v0.3/native-double-pme/README.md).
+
 The separately named **ORVIA-ADP-PHOSPHATE-v0.2** experiment was selected by the user on 2026-11-02. It uses ADP/phosphate, not the original vanadate chemical state. The original experiment and source coordinates remain preserved. [Selection record](../../data/experiments/adp-phosphate-v0.2/experiment.json).
 
 ## Confirmed endpoint accuracy repair
