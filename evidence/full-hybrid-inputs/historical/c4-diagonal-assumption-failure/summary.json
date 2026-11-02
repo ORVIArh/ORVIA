@@ -1,0 +1,157 @@
+{
+  "alchemicalC4PolicyAccepted": false,
+  "cases": [],
+  "engineGitRevision": "b399af4725573963b46d6c1083fdcf7a37615857",
+  "engineRelease": false,
+  "engineVersion": "8.6.1.dev-b399af4",
+  "exportManifest": {
+    "path": "attempts/20261102T105820.156970Z/exports/manifest.json",
+    "sha256": "518750be5c70c758e6d8fa6468da92c4aa312b24512e19ccc2ba066b89c9a112"
+  },
+  "failures": [
+    {
+      "message": "",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/c4-endpoint/validate_native_endpoints.py\", line 155, in main\n    exact,expected_force,info=analytic_sparse(e['positions'],types,matrix,box,periodic,1.)\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/c4-endpoint/validate_native_endpoints.py\", line 63, in analytic_sparse\n    nz=np.argwhere(matrix!=0);assert all(a==32 or b==32 for a,b in nz)and matrix[32,32]==0\n                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+    }
+  ],
+  "mainnetTransactionsSent": 0,
+  "passed": false,
+  "policySha256": "24bd0bd24020d766b7b13858030d85392d930355673886b7940101700c1359de",
+  "productionReady": false,
+  "schema": "orvia.c4-physical-endpoint-validation.v1",
+  "scientificAcceptance": false,
+  "scriptSha256": "1234e5d54277ae8f4faaea14557c90be858804d9f6aa77005c52e679667d63ff",
+  "sources": [
+    {
+      "bytes": 17781,
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/c4-endpoint/validate_native_endpoints.py",
+      "sha256": "1234e5d54277ae8f4faaea14557c90be858804d9f6aa77005c52e679667d63ff"
+    },
+    {
+      "bytes": 3396,
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/c4-endpoint/independent-lrc/analytic_c4.py",
+      "sha256": "35f549ce387c77e633250ca78b8d4462896e7043342557020ae82aa44b30fdb3"
+    },
+    {
+      "bytes": 72488,
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/tools/envs/preparation/lib/python3.12/site-packages/openmm/app/internal/amber_file_parser.py",
+      "sha256": "1e8a713cb6f641a9ece150973b6841be27463a971fd830200590d56a165a5a04"
+    },
+    {
+      "bytes": 1568846,
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/work/scientific-preparation/data/prepared_candidate/cardiac_adppi_ff03_m3l_33_782_solvated_v0_1/complex_1264.prmtop.gz",
+      "sha256": "7ddd83496bd4832fc377ec174ffe6bb392adec87193cce6e1ba527f05ce1477a"
+    },
+    {
+      "bytes": 1310090,
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/work/scientific-preparation/data/prepared_candidate/cardiac_adppi_ff03_m3l_33_782_solvated_v0_1/complex.inpcrd.gz",
+      "sha256": "6859d9aac3b91f8c79a2e7ebf676609798043a416fe15822d7e84caab262262a"
+    },
+    {
+      "bytes": 30839,
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/work/scientific-preparation/data/prepared_candidate/ligand_endpoints_v0_1/A/ligand.prmtop",
+      "sha256": "da4b8021e0bb0f23eccdcf7049f9c52d59897919db03d21503b89d5bbac7e9da"
+    },
+    {
+      "bytes": 52064,
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/work/scientific-preparation/data/prepared_candidate/ligand_endpoints_v0_1/A/parameters.json",
+      "sha256": "3b895fe11c6192144e89a89488e91c8939d7b140308756f9371e6913f36208c7"
+    },
+    {
+      "bytes": 56000,
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/work/scientific-preparation/data/prepared_candidate/ligand_endpoints_v0_1/B/parameters.json",
+      "sha256": "5e97e15c92dcfa844e517766a6857a89256ce46db98dc1ba847b5d243b345c1a"
+    },
+    {
+      "bytes": 147369,
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/work/scientific-preparation/data/prepared_candidate/ligand_endpoints_v0_1/hybrid_model.json",
+      "sha256": "5573b43cd746f2e343cae6e2d32c6cf0358efc959170aaca232b686d63e1174a"
+    },
+    {
+      "bytes": 13569,
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/legs/complex33/catalog-candidate.json",
+      "sha256": "bdbd360cede4953cf9afe6530c2cd23f9304ea845d23b8f0b834ffb94e94f093"
+    },
+    {
+      "bytes": 283626,
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/legs/complex33/global-map.json.gz",
+      "sha256": "5055392bd2e26320818c5d04835786511e271d0f9a15e22e6f20e948655e4dd1"
+    },
+    {
+      "bytes": 3232153,
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/legs/complex33/A.parameters.json.gz",
+      "sha256": "6e14e0377e02e991860ff32b595fa3ad2adf78250d9028f239984481b5fb619c"
+    },
+    {
+      "bytes": 3504048,
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/tools/envs/preparation/lib/python3.12/site-packages/openmm/_openmm.cpython-312-darwin.so",
+      "sha256": "62ee6dd2edb4c69bacfab0d75a301770374334e4e15509d5313e7af8e277f04d"
+    },
+    {
+      "bytes": 3783520,
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/tools/envs/preparation/lib/libOpenMM.dylib",
+      "sha256": "e96c251825155e465eb5282a0962277d57f8fdfa3cd92c88f00418d7b731392e"
+    },
+    {
+      "bytes": 361056,
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/tools/envs/preparation/lib/libOpenMMAmoeba.dylib",
+      "sha256": "5b5c0e08cff7ea02d24f467e19d2047f5955ed21442ea9a76964e3a58f110891"
+    },
+    {
+      "bytes": 914224,
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/tools/envs/preparation/lib/libOpenMMAmoebaOpenCL.dylib",
+      "sha256": "f0f8aea8a30a6bfbc373d3e93cd9986b24abfefa126db9e237e92fc577a2b6c5"
+    },
+    {
+      "bytes": 573536,
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/tools/envs/preparation/lib/libOpenMMAmoebaReference.dylib",
+      "sha256": "9485016e4d3874a58ccafdf183a90a5359215b7c2f000d74a3ee840b42c75af3"
+    },
+    {
+      "bytes": 656096,
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/tools/envs/preparation/lib/libOpenMMCPU.dylib",
+      "sha256": "292c61cb6a4ea7857fd2b6e8c1bf81f71cdd7d472bf2b1e0e800efeacff2bb70"
+    },
+    {
+      "bytes": 155712,
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/tools/envs/preparation/lib/libOpenMMDrude.dylib",
+      "sha256": "4e9132b4f56f5cf2e27e9bded5a0e4907bcb4a581a8c9a93c4d6f83b71b2bd4e"
+    },
+    {
+      "bytes": 124816,
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/tools/envs/preparation/lib/libOpenMMDrudeOpenCL.dylib",
+      "sha256": "6755a159100fd1bfa6604c87a7b080ca14065720be6f24ff2974c719e08afa29"
+    },
+    {
+      "bytes": 82192,
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/tools/envs/preparation/lib/libOpenMMDrudeReference.dylib",
+      "sha256": "35a333da6972a112b9ebedf08177c6d8d6e011e7ac50e37ca8e1160b0bb3ae09"
+    },
+    {
+      "bytes": 3029872,
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/tools/envs/preparation/lib/libOpenMMOpenCL.dylib",
+      "sha256": "c2b5ad2d08b6b550d2b22129bd63cb61389ab5ed23578d80417a7087c795563b"
+    },
+    {
+      "bytes": 342528,
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/tools/envs/preparation/lib/libOpenMMPME.dylib",
+      "sha256": "7f01c9f9755753606c760a96a15c793068af19a78e4182d0f7ac7c2212b48a4e"
+    },
+    {
+      "bytes": 90000,
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/tools/envs/preparation/lib/libOpenMMRPMD.dylib",
+      "sha256": "8ab1a11635dd0a00c8c90cc842a655480c3e3761b1676b469b7b4facc576d5a1"
+    },
+    {
+      "bytes": 144960,
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/tools/envs/preparation/lib/libOpenMMRPMDOpenCL.dylib",
+      "sha256": "f0df22d65f9f19538bbabb76d3cdc852f7516e3ceec205c5b66961633bc24a1c"
+    },
+    {
+      "bytes": 214304,
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/tools/envs/preparation/lib/libOpenMMRPMDReference.dylib",
+      "sha256": "08898034808df30f6c9961c0cc9ddb36d85b5eb7b3e93a74fdfea0cce47d17c7"
+    }
+  ],
+  "status": "failed"
+}
