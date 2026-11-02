@@ -1,0 +1,96 @@
+{
+  "schema": "orvia.full-hybrid-required-native-inputs.v1",
+  "scienceRootMeaning": "directory containing data/prepared_candidate",
+  "files": [
+    {
+      "path": "data/prepared_candidate/cardiac_adppi_ff03_m3l_33_782_solvated_v0_1/c4_type_pairs.json",
+      "sha256": "bc231233082fe3a28585bce2d5b5dbeaedf03725db551d59b8ac50165ca3d10c",
+      "bytes": 1063491
+    },
+    {
+      "path": "data/prepared_candidate/cardiac_adppi_ff03_m3l_33_782_solvated_v0_1/complex.inpcrd.gz",
+      "sha256": "6859d9aac3b91f8c79a2e7ebf676609798043a416fe15822d7e84caab262262a",
+      "bytes": 1310090
+    },
+    {
+      "path": "data/prepared_candidate/cardiac_adppi_ff03_m3l_33_782_solvated_v0_1/complex.prmtop.gz",
+      "sha256": "709c6c24e182440835723960153113697c10547326d8b10236497998e6235eb3",
+      "bytes": 1568815
+    },
+    {
+      "path": "data/prepared_candidate/cardiac_adppi_ff03_m3l_33_782_solvated_v0_1/complex_1264.prmtop.gz",
+      "sha256": "7ddd83496bd4832fc377ec174ffe6bb392adec87193cce6e1ba527f05ce1477a",
+      "bytes": 1568846
+    },
+    {
+      "path": "data/prepared_candidate/cardiac_adppi_ff03_m3l_33_782_solvated_v0_1/force_inventory.json",
+      "sha256": "fa86eb6b3320294782be38e5684cc019abfedb57945fd9515a09b5d340647b8c",
+      "bytes": 770
+    },
+    {
+      "path": "data/prepared_candidate/cardiac_adppi_ff03_m3l_33_782_solvated_v0_1/particle_cost_inputs.json.gz",
+      "sha256": "2f056ce6b98884a6296feb25b2310e654e6f4b50b792377bd84755fb675257ad",
+      "bytes": 1413529
+    },
+    {
+      "path": "data/prepared_candidate/cardiac_adppi_ff03_m3l_33_782_solvated_v0_1/water_constraints.json.gz",
+      "sha256": "823d3c6d32f523a42202c2cb06d249566ca3f7580477b5155ee35b48ed8a6d63",
+      "bytes": 527081
+    },
+    {
+      "path": "data/prepared_candidate/ligand_adppi_ff03_m3l_33_782_solvated_v0_1/force_inventory.json",
+      "sha256": "7be93cf40d34f472b3644bf7dfed413738f2b972696193e81780fbdab3888736",
+      "bytes": 601
+    },
+    {
+      "path": "data/prepared_candidate/ligand_adppi_ff03_m3l_33_782_solvated_v0_1/particle_cost_inputs.json.gz",
+      "sha256": "2b43c7dce24ff0249a085ecb78934bb7fdb17b1eea0005b9870156b6c542c32d",
+      "bytes": 1529233
+    },
+    {
+      "path": "data/prepared_candidate/ligand_adppi_ff03_m3l_33_782_solvated_v0_1/solvent.inpcrd.gz",
+      "sha256": "7d3a8080584ac0cc244e1deb3cfc1877893bd2a2e4036d40c50c4dc2391cae82",
+      "bytes": 1411840
+    },
+    {
+      "path": "data/prepared_candidate/ligand_adppi_ff03_m3l_33_782_solvated_v0_1/solvent.prmtop.gz",
+      "sha256": "6d3b30f439688d8a5c2f0af5f54ce687ca191eab16f2c441dda842c4e607376f",
+      "bytes": 1254970
+    },
+    {
+      "path": "data/prepared_candidate/ligand_adppi_ff03_m3l_33_782_solvated_v0_1/water_constraints.json.gz",
+      "sha256": "907936df39b5bab048eeed17625e0e6cb3b2e8d303154ca89803ecc00e983dda",
+      "bytes": 661647
+    },
+    {
+      "path": "data/prepared_candidate/ligand_endpoints_v0_1/A/ligand.prmtop",
+      "sha256": "da4b8021e0bb0f23eccdcf7049f9c52d59897919db03d21503b89d5bbac7e9da",
+      "bytes": 30839
+    },
+    {
+      "path": "data/prepared_candidate/ligand_endpoints_v0_1/A/parameters.json",
+      "sha256": "3b895fe11c6192144e89a89488e91c8939d7b140308756f9371e6913f36208c7",
+      "bytes": 52064
+    },
+    {
+      "path": "data/prepared_candidate/ligand_endpoints_v0_1/B/parameters.json",
+      "sha256": "5e97e15c92dcfa844e517766a6857a89256ce46db98dc1ba847b5d243b345c1a",
+      "bytes": 56000
+    },
+    {
+      "path": "data/prepared_candidate/ligand_endpoints_v0_1/explicit_hydrogen_map.json",
+      "sha256": "4c20a0c1bf5a3adc67092733ddee4e5dc53c179faf46fc9beffb46f69fbe2865",
+      "bytes": 9125
+    },
+    {
+      "path": "data/prepared_candidate/ligand_endpoints_v0_1/hybrid_model.json",
+      "sha256": "5573b43cd746f2e343cae6e2d32c6cf0358efc959170aaca232b686d63e1174a",
+      "bytes": 147369
+    },
+    {
+      "path": "data/prepared_candidate/ligand_endpoints_v0_1/hybrid_streams.json",
+      "sha256": "93e86cc00830a502a74b221235331e6bf1c73d18039828c5478da5c0e5a08647",
+      "bytes": 532420
+    }
+  ]
+}
