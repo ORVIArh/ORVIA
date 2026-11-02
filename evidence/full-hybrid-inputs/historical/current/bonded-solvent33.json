@@ -1,0 +1,176 @@
+{
+  "C4_evaluated": false,
+  "all_force_components_checked": 1363554,
+  "constraint_dynamics_evaluated": false,
+  "counts": {
+    "assembled_active_counts": {
+      "harmonic_angles": 82,
+      "harmonic_bonds": 151227,
+      "periodic_torsions": 116
+    },
+    "assembled_atoms": 151506,
+    "assembled_record_counts": {
+      "harmonic_angles": 91,
+      "harmonic_bonds": 151230,
+      "periodic_torsions": 160
+    },
+    "insertion_global_index": 44,
+    "native_atoms": 151505,
+    "native_bonded": {
+      "harmonic_angles": 82,
+      "harmonic_bonds": 151226,
+      "periodic_torsions": 141
+    }
+  },
+  "explicit_added_A_only_H_confinement": {
+    "bonds": [
+      {
+        "distance_nm": 0.1089456745355224,
+        "energy_kJ_mol": 0.06568473974716714,
+        "force_on_first_kJ_mol_nm": [
+          106.2187953787774,
+          159.5070125890117,
+          35.04862608458163
+        ],
+        "force_on_second_kJ_mol_nm": [
+          -106.2187953787774,
+          -159.5070125890117,
+          -35.04862608458163
+        ],
+        "global_atoms": [
+          1,
+          44
+        ],
+        "hybrid_atoms": [
+          0,
+          25
+        ],
+        "k_kJ_mol_nm2": 288905.2,
+        "r0_nm": 0.10962000000000001
+      }
+    ],
+    "energy_kJ_mol": 0.06568473974716714,
+    "instantaneous_forces_retained": true,
+    "note": "This extra positive harmonic bond remains at endpointB; native physicalB alone is not the assembledB Hamiltonian."
+  },
+  "force_component_artifact": {
+    "bytes": 10821662,
+    "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/independent-validation/attempts/20261102T104204.534320Z-74914/solvent33/all-bonded-force-components.npz",
+    "sha256": "cb67a23f288f7a96c445c7a6f3e90cd8dadc37017eea39a663aff9a886c06515"
+  },
+  "groups": [
+    {
+      "actual_energy_kJ_mol": 25.175928621659153,
+      "energy_absolute_error_kJ_mol": 9.912071163853398e-13,
+      "energy_tolerance_kJ_mol": 1.002517592862166e-05,
+      "expected_energy_kJ_mol": 25.175928621658162,
+      "explicit_correction_energy_kJ_mol": 0.06568473974716714,
+      "failed_force_components": 0,
+      "first_failed_components": [],
+      "force_components_checked": 454518,
+      "group": "harmonic_bonds",
+      "maximum_absolute_force_error_kJ_mol_nm": 2.2737367544323206e-13,
+      "native_energy_kJ_mol": 25.110243881910996,
+      "passed": true,
+      "worst_force_component": {
+        "actual": 670.3686867433428,
+        "atom": 1,
+        "axis": 1,
+        "error": 2.2737367544323206e-13,
+        "expected": 670.3686867433426,
+        "tolerance": 0.002340737373486685
+      }
+    },
+    {
+      "actual_energy_kJ_mol": 122.95764161606975,
+      "energy_absolute_error_kJ_mol": 1.4210854715202004e-14,
+      "energy_tolerance_kJ_mol": 1.012295764161607e-05,
+      "expected_energy_kJ_mol": 122.95764161606974,
+      "explicit_correction_energy_kJ_mol": 0.0,
+      "failed_force_components": 0,
+      "first_failed_components": [],
+      "force_components_checked": 454518,
+      "group": "harmonic_angles",
+      "maximum_absolute_force_error_kJ_mol_nm": 2.2737367544323206e-13,
+      "native_energy_kJ_mol": 122.95764161606974,
+      "passed": true,
+      "worst_force_component": {
+        "actual": -1554.6897660668665,
+        "atom": 14,
+        "axis": 0,
+        "error": 2.2737367544323206e-13,
+        "expected": -1554.6897660668667,
+        "tolerance": 0.004109379532133733
+      }
+    },
+    {
+      "actual_energy_kJ_mol": 69.30590893119194,
+      "energy_absolute_error_kJ_mol": 0.0,
+      "energy_tolerance_kJ_mol": 1.0069305908931193e-05,
+      "expected_energy_kJ_mol": 69.30590893119194,
+      "explicit_correction_energy_kJ_mol": 0.0,
+      "failed_force_components": 0,
+      "first_failed_components": [],
+      "force_components_checked": 454518,
+      "group": "periodic_torsions",
+      "maximum_absolute_force_error_kJ_mol_nm": 1.1368683772161603e-13,
+      "native_energy_kJ_mol": 69.30590893119194,
+      "passed": true,
+      "worst_force_component": {
+        "actual": 611.5112266552729,
+        "atom": 4,
+        "axis": 0,
+        "error": 1.1368683772161603e-13,
+        "expected": 611.511226655273,
+        "tolerance": 0.002223022453310546
+      }
+    }
+  ],
+  "integrator_steps": 0,
+  "leg": "solvent33",
+  "native_coordinate_preservation": {
+    "components_checked": 454515,
+    "maximum_absolute_difference_nm": 0.0,
+    "passed": true,
+    "tolerance_nm": 1e-12
+  },
+  "nonbonded_evaluated": false,
+  "openmm_version": "8.6.1",
+  "passed": true,
+  "platform": "Reference",
+  "production_ready": false,
+  "scope": "Static three-group bonded-only comparison: assembledB versus unchanged nativeB plus independently sourced positive A-only-H harmonic confinement. Every force component is checked. This is not nonbonded/C4/constraint/integrator/scientific acceptance.",
+  "source_files": {
+    "assembled_B_parameters": {
+      "bytes": 2709702,
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/legs/solvent33/B.parameters.json.gz",
+      "sha256": "6d071fbbf1b99d40b6fe78596a7942e5342ab5fb8743c6fcfb4c4771ec36bfcc"
+    },
+    "assembly_catalog": {
+      "bytes": 13072,
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/legs/solvent33/catalog-candidate.json",
+      "sha256": "40c9eae3da4f327f8d5a9dde91eac5bf4ac923dc7ebce30c0c58a26570856e2d"
+    },
+    "frozen_ligand_union": {
+      "bytes": 147369,
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/work/scientific-preparation/data/prepared_candidate/ligand_endpoints_v0_1/hybrid_model.json",
+      "sha256": "5573b43cd746f2e343cae6e2d32c6cf0358efc959170aaca232b686d63e1174a"
+    },
+    "global_map": {
+      "bytes": 323026,
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/legs/solvent33/global-map.json.gz",
+      "sha256": "548cabf7eebb59e2e968db552da0d2f91d7157c62a6e1379bb2dae83ea0e83da"
+    },
+    "native_base_coordinates": {
+      "bytes": 1411840,
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/work/scientific-preparation/data/prepared_candidate/ligand_adppi_ff03_m3l_33_782_solvated_v0_1/solvent.inpcrd.gz",
+      "sha256": "7d3a8080584ac0cc244e1deb3cfc1877893bd2a2e4036d40c50c4dc2391cae82"
+    },
+    "native_base_topology": {
+      "bytes": 1254970,
+      "path": "/Users/abhijith/Documents/ChatGPT/AURA/work/scientific-preparation/data/prepared_candidate/ligand_adppi_ff03_m3l_33_782_solvated_v0_1/solvent.prmtop.gz",
+      "sha256": "6d3b30f439688d8a5c2f0af5f54ce687ca191eab16f2c441dda842c4e607376f"
+    }
+  },
+  "status": "passed_bonded_only"
+}

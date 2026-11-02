@@ -1,0 +1,91 @@
+{
+  "alchemical_activity_policy_admitted": false,
+  "analytic_module_sha256": "35f549ce387c77e633250ca78b8d4462896e7043342557020ae82aa44b30fdb3",
+  "cases": [
+    {
+      "LRC_error": 6.622262287148128e-11,
+      "direct_energy_error": 0.0,
+      "direct_force_error": 2.7755575615628914e-17,
+      "expected_LRC": -0.0136353847812057,
+      "name": "n2_inside",
+      "observed_LRC": -0.013635384847428322,
+      "passed": true
+    },
+    {
+      "LRC_error": 6.622262807565171e-11,
+      "direct_energy_error": 0.0,
+      "direct_force_error": 0.0,
+      "expected_LRC": -0.0136353847812057,
+      "name": "n2_outside",
+      "observed_LRC": -0.013635384847428328,
+      "passed": true
+    },
+    {
+      "LRC_error": 6.622273389378375e-11,
+      "direct_energy_error": 0.0,
+      "direct_force_error": 8.881784197001252e-16,
+      "expected_LRC": -0.0136353847812057,
+      "name": "n2_periodic_inside",
+      "observed_LRC": -0.013635384847428433,
+      "passed": true
+    },
+    {
+      "LRC_error": 6.622262807565171e-11,
+      "direct_energy_error": 0.0,
+      "direct_force_error": 0.0,
+      "expected_LRC": -0.0136353847812057,
+      "name": "n2_excluded_inside",
+      "observed_LRC": -0.013635384847428328,
+      "passed": true
+    },
+    {
+      "LRC_error": 7.450046482504469e-11,
+      "direct_energy_error": 0.0,
+      "direct_force_error": 2.7755575615628914e-17,
+      "expected_LRC": -0.015339807878856412,
+      "name": "n3_zero_ghost",
+      "observed_LRC": -0.015339807953356877,
+      "passed": true
+    },
+    {
+      "LRC_error": 7.450045615142731e-11,
+      "direct_energy_error": 0.0,
+      "direct_force_error": 0.0,
+      "expected_LRC": -0.015339807878856412,
+      "name": "n3_zero_ghost_excluded",
+      "observed_LRC": -0.015339807953356868,
+      "passed": true
+    },
+    {
+      "LRC_error": 8.82968316517907e-11,
+      "direct_energy_error": 0.0,
+      "direct_force_error": 2.7755575615628914e-17,
+      "expected_LRC": -0.018180513041607598,
+      "name": "n8_zero_ghosts",
+      "observed_LRC": -0.01818051312990443,
+      "passed": true
+    },
+    {
+      "LRC_error": 8.669144568873577e-10,
+      "direct_energy_error": 5.551115123125783e-17,
+      "direct_force_error": 3.382710778154774e-17,
+      "expected_LRC": -0.12544553998709243,
+      "name": "n8_mixed_excluded",
+      "observed_LRC": -0.1254455408540069,
+      "passed": true
+    }
+  ],
+  "force_components_checked": 180,
+  "maximum_LRC_energy_absolute_error_kJ_mol": 8.669144568873577e-10,
+  "maximum_direct_energy_absolute_error_kJ_mol": 5.551115123125783e-17,
+  "maximum_direct_force_absolute_error_kJ_mol_nm": 8.881784197001252e-16,
+  "passed": true,
+  "policy_sha256": "60aed3ad31f79dc7e0824523e68cdf2386c53bbb6230f3cd594cdd5701ff14bb",
+  "production_ready": false,
+  "report": {
+    "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/c4-endpoint/independent-lrc/attempts/20261102T105448.710401Z-76296/report.json",
+    "sha256": "2c47bc9aaeabf8f395965d23431fdcab8fa8750fee7dd05a24668ce8c3328f94"
+  },
+  "schema": "orvia.independent-c4-direct-lrc-summary.v1",
+  "scope": "Eight small independent static Reference fixtures. No full native endpoint, trajectory or model acceptance."
+}

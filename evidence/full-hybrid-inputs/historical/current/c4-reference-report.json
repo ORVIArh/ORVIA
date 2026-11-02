@@ -1,0 +1,2291 @@
+{
+  "alchemical_activity_policy_admitted": false,
+  "analytic_module_sha256": "35f549ce387c77e633250ca78b8d4462896e7043342557020ae82aa44b30fdb3",
+  "attempt_directory": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/c4-endpoint/independent-lrc/attempts/20261102T105448.710401Z-76296",
+  "failed_criteria": [],
+  "fixtures": [
+    {
+      "case": {
+        "C4_matrix_kJ_nm4_mol": [
+          [
+            0.5,
+            0.75,
+            0.0
+          ],
+          [
+            0.75,
+            1.25,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "alchemical_activity_policy_admitted": false,
+        "box_nm": [
+          8.0,
+          8.0,
+          8.0
+        ],
+        "cutoff_nm": 3.0,
+        "diagnostic_zero_type_only": false,
+        "exclusions": [],
+        "interaction_groups": false,
+        "name": "n2_inside",
+        "positions_nm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.25,
+            0.5,
+            0.25
+          ]
+        ],
+        "switching": false,
+        "types": [
+          0,
+          1
+        ]
+      },
+      "comparison": {
+        "LRC_changes_forces_bitwise": false,
+        "LRC_energy_absolute_error_kJ_mol": 6.622262287148128e-11,
+        "LRC_energy_tolerance_kJ_mol": 1.272707695624114e-06,
+        "analytic_LRC_energy_kJ_mol": -0.0136353847812057,
+        "direct_energy_absolute_error_kJ_mol": 0.0,
+        "direct_energy_tolerance_kJ_mol": 1.0021333333333333e-08,
+        "force_component_tolerances": [
+          [
+            1.005688888888889e-08,
+            1.0022755555555556e-08,
+            1.0011377777777779e-08
+          ],
+          [
+            1.005688888888889e-08,
+            1.0022755555555556e-08,
+            1.0011377777777779e-08
+          ]
+        ],
+        "force_components_compared": 12,
+        "force_components_per_state": 6,
+        "maximum_direct_force_error": 2.7755575615628914e-17,
+        "maximum_tails_on_force_error": 2.7755575615628914e-17,
+        "observed_LRC_energy_kJ_mol": -0.013635384847428322
+      },
+      "name": "n2_inside",
+      "oracle": {
+        "LRC_energy_100_digits": "-0.01363538478120569981971633412881728682377243662923223012575930812633600870783944877876751226276960533",
+        "N_factor": "2/3",
+        "class_counts": {
+          "0": 1,
+          "1": 1
+        },
+        "direct_energy_exact_fraction": "-16/75",
+        "direct_forces_exact_fraction": [
+          [
+            "128/225",
+            "256/1125",
+            "128/1125"
+          ],
+          [
+            "-128/225",
+            "-256/1125",
+            "-128/1125"
+          ]
+        ],
+        "pair_details": [
+          {
+            "C4": "3/4",
+            "atoms": [
+              0,
+              1
+            ],
+            "energy": "-16/75",
+            "excluded": false,
+            "inside_cutoff": true,
+            "r2": "15/8"
+          }
+        ]
+      },
+      "passed": true,
+      "reference_tails_off": {
+        "energy_kJ_mol": -0.21333333333333335,
+        "forces_kJ_mol_nm": [
+          [
+            0.5688888888888889,
+            0.22755555555555554,
+            0.11377777777777777
+          ],
+          [
+            -0.5688888888888889,
+            -0.22755555555555554,
+            -0.11377777777777777
+          ]
+        ],
+        "system_xml": {
+          "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/c4-endpoint/independent-lrc/attempts/20261102T105448.710401Z-76296/n2_inside/system-lrc-false.xml",
+          "sha256": "0442464fb667977577f9336d5b7c5e848bcee11ee72e4d2852dabee6b58aceb7"
+        }
+      },
+      "reference_tails_on": {
+        "energy_kJ_mol": -0.22696871818076167,
+        "forces_kJ_mol_nm": [
+          [
+            0.5688888888888889,
+            0.22755555555555554,
+            0.11377777777777777
+          ],
+          [
+            -0.5688888888888889,
+            -0.22755555555555554,
+            -0.11377777777777777
+          ]
+        ],
+        "system_xml": {
+          "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/c4-endpoint/independent-lrc/attempts/20261102T105448.710401Z-76296/n2_inside/system-lrc-true.xml",
+          "sha256": "c800d5b20c9469a428ed98282daca7189409d7281bdddfb9995d81038bdf7082"
+        }
+      },
+      "status": "passed_small_reference_fixture"
+    },
+    {
+      "case": {
+        "C4_matrix_kJ_nm4_mol": [
+          [
+            0.5,
+            0.75,
+            0.0
+          ],
+          [
+            0.75,
+            1.25,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "alchemical_activity_policy_admitted": false,
+        "box_nm": [
+          8.0,
+          8.0,
+          8.0
+        ],
+        "cutoff_nm": 3.0,
+        "diagnostic_zero_type_only": false,
+        "exclusions": [],
+        "interaction_groups": false,
+        "name": "n2_outside",
+        "positions_nm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            3.5,
+            0.0,
+            0.0
+          ]
+        ],
+        "switching": false,
+        "types": [
+          0,
+          1
+        ]
+      },
+      "comparison": {
+        "LRC_changes_forces_bitwise": false,
+        "LRC_energy_absolute_error_kJ_mol": 6.622262807565171e-11,
+        "LRC_energy_tolerance_kJ_mol": 1.272707695624114e-06,
+        "analytic_LRC_energy_kJ_mol": -0.0136353847812057,
+        "direct_energy_absolute_error_kJ_mol": 0.0,
+        "direct_energy_tolerance_kJ_mol": 1e-08,
+        "force_component_tolerances": [
+          [
+            1e-08,
+            1e-08,
+            1e-08
+          ],
+          [
+            1e-08,
+            1e-08,
+            1e-08
+          ]
+        ],
+        "force_components_compared": 12,
+        "force_components_per_state": 6,
+        "maximum_direct_force_error": 0.0,
+        "maximum_tails_on_force_error": 0.0,
+        "observed_LRC_energy_kJ_mol": -0.013635384847428328
+      },
+      "name": "n2_outside",
+      "oracle": {
+        "LRC_energy_100_digits": "-0.01363538478120569981971633412881728682377243662923223012575930812633600870783944877876751226276960533",
+        "N_factor": "2/3",
+        "class_counts": {
+          "0": 1,
+          "1": 1
+        },
+        "direct_energy_exact_fraction": "0",
+        "direct_forces_exact_fraction": [
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "pair_details": [
+          {
+            "C4": "3/4",
+            "atoms": [
+              0,
+              1
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "49/4"
+          }
+        ]
+      },
+      "passed": true,
+      "reference_tails_off": {
+        "energy_kJ_mol": 0.0,
+        "forces_kJ_mol_nm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "system_xml": {
+          "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/c4-endpoint/independent-lrc/attempts/20261102T105448.710401Z-76296/n2_outside/system-lrc-false.xml",
+          "sha256": "0442464fb667977577f9336d5b7c5e848bcee11ee72e4d2852dabee6b58aceb7"
+        }
+      },
+      "reference_tails_on": {
+        "energy_kJ_mol": -0.013635384847428328,
+        "forces_kJ_mol_nm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "system_xml": {
+          "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/c4-endpoint/independent-lrc/attempts/20261102T105448.710401Z-76296/n2_outside/system-lrc-true.xml",
+          "sha256": "c800d5b20c9469a428ed98282daca7189409d7281bdddfb9995d81038bdf7082"
+        }
+      },
+      "status": "passed_small_reference_fixture"
+    },
+    {
+      "case": {
+        "C4_matrix_kJ_nm4_mol": [
+          [
+            0.5,
+            0.75,
+            0.0
+          ],
+          [
+            0.75,
+            1.25,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "alchemical_activity_policy_admitted": false,
+        "box_nm": [
+          8.0,
+          8.0,
+          8.0
+        ],
+        "cutoff_nm": 3.0,
+        "diagnostic_zero_type_only": false,
+        "exclusions": [],
+        "interaction_groups": false,
+        "name": "n2_periodic_inside",
+        "positions_nm": [
+          [
+            0.125,
+            0.0,
+            0.0
+          ],
+          [
+            7.5,
+            0.5,
+            0.0
+          ]
+        ],
+        "switching": false,
+        "types": [
+          0,
+          1
+        ]
+      },
+      "comparison": {
+        "LRC_changes_forces_bitwise": false,
+        "LRC_energy_absolute_error_kJ_mol": 6.622273389378375e-11,
+        "LRC_energy_tolerance_kJ_mol": 1.272707695624114e-06,
+        "analytic_LRC_energy_kJ_mol": -0.0136353847812057,
+        "direct_energy_absolute_error_kJ_mol": 0.0,
+        "direct_energy_tolerance_kJ_mol": 1.0182748364069006e-08,
+        "force_component_tolerances": [
+          [
+            1.0713164347586366e-08,
+            1.0570531478069093e-08,
+            1e-08
+          ],
+          [
+            1.0713164347586366e-08,
+            1.0570531478069093e-08,
+            1e-08
+          ]
+        ],
+        "force_components_compared": 12,
+        "force_components_per_state": 6,
+        "maximum_direct_force_error": 8.881784197001252e-16,
+        "maximum_tails_on_force_error": 8.881784197001252e-16,
+        "observed_LRC_energy_kJ_mol": -0.013635384847428433
+      },
+      "name": "n2_periodic_inside",
+      "oracle": {
+        "LRC_energy_100_digits": "-0.01363538478120569981971633412881728682377243662923223012575930812633600870783944877876751226276960533",
+        "N_factor": "2/3",
+        "class_counts": {
+          "0": 1,
+          "1": 1
+        },
+        "direct_energy_exact_fraction": "-3072/1681",
+        "direct_forces_exact_fraction": [
+          [
+            "-491520/68921",
+            "393216/68921",
+            "0"
+          ],
+          [
+            "491520/68921",
+            "-393216/68921",
+            "0"
+          ]
+        ],
+        "pair_details": [
+          {
+            "C4": "3/4",
+            "atoms": [
+              0,
+              1
+            ],
+            "energy": "-3072/1681",
+            "excluded": false,
+            "inside_cutoff": true,
+            "r2": "41/64"
+          }
+        ]
+      },
+      "passed": true,
+      "reference_tails_off": {
+        "energy_kJ_mol": -1.8274836406900654,
+        "forces_kJ_mol_nm": [
+          [
+            -7.131643475863671,
+            5.705314780690936,
+            0.0
+          ],
+          [
+            7.131643475863671,
+            -5.705314780690936,
+            0.0
+          ]
+        ],
+        "system_xml": {
+          "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/c4-endpoint/independent-lrc/attempts/20261102T105448.710401Z-76296/n2_periodic_inside/system-lrc-false.xml",
+          "sha256": "0442464fb667977577f9336d5b7c5e848bcee11ee72e4d2852dabee6b58aceb7"
+        }
+      },
+      "reference_tails_on": {
+        "energy_kJ_mol": -1.8411190255374938,
+        "forces_kJ_mol_nm": [
+          [
+            -7.131643475863671,
+            5.705314780690936,
+            0.0
+          ],
+          [
+            7.131643475863671,
+            -5.705314780690936,
+            0.0
+          ]
+        ],
+        "system_xml": {
+          "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/c4-endpoint/independent-lrc/attempts/20261102T105448.710401Z-76296/n2_periodic_inside/system-lrc-true.xml",
+          "sha256": "c800d5b20c9469a428ed98282daca7189409d7281bdddfb9995d81038bdf7082"
+        }
+      },
+      "status": "passed_small_reference_fixture"
+    },
+    {
+      "case": {
+        "C4_matrix_kJ_nm4_mol": [
+          [
+            0.5,
+            0.75,
+            0.0
+          ],
+          [
+            0.75,
+            1.25,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "alchemical_activity_policy_admitted": false,
+        "box_nm": [
+          8.0,
+          8.0,
+          8.0
+        ],
+        "cutoff_nm": 3.0,
+        "diagnostic_zero_type_only": false,
+        "exclusions": [
+          [
+            0,
+            1
+          ]
+        ],
+        "interaction_groups": false,
+        "name": "n2_excluded_inside",
+        "positions_nm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.25,
+            0.5,
+            0.25
+          ]
+        ],
+        "switching": false,
+        "types": [
+          0,
+          1
+        ]
+      },
+      "comparison": {
+        "LRC_changes_forces_bitwise": false,
+        "LRC_energy_absolute_error_kJ_mol": 6.622262807565171e-11,
+        "LRC_energy_tolerance_kJ_mol": 1.272707695624114e-06,
+        "analytic_LRC_energy_kJ_mol": -0.0136353847812057,
+        "direct_energy_absolute_error_kJ_mol": 0.0,
+        "direct_energy_tolerance_kJ_mol": 1e-08,
+        "force_component_tolerances": [
+          [
+            1e-08,
+            1e-08,
+            1e-08
+          ],
+          [
+            1e-08,
+            1e-08,
+            1e-08
+          ]
+        ],
+        "force_components_compared": 12,
+        "force_components_per_state": 6,
+        "maximum_direct_force_error": 0.0,
+        "maximum_tails_on_force_error": 0.0,
+        "observed_LRC_energy_kJ_mol": -0.013635384847428328
+      },
+      "name": "n2_excluded_inside",
+      "oracle": {
+        "LRC_energy_100_digits": "-0.01363538478120569981971633412881728682377243662923223012575930812633600870783944877876751226276960533",
+        "N_factor": "2/3",
+        "class_counts": {
+          "0": 1,
+          "1": 1
+        },
+        "direct_energy_exact_fraction": "0",
+        "direct_forces_exact_fraction": [
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "pair_details": [
+          {
+            "C4": "3/4",
+            "atoms": [
+              0,
+              1
+            ],
+            "energy": "0",
+            "excluded": true,
+            "inside_cutoff": true,
+            "r2": "15/8"
+          }
+        ]
+      },
+      "passed": true,
+      "reference_tails_off": {
+        "energy_kJ_mol": 0.0,
+        "forces_kJ_mol_nm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "system_xml": {
+          "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/c4-endpoint/independent-lrc/attempts/20261102T105448.710401Z-76296/n2_excluded_inside/system-lrc-false.xml",
+          "sha256": "69b461b28d34861bc3c040e6438e7e7994a0796d5571947c7e801fe0646eeda5"
+        }
+      },
+      "reference_tails_on": {
+        "energy_kJ_mol": -0.013635384847428328,
+        "forces_kJ_mol_nm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "system_xml": {
+          "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/c4-endpoint/independent-lrc/attempts/20261102T105448.710401Z-76296/n2_excluded_inside/system-lrc-true.xml",
+          "sha256": "baa4056a45ad431c6248fd08fcdb3ab2aa8d09b5af72e0dff6af8bfc6dd06122"
+        }
+      },
+      "status": "passed_small_reference_fixture"
+    },
+    {
+      "case": {
+        "C4_matrix_kJ_nm4_mol": [
+          [
+            0.5,
+            0.75,
+            0.0
+          ],
+          [
+            0.75,
+            1.25,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "alchemical_activity_policy_admitted": false,
+        "box_nm": [
+          8.0,
+          8.0,
+          8.0
+        ],
+        "cutoff_nm": 3.0,
+        "diagnostic_zero_type_only": true,
+        "exclusions": [],
+        "interaction_groups": false,
+        "name": "n3_zero_ghost",
+        "positions_nm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.25,
+            0.5,
+            0.25
+          ],
+          [
+            3.5,
+            1.0,
+            0.5
+          ]
+        ],
+        "switching": false,
+        "types": [
+          0,
+          1,
+          2
+        ]
+      },
+      "comparison": {
+        "LRC_changes_forces_bitwise": false,
+        "LRC_energy_absolute_error_kJ_mol": 7.450046482504469e-11,
+        "LRC_energy_tolerance_kJ_mol": 1.3067961575771283e-06,
+        "analytic_LRC_energy_kJ_mol": -0.015339807878856412,
+        "direct_energy_absolute_error_kJ_mol": 0.0,
+        "direct_energy_tolerance_kJ_mol": 1.0021333333333333e-08,
+        "force_component_tolerances": [
+          [
+            1.005688888888889e-08,
+            1.0022755555555556e-08,
+            1.0011377777777779e-08
+          ],
+          [
+            1.005688888888889e-08,
+            1.0022755555555556e-08,
+            1.0011377777777779e-08
+          ],
+          [
+            1e-08,
+            1e-08,
+            1e-08
+          ]
+        ],
+        "force_components_compared": 18,
+        "force_components_per_state": 9,
+        "maximum_direct_force_error": 2.7755575615628914e-17,
+        "maximum_tails_on_force_error": 2.7755575615628914e-17,
+        "observed_LRC_energy_kJ_mol": -0.015339807953356877
+      },
+      "name": "n3_zero_ghost",
+      "oracle": {
+        "LRC_energy_100_digits": "-0.015339807878856412297180875894919447676743991207886258891479221642128009796319379876113451295615806",
+        "N_factor": "3/4",
+        "class_counts": {
+          "0": 1,
+          "1": 1,
+          "2": 1
+        },
+        "direct_energy_exact_fraction": "-16/75",
+        "direct_forces_exact_fraction": [
+          [
+            "128/225",
+            "256/1125",
+            "128/1125"
+          ],
+          [
+            "-128/225",
+            "-256/1125",
+            "-128/1125"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "pair_details": [
+          {
+            "C4": "3/4",
+            "atoms": [
+              0,
+              1
+            ],
+            "energy": "-16/75",
+            "excluded": false,
+            "inside_cutoff": true,
+            "r2": "15/8"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              0,
+              2
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "27/2"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              1,
+              2
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": true,
+            "r2": "43/8"
+          }
+        ]
+      },
+      "passed": true,
+      "reference_tails_off": {
+        "energy_kJ_mol": -0.21333333333333335,
+        "forces_kJ_mol_nm": [
+          [
+            0.5688888888888889,
+            0.22755555555555554,
+            0.11377777777777777
+          ],
+          [
+            -0.5688888888888889,
+            -0.22755555555555554,
+            -0.11377777777777777
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "system_xml": {
+          "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/c4-endpoint/independent-lrc/attempts/20261102T105448.710401Z-76296/n3_zero_ghost/system-lrc-false.xml",
+          "sha256": "b353c4fe7e35e4a0910df8f6acdf5127486ba8b14d4c94d3a063226c2c5e178a"
+        }
+      },
+      "reference_tails_on": {
+        "energy_kJ_mol": -0.22867314128669022,
+        "forces_kJ_mol_nm": [
+          [
+            0.5688888888888889,
+            0.22755555555555554,
+            0.11377777777777777
+          ],
+          [
+            -0.5688888888888889,
+            -0.22755555555555554,
+            -0.11377777777777777
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "system_xml": {
+          "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/c4-endpoint/independent-lrc/attempts/20261102T105448.710401Z-76296/n3_zero_ghost/system-lrc-true.xml",
+          "sha256": "8f237800ec1d4681a9afbc95370ad58230eadc3f4899126aab1de62c744d284b"
+        }
+      },
+      "status": "passed_small_reference_fixture"
+    },
+    {
+      "case": {
+        "C4_matrix_kJ_nm4_mol": [
+          [
+            0.5,
+            0.75,
+            0.0
+          ],
+          [
+            0.75,
+            1.25,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "alchemical_activity_policy_admitted": false,
+        "box_nm": [
+          8.0,
+          8.0,
+          8.0
+        ],
+        "cutoff_nm": 3.0,
+        "diagnostic_zero_type_only": true,
+        "exclusions": [
+          [
+            0,
+            1
+          ]
+        ],
+        "interaction_groups": false,
+        "name": "n3_zero_ghost_excluded",
+        "positions_nm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.25,
+            0.5,
+            0.25
+          ],
+          [
+            3.5,
+            1.0,
+            0.5
+          ]
+        ],
+        "switching": false,
+        "types": [
+          0,
+          1,
+          2
+        ]
+      },
+      "comparison": {
+        "LRC_changes_forces_bitwise": false,
+        "LRC_energy_absolute_error_kJ_mol": 7.450045615142731e-11,
+        "LRC_energy_tolerance_kJ_mol": 1.3067961575771283e-06,
+        "analytic_LRC_energy_kJ_mol": -0.015339807878856412,
+        "direct_energy_absolute_error_kJ_mol": 0.0,
+        "direct_energy_tolerance_kJ_mol": 1e-08,
+        "force_component_tolerances": [
+          [
+            1e-08,
+            1e-08,
+            1e-08
+          ],
+          [
+            1e-08,
+            1e-08,
+            1e-08
+          ],
+          [
+            1e-08,
+            1e-08,
+            1e-08
+          ]
+        ],
+        "force_components_compared": 18,
+        "force_components_per_state": 9,
+        "maximum_direct_force_error": 0.0,
+        "maximum_tails_on_force_error": 0.0,
+        "observed_LRC_energy_kJ_mol": -0.015339807953356868
+      },
+      "name": "n3_zero_ghost_excluded",
+      "oracle": {
+        "LRC_energy_100_digits": "-0.015339807878856412297180875894919447676743991207886258891479221642128009796319379876113451295615806",
+        "N_factor": "3/4",
+        "class_counts": {
+          "0": 1,
+          "1": 1,
+          "2": 1
+        },
+        "direct_energy_exact_fraction": "0",
+        "direct_forces_exact_fraction": [
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "pair_details": [
+          {
+            "C4": "3/4",
+            "atoms": [
+              0,
+              1
+            ],
+            "energy": "0",
+            "excluded": true,
+            "inside_cutoff": true,
+            "r2": "15/8"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              0,
+              2
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "27/2"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              1,
+              2
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": true,
+            "r2": "43/8"
+          }
+        ]
+      },
+      "passed": true,
+      "reference_tails_off": {
+        "energy_kJ_mol": 0.0,
+        "forces_kJ_mol_nm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "system_xml": {
+          "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/c4-endpoint/independent-lrc/attempts/20261102T105448.710401Z-76296/n3_zero_ghost_excluded/system-lrc-false.xml",
+          "sha256": "0515bccfef66851cef0de46a8061c9c56a629034c3d556eac5b7477ebca57fc0"
+        }
+      },
+      "reference_tails_on": {
+        "energy_kJ_mol": -0.015339807953356868,
+        "forces_kJ_mol_nm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "system_xml": {
+          "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/c4-endpoint/independent-lrc/attempts/20261102T105448.710401Z-76296/n3_zero_ghost_excluded/system-lrc-true.xml",
+          "sha256": "15700833e5ad8bc1fda1f4a4793b7f2118e515be2e9246e98ee6d5f129cd7e87"
+        }
+      },
+      "status": "passed_small_reference_fixture"
+    },
+    {
+      "case": {
+        "C4_matrix_kJ_nm4_mol": [
+          [
+            0.5,
+            0.75,
+            0.0
+          ],
+          [
+            0.75,
+            1.25,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "alchemical_activity_policy_admitted": false,
+        "box_nm": [
+          8.0,
+          8.0,
+          8.0
+        ],
+        "cutoff_nm": 3.0,
+        "diagnostic_zero_type_only": true,
+        "exclusions": [],
+        "interaction_groups": false,
+        "name": "n8_zero_ghosts",
+        "positions_nm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.25,
+            0.5,
+            0.25
+          ],
+          [
+            3.5,
+            1.0,
+            0.0
+          ],
+          [
+            2.0,
+            3.5,
+            0.0
+          ],
+          [
+            4.5,
+            1.5,
+            2.0
+          ],
+          [
+            5.0,
+            5.5,
+            2.0
+          ],
+          [
+            6.5,
+            6.5,
+            3.5
+          ],
+          [
+            1.5,
+            6.5,
+            5.5
+          ]
+        ],
+        "switching": false,
+        "types": [
+          0,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "comparison": {
+        "LRC_changes_forces_bitwise": false,
+        "LRC_energy_absolute_error_kJ_mol": 8.82968316517907e-11,
+        "LRC_energy_tolerance_kJ_mol": 1.363610260832152e-06,
+        "analytic_LRC_energy_kJ_mol": -0.018180513041607598,
+        "direct_energy_absolute_error_kJ_mol": 0.0,
+        "direct_energy_tolerance_kJ_mol": 1.0021333333333333e-08,
+        "force_component_tolerances": [
+          [
+            1.005688888888889e-08,
+            1.0022755555555556e-08,
+            1.0011377777777779e-08
+          ],
+          [
+            1.005688888888889e-08,
+            1.0022755555555556e-08,
+            1.0011377777777779e-08
+          ],
+          [
+            1e-08,
+            1e-08,
+            1e-08
+          ],
+          [
+            1e-08,
+            1e-08,
+            1e-08
+          ],
+          [
+            1e-08,
+            1e-08,
+            1e-08
+          ],
+          [
+            1e-08,
+            1e-08,
+            1e-08
+          ],
+          [
+            1e-08,
+            1e-08,
+            1e-08
+          ],
+          [
+            1e-08,
+            1e-08,
+            1e-08
+          ]
+        ],
+        "force_components_compared": 48,
+        "force_components_per_state": 24,
+        "maximum_direct_force_error": 2.7755575615628914e-17,
+        "maximum_tails_on_force_error": 2.7755575615628914e-17,
+        "observed_LRC_energy_kJ_mol": -0.01818051312990443
+      },
+      "name": "n8_zero_ghosts",
+      "oracle": {
+        "LRC_energy_100_digits": "-0.01818051304160759975962177883842304909836324883897630683434574416844801161045259837169001635035947377",
+        "N_factor": "8/9",
+        "class_counts": {
+          "0": 1,
+          "1": 1,
+          "2": 6
+        },
+        "direct_energy_exact_fraction": "-16/75",
+        "direct_forces_exact_fraction": [
+          [
+            "128/225",
+            "256/1125",
+            "128/1125"
+          ],
+          [
+            "-128/225",
+            "-256/1125",
+            "-128/1125"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "pair_details": [
+          {
+            "C4": "3/4",
+            "atoms": [
+              0,
+              1
+            ],
+            "energy": "-16/75",
+            "excluded": false,
+            "inside_cutoff": true,
+            "r2": "15/8"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              0,
+              2
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "53/4"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              0,
+              3
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "65/4"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              0,
+              4
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "37/2"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              0,
+              5
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "77/4"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              0,
+              6
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "67/4"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              0,
+              7
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "43/4"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              1,
+              2
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": true,
+            "r2": "43/8"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              1,
+              3
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "77/8"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              1,
+              4
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "117/8"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              1,
+              5
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "209/8"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              1,
+              6
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "177/8"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              1,
+              7
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "93/8"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              2,
+              3
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": true,
+            "r2": "17/2"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              2,
+              4
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": true,
+            "r2": "21/4"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              2,
+              5
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "37/2"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              2,
+              6
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "55/2"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              2,
+              7
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "33/2"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              3,
+              4
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "57/4"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              3,
+              5
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "17"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              3,
+              6
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "67/2"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              3,
+              7
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "31/2"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              4,
+              5
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "65/4"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              4,
+              6
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "61/4"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              4,
+              7
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "121/4"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              5,
+              6
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": true,
+            "r2": "11/2"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              5,
+              7
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "51/2"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              6,
+              7
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "13"
+          }
+        ]
+      },
+      "passed": true,
+      "reference_tails_off": {
+        "energy_kJ_mol": -0.21333333333333335,
+        "forces_kJ_mol_nm": [
+          [
+            0.5688888888888889,
+            0.22755555555555554,
+            0.11377777777777777
+          ],
+          [
+            -0.5688888888888889,
+            -0.22755555555555554,
+            -0.11377777777777777
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "system_xml": {
+          "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/c4-endpoint/independent-lrc/attempts/20261102T105448.710401Z-76296/n8_zero_ghosts/system-lrc-false.xml",
+          "sha256": "9bbb588f325a695019e8e1508cffe5227105f0c14950b9239a80d59d876ee4d8"
+        }
+      },
+      "reference_tails_on": {
+        "energy_kJ_mol": -0.23151384646323778,
+        "forces_kJ_mol_nm": [
+          [
+            0.5688888888888889,
+            0.22755555555555554,
+            0.11377777777777777
+          ],
+          [
+            -0.5688888888888889,
+            -0.22755555555555554,
+            -0.11377777777777777
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "system_xml": {
+          "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/c4-endpoint/independent-lrc/attempts/20261102T105448.710401Z-76296/n8_zero_ghosts/system-lrc-true.xml",
+          "sha256": "dcca3fb27288b249ce65c4f27809674d39af19c4bb946822357ed36e0a2e1832"
+        }
+      },
+      "status": "passed_small_reference_fixture"
+    },
+    {
+      "case": {
+        "C4_matrix_kJ_nm4_mol": [
+          [
+            0.5,
+            0.75,
+            0.0
+          ],
+          [
+            0.75,
+            1.25,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "alchemical_activity_policy_admitted": false,
+        "box_nm": [
+          8.0,
+          8.0,
+          8.0
+        ],
+        "cutoff_nm": 3.0,
+        "diagnostic_zero_type_only": true,
+        "exclusions": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "interaction_groups": false,
+        "name": "n8_mixed_excluded",
+        "positions_nm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.25,
+            0.5,
+            0.25
+          ],
+          [
+            3.5,
+            0.0,
+            0.0
+          ],
+          [
+            6.75,
+            0.25,
+            0.5
+          ],
+          [
+            4.0,
+            4.0,
+            4.0
+          ],
+          [
+            0.5,
+            3.5,
+            0.75
+          ],
+          [
+            7.0,
+            7.0,
+            7.0
+          ],
+          [
+            3.0,
+            6.5,
+            3.0
+          ]
+        ],
+        "switching": false,
+        "types": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          2,
+          2
+        ]
+      },
+      "comparison": {
+        "LRC_changes_forces_bitwise": false,
+        "LRC_energy_absolute_error_kJ_mol": 8.669144568873577e-10,
+        "LRC_energy_tolerance_kJ_mol": 3.5089107997418487e-06,
+        "analytic_LRC_energy_kJ_mol": -0.12544553998709243,
+        "direct_energy_absolute_error_kJ_mol": 5.551115123125783e-17,
+        "direct_energy_tolerance_kJ_mol": 1.0027005071269964e-08,
+        "force_component_tolerances": [
+          [
+            1.005688888888889e-08,
+            1.0011377777777779e-08,
+            1.0022755555555556e-08
+          ],
+          [
+            1.000047790327753e-08,
+            1.00014484217187e-08,
+            1.0000000507306417e-08
+          ],
+          [
+            1.0004346787075352e-08,
+            1.0000965952683412e-08,
+            1.0000482976341707e-08
+          ],
+          [
+            1.006171357924177e-08,
+            1.001089530874249e-08,
+            1.0023238024590843e-08
+          ],
+          [
+            1e-08,
+            1e-08,
+            1e-08
+          ],
+          [
+            1e-08,
+            1e-08,
+            1e-08
+          ],
+          [
+            1e-08,
+            1e-08,
+            1e-08
+          ],
+          [
+            1e-08,
+            1e-08,
+            1e-08
+          ]
+        ],
+        "force_components_compared": 48,
+        "force_components_per_state": 24,
+        "maximum_direct_force_error": 3.382710778154774e-17,
+        "maximum_tails_on_force_error": 3.382710778154774e-17,
+        "observed_LRC_energy_kJ_mol": -0.1254455408540069
+      },
+      "name": "n8_mixed_excluded",
+      "oracle": {
+        "LRC_energy_100_digits": "-0.125445539987092438341390273985119038778706416988936517156985634762291280112122928764661112817480369",
+        "N_factor": "8/9",
+        "class_counts": {
+          "0": 3,
+          "1": 3,
+          "2": 2
+        },
+        "direct_energy_exact_fraction": "-32468528/120231225",
+        "direct_forces_exact_fraction": [
+          [
+            "-128/225",
+            "128/1125",
+            "256/1125"
+          ],
+          [
+            "-50402944/10546683057",
+            "-152760448/10546683057",
+            "-53504/10546683057"
+          ],
+          [
+            "-3456/79507",
+            "768/79507",
+            "384/79507"
+          ],
+          [
+            "2046592/3316275",
+            "-1806592/16581375",
+            "-3853184/16581375"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "pair_details": [
+          {
+            "C4": "3/4",
+            "atoms": [
+              0,
+              1
+            ],
+            "energy": "0",
+            "excluded": true,
+            "inside_cutoff": true,
+            "r2": "15/8"
+          },
+          {
+            "C4": "1/2",
+            "atoms": [
+              0,
+              2
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "49/4"
+          },
+          {
+            "C4": "3/4",
+            "atoms": [
+              0,
+              3
+            ],
+            "energy": "-16/75",
+            "excluded": false,
+            "inside_cutoff": true,
+            "r2": "15/8"
+          },
+          {
+            "C4": "1/2",
+            "atoms": [
+              0,
+              4
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "48"
+          },
+          {
+            "C4": "3/4",
+            "atoms": [
+              0,
+              5
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "209/16"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              0,
+              6
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": true,
+            "r2": "3"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              0,
+              7
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "81/4"
+          },
+          {
+            "C4": "3/4",
+            "atoms": [
+              1,
+              2
+            ],
+            "energy": "-48/1849",
+            "excluded": false,
+            "inside_cutoff": true,
+            "r2": "43/8"
+          },
+          {
+            "C4": "5/4",
+            "atoms": [
+              1,
+              3
+            ],
+            "energy": "-80/2601",
+            "excluded": false,
+            "inside_cutoff": true,
+            "r2": "51/8"
+          },
+          {
+            "C4": "3/4",
+            "atoms": [
+              1,
+              4
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "271/8"
+          },
+          {
+            "C4": "5/4",
+            "atoms": [
+              1,
+              5
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "157/16"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              1,
+              6
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": true,
+            "r2": "71/8"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              1,
+              7
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "117/8"
+          },
+          {
+            "C4": "3/4",
+            "atoms": [
+              2,
+              3
+            ],
+            "energy": "0",
+            "excluded": true,
+            "inside_cutoff": false,
+            "r2": "87/8"
+          },
+          {
+            "C4": "1/2",
+            "atoms": [
+              2,
+              4
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "129/4"
+          },
+          {
+            "C4": "3/4",
+            "atoms": [
+              2,
+              5
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "349/16"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              2,
+              6
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "57/4"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              2,
+              7
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "23/2"
+          },
+          {
+            "C4": "3/4",
+            "atoms": [
+              3,
+              4
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "271/8"
+          },
+          {
+            "C4": "5/4",
+            "atoms": [
+              3,
+              5
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "219/16"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              3,
+              6
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": true,
+            "r2": "31/8"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              3,
+              7
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "187/8"
+          },
+          {
+            "C4": "3/4",
+            "atoms": [
+              4,
+              5
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "369/16"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              4,
+              6
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "27"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              4,
+              7
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": true,
+            "r2": "33/4"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              5,
+              6
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "281/16"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              5,
+              7
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "325/16"
+          },
+          {
+            "C4": "0",
+            "atoms": [
+              6,
+              7
+            ],
+            "energy": "0",
+            "excluded": false,
+            "inside_cutoff": false,
+            "r2": "129/4"
+          }
+        ]
+      },
+      "passed": true,
+      "reference_tails_off": {
+        "energy_kJ_mol": -0.2700507126996336,
+        "forces_kJ_mol_nm": [
+          [
+            -0.5688888888888889,
+            0.11377777777777777,
+            0.22755555555555554
+          ],
+          [
+            -0.004779032775290154,
+            -0.014484217186996103,
+            -5.073064176745919e-06
+          ],
+          [
+            -0.04346787075351855,
+            0.009659526834115233,
+            0.004829763417057617
+          ],
+          [
+            0.6171357924176976,
+            -0.1089530874248969,
+            -0.23238024590843642
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "system_xml": {
+          "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/c4-endpoint/independent-lrc/attempts/20261102T105448.710401Z-76296/n8_mixed_excluded/system-lrc-false.xml",
+          "sha256": "7632055a5e8577acd86b2cb30486701007d676277090707dbc8e7bd7465a364d"
+        }
+      },
+      "reference_tails_on": {
+        "energy_kJ_mol": -0.3954962535536405,
+        "forces_kJ_mol_nm": [
+          [
+            -0.5688888888888889,
+            0.11377777777777777,
+            0.22755555555555554
+          ],
+          [
+            -0.004779032775290154,
+            -0.014484217186996103,
+            -5.073064176745919e-06
+          ],
+          [
+            -0.04346787075351855,
+            0.009659526834115233,
+            0.004829763417057617
+          ],
+          [
+            0.6171357924176976,
+            -0.1089530874248969,
+            -0.23238024590843642
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "system_xml": {
+          "path": "/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/c4-endpoint/independent-lrc/attempts/20261102T105448.710401Z-76296/n8_mixed_excluded/system-lrc-true.xml",
+          "sha256": "c19f2e2bd0797f06cbe216aaff0c775a807d597ab7442099db793d4980746caa"
+        }
+      },
+      "status": "passed_small_reference_fixture"
+    }
+  ],
+  "force_components_checked": 180,
+  "full_native_model": false,
+  "integrator_steps": 0,
+  "mpmath_version": "1.4.1",
+  "optimizer_run": false,
+  "passed": true,
+  "platform": "Reference",
+  "policy_sha256": "60aed3ad31f79dc7e0824523e68cdf2386c53bbb6230f3cd594cdd5701ff14bb",
+  "production_ready": false,
+  "relations": [
+    {
+      "absolute_combined_energy_error": 5.204170427930421e-18,
+      "expected_ratio": 1.0,
+      "left": "n2_excluded_inside",
+      "name": "excluded_nonzero_pair_does_not_change_LRC",
+      "observed_ratio": 1.0000000000000004,
+      "passed": true,
+      "propagated_predeclared_tolerance": 2.545415391248228e-06,
+      "right": "n2_inside"
+    },
+    {
+      "absolute_combined_energy_error": 1.3877787807814457e-17,
+      "expected_ratio": 1.125,
+      "left": "n3_zero_ghost",
+      "name": "zero_type_ghost_N3_over_N2",
+      "observed_ratio": 1.125000000000001,
+      "passed": true,
+      "propagated_predeclared_tolerance": 2.7385923151542562e-06,
+      "right": "n2_inside"
+    },
+    {
+      "absolute_combined_energy_error": 0.0,
+      "expected_ratio": 1.3333333333333333,
+      "left": "n8_zero_ghosts",
+      "name": "zero_type_ghost_N8_over_N2",
+      "observed_ratio": 1.3333333333333333,
+      "passed": true,
+      "propagated_predeclared_tolerance": 3.060553854997637e-06,
+      "right": "n2_inside"
+    }
+  ],
+  "runner_sha256": "1e2d36978ce1084acaad8ff98fd8f3880cd63075582a4cf1846f8664408f339e",
+  "runtime": {
+    "binaries": {
+      "/Users/abhijith/Documents/ChatGPT/AURA/tools/envs/preparation/lib/libOpenMM.dylib": {
+        "bytes": 3783520,
+        "sha256": "e96c251825155e465eb5282a0962277d57f8fdfa3cd92c88f00418d7b731392e"
+      },
+      "/Users/abhijith/Documents/ChatGPT/AURA/tools/envs/preparation/lib/python3.12/site-packages/openmm/_openmm.cpython-312-darwin.so": {
+        "bytes": 3504048,
+        "sha256": "62ee6dd2edb4c69bacfab0d75a301770374334e4e15509d5313e7af8e277f04d"
+      },
+      "/Users/abhijith/Documents/ChatGPT/AURA/tools/envs/preparation/lib/python3.12/site-packages/openmm/openmm.py": {
+        "bytes": 937166,
+        "sha256": "5b67ec390bc0ced1cbfaad0f21168422ef8274c37caeb89c9da7347822b6f72d"
+      }
+    },
+    "full_version": "8.6.1.dev-b399af4",
+    "git_revision": "b399af4725573963b46d6c1083fdcf7a37615857",
+    "machine": "arm64",
+    "openmm_version": "8.6.1",
+    "platform": "Reference",
+    "python": "3.12.16"
+  },
+  "schema": "orvia.independent-c4-direct-lrc-reference.v1",
+  "status": "passed_small_reference_fixtures"
+}

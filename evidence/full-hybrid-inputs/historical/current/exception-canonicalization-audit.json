@@ -1,0 +1,35 @@
+{
+  "schema": "orvia.exception-canonicalization-change-audit.v1",
+  "passed": true,
+  "scope": "Recorded failed-attempt correction only; not independent scientific acceptance",
+  "legs": {
+    "complex33": {
+      "A": {
+        "allNonExceptionParameterFieldsExactlyEqual": true,
+        "onlySymmetricExceptionOrientationAndGlobalOrderingChanged": true,
+        "exceptionKindRetainedForEachPair": true,
+        "reversedPairs": 34
+      },
+      "B": {
+        "allNonExceptionParameterFieldsExactlyEqual": true,
+        "onlySymmetricExceptionOrientationAndGlobalOrderingChanged": true,
+        "exceptionKindRetainedForEachPair": true,
+        "reversedPairs": 34
+      }
+    },
+    "solvent33": {
+      "A": {
+        "allNonExceptionParameterFieldsExactlyEqual": true,
+        "onlySymmetricExceptionOrientationAndGlobalOrderingChanged": true,
+        "exceptionKindRetainedForEachPair": true,
+        "reversedPairs": 34
+      },
+      "B": {
+        "allNonExceptionParameterFieldsExactlyEqual": true,
+        "onlySymmetricExceptionOrientationAndGlobalOrderingChanged": true,
+        "exceptionKindRetainedForEachPair": true,
+        "reversedPairs": 34
+      }
+    }
+  }
+}
