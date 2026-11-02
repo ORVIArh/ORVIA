@@ -1,0 +1,31 @@
+name: Bug report
+description: Report a reproducible implementation or documentation problem.
+title: "[Bug] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the problem and what you expected instead.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Source version
+      description: Commit, branch or release, plus the component involved.
+      placeholder: "Commit …, NeighborDynamicsCoordinator"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduce it
+      description: Include commands, inputs and relevant Node/Python or execution-environment versions.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Add relevant logs or report paths. For numerical differences, include expected and observed values, units and tolerance. Remove private data before sharing.

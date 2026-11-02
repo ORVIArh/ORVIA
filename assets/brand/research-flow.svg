@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="240" viewBox="0 0 1280 240" role="img" aria-labelledby="title desc">
+  <title id="title">ORVIA intended research workflow</title>
+  <desc id="desc">Register molecular inputs, compute bounded steps, inspect state and analysis. The complete production path remains in development.</desc>
+  <rect width="1280" height="240" rx="16" fill="#111111"/>
+  <g fill="none" stroke="#a88a48" stroke-width="1.5">
+    <rect x="32" y="32" width="356" height="148" rx="8"/>
+    <rect x="462" y="32" width="356" height="148" rx="8"/>
+    <rect x="892" y="32" width="356" height="148" rx="8"/>
+    <path d="M405 106h39m-8-7 9 7-9 7M835 106h39m-8-7 9 7-9 7" stroke="#d6b466" stroke-width="2"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <g fill="#d6b466" font-size="13" letter-spacing="2">
+      <text x="60" y="65">01 / REGISTER</text><text x="490" y="65">02 / COMPUTE</text><text x="920" y="65">03 / INSPECT</text>
+    </g>
+    <g fill="#f5f1e8" font-size="26" font-weight="600">
+      <text x="60" y="111">Molecular inputs</text><text x="490" y="111">Bounded steps</text><text x="920" y="111">State &amp; analysis</text>
+    </g>
+    <g fill="#c4c0b8" font-size="17">
+      <text x="60" y="146">Identity · provenance · parameters</text><text x="490" y="146">Kernels · dynamics · continuation</text><text x="920" y="146">Traceable results · public evidence</text>
+    </g>
+    <text x="640" y="216" text-anchor="middle" fill="#c4c0b8" font-size="13" letter-spacing="1.4">INTENDED DESIGN / COMPLETE PRODUCTION PATH IN DEVELOPMENT</text>
+  </g>
+</svg>

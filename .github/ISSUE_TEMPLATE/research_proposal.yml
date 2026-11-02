@@ -1,0 +1,30 @@
+name: Research proposal
+description: Propose a method, experiment or numerical improvement.
+title: "[Research] "
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Research question
+      description: What should we investigate, and why does it matter for ORVIA?
+    validations:
+      required: true
+  - type: textarea
+    id: method
+    attributes:
+      label: Proposed approach
+      description: Describe the method, inputs and assumptions. Distinguish existing evidence from a hypothesis.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting evidence
+      description: Link relevant papers, source versions, reports or reproducible examples.
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: How will we evaluate it?
+      description: Define measurable acceptance criteria, reference comparisons and known limits.
+    validations:
+      required: true
