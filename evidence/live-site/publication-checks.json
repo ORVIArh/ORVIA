@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-02T18:42:41.580185+00:00",
-  "release": "stress-workflow-and-terminal-status-fix",
+  "checkedAt": "2026-11-02T18:58:51.723075+00:00",
+  "productionDeployId": "6ae8dd4a5ae59f932d341c83",
   "deploymentStatus": "published",
-  "sourceFileCount": 67,
+  "sourceFileCount": 68,
   "explicitAllowlistOnly": true,
   "symlinksIncluded": false,
   "hiddenFilesIncluded": false,
@@ -17,135 +17,142 @@
     "local_user_path": "no_matches",
     "literal_sensitive_assignment": "no_matches"
   },
-  "secretReviewScope": "Explicit source allowlist and known credential/literal/path patterns; no hosting credentials or local output were read into the archive.",
+  "secretReviewScope": "Explicit source allowlist and known credential/literal/path patterns; no hosting credentials or local output were included.",
   "sourceUnchangedByPackaging": true,
   "tests": {
-    "focusedWarningAndBackend": {
-      "passed": 15,
-      "failed": 0,
-      "rerunAt": "2026-11-02T18:42:41.580185+00:00"
-    },
-    "stressHistoryMetricsAndViewer": {
-      "passed": 29,
-      "failed": 0,
-      "scope": "previous successful test run of unchanged frozen source"
-    }
-  },
-  "currentWorkflow": {
-    "jobId": "orvia-stress-20261102-02",
-    "totalSteps": 400000,
-    "representativeTrajectoryFrames": 101,
-    "representativeTrajectoryDurationFs": 8000,
-    "completionClaimed": false
-  },
-  "historicalWorkflow": {
-    "jobId": "orvia-live-20261102-01",
-    "readOnly": true,
-    "trajectoryCount": 2,
-    "trajectoryDurationFs": 100
+    "passed": 36,
+    "failed": 0,
+    "scope": "All bounded website backend, admission, history, metrics, playback, visibility, recovery and viewer-data checks."
   },
   "scientificAcceptance": false,
   "gitCommitCreatedByPackaging": false,
   "githubPublicationOfThisRevisionConfirmed": false,
   "archiveRoundTripVerified": true,
-  "archiveEntryCount": 69,
-  "productionDeployId": "6ae8d9a0d535b7bea82040ae",
-  "productionDeployUrl": "https://6ae8d9a0d535b7bea82040ae--orvia-7ulo.netlify.app",
+  "archiveEntryCount": 70,
   "publicVerification": {
-    "checkedAt": "2026-11-02T18:43:09.025860+00:00",
-    "site": "https://orvia.fyi",
-    "productionDeployId": "6ae8d9a0d535b7bea82040ae",
+    "checkedAt": "2026-11-02T18:58:37.213968+00:00",
+    "productionDeployId": "6ae8dd4a5ae59f932d341c83",
     "checks": [
       {
         "path": "/live/",
         "status": 200,
-        "bytes": 17429,
-        "sha256": "aae0d032cfc3677534fbc4a82b53da5d2753c497ef50fb30155ffb0c1f6f73eb",
-        "matchesLocalSource": true
+        "bytes": 17804,
+        "sha256": "5ebb4ad42be79bc407f361e210a53de1599358b40146c2da0e89f1a0a248a2a6",
+        "matchesSource": true
       },
       {
         "path": "/live/live.js",
         "status": 200,
-        "bytes": 17410,
-        "sha256": "922b4076705cc4b88c51515546058fcaa2a7701a77df51e5816b538467dbf3fb",
-        "matchesLocalSource": true
+        "bytes": 17525,
+        "sha256": "e5ce8d4bd35e485916fdb40722c2f02e71c62ad460e82ad8aac44af448a50c6a",
+        "matchesSource": true
       },
       {
         "path": "/live/viewer.js",
         "status": 200,
-        "bytes": 582504,
-        "sha256": "9d490025f4beb82a0dd75e97f00701a3f948627a61c7cdbbdd5a1fc7effd861d",
-        "matchesLocalSource": true
+        "bytes": 584500,
+        "sha256": "e2a62e9d8ed8d666e06b146975cecb8d945e712e565513fb556e169cb5d69b6c",
+        "matchesSource": true
       },
       {
         "path": "/contracts/",
         "status": 200,
         "bytes": 8694,
         "sha256": "564f88cf2742d426ea6d6ceb7371f25f890af049d8c85d8d0263f07acd6539b3",
-        "matchesLocalSource": true
+        "matchesSource": true
       },
       {
         "path": "/api/orvia/status",
         "status": 200,
-        "bytes": 63225,
-        "sha256": "dd2bccf084987516de53f4fd497355fd06776edcc2b3b27a332c1bba2e77cd1d",
+        "bytes": 65670,
+        "sha256": "2c335142742b922eee5d8db9184fa2a910c6968622a6e4b562b057c203225ae4",
         "statusSummary": {
-          "schemaVersion": 1,
           "chainAvailable": true,
-          "contracts": 256,
           "reportMatches": true,
-          "jobId": "orvia-stress-20261102-02",
-          "jobState": "unknown",
-          "gpuMetrics": {
-            "available": false,
-            "stale": true,
-            "scope": "whole_device",
-            "reason": "no_samples"
+          "contracts": 256,
+          "job": {
+            "jobId": "orvia-stress-replay-20261102-03",
+            "state": "running",
+            "stepsCompleted": 5800,
+            "stepsTotal": 80000,
+            "updatedAt": "2026-11-02T18:58:15.154Z"
           },
           "trajectories": [
             {
               "jobId": "orvia-live-20261102-01",
               "modelId": "complex33",
-              "historical": true,
               "durationFs": 100,
-              "sha256": "e8694d3133193d41725a3615cf3f3a6084b12c119823fc99f8308f49a22e9e07"
+              "sha256": "e8694d3133193d41725a3615cf3f3a6084b12c119823fc99f8308f49a22e9e07",
+              "historical": true
             },
             {
               "jobId": "orvia-live-20261102-01",
               "modelId": "solvent33",
-              "historical": true,
               "durationFs": 100,
-              "sha256": "ab85e99ee9d3f1c8dff0db943a3804aadb39b1aecc69ba0593dadc31391681bb"
+              "sha256": "ab85e99ee9d3f1c8dff0db943a3804aadb39b1aecc69ba0593dadc31391681bb",
+              "historical": true
+            },
+            {
+              "jobId": "orvia-stress-20261102-02",
+              "modelId": "complex33",
+              "durationFs": 8000,
+              "sha256": "3a9042744a37fd4d913c4460f936529598cf960dc014a2a5c7821c1d17a70c0c",
+              "historical": true
+            },
+            {
+              "jobId": "orvia-stress-20261102-02",
+              "modelId": "solvent33",
+              "durationFs": 8000,
+              "sha256": "fa5697e1f90bb772b9c9d8d843bbe939bc11bebda85d6319784eb95f01d75a57",
+              "historical": true
             }
           ]
         }
-      },
-      {
-        "path": "/api/orvia/gpu",
-        "status": 404
       }
-    ],
-    "historicalArtifactChecks": [
-      {
-        "modelId": "complex33",
-        "jobId": "orvia-live-20261102-01",
-        "status": 200,
-        "bytes": 2398851,
-        "sha256": "e8694d3133193d41725a3615cf3f3a6084b12c119823fc99f8308f49a22e9e07",
-        "hashMatches": true,
-        "historical": true
-      },
-      {
-        "modelId": "solvent33",
-        "jobId": "orvia-live-20261102-01",
-        "status": 200,
-        "bytes": 145990,
-        "sha256": "ab85e99ee9d3f1c8dff0db943a3804aadb39b1aecc69ba0593dadc31391681bb",
-        "hashMatches": true,
-        "historical": true
-      }
-    ],
-    "methodRestrictedRouteObservation": "GET /api/orvia/gpu is not mapped; this endpoint accepts POST only. No upload was attempted by this read-only check."
+    ]
   },
-  "sourceStillMatchesFrozenManifest": true
+  "originalStressEvidence": {
+    "jobId": "orvia-stress-20261102-02",
+    "timedOut": true,
+    "passed": false,
+    "integrationStepsExecuted": 338800,
+    "scientificAcceptance": false,
+    "resultSha256": "8ef3f1b9217a72cd677def677adc2c753a50fbb892d9617935a018337f0f9292",
+    "baselineChecks": [
+      {
+        "model": "complex33",
+        "replica": 1,
+        "passed": true,
+        "integrationStepsExecuted": 80000,
+        "sha256": "901687ced1598a43007a926d383801d3dd378ade41b030464ebded504755f564"
+      },
+      {
+        "model": "complex33",
+        "replica": 2,
+        "passed": true,
+        "integrationStepsExecuted": 80000,
+        "sha256": "c530964b76174c44c49d412d35ee81938ead31f3e98405ec3a6220fea49cf715"
+      },
+      {
+        "model": "solvent33",
+        "replica": 1,
+        "passed": true,
+        "integrationStepsExecuted": 80000,
+        "sha256": "ec19d32ad424773d22dc4a7ea1c061fec04830904b11a8036d10da5176e32f3a"
+      },
+      {
+        "model": "solvent33",
+        "replica": 2,
+        "passed": true,
+        "integrationStepsExecuted": 80000,
+        "sha256": "cc5828647fa1572a58065963053a5d642efd08cbc253e1d38f02638b186a2442"
+      }
+    ]
+  },
+  "currentWorkflow": {
+    "jobId": "orvia-stress-replay-20261102-03",
+    "totalSteps": 80000,
+    "stateAtPublicCheck": "running",
+    "completionClaimed": false
+  }
 }
