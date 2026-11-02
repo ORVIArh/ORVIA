@@ -33,6 +33,31 @@ The immutable operator uses ordinary ECDSA/EIP-712 signatures; ERC-1271 smart-co
 
 The package expires after 15 minutes. It allocates at most 0.01 ETH to deployment and reserves the other 0.01 ETH of the conditional budget for the first report. Actual gas/fee limits are much lower when supported by the live quote. The wallet holder must review and approve the transaction. An actual report transaction remains pending until its artifacts and operator signature exist.
 
+## Local encrypted wallet
+
+Run these commands yourself in a local Terminal. Only the public address goes on the command line:
+
+```sh
+ulimit -c 0
+node experimental/mainnet-lite/local_wallet.mjs import --address 0xYOUR_PUBLIC_ADDRESS
+node experimental/mainnet-lite/local_wallet.mjs unlock-check --address 0xYOUR_PUBLIC_ADDRESS
+```
+
+The import prompts for the private key and a new password twice, with input hidden. Use a unique password or passphrase of at least 16 characters, stored in your password manager. Enter one line at a time; do not send either secret in chat, place it in command arguments or environment variables, or save it as plaintext. A recovery phrase is not accepted. The tool checks that the key controls the supplied address before saving anything.
+
+The encrypted file is `~/.orvia/keystores/report-signer.json`, resolved from the OS account home rather than the `HOME` environment variable. It is outside the project workspace, owned by the local user, and created with permissions 0600 inside directories with permissions 0700. Existing files are never overwritten. Keep a separate encrypted backup and its password separately; loss of the password prevents this tool from unlocking the file.
+
+Encryption uses the pinned ethers implementation of Web3 Secret Storage V3 (scrypt N=131072, r=8, p=1; AES-128-CTR; fresh salt and IV). The saved file contains a public address and ciphertext. It is decrypted and checked in memory before saving. `unlock-check` accepts only this bounded format, verifies the same public address, and exits without signing or sending anything. This is an offline setup utility, not a CLI deployment command. Future deployment must refresh and validate the unsigned package, then prompt locally to unlock and approve the exact transaction; setup itself grants no transaction approval.
+
+The password is not retained between runs. JavaScript/ethers may make secret copies in process memory that cannot be reliably zeroized; use a trusted local account and exit after each operation. File encryption does not protect an already-unlocked process from other software running as the same user. This macOS/Linux helper requires `/usr/bin/python3` with `termios` to clear queued Terminal input before restoring echo; it checks that facility before collecting any secret. The tests use disposable synthetic keys only:
+
+```sh
+node --test experimental/mainnet-lite/local_wallet.test.mjs
+python3 experimental/mainnet-lite/wallet_tty_test.py
+```
+
+On 2026-11-02, all 11 wallet tests and 13 real pseudo-Terminal scenarios passed. These include successful encrypted recovery, wrong-key/password rejection, unsafe files, no overwrite, no secret echo, empty input queues after exit, and restored Terminal modes. Cancellation during scrypt is handled after the calculation finishes and before saving; it is not an immediate interruption of the calculation. These are local setup checks, not a mainnet deployment or an external security audit.
+
 ## Data and trust boundary
 
 Store the complete trajectory, scientific report, and exact input artifacts outside the contract. Hash a canonical encoding of each artifact and include its hash in the signed report. Keep the artifacts available from durable storage and publish a content-addressed copy. A wallet controlling the immutable operator key can attest to any hashes, so independent replication or a future proof verifier is needed for stronger scientific assurance.
