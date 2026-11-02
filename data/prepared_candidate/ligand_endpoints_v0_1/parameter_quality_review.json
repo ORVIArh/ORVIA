@@ -1,0 +1,80 @@
+{
+  "endpoints": {
+    "A": {
+      "high_analogy_records": [
+        {
+          "penalty_score": 232.0,
+          "section": "DIHE",
+          "source_line": 9,
+          "source_text": "c3-cc-os-nc   2    2.100       180.000           2.000      same as X -c2-os-X , penalty score=232.0"
+        },
+        {
+          "penalty_score": 232.0,
+          "section": "DIHE",
+          "source_line": 10,
+          "source_text": "nd-cc-os-nc   2    2.100       180.000           2.000      same as X -c2-os-X , penalty score=232.0"
+        },
+        {
+          "penalty_score": 780.0,
+          "section": "DIHE",
+          "source_line": 13,
+          "source_text": "ca-ca-cd-nd   1    0.820       180.000           1.000      same as ca-ce-ce-n2, penalty score=780.0"
+        },
+        {
+          "penalty_score": 780.0,
+          "section": "DIHE",
+          "source_line": 29,
+          "source_text": "ca-ca-cd-nc   1    0.820       180.000           1.000      same as ca-ce-ce-n2, penalty score=780.0"
+        }
+      ],
+      "native_tleap_errors": 0,
+      "scientific_parameter_acceptance": false,
+      "source_sha256": "4ff2a2af4bc501f4f5cb573a3584b9e3ada9b97c532ca9d2af515947e0aaaaff"
+    },
+    "B": {
+      "high_analogy_records": [
+        {
+          "penalty_score": 232.0,
+          "section": "DIHE",
+          "source_line": 9,
+          "source_text": "c3-cc-os-nc   2    2.100       180.000           2.000      same as X -c2-os-X , penalty score=232.0"
+        },
+        {
+          "penalty_score": 232.0,
+          "section": "DIHE",
+          "source_line": 10,
+          "source_text": "nd-cc-os-nc   2    2.100       180.000           2.000      same as X -c2-os-X , penalty score=232.0"
+        },
+        {
+          "penalty_score": 780.0,
+          "section": "DIHE",
+          "source_line": 13,
+          "source_text": "ca-ca-cd-nd   1    0.820       180.000           1.000      same as ca-ce-ce-n2, penalty score=780.0"
+        },
+        {
+          "penalty_score": 780.0,
+          "section": "DIHE",
+          "source_line": 30,
+          "source_text": "ca-ca-cd-nc   1    0.820       180.000           1.000      same as ca-ce-ce-n2, penalty score=780.0"
+        }
+      ],
+      "native_tleap_errors": 0,
+      "scientific_parameter_acceptance": false,
+      "source_sha256": "d8333f3e7067729811c7cf37d19e1838c4b9d1d9148d46a30af2165c9d62098d"
+    }
+  },
+  "numerical_translation_checks": "Separate independent energy/force tests pass; they do not establish empirical parameter quality.",
+  "preregistered_validation": {
+    "acceptance_tolerances": null,
+    "comparisons": "Relative conformer energies and gradients; preserve failed calculations and separate bonded/nonbonded contributions.",
+    "cyclic_terms": "Use ring-preserving conformers or constrained puckering; never rotate a ring bond as if it were an acyclic rotor.",
+    "production_sensitivity_execution": "Any retained full binding calculation remains an explicitly registered on-chain protocol; no local calculation is substituted as its production result.",
+    "quantum_reference": "Independent declared electronic-structure method/basis and constrained relaxed conformers; method is not yet selected or executed.",
+    "scope": "Validate every high-analogy torsion family before accepting a production force-field model.",
+    "sensitivity": "Predeclare half/double amplitudes for flagged Fourier components as exploratory sensitivity variants. These are not statistical error bars and do not substitute for quantum validation."
+  },
+  "production_ready": false,
+  "review_trigger": "Native parmchk2 analogy score >100 triggers explicit review. This is a conservative workflow trigger, not a calibrated physical-error threshold.",
+  "schema": "orvia.ligand-parameter-review.v1",
+  "status": "PARAMETER_QUALITY_REVIEW_REQUIRED"
+}

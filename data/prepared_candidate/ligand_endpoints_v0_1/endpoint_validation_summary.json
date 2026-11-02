@@ -1,0 +1,30 @@
+{
+  "endpoints": {
+    "A": {
+      "angles": 76,
+      "atoms": 41,
+      "bonds": 44,
+      "exceptions": 211,
+      "native_periodic_impropers": 14,
+      "net_charge_e": 2.304868268465654e-09,
+      "periodic_torsions": 132,
+      "validation_passed": true
+    },
+    "B": {
+      "angles": 82,
+      "atoms": 44,
+      "bonds": 47,
+      "exceptions": 229,
+      "native_periodic_impropers": 14,
+      "net_charge_e": -2.469501617086145e-09,
+      "periodic_torsions": 141,
+      "validation_passed": true
+    }
+  },
+  "force_field": "GAFF2 with native AmberTools AM1-BCC charges",
+  "hybrid_hamiltonian_complete": false,
+  "prepared_cardiac_system_available": false,
+  "production_ready": false,
+  "schema": "orvia.endpoint-validation.v1",
+  "status": "PARAMETERIZED_NEUTRAL_LIGAND_ENDPOINTS_ONLY"
+}
