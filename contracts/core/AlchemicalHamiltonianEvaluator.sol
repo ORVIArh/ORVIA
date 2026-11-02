@@ -13,6 +13,8 @@ import {OrthorhombicGeometry} from "../kernels/OrthorhombicGeometry.sol";
 import {EwaldRealSpaceKernel} from "../kernels/EwaldRealSpaceKernel.sol";
 import {EwaldReciprocalKernel} from "../kernels/EwaldReciprocalKernel.sol";
 import {EwaldCorrections} from "../kernels/EwaldCorrections.sol";
+import {PeriodicCellIndex} from "./PeriodicCellIndex.sol";
+import {OrderedNeighborPairs} from "./OrderedNeighborPairs.sol";
 
 interface IProductionWordState {
     function writer() external view returns (address);
@@ -34,7 +36,7 @@ interface IProductionMathIdentity { function numericalMath() external view retur
 ///      silently supplied. The catalog accepts only its explicit supported schema.
 contract AlchemicalHamiltonianEvaluator {
     error Unauthorized(); error InvalidInput(); error WrongStage(); error DependencyChanged(); error NotConfigured();
-    enum Stage { Missing, Atoms, Bonds, Angles, Torsions, Exceptions, Pairs, ModeSetup, StructureFactor, ModeForces, Background, Complete }
+    enum Stage { Missing, Atoms, Bonds, Angles, Torsions, Exceptions, Pairs, ModeSetup, StructureFactor, ModeForces, Background, Complete, CellBuild }
     struct Modules {
         address registry; address topology; address math; address geometry;
         address bond; address angle; address torsion; address lj; address softcore;
@@ -46,6 +48,8 @@ contract AlchemicalHamiltonianEvaluator {
         bytes32 topologyCommitment; bytes32 snapshotCommitment; bytes32 sourceHash; bytes32 sourceWriterHash;
         address sourceWriter; bytes32 outputNamespace; bytes32 commitment;
         bytes16 lambda; bytes16 totalCharge; bool anyCharge; bool fastCutoffEligible;
+        bool spatialEligible; bool spatialUsed; uint256 cellIndexId; uint256 traversalId;
+        uint64 candidateVisits; uint64 legacyVisits; bytes4 spatialFallback;
         int32[3] mode; bytes16[3] wave; bytes16 coefficient; bytes16 cosine; bytes16 sine;
     }
     struct Pair { uint32 a; uint32 b; uint32 kind; bytes16 sigmaA; bytes16 epsilonA; bytes16 desiredA; bytes16 sigmaB; bytes16 epsilonB; bytes16 desiredB; }
@@ -56,6 +60,11 @@ contract AlchemicalHamiltonianEvaluator {
     bytes32 public immutable coreConfigurationHash;
     IProductionWordState public outputPage;
     bytes32 public outputPageHash;
+    PeriodicCellIndex public spatialIndex;
+    OrderedNeighborPairs public spatialPairs;
+    bytes32 public spatialIndexCodeHash;
+    bytes32 public spatialPairsCodeHash;
+    bytes32 public constant SPATIAL_POLICY_ID = keccak256("ORVIA.FullHamiltonian.SpatialCandidate.v1.GuardedFallback");
     uint256 public nextEvaluation = 1;
     uint256 public constant MAX_WORK = 8;
     bytes16 private constant ONE = 0x3fff0000000000000000000000000000;
@@ -64,6 +73,8 @@ contract AlchemicalHamiltonianEvaluator {
     mapping(uint256 => mapping(uint64 => uint64)) private exceptionIndex;
     event EvaluationRegistered(uint256 indexed id, bytes32 commitment, bytes32 snapshotCommitment);
     event EvaluationAdvanced(uint256 indexed id, Stage stage, uint64 cursor, uint32 mode);
+    event SpatialPathSelected(uint256 indexed evaluation, uint256 indexId, uint256 traversalId);
+    event SpatialFallback(uint256 indexed evaluation, bytes4 reason);
 
     constructor(address owner_, Modules memory m) {
         if (owner_ == address(0)) revert InvalidInput(); owner = owner_; modules = m;
@@ -83,6 +94,16 @@ contract AlchemicalHamiltonianEvaluator {
         if (msg.sender != owner) revert Unauthorized(); if (address(outputPage) != address(0)) revert WrongStage();
         if (page.code.length == 0 || IProductionWordState(page).writer() != address(this)) revert InvalidInput();
         outputPage = IProductionWordState(page); outputPageHash = page.codehash;
+    }
+    function bindSpatial(address index, address pairs) external {
+        if (msg.sender != owner) revert Unauthorized();
+        if (address(spatialIndex) != address(0) || nextEvaluation != 1) revert WrongStage();
+        if (index.code.length == 0 || pairs.code.length == 0) revert InvalidInput();
+        PeriodicCellIndex cells = PeriodicCellIndex(index); OrderedNeighborPairs ordered = OrderedNeighborPairs(pairs);
+        if (cells.owner() != address(this) || address(cells.registry()) != modules.registry
+            || address(cells.numericalMath()) != modules.math || address(cells.geometry()) != modules.geometry
+            || ordered.owner() != address(this) || address(ordered.cellIndex()) != index) revert InvalidInput();
+        spatialIndex = cells; spatialPairs = ordered; spatialIndexCodeHash = index.codehash; spatialPairsCodeHash = pairs.codehash;
     }
     function registerEvaluation(bytes32 protocolId, bytes32 topologyId, uint8 state, address sourcePage,
         bytes32 sourceNamespace, uint32 offset, uint32 stride) external returns (uint256 id)
@@ -105,6 +126,7 @@ contract AlchemicalHamiltonianEvaluator {
         r.sourceWriter = IProductionWordState(input.sourcePage).writer(); r.sourceWriterHash = r.sourceWriter.codehash;
         r.lambda = catalog.lambdaAt(input.topology, input.state); r.modes = _modeCount(d.ewaldExtent);
         r.fastCutoffEligible = _cutoffBounded(d.box[0]) && _cutoffBounded(d.box[1]) && _cutoffBounded(d.box[2]);
+        r.spatialEligible = address(spatialIndex) != address(0) && _spatialBoxSafe(d);
         r.outputNamespace = keccak256(abi.encode(bytes32("ORVIA-HAMILTONIAN-OUTPUT-v1"), block.chainid, address(this), id));
         r.commitment = _commitment(r,id,manifest);
         outputPage.createNamespace(r.outputNamespace, d.atoms * 3 + 10);
@@ -120,7 +142,8 @@ contract AlchemicalHamiltonianEvaluator {
     }
     function _commitment(Run storage r,uint256 id,bytes32 manifest) private view returns(bytes32) {
         bytes32 source = keccak256(abi.encode(r.input,r.snapshotCommitment,r.sourceHash,r.sourceWriter,r.sourceWriterHash));
-        bytes32 configuration = keccak256(abi.encode(coreConfigurationHash,address(outputPage),outputPageHash));
+        bytes32 configuration = keccak256(abi.encode(coreConfigurationHash,address(outputPage),outputPageHash,
+            SPATIAL_POLICY_ID,address(spatialIndex),spatialIndexCodeHash,address(spatialPairs),spatialPairsCodeHash));
         return keccak256(abi.encode(bytes32("ORVIA-HAMILTONIAN-v1"), block.chainid, address(this), id,
             manifest, configuration, r.topologyCommitment, source));
     }
@@ -131,7 +154,11 @@ contract AlchemicalHamiltonianEvaluator {
         // Preserve authenticated completed results for that writer to consume.
         if (r.stage == Stage.Complete) return (0, true);
         AlchemicalTopologyCatalog.Definition memory d = AlchemicalTopologyCatalog(modules.topology).definition(r.input.topology);
-        while (processed < work && r.stage != Stage.Complete) { _one(id, r, d); ++processed; }
+        while (processed < work && r.stage != Stage.Complete) {
+            if (r.stage == Stage.CellBuild) processed += _advanceCells(id,r,work-processed);
+            else if (r.stage == Stage.Pairs && r.spatialUsed) processed += _advanceSpatialPairs(id,r,d,work-processed);
+            else { _one(id, r, d); ++processed; }
+        }
         complete = r.stage == Stage.Complete; emit EvaluationAdvanced(id, r.stage, r.cursor, r.modeIndex);
     }
     function result(uint256 id) external view returns (bytes32 outputNamespace, bytes32 commitment, bytes16 energy) {
@@ -150,6 +177,9 @@ contract AlchemicalHamiltonianEvaluator {
         for (uint256 k; k < 10; ++k) values[k] = _decode(outputPage.readWord(r.outputNamespace, start + k));
     }
     function moduleConfiguration()external view returns(Modules memory){return modules;}
+    function spatialInfo(uint256 id)external view returns(bool eligible,bool used,uint256 indexId,uint256 traversalId,uint64 candidateVisits,uint64 legacyVisits,bytes4 fallbackReason){
+        Run storage r=_get(id);return(r.spatialEligible,r.spatialUsed,r.cellIndexId,r.traversalId,r.candidateVisits,r.legacyVisits,r.spatialFallback);
+    }
     function runInfo(uint256 id) external view returns (Stage stage, uint64 cursor, uint32 mode, Input memory input, bytes32 snapshotCommitment) {
         Run storage r = _get(id); return (r.stage, r.cursor, r.modeIndex, r.input, r.snapshotCommitment);
     }
@@ -160,7 +190,13 @@ contract AlchemicalHamiltonianEvaluator {
             r.anyCharge = r.anyCharge || !m.isZero(q); r.totalCharge = m.add(r.totalCharge, q);
             _energy(r, d, 6, EwaldCorrections(modules.corrections).selfEnergy(q, d.ewaldAlpha, d.prefactor));
             if (r.fastCutoffEligible && !_cutoffAtomSafe(d, uint32(r.cursor), position, q)) r.fastCutoffEligible = false;
-            if (++r.cursor == d.atoms) { r.cursor = 0; r.stage = Stage.Bonds; }
+            if (r.spatialEligible && !_spatialPositionSafe(d.box,position)) r.spatialEligible = false;
+            if (++r.cursor == d.atoms) {
+                r.cursor = 0;
+                r.spatialEligible = r.spatialEligible && r.fastCutoffEligible;
+                if (r.spatialEligible) _beginCells(id,r,d);
+                else r.stage = Stage.Bonds;
+            }
         } else if (r.stage == Stage.Bonds || r.stage == Stage.Angles || r.stage == Stage.Torsions) {
             uint64 count = r.stage == Stage.Bonds ? d.bonds : r.stage == Stage.Angles ? d.angles : d.torsions;
             if (count != 0) { _bonded(r, d); ++r.cursor; }
@@ -174,6 +210,7 @@ contract AlchemicalHamiltonianEvaluator {
             if (r.cursor == d.exceptions) { r.cursor = 0; r.stage = Stage.Pairs; }
         } else if (r.stage == Stage.Pairs) {
             (uint32 a, uint32 b) = _pairIndices(r.cursor, d.atoms);
+            ++r.legacyVisits;
             if (exceptionIndex[id][uint64(uint256(a) * d.atoms + b)] == 0) _normalPair(r, d, a, b);
             if (++r.cursor == r.pairs) { r.cursor = 0; r.stage = r.anyCharge ? Stage.ModeSetup : Stage.Background; }
         } else if (r.stage == Stage.ModeSetup) {
@@ -194,6 +231,57 @@ contract AlchemicalHamiltonianEvaluator {
             _energy(r, d, 7, EwaldCorrections(modules.corrections).backgroundEnergy(r.totalCharge, d.box, d.ewaldAlpha, d.prefactor));
             outputPage.sealNamespace(r.outputNamespace); r.stage = Stage.Complete;
         } else revert WrongStage();
+    }
+    function _spatialBoxSafe(AlchemicalTopologyCatalog.Definition memory d) private view returns(bool) {
+        FloatMath m = FloatMath(modules.math);
+        if (d.atoms < 2 || m.compare(d.cutoff,0x3fbf0000000000000000000000000000)<0) return false;
+        for(uint256 axis;axis<3;++axis) {
+            if(m.compare(d.box[axis],0x3fdf0000000000000000000000000000)<0
+                ||m.compare(d.box[axis],0x401f0000000000000000000000000000)>0)return false;
+        }
+        return true;
+    }
+    function _spatialPositionSafe(bytes16[3] memory box,bytes16[3] memory position) private view returns(bool) {
+        FloatMath m=FloatMath(modules.math);
+        for(uint256 axis;axis<3;++axis) {
+            // Boxes were bounded first; this exact power-of-two scaling cannot
+            // overflow and cannot introduce a new quotient failure at Atoms.
+            if(m.compare(m.abs(position[axis]),m.mul(box[axis],0x401d0000000000000000000000000000))>0)return false;
+        }
+        return true;
+    }
+    function _beginCells(uint256 id,Run storage r,AlchemicalTopologyCatalog.Definition memory d) private {
+        PeriodicCellIndex.Input memory input=PeriodicCellIndex.Input(r.input.protocol,r.input.sourcePage,
+            r.input.sourceNamespace,d.atoms,r.input.offset,r.input.stride,d.box,d.cutoff);
+        try spatialIndex.registerIndex(input) returns(uint256 indexId) {
+            r.cellIndexId=indexId;r.stage=Stage.CellBuild;
+        } catch(bytes memory reason) { _fallbackSpatial(id,r,reason); }
+    }
+    function _advanceCells(uint256 id,Run storage r,uint256 work) private returns(uint256 processed) {
+        try spatialIndex.advanceBuild(r.cellIndexId,work) returns(uint256 used,bool done) {
+            if(used>work||(used==0&&!done))revert InvalidInput();processed=used;
+            if(done){r.traversalId=spatialPairs.registerTraversal(r.cellIndexId);r.spatialUsed=true;r.stage=Stage.Bonds;
+                emit SpatialPathSelected(id,r.cellIndexId,r.traversalId);}
+        } catch(bytes memory reason) { _fallbackSpatial(id,r,reason);processed=1; }
+    }
+    function _fallbackSpatial(uint256 id,Run storage r,bytes memory reason) private {
+        bytes4 selector;if(reason.length>=4)assembly{selector:=mload(add(reason,32))}
+        if(selector!=PeriodicCellIndex.UnsupportedDomain.selector
+            &&selector!=OrthorhombicGeometry.ImageRangeExceeded.selector
+            &&selector!=OrthorhombicGeometry.UnresolvedImage.selector)assembly{revert(add(reason,32),mload(reason))}
+        r.spatialEligible=false;r.spatialUsed=false;r.spatialFallback=selector;r.stage=Stage.Bonds;
+        emit SpatialFallback(id,selector);
+    }
+    function _advanceSpatialPairs(uint256 id,Run storage r,AlchemicalTopologyCatalog.Definition memory d,uint256 work) private returns(uint256 processed) {
+        (uint256 used,bool found,uint32 a,uint32 b,bool done)=spatialPairs.advance(r.traversalId,work);
+        if(used>work||(used==0&&!done)||found&&done)revert InvalidInput();processed=used;
+        if(found){
+            if(a>=b||b>=d.atoms)revert InvalidInput();
+            uint64 ordinal=uint64(uint256(a)*(2*uint256(d.atoms)-a-1)/2+uint256(b-a-1));
+            if(ordinal<r.cursor)revert InvalidInput();r.cursor=ordinal+1;++r.candidateVisits;
+            if(exceptionIndex[id][uint64(uint256(a)*d.atoms+b)]==0)_normalPair(r,d,a,b);
+        }
+        if(done){r.cursor=0;r.stage=r.anyCharge?Stage.ModeSetup:Stage.Background;}
     }
     function _bonded(Run storage r, AlchemicalTopologyCatalog.Definition memory d) private {
         uint32[4] memory atoms; uint64 width = r.stage == Stage.Bonds ? 4 : r.stage == Stage.Angles ? 5 : 7;
@@ -392,6 +480,10 @@ contract AlchemicalHamiltonianEvaluator {
         ExperimentRegistry registry=ExperimentRegistry(modules.registry);manifest=registry.assertProtocol(protocol);
         for(uint256 i;i<12;++i){if(addresses[i].codehash!=moduleHashes[i])revert DependencyChanged();if(i!=0)registry.assertModule(protocol,addresses[i],moduleHashes[i]);}
         if(address(outputPage).codehash!=outputPageHash)revert DependencyChanged();registry.assertModule(protocol,address(outputPage),outputPageHash);registry.assertModule(protocol,address(this),address(this).codehash);
+        if(address(spatialIndex)!=address(0)){
+            if(address(spatialIndex).codehash!=spatialIndexCodeHash||address(spatialPairs).codehash!=spatialPairsCodeHash)revert DependencyChanged();
+            registry.assertModule(protocol,address(spatialIndex),spatialIndexCodeHash);registry.assertModule(protocol,address(spatialPairs),spatialPairsCodeHash);
+        }
     }
     function _addresses(Modules memory m) private pure returns(address[12] memory){return[m.registry,m.topology,m.math,m.geometry,m.bond,m.angle,m.torsion,m.lj,m.softcore,m.realSpace,m.reciprocal,m.corrections];}
     function _get(uint256 id) private view returns(Run storage r){r=runs[id];if(r.stage==Stage.Missing)revert InvalidInput();}

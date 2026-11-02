@@ -11,6 +11,8 @@ import {ReducedPotentialCollector} from "../analysis/ReducedPotentialCollector.s
 import {TimeSeriesDiagnostics} from "../analysis/TimeSeriesDiagnostics.sol";
 import {MBARFreeEnergyEstimator} from "../analysis/MBARFreeEnergyEstimator.sol";
 import {IMolecularCampaignSource} from "../interfaces/IMolecularCampaignSource.sol";
+import {FullModelConstraintCatalog} from "./FullModelConstraintCatalog.sol";
+import {FullModelConstraintSolver} from "./FullModelConstraintSolver.sol";
 
 /// @notice Authenticated NVT dynamics -> frozen cross-state energies -> analysis.
 /// @dev One supported unconstrained, fixed-box hybrid Hamiltonian is used for
@@ -20,7 +22,10 @@ import {IMolecularCampaignSource} from "../interfaces/IMolecularCampaignSource.s
 ///      remain scientific requirements; this contract cannot certify them.
 contract MolecularSimulationPipeline {
     error Unauthorized(); error InvalidInput(); error WrongStage(); error DependencyChanged(); error NotConfigured();
-    enum Stage { Missing, Loading, InitialEvaluation, InitialForces, Ready, Drift, StepEvaluation, StepForces, CrossStart, CrossEvaluation, Record, Complete, HandedOff, Copying }
+    enum Stage { Missing, Loading, InitialEvaluation, InitialForces, Ready, Drift, StepEvaluation, StepForces, CrossStart, CrossEvaluation, Record, Complete, HandedOff, Copying, ConstrainedOps, Projection, ProjectionImport, ConstraintFailed }
+    enum ConstraintPhase { Missing, InitialVelocity, Kick, DriftOne, DriftVelocityOne, Thermostat, DriftTwo, DriftVelocityTwo, FinalVelocity }
+    struct ConstraintPolicy { bytes32 setId;bytes16 positionTolerance;bytes16 velocityTolerance;uint32 maxSweeps; }
+    bytes32 public constant CONSTRAINED_METHOD = keccak256("ORVIA.gBAOAB.OneRattlePerHalfDrift.v1");
     enum AnalysisStage { Collecting, FlushRaw, Chronology, Selecting, Selected, Analyzing }
     struct Modules { address registry; address topology; address math; address integrator; address random; }
     struct Policy {
@@ -36,22 +41,29 @@ contract MolecularSimulationPipeline {
         AnalysisStage analysisStage; uint32 flushCursor; uint8 selectionState; uint32 selectionOrdinal;
         uint32 selectedExpected; uint32 selectedCount; uint256 analysisId;
         uint32[16] thinning; uint256[16] activeRuns; uint32[16] windowSamples;
+        ConstraintPolicy constraints;bytes32 constraintSetCommitment;
     }
     struct Run {
         bytes32 campaign; uint8 state; Stage stage; uint32 cursor; uint64 step; uint256 parent;
         bytes32 commitment; bytes32 workingNamespace; bytes32 committedSnapshot; bytes32 sourceSnapshot;
         uint64 snapshotSerial; uint256 evaluation; uint256 sampledEvaluation; bytes32 sampledEvaluationCommitment; uint8 crossState; bytes16 energy;
         bytes16[16] sampleEnergies; bytes32 evaluationDigest; uint256[] evaluationHistory;
+        ConstraintPhase constraintPhase;bytes32 projectionId;bytes32 projectionTrial;bytes32 substepSnapshot;
+        bytes32 constraintTranscript;uint64 projectionSerial;
     }
     struct Sample {
         bytes32 snapshot; bytes32 snapshotCommitment; bytes32 runCommitment; bytes32 evaluationDigest;
         uint64 step; uint256 run; bytes16[16] energies;
+        bytes32 constraintTranscript;
     }
     address public immutable owner;
     Modules public modules; bytes32[5] public moduleHashes; bytes32 public immutable coreConfigurationHash;
     IProductionWordState public statePage; AlchemicalHamiltonianEvaluator public hamiltonian;
     ReducedPotentialCollector public collector; TimeSeriesDiagnostics public chronology; MBARFreeEnergyEstimator public estimator;
     bytes32[5] public boundHashes;
+    FullModelConstraintSolver public constraintSolver;FullModelConstraintCatalog public constraintCatalog;
+    bytes32 public constraintSolverHash;bytes32 public constraintCatalogHash;
+    uint256 public campaignCount;
     uint256 public nextRun = 1; uint256 public constant MAX_WORK = 8;
     mapping(bytes32 => Campaign) private campaigns;
     mapping(uint256 => Run) private runs;
@@ -61,6 +73,8 @@ contract MolecularSimulationPipeline {
     event CheckpointCommitted(uint256 indexed run,uint64 step,bytes32 snapshot,bytes32 snapshotCommitment);
     event WindowContinued(uint256 indexed parent,uint256 indexed child,bytes32 checkpoint);
     event MolecularSampleRecorded(bytes32 indexed campaign,uint32 sample,uint8 state,uint64 step,bytes32 snapshot,bytes32 evaluationDigest);
+    event ConstraintProblemStarted(uint256 indexed run,bytes32 indexed problem,ConstraintPhase phase);
+    event ConstraintRunFailed(uint256 indexed run,bytes32 indexed problem,bytes4 reason);
 
     constructor(address owner_,Modules memory m) {
         if(owner_==address(0))revert InvalidInput();owner=owner_;modules=m;address[5] memory addresses=_addresses(m);
@@ -86,7 +100,34 @@ contract MolecularSimulationPipeline {
         collector=ReducedPotentialCollector(collector_);chronology=TimeSeriesDiagnostics(chronology_);estimator=MBARFreeEnergyEstimator(estimator_);
         for(uint256 i;i<5;++i)boundHashes[i]=addresses[i].codehash;
     }
+    /// @notice Freeze the spatial acceleration identity before any campaign exists.
+    function bindSpatial(address index,address pairs)external{
+        if(msg.sender!=owner)revert Unauthorized();
+        if(address(hamiltonian)==address(0))revert NotConfigured();
+        if(campaignCount!=0)revert WrongStage();
+        hamiltonian.bindSpatial(index,pairs);
+    }
+    function _spatialConfiguration()private view returns(bytes32){
+        return keccak256(abi.encode(hamiltonian.SPATIAL_POLICY_ID(),address(hamiltonian.spatialIndex()),
+            hamiltonian.spatialIndexCodeHash(),address(hamiltonian.spatialPairs()),hamiltonian.spatialPairsCodeHash()));
+    }
+    function bindConstraints(address solver)external{
+        if(msg.sender!=owner)revert Unauthorized();
+        if(address(constraintSolver)!=address(0)||solver.code.length==0)revert WrongStage();
+        FullModelConstraintSolver s=FullModelConstraintSolver(solver);
+        FullModelConstraintCatalog catalog=s.catalog();
+        if(s.writer()!=address(this)||address(s.numericalMath())!=modules.math
+            ||address(catalog.topology())!=modules.topology||catalog.owner()!=owner)revert InvalidInput();
+        constraintSolver=s;constraintCatalog=catalog;constraintSolverHash=solver.codehash;
+        constraintCatalogHash=address(catalog).codehash;
+    }
     function createCampaign(bytes32 id,Policy calldata policy)external{
+        ConstraintPolicy memory none;_createCampaign(id,policy,none);
+    }
+    function createConstrainedCampaign(bytes32 id,Policy calldata policy,ConstraintPolicy calldata constraints)external{
+        if(constraints.setId==bytes32(0))revert InvalidInput();_createCampaign(id,policy,constraints);
+    }
+    function _createCampaign(bytes32 id,Policy calldata policy,ConstraintPolicy memory constraints)private{
         if(msg.sender!=owner)revert Unauthorized();bytes32 manifest=_dependencies(policy.protocol);
         if(id==bytes32(0)||campaigns[id].commitment!=bytes32(0)||policy.leg==bytes32(0)||policy.seed==bytes32(0)||policy.stream==bytes32(0)
             ||policy.replica>0x00ffffff||policy.samplesPerState<4||policy.minimumChronologySamples<4||policy.minimumChronologySamples>policy.samplesPerState
@@ -98,7 +139,20 @@ contract MolecularSimulationPipeline {
             ||uint256(policy.equilibrationSteps)+uint256(policy.stride)*policy.samplesPerState>type(uint64).max)revert InvalidInput();
         Campaign storage c=campaigns[id];c.policy=policy;c.states=states;c.topologyCommitment=AlchemicalTopologyCatalog(modules.topology).assertTopology(policy.topology);
         c.commitment=keccak256(abi.encode(bytes32("ORVIA-MOLECULAR-CAMPAIGN-v1"),block.chainid,address(this),id,manifest,coreConfigurationHash,boundHashes,policy,c.topologyCommitment));
+        c.commitment=keccak256(abi.encode(c.commitment,bytes32("ORVIA-SPATIAL-CONFIG-v1"),_spatialConfiguration()));
+        if(constraints.setId!=bytes32(0)){
+            _constraintDependencies(policy.protocol);
+            _positive(constraints.positionTolerance);_positive(constraints.velocityTolerance);
+            if(FloatMath(modules.math).compare(constraints.positionTolerance,FloatMath(modules.math).fromUInt(1))>=0
+                ||constraints.maxSweeps==0||constraints.maxSweeps>constraintSolver.MAX_SWEEPS())revert InvalidInput();
+            c.constraintSetCommitment=constraintCatalog.assertSet(constraints.setId);
+            if(constraintCatalog.info(constraints.setId).topologyId!=policy.topology)revert InvalidInput();
+            c.constraints=constraints;
+            c.commitment=keccak256(abi.encode(c.commitment,CONSTRAINED_METHOD,constraints,c.constraintSetCommitment,
+                address(constraintSolver),constraintSolverHash,address(constraintCatalog),constraintCatalogHash));
+        }
         collector.createSeries(_rawSeries(id),_collectionPolicy(c,uint32(states)*policy.samplesPerState));
+        ++campaignCount;
         emit CampaignCreated(id,c.commitment);
     }
     function startWindow(bytes32 campaign,uint8 state)external returns(uint256 id){
@@ -120,18 +174,21 @@ contract MolecularSimulationPipeline {
         if(previous.stage!=Stage.Ready||c.activeRuns[previous.state]!=parent)revert WrongStage();
         child=_newRun(previous.campaign,previous.state,parent);Run storage r=runs[child];
         r.step=previous.step;r.sourceSnapshot=previous.committedSnapshot;r.committedSnapshot=previous.committedSnapshot;r.energy=previous.energy;
+        r.constraintTranscript=previous.constraintTranscript;
         r.stage=Stage.Copying;previous.stage=Stage.HandedOff;c.activeRuns[previous.state]=child;
         emit WindowContinued(parent,child,previous.committedSnapshot);
     }
     function advance(uint256 id,uint256 work)external returns(uint256 processed,bool complete){
         if(work==0||work>MAX_WORK)revert InvalidInput();Run storage r=_run(id);Campaign storage c=_campaign(r.campaign);_dependencies(c.policy.protocol);
-        if(r.stage==Stage.Complete||r.stage==Stage.HandedOff||c.activeRuns[r.state]!=id)revert WrongStage();
+        if(r.stage==Stage.Complete||r.stage==Stage.HandedOff||r.stage==Stage.ConstraintFailed||c.activeRuns[r.state]!=id)revert WrongStage();
+        if(c.constraints.setId!=bytes32(0))_assertConstraints(c);
         AlchemicalTopologyCatalog.Definition memory d=AlchemicalTopologyCatalog(modules.topology).definition(c.policy.topology);
-        while(processed<work&&r.stage!=Stage.Complete){
+        while(processed<work&&r.stage!=Stage.Complete&&r.stage!=Stage.ConstraintFailed){
             if(r.stage==Stage.InitialEvaluation||r.stage==Stage.StepEvaluation||r.stage==Stage.CrossEvaluation){
                 (uint256 used,bool finished)=hamiltonian.advance(r.evaluation,work-processed);processed+=used;
                 if(finished)_evaluationFinished(r);
-            }else{_one(id,r,c,d);++processed;}
+            }else if(r.stage==Stage.Projection){processed+=_advanceProjection(id,r,work-processed);}
+            else{_one(id,r,c,d);++processed;}
         }
         complete=r.stage==Stage.Complete;
     }
@@ -140,7 +197,9 @@ contract MolecularSimulationPipeline {
             bytes32[] memory words=new bytes32[](9);uint64 atom=r.cursor;
             for(uint64 k;k<3;++k){words[k]=AlchemicalTopologyCatalog(modules.topology).word(d.positions,atom*3+k);words[k+3]=AlchemicalTopologyCatalog(modules.topology).word(d.a.particles,atom*4+k+1);}
             statePage.writeWords(r.workingNamespace,uint256(atom)*9,words);
-            if(++r.cursor==d.atoms){r.cursor=0;bytes32 snapshot=_snapshot(r,id,1);_beginEvaluation(r,snapshot,r.state);r.stage=Stage.InitialEvaluation;}
+            if(++r.cursor==d.atoms){r.cursor=0;bytes32 snapshot=_snapshot(r,id,1);
+                if(c.constraints.setId!=bytes32(0))_beginProjection(id,r,ConstraintPhase.InitialVelocity,snapshot,snapshot,false);
+                else{_beginEvaluation(r,snapshot,r.state);r.stage=Stage.InitialEvaluation;}}
         }else if(r.stage==Stage.Copying){
             bytes32[] memory words=new bytes32[](9);for(uint256 k;k<9;++k)words[k]=statePage.readWord(r.sourceSnapshot,uint256(r.cursor)*9+k);
             statePage.writeWords(r.workingNamespace,uint256(r.cursor)*9,words);
@@ -149,12 +208,13 @@ contract MolecularSimulationPipeline {
             _importForce(r,c,d);
             if(++r.cursor==d.atoms){
                 r.cursor=0;statePage.writeWord(r.workingNamespace,uint256(d.atoms)*9,_encode(r.energy));
-                if(r.stage==Stage.StepForces)++r.step;
-                r.committedSnapshot=_snapshot(r,id,2);(,,,,bytes32 sc)=statePage.snapshotInfo(r.committedSnapshot);emit CheckpointCommitted(id,r.step,r.committedSnapshot,sc);
-                if(r.step>c.policy.equilibrationSteps&&(r.step-c.policy.equilibrationSteps)%c.policy.stride==0){r.crossState=0;r.evaluationDigest=bytes32(0);r.stage=Stage.CrossStart;}
-                else r.stage=Stage.Ready;
+                if(r.stage==Stage.StepForces&&c.constraints.setId!=bytes32(0)){
+                    bytes32 snapshot=_snapshot(r,id,10);_beginProjection(id,r,ConstraintPhase.FinalVelocity,snapshot,snapshot,false);
+                }else _commitForces(id,r,c,r.stage==Stage.StepForces);
             }
-        }else if(r.stage==Stage.Ready){r.cursor=0;r.stage=Stage.Drift;
+        }else if(r.stage==Stage.Ready){r.cursor=0;
+            if(c.constraints.setId!=bytes32(0)){r.constraintPhase=ConstraintPhase.Kick;r.substepSnapshot=r.committedSnapshot;r.stage=Stage.ConstrainedOps;}
+            else r.stage=Stage.Drift;
         }else if(r.stage==Stage.Drift){
             _drift(r,c,d);
             if(++r.cursor==d.atoms){r.cursor=0;bytes32 snapshot=_snapshot(r,id,3);_beginEvaluation(r,snapshot,r.state);r.stage=Stage.StepEvaluation;}
@@ -163,7 +223,111 @@ contract MolecularSimulationPipeline {
             else if(r.crossState==r.state){r.sampleEnergies[r.crossState]=r.energy;r.evaluationDigest=keccak256(abi.encode(r.evaluationDigest,r.state,r.sampledEvaluation,r.sampledEvaluationCommitment));++r.crossState;}
             else{_beginEvaluation(r,r.committedSnapshot,r.crossState);r.stage=Stage.CrossEvaluation;}
         }else if(r.stage==Stage.Record){_record(id,r,c);
+        }else if(r.stage==Stage.ConstrainedOps){_constrainedOperation(id,r,c,d);
+        }else if(r.stage==Stage.ProjectionImport){_importProjection(id,r,c,d);
         }else revert WrongStage();
+    }
+    function _commitForces(uint256 id,Run storage r,Campaign storage c,bool step)private{
+        if(step)++r.step;
+        r.committedSnapshot=_snapshot(r,id,2);(,,,,bytes32 sc)=statePage.snapshotInfo(r.committedSnapshot);
+        emit CheckpointCommitted(id,r.step,r.committedSnapshot,sc);
+        if(r.step>c.policy.equilibrationSteps&&(r.step-c.policy.equilibrationSteps)%c.policy.stride==0){r.crossState=0;r.evaluationDigest=bytes32(0);r.stage=Stage.CrossStart;}
+        else r.stage=Stage.Ready;
+    }
+    function _constrainedOperation(uint256 id,Run storage r,Campaign storage c,AlchemicalTopologyCatalog.Definition memory d)private{
+        FloatMath m=FloatMath(modules.math);uint32 atom=r.cursor;ConstraintPhase phase=r.constraintPhase;
+        bytes16[3] memory value;
+        uint256 offset=3;
+        if(phase==ConstraintPhase.Kick){
+            value=LangevinBAOABKernel(modules.integrator).finish(_vector(r.substepSnapshot,atom,3),
+                _vector(r.substepSnapshot,atom,6),_mass(d,atom),c.policy.dt);
+        }else if(phase==ConstraintPhase.DriftOne||phase==ConstraintPhase.DriftTwo){
+            value=_vector(r.substepSnapshot,atom,0);bytes16[3] memory velocity=_vector(r.substepSnapshot,atom,3);
+            bytes16 h=m.mul(c.policy.dt,0x3ffe0000000000000000000000000000);_positive(h);
+            for(uint256 k;k<3;++k)value[k]=m.add(value[k],m.mul(h,velocity[k]));offset=0;
+        }else if(phase==ConstraintPhase.Thermostat){
+            (bytes16 decay,bytes16 noise)=LangevinBAOABKernel(modules.integrator).coefficients(_mass(d,atom),c.policy.dt,c.policy.friction,c.policy.kT);
+            value=_vector(r.substepSnapshot,atom,3);bytes16[3] memory normal=_normal(r,c,atom);
+            for(uint256 k;k<3;++k)value[k]=m.add(m.mul(decay,value[k]),m.mul(noise,normal[k]));
+        }else revert WrongStage();
+        _writeVector(r.workingNamespace,uint256(atom)*9+offset,value);
+        if(++r.cursor==d.atoms){
+            r.cursor=0;bytes32 trial=_snapshot(r,id,11);
+            bool position=phase==ConstraintPhase.DriftOne||phase==ConstraintPhase.DriftTwo;
+            _beginProjection(id,r,phase,position?r.substepSnapshot:trial,trial,position);
+        }
+    }
+    function _beginProjection(uint256 id,Run storage r,ConstraintPhase phase,bytes32 anchor,bytes32 trial,bool position)private{
+        Campaign storage c=campaigns[r.campaign];ConstraintPolicy storage p=c.constraints;
+        r.constraintPhase=phase;r.projectionTrial=trial;
+        r.projectionId=keccak256(abi.encode(bytes32("ORVIA-MOLECULAR-PROJECTION-v1"),block.chainid,address(this),id,++r.projectionSerial,phase,r.step));
+        bytes32 context=keccak256(abi.encode(CONSTRAINED_METHOD,c.commitment,r.commitment,r.step,phase,r.projectionSerial,c.policy.protocol));
+        constraintSolver.registerProblem(r.projectionId,FullModelConstraintSolver.Params(p.setId,
+            position?FullModelConstraintSolver.Mode.Position:FullModelConstraintSolver.Mode.Velocity,
+            address(statePage),anchor,trial,context,p.positionTolerance,p.velocityTolerance,p.maxSweeps));
+        r.cursor=0;r.stage=Stage.Projection;emit ConstraintProblemStarted(id,r.projectionId,phase);
+    }
+    function _advanceProjection(uint256 id,Run storage r,uint256 work)private returns(uint256 processed){
+        FullModelConstraintSolver.Info memory info=constraintSolver.problemInfo(r.projectionId);
+        if(info.status==FullModelConstraintSolver.Status.Correcting||info.status==FullModelConstraintSolver.Status.Checking){
+            (processed,)=constraintSolver.advance(r.projectionId,work);
+            info=constraintSolver.problemInfo(r.projectionId);
+        }
+        if(info.status==FullModelConstraintSolver.Status.Failed){
+            r.stage=Stage.ConstraintFailed;emit ConstraintRunFailed(id,r.projectionId,info.failure);
+        }else if(info.status==FullModelConstraintSolver.Status.Converged){
+            bytes32 solution=constraintSolver.assertSolution(r.projectionId);
+            r.constraintTranscript=keccak256(abi.encode(r.constraintTranscript,r.projectionId,solution));
+            r.cursor=0;r.stage=Stage.ProjectionImport;
+        }else if(info.status!=FullModelConstraintSolver.Status.Correcting&&info.status!=FullModelConstraintSolver.Status.Checking)revert WrongStage();
+    }
+    function _importProjection(uint256 id,Run storage r,Campaign storage c,AlchemicalTopologyCatalog.Definition memory d)private{
+        uint32 atom=r.cursor;ConstraintPhase phase=r.constraintPhase;
+        bytes16[3] memory value=constraintSolver.solutionAt(r.projectionId,atom);
+        bool position=phase==ConstraintPhase.DriftOne||phase==ConstraintPhase.DriftTwo;
+        if(position){
+            FloatMath m=FloatMath(modules.math);bytes16[3] memory trial=_vector(r.projectionTrial,atom,0);
+            bytes16[3] memory velocity=_vector(r.projectionTrial,atom,3);
+            bytes16 h=m.mul(c.policy.dt,0x3ffe0000000000000000000000000000);_positive(h);
+            for(uint256 k;k<3;++k)velocity[k]=m.add(velocity[k],m.div(m.sub(value[k],trial[k]),h));
+            _writeVector(r.workingNamespace,uint256(atom)*9+3,velocity);
+        }
+        _writeVector(r.workingNamespace,uint256(atom)*9+(position?0:3),value);
+        if(++r.cursor!=d.atoms)return;r.cursor=0;
+        bytes32 snapshot=_snapshot(r,id,12);r.substepSnapshot=snapshot;
+        if(phase==ConstraintPhase.InitialVelocity){_beginEvaluation(r,snapshot,r.state);r.stage=Stage.InitialEvaluation;}
+        else if(phase==ConstraintPhase.Kick){r.constraintPhase=ConstraintPhase.DriftOne;r.stage=Stage.ConstrainedOps;}
+        else if(position){_beginProjection(id,r,phase==ConstraintPhase.DriftOne?ConstraintPhase.DriftVelocityOne:ConstraintPhase.DriftVelocityTwo,snapshot,snapshot,false);}
+        else if(phase==ConstraintPhase.DriftVelocityOne){r.constraintPhase=ConstraintPhase.Thermostat;r.stage=Stage.ConstrainedOps;}
+        else if(phase==ConstraintPhase.Thermostat){r.constraintPhase=ConstraintPhase.DriftTwo;r.stage=Stage.ConstrainedOps;}
+        else if(phase==ConstraintPhase.DriftVelocityTwo){_beginEvaluation(r,snapshot,r.state);r.stage=Stage.StepEvaluation;}
+        else if(phase==ConstraintPhase.FinalVelocity){_commitForces(id,r,c,true);}
+        else revert WrongStage();
+    }
+    function _mass(AlchemicalTopologyCatalog.Definition memory d,uint32 atom)private view returns(bytes16){
+        return _decode(AlchemicalTopologyCatalog(modules.topology).word(d.a.particles,uint64(atom)*4));
+    }
+    function _normal(Run storage r,Campaign storage c,uint32 atom)private view returns(bytes16[3] memory normal){
+        if(c.policy.friction!=bytes16(0)){
+            uint64 draw=uint64(atom)*2;uint32 replica=(c.policy.replica<<8)|r.state;
+            (normal[0],normal[1])=CounterRandom(modules.random).normalPair(c.policy.seed,c.policy.stream,replica,r.step,draw);
+            (normal[2],)=CounterRandom(modules.random).normalPair(c.policy.seed,c.policy.stream,replica,r.step,draw+1);
+        }
+    }
+    function _writeVector(bytes32 ns,uint256 offset,bytes16[3] memory value)private{
+        bytes32[] memory words=new bytes32[](3);for(uint256 k;k<3;++k)words[k]=_encode(value[k]);statePage.writeWords(ns,offset,words);
+    }
+    function _constraintDependencies(bytes32 protocol)private view{
+        if(address(constraintSolver)==address(0)||address(constraintSolver).codehash!=constraintSolverHash
+            ||address(constraintCatalog).codehash!=constraintCatalogHash)revert DependencyChanged();
+        ExperimentRegistry registry=ExperimentRegistry(modules.registry);
+        registry.assertModule(protocol,address(constraintSolver),constraintSolverHash);
+        registry.assertModule(protocol,address(constraintCatalog),constraintCatalogHash);
+        address kernel=address(constraintSolver.kernel());registry.assertModule(protocol,kernel,kernel.codehash);
+    }
+    function _assertConstraints(Campaign storage c)private view{
+        _constraintDependencies(c.policy.protocol);
+        if(constraintCatalog.assertSet(c.constraints.setId)!=c.constraintSetCommitment)revert DependencyChanged();
     }
     function _newRun(bytes32 campaign,uint8 state,uint256 parent)private returns(uint256 id){
         Campaign storage c=campaigns[campaign];AlchemicalTopologyCatalog.Definition memory d=AlchemicalTopologyCatalog(modules.topology).definition(c.policy.topology);
@@ -210,6 +374,10 @@ contract MolecularSimulationPipeline {
         if(sample.snapshot!=bytes32(0))revert WrongStage();(,,,,bytes32 sc)=statePage.snapshotInfo(r.committedSnapshot);
         sample.snapshot=r.committedSnapshot;sample.snapshotCommitment=sc;sample.runCommitment=r.commitment;sample.run=id;sample.step=r.step;sample.energies=r.sampleEnergies;
         sample.evaluationDigest=keccak256(abi.encode(r.evaluationDigest,r.state,r.energy,sc));
+        if(c.constraints.setId!=bytes32(0)){
+            sample.constraintTranscript=r.constraintTranscript;
+            sample.evaluationDigest=keccak256(abi.encode(sample.evaluationDigest,CONSTRAINED_METHOD,r.constraintTranscript));
+        }
         bytes16[] memory observable=new bytes16[](1);observable[0]=r.energy;chronology.append(_chronologySeries(r.campaign,r.state),r.step,observable);
         ++c.windowSamples[r.state];emit MolecularSampleRecorded(r.campaign,index,r.state,r.step,r.committedSnapshot,sample.evaluationDigest);
         if(c.windowSamples[r.state]==c.policy.samplesPerState){
@@ -281,6 +449,11 @@ contract MolecularSimulationPipeline {
         out.samplingPolicyHash=keccak256(abi.encode(p.dt,p.friction,p.kT,p.equilibrationSteps,p.stride,
             p.samplesPerState,p.maxLag,p.minimumChronologySamples,p.maxMbarIterations));
         out.modelHash=c.topologyCommitment;
+        if(c.constraints.setId!=bytes32(0)){
+            out.samplingPolicyHash=keccak256(abi.encode(out.samplingPolicyHash,CONSTRAINED_METHOD,
+                c.constraints.positionTolerance,c.constraints.velocityTolerance,c.constraints.maxSweeps));
+            out.modelHash=keccak256(abi.encode(out.modelHash,c.constraintSetCommitment));
+        }
     }
     /// @notice Bind a selected analysis back to its original dynamics campaign.
     function campaignAnalysis(bytes32 id)external view returns(bytes32 commitment,bytes32 series,uint256 analysis){
@@ -291,9 +464,15 @@ contract MolecularSimulationPipeline {
         return(c.commitment,series,c.analysisId);
     }
     function runInfo(uint256 id)external view returns(bytes32 campaign,uint8 state,Stage stage,uint64 step,uint32 cursor,uint256 parent,bytes32 commitment,bytes32 checkpoint){Run storage r=_run(id);return(r.campaign,r.state,r.stage,r.step,r.cursor,r.parent,r.commitment,r.committedSnapshot);}
+    function constraintRunInfo(uint256 id)external view returns(ConstraintPhase phase,bytes32 problem,bytes32 transcript){
+        Run storage r=_run(id);return(r.constraintPhase,r.projectionId,r.constraintTranscript);
+    }
     function stateAt(uint256 id,uint32 atom)external view returns(bytes16[3] memory position,bytes16[3] memory velocity,bytes16[3] memory force){Run storage r=_run(id);if(r.committedSnapshot==bytes32(0)||atom>=AlchemicalTopologyCatalog(modules.topology).definition(campaigns[r.campaign].policy.topology).atoms)revert WrongStage();return(_vector(r.committedSnapshot,atom,0),_vector(r.committedSnapshot,atom,3),_vector(r.committedSnapshot,atom,6));}
     function sampleInfo(bytes32 id,uint32 index)external view returns(bytes32 snapshot,bytes32 snapshotCommitment,bytes32 runCommitment,bytes32 evaluationDigest,uint64 step,uint256 run){Sample storage s=samples[id][index];if(s.snapshot==bytes32(0))revert InvalidInput();return(s.snapshot,s.snapshotCommitment,s.runCommitment,s.evaluationDigest,s.step,s.run);}
     function sampleEnergy(bytes32 id,uint32 sample,uint8 state)external view returns(bytes16){if(state>=_campaign(id).states||samples[id][sample].snapshot==bytes32(0))revert InvalidInput();return samples[id][sample].energies[state];}
+    function sampleConstraintTranscript(bytes32 id,uint32 sample)external view returns(bytes32){
+        if(samples[id][sample].snapshot==bytes32(0))revert InvalidInput();return samples[id][sample].constraintTranscript;
+    }
     function evaluationHistory(uint256 id,uint256 index)external view returns(uint256){return _run(id).evaluationHistory[index];}
     function chronologySeries(bytes32 id,uint8 state)external pure returns(bytes32){return _chronologySeries(id,state);}
     function rawSeries(bytes32 id)external pure returns(bytes32){return _rawSeries(id);}
@@ -309,7 +488,7 @@ contract MolecularSimulationPipeline {
         registry.assertModule(protocol,address(this),address(this).codehash);
     }
     function _addresses(Modules memory m)private pure returns(address[5] memory){return[m.registry,m.topology,m.math,m.integrator,m.random];}
-    function _campaign(bytes32 id)private view returns(Campaign storage c){c=campaigns[id];if(c.commitment==bytes32(0))revert InvalidInput();}
+    function _campaign(bytes32 id)private view returns(Campaign storage c){c=campaigns[id];if(c.commitment==bytes32(0))revert InvalidInput();if(c.constraints.setId!=bytes32(0))_assertConstraints(c);}
     function _run(uint256 id)private view returns(Run storage r){r=runs[id];if(r.stage==Stage.Missing)revert InvalidInput();}
     function _positive(bytes16 x)private view{if(!FloatMath(modules.math).isFinite(x)||FloatMath(modules.math).compare(x,bytes16(0))<=0)revert InvalidInput();}
     function _nonnegative(bytes16 x)private view{if(!FloatMath(modules.math).isFinite(x)||FloatMath(modules.math).compare(x,bytes16(0))<0)revert InvalidInput();}
