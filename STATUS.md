@@ -1,10 +1,12 @@
 # ORVIA v0.6.0-dev status
 
+**Active target: [ORVIA-256](docs/ARCHITECTURE_256.md), fully on-chain production from large registered molecular models.** The user removed the dollar cap and selected up to 256 actual contracts. The current design budgets 32 core contracts, 96 input banks, 64 pipeline-state banks and 64 Hamiltonian-output banks. Eight core integrations remain required; the connected prototype is not a finished 256-contract release. The single-result-anchor route is not selected.
+
 **Current integration is in progress; the complete current-source check has not passed.** [validation_summary.json](reports/validation_summary.json) is deliberately marked `development_in_progress` and `passed: false` after the connected engine and softcore-v2 changes. A previous source-bound component checkpoint cannot validate changed or newly added inputs.
 
 The historical v0.5.1 check passed **212 Node/EVM tests, 63 Python references and all nine groups**, with integrity checks for 159 inputs, two compiler outputs, 36 reports and nine logs. That dated result and the recovered v0.5.0 baseline remain in the research log; neither is a pass for this development snapshot.
 
-**Not ready for mainnet.** The connected development pipeline now supplies a finite hybrid Hamiltonian, unconstrained sampling, computed cross-state energies, sample selection and MBAR. Sharded input/state and absolute-counter continuation extend the historical capacity guards. These are implementations and small-fixture results, not a complete accepted cardiac-myosin campaign. The architecture's 64 production slots remain planned and none has been deployed to Robinhood.
+**Not ready for mainnet.** The connected development pipeline now supplies a finite hybrid Hamiltonian, unconstrained sampling, computed cross-state energies, sample selection and MBAR. Sharded input/state and absolute-counter continuation extend the historical capacity guards. These are implementations and small-fixture results, not a complete accepted cardiac-myosin campaign. The older 64-slot manifest is retained as historical design evidence; the active 256-address inventory includes every router and factory-created bank. None has been deployed to Robinhood.
 
 ## Implemented development capabilities
 

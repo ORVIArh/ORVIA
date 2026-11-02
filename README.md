@@ -4,13 +4,15 @@
 
 Open molecular research on Robinhood Chain. Our goal is to make scientific calculations reproducible from public inputs, with the computation, intermediate state and analysis inspectable on-chain.
 
+**Active build: ORVIA-256.** The target is now 256 actual contracts, including all storage banks, with large molecular models and production calculations on-chain. The earlier single-result-anchor option is not the selected deployment route. There is no imposed dollar cap; deployment and full-workload costs must still be measured. See the [256-contract architecture](docs/ARCHITECTURE_256.md) and its [machine-readable inventory](data/architecture_256.json).
+
 [Progress](STATUS.md) · [Roadmap](ROADMAP.md) · [Research log](RESEARCH_LOG.md) · [Architecture](docs/ARCHITECTURE.md) · [Release requirements](docs/PRODUCTION_GAPS.md)
 
 **Current snapshot: v0.6.0-dev, integration in progress.** The [current validation summary](reports/validation_summary.json) is incomplete and does not claim a full-suite pass. The historical v0.5.1 checkpoint passed 212 Node/EVM tests, 63 Python references and all nine check groups; that result does not validate subsequent changes. Mainnet readiness remains false.
 
 ORVIA targets fully on-chain molecular calculations on Robinhood Chain. The proposed first experiment compares compound 17 with aficamten in a declared cardiac-myosin state. Registered molecular inputs, numerical work, simulation state and analysis are intended to remain in contracts. Permissionless bounded transactions advance work; swap/pool triggers are deferred.
 
-**This is a development system, not a mainnet-ready release or a binding-free-energy result.** New candidates connect sharded state, a finite hybrid Hamiltonian, unconstrained sampling and analysis. They extend the older component inventory and still require current complete validation. The architecture describes 64 planned production slots; none is claimed complete and none has been deployed to Robinhood. Contract count does not measure scientific quality or computational throughput.
+**This is a development system, not a mainnet-ready release or a binding-free-energy result.** New candidates connect sharded state, a finite hybrid Hamiltonian, unconstrained sampling and analysis. The 256-contract build replaces the earlier 64-slot plan and still requires complete integration and current validation. No production contract has been deployed to Robinhood. Contract count does not measure scientific quality or computational throughput.
 
 ## Implemented and exercised
 
