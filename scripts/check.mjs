@@ -9,12 +9,12 @@ export function defaultChecks(root = process.cwd()) {
   const researchPython = process.env.ORVIA_RESEARCH_PYTHON || python;
   return [
     ['compile', process.execPath, ['scripts/compile.mjs']],
-    ['evm_components', process.execPath, ['--test', '--test-reporter=tap', ...fs.readdirSync(path.join(root, 'test')).filter(x => x.endsWith('.test.mjs')).sort().map(x => `test/${x}`)]],
+    ['evm_components', process.execPath, ['--test', '--test-concurrency=3', '--test-reporter=tap', ...fs.readdirSync(path.join(root, 'test')).filter(x => x.endsWith('.test.mjs')).sort().map(x => `test/${x}`)]],
     ['reference_oracle', researchPython, ['-m', 'unittest', 'discover', '-s', 'reference', '-p', 'test_*.py']],
     ['architecture_manifest', python, ['scripts/validate_manifest.py', '--self-test']],
     ['structure_audit', python, ['scripts/audit_structure.py', '--check']],
     ['pair_identity_audit', researchPython, ['scripts/audit_pair_identity.py', '--chemistry']],
-    ['preparation_audit', python, ['scripts/audit_preparation.py', '--check', '--self-test']],
+    ['preparation_audit', process.execPath, ['scripts/check_preparation.mjs']],
     ['scientific_input_audit', researchPython, ['scripts/scientific_readiness.py', '--check', '--self-test']],
     ['alternative_model_audit', python, ['data/prepared_candidate/alternative_models/audit_public_models.py', '--check', '--self-test']]
   ];
