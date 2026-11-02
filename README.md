@@ -2,6 +2,19 @@
   <img src="assets/brand/orvia-banner.png" alt="ORVIA — Open Molecular Research" width="100%">
 </p>
 
+<h2 align="center">$ORVIA is live</h2>
+
+<p align="center"><strong>Robinhood mainnet · Token contract</strong></p>
+
+<h3 align="center"><code>0x3e9094546fbfd726d96ef8433835d59415195f9a</code></h3>
+
+<p align="center">
+  <a href="https://robinhoodchain.blockscout.com/token/0x3e9094546fbfd726d96ef8433835d59415195f9a"><strong>View token contract</strong></a> &nbsp;·&nbsp;
+  <a href="https://orvia.fyi"><strong>orvia.fyi</strong></a>
+</p>
+
+---
+
 <h1 align="center">Open science. Inspectable computation.</h1>
 
 <p align="center">
