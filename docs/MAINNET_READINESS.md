@@ -6,6 +6,8 @@
 
 The active design is [ORVIA-256](ARCHITECTURE_256.md): 32 core components and 224 fixed storage banks. Its [complete local prototype](COMPLETE_256_PROTOTYPE.md) has passed, and the two large coordinator constructors returned exact runtime bytes in [read-only mainnet calls](TARGET_256_CREATION_PROBE.md). The raw C4 component remains outside the alchemical Hamiltonian, and full-model scientific and workload acceptance remain incomplete. The legacy rehearsal and 64-slot gate described below are retained for reproducibility; they do not authorize the active 256-contract release.
 
+The [256-contract unsigned release adapter](RELEASE_256_PLAN.md) now derives the exact core/bank addresses, constructor runtime identities and bounded infrastructure calls from a declared public sender and nonce. It leaves unselected scientific protocol and input commitments unresolved, reports `prepared-but-blocked`, and has no signing or broadcast path. Its offline constructor witnesses do not rehearse constructor storage or complete initialization.
+
 ## Verified network documentation
 
 Robinhood's official documentation, checked on 2026-11-02, identifies mainnet chain ID **4663**, ETH gas and `https://robinhoodchain.blockscout.com`. Its public RPC is `https://rpc.mainnet.chain.robinhood.com`; the documentation describes it as rate-limited and recommends a provider endpoint for production.
@@ -82,7 +84,7 @@ node scripts/deploy.mjs --readiness
 
 `reports/mainnet_readiness.json` lists every declared production slot, its experimental candidate sources and whether a complete measured production implementation is actually validated. The inventory is generated from the manifest; it does not convert a candidate source association into a completed slot. The declared production count must match its justified slot list and remain at least the requested minimum of 50.
 
-That slot logic belongs to the older manifest. While `data/architecture_256.json` is active, the command explicitly rejects authorization from that legacy gate. A source-bound 256-address release adapter, exact production input commitments and corresponding acceptance evidence are required before this restriction can be replaced.
+That slot logic belongs to the older manifest. While `data/architecture_256.json` is active, the command explicitly rejects authorization from that legacy gate. The new 256-address adapter provides an unsigned infrastructure candidate; complete production registration, exact accepted input commitments and corresponding acceptance evidence are still required before this restriction can be replaced.
 
 The gate consumes the current-version validation report, live preflight, `data/scientific_readiness.json`, per-slot evidence, public operator configuration and complete production acceptance evidence. Missing files keep readiness false. It requires `ready_for_orvia_001_registration == true` in the scientific audit. The gate cannot independently certify scientific truth merely because a JSON flag is set; those evidence records must arise from the actual reviewed checks.
 
