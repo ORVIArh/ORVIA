@@ -1,0 +1,25 @@
+{
+  "schema": "orvia.full-hybrid-portable-checkpoint-smoke.v1",
+  "status": "passed_paths_and_small_reference_replay",
+  "adapterSha256": "9c33993ed140496099690884e5173ee9f1149f8354ad5e90597e0bde4813870c",
+  "allRequiredInputHashesVerified": 18,
+  "adaptedScriptsSyntaxChecked": 6,
+  "exactHistoricalPayloadCopiesVerified": 52,
+  "smallReferenceFixtures": 8,
+  "smallReferenceContexts": 16,
+  "forceComponents": 180,
+  "smallReferencePassed": true,
+  "historicalRuntimeBinariesExactMatch": true,
+  "runtime": {
+    "fullVersion": "8.6.1.dev-b399af4",
+    "gitRevision": "b399af4725573963b46d6c1083fdcf7a37615857",
+    "release": false,
+    "python": "3.12.16 (main, Oct 26 2026, 11:31:43) [Clang 21.1.8 ]",
+    "machine": "arm64",
+    "nativeImporterSha256": "1e8a713cb6f641a9ece150973b6841be27463a971fd830200590d56a165a5a04"
+  },
+  "freshFullAssemblyOrGpuRebuildPerformed": false,
+  "freshFullHamiltonianOrTrajectory": false,
+  "scientificAcceptance": false,
+  "localReplayReportSha256": "d0778dcd243d2771a16341353d044a622b222b2a53ad0d62dc01891bb8ac1df8"
+}
