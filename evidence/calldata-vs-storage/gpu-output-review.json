@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "gpuReportSha256": "91b27558a7b616bfd5e134708c690a18624f6940b088e3bcf1dcb7b8dab55cc1",
+  "cpuManifestSha256": "0c65ff98fd8d6e5a918d258057d466e452c49e47ef98b427be0df0266026cd0b",
+  "independentFullOutputByteComparisons": [
+    {
+      "stream": "complex33/positions",
+      "bytesCompared": 3190464,
+      "equal": true
+    },
+    {
+      "stream": "complex33/A.particles",
+      "bytesCompared": 4253952,
+      "equal": true
+    },
+    {
+      "stream": "complex33/A.bonds",
+      "bytesCompared": 3186912,
+      "equal": true
+    },
+    {
+      "stream": "complex33/A.exceptions",
+      "bytesCompared": 6728768,
+      "equal": true
+    },
+    {
+      "stream": "solvent33/positions",
+      "bytesCompared": 3636160,
+      "equal": true
+    },
+    {
+      "stream": "solvent33/A.particles",
+      "bytesCompared": 4848192,
+      "equal": true
+    },
+    {
+      "stream": "solvent33/A.bonds",
+      "bytesCompared": 3629536,
+      "equal": true
+    },
+    {
+      "stream": "solvent33/A.exceptions",
+      "bytesCompared": 5451072,
+      "equal": true
+    }
+  ],
+  "comparedPackedBytes": 34925056,
+  "scope": "Compares completed GPU outputs against separately generated CPU packed files; does not repeat GPU work or source expansion."
+}

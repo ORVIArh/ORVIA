@@ -1,0 +1,130 @@
+{
+  "passed": true,
+  "scope": "Independent sample-to-source, hash, tree-shape and selected indexed-proof checks; no repeat of all tree construction",
+  "samplesSha256": "67a8836a5d8d6faaabeb788625a0a8cb5030c17d88349bc923701a200c844036",
+  "scriptSha256": "c6798e5188b97917854f9fdb68bca704884105dadbdbfc8a6af8109ec02fb53d",
+  "checkedSamples": 340,
+  "datasets": [
+    {
+      "dataset": "complex33/A.nonbonded.chunk1024",
+      "selectedChunks": 17,
+      "proofDepth": 12,
+      "sourceBytes": 3190464
+    },
+    {
+      "dataset": "complex33/A.nonbonded.chunk256",
+      "selectedChunks": 17,
+      "proofDepth": 14,
+      "sourceBytes": 3190464
+    },
+    {
+      "dataset": "complex33/A.particles.chunk1024",
+      "selectedChunks": 17,
+      "proofDepth": 13,
+      "sourceBytes": 4253952
+    },
+    {
+      "dataset": "complex33/A.particles.chunk256",
+      "selectedChunks": 17,
+      "proofDepth": 15,
+      "sourceBytes": 4253952
+    },
+    {
+      "dataset": "complex33/positions.chunk1024",
+      "selectedChunks": 17,
+      "proofDepth": 12,
+      "sourceBytes": 3190464
+    },
+    {
+      "dataset": "complex33/positions.chunk256",
+      "selectedChunks": 17,
+      "proofDepth": 14,
+      "sourceBytes": 3190464
+    },
+    {
+      "dataset": "solvent33/A.nonbonded.chunk1024",
+      "selectedChunks": 17,
+      "proofDepth": 12,
+      "sourceBytes": 3636160
+    },
+    {
+      "dataset": "solvent33/A.nonbonded.chunk256",
+      "selectedChunks": 17,
+      "proofDepth": 14,
+      "sourceBytes": 3636160
+    },
+    {
+      "dataset": "solvent33/A.particles.chunk1024",
+      "selectedChunks": 17,
+      "proofDepth": 13,
+      "sourceBytes": 4848192
+    },
+    {
+      "dataset": "solvent33/A.particles.chunk256",
+      "selectedChunks": 17,
+      "proofDepth": 15,
+      "sourceBytes": 4848192
+    },
+    {
+      "dataset": "solvent33/positions.chunk1024",
+      "selectedChunks": 17,
+      "proofDepth": 12,
+      "sourceBytes": 3636160
+    },
+    {
+      "dataset": "solvent33/positions.chunk256",
+      "selectedChunks": 17,
+      "proofDepth": 14,
+      "sourceBytes": 3636160
+    },
+    {
+      "dataset": "complex33/A.bonds.chunk1024",
+      "selectedChunks": 17,
+      "proofDepth": 12,
+      "sourceBytes": 3186912
+    },
+    {
+      "dataset": "complex33/A.bonds.chunk256",
+      "selectedChunks": 17,
+      "proofDepth": 14,
+      "sourceBytes": 3186912
+    },
+    {
+      "dataset": "complex33/A.exceptions.chunk1024",
+      "selectedChunks": 17,
+      "proofDepth": 13,
+      "sourceBytes": 6728768
+    },
+    {
+      "dataset": "complex33/A.exceptions.chunk256",
+      "selectedChunks": 17,
+      "proofDepth": 15,
+      "sourceBytes": 6728768
+    },
+    {
+      "dataset": "solvent33/A.bonds.chunk1024",
+      "selectedChunks": 17,
+      "proofDepth": 12,
+      "sourceBytes": 3629536
+    },
+    {
+      "dataset": "solvent33/A.bonds.chunk256",
+      "selectedChunks": 17,
+      "proofDepth": 14,
+      "sourceBytes": 3629536
+    },
+    {
+      "dataset": "solvent33/A.exceptions.chunk1024",
+      "selectedChunks": 17,
+      "proofDepth": 13,
+      "sourceBytes": 5451072
+    },
+    {
+      "dataset": "solvent33/A.exceptions.chunk256",
+      "selectedChunks": 17,
+      "proofDepth": 15,
+      "sourceBytes": 5451072
+    }
+  ],
+  "publicTransactionsSent": 0
+}

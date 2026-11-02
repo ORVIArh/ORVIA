@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "scope": "GPU-verified input packing and isolated conditional mainnet data-access microbenchmark",
+  "productionReaderImplemented": false,
+  "fullCampaignQuoted": false,
+  "publicTransactionsSent": 0,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 6779,
+      "sha256": "890bacfc2593325eadcdfc79fa54035229abbecfe2e09b5c1c8500c1190c3051"
+    },
+    {
+      "path": "comparison.json",
+      "bytes": 4871,
+      "sha256": "03c90adc5d12713c90bddc46f4894f0a2a6b4b1152b5a521ba537033f9d221c5"
+    },
+    {
+      "path": "data-packet.zip",
+      "bytes": 331574,
+      "sha256": "178dd5c8cdde8d8206f64ef445c4d7cb0abbf1f12cdfb39507c51f3dd80ea68a"
+    },
+    {
+      "path": "data-review.json",
+      "bytes": 3291,
+      "sha256": "c1199e3b0c0d49e217ca115b92af18a8589ce15274c19f30d0d9df6335364c98"
+    },
+    {
+      "path": "evm-packet.zip",
+      "bytes": 153941,
+      "sha256": "f8efda91d344c48d46d43432d523436cea5c190c5cdf289366001e20ed5de906"
+    },
+    {
+      "path": "evm-review.json",
+      "bytes": 2988,
+      "sha256": "dc2b1e96e842accbdde44bf1a58700189926c7ecb2ac0d4cab1a801cd53148f6"
+    },
+    {
+      "path": "gpu-output-review.json",
+      "bytes": 1260,
+      "sha256": "4900181fe700c8566a2874f328cd4630c3f020197bccbc875ab89a345da9d745"
+    },
+    {
+      "path": "pricing.json",
+      "bytes": 1236,
+      "sha256": "d7bf37fae9061e432b223af1f3634a54c3bea7e570dafc90b46c525b1a86b406"
+    },
+    {
+      "path": "review-scripts.zip",
+      "bytes": 9906,
+      "sha256": "05649ec13ae13e7c54bbbad7419762893febf82b1aec062e327d227b64c6b244"
+    }
+  ]
+}
