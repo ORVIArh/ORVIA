@@ -1,0 +1,121 @@
+{
+  "schema": "orvia.c4-staged-policy-candidate-summary.v1",
+  "status": "REVIEWABLE_UNACCEPTED_MATHEMATICAL_CANDIDATE",
+  "modelScope": "FrozenADPPIcandidateonly;selectedoriginalvanadatemodelblockedandunsubstituted",
+  "candidate": {
+    "staging": "A-uniquedischargewithphysicalcore;chargelessuniquejointLJ/C4transform;B-uniquerechargeafterphysicalcorerestored",
+    "explicitGroups": "A-onlyH25,B-onlyC41/H42/H43/H44,40commonligand+unchangedenvironment+oneimmutableMg",
+    "phaseRepresentation": "Authenticatedphase+localprogressrecommended;notroundedglobal1/3inference",
+    "sharedSoftcore": "rho=r6+alpha*D*(1-a)^2,D=sigma6/(1+C4/(4epsilon*sigma4)),alpha0.5candidate",
+    "tail": "Per-unique softenedC4tailJ,physicalactivityN_eff/(N_eff+1),nativeMgselfclassretained,25boundedtermswhenz<=1/16"
+  },
+  "boundedEvidence": {
+    "mainChecks": 3546,
+    "nativeEndpointPairIdentities": 80,
+    "analyticDerivativePoints": 2725,
+    "exceptionStateChecks": 3107,
+    "sourceAndCallerChecks": 254,
+    "smallReferenceContexts": 5,
+    "smallReferenceQueries": 240,
+    "ReferenceForceComponents": 1440,
+    "allDeclaredChecksPassed": true,
+    "noNativeC4PositiveZeroA12Pairs": true
+  },
+  "materialFindings": [
+    "ActualMg-C41unexcludedinteriorlinear-charge/softLJpathhasnegative1/rdivergence;C4-onlysofteningcannotfixit.",
+    "Naivesigma-basedsharedsofteningmakesanoverlapwellforactualstrongC4pairs;cappedDavoidsitincorepairmodel.",
+    "Strictglobalnativeboundedness/canonicalZtheoremincompatiblewithpreservednativeCl-HOpoint-chargeendpoint.",
+    "NativeunswitchedC4hardcutoffcannotbesimultaneouslyexactandgloballyC2.",
+    "Stagednetchargepeaksabout0.0774e;fullperiodiccharge/finite-sizepolicyunaccepted."
+  ],
+  "sourceBindingsSupplement": [
+    {
+      "path": "output/c4-policy-candidate/candidate_reference.py",
+      "sha256": "8d68072c654a9bc35463d4bbeaf6df66ce4a19cf160733dacd8103c4583126c7"
+    },
+    {
+      "path": "work/scientific-preparation/data/prepared_candidate/cardiac_adppi_ff03_m3l_33_782_solvated_v0_1/particle_cost_inputs.json.gz",
+      "sha256": "2f056ce6b98884a6296feb25b2310e654e6f4b50b792377bd84755fb675257ad"
+    },
+    {
+      "path": "work/scientific-preparation/data/prepared_candidate/ligand_endpoints_v0_1/B/parameters.json",
+      "sha256": "5e97e15c92dcfa844e517766a6857a89256ce46db98dc1ba847b5d243b345c1a"
+    }
+  ],
+  "externalRawInputsArchive": {
+    "file": "full-hybrid-inputs-static-20261102T110015Z.zip",
+    "sha256": "77eb30f09c5397fb0a58ea176bd7048173ba77fc432c3a6a9a3a3256eaec78af"
+  },
+  "reports": {
+    "policy-preregistration.json": {
+      "sha256": "a53fbfa38ae3b61d9f58a51387df5d63aba697dc7a2e8bec8cf2ee1b096009bc",
+      "bytes": 3055
+    },
+    "PROPOSAL.md": {
+      "sha256": "f22ca75061c54bca0a695b375cc49101d37aa5711416c24ef17f70f1887ad58c",
+      "bytes": 14995
+    },
+    "candidate_reference.py": {
+      "sha256": "8d68072c654a9bc35463d4bbeaf6df66ce4a19cf160733dacd8103c4583126c7",
+      "bytes": 15909
+    },
+    "candidate-validation.json": {
+      "sha256": "67f3da9f4e09e6b35d27f7326f4f6a1df302b6b43e0b6c5bd3a10340656af051",
+      "bytes": 767809
+    },
+    "source-cutoff-preregistration.json": {
+      "sha256": "d312785c89d79ab2413f19c5ad4ba31e23af49cdff9c3b54dffa2ebca851e534",
+      "bytes": 1221
+    },
+    "source_cutoff_reference.py": {
+      "sha256": "7f46be5867ade9c8d6516b28337b46711fcfda354c3255b798465a868c0591a0",
+      "bytes": 9153
+    },
+    "source-cutoff-validation.json": {
+      "sha256": "50a28544de93bb8150ae5b41c5a1e61014978274b35d1c0fd52cc9022e241512",
+      "bytes": 131327
+    },
+    "staged-charge-pair-witness.json": {
+      "sha256": "4a071f9db8d38d0075b8e57e6d4cb2ab4267646335a15416d46db44234f764e3",
+      "bytes": 5378
+    },
+    "charge-invariants.json": {
+      "sha256": "f977f093e1185afeed79ccd0d0c86be3e69ef0c10a46173038832a191a55d004",
+      "bytes": 12062
+    },
+    "explicit-activity-metadata.json": {
+      "sha256": "4c1d96aad72532446e4230c966600d39f693d843b7e30d40b5b9bd7abbde3df2",
+      "bytes": 5992
+    },
+    "endpoint-stability/native-stability.json": {
+      "sha256": "93f71ce7c0781f8e0ef41b89585a8428e76a1dcbc3b5a36bf6ecd3c27e6e433e",
+      "bytes": 17117
+    },
+    "endpoint-stability/mg-c41-collision-path.json": {
+      "sha256": "5fce54b4d8574f4073c5d22c29cb5a160eb7183f13c820cfcd278071a1852629",
+      "bytes": 13038
+    },
+    "endpoint-stability/common-charge-zero-lj.json": {
+      "sha256": "2117d495b4e31a961d1172af0e50f18d3d9829a1c1778ca5a5d962d979188f5a",
+      "bytes": 19541
+    }
+  },
+  "remainingTestsRunning": [],
+  "readOnlySupplementReview": "completed;noalgebraic/callerforcebugfound;provenancebindingssupplementedherewithoutrewritinghistoricaltestreport",
+  "nextImplementationWork": [
+    "Explicitactivity/phaseadmissionandexception-scaleroundoffpolicy",
+    "Allreal/reciprocal/self/background/exceptionchargeconsumersgated",
+    "Boundedbinary128cube-rootandtailarithmetictests+gas",
+    "CompletecandidateHamiltonianforce/referenceandcontinuation/sampleregressions",
+    "Preregisteredwindowoverlap/convergenceandphysicalperiodiccorrectionpolicy",
+    "Selectedoriginalmodelandparameterqualityacceptance"
+  ],
+  "scientificAcceptance": false,
+  "periodicChargeCorrectionPolicyAccepted": false,
+  "onChainImplemented": false,
+  "integrated": false,
+  "productionReady": false,
+  "publicTransactionsSent": 0,
+  "walletUsed": false,
+  "testnetUsed": false
+}

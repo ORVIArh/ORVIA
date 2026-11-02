@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "status": "reviewable_unaccepted_mathematical_candidate",
+  "payloadFilesVerified": 59,
+  "archiveBytes": 228176,
+  "archiveSha256": "a0c4fd618773ac91f13cc1c4df64d165f64ab2f365c0ff3fc33f7005ef02adee",
+  "scientificAcceptance": false,
+  "onChainIntegrated": false,
+  "selectedOriginalModelChanged": false,
+  "publicTransactionsSent": 0
+}
