@@ -10,6 +10,7 @@ import {CounterRandom} from "../kernels/CounterRandom.sol";
 import {ReducedPotentialCollector} from "../analysis/ReducedPotentialCollector.sol";
 import {TimeSeriesDiagnostics} from "../analysis/TimeSeriesDiagnostics.sol";
 import {MBARFreeEnergyEstimator} from "../analysis/MBARFreeEnergyEstimator.sol";
+import {IMolecularCampaignSource} from "../interfaces/IMolecularCampaignSource.sol";
 
 /// @notice Authenticated NVT dynamics -> frozen cross-state energies -> analysis.
 /// @dev One supported unconstrained, fixed-box hybrid Hamiltonian is used for
@@ -101,6 +102,10 @@ contract MolecularSimulationPipeline {
         emit CampaignCreated(id,c.commitment);
     }
     function startWindow(bytes32 campaign,uint8 state)external returns(uint256 id){
+        // Only the owner chooses when sampling starts, so third parties cannot
+        // invalidate repeat preregistration by front-running campaign setup.
+        // Once started, every computational advance remains permissionless.
+        if(msg.sender!=owner)revert Unauthorized();
         Campaign storage c=_campaign(campaign);_dependencies(c.policy.protocol);
         if(c.analysisStage!=AnalysisStage.Collecting||state>=c.states||c.activeRuns[state]!=0)revert InvalidInput();
         id=_newRun(campaign,state,0);c.activeRuns[state]=id;
@@ -263,6 +268,28 @@ contract MolecularSimulationPipeline {
     function _vector(bytes32 ns,uint32 atom,uint32 offset)private view returns(bytes16[3] memory vector){for(uint256 k;k<3;++k)vector[k]=_decode(statePage.readWord(ns,uint256(atom)*9+offset+k));}
     function _ceil(bytes16 g,uint32 maximum)private view returns(uint32){FloatMath m=FloatMath(modules.math);if(m.compare(g,m.fromUInt(maximum))>0)revert InvalidInput();uint32 low=1;uint32 high=maximum;while(low<high){uint32 mid=low+(high-low)/2;if(m.compare(m.fromUInt(mid),g)<0)low=mid+1;else high=mid;}return low;}
     function campaignInfo(bytes32 id)external view returns(bytes32 commitment,AnalysisStage stage,uint8 states,uint8 completed,uint256 analysisId,uint32 selectedExpected){Campaign storage c=_campaign(id);return(c.commitment,c.analysisStage,c.states,c.completedWindows,c.analysisId,c.selectedExpected);}
+    /// @notice Freeze repeat membership before any trajectory can be observed.
+    /// @dev The future selected-series identifier is deterministic even though its
+    ///      sample count is only known after the registered chronology rule runs.
+    function campaignRegistration(bytes32 id)external view returns(IMolecularCampaignSource.Registration memory out){
+        Campaign storage c=_campaign(id);_dependencies(c.policy.protocol);
+        if(c.analysisStage!=AnalysisStage.Collecting)revert WrongStage();
+        for(uint256 k;k<c.states;++k)if(c.activeRuns[k]!=0)revert WrongStage();
+        out.commitment=c.commitment;out.selectedSeries=_selectedSeries(id);
+        out.config=_collectionPolicy(c,uint32(c.states)*c.policy.samplesPerState);
+        Policy storage p=c.policy;
+        out.samplingPolicyHash=keccak256(abi.encode(p.dt,p.friction,p.kT,p.equilibrationSteps,p.stride,
+            p.samplesPerState,p.maxLag,p.minimumChronologySamples,p.maxMbarIterations));
+        out.modelHash=c.topologyCommitment;
+    }
+    /// @notice Bind a selected analysis back to its original dynamics campaign.
+    function campaignAnalysis(bytes32 id)external view returns(bytes32 commitment,bytes32 series,uint256 analysis){
+        Campaign storage c=_campaign(id);_dependencies(c.policy.protocol);
+        if(c.analysisStage!=AnalysisStage.Analyzing||c.analysisId==0)revert WrongStage();
+        (bytes32 actual,,,)=estimator.assertConverged(c.analysisId);
+        series=_selectedSeries(id);if(actual!=series)revert DependencyChanged();
+        return(c.commitment,series,c.analysisId);
+    }
     function runInfo(uint256 id)external view returns(bytes32 campaign,uint8 state,Stage stage,uint64 step,uint32 cursor,uint256 parent,bytes32 commitment,bytes32 checkpoint){Run storage r=_run(id);return(r.campaign,r.state,r.stage,r.step,r.cursor,r.parent,r.commitment,r.committedSnapshot);}
     function stateAt(uint256 id,uint32 atom)external view returns(bytes16[3] memory position,bytes16[3] memory velocity,bytes16[3] memory force){Run storage r=_run(id);if(r.committedSnapshot==bytes32(0)||atom>=AlchemicalTopologyCatalog(modules.topology).definition(campaigns[r.campaign].policy.topology).atoms)revert WrongStage();return(_vector(r.committedSnapshot,atom,0),_vector(r.committedSnapshot,atom,3),_vector(r.committedSnapshot,atom,6));}
     function sampleInfo(bytes32 id,uint32 index)external view returns(bytes32 snapshot,bytes32 snapshotCommitment,bytes32 runCommitment,bytes32 evaluationDigest,uint64 step,uint256 run){Sample storage s=samples[id][index];if(s.snapshot==bytes32(0))revert InvalidInput();return(s.snapshot,s.snapshotCommitment,s.runCommitment,s.evaluationDigest,s.step,s.run);}
