@@ -7,7 +7,7 @@ import {walletLocation,secureDirectory,readPrivateFile,decryptVerified,withHidde
 import {assessProtocol,normalizeArtifactSpec,assertReviewedAssessment,buildUnsignedReport}from'./protocol_registry.mjs';
 import {canonical as canonicalJson}from'./admission.mjs';import{domain,REPORT_TYPES,reportDigest,normalizeReport}from'./attestation.mjs';
 const hash=x=>createHash('sha256').update(x).digest('hex'),coder=AbiCoder.defaultAbiCoder(),ZERO='0x'+'00'.repeat(32),GAS_CAP=1000000n;
-const sources=['report_operator.mjs','protocol_registry.mjs','admission.mjs','precision_admission.mjs','attestation.mjs','../deployment/hybrid256.mjs','../deployment/hybrid_operator.mjs','../../experimental/mainnet-lite/local_wallet.mjs'];
+const sources=['report_operator.mjs','protocol_registry.mjs','admission.mjs','precision_admission.mjs','native_full_model_admission.mjs','attestation.mjs','../deployment/hybrid256.mjs','../deployment/hybrid_operator.mjs','../../experimental/mainnet-lite/local_wallet.mjs'];
 const must=(ok,message)=>{if(!ok)throw new SafeError(message);};
 const serialize=x=>JSON.stringify(x,(_,v)=>typeof v==='bigint'?v.toString():v,2)+'\n';
 const canonical=x=>canonicalJson(JSON.parse(JSON.stringify(x,(_,v)=>typeof v==='bigint'?v.toString():v)));
