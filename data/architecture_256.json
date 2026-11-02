@@ -1,0 +1,282 @@
+{
+  "schemaVersion": 1,
+  "architecture": "ORVIA-256",
+  "status": "implementation_in_progress",
+  "asOfDate": "2026-11-02",
+  "targetChainId": 4663,
+  "productionExecution": "entirely_onchain_from_registered_inputs",
+  "targetActualContractCount": 256,
+  "fundingCapUsd": null,
+  "mainnetTransactionsSent": 0,
+  "readyForMainnet": false,
+  "scientificModelAccepted": false,
+  "singleResultAnchorSelected": false,
+  "countingPolicy": "Every actual router, module and factory-created bank counts. Internal libraries, logical pages, namespaces, runs and snapshots do not add addresses. Unimplemented slots remain explicit; no empty placeholder deployments.",
+  "core": [
+    {
+      "id": "C01",
+      "contract": "ExperimentRegistry",
+      "source": "contracts/core/ExperimentRegistry.sol",
+      "purpose": "Protocol and immutable module identity",
+      "status": "candidate_not_production_validated"
+    },
+    {
+      "id": "C02",
+      "contract": "BankedInputCatalog",
+      "source": "contracts/core/BankedInputCatalog.sol",
+      "purpose": "Sealed molecular streams across a fixed input bank pool",
+      "status": "candidate_not_production_validated"
+    },
+    {
+      "id": "C03",
+      "contract": "AlchemicalTopologyCatalog",
+      "source": "contracts/core/AlchemicalTopologyCatalog.sol",
+      "purpose": "Complete aligned endpoint topology and input validation",
+      "status": "candidate_not_production_validated"
+    },
+    {
+      "id": "C04",
+      "contract": "MolecularSimulationPipeline",
+      "source": "contracts/core/MolecularSimulationPipeline.sol",
+      "purpose": "On-chain state, timestep, sampling and analysis coordination",
+      "status": "candidate_not_production_validated"
+    },
+    {
+      "id": "C05",
+      "contract": "BankedWorkingState",
+      "source": "contracts/core/BankedWorkingState.sol",
+      "purpose": "Pipeline state and retained snapshot router",
+      "status": "candidate_not_production_validated"
+    },
+    {
+      "id": "C06",
+      "contract": "BankedWorkingState",
+      "source": "contracts/core/BankedWorkingState.sol",
+      "purpose": "Hamiltonian force and energy output router",
+      "status": "candidate_not_production_validated"
+    },
+    {
+      "id": "K01",
+      "contract": "FloatMath",
+      "source": "contracts/math/FloatMath.sol",
+      "purpose": "Binary128 arithmetic",
+      "status": "candidate_not_production_validated"
+    },
+    {
+      "id": "K02",
+      "contract": "ScalarMath",
+      "source": "contracts/math/ScalarMath.sol",
+      "purpose": "Scalar exponential and logarithmic functions",
+      "status": "candidate_not_production_validated"
+    },
+    {
+      "id": "K03",
+      "contract": "ElementaryMath",
+      "source": "contracts/math/ElementaryMath.sol",
+      "purpose": "Elementary transcendental functions",
+      "status": "candidate_not_production_validated"
+    },
+    {
+      "id": "K04",
+      "contract": "CounterRandom",
+      "source": "contracts/kernels/CounterRandom.sol",
+      "purpose": "Registered deterministic stochastic streams",
+      "status": "candidate_not_production_validated"
+    },
+    {
+      "id": "K05",
+      "contract": "LangevinBAOABKernel",
+      "source": "contracts/kernels/LangevinBAOABKernel.sol",
+      "purpose": "NVT thermostat and integration operations",
+      "status": "candidate_not_production_validated"
+    },
+    {
+      "id": "K06",
+      "contract": "OrthorhombicGeometry",
+      "source": "contracts/kernels/OrthorhombicGeometry.sol",
+      "purpose": "Periodic box geometry",
+      "status": "candidate_not_production_validated"
+    },
+    {
+      "id": "K07",
+      "contract": "HarmonicBondKernel",
+      "source": "contracts/kernels/HarmonicBondKernel.sol",
+      "purpose": "Bond forces and energies",
+      "status": "candidate_not_production_validated"
+    },
+    {
+      "id": "K08",
+      "contract": "HarmonicAngleKernel",
+      "source": "contracts/kernels/HarmonicAngleKernel.sol",
+      "purpose": "Angle forces and energies",
+      "status": "candidate_not_production_validated"
+    },
+    {
+      "id": "K09",
+      "contract": "PeriodicTorsionKernel",
+      "source": "contracts/kernels/PeriodicTorsionKernel.sol",
+      "purpose": "Proper and ordered periodic improper torsions",
+      "status": "candidate_not_production_validated"
+    },
+    {
+      "id": "K10",
+      "contract": "LennardJonesKernel",
+      "source": "contracts/kernels/LennardJonesKernel.sol",
+      "purpose": "Van der Waals pair terms",
+      "status": "candidate_not_production_validated"
+    },
+    {
+      "id": "K11",
+      "contract": "SoftcoreLennardJonesKernel",
+      "source": "contracts/kernels/SoftcoreLennardJonesKernel.sol",
+      "purpose": "Alchemical soft-core pair terms",
+      "status": "candidate_not_production_validated"
+    },
+    {
+      "id": "K12",
+      "contract": "EwaldRealSpaceKernel",
+      "source": "contracts/kernels/EwaldRealSpaceKernel.sol",
+      "purpose": "Finite real-space electrostatics",
+      "status": "candidate_not_production_validated"
+    },
+    {
+      "id": "K13",
+      "contract": "EwaldReciprocalKernel",
+      "source": "contracts/kernels/EwaldReciprocalKernel.sol",
+      "purpose": "Finite reciprocal-space electrostatics",
+      "status": "candidate_not_production_validated"
+    },
+    {
+      "id": "K14",
+      "contract": "EwaldCorrections",
+      "source": "contracts/kernels/EwaldCorrections.sol",
+      "purpose": "Self, background and exclusion corrections",
+      "status": "candidate_not_production_validated"
+    },
+    {
+      "id": "K15",
+      "contract": "AlchemicalHamiltonianEvaluator",
+      "source": "contracts/core/AlchemicalHamiltonianEvaluator.sol",
+      "purpose": "Full supported hybrid forces and cross-state energies",
+      "status": "candidate_not_production_validated"
+    },
+    {
+      "id": "A01",
+      "contract": "ReducedPotentialCollector",
+      "source": "contracts/analysis/ReducedPotentialCollector.sol",
+      "purpose": "Authenticated sample energy collection",
+      "status": "candidate_not_production_validated"
+    },
+    {
+      "id": "A02",
+      "contract": "TimeSeriesDiagnostics",
+      "source": "contracts/analysis/TimeSeriesDiagnostics.sol",
+      "purpose": "Chronology and correlation diagnostics",
+      "status": "candidate_not_production_validated"
+    },
+    {
+      "id": "A03",
+      "contract": "MBARFreeEnergyEstimator",
+      "source": "contracts/analysis/MBARFreeEnergyEstimator.sol",
+      "purpose": "On-chain free-energy estimation",
+      "status": "candidate_not_production_validated"
+    },
+    {
+      "id": "K16",
+      "contract": "C4PairKernel",
+      "purpose": "Registered ion-induced-dipole potential and derivatives",
+      "status": "integration_required",
+      "productionSource": null
+    },
+    {
+      "id": "K17",
+      "contract": "FullModelConstraintCatalog",
+      "purpose": "Validated full-model constraint topology",
+      "status": "integration_required",
+      "productionSource": null
+    },
+    {
+      "id": "K18",
+      "contract": "FullModelConstraintSolver",
+      "purpose": "Position and velocity constraints across full-model banks",
+      "status": "integration_required",
+      "productionSource": null
+    },
+    {
+      "id": "K19",
+      "contract": "DistanceConstraintKernel",
+      "purpose": "Constraint correction arithmetic integrated with the complete pipeline",
+      "status": "integration_required",
+      "productionSource": null
+    },
+    {
+      "id": "K20",
+      "contract": "PeriodicCellIndex",
+      "purpose": "Deterministic on-chain periodic spatial cell construction",
+      "status": "integration_required",
+      "productionSource": null
+    },
+    {
+      "id": "K21",
+      "contract": "OrderedNeighborPairs",
+      "purpose": "Authenticated ordered pair traversal and displacement-based rebuilds",
+      "status": "integration_required",
+      "productionSource": null
+    },
+    {
+      "id": "A04",
+      "contract": "SamplingDiagnostics",
+      "purpose": "Complete overlap and mixing acceptance integrated with the production campaign",
+      "status": "integration_required",
+      "productionSource": null
+    },
+    {
+      "id": "A05",
+      "contract": "UncertaintyAndResults",
+      "purpose": "Paired-leg repeats and final uncertainty integrated with the production campaign",
+      "status": "integration_required",
+      "productionSource": null
+    }
+  ],
+  "bankPools": [
+    {
+      "id": "D",
+      "routerSlot": "C02",
+      "contract": "InputWordBank",
+      "count": 96,
+      "role": "Molecular input words, keyed by stream and global index"
+    },
+    {
+      "id": "W",
+      "routerSlot": "C05",
+      "contract": "BankedStateStorageBank",
+      "count": 64,
+      "role": "Pipeline states and retained epochs, keyed by namespace and global index"
+    },
+    {
+      "id": "F",
+      "routerSlot": "C06",
+      "contract": "BankedStateStorageBank",
+      "count": 64,
+      "role": "Force and energy results, keyed by evaluation namespace and global index"
+    }
+  ],
+  "counts": {
+    "core": 32,
+    "inputBanks": 96,
+    "pipelineStateBanks": 64,
+    "hamiltonianOutputBanks": 64,
+    "total": 256
+  },
+  "connectedPrototypeCoreCount": 24,
+  "connectedPrototypeExpectedAddressCount": 248,
+  "requiredBeforeProduction": [
+    "All 32 core responsibilities implemented and connected",
+    "All 224 banks provisioned and runtime/owner/identity verified",
+    "Complete full-model loading, force, constraints, dynamics and analysis validation",
+    "Scientifically accepted parameters and preregistered sampling protocol",
+    "Measured full-workload target-chain gas, time and funding estimate",
+    "Fresh full-source validation and reviewed exact deployment plan"
+  ],
+  "algorithmPolicy": "Finite Ewald is the current numerical candidate. PME is not implemented or claimed; any selected production electrostatics scheme must meet a declared and validated full-model error budget."
+}
