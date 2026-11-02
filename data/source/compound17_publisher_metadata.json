@@ -1,0 +1,54 @@
+[
+  {
+    "article_id": 16734771,
+    "doi": "10.1021/acs.jmedchem.1c01290.s001",
+    "files": [
+      {
+        "computed_md5": "e0bb8b7da649530353c0a3eae73ee135",
+        "download_url": "https://ndownloader.figshare.com/files/30975255",
+        "id": 30975255,
+        "is_link_only": false,
+        "mimetype": "application/pdf",
+        "name": "jm1c01290_si_001.pdf",
+        "size": 684609,
+        "supplied_md5": "e0bb8b7da649530353c0a3eae73ee135"
+      }
+    ],
+    "license": {
+      "name": "CC BY-NC 4.0",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "value": 10
+    },
+    "modified_date": "2023-06-11T09:53:21Z",
+    "published_date": "2021-10-04T19:16:56Z",
+    "resource_doi": "10.1021/acs.jmedchem.1c01290",
+    "url": "https://api.figshare.com/v2/articles/16734771",
+    "version": 1
+  },
+  {
+    "article_id": 16734777,
+    "doi": "10.1021/acs.jmedchem.1c01290.s003",
+    "files": [
+      {
+        "computed_md5": "5074cd1339e0c66b3213cd4beb18fcfb",
+        "download_url": "https://ndownloader.figshare.com/files/30975261",
+        "id": 30975261,
+        "is_link_only": false,
+        "mimetype": "text/plain",
+        "name": "jm1c01290_si_003.csv",
+        "size": 2779,
+        "supplied_md5": "5074cd1339e0c66b3213cd4beb18fcfb"
+      }
+    ],
+    "license": {
+      "name": "CC BY-NC 4.0",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "value": 10
+    },
+    "modified_date": "2023-05-31T07:19:11Z",
+    "published_date": "2021-10-04T19:16:58Z",
+    "resource_doi": "10.1021/acs.jmedchem.1c01290",
+    "url": "https://api.figshare.com/v2/articles/16734777",
+    "version": 1
+  }
+]
