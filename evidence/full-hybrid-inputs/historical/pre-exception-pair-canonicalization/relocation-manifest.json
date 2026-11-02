@@ -1,0 +1,258 @@
+{
+  "status": "retained_failed_catalog_shape_attempt",
+  "failure": "Some ligand exceptions a>b after hybrid\u2192nativeglobal permutation; never uploaded. Bonded comparison was separate supported-force evidence only.",
+  "files": [
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/complex33/A.parameters.json.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/complex33/A.parameters.json.gz",
+      "sha256": "4c9c600fbebd282f20c26626fb73def2927d4beeb61dda8e4f88dfa960c0532e",
+      "bytes": 3232169
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/complex33/B.parameters.json.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/complex33/B.parameters.json.gz",
+      "sha256": "900b08773a05dfc57c5ae26ee429aaa892d77745547d4894295c70cdffd7439e",
+      "bytes": 3232215
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/complex33/c4.unresolved.json.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/complex33/c4.unresolved.json.gz",
+      "sha256": "bf62d1360d2019f47b58f0c790f54dc2afc2caf07d2d5c45e56f9527560d4b2c",
+      "bytes": 11084
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/complex33/catalog-candidate.json",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/complex33/catalog-candidate.json",
+      "sha256": "f98137c4c33d3107aee27dc7e1190eaa245e61cd3f23026ee5bc412d2002ff23",
+      "bytes": 13569
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/complex33/constraints.unresolved.json.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/complex33/constraints.unresolved.json.gz",
+      "sha256": "23a9e30594bf8eb55a2fb37eb42602b6d054334a24f77b86560159bc8959b320",
+      "bytes": 536016
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/complex33/global-map.json.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/complex33/global-map.json.gz",
+      "sha256": "5055392bd2e26320818c5d04835786511e271d0f9a15e22e6f20e948655e4dd1",
+      "bytes": 283626
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/complex33/model-policy.json",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/complex33/model-policy.json",
+      "sha256": "9d1d33f7393731213d4ae89f5f395716711da0ee4ce6ae1340079732e08aa6e6",
+      "bytes": 3302
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/complex33/native-records.json.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/complex33/native-records.json.gz",
+      "sha256": "b5902e1267b594d0564d2e80a582189d5e82ed23003f3512b749543cdc31acdb",
+      "bytes": 2243607
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/complex33/normalizations.json.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/complex33/normalizations.json.gz",
+      "sha256": "322a07a0344df753820227b3c5045d0dab262db48b21454c26255a5c7044a752",
+      "bytes": 176
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/complex33/streams/A.angles.words.bin.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/complex33/streams/A.angles.words.bin.gz",
+      "sha256": "1685357f7c147a301990a86df8c042a8c6e09000b77f0de6ee2c65bf19fd21c5",
+      "bytes": 148562
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/complex33/streams/A.bonds.words.bin.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/complex33/streams/A.bonds.words.bin.gz",
+      "sha256": "0859488b91232d68028abc1f0dffd2b79d92d5d5104136a2aefd1cabe13836fd",
+      "bytes": 716888
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/complex33/streams/A.exceptions.words.bin.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/complex33/streams/A.exceptions.words.bin.gz",
+      "sha256": "11947fdb86d879b4a3564b1bf1236308b41a29f73eaadb4c8c8af84835de2dc3",
+      "bytes": 1312102
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/complex33/streams/A.nonbonded.words.bin.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/complex33/streams/A.nonbonded.words.bin.gz",
+      "sha256": "22cebf57e824082c37d532f054e410f8ec9ed8b23c8c08f784fc9af90eca4a0c",
+      "bytes": 121095
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/complex33/streams/A.particles.words.bin.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/complex33/streams/A.particles.words.bin.gz",
+      "sha256": "eb032cf8760f93923e62abcb94020f76024231b42e247733b92e4a6ee96ca6db",
+      "bytes": 121151
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/complex33/streams/A.torsions.words.bin.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/complex33/streams/A.torsions.words.bin.gz",
+      "sha256": "508fe7d4ad9f73d9f4680baf6b4e3a96f127aca2b818e99813946b796ec6ca48",
+      "bytes": 290136
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/complex33/streams/B.angles.words.bin.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/complex33/streams/B.angles.words.bin.gz",
+      "sha256": "ff06c2d40e34a1b3f31932ef854b5c2ef876c1311841202a53d995a25b6517a8",
+      "bytes": 148557
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/complex33/streams/B.bonds.words.bin.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/complex33/streams/B.bonds.words.bin.gz",
+      "sha256": "5ef8c8f612de502a5f06fa3c7937787c8edd034c5139fce49b9895dd654087e7",
+      "bytes": 716891
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/complex33/streams/B.exceptions.words.bin.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/complex33/streams/B.exceptions.words.bin.gz",
+      "sha256": "266a714d1f8438bbc48f2dbedfe3f05aad23b2cf2df754a9d5e2614437c8b0b5",
+      "bytes": 1312106
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/complex33/streams/B.nonbonded.words.bin.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/complex33/streams/B.nonbonded.words.bin.gz",
+      "sha256": "862b12c24318d5684d5b3d38f110ea52ee0db1f35d543ee1e8d2127aa87fad65",
+      "bytes": 121096
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/complex33/streams/B.torsions.words.bin.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/complex33/streams/B.torsions.words.bin.gz",
+      "sha256": "880663d8431549df55ae4b5e6437d9e4b764844b0a77f5e2c35b4902731e5b74",
+      "bytes": 290136
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/complex33/streams/positions.words.bin.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/complex33/streams/positions.words.bin.gz",
+      "sha256": "596bdb84a6ead70b97ca46ffe99cabbd3dff640e3a14aae07c14498511f1b7cd",
+      "bytes": 3328071
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/solvent33/A.parameters.json.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/solvent33/A.parameters.json.gz",
+      "sha256": "9eb289eb821a2f935e8b856cd621fa02f5223f60af6a1bc551cdf1b54e6243a0",
+      "bytes": 2709622
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/solvent33/B.parameters.json.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/solvent33/B.parameters.json.gz",
+      "sha256": "37c616d56fe4acbae3eea7a6730d8cd8f91a286be2191e4c1892e4a3dd4470d5",
+      "bytes": 2709706
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/solvent33/c4.unresolved.json.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/solvent33/c4.unresolved.json.gz",
+      "sha256": "30401923b8a5b0bbaed0901769ebf4797b5c32f39c17bcbdc87749a39a14d66a",
+      "bytes": 168
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/solvent33/catalog-candidate.json",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/solvent33/catalog-candidate.json",
+      "sha256": "cde7ca2f0f0c1d1337ccac13d6d3977f402f43ea1a622311c9fb62805b432dde",
+      "bytes": 13072
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/solvent33/constraints.unresolved.json.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/solvent33/constraints.unresolved.json.gz",
+      "sha256": "ea447375aa3f3d045dadf1efe446d674b69fc6f2376ee7bae916f9a2028ea3d0",
+      "bytes": 672599
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/solvent33/global-map.json.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/solvent33/global-map.json.gz",
+      "sha256": "548cabf7eebb59e2e968db552da0d2f91d7157c62a6e1379bb2dae83ea0e83da",
+      "bytes": 323026
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/solvent33/model-policy.json",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/solvent33/model-policy.json",
+      "sha256": "9ebc0557be9881186e5df3cd7dad41edda74e306dc2f3f8d39f614d0f8551445",
+      "bytes": 2857
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/solvent33/native-records.json.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/solvent33/native-records.json.gz",
+      "sha256": "b012720ae13c88dec61e1500921c2e4b3ebcb1f312be36d23e551722ede17273",
+      "bytes": 1749397
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/solvent33/normalizations.json.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/solvent33/normalizations.json.gz",
+      "sha256": "322a07a0344df753820227b3c5045d0dab262db48b21454c26255a5c7044a752",
+      "bytes": 176
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/solvent33/streams/A.angles.words.bin.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/solvent33/streams/A.angles.words.bin.gz",
+      "sha256": "4ff2eb0cfbee47ef41637e649a3bd021d613840169a7f67f05b032106a53ed87",
+      "bytes": 1605
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/solvent33/streams/A.bonds.words.bin.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/solvent33/streams/A.bonds.words.bin.gz",
+      "sha256": "a9a1c104025aa198eb5d02de8f4ac6afc018a2861f9cf2c4ec31bdf17295c917",
+      "bytes": 803356
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/solvent33/streams/A.exceptions.words.bin.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/solvent33/streams/A.exceptions.words.bin.gz",
+      "sha256": "93f6c9fb3922142d14aabcc3e9e64cdd0da863ec6e6478a46ebaf77f317ea854",
+      "bytes": 833397
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/solvent33/streams/A.nonbonded.words.bin.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/solvent33/streams/A.nonbonded.words.bin.gz",
+      "sha256": "e5a0f8093a5d0d53818dd6336f57bc5f441a6258ae3cf63b8b223bc23f48c48f",
+      "bytes": 93698
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/solvent33/streams/A.particles.words.bin.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/solvent33/streams/A.particles.words.bin.gz",
+      "sha256": "c93877b275b56d61a7d840b7689cace877a8ecdab251dff354d491e8f3b9b28a",
+      "bytes": 135168
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/solvent33/streams/A.torsions.words.bin.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/solvent33/streams/A.torsions.words.bin.gz",
+      "sha256": "aa71178904c557838662a4fb66ba1676cd868fb0006cfe954cb39bf02a538ed0",
+      "bytes": 1325
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/solvent33/streams/B.angles.words.bin.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/solvent33/streams/B.angles.words.bin.gz",
+      "sha256": "8bbe70b6aae122fbe5d8a24243b4216f104443d9b1d71e2f2ba2616814bd4254",
+      "bytes": 1620
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/solvent33/streams/B.bonds.words.bin.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/solvent33/streams/B.bonds.words.bin.gz",
+      "sha256": "878585ac7d021df9eaecc08967e57549ee9dc565d23e3135635e02907cf3836a",
+      "bytes": 803343
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/solvent33/streams/B.exceptions.words.bin.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/solvent33/streams/B.exceptions.words.bin.gz",
+      "sha256": "4ba866e64ba4c2ecba800edee5f34e319b0aa33d6dd5c384957ecd1743852d1a",
+      "bytes": 833428
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/solvent33/streams/B.nonbonded.words.bin.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/solvent33/streams/B.nonbonded.words.bin.gz",
+      "sha256": "a1a31fd54447326f9cf57e305bd05ab5cdc9607076664d55b01e860aeb9eaa7d",
+      "bytes": 93712
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/solvent33/streams/B.torsions.words.bin.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/solvent33/streams/B.torsions.words.bin.gz",
+      "sha256": "f7b3531f9aa458b9277cc3c5022e3bf49d3e0d25768c7191feb35a26a317d440",
+      "bytes": 1325
+    },
+    {
+      "originalPath": "output/full-hybrid-inputs/legs/solvent33/streams/positions.words.bin.gz",
+      "retainedPath": "output/full-hybrid-inputs/attempts/pre-exception-pair-canonicalization/legs/solvent33/streams/positions.words.bin.gz",
+      "sha256": "e638d5269ac6c9b72097d6fe7eda7a1128073ba04ead2616218dd2358986c25e",
+      "bytes": 3462302
+    }
+  ]
+}

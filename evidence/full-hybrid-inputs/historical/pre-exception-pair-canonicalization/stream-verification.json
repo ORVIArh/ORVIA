@@ -1,0 +1,15 @@
+{
+  "schema": "orvia.full-hybrid-raw-word-verification.v1",
+  "status": "failed",
+  "passed": false,
+  "legs": {},
+  "failures": [
+    {
+      "message": "",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/abhijith/Documents/ChatGPT/AURA/output/full-hybrid-inputs/verify_streams.py\", line 51, in <module>\n    assert count==m['counts']['exceptions'];a,b,kind=idx.T;assert np.all(a<b)and np.all((kind==1)|(kind==2));keys=a*np.uint64(n)+b;assert np.all(keys[1:]>keys[:-1])\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+    }
+  ],
+  "scientificAcceptance": false,
+  "onChainRegistrationVerified": false,
+  "scriptSha256": "9ef5383021acf44e49ec91da6f6781ee24457ca6a1de95725e9b5284a0250e52"
+}
