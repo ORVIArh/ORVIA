@@ -1,0 +1,1757 @@
+{
+  "status": "passed_local_fixture",
+  "passed": true,
+  "mainnetTransactionsSent": 0,
+  "scope": "Actual local 248-address connected prototype and two-atom numerical equivalence; not a complete 256-contract or full-model campaign.",
+  "testSha256": "5f0fe81b42a48903d101896dcb4002e1c9bc7d20a5feee2f606d9a4b8de3558d",
+  "fixtureSha256": "2f5d6a82abbf806b76d74d7a667f528b105a894499ee5cae15b2ed1937e4fb96",
+  "compilation": {
+    "compiler": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+    "settings": {
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "evmVersion": "shanghai",
+      "outputSelection": {
+        "*": {
+          "*": [
+            "abi",
+            "evm.bytecode.object"
+          ]
+        }
+      }
+    },
+    "sourceSha256": {
+      "contracts/core/AlchemicalTopologyCatalog.sol": "f92337cf81ad28b0cf9842d3a34a8a119836aa5ed30698c681d621ff69ae362c",
+      "contracts/math/FloatMath.sol": "a474f7656f9ffc3d3149e6a0e08f2fcf6838483ae689d1e6a7cf7400f8bad74b",
+      "contracts/math/vendor/ABDKMathQuad.sol": "dd13f72bf828a699c94e96d1377daabce3dcc1d4b29af7215501a611d3cb7c9e",
+      "contracts/kernels/OrthorhombicGeometry.sol": "9521042dab915a3fc6cfe2bb1395c1aba0c6a2fad58d7623cd4a10435de3808b",
+      "contracts/core/AlchemicalHamiltonianEvaluator.sol": "e9b600dbb007e1d6f479db23eea48316eadc21b4333ca9f0a37c5712a92a30ee",
+      "contracts/core/ExperimentRegistry.sol": "39c3e8382b3fae049c16da81b1ea586e36deaa5ecbbda466b8377e240f78f047",
+      "contracts/kernels/HarmonicBondKernel.sol": "cbb2b99181ab7eec4a07dca99734e9ab2a3fa6ae4bd61b39d3a7bc6ef0f63108",
+      "contracts/kernels/HarmonicAngleKernel.sol": "d525eeecc8625d1e05112dc2977a91fe1d688d7585f99d08151cdc73fa2cbe09",
+      "contracts/math/ElementaryMath.sol": "9965604b32c46748605948c58f092ead3911e231baf39e7d4bea02beb3200062",
+      "contracts/kernels/PeriodicTorsionKernel.sol": "67e457741c247eb2af7248cd897a68b997caeb0db84c073c74e477570788765f",
+      "contracts/kernels/LennardJonesKernel.sol": "a02748bef456a33b15f0cfa7a1b5a20f23d6021f4e741b0cf0a9b61af457dca2",
+      "contracts/kernels/SoftcoreLennardJonesKernel.sol": "fb6b215e82aff471a1f615f6809c45e1b3aeae6df804ed29673ae0e63207e2b4",
+      "contracts/kernels/EwaldRealSpaceKernel.sol": "f4ceec084d7131de3141ad0f8be06dd1ff6dfa722d6499740af9de7cd431ebf1",
+      "contracts/kernels/EwaldKernelBase.sol": "c9f44e1dbf573ad9505e886e0f3854c2ffda850e3a0fd0b08c22563f23031a17",
+      "contracts/kernels/EwaldReciprocalKernel.sol": "7225171a789fdf4ced5256b293a428138e27c4c2dbe73eea5f22a52af94ec1bf",
+      "contracts/kernels/EwaldCorrections.sol": "0b8210b673f03606d1beb1d8a1663f2bc4bf371a884e5443733fa70ecc6d78e8",
+      "contracts/core/MolecularSimulationPipeline.sol": "c33d9fb96f10e6ee298a5d17a6d953aa99d34c766393cf8c1aed7dc231d0bca4",
+      "contracts/kernels/LangevinBAOABKernel.sol": "a469bddd9acd9cf0551293f9f9112a8fba07a7f0caa5e3b6f0747982411541c9",
+      "contracts/math/ScalarMath.sol": "fd95d9e52db57f772946d1eff8d3c9b0e2518fdbdadb033160f4b5678df13f58",
+      "contracts/kernels/CounterRandom.sol": "98f38ee2e2962858ac681565b369a2a983f8aecd7b8188a9b191a4a4c5954190",
+      "contracts/analysis/ReducedPotentialCollector.sol": "87b5e30940220d30733252d51e64c37d222e0b52a5178c91f1df424f647a1fad",
+      "contracts/analysis/TimeSeriesDiagnostics.sol": "b0a6ec90fc2a645a59a73f71c3885234f38eaec0b812552a7b1ff16efd101794",
+      "contracts/analysis/MBARFreeEnergyEstimator.sol": "6026c479247a5ff326fa2feadb1e4659ef585512fb180460bebd0ab2407ce223",
+      "contracts/core/BankedWorkingState.sol": "ed9fcee0659e2ed7dd9d90682e77bfd3aacc9056d17a0b62041cbc1947f99fe0",
+      "contracts/core/BankedInputCatalog.sol": "d956dd672852dc76fdc064bb6fecca55cc584ba7125df4b566b31bef9440c16b"
+    }
+  },
+  "coreDeployments": [
+    {
+      "contract": "FloatMath",
+      "address": "0xBC1cd9E29d6c1873205A9a5C38056Eac6d8178cE",
+      "gas": "1242164"
+    },
+    {
+      "contract": "ScalarMath",
+      "address": "0xeD221793e5505cA5C26787621840c2C4C37cb054",
+      "gas": "2911492"
+    },
+    {
+      "contract": "ElementaryMath",
+      "address": "0x1a546e448a799188d646dfaA869b6639009975e5",
+      "gas": "1647747"
+    },
+    {
+      "contract": "CounterRandom",
+      "address": "0x8B8636651f5D15b74062CB853edbC117D6d77070",
+      "gas": "629213"
+    },
+    {
+      "contract": "LangevinBAOABKernel",
+      "address": "0x383Bb018dAD4A8Cc2d5300Da998eA22Ea6BC49ad",
+      "gas": "1352630"
+    },
+    {
+      "contract": "ExperimentRegistry",
+      "address": "0xbeec9b75FE62D5B6E07239E9709506EEA1B18E5A",
+      "gas": "608993"
+    },
+    {
+      "contract": "OrthorhombicGeometry",
+      "address": "0xb381149CA326157B46b521A44cb23DE0B123A196",
+      "gas": "1070576"
+    },
+    {
+      "contract": "HarmonicBondKernel",
+      "address": "0x8F6364ca92A0426de52B19604794C190F3862a0c",
+      "gas": "717862"
+    },
+    {
+      "contract": "HarmonicAngleKernel",
+      "address": "0x89190617Ec87b473F594107A5F2fD97Ccd758711",
+      "gas": "1655503"
+    },
+    {
+      "contract": "PeriodicTorsionKernel",
+      "address": "0x540F18A63BA6dE3B73D5D16b3Fbb5b4B89E103Ca",
+      "gas": "1886609"
+    },
+    {
+      "contract": "LennardJonesKernel",
+      "address": "0xB9FaF76546842B5cE6F071D68699D742bf60E4e3",
+      "gas": "941910"
+    },
+    {
+      "contract": "SoftcoreLennardJonesKernel",
+      "address": "0xbDe601079Cce66d7AbD13E3632a86Be3485e47DF",
+      "gas": "1646334"
+    },
+    {
+      "contract": "EwaldRealSpaceKernel",
+      "address": "0x11826530a88224f96d27A534b55CB40cCc299736",
+      "gas": "1066694"
+    },
+    {
+      "contract": "EwaldReciprocalKernel",
+      "address": "0x806aD46310f6ca4580fcbC07571AAd179a16f6fD",
+      "gas": "2373024"
+    },
+    {
+      "contract": "EwaldCorrections",
+      "address": "0x2dc6a4AB7a9cD25821c0E7e4aD86bc03A9fa0B18",
+      "gas": "2174980"
+    },
+    {
+      "contract": "BankedInputCatalog",
+      "address": "0x08beA81034a5dd469B540E5A2291548bac5AC7B3",
+      "gas": "1673103"
+    },
+    {
+      "contract": "AlchemicalTopologyCatalog",
+      "address": "0x4932Fa85a68a00A9142a62ff979c5ad7126D7C1b",
+      "gas": "3429432"
+    },
+    {
+      "contract": "MolecularSimulationPipeline",
+      "address": "0xbe4F5F4311225EA72e6E77f00D737e12254ac709",
+      "gas": "6397531"
+    },
+    {
+      "contract": "BankedWorkingState",
+      "address": "0xB65354ebAF50D423830BA084FE30bCB1d151F2EE",
+      "gas": "2096546"
+    },
+    {
+      "contract": "AlchemicalHamiltonianEvaluator",
+      "address": "0x388116f028C99F462ca7b2FecE3669697e81ddfD",
+      "gas": "6790872"
+    },
+    {
+      "contract": "BankedWorkingState",
+      "address": "0x3724D6352aD62f7a8d955A8AFA84C398A5530556",
+      "gas": "2096546"
+    },
+    {
+      "contract": "ReducedPotentialCollector",
+      "address": "0x2E9B6135e782eE30e92a12Fed50812497edAc61c",
+      "gas": "2122838"
+    },
+    {
+      "contract": "TimeSeriesDiagnostics",
+      "address": "0x7D7Ad7F9B25bD8ebc5edE1Efa80C93641F7CB98f",
+      "gas": "2819384"
+    },
+    {
+      "contract": "MBARFreeEnergyEstimator",
+      "address": "0xBe16bbd4eFD2Feb097c3Eb8D530BEeAf24BEE613",
+      "gas": "2223355"
+    }
+  ],
+  "banks": [
+    {
+      "pool": "input",
+      "index": 0,
+      "address": "0xef794Eb744abbBe8e00799fE222791ca34305062",
+      "runtimeKeccak256": "0x3754f66af849a27d9a13847908bfdf589ba47bc70ff76fdf43db64520ae65499"
+    },
+    {
+      "pool": "input",
+      "index": 1,
+      "address": "0xFA7c6cabaF032f84713E2d27785CAa09710145cB",
+      "runtimeKeccak256": "0xfd83c0609ce1de26584a16a7bcf856fffcb236910a262d06d5b60244da8a1fec"
+    },
+    {
+      "pool": "input",
+      "index": 2,
+      "address": "0x8049F69Bd7A7E5c7100b9852955A3D18857C2168",
+      "runtimeKeccak256": "0xe1e2ebaf4663ae9ffbf8789679244266b0c0116f9cfb4ada7b6949d4e8f1e3d1"
+    },
+    {
+      "pool": "input",
+      "index": 3,
+      "address": "0xC0B573F8A6094396CdaaEa0DCa49f29783BA3D50",
+      "runtimeKeccak256": "0xb79b84b5a13ee5a7028eb4c2162937a891ac0086e91df9b49e3b0a3a9d8a2ccf"
+    },
+    {
+      "pool": "input",
+      "index": 4,
+      "address": "0x5bDD67b670fBCF160820E0b3461420993f0B61b6",
+      "runtimeKeccak256": "0xfa755e958ce6db56f0a14ea45bf829e9c4ae1bf7427655f1a8b7ccc18040f570"
+    },
+    {
+      "pool": "input",
+      "index": 5,
+      "address": "0x554189E298994812969e1Ae8024e19aD358Cf4fc",
+      "runtimeKeccak256": "0x726125fd66ef55f848dc2a27e25274987af4d1cdf08340222ee6cd79a7fd132d"
+    },
+    {
+      "pool": "input",
+      "index": 6,
+      "address": "0xa8C59E069411242927D99933C9e5F2023d2849E7",
+      "runtimeKeccak256": "0xcea63ae357f44858c34492f7cacf69e6299c89cecd22c369ee323e22c62bfcec"
+    },
+    {
+      "pool": "input",
+      "index": 7,
+      "address": "0x8fd1023DA48b0924f1fC1E28Eebe1FA334276Bb5",
+      "runtimeKeccak256": "0x561fd0c7944369e9c6bd4ba3c073a5bed266fd02ad878f44949b4d4c187bd499"
+    },
+    {
+      "pool": "input",
+      "index": 8,
+      "address": "0x4Adf7bA6d3E3D079061E9d3092fba8ea692A9f8B",
+      "runtimeKeccak256": "0xab7e9ce97db75b2828f28f2b50c843119d75198c5f98f2e183c2a279acb516af"
+    },
+    {
+      "pool": "input",
+      "index": 9,
+      "address": "0x12Bde4C09338A8f091364481EdE7C27EAe82F387",
+      "runtimeKeccak256": "0xe21f8d18de9dff17e85b7038422a9acf9dff166deb13c616200190db715074a9"
+    },
+    {
+      "pool": "input",
+      "index": 10,
+      "address": "0x916dcC8a7fbC16d1f61535e480Be5E12aC0A9A77",
+      "runtimeKeccak256": "0xdd253eb2a077f37ab4e0deb182913ced8b74b690caaa77767309aa6d883cfd87"
+    },
+    {
+      "pool": "input",
+      "index": 11,
+      "address": "0xB285A02b7e07338001Cf40d88Cc8f98d00Ae131C",
+      "runtimeKeccak256": "0x91261c9d9567fd6302b3b11414b8f12496e9d4d58ac2fc752f96a7a27e55f60d"
+    },
+    {
+      "pool": "input",
+      "index": 12,
+      "address": "0x3E25d12ae5428F08385f7D635DA29B0978ED863B",
+      "runtimeKeccak256": "0x9befa0f539c587d299612a16b282c735b16c478964da572f01a4508b705cde08"
+    },
+    {
+      "pool": "input",
+      "index": 13,
+      "address": "0x9BDc2B790761771aAE0d64D7092831c607d32F99",
+      "runtimeKeccak256": "0x618b1dafd458c5d571df8d4d3b81fb795a1744ca0a12d2843db047d4cc9d757b"
+    },
+    {
+      "pool": "input",
+      "index": 14,
+      "address": "0xAC17A622dD1eeBC9Df4EF7B4Cf26003A28Ab9279",
+      "runtimeKeccak256": "0xb50eb46c5ec5908e1c97917ff77ebc28d8b82c6a6f97e9db1cadbb0ae9d79652"
+    },
+    {
+      "pool": "input",
+      "index": 15,
+      "address": "0x01c8653e44A794dd43450e9976850Dc44Ded0CbD",
+      "runtimeKeccak256": "0x12d1481154784405a616dfef4b5ab906bb39511e944f8beff6a390cafeff8211"
+    },
+    {
+      "pool": "input",
+      "index": 16,
+      "address": "0xa5621DFe5d9d253fd7aB4CA2fdAE8AddB5e2cbEA",
+      "runtimeKeccak256": "0x49bd282c044e4ed22d17d44cb1cac7d3f2a2ed5b5bd4cd9f23769c5ab9dc2727"
+    },
+    {
+      "pool": "input",
+      "index": 17,
+      "address": "0x8d7A3EB6FAeC29cf22adb54a3A8609e7c7883e44",
+      "runtimeKeccak256": "0x25ff031b1d0770329c10009b039e8c19d4cbede8b1a02fa96098f5892a852c72"
+    },
+    {
+      "pool": "input",
+      "index": 18,
+      "address": "0x46584e813674F96fbA2353861676B7710406B59a",
+      "runtimeKeccak256": "0xb6a5f7249b17d91a6fa1d0bf0f6ea5b301afe5c836282c21bace5a7c6da7b195"
+    },
+    {
+      "pool": "input",
+      "index": 19,
+      "address": "0x5Ecc79A66Ec7eFD18Db60d0FACEfDBfE6633Cfe3",
+      "runtimeKeccak256": "0xd839c0a20865f279e74aeb4a31553b7a98791c5c26ccfe17f1473872274c48c9"
+    },
+    {
+      "pool": "input",
+      "index": 20,
+      "address": "0xA460c33F38D8b42a2Bb22f576Aa650b5bFd7b3E0",
+      "runtimeKeccak256": "0x8eb324eea4824887c36e2d41f0fe724898863657c42347d5cad43375ec10e94a"
+    },
+    {
+      "pool": "input",
+      "index": 21,
+      "address": "0x31517b704298C3f27b2fed029d53Aa942C26d22b",
+      "runtimeKeccak256": "0x4228be22d41ccd97738c4cef247007c2911b9f15ace61ff9650582b17b683f86"
+    },
+    {
+      "pool": "input",
+      "index": 22,
+      "address": "0x5680aDC0bce84F92F58C8e7ed10526544d6683da",
+      "runtimeKeccak256": "0x98ec0f48b654fc9f9573f5a411de74695470ed1b68373e55eed2b9bc96f1ed93"
+    },
+    {
+      "pool": "input",
+      "index": 23,
+      "address": "0xC6F82b2D321ae4E1D00490952724320731e854e1",
+      "runtimeKeccak256": "0x4aead1143a3e0d62fd986dc069cc8250eaacfc92ac821b7c774edf35a80f8bb6"
+    },
+    {
+      "pool": "input",
+      "index": 24,
+      "address": "0x1AD986089ABC1B6E619B5658d73f61985a7d3273",
+      "runtimeKeccak256": "0xeece54e434f9332586307a6c5e8d0c1dbbeba0bc32e158d0510c3aa4b3b00089"
+    },
+    {
+      "pool": "input",
+      "index": 25,
+      "address": "0x011916202fFEffaf77B32BC0b25A0B548B5e83A8",
+      "runtimeKeccak256": "0x8270864fc2af0dfe9ff4fcb00f6c20932a2823605651df570962b2d9abc3ba9e"
+    },
+    {
+      "pool": "input",
+      "index": 26,
+      "address": "0xA6b16A5205cf60AB70791b1301A4C14BeBA1E616",
+      "runtimeKeccak256": "0x1390b7f654bfbd4eb679b3c6cf00312849820fd35143277c7573f88781677a4a"
+    },
+    {
+      "pool": "input",
+      "index": 27,
+      "address": "0x2e0715FCE0a4f38d1499EB5AFE990de22597Cbc0",
+      "runtimeKeccak256": "0x771f73561dcf8685788b32b2224ffbfbb2b0661350754891e7198905183cefa9"
+    },
+    {
+      "pool": "input",
+      "index": 28,
+      "address": "0x92CAa3Fd4Dbcb3a57dc4d849B5A0f2891cD573E2",
+      "runtimeKeccak256": "0x63bbac17c551168318d69f05e6250e6d6dbfc2181ce69201d28595b49bb7fbb5"
+    },
+    {
+      "pool": "input",
+      "index": 29,
+      "address": "0xB39ecf921A17cd139b0f63d379c628C4925F970c",
+      "runtimeKeccak256": "0x1152f288c72d2189b891b762c928964dd91d321361687a8e65596686c94fb5a5"
+    },
+    {
+      "pool": "input",
+      "index": 30,
+      "address": "0xd4f32D993cE383FEC72AC9E6Dc93a077146aD63d",
+      "runtimeKeccak256": "0x73ad7f5ad33d088332d8a417a4bf1e2dc302c2d31a1fa52d6915cca7d57c6500"
+    },
+    {
+      "pool": "input",
+      "index": 31,
+      "address": "0x12Bf344898De4164B7A8e6c9AF3dBE84f2B6a76D",
+      "runtimeKeccak256": "0xd265d239b50f298ff658bf2439d60aeb6ffd3b5702ce59c3e19c92202a4d78d1"
+    },
+    {
+      "pool": "input",
+      "index": 32,
+      "address": "0xfD1519844524bD9b38CF778c61c4E995A45b23D2",
+      "runtimeKeccak256": "0xe63156d4e6711cdaa0fb8fda200125e9c550530c82c8f4f7bb0c0a4702c701e9"
+    },
+    {
+      "pool": "input",
+      "index": 33,
+      "address": "0x50C94Cb7CE3077f1f5b51f5B36f11725cFfcC1C8",
+      "runtimeKeccak256": "0x1ed158971de95e9fefa6b7fbee8b1ca3e2432c50f9ec73888c6cac1687532e04"
+    },
+    {
+      "pool": "input",
+      "index": 34,
+      "address": "0x2E52798f13929a8f4CFfC6E48B9a96aEd8Cd918A",
+      "runtimeKeccak256": "0xde5cc290d105d087087ca22752d6bf3a698004aaeb58a66f1cfb30030f54e98b"
+    },
+    {
+      "pool": "input",
+      "index": 35,
+      "address": "0x254F6Fd442a6078531f55e11b75208142Af84304",
+      "runtimeKeccak256": "0x48af95064fcc4f647a79a5073b1da53cee61ee433925369158d08231edc995be"
+    },
+    {
+      "pool": "input",
+      "index": 36,
+      "address": "0xff19F5a253d9819Df5E08f19971d104be39D95dC",
+      "runtimeKeccak256": "0x687f33caac4ad02479d23d9be0e16e5ed251e339250f83032558e240be63d12f"
+    },
+    {
+      "pool": "input",
+      "index": 37,
+      "address": "0x096dcE0954448034923B1d252E4Cbb0EBB9BadFA",
+      "runtimeKeccak256": "0x5f751716514fe9bed9acd7963f87e29d79ee000060dbf47dc1e73bfb91a3cbe9"
+    },
+    {
+      "pool": "input",
+      "index": 38,
+      "address": "0x2A82cDC52B84a32D851c1511C5078D98C147617b",
+      "runtimeKeccak256": "0xbbcead9225c9fcf3052cb716c763a404bc2b91fca3fdf4c37c5fd474bc7eec52"
+    },
+    {
+      "pool": "input",
+      "index": 39,
+      "address": "0x6b0c163E9CE88B61253A77006CA022Eb29A408CA",
+      "runtimeKeccak256": "0xecc103bbceacd6e3f646528f6c44f3cf3d1f119e548dfa7695d07667ee4184d4"
+    },
+    {
+      "pool": "input",
+      "index": 40,
+      "address": "0x2019038C403A06e9f0973E51f780c0843F563fca",
+      "runtimeKeccak256": "0x91a0af6f9a21e8b82465404a55a14dc08259a14d16a8e08a8a96d024b2e15572"
+    },
+    {
+      "pool": "input",
+      "index": 41,
+      "address": "0x43E3D03d6a437C3c79CDd049ED6dc6e843be8Ca0",
+      "runtimeKeccak256": "0x08bbafcf5cb12a17f2b6d12c2ce65bd1b1cf278bd4df3d9bde1fc393ec745613"
+    },
+    {
+      "pool": "input",
+      "index": 42,
+      "address": "0xc43f292b76282D9578a34404C2c9B96555efb9fa",
+      "runtimeKeccak256": "0x362a159a945c4d79df020749e752ff15dfba572512a712857819f8cbc09c1a6a"
+    },
+    {
+      "pool": "input",
+      "index": 43,
+      "address": "0xC838f2fF42BfBA721a112DcfBCb93955106D43F2",
+      "runtimeKeccak256": "0x1c6a698af98a7223d08cb209a920cededa288fb902646fa3be84c24fb0c30eb3"
+    },
+    {
+      "pool": "input",
+      "index": 44,
+      "address": "0x161921fdfbe8e963845Ef264D6df1e435DDC874F",
+      "runtimeKeccak256": "0x6e33a068d56a79a11142af7fe1924dd1d1bbe1901c956656e533d2eeea16b1e9"
+    },
+    {
+      "pool": "input",
+      "index": 45,
+      "address": "0x6f6Db7e5d705992eF35D5b8C426599054A6514e7",
+      "runtimeKeccak256": "0x163e95daec07731ba8f8f3eda3fe1d076550c7f0eeba3789ee59cd107ae115ed"
+    },
+    {
+      "pool": "input",
+      "index": 46,
+      "address": "0x241db95F207054683382a83a8617EA1265aEDea3",
+      "runtimeKeccak256": "0x69d15cc9b53add0ca7e021204ad5995c01b48f64383383a12c7048b528093015"
+    },
+    {
+      "pool": "input",
+      "index": 47,
+      "address": "0xD270B2f251E548E6b68a4130Be0D30bC92AD321E",
+      "runtimeKeccak256": "0x5c6b1ba5c0609c83e723b8ed9b81ee7421e01daff8609317f4839cc2577c61a8"
+    },
+    {
+      "pool": "input",
+      "index": 48,
+      "address": "0x0800B257Ea0CfD4e4937a88dFed4501D019b0C19",
+      "runtimeKeccak256": "0x59b7bc2aed16c3d2289904bfc6c5c5903a04177d81e67f91bad10ddce9a86821"
+    },
+    {
+      "pool": "input",
+      "index": 49,
+      "address": "0xc6272A3076bbBF825a54Bd34c6dbd65a58502E72",
+      "runtimeKeccak256": "0x2866a5d3ab979db3e7db72992667ab58f4612c354faa43b75f91d97e00351219"
+    },
+    {
+      "pool": "input",
+      "index": 50,
+      "address": "0xBB02FD6610f92bd6843f8C0185F7905cfbe1f452",
+      "runtimeKeccak256": "0xb9f14d59424c2fa5d9770b04c529068d038be5b66962df8ff847f681e707902b"
+    },
+    {
+      "pool": "input",
+      "index": 51,
+      "address": "0x5F0b866e2070f08197Ce59140d5b83fd8c08E602",
+      "runtimeKeccak256": "0x5d4b738fcd5cb4c97f7d679f0bcfb46417e5e51960e082ef203c14d992051d2c"
+    },
+    {
+      "pool": "input",
+      "index": 52,
+      "address": "0x43E7653296d7F2E4573570922999321d2976e873",
+      "runtimeKeccak256": "0x4541c8592dfe7713326f317a10772d53f792a7c0c2932c0c3ccf3f5b6d603747"
+    },
+    {
+      "pool": "input",
+      "index": 53,
+      "address": "0x115327CfDb85EaCae82c07EC894612927a9d27B0",
+      "runtimeKeccak256": "0x17df4e52b8033f8c9ede66b06e36739fdd53f705f77999a8108510de886bf86f"
+    },
+    {
+      "pool": "input",
+      "index": 54,
+      "address": "0xaCc83aA4B7B6f389903159FCbA41741283647034",
+      "runtimeKeccak256": "0x2392fcf42d1284a4111ecf43613922dbf07d45ade0dc99251730db226fe7062b"
+    },
+    {
+      "pool": "input",
+      "index": 55,
+      "address": "0xAc46B0507b1dD2b4A0798B25D1d223C6C3d0A4C0",
+      "runtimeKeccak256": "0x0cd966873d05dcaed1e0fed4e041450c4a39b49a281ecde86c439f5cfea28087"
+    },
+    {
+      "pool": "input",
+      "index": 56,
+      "address": "0x4A5b5d8a83EbCB6F68d21938398733f32966040A",
+      "runtimeKeccak256": "0x0bf86e63f86fb9da9b128f1dc3aec3df2accf6b379cb62bc81c10c5d30fc9f8d"
+    },
+    {
+      "pool": "input",
+      "index": 57,
+      "address": "0x2Fd882492ebf562d2cbfF3DBDBFb51c55E674342",
+      "runtimeKeccak256": "0x3ea8691610b97d0a6870d46ee5854a3dce00412234b7bbea3ec7d786d392aeda"
+    },
+    {
+      "pool": "input",
+      "index": 58,
+      "address": "0x6FF64109408F69d28D627cFf60Ed544234a064CA",
+      "runtimeKeccak256": "0x18d8ccf2560b2e8d0769cd0fa4dbf311a9fd3a3a3e94e3a0b2eac58666b640a7"
+    },
+    {
+      "pool": "input",
+      "index": 59,
+      "address": "0x706EE548Eb5ccAE881525aE266e2cE6B659e1211",
+      "runtimeKeccak256": "0x0ce381dab3f6ef2800472aa36c60b1b13f5a4eaa3c4b3fb834ff6a63cd612731"
+    },
+    {
+      "pool": "input",
+      "index": 60,
+      "address": "0xA28dcC0c55A95625381FB40fe8415a2f4DFEd91a",
+      "runtimeKeccak256": "0xd02b32b6f0ea2b6e0fcc9093d61ad85d4ea6ac9666458f6948626053aa5f89c5"
+    },
+    {
+      "pool": "input",
+      "index": 61,
+      "address": "0x06Aed093558B3a8D0E0BE77702Fe99a26d2aade5",
+      "runtimeKeccak256": "0xed8e34d5b0c726fde9ace55466b0fdb2eac2ed677db924e37978b6ebaa82487a"
+    },
+    {
+      "pool": "input",
+      "index": 62,
+      "address": "0xCADC6Bf9e013169F3Bd79c1460B9758b693c598e",
+      "runtimeKeccak256": "0x810bac15f5f7f9391fe54959bd89c8eea07b69a6b46cea27f8db5b73473c714c"
+    },
+    {
+      "pool": "input",
+      "index": 63,
+      "address": "0xC57c092CF5286193e6C6846C43faeE3D462cCBE7",
+      "runtimeKeccak256": "0x03784e58402357d243b8c138ecfde7b4d54dcfe92f79895a9544ab710bc047da"
+    },
+    {
+      "pool": "input",
+      "index": 64,
+      "address": "0xC9274e403fee60DcB65461e2d92F325501a7d265",
+      "runtimeKeccak256": "0x23bc7d27296360befc6c8184bc933ab2b806532ccc38f09566f0b677097d062d"
+    },
+    {
+      "pool": "input",
+      "index": 65,
+      "address": "0x07d7a32860F398aE1dF0643892031F872eF4F1c1",
+      "runtimeKeccak256": "0x0687c5bce726c28060cf9ecb63edf30e4112c4fa7cb71fc5290d52d8957423b8"
+    },
+    {
+      "pool": "input",
+      "index": 66,
+      "address": "0xF3900e89924BFE99f4D24a9A677032920AD0D922",
+      "runtimeKeccak256": "0xc432516432f39bbb15b2bd63e145247f04295d175f680df54f1b4c4a4c5fd46a"
+    },
+    {
+      "pool": "input",
+      "index": 67,
+      "address": "0x67d2008C254016A2dBAF16C01b770f42AcDF687f",
+      "runtimeKeccak256": "0x1355766eedecbc2ea741de1b04c4d7a61efb7e494125bbe5fd301e1f0830cee6"
+    },
+    {
+      "pool": "input",
+      "index": 68,
+      "address": "0xdbF5cF9C2c8813369BfD9E1F106c93448936E106",
+      "runtimeKeccak256": "0x5a6b2b35763fa670379e779279d899b6c05e5d025412399c7b7e69e724c28af3"
+    },
+    {
+      "pool": "input",
+      "index": 69,
+      "address": "0xB210990a8a8592FA6aCe41fFC0c42B3f12901476",
+      "runtimeKeccak256": "0x1806ce028e38454b81dbd23f6224627c6162d7270388268aaec688d23ecd838f"
+    },
+    {
+      "pool": "input",
+      "index": 70,
+      "address": "0x647C01067FdC4c0C01aFf90A598765d320FdEbf8",
+      "runtimeKeccak256": "0xfbf6bd476e5809836ad756a8e5e80e92d45b95c1509a222feb2593d0258c86a4"
+    },
+    {
+      "pool": "input",
+      "index": 71,
+      "address": "0xD4fdf8F5fb974c03AA163722bbF534Ed5dFa5783",
+      "runtimeKeccak256": "0x5c1faddf3c5eee972d7d101a7d97f06c44665b17e4a9803224c7bf303ea8a5a1"
+    },
+    {
+      "pool": "input",
+      "index": 72,
+      "address": "0xc549E3DA310d2D169296A75a11b2233A23A0c898",
+      "runtimeKeccak256": "0xda72d5404fe04b2ef6e2c40a9fae0c7ffdb9510e196610cd05fe8c0ad5e93377"
+    },
+    {
+      "pool": "input",
+      "index": 73,
+      "address": "0xaB38Dac131c3D0BF45A515f74F50c79883FF00f3",
+      "runtimeKeccak256": "0x4972842fae0d5d0981b27d6b4c636d5023cc3d38c408f9bef4ee3a139487d241"
+    },
+    {
+      "pool": "input",
+      "index": 74,
+      "address": "0xb893e054c0B656fF565818cF3A40b63faF7480C9",
+      "runtimeKeccak256": "0x71cfcc208169f439ad65e6ae2b4e8f7fcd640d6a3e09d63dda034f621b5a403d"
+    },
+    {
+      "pool": "input",
+      "index": 75,
+      "address": "0xAE7d39412ebF63f8793b387C9001f022Ac49189D",
+      "runtimeKeccak256": "0xdec645f659ffb483effa711c111213f8dd3ecd0eeb757a5815b79e281ecce666"
+    },
+    {
+      "pool": "input",
+      "index": 76,
+      "address": "0xF3f242c0c75AaD0c13aAF3575267A79453145414",
+      "runtimeKeccak256": "0x84ac33c1e970421df852f5ee163185bb27641746a1bf726333df55cb8e1cd60c"
+    },
+    {
+      "pool": "input",
+      "index": 77,
+      "address": "0x82Bd4a15661c26C41c4b475372d1808B30CFb19B",
+      "runtimeKeccak256": "0x5b0b8e2e1a9189b3dd2b84fde762ab589e5cd6c3f2a54911a5d678ea815dfc2c"
+    },
+    {
+      "pool": "input",
+      "index": 78,
+      "address": "0x4e861c94Fe4AA034Ff6b5bFceA389AF9b20f6c4C",
+      "runtimeKeccak256": "0xdd81768789f17cd3d8b511be7cfa89d9d8c5f1cde167fce5f3958f1cffd06fe9"
+    },
+    {
+      "pool": "input",
+      "index": 79,
+      "address": "0xf70a495214aedE07e88D847D397442F73E0db256",
+      "runtimeKeccak256": "0x435f032a159daaca0ccd049e8d998e99c49141ae5e839ee4ec2ee779697b7531"
+    },
+    {
+      "pool": "input",
+      "index": 80,
+      "address": "0x21bB1C1289513B5f9BDf70132afce5773C9066A7",
+      "runtimeKeccak256": "0x872edfbc8362ddcc80a0368b872b85a08601a070da126f93a4ae5b71330939c4"
+    },
+    {
+      "pool": "input",
+      "index": 81,
+      "address": "0xF26b98b3CB58645EfD792a1Aa1863B1384dfC160",
+      "runtimeKeccak256": "0xe5156fd0fcdb8ea47a7fde49a12c4be0c4ece2ea60c122b2b858125b1b99760f"
+    },
+    {
+      "pool": "input",
+      "index": 82,
+      "address": "0x073759eE106a461D841AB8a39B37f1ef1aC15f11",
+      "runtimeKeccak256": "0xcdf1bf6f747510db664a4b85d5d4957c2745c269d50c1691c3db1a23b90b35e5"
+    },
+    {
+      "pool": "input",
+      "index": 83,
+      "address": "0xb0FeD4cBeAE28A416489B1A77EaFDC276C5bE1D7",
+      "runtimeKeccak256": "0x5a89c6dd80141161a80150988f4821347aadeec29c5e5f34e8c7398d5f1077d0"
+    },
+    {
+      "pool": "input",
+      "index": 84,
+      "address": "0x231Eb20B6ea3C2811b3EAcc5cBE6f141Fe346EDB",
+      "runtimeKeccak256": "0xf5b1bc4ed2139d009285a932985e4853b87a144480579f88fb23f4b80b5317e5"
+    },
+    {
+      "pool": "input",
+      "index": 85,
+      "address": "0xe8B727360e28F0981E8c9a4e1d5b5EB329AC9b03",
+      "runtimeKeccak256": "0x97b55ec518d82175721146ed480b53b52d46b1012322c4daf7d427fe2e3e0d76"
+    },
+    {
+      "pool": "input",
+      "index": 86,
+      "address": "0x0ACCC8E1Cd46cFCE36295766a6282048C0B312fE",
+      "runtimeKeccak256": "0xfca093cf63ef8394ddca5a21ed97cc91592fd354db207849d8f79869042fc278"
+    },
+    {
+      "pool": "input",
+      "index": 87,
+      "address": "0x6703432c986E561968b3ef5097Fd93b1f7203620",
+      "runtimeKeccak256": "0x0a4fe8146f40024fdfbb1204e67c3e08ce67a38730b4d903929ee1e7a0aee943"
+    },
+    {
+      "pool": "input",
+      "index": 88,
+      "address": "0xA4035a0371626C08082455a93C591E8c6442cCeF",
+      "runtimeKeccak256": "0xf63aac1eb5e27b263aea23a3faf56330e22e23526d9aaa5285d31187dde8713d"
+    },
+    {
+      "pool": "input",
+      "index": 89,
+      "address": "0x14E4AF44EBc4eC4d99BbFa142fFe45351e8BB078",
+      "runtimeKeccak256": "0xb2dbd71313c9071508ef3aa1a4363500326157b171b113768c126bc7e60b0d92"
+    },
+    {
+      "pool": "input",
+      "index": 90,
+      "address": "0xB562b1Ba79872Eea7a3307bfd20aae7006C9919e",
+      "runtimeKeccak256": "0x43c23e90b8d1a5d231223cd3328ee880847a0f9b00bd65fbfe8f2aeb16e7d08c"
+    },
+    {
+      "pool": "input",
+      "index": 91,
+      "address": "0xD8B29451bBC6897D3d6FD06F9fBc20eCCB908635",
+      "runtimeKeccak256": "0xba5addf9785b4539108140b9d98f61b7b159f34455e4cfd1e1aa72386168fee8"
+    },
+    {
+      "pool": "input",
+      "index": 92,
+      "address": "0x223B88DACB84B9A612825fF508773a267C99Bc30",
+      "runtimeKeccak256": "0x4a147ea9f77781b9a33a378fd54e874250104026bcbfca18a036aaeb6c4eb07c"
+    },
+    {
+      "pool": "input",
+      "index": 93,
+      "address": "0x082d640EA2b6eaCE01F42d216FEd73a0963a66e2",
+      "runtimeKeccak256": "0xbc66f15e62c23427edf72de138115cc010f64fdfd3a2916ce72aba89134e7d23"
+    },
+    {
+      "pool": "input",
+      "index": 94,
+      "address": "0x7f0F816cA9977a57b457e0539a5bf8b92356B2Df",
+      "runtimeKeccak256": "0x169b338a252cd3b9f27759373a53453c42473c82e386e7524445035f9b307efd"
+    },
+    {
+      "pool": "input",
+      "index": 95,
+      "address": "0x487e88EE01F9Af84C561ebC0010AD79f83892e9e",
+      "runtimeKeccak256": "0x1f8540819555ed2dff664c9d7e062ee530b45709973e7aa20c26037f5d4899a1"
+    },
+    {
+      "pool": "pipeline",
+      "index": 0,
+      "address": "0xA33a504c12Ff808587Ff0c74e7fcD72B33F3ea36",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 1,
+      "address": "0x305bA9A10f09EaEc7efbe1BE34Af84DAdFe3362d",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 2,
+      "address": "0xecB8F45173F66aebCb01d0782eCdd50b6eF2040D",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 3,
+      "address": "0xF9e0eBb20E0ad81083a439dA950A0354aA1286D3",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 4,
+      "address": "0xae47C7F6258f6D91E1424c38F94fCB05E8387e17",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 5,
+      "address": "0x6056fa8Ed01a306AcE3f70E8b34EAF2Cfd29faD3",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 6,
+      "address": "0xA495C5Fb155e0eb3eA0F1C7D1b2Ef1Ef77dDE9f2",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 7,
+      "address": "0xeE1440EfD82Ecd24D2bbF1686E43ED889fCa780f",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 8,
+      "address": "0x449aB8CF9ee50CA665a133282f875Dc3Fd8d121A",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 9,
+      "address": "0x2e051070cB0A6B40816D6d73848729aD4Ca11f73",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 10,
+      "address": "0x74Eb202D7355Dea9e50321bf175f5AF7b52146a2",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 11,
+      "address": "0xFC6e514E286a94f701824608687f7ec385c2FA78",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 12,
+      "address": "0x0d03E0979C0Ad3BEfAFB60E006C24608aBFF9b49",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 13,
+      "address": "0x9C0f0fE054ba6e275E6Ba40F47539Cc56f5e7fC1",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 14,
+      "address": "0xE148c2bb15d556666451F4244329A6fa81A2EC29",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 15,
+      "address": "0x7D0eE1D486652BF037ED7B0036C5BBE0727fb53A",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 16,
+      "address": "0xcD8B5236BD12d07249F93a6bc78417E3fA103997",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 17,
+      "address": "0xC83e1068995D2E5452379F688Df6874272DbD5FB",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 18,
+      "address": "0xFE1d0C024C5b7b8539CDe2534810A439322D8aFC",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 19,
+      "address": "0xCaa91B62238C60B96dA9A0F478396D1D15023106",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 20,
+      "address": "0x57F4Cb5Dd6bEe2DB2A983a235CDB2502f608b6a9",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 21,
+      "address": "0x034BEe0C662672964163A662619Aa5C1C30DB177",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 22,
+      "address": "0x50B1cfE14cfeDd6b7fc0617bAF9FC78FD5732cE9",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 23,
+      "address": "0xe8B12078C82d8E84f8872E0b8c2E8e18034AD0d5",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 24,
+      "address": "0x43293A6463e7F0323c0Ec58Bb385e93deD967548",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 25,
+      "address": "0xB8A7042aF26Ed9Ac4e27Acf30c83B79106343B57",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 26,
+      "address": "0xce677C41571Fddf1311B5CC62a50df45e43E5F29",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 27,
+      "address": "0xD80f9158c50C76949B3e2c7EcB7Dd99407024228",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 28,
+      "address": "0xe11e71C27208178a13B976407f0801e12195d086",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 29,
+      "address": "0x420d372978A584b9bfa0c309cBc1356a4D05ddD3",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 30,
+      "address": "0x25443cEb8D2fE820aA744b85C58De7Dd97dC282f",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 31,
+      "address": "0x1BF31cF8490CdFBACf92C6613d5E6cd031e92125",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 32,
+      "address": "0x556b2c53c7F5ad6a789fd3611d02352a1ff56B40",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 33,
+      "address": "0x043875E19ca3761ecEF0182345ec179A91485Cdd",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 34,
+      "address": "0xfBafbD540a835698700D7C2e251E0C776Baf5DAe",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 35,
+      "address": "0x04A5b4A20b31e0807460818845E4Af19b33a573C",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 36,
+      "address": "0xFcDd91137345A06fE9f179f8DF958B5346bECf74",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 37,
+      "address": "0x81Aa7160B4ACd86b6fcBb9d19cbca955b4e2b709",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 38,
+      "address": "0x46ebFfba52c10e90ffC3Abe9F2583d8474Bc7796",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 39,
+      "address": "0xa8b07C42cb3C670dfd1F6A77401e3e9Aa56BC62e",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 40,
+      "address": "0x177DAf6a9777e9F4643e0cBA5d9155cA5A82E378",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 41,
+      "address": "0xab4d25fb33AdAbb14D68Dd119A3a57bA92E55763",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 42,
+      "address": "0xd4102Fb438A6AB94295cEf699Ab7B51bf70C9437",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 43,
+      "address": "0xa563689F28C755f101184c19DdF4fcb99Ed21c0A",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 44,
+      "address": "0x3f5219077D691278808f366f49327c7CA3113115",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 45,
+      "address": "0xFDa006cc4428183Ca601FfE85D7657E2aEeae156",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 46,
+      "address": "0x7610Cc6037cF1C6106F7B364B56e25407b6BF82C",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 47,
+      "address": "0x65a63ec9056C8Fc13C23bC61B867EAdF31E4128f",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 48,
+      "address": "0x2119E39E011D402fA04a15bed9829aeE1CD30621",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 49,
+      "address": "0xA67946333D69B1a91afCF5D8A856AeA2E1c9a48b",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 50,
+      "address": "0x4309Ead5478f870d274f8c312134a921121acd8d",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 51,
+      "address": "0x831FD0Da0900889286daf687281704143f588Ce2",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 52,
+      "address": "0xaC1Ea1e2D8A0C33c8d41a740314626fDCD4Bfc51",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 53,
+      "address": "0x89b1DA8cCB1d11B55691A9D00b026E682074E07D",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 54,
+      "address": "0xB1C2618A92A6c4945861c908062c78401eC7c399",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 55,
+      "address": "0xe3c7c69E53f7615B2B9Bee5694Df16e93c167670",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 56,
+      "address": "0xCc9753E140D6B2b064adfd23B6a15AeD397D9aBF",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 57,
+      "address": "0xbfF20942620127E102273Cb68FfDD902b074A4c7",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 58,
+      "address": "0x75ecA52304394b4A81F1E2e6471178783334befC",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 59,
+      "address": "0x9C23CD59c20f7ee8cA488DD4c686E7d450DE8082",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 60,
+      "address": "0xE8fa3c8335e7dd9F330c69c1beb4a8ADC7Ba6d01",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 61,
+      "address": "0x940AADb4D3ff4e443A3862e2D8413A0501FC70D6",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 62,
+      "address": "0xe3f7c5C05518c65c84F93b16940Cc77B7C08c147",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "pipeline",
+      "index": 63,
+      "address": "0x341c69A7D569fa4EB50D159c14d8503e7c61bBf8",
+      "runtimeKeccak256": "0xec87c96088d7a685199e582185b19e5708b3ab6a7854db371879224d42641d47"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 0,
+      "address": "0x9280C848D2B68B9a7262EBDB1ceac4AFD2F4827b",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 1,
+      "address": "0xfCfE4018Ec7B2d39740d2E1A71c643d5220058A9",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 2,
+      "address": "0xC51265fDC3B26cfBB174820b67aF73CCe964c513",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 3,
+      "address": "0xD4D2cbD73229240E4C68FAa3985130D7B36699d8",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 4,
+      "address": "0xDE2f8eF1586523D5bAF9B86dB3dA7a108dbB1Da9",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 5,
+      "address": "0xaa52Eb988f239a7B50b28d99C406a49cc9d8C789",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 6,
+      "address": "0x8ac3dD68bf0a0a2F0728EAAB3ff5bE980E4fd146",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 7,
+      "address": "0xb85eF5576C01C0CDA807c606b08210e01584C5d4",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 8,
+      "address": "0xBC38C7c266840Bc1c4a803354C758B9d9f10184e",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 9,
+      "address": "0x3C3eA8DF5677F251FC70C8F4203C0Add36E8de66",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 10,
+      "address": "0xEBAea6E47793D1993Ca5244957B906c78858d448",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 11,
+      "address": "0xfd2844bcc3b7Be6AF1657c2Be8cF02461121A6D0",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 12,
+      "address": "0xaA35ad7C0a8084fda21c4244088aCB6Ed100E59d",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 13,
+      "address": "0x3c261Cf1DE9CD4020b2cE8049ABB0F157C7182d5",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 14,
+      "address": "0x83c661587C651F051c7C7ce9FB899BAa7Cf52956",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 15,
+      "address": "0x22FaB2a5c6bDA2bd9890c33706512c44D2264Cd3",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 16,
+      "address": "0x31cfF7B40e2bDf217092d6cC2EcEA9A3ab8b64DD",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 17,
+      "address": "0xB5FbF7E24eFa4f69e09b8A55b7140067c384B032",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 18,
+      "address": "0x151a3fA512fF219eEEC4C352b7C5FCF80E0523aF",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 19,
+      "address": "0xfa3221B8c2F9380b4699fD8e6c189d9c54B93D90",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 20,
+      "address": "0x509b4ca33A16B3e9dC7aF1DE133714870DA5842C",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 21,
+      "address": "0x967297f81CE1323655C4221fCe7999304E074D24",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 22,
+      "address": "0x1F814C36A5DDFE9EBAB9508F0c8be159Ce9Dfa9b",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 23,
+      "address": "0x864383629E664af0BA471587a0Ca87DbC916700c",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 24,
+      "address": "0x4028aD2094c8A66c4C8Ac4acaa5ff879dF98d816",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 25,
+      "address": "0x824655E4a4193F26ea21fE5508809070ACAB1d29",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 26,
+      "address": "0xAd3F1f12a5d6429099d260DaC238756bc253e351",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 27,
+      "address": "0x1D7D571469cf73523c2A55153395B7c005c9c130",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 28,
+      "address": "0x564ef2E6583839e46216d749d31FFfB89bc57684",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 29,
+      "address": "0xb5092638528e5ac662E118d3008E712Eab602dE7",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 30,
+      "address": "0x470c67DDA9313cbf7f77F2A91E03c3D2dF817153",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 31,
+      "address": "0x8D1Ac918E5B407CF1E9Ef569a7c315ad07BBF4eB",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 32,
+      "address": "0x4CD6B9bda1b5D2f3c6621290d85aB5945060bf0B",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 33,
+      "address": "0xF4812bED82a7DCa54c1AC76eD4Cf62781F5Fd615",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 34,
+      "address": "0x8A55ca7Ec3553895C2Ae92B50132065F6e02319D",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 35,
+      "address": "0xC90a0ef18766046D302b4D1206ba1cAE8A5f9BFF",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 36,
+      "address": "0x79B256dC6D26cBD1eB459d2a14d1Dece1A663CB3",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 37,
+      "address": "0xf81D7A818CCAA68F0a5C270470492684D947Dbf8",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 38,
+      "address": "0x7CE5F0ca827669b2F897707dA64Dd2ED7c62e8DB",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 39,
+      "address": "0x70Ee824236E4e61193778de1107cD4817d257e6a",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 40,
+      "address": "0x2CAD433Ed60fBA7a35d809117e5Ad1aEB437fc7a",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 41,
+      "address": "0x6f7DED1B2A61a751CB60DE763636A221122C8420",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 42,
+      "address": "0xFcA85e15AEf49dbe81aaB569DeC808e2E06B9730",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 43,
+      "address": "0xf85aBF0DDd84011bf1d2417769B1E113D669Bc9D",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 44,
+      "address": "0xa8DAfe71e839B23949EAE85CC2ee00F430B10B8F",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 45,
+      "address": "0x5b54B8AA2CbbA6DA20B46f5563aFB72aA985C7CC",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 46,
+      "address": "0x39A117F759eF986c842ecB708cC044B400225bf7",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 47,
+      "address": "0x34ED8Ab5A928997dD73d0F88e2B87fF4B3a800Ea",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 48,
+      "address": "0x3E139FDE7b9e92DB3f1bA616c315A4A97850cBb8",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 49,
+      "address": "0x60026E94f5AF7Af41b44B7Df4AF9AeFa1AF28Fc5",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 50,
+      "address": "0xf8c3dDe78Ef061781d27884e3EA22BB95F483857",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 51,
+      "address": "0xA5631AbDa2deFa8b109dd87d53117a2f736F063C",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 52,
+      "address": "0x3c709C92aB6066aC3ac50514C974c6C131b54745",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 53,
+      "address": "0xb96d54e36317398Ab566e89FA0C7D24D4D1F87E3",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 54,
+      "address": "0x5CF4C7898A5f67A0f9528BDd5c871dD50EA93727",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 55,
+      "address": "0x8877929762f282449F1accC4185c24500C6B3d12",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 56,
+      "address": "0xf9A4e4835068691160288003ffB48DEF6b24DD23",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 57,
+      "address": "0xf30D2f9426C2CDFB52A74Cbac2E629c85dC309Ed",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 58,
+      "address": "0x0309D49ee2aB5EF6506829955bAbD6811e4C9393",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 59,
+      "address": "0x3f3234B6928dF89379e4a60E383709699d7d591B",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 60,
+      "address": "0x2592e0a7937D97c4b26A07EFa4BC83C2c187A4Fb",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 61,
+      "address": "0x0DCbB861a4f22f828B2DBFf48835B95eC5B68eeF",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 62,
+      "address": "0x961a18e9F95F5192C5f5c98dE00b693F1922629e",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    },
+    {
+      "pool": "hamiltonian",
+      "index": 63,
+      "address": "0xaDB55560C23058B5EEb8B0E6717B398d454eaE7b",
+      "runtimeKeccak256": "0x271d1b0bdab81fad328cb97ec84c967d80ffb87515b454bbb11c5c1f4ee68136"
+    }
+  ],
+  "actualLocalAddresses": 248,
+  "targetProductionAddresses": 256,
+  "unimplementedCoreIntegrations": 8,
+  "bankCreationReceipts": [
+    {
+      "pool": "input",
+      "gas": "1691332"
+    },
+    {
+      "pool": "input",
+      "gas": "1674232"
+    },
+    {
+      "pool": "input",
+      "gas": "1674232"
+    },
+    {
+      "pool": "input",
+      "gas": "1674232"
+    },
+    {
+      "pool": "input",
+      "gas": "1674232"
+    },
+    {
+      "pool": "input",
+      "gas": "1674232"
+    },
+    {
+      "pool": "input",
+      "gas": "1674232"
+    },
+    {
+      "pool": "input",
+      "gas": "1674232"
+    },
+    {
+      "pool": "input",
+      "gas": "1674232"
+    },
+    {
+      "pool": "input",
+      "gas": "1674232"
+    },
+    {
+      "pool": "input",
+      "gas": "1674232"
+    },
+    {
+      "pool": "input",
+      "gas": "1674232"
+    },
+    {
+      "pool": "input",
+      "gas": "1674232"
+    },
+    {
+      "pool": "input",
+      "gas": "1674232"
+    },
+    {
+      "pool": "input",
+      "gas": "1674232"
+    },
+    {
+      "pool": "input",
+      "gas": "1674232"
+    },
+    {
+      "pool": "input",
+      "gas": "1674232"
+    },
+    {
+      "pool": "input",
+      "gas": "1674232"
+    },
+    {
+      "pool": "input",
+      "gas": "1674232"
+    },
+    {
+      "pool": "input",
+      "gas": "1674232"
+    },
+    {
+      "pool": "input",
+      "gas": "1674232"
+    },
+    {
+      "pool": "input",
+      "gas": "1674232"
+    },
+    {
+      "pool": "input",
+      "gas": "1674232"
+    },
+    {
+      "pool": "input",
+      "gas": "1675398"
+    },
+    {
+      "pool": "pipeline",
+      "gas": "2237850"
+    },
+    {
+      "pool": "pipeline",
+      "gas": "2200753"
+    },
+    {
+      "pool": "pipeline",
+      "gas": "2200753"
+    },
+    {
+      "pool": "pipeline",
+      "gas": "2200753"
+    },
+    {
+      "pool": "pipeline",
+      "gas": "2200753"
+    },
+    {
+      "pool": "pipeline",
+      "gas": "2200753"
+    },
+    {
+      "pool": "pipeline",
+      "gas": "2200753"
+    },
+    {
+      "pool": "pipeline",
+      "gas": "2200753"
+    },
+    {
+      "pool": "pipeline",
+      "gas": "2200753"
+    },
+    {
+      "pool": "pipeline",
+      "gas": "2200753"
+    },
+    {
+      "pool": "pipeline",
+      "gas": "2200753"
+    },
+    {
+      "pool": "pipeline",
+      "gas": "2200753"
+    },
+    {
+      "pool": "pipeline",
+      "gas": "2200753"
+    },
+    {
+      "pool": "pipeline",
+      "gas": "2200753"
+    },
+    {
+      "pool": "pipeline",
+      "gas": "2200753"
+    },
+    {
+      "pool": "pipeline",
+      "gas": "2200753"
+    },
+    {
+      "pool": "hamiltonian",
+      "gas": "2237850"
+    },
+    {
+      "pool": "hamiltonian",
+      "gas": "2200753"
+    },
+    {
+      "pool": "hamiltonian",
+      "gas": "2200753"
+    },
+    {
+      "pool": "hamiltonian",
+      "gas": "2200753"
+    },
+    {
+      "pool": "hamiltonian",
+      "gas": "2200753"
+    },
+    {
+      "pool": "hamiltonian",
+      "gas": "2200753"
+    },
+    {
+      "pool": "hamiltonian",
+      "gas": "2200753"
+    },
+    {
+      "pool": "hamiltonian",
+      "gas": "2200753"
+    },
+    {
+      "pool": "hamiltonian",
+      "gas": "2200753"
+    },
+    {
+      "pool": "hamiltonian",
+      "gas": "2200753"
+    },
+    {
+      "pool": "hamiltonian",
+      "gas": "2200753"
+    },
+    {
+      "pool": "hamiltonian",
+      "gas": "2200753"
+    },
+    {
+      "pool": "hamiltonian",
+      "gas": "2200753"
+    },
+    {
+      "pool": "hamiltonian",
+      "gas": "2200753"
+    },
+    {
+      "pool": "hamiltonian",
+      "gas": "2200753"
+    },
+    {
+      "pool": "hamiltonian",
+      "gas": "2200753"
+    }
+  ],
+  "localCoreDeploymentGas": "51575338",
+  "localBankCreationGas": "110698124",
+  "localPipelineAdvanceGas": "81935397",
+  "contractCountUnchangedDuringRuns": true,
+  "bitwiseInitialAndFinalStatesMatchLegacy": true,
+  "allEightCrossStateSampleEnergiesMatchLegacy": true,
+  "immutableInitialSnapshotRetained": true
+}
