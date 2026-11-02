@@ -4,8 +4,8 @@
     "sha256": "c205be153469c5b4f511cdbe8bc38a2fa1aca852d28dc1f885bbafffbab0dfa7"
   },
   "gate-status.json": {
-    "bytes": 2118,
-    "sha256": "a41ec446a3855c03c23bf1c80d55e131d771a467bab376f71cf234c639fdc3c3"
+    "bytes": 2397,
+    "sha256": "061156386c8672426f4bb71761110dfb82d5c5dfa1cf42649d31f1df08113bec"
   },
   "gpu-gate.json": {
     "bytes": 25275,

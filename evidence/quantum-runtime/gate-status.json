@@ -15,10 +15,16 @@
     "status": "in_progress"
   },
   "full_molecule_gpu_heldouts": {
-    "completed_results_in_this_snapshot": 0,
-    "count": 6,
-    "original_maximum_optimization_steps": 60,
-    "status": "authorized_next_step_not_yet_observed"
+    "completed_results": 6,
+    "evidence": "../quantum-heldouts/",
+    "geometry_convergence_preserved": true,
+    "maximum_optimization_steps": 60,
+    "native_A_MAE_kJ_per_mol": 1.0767292692139279,
+    "native_B_MAE_kJ_per_mol": 1.3689788835583176,
+    "native_heldout_energy_gates_passed": true,
+    "original_native_energy_gate_limit_kJ_per_mol": 4.184,
+    "scientific_acceptance": false,
+    "status": "all_six_computations_verified"
   },
   "full_simulation_cost": null,
   "geometry_changing_gpu_scanner": {
@@ -48,5 +54,5 @@
   "production_ready": false,
   "schema": "orvia.quantum-gate-status.v1",
   "scientific_acceptance": false,
-  "updated_utc": "2026-11-02T16:50:04.420495+00:00"
+  "updated_utc": "2026-11-02T17:23:05.956616+00:00"
 }
