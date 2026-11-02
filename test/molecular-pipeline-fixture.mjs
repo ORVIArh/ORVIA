@@ -4,17 +4,18 @@ import path from 'node:path';
 import {createHash} from 'node:crypto';
 import solc from 'solc';
 import ganache from 'ganache';
-import {BrowserProvider,Contract,id,toBeHex,zeroPadValue,ZeroHash} from 'ethers';
+import {BrowserProvider,Contract,id,toBeHex,zeroPadValue,ZeroHash,keccak256} from 'ethers';
 import {artifacts,deploy,transact,quadFromNumber as q,qvec} from './helpers.mjs';
 
 const word=x=>typeof x==='number'?toBeHex(x,32):zeroPadValue(x,32);
 const gasLimit=28_000_000;
 const copy=x=>JSON.parse(JSON.stringify(x));
+const base=new URL('../reports/complete-256/',import.meta.url);
 const compilations=new Map();
 // The historical shared build predates this connected path. Compile this fixture's
 // complete dependency graph in memory, without changing shared artifacts/reports.
-function compileFixture(banked=false,analysis=false){
- const key=`${banked}:${analysis}`;
+function compileFixture(banked=false,analysis=false,spatial=false,c4=false){
+ const key=`${banked}:${analysis}`+(spatial||c4?`:${spatial}:${c4}`:'');
  if(compilations.has(key))return compilations.get(key);
  const sources={};
  function add(file){
@@ -24,21 +25,23 @@ function compileFixture(banked=false,analysis=false){
  }
  for(const file of ['AlchemicalTopologyCatalog','AlchemicalHamiltonianEvaluator','MolecularSimulationPipeline',...(banked?['BankedWorkingState','BankedInputCatalog']:['ShardedWorkingState','PartitionedInputCatalog'])])add(`contracts/core/${file}.sol`);
  if(analysis)add('contracts/analysis/UncertaintyAndResults.sol');
+ if(c4)add('contracts/kernels/C4PairKernel.sol');
  assert.equal(solc.version(),'0.8.26+commit.8a97fa7a.Emscripten.clang');
- const settings={optimizer:{enabled:true,runs:200},evmVersion:'shanghai',outputSelection:{'*':{'*':['abi','evm.bytecode.object']}}};
- const input={language:'Solidity',sources,settings};const output=JSON.parse(solc.compile(JSON.stringify(input)));
+ const settings={optimizer:{enabled:true,runs:200},evmVersion:'shanghai',outputSelection:{'*':{'*':['abi','evm.bytecode.object',...(spatial||c4?['evm.deployedBytecode.object']:[])]}}};
+ const input={language:'Solidity',sources,settings};if(banked&&analysis&&spatial&&c4){fs.mkdirSync(base,{recursive:true});fs.writeFileSync(new URL('compiler-standard-input.json',base),JSON.stringify(input,null,2)+'\n');}const output=JSON.parse(solc.compile(JSON.stringify(input)));
  const errors=output.errors?.filter(x=>x.severity==='error')??[];assert.equal(errors.length,0,errors.map(x=>x.formattedMessage).join('\n'));
  for(const[file,contracts]of Object.entries(output.contracts))for(const[name,c]of Object.entries(contracts))if(c.evm.bytecode.object)artifacts[name]={source:file,abi:c.abi,bytecode:'0x'+c.evm.bytecode.object};
- const compilation={compiler:solc.version(),settings,sourceSha256:Object.fromEntries(Object.entries(sources).map(([file,{content}])=>[file,createHash('sha256').update(content).digest('hex')]))};
+ const compilation={compiler:solc.version(),settings,standardInputSha256:createHash('sha256').update(JSON.stringify(input)).digest('hex'),sourceSha256:Object.fromEntries(Object.entries(sources).map(([file,{content}])=>[file,createHash('sha256').update(content).digest('hex')]))};
  compilations.set(key,compilation);return compilation;
 }
 
 async function setup(t,options={}){
+ if(options.full256)options={...options,banked:true,analysis:true,constraints:true,spatial:true,c4:true};
  const banked=options.banked===true;
- const compilation=compileFixture(banked,options.analysis===true);
+ const compilation=compileFixture(banked,options.analysis===true,options.spatial===true,options.c4===true);
  const coreDeployments=[];
- const deployCore=async(name,signer,args=[])=>{const c=await deploy(name,signer,args);const receipt=await c.deploymentTransaction().wait();coreDeployments.push({contract:name,address:await c.getAddress(),gas:String(receipt.gasUsed)});return c;};
- const transport=ganache.provider({logging:{quiet:true},chain:{chainId:31337,hardfork:'shanghai',allowUnlimitedContractSize:true},miner:{blockGasLimit:30_000_000},wallet:{totalAccounts:3}});
+ const deployCore=async(name,signer,args=[])=>{const c=await deploy(name,signer,args);const receipt=await c.deploymentTransaction().wait();const row={contract:name,address:await c.getAddress(),gas:String(receipt.gasUsed)};if(options.full256){const runtimeCode=await provider.getCode(c.target);assert.notEqual(runtimeCode,'0x');Object.assign(row,{constructorArgs:copy(args),creationData:c.deploymentTransaction().data,runtimeCode,runtimeKeccak256:keccak256(runtimeCode),transactionHash:receipt.hash,blockNumber:receipt.blockNumber});}coreDeployments.push(row);return c;};
+ const transport=ganache.provider({logging:{quiet:true},chain:{chainId:31337,hardfork:'shanghai',allowUnlimitedContractSize:true},miner:{blockGasLimit:30_000_000},wallet:{totalAccounts:3,...(options.full256?{deterministic:true}:{})}});
  t.after(()=>transport.disconnect());const provider=new BrowserProvider(transport);provider.pollingInterval=10;
  const owner=await provider.getSigner(0),contributor=await provider.getSigner(1),ownerAddress=await owner.getAddress();
  const math=await deployCore('FloatMath',owner),ma=await math.getAddress();
@@ -69,16 +72,37 @@ async function setup(t,options={}){
  const estimator=await deployCore('MBARFreeEnergyEstimator',owner,[await collector.getAddress(),ma,await scalar.getAddress()]);
  const diagnostic=options.analysis?await deployCore('SamplingDiagnostics',owner,[estimator.target]):null;
  const results=options.analysis?await deployCore('UncertaintyAndResults',owner,[diagnostic.target,ownerAddress]):null;
+ const constraintKernel=options.constraints?await deployCore('DistanceConstraintKernel',owner,[ma]):null;
+ const constraintCatalog=options.constraints?await deployCore('FullModelConstraintCatalog',owner,[ownerAddress,topology.target,ma]):null;
+ const constraintSolver=options.constraints?await deployCore('FullModelConstraintSolver',owner,[pipeline.target,ma,constraintKernel.target,constraintCatalog.target]):null;
+ if(options.constraints)await transact(pipeline.bindConstraints(constraintSolver.target,{gasLimit}));
+ const spatialIndex=options.spatial?await deployCore('PeriodicCellIndex',owner,[hamiltonian.target,registry.target,ma,geometry.target]):null;
+ const spatialPairs=options.spatial?await deployCore('OrderedNeighborPairs',owner,[hamiltonian.target,spatialIndex.target]):null;
+ const c4=options.c4?await deployCore('C4PairKernel',owner,[ma]):null;
  const bankDeployments=[];
  if(banked){
-  for(let i=0;i<96;i+=4){const r=await transact(inputs.createBanks(4,{gasLimit}));bankDeployments.push({pool:'input',gas:String(r.gasUsed)});}
-  for(const [pool,router]of [['pipeline',state],['hamiltonian',output]])for(let i=0;i<64;i+=4){const r=await transact(router.deployBanks(4,{gasLimit}));bankDeployments.push({pool,gas:String(r.gasUsed)});}
+  for(let i=0;i<96;i+=4){const r=await transact(inputs.createBanks(4,{gasLimit}));bankDeployments.push({pool:'input',gas:String(r.gasUsed),transactionHash:r.hash,blockNumber:r.blockNumber});}
+  for(const [pool,router]of [['pipeline',state],['hamiltonian',output]])for(let i=0;i<64;i+=4){const r=await transact(router.deployBanks(4,{gasLimit}));bankDeployments.push({pool,gas:String(r.gasUsed),transactionHash:r.hash,blockNumber:r.blockNumber});}
+ }
+ if(options.full256){
+  assert.equal(coreDeployments.length,32);const banks=[];
+  for(const [pool,router,count]of [['input',inputs,96],['pipeline',state,64],['hamiltonian',output,64]])for(let index=0;index<count;index++){
+   const [address,hash]=await router.bankInfo(index),code=await provider.getCode(address);assert.notEqual(code,'0x');assert.equal(keccak256(code),hash);banks.push({pool,index,address,runtimeKeccak256:hash});
+  }
+  assert.equal(new Set([...coreDeployments,...banks].map(x=>x.address)).size,256);
+  const inventory={schemaVersion:1,status:'deployed_local_pending_integration',passed:false,mainnetTransactionsSent:0,scope:'32 actual local core contracts and224 fixed storage banks; raw C4 standalone, not production alchemical integration.',compilation,core:coreDeployments,banks,bankDeployments,actualLocalAddresses:256,coreDeploymentGas:coreDeployments.reduce((s,x)=>s+BigInt(x.gas),0n).toString(),bankCreationGas:bankDeployments.reduce((s,x)=>s+BigInt(x.gas),0n).toString()};
+  fs.writeFileSync(new URL('deployment-runtime-input.json',base),JSON.stringify(inventory,null,2)+'\n');
+  console.log('256-address deployment-runtime-input.json written before long integration checks');
  }
  await transact(pipeline.bind(await state.getAddress(),await hamiltonian.getAddress(),await output.getAddress(),await collector.getAddress(),await chronology.getAddress(),await estimator.getAddress(),{gasLimit}));
- const protocol=id('ORVIA-ALCHEMICAL-PIPELINE-VALIDATION');
+ if(options.spatial&&options.bindSpatial!==false)await transact(pipeline.bindSpatial(spatialIndex.target,spatialPairs.target,{gasLimit}));
+ const protocol=id(options.full256?'ORVIA-COMPLETE-256-LOCAL-VALIDATION':'ORVIA-ALCHEMICAL-PIPELINE-VALIDATION');
  const registered=[...Object.values(addresses),...await Promise.all([pipeline,state,hamiltonian,output,collector,chronology,estimator].map(c=>c.getAddress()))];
+ if(options.constraints)registered.push(constraintKernel.target,constraintCatalog.target,constraintSolver.target);
  if(options.analysis)registered.push(diagnostic.target,results.target);
- await transact(registry.registerProtocol(protocol,id('Unconstrained finite hybrid model fixture; not molecular acceptance'),registered));
+ if(options.spatial)registered.push(spatialIndex.target,spatialPairs.target);
+ if(options.c4)registered.push(c4.target);
+ await transact(registry.registerProtocol(protocol,id(options.full256?'Complete256 constrained spatial fixture; raw C4 remains standalone; not molecular acceptance':'Unconstrained finite hybrid model fixture; not molecular acceptance'),registered));
  let serial=0;
  async function stream(role,values){
   if(!values.length)return ZeroHash;const sid=id(`hybrid-stream-${++serial}`),r=id(role);
@@ -108,7 +132,7 @@ async function setup(t,options={}){
  async function initialize(run){for(let n=0;n<2000;++n){if((await pipeline.runInfo(run)).stage===4n)return;await advance(run,1);}assert.fail('initialization did not finish');}
  async function finish(run,schedule=[8]){for(let n=0;n<5000;++n){if((await pipeline.runInfo(run)).stage===11n)return;await advance(run,schedule[n%schedule.length]);}assert.fail('window did not finish');}
  async function stateAt(run,atoms){const r=[];for(let n=0;n<atoms;++n){const s=await pipeline.stateAt(run,n);r.push(s.map(x=>[...x]));}return r;}
- return{transport,provider,owner,contributor,math,topology,inputs,pipeline,state,output,hamiltonian,collector,chronology,estimator,diagnostic,results,protocol,makeTopology,campaign,start,advance,initialize,finish,stateAt,gas,compilation,coreDeployments,bankDeployments};
+ return{spatialIndex,spatialPairs,c4,registry,integrator,geometry,scalar,elementary,bond,angle,torsion,lj,softcore,realSpace,reciprocal,corrections,registered,constraintKernel,constraintCatalog,constraintSolver,stream,policy,random,transport,provider,owner,contributor,math,topology,inputs,pipeline,state,output,hamiltonian,collector,chronology,estimator,diagnostic,results,protocol,makeTopology,campaign,start,advance,initialize,finish,stateAt,gas,compilation,coreDeployments,bankDeployments};
 }
 
 function harmonicFixture(){
