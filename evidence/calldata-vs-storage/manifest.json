@@ -17,8 +17,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 7446,
-      "sha256": "99fb213dd10bf2f7cd4d8ec2b4a11b8d91001e007b95597679f4ef1d6e4593b8"
+      "bytes": 7741,
+      "sha256": "bd1973e2e987f4c3424293befaeeb011d378275acdf5d06a2e67d453a88a7a7b"
+    },
+    {
+      "path": "SIMULATION_COST_SCENARIOS.md",
+      "bytes": 6122,
+      "sha256": "2ac9043b332bd2d19ecba35680292c8172245483776bec6f70f4de608e909827"
     },
     {
       "path": "batch-optimization-summary.json",
@@ -99,6 +104,16 @@
       "path": "review-scripts.zip",
       "bytes": 9906,
       "sha256": "05649ec13ae13e7c54bbbad7419762893febf82b1aec062e327d227b64c6b244"
+    },
+    {
+      "path": "simulation-cost-scenarios.json",
+      "bytes": 12653,
+      "sha256": "14483cc64343f30cae7517378b1736b36e05d412a8570da7a9af430188660f8f"
+    },
+    {
+      "path": "simulation-cost-sources.zip",
+      "bytes": 36567,
+      "sha256": "d00a629a7cfb8752eaf2845ca1bebe1c2aa777acf63d692fc511849b5bde7dea"
     }
   ]
 }

@@ -1,5 +1,7 @@
 # Calldata versus packed storage: GPU-backed comparison
 
+**Simulation costs are separate:** [short, medium and long scenarios](SIMULATION_COST_SCENARIOS.md) count the proposed full schedules and quantify a constraint-solver cost sensitivity. The complete simulation total remains unquoted; input-pass prices must not be presented as full-run budgets.
+
 **Latest follow-up:** [shared proofs and bundled transactions](RANGE_AND_BATCH_OPTIMIZATION.md) reduce a four-operation 16 KiB workload to one transaction. The measured bundle uses 2.63% less target-estimated gas than four separate calls; the shared-proof optimization is measured separately. Source, rollback checks and reproducible evidence are included.
 
 **Measured result:** authenticated calldata costs less for whole-chunk reads; permanent packed storage costs less for small fields reused across many transactions. A hybrid input reader is the next candidate to implement and measure. This evidence does not select or deploy a production architecture.
