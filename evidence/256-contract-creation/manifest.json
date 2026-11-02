@@ -1,0 +1,8 @@
+{
+  "scope": "Frozen local32-core runtime inventory and supplementary target-node read-only creation probe; not a production deployment.",
+  "files": {
+    "scripts/probe256_creation.mjs": "afa5f243b7075279efe2f4106cf017293b3b0c0afab39c6071f23dc0b7790a53",
+    "reports/target_256_creation_probe.json": "7ba4a63e9e7ac11e7351f39f8a60efbb318a8631cc4c812f9e6802bcbef15408",
+    "evidence/256-contract-creation/deployment-runtime-input.json": "7e51355017a8380124455fff846d95599ed85030473b444df66ee1c18b3e9905"
+  }
+}
