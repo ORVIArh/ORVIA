@@ -1,5 +1,7 @@
 # ORVIA mainnet-lite result anchor
 
+**Not selected for deployment.** The user requires the large-model, fully on-chain [ORVIA-256](../../docs/ARCHITECTURE_256.md) system. This separate result-attestation experiment does not satisfy that requirement. No anchor was deployed. The offline encrypted-wallet utility remains usable local tooling; its existence does not select this architecture or authorize a transaction.
+
 This is a proposed low-cost publication option for operator-attested artifact hashes. Molecular work would run off-chain, with GPU acceleration where supported; no accepted complete GPU molecular run has been produced for this candidate. The operator signs hashes for the inputs, method, settings, and output; the contract checks that signature and records the hashes in an event. The illustration below does not guarantee an all-in $200 budget.
 
 This does **not** prove that the molecular calculation was correct or run as reported. It changes the trust model from on-chain execution to an operator-attested GPU result. The full on-chain engine remains a separate research implementation and is not made mainnet-ready by this contract.
