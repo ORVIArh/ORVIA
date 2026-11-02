@@ -1,0 +1,47 @@
+{
+  "schema_version": "orvia.timeseries.reference.v1",
+  "scope": "Synthetic chronological observable; not proof of stationary molecular sampling",
+  "method": "Two-pass centered moments and direct autocovariance sums, then initial-positive/initial-monotone adjacent pairs",
+  "values": [
+    0,
+    1,
+    2,
+    3,
+    2,
+    1,
+    0,
+    -1,
+    -2,
+    -3,
+    -2,
+    -1,
+    0,
+    1,
+    0,
+    -1
+  ],
+  "maxLag": 7,
+  "minimumSamples": 16,
+  "expected": {
+    "mean": "0.0",
+    "populationVariance": "2.5",
+    "sampleVariance": "2.66666666666666666666666666666666666666666666666666666666666666666666666667",
+    "covariance": [
+      "2.5",
+      "2.0",
+      "1.0625",
+      "0.125",
+      "-0.625",
+      "-1.0",
+      "-1.0625",
+      "-0.875"
+    ],
+    "g": "3.55",
+    "effectiveSamples": "4.5070422535211267605633802816901408450704225352112676056338028169014084507",
+    "usedLag": 3,
+    "constant": false,
+    "shortSeries": false,
+    "truncated": false,
+    "validEstimate": true
+  }
+}

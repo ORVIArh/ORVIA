@@ -1,0 +1,133 @@
+{
+  "scope": "Three-atom unit harmonic chain with all nonbonded pairs excluded; no general protein convergence claim",
+  "method": "Exact rational scalar energies and centered differentiation within quadratic regions",
+  "cases": {
+    "main": {
+      "status": "converged",
+      "iterations": 1,
+      "positions": [
+        "1",
+        "2",
+        "3"
+      ],
+      "energy": "0",
+      "forces": [
+        "0",
+        "0",
+        "0"
+      ],
+      "events": [
+        {
+          "step": "4",
+          "positions": [
+            "4",
+            "2",
+            "0"
+          ],
+          "energy": "1",
+          "armijo_target": "-1",
+          "valid_geometry": true,
+          "accepted": false
+        },
+        {
+          "step": "2",
+          "positions": [
+            "2",
+            "2",
+            "2"
+          ],
+          "energy": null,
+          "armijo_target": "0",
+          "valid_geometry": false,
+          "accepted": false
+        },
+        {
+          "step": "1",
+          "positions": [
+            "1",
+            "2",
+            "3"
+          ],
+          "energy": "0",
+          "armijo_target": "1/2",
+          "valid_geometry": true,
+          "accepted": true
+        }
+      ]
+    },
+    "iteration_limit": {
+      "status": "iteration_limit",
+      "iterations": 1,
+      "positions": [
+        "1/4",
+        "2",
+        "15/4"
+      ],
+      "energy": "9/16",
+      "forces": [
+        "3/4",
+        "0",
+        "-3/4"
+      ],
+      "events": [
+        {
+          "step": "1/4",
+          "positions": [
+            "1/4",
+            "2",
+            "15/4"
+          ],
+          "energy": "9/16",
+          "armijo_target": "7/8",
+          "valid_geometry": true,
+          "accepted": true
+        }
+      ]
+    },
+    "line_search_limit": {
+      "status": "line_search_limit",
+      "iterations": 0,
+      "positions": [
+        "0",
+        "2",
+        "4"
+      ],
+      "energy": "1",
+      "forces": [
+        "1",
+        "0",
+        "-1"
+      ],
+      "events": [
+        {
+          "step": "4",
+          "positions": [
+            "4",
+            "2",
+            "0"
+          ],
+          "energy": "1",
+          "armijo_target": "-1",
+          "valid_geometry": true,
+          "accepted": false
+        }
+      ]
+    },
+    "stationary": {
+      "status": "converged",
+      "iterations": 0,
+      "positions": [
+        "1",
+        "2",
+        "3"
+      ],
+      "energy": "0",
+      "forces": [
+        "0",
+        "0",
+        "0"
+      ],
+      "events": []
+    }
+  }
+}
