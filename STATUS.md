@@ -2,6 +2,8 @@
 
 **Active target: [ORVIA-256](docs/ARCHITECTURE_256.md), fully on-chain production from large registered molecular models.** The user removed the dollar cap and selected up to 256 actual contracts. The current design budgets 32 core contracts, 96 input banks, 64 pipeline-state banks and 64 Hamiltonian-output banks. The complete 256-address inventory now has a passing local integration fixture. The raw C4 component is exercised separately and still requires physical alchemical integration; this is not a production release. The single-result-anchor route is not selected.
 
+**Mainnet only.** No public testnet deployment is planned. Local EVM checks, mainnet-pinned local forks and read-only chain-4663 simulations remain part of validation. Public deployment stays blocked until the complete 256-contract release and scientific evidence pass.
+
 **Current integration is in progress; the complete current-source check has not passed.** [validation_summary.json](reports/validation_summary.json) is deliberately marked `development_in_progress` and `passed: false` after the connected engine and softcore-v2 changes. A previous source-bound component checkpoint cannot validate changed or newly added inputs.
 
 The historical v0.5.1 check passed **212 Node/EVM tests, 63 Python references and all nine groups**, with integrity checks for 159 inputs, two compiler outputs, 36 reports and nine logs. That dated result and the recovered v0.5.0 baseline remain in the research log; neither is a pass for this development snapshot.
