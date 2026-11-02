@@ -4,6 +4,8 @@ The [release adapter](../scripts/deployment/release256.mjs) prepares a reproduci
 
 The result is deliberately `prepared-but-blocked`, `readyForMainnet:false`, `completeProductionPlan:false`, with scientific and complete-validation acceptance false. No selected scientific protocol hashes or full production input manifest are invented. The [public draft specification](../evidence/256-release/draft-spec.json) leaves protocol and inputs unresolved. Its nonce is a dated preparation input and must be refreshed before any deployment. The adapter supports explicitly supplied unaccepted proposal or synthetic protocol/stream identities for integrity tests, without treating them as scientific approval.
 
+The [published mainnet observation](../evidence/256-release-plan/README.md) now verifies all 256 planned addresses had empty code and zero nonce at one pinned mainnet block, with sender nonce zero before and after the scan. The configured Alchemy provider completed 526 read-only requests; its private URL path is absent from the evidence. The first independent FloatMath creation estimated 1,254,228 gas against actual pending state without overrides. This does not price dependent deployments, model uploads or the scientific campaign. No transaction was submitted.
+
 ## What is concrete
 
 - Compile the current canonical 32-core dependency graph with pinned Solidity0.8.26, optimizer200, Shanghai. Bind source hashes, package/lock hashes, architecture, compiler/settings and the adapter itself. Reject duplicate deployable names and mismatched slot-to-source declarations.

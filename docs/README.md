@@ -61,6 +61,7 @@ The connected prototype and alternative coordinators retain separate evidence sc
 | [Large-coordinator creation probe](TARGET_256_CREATION_PROBE.md) | Exact runtime returned through read-only target-provider creation calls; no persistent deployment |
 | [Target-node probe](TARGET_NODE_EXECUTION.md) | Dated, read-only numerical checks through a Robinhood provider; no transaction broadcast |
 | [Mainnet readiness](MAINNET_READINESS.md) | Release gate, deployment rehearsal and unresolved target-chain requirements |
+| [256-contract release plan](RELEASE_256_PLAN.md) | Unsigned infrastructure, exact address/runtime identities and read-only mainnet evidence |
 | [Production gaps](PRODUCTION_GAPS.md) | Acceptance work still required for a complete scientific production path |
 
 For the active inventory, use [architecture_256.json](../data/architecture_256.json). The [legacy contract manifest](../data/contract_manifest.json) retains the earlier 64-slot plan and fail-closed readiness checks. For changes over time, use the [research log](../RESEARCH_LOG.md); older evidence retains its original scope.

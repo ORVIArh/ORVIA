@@ -4,6 +4,8 @@
 
 The active target is now 256 actual contracts, with a passing [local prototype](COMPLETE_256_PROTOTYPE.md). Deployment is mainnet only: local validation and read-only mainnet checks precede any public transaction; no public testnet deployment is planned. Historical limitations below must be read alongside the newer connected-pipeline evidence.
 
+The [C4 policy review](../evidence/c4-policy-candidate/README.md) records a concrete introduced short-distance instability in the current charged soft-core transformation. Its staged mathematical candidate has bounded component evidence, but still requires on-chain integration, consistent gating of every electrostatic term, explicit atom-activity admission and a justified periodic-charge policy. Native point-charge and hard-cutoff behavior impose separate declared limits; the proposal is not a universal stability proof or approval of the alternative ADP/phosphate model.
+
 ## 2 November 2026 development changes
 
 The v0.5.1 baseline below is retained to show the original gaps. New source now includes authenticated partitioned inputs and copy-on-write sharded state, tested across the old 4096/65536-word boundaries, 1500 real interacting atoms and uint64 step indices. This closes specific storage/layout component limitations; it does not establish a prepared full-system trajectory or its cost. See `SHARDED_STATE.md`.
